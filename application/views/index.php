@@ -8,4 +8,4 @@ this is sujeet changes
 
 Updates by Saurabh
 
-<?php echo $_ENV['DB_DATABASE'];?>
+<?php echo $_ENV['ADMIN_URL'];?>
