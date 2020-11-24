@@ -16,7 +16,7 @@ class Login extends MY_Controller{
             );    
             $check = $this->login->check_admin($credentials);
             unset($check->password);
-            // $this->session->set_userdata('admin_detail',$check);
+            $this->session->set_userdata('admin_detail',$check);
             return redirect('admin/dashboard');
             }
         }
