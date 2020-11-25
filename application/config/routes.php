@@ -59,3 +59,16 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 $route['admin'] = 'admin/Admin_control/index';
+$route['admin/login'] = 'admin/Admin_control/login';
+$route['admin/register'] = 'admin/Admin_control/register';
+$route['admin/forgot-password'] = 'admin/Admin_control/forgot_password';
+$route['admin/404'] = 'admin/Admin_control/error404';
+$route['admin/blank'] = 'admin/Admin_control/blank';
+$route['admin/utilities-other'] = 'admin/Admin_control/utilities_other';
+$route['admin/utilities-color'] = 'admin/Admin_control/utilities_color';
+$route['admin/utilities-border'] = 'admin/Admin_control/utilities_border';
+$route['admin/utilities-animation'] = 'admin/Admin_control/utilities_animation';
+$route['admin/tables'] = 'admin/Admin_control/tables';
+$route['admin/cards'] = 'admin/Admin_control/cards';
+$route['admin/buttons'] = 'admin/Admin_control/buttons';
+$route['admin/charts'] = 'admin/Admin_control/charts';
