@@ -54,10 +54,10 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.php">Colors</a>
-                        <a class="collapse-item" href="utilities-border.php">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.php">Animations</a>
-                        <a class="collapse-item" href="utilities-other.php">Other</a>
+                        <a class="collapse-item" href="<?php echo base_url('admin/utilities-color') ?>">Colors</a>
+                        <a class="collapse-item" href="<?php echo base_url('admin/utilities-border') ?>">Borders</a>
+                        <a class="collapse-item" href="<?php echo base_url('admin/utilities-animation') ?>">Animations</a>
+                        <a class="collapse-item" href="<?php echo base_url('admin/utilities-other') ?>">Other</a>
                     </div>
                 </div>
             </li>
