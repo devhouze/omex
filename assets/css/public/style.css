@@ -1,0 +1,36 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header-top {
+    padding: 9px 0;
+}
+
+.main-menu .navbar-nav li+li {
+    margin-left: calc(var(--v2) * 20);
+}
+
+.main-menu .navbar-nav li a {
+    padding: 0 !important;
+    color: var(--black);
+    font-size: calc(var(--v2) * 8);
+}
+
+.main-menu .navbar-nav li a.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.main-menu .navbar-nav li a:hover {
+    color: var(--primary-color);
+}
+
+footer {
+    background: #145183;
+    color: var(--bs-white);
+}
+
+footer ul li a {
+    color: var(--bs-white);
+}
