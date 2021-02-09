@@ -1,13 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap');
 :root {
     --primary-color: #0067B4;
+    --h-color: #083D68;
+    --se-color: #F3F6F9;
+    --third-color: #FDFCFA;
     --black: #000000;
     --gray-color: #E5E5E5;
     --v2: 2px;
+    --pr-font: 'Recoleta' !important;
+}
+
+.pr-font {
+    font-family: var(--pr-font) !important;
+    font-weight: 400;
+}
+
+.h-color {
+    color: var(--h-color);
 }
 
 .primary-bg {
     background-color: var(--primary-color);
+}
+
+.se-color {
+    color: var(--se-color);
+}
+
+.third-color {
+    color: var(--third-color)
 }
 
 .gray-bg {
@@ -248,6 +269,11 @@
     margin-bottom: calc(var(--v2) * 20);
 }
 
+.my-60 {
+    margin-top: calc(var(--v2) * 30);
+    margin-bottom: calc(var(--v2) * 30);
+}
+
 .ml-12 {
     margin-left: calc(var(--v2) * 6);
 }
@@ -366,6 +392,10 @@
 
 .mt-40 {
     margin-top: calc(var(--v2) * 20);
+}
+
+.mt-60 {
+    margin-top: calc(var(--v2) * 30);
 }
 
 .mr-12 {
@@ -763,6 +793,10 @@
     padding-top: calc(var(--v2) * 20);
 }
 
+.pt-60 {
+    padding-top: calc(var(--v2) * 30);
+}
+
 .pr-12 {
     padding-right: calc(var(--v2) * 6);
 }
@@ -882,3 +916,23 @@
 .pb-40 {
     padding-bottom: calc(var(--v2) * 20);
 }
+
+
+/* btn styling */
+
+.primary-btn {
+    border: 1px solid #03518B;
+    letter-spacing: 0.14em;
+    color: #03518B;
+    background: transparent;
+    font-size: calc(var(--v2) * 10);
+    padding: 20px 52px;
+}
+
+.primary-btn:hover {
+    background: #03518B;
+    color: white;
+}
+
+
+/* end bnt styling */
