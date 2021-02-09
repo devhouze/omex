@@ -56,6 +56,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 
+$route['street'] = 'Welcome/street';
 
 
 $route['admin'] = 'admin/Admin_control/index';

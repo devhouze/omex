@@ -322,3 +322,63 @@ footer .menu li+li {
     align-items: center;
     justify-content: center;
 }
+
+
+/* street page css  */
+
+.street-banner .card {
+    position: absolute;
+    right: 86px;
+    z-index: 9;
+    top: 0;
+    width: 400px;
+    border: 0;
+    border-radius: 0;
+    opacity: 0.9;
+    padding: 50px;
+}
+
+.street-banner .card p {
+    font-size: 22px;
+    line-height: 44px;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.street-banner .card p+img {
+    transform: rotate(-33.31deg);
+}
+
+.parish-page .gray-bg {
+    background: #E5E5E5;
+}
+
+.parish-page .pr-color {
+    color: #083D68;
+}
+
+.parish-page .v-line {
+    background: #194F9B;
+}
+
+.parish-page .exploer-btn {
+    background: #5B1545;
+}
+
+.athens-page .exploer-btn {
+    background: #5A946E;
+}
+
+.athens-page .primary-btn {
+    border-color: #5A946E;
+    color: #5A946E;
+}
+
+.athens-page .primary-btn:hover {
+    background: #5A946E;
+    color: white;
+}
+
+
+/* End street page cess */

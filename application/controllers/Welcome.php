@@ -34,4 +34,20 @@ class Welcome extends CI_Controller {
 		$this->load->view('js/home');
 		$this->load->view('footer/body_end');
 	}
+	public function street()
+	{
+		$this->load->view('header/header_start');
+		$this->load->view('header/header_common');
+		$this->load->view('header/owl_css');
+		$this->load->view('header/header_end');
+		$this->load->view('header/body_start');
+		$this->load->view('header/main_header');
+		$this->load->view('street');
+		$this->load->view('footer/footer_signup');
+		$this->load->view('footer/main_footer');
+		$this->load->view('footer/footer_common');
+		$this->load->view('js/owl');
+		$this->load->view('js/home');
+		$this->load->view('footer/body_end');
+	}
 }
