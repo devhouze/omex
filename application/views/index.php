@@ -68,8 +68,8 @@
                 <div class="v-line d-table mx-auto"></div>
             </div>
         </div>
-        <div class="row justify-content-center align-items-center">
-            <div class="col-md-10 ">
+        <div class="row justify-content-center align-items-center ">
+            <div class="col-md-10 mt-20">
                 <div class="owl-carousel owl-theme top-brand ">
                     <div class="item">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b1.png" alt="" class="d-table mx-auto">
@@ -116,6 +116,43 @@
                     <div class="item">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b15.png" alt="" class="d-table mx-auto">
                     </div>
+                    <div class="item">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b16.png" alt="" class="d-table mx-auto">
+                    </div>
+                    <div class="item">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b17.png" alt="" class="d-table mx-auto">
+                    </div>
+                    <div class="item">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b18.png" alt="" class="d-table mx-auto">
+                    </div>
+                    <div class="item">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b19.png" alt="" class="d-table mx-auto">
+                    </div>
+                    <div class="item">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b20.png" alt="" class="d-table mx-auto">
+                    </div>
+                    <div class="item">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b21.png" alt="" class="d-table mx-auto">
+                    </div>
+                    <div class="item">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b22.png" alt="" class="d-table mx-auto">
+                    </div>
+                    <div class="item">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b23.png" alt="" class="d-table mx-auto">
+                    </div>
+                    <div class="item">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b24.png" alt="" class="d-table mx-auto">
+                    </div>
+                    <div class="item">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b25.png" alt="" class="d-table mx-auto">
+                    </div>
+                    <div class="item">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b26.png" alt="" class="d-table mx-auto">
+                    </div>
+                    <div class="item">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b27.png" alt="" class="d-table mx-auto">
+                    </div>
+
 
                 </div>
             </div>
@@ -261,7 +298,8 @@
                 <h2 class="fz40 d-table mx-auto pr-font h-color mb-0">Style</h2>
                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="facebook" alt="" class="d-table mx-auto">
                 <figure class="position-relative mb-0 mt-12">
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e2.jpg" alt="facebook" alt="" class="">
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e3.jpg" alt="facebook" alt="" class="">
+                    
                 </figure>
                 <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="facebook" alt=""></a>
 
@@ -270,7 +308,7 @@
                 <h2 class="fz40 d-table mx-auto pr-font h-color mb-0">Play</h2>
                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="facebook" alt="" class="d-table mx-auto">
                 <figure class="position-relative mb-0 mt-12">
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e3.jpg" alt="facebook" alt="" class="">
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e2.jpg" alt="facebook" alt="" class="">
                 </figure>
                 <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="facebook" alt=""></a>
 
@@ -385,10 +423,10 @@
                             </a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">INTERNAL</a>
+                            <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Interior</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">EXTERNAL</a>
+                            <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Exterior</a>
                         </li>
                         <li class="nav-item" role="presentation">
                             <a class="nav-link" id="last-tab" data-bs-toggle="tab" href="#last" role="tab" aria-controls="last" aria-selected="false">CONSTRUCTION</a>
