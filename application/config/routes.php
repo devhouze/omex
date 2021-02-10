@@ -56,11 +56,12 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 
+$route['street'] = 'Welcome/street';
 
 
 $route['admin'] = 'admin/Admin_control/index';
-$route['admin/login'] = 'admin/Admin_control/login';
-$route['admin/register'] = 'admin/Admin_control/register';
+$route['admin/login'] = 'admin/Admin_control/sign_in';
+$route['admin/sign-up'] = 'admin/Admin_control/sign_up';
 $route['admin/forgot-password'] = 'admin/Admin_control/forgot_password';
 $route['admin/404'] = 'admin/Admin_control/error404';
 $route['admin/blank'] = 'admin/Admin_control/blank';
