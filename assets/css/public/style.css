@@ -394,6 +394,21 @@ footer .menu li+li {
     border-left: 1px solid #EDEDED;
 }
 
+.top-brands .owl-theme .owl-nav [class*='owl-'] {
+    background: transparent;
+    border: none;
+    box-shadow: unset;
+}
+
+.top-brands .owl-theme .owl-nav [class*='owl-']:hover {
+    background: transparent !important;
+}
+
+.top-brands .owl-theme .owl-nav [class*='owl-']:focus {
+    box-shadow: unset !important;
+    outline: 0 !important;
+}
+
 .top-brands .owl-item {
     position: relative;
     padding-left: 30px;
