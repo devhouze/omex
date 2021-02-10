@@ -8,6 +8,41 @@
     --gray-color: #FAF7F2;
     --v2: 2px;
     --pr-font: 'Recoleta' !important;
+    --ath: #5A946E;
+    --parish: #5B1545;
+    --london: #CC1F38;
+    --san: #92193F;
+    --amstr: #669BBC;
+    --hong: #F25832;
+    --portu: #E0A50B;
+}
+
+.ath-bg {
+    background-color: var(--ath) !important;
+}
+
+.par-bg {
+    background-color: var(--parish) !important;
+}
+
+.lon-bg {
+    background-color: var(--london) !important;
+}
+
+.san-bg {
+    background-color: var(--san) !important;
+}
+
+.ams-bg {
+    background-color: var(--amstr) !important;
+}
+
+.hon-bg {
+    background-color: var(--hong) !important;
+}
+
+.por-bg {
+    background-color: var(--portu) !important;
 }
 
 .pr-font {

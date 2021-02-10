@@ -87,6 +87,8 @@ footer .menu li+li {
     border: 2px solid #FAF7F2;
     color: #FCFFF7;
     padding: 19px 97px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .footer-signup .sb-btn:hover {
@@ -199,12 +201,13 @@ footer .menu li+li {
 }
 
 .looking-out h2 {
-    color: #CC1F38;
+    color: #DA6170;
     font-size: 113px;
     font-family: 'Helvetica';
     line-height: 110px;
     margin-bottom: 0;
     margin-top: 15px;
+    text-shadow: 5px 0px 0px #cc1f38;
 }
 
 .looking-out h2 span {
@@ -304,7 +307,7 @@ footer .menu li+li {
 }
 
 .explore-more .carousel-indicators li.active img {
-    transform: scale(1.6);
+    transform: scale(1.4);
 }
 
 .explore-more .carousel-indicators li {
@@ -353,7 +356,6 @@ footer .menu li+li {
     width: 400px;
     border: 0;
     border-radius: 0;
-    background: #5B1545;
     opacity: 0.9;
     padding: 50px;
 }
@@ -366,7 +368,7 @@ footer .menu li+li {
     margin-top: 30px;
 }
 
-.explore-more .card p+img {
+.rotate33 {
     transform: rotate(-33.31deg);
 }
 
