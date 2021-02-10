@@ -109,3 +109,59 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('/assets/css/public/fonts/Helvetica-Compressed.woff2') format('woff2'), url('/assets/css/public/fonts/Helvetica-Compressed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('/assets/css/public/fonts/Helvetica-BoldOblique.woff2') format('woff2'), url('/assets/css/public/fonts/Helvetica-BoldOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('/assets/css/public/fonts/Helvetica-Bold.woff2') format('woff2'), url('/assets/css/public/fonts/Helvetica-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('/assets/css/public/fonts/HelveticaRounded-Bold.woff2') format('woff2'), url('/assets/css/public/fonts/HelveticaRounded-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('/assets/css/public/fonts/Helvetica-Light.woff2') format('woff2'), url('/assets/css/public/fonts/Helvetica-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('/assets/css/public/fonts/Helvetica.woff2') format('woff2'), url('/assets/css/public/fonts/Helvetica.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('/assets/css/public/fonts/Helvetica-Oblique.woff2') format('woff2'), url('/assets/css/public/fonts/Helvetica-Oblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}

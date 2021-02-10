@@ -189,10 +189,60 @@ footer .menu li+li {
 
 .explore-more figure {
     overflow: hidden;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .explore-more {
     cursor: pointer;
+}
+
+.looking-out h2 {
+    color: #CC1F38;
+    font-size: 113px;
+    font-family: 'Helvetica';
+    line-height: 110px;
+    margin-bottom: 0;
+    margin-top: 15px;
+}
+
+.looking-out h2 span {
+    color: #DA6170;
+    position: absolute;
+    left: -6px;
+    top: 0;
+}
+
+.time {
+    color: rgba(8, 61, 104, 0.9);
+    font-size: 30px;
+}
+
+.time {
+    color: rgba(8, 61, 104, 0.9);
+    font-size: 30px;
+}
+
+.day {
+    font-size: 47px;
+    color: #CC1F38;
+}
+
+.box-calander {
+    height: 260px;
+    overflow: hidden;
+    border: 3.10766px solid #CC1F38;
+    width: 385px;
+    margin-top: 40px;
+}
+
+.top-row {
+    height: 123px;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    border-bottom: 3.10766px solid #CC1F38;
 }
 
 
@@ -217,7 +267,7 @@ footer .menu li+li {
 }
 
 .looking-out div#carouselExampleControls .position-absolute {
-    right: 0;
+    right: 20px;
     bottom: -82px;
 }
 
@@ -232,6 +282,9 @@ footer .menu li+li {
     align-items: center;
     justify-content: space-around;
     margin-top: 42px;
+    max-width: 336px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .exploer-btn:hover {
@@ -246,6 +299,14 @@ footer .menu li+li {
     transition: transform 2s ease;
 }
 
+.explore-more .carousel-indicators li img {
+    transition: transform 4s ease;
+}
+
+.explore-more .carousel-indicators li.active img {
+    transform: scale(1.6);
+}
+
 .explore-more .carousel-indicators li {
     width: 117px;
     height: 117px;
@@ -256,15 +317,12 @@ footer .menu li+li {
     border: 0;
     text-indent: unset;
     position: relative;
+    overflow: hidden;
+    border-radius: 50%;
 }
 
 .explore-more .carousel-indicators li+li {
     margin-left: 20px;
-}
-
-.explore-more .carousel-indicators li.active {
-    width: 140px;
-    height: 140px;
 }
 
 .explore-more .carousel-indicators {
@@ -285,11 +343,6 @@ footer .menu li+li {
     z-index: 99;
     font-size: 12px;
     text-align: center;
-}
-
-.explore-more .carousel-indicators li.active label {
-    font-size: 20px;
-    top: 54px;
 }
 
 .explore-more .card {
@@ -321,6 +374,102 @@ footer .menu li+li {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.top-brands .owl-item+.owl-item.active {
+    border-left: 1px solid #EDEDED;
+}
+
+.top-brands .owl-item {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.main-slider {
+    height: 533px;
+}
+
+.main-slider .carousel-inner .carousel-item {
+    height: 100% !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: left top;
+}
+
+.main-slider .carousel-inner .carousel-item figure {
+    margin-top: 100px;
+}
+
+.main-slider .carousel-inner .carousel-item p {
+    font-size: 22px;
+    color: #FCFFF7;
+    text-align: center;
+    padding: 0 40px;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.main-slider .carousel-inner .carousel-item figure img {
+    margin: 0 auto;
+    display: table;
+}
+
+.main-slider .carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 0;
+}
+
+.main-slider .carousel-indicators li+li {
+    margin-left: 15px;
+}
+
+.left-col {
+    width: 50px;
+    height: 100%;
+    border-right: 3.10766px solid #CC1F38;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #083D68;
+    font-size: 24px;
+    text-align: center;
+    height: calc(100% - 123px);
+    padding: 0 80px;
+}
+
+.left-col span {
+    transform-origin: left;
+    white-space: nowrap;
+    width: 30px;
+    transform: rotate( -90deg);
+    vertical-align: middle;
+    font-size: 35px;
+    color: #083D68;
+    line-height: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 7px;
+    position: absolute;
+    top: 97px;
+    left: 26px;
+}
+
+.right-col {
+    font-size: 60px;
+    color: #083D68;
+    margin-left: 20px;
+    font-weight: 400;
 }
 
 

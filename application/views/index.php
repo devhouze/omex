@@ -1,6 +1,67 @@
+<div class="main-slider d-flex flex-fill">
+    <div class="container-fluid d-flex flex-fill">
+        <div class="row d-flex flex-fill">
+            <div class="col-md-12 d-flex flex-fill px-0">
+                <div id="carouselExampleIndicatorss" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="1"></li>
+                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" style="background-image: url('<?php echo BASE_URL(); ?>assets/images/public/home/ms1.jpg');">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4 ps-0">
+                                        <figure>
+                                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/wslogo.svg" alt="facebook" alt="">
+                                        </figure>
+                                        <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item " style="background-image: url('<?php echo BASE_URL(); ?>assets/images/public/home/ms1.jpg');">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4 ps-0">
+                                        <figure>
+                                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/wslogo.svg" alt="facebook" alt="">
+                                        </figure>
+                                        <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item " style="background-image: url('<?php echo BASE_URL(); ?>assets/images/public/home/ms1.jpg');">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4 ps-0">
+                                        <figure>
+                                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/wslogo.svg" alt="facebook" alt="">
+                                        </figure>
+                                        <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="top-brands gray-bg py-30">
+
     <div class="container">
-    <div class="row">
+        <div class="row">
             <div class="col-md-12 positoin-relative">
                 <h5 class="fz40 pr-font h-color d-table mx-auto text-center mb-0">Top Brands</h5>
                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="facebook" alt="" class="d-table mx-auto">
@@ -11,26 +72,26 @@
             <div class="col-md-10 ">
                 <div class="owl-carousel owl-theme top-brand ">
                     <div class="item">
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b1.svg" alt="" class="d-table mx-auto">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b1.png" alt="" class="d-table mx-auto">
                     </div>
                     <div class="item">
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b2.svg" alt="" class="d-table mx-auto">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b2.png" alt="" class="d-table mx-auto">
                     </div>
                     <div class="item">
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b3.svg" alt="" class="d-table mx-auto">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b3.png" alt="" class="d-table mx-auto">
                     </div>
                     <div class="item">
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b4.svg" alt="" class="d-table mx-auto">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b4.png" alt="" class="d-table mx-auto">
                     </div>
                     <div class="item">
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b5.svg" alt="" class="d-table mx-auto">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b5.png" alt="" class="d-table mx-auto">
                     </div>
-                    
+
                 </div>
             </div>
         </div>
         <div class="row mt-5">
-        <div class="col-md-12">
+            <div class="col-md-12">
                 <a href="" class="d-table mx-auto primary-btn">View All Brands</a>
             </div>
         </div>
@@ -58,12 +119,12 @@
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flow.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <!-- <div class="carousel-item position-relative">
+                        <div class="carousel-item position-relative">
                             <img src="<?php echo BASE_URL(); ?>assets/images/public/home/slider.jpg" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item position-relative">
                             <img src="<?php echo BASE_URL(); ?>assets/images/public/home/slider.jpg" class="d-block w-100" alt="...">
-                        </div> -->
+                        </div>
 
                     </div>
                     <ol class="carousel-indicators position-relative px-0 mx-0">
@@ -97,7 +158,7 @@
                 <div class="v-line d-table mx-auto"></div>
             </div>
         </div>
-        <div class="row">
+        <div class="row px-5">
             <div class="col-md-4">
                 <h2 class="fz40 d-table mx-auto pr-font h-color mb-0">Eat</h2>
                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="facebook" alt="" class="d-table mx-auto">
@@ -111,7 +172,7 @@
                 <h2 class="fz40 d-table mx-auto pr-font h-color mb-0">Style</h2>
                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="facebook" alt="" class="d-table mx-auto">
                 <figure class="position-relative mb-0 mt-12">
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex2.jpg" alt="facebook" alt="" class="">
+                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e2.jpg" alt="facebook" alt="" class="">
                 </figure>
                 <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="facebook" alt=""></a>
 
@@ -148,11 +209,28 @@
 
                                 </div>
                                 <div class="col-md-4">
+                                    <div class="pl-12">
+                                    <h2 class="position-relative">23-24<span>23-24</span></h2>
+                                    <div class="time">7 pm - 9 pm</div>
+                                    <div class="day">SAT & SUN</div>
+                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg" alt="facebook" alt="">
+                                    <div class="box-calander">
+                                        <div class="top-row">
+                                            <div class="left-col"><span>2021</span></div>
+                                            <div class="right-col">MAR</div>
+                                        </div>
+                                        <div class="bottom-row">
+                                        Kite Flying Event 
+this season. 
+                                        </div>
+
+                                    </div>
+                                    </div>
 
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <!-- <div class="carousel-item">
                             <div class="row">
                                 <div class="col-md-8">
                                     <img src="<?php echo BASE_URL(); ?>assets/images/public/home/leftslide.jpg" alt="facebook" alt="" class="w-100">
@@ -162,7 +240,7 @@
 
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
 
                     </div>
