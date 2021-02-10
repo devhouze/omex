@@ -378,7 +378,19 @@ footer .menu li+li {
     justify-content: center;
 }
 
-.top-brands .owl-item+.owl-item.active {
+.top-brands .owl-theme .owl-nav .owl-prev {
+    position: absolute;
+    left: -110px;
+    bottom: 30px;
+}
+
+.top-brands .owl-theme .owl-nav .owl-next {
+    right: -110px;
+    position: absolute;
+    bottom: 30px;
+}
+
+.top-brands .owl-item.active+.owl-item.active {
     border-left: 1px solid #EDEDED;
 }
 
