@@ -34,7 +34,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('js/home');
 		$this->load->view('footer/body_end');
 	}
-	public function street()
+	public function athens()
 	{
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
@@ -42,7 +42,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
 		$this->load->view('header/main_header');
-		$this->load->view('street');
+		$this->load->view('athens');
 		$this->load->view('footer/footer_signup');
 		$this->load->view('footer/main_footer');
 		$this->load->view('footer/footer_common');
