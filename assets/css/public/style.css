@@ -218,12 +218,7 @@ footer .menu li+li {
 }
 
 .time {
-    color: rgba(8, 61, 104, 0.9);
-    font-size: 30px;
-}
-
-.time {
-    color: rgba(8, 61, 104, 0.9);
+    color: var(--h-color);
     font-size: 30px;
 }
 
@@ -545,17 +540,22 @@ footer .menu li+li {
 }
 
 .athens-page .exploer-btn {
-    background: #5A946E;
+    background: var(--ath);
 }
 
-.athens-page .primary-btn {
-    border-color: #5A946E;
-    color: #5A946E;
+.athens-page .looking-out h2 {
+    color: #083D68;
+    text-shadow: 5px 0px 0px #5A946E;
 }
 
-.athens-page .primary-btn:hover {
-    background: #5A946E;
-    color: white;
+.athens-page .day {
+    color: var(--ath);
+}
+
+.athens-page .top-row,
+.athens-page .left-col,
+.athens-page .box-calander {
+    border-color: var(--ath);
 }
 
 
