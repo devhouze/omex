@@ -13,135 +13,242 @@
             </div>
         </div>
     </div>
-    <div class="explore-more gray-bg py-30">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 positoin-relative">
-                <h5 class="fz40 pr-font h-color d-table mx-auto text-center mb-0 px-lg-5">Welcome to a glimpse of Athens, inspired by the art, history and architecture.</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-icon.svg" alt="facebook" alt="" class="d-table mx-auto">
-                <div class="v-line d-table mx-auto"></div>
+    <div class="explore-more gray-bg pt-60 pb-30">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 positoin-relative">
+                    <h5 class="fz40 pr-font h-color d-table mx-auto text-center mb-0 px-lg-5">Welcome to a glimpse of Athens, inspired by the art, history and architecture.</h5>
+                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-icon.svg" alt="facebook" alt="" class="d-table mx-auto">
+                    <div class="v-line d-table mx-auto"></div>
+                </div>
             </div>
-        </div>
-        <div class="row px-5">
-            <div class="col-md-4">
-                <h2 class="fz40 d-table mx-auto pr-font h-color mb-0">Eat</h2>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-icon.svg" alt="facebook" alt="" class="d-table mx-auto">
-                <figure class="position-relative mb-0 mt-12">
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e1.jpg" alt="facebook" alt="" class="">
-                </figure>
-                <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="facebook" alt=""></a>
+            <div class="row px-5">
+                <div class="col-md-4">
+                    <h2 class="fz40 d-table mx-auto pr-font h-color mb-0">Eat</h2>
+                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-icon.svg" alt="facebook" alt="" class="d-table mx-auto">
+                    <figure class="position-relative mb-0 mt-12">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e1.jpg" alt="facebook" alt="" class="">
+                    </figure>
+                    <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="facebook" alt=""></a>
 
-            </div>
-            <div class="col-md-4">
-                <h2 class="fz40 d-table mx-auto pr-font h-color mb-0">Style</h2>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-icon.svg" alt="facebook" alt="" class="d-table mx-auto">
-                <figure class="position-relative mb-0 mt-12">
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e3.jpg" alt="facebook" alt="" class="">
-                    
-                </figure>
-                <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="facebook" alt=""></a>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="fz40 d-table mx-auto pr-font h-color mb-0">Style</h2>
+                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-icon.svg" alt="facebook" alt="" class="d-table mx-auto">
+                    <figure class="position-relative mb-0 mt-12">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e3.jpg" alt="facebook" alt="" class="">
 
-            </div>
-            <div class="col-md-4">
-                <h2 class="fz40 d-table mx-auto pr-font h-color mb-0">Play</h2>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-icon.svg" alt="facebook" alt="" class="d-table mx-auto">
-                <figure class="position-relative mb-0 mt-12">
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e2.jpg" alt="facebook" alt="" class="">
-                </figure>
-                <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="facebook" alt=""></a>
+                    </figure>
+                    <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="facebook" alt=""></a>
 
-            </div>
-        </div>
-    </div>
-</div>
+                </div>
+                <div class="col-md-4">
+                    <h2 class="fz40 d-table mx-auto pr-font h-color mb-0">Play</h2>
+                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-icon.svg" alt="facebook" alt="" class="d-table mx-auto">
+                    <figure class="position-relative mb-0 mt-12">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e2.jpg" alt="facebook" alt="" class="">
+                    </figure>
+                    <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="facebook" alt=""></a>
 
-<div class="looking-out gray-bg py-30">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 positoin-relative">
-                <h5 class="fz40 pr-font h-color d-table mx-auto text-center mb-0">Look out for what’s coming up!</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-icon.svg" alt="facebook" alt="" class="d-table mx-auto">
-                <div class="v-line d-table mx-auto"></div>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/leftslide.jpg" alt="facebook" alt="" class="w-100">
-
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="pl-12">
-                                        <h2 class="position-relative">23-24</h2>
-                                        <div class="time">7 pm - 9 pm</div>
-                                        <div class="day">SAT & SUN</div>
-                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg" alt="facebook" alt="">
-                                        <div class="box-calander">
-                                            <div class="top-row">
-                                                <div class="left-col"><span>2021</span></div>
-                                                <div class="right-col">MAR</div>
-                                            </div>
-                                            <div class="bottom-row">
-                                                Kite Flying Event
-                                                this season.
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/leftslide.jpg" alt="facebook" alt="" class="w-100">
-
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="pl-12">
-                                        <h2 class="position-relative">23-24</h2>
-                                        <div class="time">7 pm - 9 pm</div>
-                                        <div class="day">SAT & SUN</div>
-                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg" alt="facebook" alt="">
-                                        <div class="box-calander">
-                                            <div class="top-row">
-                                                <div class="left-col"><span>2021</span></div>
-                                                <div class="right-col">MAR</div>
-                                            </div>
-                                            <div class="bottom-row">
-                                                Kite Flying Event
-                                                this season.
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="d-flex position-absolute">
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/left.svg" alt="facebook" alt="" class="w-100">
-                        </a>
-                        <a class="carousel-control-next ml-40" href="#carouselExampleControls" role="button" data-bs-slide="next">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/right.svg" alt="facebook" alt="" class="w-100">
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <a href="" class="primary-btn d-inline-block mt-36">KNOW MORE</a>
+    </div>
+    <div class="live-in-word gray-bg pt-30">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 positoin-relative">
+                    <h5 class="fz40 pr-font h-color d-table mx-auto text-center mb-0">Live in your world, experience ours.</h5>
+                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-icon.svg" alt="facebook" alt="" class="d-table mx-auto">
+                    <div class="v-line d-table mx-auto"></div>
+                </div>
+            </div>
+            <div class="row mt-4 d-lg-block d-none">
+                <div class="col-md-12">
+                    <div class="owl-carousel slider">
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs1.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs4.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                                </div>
+                                <div class="col-md-4">
+                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs2.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs5.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                                </div>
+                                <div class="col-md-4">
+                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs3.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs6.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs1.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs4.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                                </div>
+                                <div class="col-md-4">
+                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs2.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs5.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                                </div>
+                                <div class="col-md-4">
+                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs3.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs6.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs1.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs4.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                                </div>
+                                <div class="col-md-4">
+                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs2.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs5.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                                </div>
+                                <div class="col-md-4">
+                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs3.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs6.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="slider-counter"></div>
+                </div>
+            </div>
+            <div class="row mt-4 d-lg-none d-block">
+                <div class="col-md-12">
+                    <div class="owl-carousel slider">
+
+                        <div class="item">
+                            <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs1.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                        </div>
+                        <div class="item">
+                            <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs4.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                        </div>
+                        <div class="item">
+                            <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs2.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                        </div>
+                        <div class="item">
+                            <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs5.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                        </div>
+                        <div class="item">
+                            <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs3.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                        </div>
+                        <div class="item">
+                            <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs6.jpg" alt="facebook" alt="" class="d-table mx-auto"></figure>
+                        </div>
+
+                    </div>
+                    <div class="slider-counter"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="looking-out gray-bg py-30">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 positoin-relative">
+                    <h5 class="fz40 pr-font h-color d-table mx-auto text-center mb-0">Look out for what’s coming up!</h5>
+                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-icon.svg" alt="facebook" alt="" class="d-table mx-auto">
+                    <div class="v-line d-table mx-auto"></div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/leftslide.jpg" alt="facebook" alt="" class="w-100">
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="pl-12">
+                                            <h2 class="position-relative">23-24</h2>
+                                            <div class="time">7 pm - 9 pm</div>
+                                            <div class="day">SAT & SUN</div>
+                                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg" alt="facebook" alt="">
+                                            <div class="box-calander">
+                                                <div class="top-row">
+                                                    <div class="left-col"><span>2021</span></div>
+                                                    <div class="right-col">MARCH</div>
+                                                </div>
+                                                <div class="bottom-row">
+                                                    Kite Flying Event
+                                                    this season.
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/leftslide.jpg" alt="facebook" alt="" class="w-100">
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="pl-12">
+                                            <h2 class="position-relative">23-24</h2>
+                                            <div class="time">7 pm - 9 pm</div>
+                                            <div class="day">SAT & SUN</div>
+                                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg" alt="facebook" alt="">
+                                            <div class="box-calander">
+                                                <div class="top-row">
+                                                    <div class="left-col"><span>2021</span></div>
+                                                    <div class="right-col">MAR</div>
+                                                </div>
+                                                <div class="bottom-row">
+                                                    Kite Flying Event
+                                                    this season.
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="d-flex position-absolute">
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-left.svg" alt="facebook" alt="" class="w-100">
+                            </a>
+                            <a class="carousel-control-next ml-40" href="#carouselExampleControls" role="button" data-bs-slide="next">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-right.svg" alt="facebook" alt="" class="w-100">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="" class="primary-btn d-inline-block mt-36">KNOW MORE</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+    <div class="hello-area py-30">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 positoin-relative">
+                    <h5 class="fz40 pr-font h-color d-table mx-auto text-center mb-0">Look out for what’s coming up!</h5>
+                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-icon.svg" alt="facebook" alt="" class="d-table mx-auto">
+                    <div class="v-line d-table mx-auto"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
