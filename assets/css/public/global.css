@@ -1003,4 +1003,8 @@
         font-size: calc(var(--v2) * 7);
         padding: 12px 40px;
     }
+    .px-10-sm {
+        padding-top: calc(var(--v2) * 5);
+        padding-bottom: calc(var(--v2) * 5);
+    }
 }
