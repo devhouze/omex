@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'Recoleta';
-    src: url('/assets/css/public/fonts/Recoleta-Regular.woff2') format('woff2'), url('/assets/css/public/fonts/Recoleta-Regular.woff') format('woff');
+    src: url('/omex/assets/css/public/fonts/Recoleta-Regular.woff2') format('woff2'), url('/assets/css/public/fonts/Recoleta-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -152,7 +152,7 @@
 
 @font-face {
     font-family: 'Helvetica';
-    src: url('/assets/css/public/fonts/Helvetica.woff2') format('woff2'), url('/assets/css/public/fonts/Helvetica.woff') format('woff');
+    src: url('/omex/assets/css/public/fonts/Helvetica.woff2') format('woff2'), url('/assets/css/public/fonts/Helvetica.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
