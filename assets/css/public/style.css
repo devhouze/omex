@@ -21,7 +21,7 @@ header.header.sticky {
 }
 
 .main-menu .navbar-nav li+li {
-    margin-left: calc(var(--v2) * 20);
+    margin-left: calc(var(--v2) * 30);
 }
 
 .main-menu .navbar-nav li a {
