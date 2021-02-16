@@ -553,6 +553,10 @@
     margin-bottom: calc(var(--v2) * 20);
 }
 
+.mb-60 {
+    margin-bottom: calc(var(--v2) * 30);
+}
+
 .px-12 {
     padding-left: calc(var(--v2) * 6);
     padding-right: calc(var(--v2) * 6);
