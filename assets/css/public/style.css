@@ -125,6 +125,39 @@ footer .menu li+li {
     background: #03518B;
 }
 
+.slider-counter {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #0E3E67;
+}
+
+.slider-counter span {
+    display: inline-block;
+    width: 160px;
+    height: 2px;
+    background: #0E3E67;
+    margin: 0 15px;
+}
+
+.accordion-item h2.collapsed img {
+    transform: unset;
+}
+
+.accordion-item h2 img {
+    transform: rotate(180deg);
+}
+
+.slider-counter {
+    position: absolute;
+    bottom: 30px;
+    left: 42%;
+}
+
+.tab-pane {
+    position: relative;
+}
+
 .tab-area ul li {
     width: calc(100% / 4);
     text-align: center;
@@ -685,41 +718,44 @@ footer .menu li+li {
     outline: 0;
 }
 
+.experience .carousel-indicators li.active img {
+    transform: scale(1.5);
+}
+
 
 /* End street page cess */
 
 @media only screen and (max-width: 600px) {
+    .experience .carousel-indicators li {
+        display: none;
+        margin-left: 0 !important;
+    }
+    .experience .carousel-indicators li.active {
+        display: block;
+    }
+    .tab-area .owl-nav button+button {
+        margin-left: 40px;
+    }
+    .slider-counter {
+        left: 0;
+        right: 0;
+        bottom: 40px;
+        justify-content: center;
+    }
     div#navbarNavDropdown {
         left: 0;
         position: absolute;
         top: 100%;
         z-index: 9;
-        background: var(--h-color);
-        color: white;
+        background: white;
+        color: var(--h-color);
+        box-shadow: 0 0 1px 0 rgb(45 48 71 / 4%);
     }
     div#navbarNavDropdown ul li a {
-        color: white;
+        color: var(--h-color);
     }
     div#navbarNavDropdown ul li {
         padding: 10px;
-    }
-    div#navbarNavDropdown ul li+li {
-        border-top: 1px solid white;
-    }
-    button.navbar-toggler {
-        width: 50px;
-        height: 40px;
-        border: 1px solid var(--primary-color);
-        padding: 0 11px;
-    }
-    button.navbar-toggler span {
-        width: 98%;
-        height: 2px;
-        background: var(--primary-color);
-        display: block;
-    }
-    button.navbar-toggler span+span {
-        margin-top: 5px;
     }
     .navbar-toggler:focus {
         box-shadow: unset !important;
@@ -739,7 +775,7 @@ footer .menu li+li {
         font-size: 12px;
     }
     ul.menu.list-unstyled.mb-20 {
-        padding-left: 50px;
+        text-align: center;
         font-size: 12px;
     }
     .menu+ul {
@@ -749,8 +785,10 @@ footer .menu li+li {
         display: none;
     }
     .address p {
-        margin-right: 50px;
-        margin-left: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 50px;
+        text-align: center;
         font-size: 12px;
     }
     .f-title {
@@ -758,6 +796,8 @@ footer .menu li+li {
     }
     .footer-signup .sb-btn {
         margin-top: 0;
+        margin-top: 40px;
+        margin-bottom: 20px
     }
     .footer-signup .form-control {
         width: 100%;
