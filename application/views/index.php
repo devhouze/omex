@@ -229,7 +229,7 @@
                         <div class="carousel-item position-relative">
                             <img src="<?php echo BASE_URL(); ?>assets/images/public/home/slider7.jpg" class="d-block w-100" alt="...">
                             <div class="card hon-bg">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/h-S.svg" alt="">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/h-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/h-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
