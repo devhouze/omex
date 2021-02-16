@@ -562,8 +562,10 @@ footer .menu li+li {
     margin-top: 30px;
 }
 
-.street-banner .card p+img {
-    transform: rotate(-33.31deg);
+.live-in-word .col-md-4 figure {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 40px;
 }
 
 .parish-page .gray-bg {
@@ -597,7 +599,8 @@ footer .menu li+li {
 
 .athens-page .top-row,
 .athens-page .left-col,
-.athens-page .box-calander {
+.athens-page .box-calander,
+.athens-page .bottom-row {
     border-color: var(--ath);
 }
 
@@ -684,13 +687,14 @@ footer .menu li+li {
 .more-expoler .slider-counter span {
     width: 160px;
     height: 2px;
-    background: #7b4268;
+    background: var(--ath);
     margin: 0 15px;
 }
 
 .more-expoler .slider-counter {
     justify-content: center;
-    margin-top: 20px;
+    position: absolute;
+    bottom: -70px;
 }
 
 .more-expoler .owl-nav {
@@ -707,7 +711,7 @@ footer .menu li+li {
     left: 0;
     right: 0;
     width: 100%;
-    margin-top: 60px;
+    margin-top: 90px;
 }
 
 .more-expoler .owl-nav button+button {
@@ -722,10 +726,19 @@ footer .menu li+li {
     transform: scale(1.5);
 }
 
+.street-icon-abs {
+    position: absolute;
+    right: 280px;
+    top: 80px;
+}
+
 
 /* End street page cess */
 
 @media only screen and (max-width: 600px) {
+    .athens-page .looking-out h2 {
+        text-shadow: 2px 0px 0px #5a946e;
+    }
     .experience .carousel-indicators li {
         display: none;
         margin-left: 0 !important;
