@@ -66,8 +66,8 @@
                     <div class="v-line d-table mx-auto"></div>
                 </div>
             </div>
-            <div class="row mt-4 d-lg-block d-none">
-                <div class="col-md-12">
+            <div class="row mt-4 d-lg-flex d-none justify-content-center">
+                <div class="col-md-9">
                     <div class="owl-carousel slider">
                         <div class="item">
                             <div class="row">
