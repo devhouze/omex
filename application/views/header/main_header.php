@@ -1,4 +1,4 @@
-<header>
+<header class="header">
     <div class="header-top primary-bg d-md-block d-none">
         <div class="container">
             <div class="row align-items-center">
@@ -11,7 +11,7 @@
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <div class="text-white fw5">
+                    <div class="text-white fw5 ms-auto d-table">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/header/map.svg" alt="Map"><a href="#" class="text-white ms-1">Getting Here</a>
                     </div>
                 </div>
@@ -35,25 +35,18 @@
                             <a class="nav-link active" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">What’s New</a>
+                            <a class="nav-link" href="#">Streets</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Shop</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Eat</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Entertainment</a>
+                            <a class="nav-link" href="#">Brands</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Events</a>
                         </li>
+                    
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact Us</a>
-                        </li>
-                        
-                        
+                        </li>                       
                     </ul>
                 </div>
             </div>

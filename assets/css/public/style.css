@@ -3,6 +3,19 @@ img {
     height: auto;
 }
 
+.header.sticky .header-top {
+    display: none !important;
+}
+
+header.header.sticky {
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 20px rgb(45 48 71 / 10%);
+}
+
 .header-top {
     padding: 9px 0;
 }
@@ -241,7 +254,6 @@ footer .menu li+li {
     vertical-align: middle;
     display: flex;
     align-items: center;
-    border-bottom: 3.10766px solid #CC1F38;
 }
 
 
@@ -467,6 +479,7 @@ footer .menu li+li {
     text-align: center;
     height: calc(100% - 123px);
     padding: 0 80px;
+    border-bottom: 3.10766px solid #CC1F38;
 }
 
 .left-col span {

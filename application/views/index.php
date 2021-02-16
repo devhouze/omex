@@ -394,14 +394,15 @@
                                             <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg"  alt="">
                                         </div>
                                         <div class="box-calander">
+                                        <div class="bottom-row">
+                                                Kite Flying Event
+                                                this season.
+                                            </div>
                                             <div class="top-row">
                                                 <div class="left-col"><span>2021</span></div>
                                                 <div class="right-col">MAR</div>
                                             </div>
-                                            <div class="bottom-row">
-                                                Kite Flying Event
-                                                this season.
-                                            </div>
+                                           
 
                                         </div>
                                     </div>
@@ -430,14 +431,15 @@
                                             <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg"  alt="">
                                         </div>
                                         <div class="box-calander">
+                                        <div class="bottom-row">
+                                                Kite Flying Event
+                                                this season.
+                                            </div>
                                             <div class="top-row">
                                                 <div class="left-col"><span>2021</span></div>
                                                 <div class="right-col">MAR</div>
                                             </div>
-                                            <div class="bottom-row">
-                                                Kite Flying Event
-                                                this season.
-                                            </div>
+                                            
 
                                         </div>
                                     </div>

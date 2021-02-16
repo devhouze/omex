@@ -11,7 +11,7 @@
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                             <form action="" autocomplete="off" class="py-60 py-20-sm">
-                                <div class="row">
+                                <div class="row justify-content-center">
                                     <div class="col-md-4">
                                         <h3 class="pr-font fz36 fz18-sm text-white mb-30 mb-10-sm">Name*</h3>
                                         <div class="form-floating">
@@ -27,7 +27,7 @@
                                             <label for="floatingInput">Your Email</label>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <h3 class="pr-font fz36 fz18-sm text-white mb-30 mb-10-sm">Mobile Number*</h3>
                                         <div class="form-floating">
                                             <input type="text" class="form-control" id="floatingInput" placeholder="Your Number">
