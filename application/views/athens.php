@@ -316,16 +316,18 @@
                 </div>
             </div>
             <div class="row mt-4 d-flex flex-fill">
-                <div class="col-md-7 d-flex flex-fill">
+                <div class="col-md-1"></div>
+                <div class="col-md-6 d-flex flex-fill pe-5">
                     <figure class="mb-0 w-100"><img src="<?php echo BASE_URL(); ?>assets/images/public/street/map.jpg"  alt="" class="w-100"></figure>
                 </div>
-                <div class="col-md-5 d-flex flex-fill">
+                <div class="col-md-4 d-flex flex-fill">
                     <div class="card ath-bg px-60 py-60 rounded-0 border-0">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/at-s.svg" alt="">
                         <p class="fz22 text-white text-center mt-60">Wander by foot into the heart of the Athens. Start discovering your own world within ours at World Street.</p>
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/street/as-i.svg" alt="" class="d-table mx-auto mt-60">
                     </div>
                 </div>
+                <div class="col-md-1"></div>
             </div>
         </div>
 
