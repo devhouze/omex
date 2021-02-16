@@ -63,7 +63,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 positoin-relative">
-                <h5 class="fz40 pr-font h-color d-table mx-auto text-center mb-0">Top Brands</h5>
+                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Top Brands</h5>
                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="facebook" alt="" class="d-table mx-auto">
                 <div class="v-line d-table mx-auto"></div>
             </div>
@@ -157,23 +157,23 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-5">
+        <div class="row mt-md-5 mt-3">
             <div class="col-md-12">
                 <a href="" class="d-table mx-auto primary-btn">View All Brands</a>
             </div>
         </div>
     </div>
 </div>
-<div class="explore-more gray-bg py-30">
+<div class="experience gray-bg py-30">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 positoin-relative">
-                <h5 class="fz40 pr-font h-color d-table mx-auto text-center mb-0">Experience Best of World Street</h5>
+                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Experience Best of World Street</h5>
                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="facebook" alt="" class="d-table mx-auto">
                 <div class="v-line d-table mx-auto"></div>
             </div>
         </div>
-        <div class="row mt-4">
+        <div class="row mt-4 d-md-block d-none">
             <div class="col-md-12 px-0">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
@@ -273,20 +273,90 @@
             </div>
 
         </div>
+        <div class="row mt-4 d-md-none d-block">
+            <div class="col-md-12 px-0">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item position-relative active">
+                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/london-m.jpg" class="d-block w-100" alt="...">
+                            <div class="card lon-bg">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/l-s.svg" alt="">
+                                <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto">
+                            </div>
+                        </div>
+                        <div class="carousel-item position-relative">
+                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/paris-m.jpg" class="d-block w-100" alt="...">
+                            <div class="card par-bg">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/parish.svg" alt="">
+                                <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/pa-s-f.svg" alt="" class="d-table mx-auto">
+                            </div>
+                        </div>
+                        <div class="carousel-item position-relative">
+                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/port-m.jpg" class="d-block w-100" alt="...">
+                            <div class="card por-bg">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/p-s.svg" alt="">
+                                <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/p-s-f.svg" alt="" class="d-table mx-auto">
+                            </div>
+                        </div>
+                        <div class="carousel-item position-relative">
+                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/aths-m.jpg" class="d-block w-100" alt="...">
+                            <div class="card ath-bg">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/at-s.svg" alt="">
+                                <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/at-s-f.svg" alt="" class="d-table mx-auto">
+                            </div>
+                        </div>
+                        <div class="carousel-item position-relative">
+                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/amst-m.jpg" class="d-block w-100" alt="...">
+                            <div class="card ams-bg">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/am-s.svg" alt="">
+                                <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/am-s-f.svg" alt="" class="d-table mx-auto">
+                            </div>
+                        </div>
+                        <div class="carousel-item position-relative">
+                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/san-m.jpg" class="d-block w-100" alt="...">
+                            <div class="card san-bg">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/S-S.svg" alt="">
+                                <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/s-s-f.svg" alt="" class="d-table mx-auto">
+                            </div>
+                        </div>
+                        <div class="carousel-item position-relative">
+                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/hon-m.jpg" class="d-block w-100" alt="...">
+                            <div class="card hon-bg">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/h-S.svg" alt="">
+                                <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/h-s-f.svg" alt="" class="d-table mx-auto">
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
 <div class="explore-more gray-bg py-30">
     <div class="container">
         <div class="row">
             <div class="col-md-12 positoin-relative">
-                <h5 class="fz40 pr-font h-color d-table mx-auto text-center mb-0">Explore More</h5>
+                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Explore More</h5>
                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="facebook" alt="" class="d-table mx-auto">
                 <div class="v-line d-table mx-auto"></div>
             </div>
         </div>
-        <div class="row px-5">
+        <div class="row px-md-5 px-3">
             <div class="col-md-4">
-                <h2 class="fz40 d-table mx-auto pr-font h-color mb-0">Eat</h2>
+                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0">Eat</h2>
                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="facebook" alt="" class="d-table mx-auto">
                 <figure class="position-relative mb-0 mt-12">
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e1.jpg" alt="facebook" alt="" class="">
@@ -295,20 +365,20 @@
 
             </div>
             <div class="col-md-4">
-                <h2 class="fz40 d-table mx-auto pr-font h-color mb-0">Style</h2>
+                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0">Style</h2>
                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="facebook" alt="" class="d-table mx-auto">
                 <figure class="position-relative mb-0 mt-12">
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e3.jpg" alt="facebook" alt="" class="">
-                    
+                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e3.jpg" alt="facebook" alt="" class="">
+
                 </figure>
                 <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="facebook" alt=""></a>
 
             </div>
             <div class="col-md-4">
-                <h2 class="fz40 d-table mx-auto pr-font h-color mb-0">Play</h2>
+                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0">Play</h2>
                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="facebook" alt="" class="d-table mx-auto">
                 <figure class="position-relative mb-0 mt-12">
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e2.jpg" alt="facebook" alt="" class="">
+                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e2.jpg" alt="facebook" alt="" class="">
                 </figure>
                 <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="facebook" alt=""></a>
 
@@ -320,7 +390,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 positoin-relative">
-                <h5 class="fz40 pr-font h-color d-table mx-auto text-center mb-0">Look out for what’s coming up!</h5>
+                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Look out for what’s coming up!</h5>
                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="facebook" alt="" class="d-table mx-auto">
                 <div class="v-line d-table mx-auto"></div>
             </div>
@@ -332,15 +402,23 @@
                         <div class="carousel-item active">
                             <div class="row">
                                 <div class="col-md-8">
+                                    <div class="d-md-none d-block mobile-look">
+                                        <h2 class="position-relative">23-24</h2>
+                                        <div class="time">7 pm - 9 pm</div>
+                                        <div class="day">SAT & SUN</div>
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg" alt="facebook" alt="">
+                                    </div>
                                     <img src="<?php echo BASE_URL(); ?>assets/images/public/home/leftslide.jpg" alt="facebook" alt="" class="w-100">
 
                                 </div>
                                 <div class="col-md-4">
                                     <div class="pl-12">
-                                        <h2 class="position-relative">23-24</h2>
-                                        <div class="time">7 pm - 9 pm</div>
-                                        <div class="day">SAT & SUN</div>
-                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg" alt="facebook" alt="">
+                                        <div class="d-md-block d-none">
+                                            <h2 class="position-relative">23-24</h2>
+                                            <div class="time">7 pm - 9 pm</div>
+                                            <div class="day">SAT & SUN</div>
+                                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg" alt="facebook" alt="">
+                                        </div>
                                         <div class="box-calander">
                                             <div class="top-row">
                                                 <div class="left-col"><span>2021</span></div>
@@ -360,15 +438,23 @@
                         <div class="carousel-item">
                             <div class="row">
                                 <div class="col-md-8">
+                                    <div class="d-md-none d-block mobile-look">
+                                        <h2 class="position-relative">23-24</h2>
+                                        <div class="time">7 pm - 9 pm</div>
+                                        <div class="day">SAT & SUN</div>
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg" alt="facebook" alt="">
+                                    </div>
                                     <img src="<?php echo BASE_URL(); ?>assets/images/public/home/leftslide.jpg" alt="facebook" alt="" class="w-100">
 
                                 </div>
                                 <div class="col-md-4">
                                     <div class="pl-12">
-                                        <h2 class="position-relative">23-24</h2>
-                                        <div class="time">7 pm - 9 pm</div>
-                                        <div class="day">SAT & SUN</div>
-                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg" alt="facebook" alt="">
+                                        <div class="d-md-block d-none">
+                                            <h2 class="position-relative">23-24</h2>
+                                            <div class="time">7 pm - 9 pm</div>
+                                            <div class="day">SAT & SUN</div>
+                                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg" alt="facebook" alt="">
+                                        </div>
                                         <div class="box-calander">
                                             <div class="top-row">
                                                 <div class="left-col"><span>2021</span></div>
@@ -385,6 +471,7 @@
                                 </div>
                             </div>
                         </div>
+
 
                     </div>
                     <div class="d-flex position-absolute">
@@ -409,7 +496,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 positoin-relative">
-                <h5 class="fz40 pr-font h-color d-table mx-auto text-center mb-0">Experience Gallery</h5>
+                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Experience Gallery</h5>
                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="facebook" alt="" class="d-table mx-auto">
                 <div class="v-line d-table mx-auto"></div>
             </div>

@@ -239,16 +239,108 @@
         </div>
     </div>
 
-    <div class="hello-area py-30">
+    <div class="hello-area looking-out gray-bg py-30 position-relative">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 pr-font h-color d-table mx-auto text-center mb-0">Look out for what’s coming up!</h5>
+                    <h5 class="fz40 pr-font h-color d-table mx-auto text-center mb-0">Hello from Athens!</h5>
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-icon.svg" alt="facebook" alt="" class="d-table mx-auto">
                     <div class="v-line d-table mx-auto"></div>
                 </div>
             </div>
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <div id="carouselExamControlss" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <figure class="position-relative mb-0">
+                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/h1.jpg" alt="" class="w-100">
+                                    <div class="abs-block">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/pairsh.svg" alt="">
+                                    </div>
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure class="position-relative mb-0">
+                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/h1.jpg" alt="" class="w-100">
+                                    <div class="abs-block">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/pairsh.svg" alt="">
+                                    </div>
+                                </figure>
+                            </div>
+
+
+                        </div>
+                        <div class="d-flex position-absolute btn-controls">
+                            <a class="carousel-control-prev" href="#carouselExamControlss" role="button" data-bs-slide="prev">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-left.svg" alt="facebook" alt="" class="w-100">
+                            </a>
+                            <a class="carousel-control-next ml-40" href="#carouselExamControlss" role="button" data-bs-slide="next">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-right.svg" alt="facebook" alt="" class="w-100">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
+    </div>
+    <div class="find-us py-30 gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 positoin-relative">
+                    <h5 class="fz40 pr-font h-color d-table mx-auto text-center mb-0">Find Us</h5>
+                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-icon.svg" alt="facebook" alt="" class="d-table mx-auto">
+                    <div class="v-line d-table mx-auto"></div>
+                </div>
+            </div>
+            <div class="row mt-4 d-flex flex-fill">
+                <div class="col-md-7 d-flex flex-fill">
+                    <figure class="mb-0 w-100"><img src="<?php echo BASE_URL(); ?>assets/images/public/street/map.jpg" alt="facebook" alt="" class="w-100"></figure>
+                </div>
+                <div class="col-md-5 d-flex flex-fill">
+                    <div class="card ath-bg px-60 py-60 rounded-0 border-0">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/parish.svg" alt="">
+                        <p class="fz22 text-white text-center mt-60">Originally designed in 1905 by an artist for his wife, La Playa Carmel still resonates an aura of romance and old-world charm.</p>
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flow.svg" alt="" class="d-table mx-auto mt-60">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="more-expoler pt-30 pb-60 gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 positoin-relative">
+                    <h5 class="fz40 pr-font h-color d-table mx-auto text-center mb-0">There’s more to explore</h5>
+                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-icon.svg" alt="facebook" alt="" class="d-table mx-auto">
+                    <div class="v-line d-table mx-auto"></div>
+                </div>
+            </div>
+            <div class="row mt-4 pb-60">
+                <div class="col-md-12">
+                    <div class="owl-carousel sliders">
+                        <div class="item">
+                            <img src="<?php echo BASE_URL(); ?>assets/images/public/street/m3.jpg" alt="facebook" alt="" class="d-table mx-auto">
+                        </div>
+                        <div class="item">
+                            <img src="<?php echo BASE_URL(); ?>assets/images/public/street/m2.jpg" alt="facebook" alt="" class="d-table mx-auto">
+                        </div>
+                        <div class="item">
+                            <img src="<?php echo BASE_URL(); ?>assets/images/public/street/m1.jpg" alt="facebook" alt="" class="d-table mx-auto">
+                        </div>
+                        <div class="item">
+                            <img src="<?php echo BASE_URL(); ?>assets/images/public/street/m1.jpg" alt="facebook" alt="" class="d-table mx-auto">
+                        </div>
+
+
+
+                    </div>
+                    <div class="slider-counter"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

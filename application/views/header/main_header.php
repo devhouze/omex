@@ -1,5 +1,5 @@
 <header>
-    <div class="header-top primary-bg">
+    <div class="header-top primary-bg d-md-block d-none">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-5">
@@ -21,10 +21,13 @@
     <div class="main-menu py-14">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand p-0 m-0" href="#"><img src="<?php echo BASE_URL(); ?>assets/images/public/header/logo.svg" alt="Map"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                   <span></span>
+                   <span></span>
+                   <span></span>
                 </button>
+                <a class="navbar-brand p-0 m-0" href="#"><img src="<?php echo BASE_URL(); ?>assets/images/public/header/logo.svg" alt="Map"></a>
+                
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto">
                         

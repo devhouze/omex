@@ -628,6 +628,11 @@
     padding-right: calc(var(--v2) * 20);
 }
 
+.px-60 {
+    padding-left: calc(var(--v2) * 30);
+    padding-right: calc(var(--v2) * 30);
+}
+
 .py-12 {
     padding-top: calc(var(--v2) * 6);
     padding-bottom: calc(var(--v2) * 6);
@@ -952,6 +957,10 @@
     padding-bottom: calc(var(--v2) * 20);
 }
 
+.pb-60 {
+    padding-bottom: calc(var(--v2) * 30);
+}
+
 
 /* btn styling */
 
@@ -971,3 +980,27 @@
 
 
 /* end bnt styling */
+
+@media only screen and (max-width: 600px) {
+    .mb-10-sm {
+        margin-bottom: calc(var(--v2) * 5);
+    }
+    .py-20-sm {
+        padding-top: calc(var(--v2) * 10);
+        padding-bottom: calc(var(--v2) * 10);
+    }
+    .fz18-sm {
+        font-size: calc(var(--v2) * 9);
+    }
+    .fz20-sm {
+        font-size: calc(var(--v2) * 10);
+    }
+    .fz24-sm {
+        font-size: calc(var(--v2) * 12);
+    }
+    .primary-btn {
+        background: transparent;
+        font-size: calc(var(--v2) * 7);
+        padding: 12px 40px;
+    }
+}

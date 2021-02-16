@@ -26,8 +26,8 @@
                 </div>
 
             </div>
-            <div class="col-md-4 ps-5">
-                <div class="f-title fz26 text-white fw5 mb-30">Contact</div>
+            <div class="col-md-4 ps-md-5">
+                <div class="f-title fz26 text-white fw5 mb-30 mt-md-0 mt-4">Contact</div>
                 <ul class="menu list-unstyled mb-20">
                     <li>Call: +91-9015222222</li>
                     <li>Email: info@omaxews.com</li>
@@ -41,7 +41,7 @@
             <div class="col-md-3">
             
             <div class="address">
-            <div class="f-title fz26 text-white fw5 mb-30">Addresss</div>
+            <div class="f-title fz26 text-white fw5 mb-30  mt-md-0 mt-4">Addresss</div>
             <p>Omaxe Marketing & Sales Office (World Street, Sector 79, Faridabad, Haryana 121004
 India</p>
             </div>
