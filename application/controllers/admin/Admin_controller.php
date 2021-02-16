@@ -12,6 +12,4 @@ class Admin_controller extends MY_Controller {
 		$this->load->view('admin/include/body_end');
 		$this->load->view('admin/include/admin_js');
 	}
-		
-	
 }

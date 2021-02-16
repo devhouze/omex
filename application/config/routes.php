@@ -65,8 +65,10 @@ $route['admin/logout'] = 'admin/Login_Controller/logout';
 $route['admin/validate-email'] = 'admin/Login_Controller/validate_email';
 $route['admin/validate-admin'] = 'admin/Login_Controller/validate_login';
 $route['admin/dashboard'] = 'admin/Dashboard_Controller/index';
-$route['admin/sign-up'] = 'admin/Admin_controller/sign_up';
 $route['admin/forgot-password'] = 'admin/Login_Controller/forgot_password';
+
+// Brands Routes
+$route['admin/brands'] = 'admin/Brands_controller/brand_list';
 $route['admin/404'] = 'admin/Admin_controller/error404';
 $route['admin/blank'] = 'admin/Admin_controller/blank';
 $route['admin/utilities-other'] = 'admin/Admin_controller/utilities_other';

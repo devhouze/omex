@@ -9,7 +9,7 @@
                 <path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z" />
               </g>
             </svg>
-            <span class="brand-name text-truncate">Sleek Dashboard</span>
+            <span class="brand-name text-truncate">Omaxe World</span>
           </a>
         </div>
         <!-- begin sidebar scrollbar -->
@@ -17,8 +17,6 @@
 
           <!-- sidebar menu -->
           <ul class="nav sidebar-inner" id="sidebar-menu">
-
-
 
             <li class="has-sub active expand">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
@@ -28,103 +26,40 @@
               <ul class="collapse show" id="dashboard" data-parent="#sidebar-menu">
                 <div class="sub-menu">
 
-
-
                   <li class="active">
                     <a class="sidenav-item-link" href="index.html">
                       <span class="nav-text">Ecommerce</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="analytics.html">
                       <span class="nav-text">Analytics</span>
-
                       <span class="badge badge-success">new</span>
-
                     </a>
                   </li>
-
-
-
 
                 </div>
               </ul>
             </li>
-
-
-
-
 
             <li class="has-sub">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#app" aria-expanded="false" aria-controls="app">
                 <i class="mdi mdi-pencil-box-multiple"></i>
-                <span class="nav-text">App</span> <b class="caret"></b>
+                <span class="nav-text">Brand</span> <b class="caret"></b>
               </a>
               <ul class="collapse" id="app" data-parent="#sidebar-menu">
                 <div class="sub-menu">
 
-
-
                   <li>
-                    <a class="sidenav-item-link" href="chat.html">
-                      <span class="nav-text">Chat</span>
-
+                    <a class="sidenav-item-link" href="<?php echo base_url('brands')?>">
+                      <span class="nav-text">List</span>
                     </a>
                   </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="contacts.html">
-                      <span class="nav-text">Contacts</span>
-
-                    </a>
-                  </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="team.html">
-                      <span class="nav-text">Team</span>
-
-                    </a>
-                  </li>
-
-
-
-
-
-
-                  <li>
-                    <a class="sidenav-item-link" href="calendar.html">
-                      <span class="nav-text">Calendar</span>
-
-                    </a>
-                  </li>
-
-
-
 
                 </div>
               </ul>
             </li>
-
-
-
-
 
             <li class="has-sub">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#components" aria-expanded="false" aria-controls="components">
@@ -134,242 +69,122 @@
               <ul class="collapse" id="components" data-parent="#sidebar-menu">
                 <div class="sub-menu">
 
-
-
                   <li>
                     <a class="sidenav-item-link" href="alert.html">
                       <span class="nav-text">Alert</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="badge.html">
                       <span class="nav-text">Badge</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="breadcrumb.html">
                       <span class="nav-text">Breadcrumb</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="button-default.html">
                       <span class="nav-text">Button Default</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="button-dropdown.html">
                       <span class="nav-text">Button Dropdown</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="button-group.html">
                       <span class="nav-text">Button Group</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="button-social.html">
                       <span class="nav-text">Button Social</span>
-
                     </a>
                   </li>
-
-
-
-
-
-
                   <li>
                     <a class="sidenav-item-link" href="button-loading.html">
                       <span class="nav-text">Button Loading</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="card.html">
                       <span class="nav-text">Card</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="carousel.html">
                       <span class="nav-text">Carousel</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="collapse.html">
                       <span class="nav-text">Collapse</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="list-group.html">
                       <span class="nav-text">List Group</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="modal.html">
                       <span class="nav-text">Modal</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="pagination.html">
                       <span class="nav-text">Pagination</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="popover-tooltip.html">
                       <span class="nav-text">Popover & Tooltip</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="progress-bar.html">
                       <span class="nav-text">Progress Bar</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="spinner.html">
                       <span class="nav-text">Spinner</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="switcher.html">
                       <span class="nav-text">Switcher</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="tab.html">
                       <span class="nav-text">Tab</span>
-
                     </a>
                   </li>
-
-
-
 
                 </div>
               </ul>
             </li>
-
-
-
-
-
             <li class="has-sub">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#icons" aria-expanded="false" aria-controls="icons">
                 <i class="mdi mdi-diamond-stone"></i>
@@ -378,38 +193,20 @@
               <ul class="collapse" id="icons" data-parent="#sidebar-menu">
                 <div class="sub-menu">
 
-
-
                   <li>
                     <a class="sidenav-item-link" href="material-icon.html">
                       <span class="nav-text">Material Icon</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="flag-icon.html">
                       <span class="nav-text">Flag Icon</span>
-
                     </a>
                   </li>
-
-
-
-
                 </div>
               </ul>
             </li>
-
-
-
-
-
             <li class="has-sub">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#forms" aria-expanded="false" aria-controls="forms">
                 <i class="mdi mdi-email-mark-as-unread"></i>
@@ -417,20 +214,12 @@
               </a>
               <ul class="collapse" id="forms" data-parent="#sidebar-menu">
                 <div class="sub-menu">
-
-
-
                   <li>
                     <a class="sidenav-item-link" href="basic-input.html">
                       <span class="nav-text">Basic Input</span>
 
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="input-group.html">
@@ -439,22 +228,12 @@
                     </a>
                   </li>
 
-
-
-
-
-
                   <li>
                     <a class="sidenav-item-link" href="checkbox-radio.html">
                       <span class="nav-text">Checkbox & Radio</span>
 
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="form-validation.html">
@@ -463,11 +242,6 @@
                     </a>
                   </li>
 
-
-
-
-
-
                   <li>
                     <a class="sidenav-item-link" href="form-advance.html">
                       <span class="nav-text">Form Advance</span>
@@ -475,17 +249,9 @@
                     </a>
                   </li>
 
-
-
-
                 </div>
               </ul>
             </li>
-
-
-
-
-
             <li class="has-sub">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#tables" aria-expanded="false" aria-controls="tables">
                 <i class="mdi mdi-table"></i>
@@ -493,20 +259,12 @@
               </a>
               <ul class="collapse" id="tables" data-parent="#sidebar-menu">
                 <div class="sub-menu">
-
-
-
                   <li>
                     <a class="sidenav-item-link" href="basic-tables.html">
                       <span class="nav-text">Basic Tables</span>
 
                     </a>
                   </li>
-
-
-
-
-
                   <li class="has-sub">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#data-tables" aria-expanded="false" aria-controls="data-tables">
                       <span class="nav-text">Data Tables</span> <b class="caret"></b>
@@ -533,17 +291,9 @@
                       </div>
                     </ul>
                   </li>
-
-
-
                 </div>
               </ul>
             </li>
-
-
-
-
-
             <li class="has-sub">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#maps" aria-expanded="false" aria-controls="maps">
                 <i class="mdi mdi-google-maps"></i>
@@ -551,39 +301,21 @@
               </a>
               <ul class="collapse" id="maps" data-parent="#sidebar-menu">
                 <div class="sub-menu">
-
-
-
                   <li>
                     <a class="sidenav-item-link" href="google-map.html">
                       <span class="nav-text">Google Map</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="vector-map.html">
                       <span class="nav-text">Vector Map</span>
-
                     </a>
                   </li>
-
-
-
 
                 </div>
               </ul>
             </li>
-
-
-
-
-
             <li class="has-sub">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#widgets" aria-expanded="false" aria-controls="widgets">
                 <i class="mdi mdi-widgets"></i>
@@ -591,9 +323,6 @@
               </a>
               <ul class="collapse" id="widgets" data-parent="#sidebar-menu">
                 <div class="sub-menu">
-
-
-
                   <li>
                     <a class="sidenav-item-link" href="general-widget.html">
                       <span class="nav-text">General Widget</span>
@@ -601,29 +330,15 @@
                     </a>
                   </li>
 
-
-
-
-
-
                   <li>
                     <a class="sidenav-item-link" href="chart-widget.html">
                       <span class="nav-text">Chart Widget</span>
-
                     </a>
                   </li>
-
-
-
 
                 </div>
               </ul>
             </li>
-
-
-
-
-
             <li class="has-sub">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#charts" aria-expanded="false" aria-controls="charts">
                 <i class="mdi mdi-chart-pie"></i>
@@ -631,27 +346,15 @@
               </a>
               <ul class="collapse" id="charts" data-parent="#sidebar-menu">
                 <div class="sub-menu">
-
-
-
                   <li>
                     <a class="sidenav-item-link" href="chartjs.html">
                       <span class="nav-text">ChartJS</span>
-
                     </a>
                   </li>
-
-
-
 
                 </div>
               </ul>
             </li>
-
-
-
-
-
             <li class="has-sub">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#pages" aria-expanded="false" aria-controls="pages">
                 <i class="mdi mdi-image-filter-none"></i>
@@ -659,20 +362,11 @@
               </a>
               <ul class="collapse" id="pages" data-parent="#sidebar-menu">
                 <div class="sub-menu">
-
-
-
                   <li>
                     <a class="sidenav-item-link" href="user-profile.html">
                       <span class="nav-text">User Profile</span>
-
                     </a>
                   </li>
-
-
-
-
-
                   <li class="has-sub">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#authentication" aria-expanded="false" aria-controls="authentication">
                       <span class="nav-text">Authentication</span> <b class="caret"></b>
@@ -692,9 +386,6 @@
                     </ul>
                   </li>
 
-
-
-
                   <li class="has-sub">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#others" aria-expanded="false" aria-controls="others">
                       <span class="nav-text">Others</span> <b class="caret"></b>
@@ -713,17 +404,9 @@
                       </div>
                     </ul>
                   </li>
-
-
-
                 </div>
               </ul>
             </li>
-
-
-
-
-
             <li class="has-sub">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#documentation" aria-expanded="false" aria-controls="documentation">
                 <i class="mdi mdi-book-open-page-variant"></i>
@@ -731,17 +414,9 @@
               </a>
               <ul class="collapse" id="documentation" data-parent="#sidebar-menu">
                 <div class="sub-menu">
-
-
-
                   <li class="section-title">
                     Getting Started
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="introduction.html">
@@ -750,22 +425,11 @@
                     </a>
                   </li>
 
-
-
-
-
-
                   <li>
                     <a class="sidenav-item-link" href="quick-start.html">
                       <span class="nav-text">Quick Start</span>
-
                     </a>
                   </li>
-
-
-
-
-
 
                   <li>
                     <a class="sidenav-item-link" href="customization.html">
@@ -774,19 +438,9 @@
                     </a>
                   </li>
 
-
-
-
-
-
                   <li class="section-title">
                     Layouts
                   </li>
-
-
-
-
-
                   <li class="has-sub">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#headers" aria-expanded="false" aria-controls="headers">
                       <span class="nav-text">Header Variations</span> <b class="caret"></b>
@@ -813,9 +467,6 @@
                       </div>
                     </ul>
                   </li>
-
-
-
 
                   <li class="has-sub">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#sidebar-navs" aria-expanded="false" aria-controls="sidebar-navs">
@@ -863,27 +514,15 @@
                       </div>
                     </ul>
                   </li>
-
-
-
-
-
                   <li>
                     <a class="sidenav-item-link" href="rtl.html">
                       <span class="nav-text">RTL Direction</span>
-
                     </a>
                   </li>
-
-
-
 
                 </div>
               </ul>
             </li>
-
-
-
           </ul>
 
         </div>
@@ -993,7 +632,5 @@
               </li>
             </ul>
           </div>
-        </nav>
-
-
+        </nav>      
       </header>
