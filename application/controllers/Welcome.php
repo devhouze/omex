@@ -47,7 +47,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer/main_footer');
 		$this->load->view('footer/footer_common');
 		$this->load->view('js/owl');
-		$this->load->view('js/home');
+		$this->load->view('js/street');
 		$this->load->view('footer/body_end');
 	}
 }
