@@ -55,3 +55,15 @@
 
     });
 </script>
+<script>
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 40) {
+            //clearHeader, not clearheader - caps H
+            $(".header").addClass("sticky");
+        } else {
+            $(".header").removeClass("sticky");
+        }
+
+    });
+    </script>
