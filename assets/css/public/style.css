@@ -321,7 +321,7 @@ footer .menu li+li {
 }
 
 .experience .carousel-indicators li+li {
-    margin-left: 20px;
+    margin-left: 50px;
 }
 
 .experience .carousel-indicators {
@@ -387,7 +387,7 @@ footer .menu li+li {
 }
 
 .top-brands .owl-item.active+.owl-item.active {
-    border-left: 1px solid #EDEDED;
+    border-left: 3px solid #dadada;
 }
 
 .top-brands .owl-theme .owl-nav [class*='owl-'] {
@@ -409,10 +409,6 @@ footer .menu li+li {
     position: relative;
     padding-left: 30px;
     padding-right: 30px;
-}
-
-.main-slider {
-    height: 533px;
 }
 
 .main-slider .carousel-inner .carousel-item {
