@@ -401,8 +401,8 @@
                 <div class="v-line d-table mx-auto"></div>
             </div>
         </div>
-        <div class="row mt-4">
-            <div class="col-md-12">
+        <div class="row mt-4 justify-content-center">
+            <div class="col-md-10">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -493,8 +493,8 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
                 <a href="" class="primary-btn d-inline-block mt-36">KNOW MORE</a>
             </div>
         </div>

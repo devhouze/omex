@@ -712,6 +712,11 @@
     padding-bottom: calc(var(--v2) * 20);
 }
 
+.py-50 {
+    padding-top: calc(var(--v2) * 25);
+    padding-bottom: calc(var(--v2) * 25);
+}
+
 .py-60 {
     padding-top: calc(var(--v2) * 30);
     padding-bottom: calc(var(--v2) * 30);
