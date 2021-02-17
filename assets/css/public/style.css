@@ -249,11 +249,11 @@ footer .menu li+li {
 
 .looking-out h2 {
     color: #DA6170;
-    font-size: 113px;
+    font-size: 80px;
     font-family: 'Helvetica';
-    line-height: 110px;
+    line-height: 90px;
     margin-bottom: 0;
-    margin-top: 15px;
+    margin-top: 0;
     text-shadow: 5px 0px 0px #cc1f38;
 }
 
@@ -270,20 +270,20 @@ footer .menu li+li {
 }
 
 .day {
-    font-size: 47px;
+    font-size: 36px;
     color: #CC1F38;
 }
 
 .box-calander {
-    height: 260px;
+    height: 200px;
     overflow: hidden;
     border: 3.10766px solid #CC1F38;
-    width: 385px;
+    width: 330px;
     margin-top: 40px;
 }
 
 .top-row {
-    height: 123px;
+    height: 80px;
     vertical-align: middle;
     display: flex;
     align-items: center;
@@ -463,6 +463,17 @@ footer .menu li+li {
     background-position: left top;
 }
 
+.more-expoler .item figure {
+    background: url(../../images/public/street/mbox-bg.png);
+    padding: 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 352px;
+    height: 244px;
+    margin-left: 50px;
+}
+
 .main-slider .carousel-inner .carousel-item figure {
     margin-top: 100px;
 }
@@ -510,9 +521,36 @@ footer .menu li+li {
     color: #083D68;
     font-size: 24px;
     text-align: center;
-    height: calc(100% - 123px);
-    padding: 0 80px;
+    height: calc(100% - 80px);
+    padding: 0 40px;
     border-bottom: 3.10766px solid #CC1F38;
+    font-weight: 500;
+}
+
+.more-expoler .item figure span {
+    transform-origin: left;
+    white-space: nowrap;
+    width: 30px;
+    transform: rotate( -90deg);
+    vertical-align: middle;
+    font-size: 24px;
+    color: #083D68;
+    line-height: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 7px;
+    position: absolute;
+    bottom: 30px;
+    left: 26px;
+    font-weight: 500;
+}
+
+.more-expoler .item figure a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
 }
 
 .left-col span {
@@ -521,19 +559,19 @@ footer .menu li+li {
     width: 30px;
     transform: rotate( -90deg);
     vertical-align: middle;
-    font-size: 35px;
+    font-size: 24px;
     color: #083D68;
     line-height: 0;
     margin-left: auto;
     margin-right: auto;
     width: 7px;
     position: absolute;
-    top: 97px;
+    top: 70px;
     left: 26px;
 }
 
 .right-col {
-    font-size: 60px;
+    font-size: 40px;
     color: #083D68;
     margin-left: 20px;
     font-weight: 400;
@@ -595,6 +633,10 @@ footer .menu li+li {
 
 .athens-page .day {
     color: var(--ath);
+}
+
+.day+img {
+    width: 298px;
 }
 
 .athens-page .top-row,
@@ -736,6 +778,55 @@ footer .menu li+li {
 /* End street page cess */
 
 @media only screen and (max-width: 600px) {
+    .street-icon-abs {
+        position: absolute;
+        right: 15px;
+        top: 120px;
+        width: 100px;
+    }
+    .abs-block {
+        width: 150px;
+        height: 54px;
+    }
+    .abs-block img {
+        max-width: 100px;
+    }
+    .hello-area .btn-controls a+a {
+        margin-left: 50px;
+    }
+    .live-in-word .owl-nav button+button {
+        margin-left: 50px;
+    }
+    .street-banner .card {
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        padding: 30px 20px;
+    }
+    .street-banner .card p {
+        font-size: 18px;
+        line-height: 34px;
+        margin-bottom: 30px;
+    }
+    .find-us .card p {
+        font-size: 18px;
+    }
+    .find-us .card {
+        padding: 30px;
+        margin-top: 40px;
+    }
+    .more-expoler .item figure {
+        width: auto;
+        height: auto;
+    }
+    .more-expoler .item figure span {
+        font-size: 18px;
+    }
+    .more-expoler .owl-nav button+button {
+        margin-left: 50px;
+    }
     .athens-page .looking-out h2 {
         text-shadow: 2px 0px 0px #5a946e;
     }
@@ -860,7 +951,7 @@ footer .menu li+li {
         margin: 7px auto 30px auto;
     }
     .box-calander {
-        width: 224px;
+        width: 300px;
         margin-left: auto;
         margin-right: auto;
         height: 160px;
