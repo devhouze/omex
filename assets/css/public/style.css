@@ -3,6 +3,10 @@ img {
     height: auto;
 }
 
+header.sticky .main-menu {
+    padding: 5px 0;
+}
+
 .header.sticky .header-top {
     display: none !important;
 }
@@ -279,7 +283,7 @@ footer .menu li+li {
     overflow: hidden;
     border: 3.10766px solid #CC1F38;
     width: 330px;
-    margin-top: 40px;
+    margin-top: 58px;
 }
 
 .top-row {
@@ -311,8 +315,8 @@ footer .menu li+li {
 }
 
 .looking-out div#carouselExampleControls .position-absolute {
-    right: 20px;
-    bottom: -82px;
+    right: 0px;
+    bottom: -87px;
 }
 
 .exploer-btn {
@@ -465,7 +469,7 @@ footer .menu li+li {
 
 .more-expoler .item figure {
     background: url(../../images/public/street/mbox-bg.png);
-    padding: 15px;
+    padding: 25px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -737,6 +741,7 @@ footer .menu li+li {
     justify-content: center;
     position: absolute;
     bottom: -70px;
+    color: var(--ath);
 }
 
 .more-expoler .owl-nav {
@@ -778,6 +783,20 @@ footer .menu li+li {
 /* End street page cess */
 
 @media only screen and (max-width: 600px) {
+    .box-calander {
+        margin-top: 30px;
+    }
+    .live-in-word .owl-nav {
+        padding: 0px 0 20px 0;
+    }
+    .live-in-word .slider-counter {
+        left: 0;
+        bottom: 60px;
+        display: none;
+    }
+    .navbar-brand {
+        max-width: 180px;
+    }
     .street-icon-abs {
         position: absolute;
         right: 15px;
@@ -850,7 +869,7 @@ footer .menu li+li {
         left: 0;
         position: absolute;
         top: 100%;
-        z-index: 9;
+        z-index: 9999;
         background: white;
         color: var(--h-color);
         box-shadow: 0 0 1px 0 rgb(45 48 71 / 4%);
@@ -980,15 +999,16 @@ footer .menu li+li {
         height: 90px;
     }
     .looking-out .primary-btn {
-        margin: 60px auto 0px auto;
+        margin: 100px auto 0px auto;
         display: table !important;
     }
     .looking-out div#carouselExampleControls .position-absolute {
         align-items: center;
         justify-content: center;
         width: 100%;
-        bottom: -37px;
+        bottom: -50px;
         right: 0;
+        position: relative !important;
     }
     .experience .card {
         width: 100%;

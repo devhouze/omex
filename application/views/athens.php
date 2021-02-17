@@ -145,13 +145,7 @@
                         </div>
                         <div class="item">
                             <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs4.jpg"  alt="" class="d-table mx-auto"></figure>
-                        </div>
-                        <div class="item">
-                            <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs2.jpg"  alt="" class="d-table mx-auto"></figure>
-                        </div>
-                        <div class="item">
-                            <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs5.jpg"  alt="" class="d-table mx-auto"></figure>
-                        </div>
+                        </div>    
                         <div class="item">
                             <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs3.jpg"  alt="" class="d-table mx-auto"></figure>
                         </div>
