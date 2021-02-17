@@ -57,6 +57,12 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 $route['athens'] = 'Welcome/athens';
+$route['portugal'] = 'Welcome/portugal';
+$route['hong-kong'] = 'Welcome/hong_kong';
+$route['amsterdam'] = 'Welcome/amsterdam';
+$route['san-francisco'] = 'Welcome/san_francisco';
+$route['london'] = 'Welcome/london';
+$route['paris'] = 'Welcome/paris';
 
 
 $route['admin'] = 'admin/Login_Controller/sign_in';
