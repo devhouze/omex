@@ -7,7 +7,7 @@
         $('.slider-counter').html(carousel.relative(carousel.current()) + 1 + '<span></span>' + carousel.items().length);
     }).owlCarousel({
         items: 0,
-        navText: ["<img src='<?php echo BASE_URL(); ?>assets/images/public/street/athens-left.svg'>", "<img src='<?php echo BASE_URL(); ?>assets/images/public/street/athens-right.svg'>"],
+        navText: ["<img src='<?php echo BASE_URL(); ?>assets/images/public/street/london-left.svg'>", "<img src='<?php echo BASE_URL(); ?>assets/images/public/street/london-right.svg'>"],
         loop: true,
         margin: 40,
         nav: true,
@@ -36,7 +36,7 @@
         $('.slider-counter').html(carousel.relative(carousel.current()) + 1 + '<span></span>' + carousel.items().length);
     }).owlCarousel({
         items: 0,
-        navText: ["<img src='<?php echo BASE_URL(); ?>assets/images/public/street/athens-left.svg'>", "<img src='<?php echo BASE_URL(); ?>assets/images/public/street/athens-right.svg'>"],
+        navText: ["<img src='<?php echo BASE_URL(); ?>assets/images/public/street/london-left.svg'>", "<img src='<?php echo BASE_URL(); ?>assets/images/public/street/london-right.svg'>"],
         loop: true,
         margin: 40,
         nav: true,

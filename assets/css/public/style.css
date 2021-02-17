@@ -581,23 +581,68 @@ footer .menu li+li {
     font-weight: 400;
 }
 
+.portugal-page .primary-btn {
+    border-color: var(--portu);
+    color: var(--portu);
+}
+
+.portugal-page .primary-btn:hover {
+    background: var(--portu);
+    color: var(--bs-white);
+}
+
+.portugal-page .left-col {
+    border-color: var(--portu);
+}
+
+.portugal-page .bottom-row {
+    border-color: var(--portu);
+}
+
+.portugal-page .box-calander {
+    border-color: var(--portu);
+}
+
+.portugal-page .day {
+    color: var(--portu);
+}
+
+.portugal-page .looking-out h2 {
+    color: #F5C137;
+    text-shadow: 5px 0px 0px #E0A50B;
+}
+
+.portugal-page .more-expoler .slider-counter,
+.portugal-page .live-in-word .slider-counter {
+    color: var(--portu);
+}
+
+.portugal-page .more-expoler .slider-counter span,
+.portugal-page .live-in-word .slider-counter span {
+    background: var(--portu);
+}
+
 
 /* street page css  */
+
+.portugal-page .exploer-btn {
+    background: var(--portu);
+}
 
 .street-banner .card {
     position: absolute;
     right: 86px;
     z-index: 9;
     top: 0;
-    width: 400px;
+    width: 442px;
     border: 0;
     border-radius: 0;
     opacity: 0.9;
-    padding: 50px;
+    padding: 50px 30px;
 }
 
 .street-banner .card p {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 44px;
     color: white;
     text-align: center;
@@ -779,10 +824,223 @@ footer .menu li+li {
     top: 80px;
 }
 
+.hongkong-page .exploer-btn {
+    background: var(--hong);
+}
+
+.hongkong-page .primary-btn {
+    border-color: var(--hong);
+    color: var(--hong)
+}
+
+.hongkong-page .primary-btn:hover {
+    background: var(--hong);
+    color: var(--bs-white);
+}
+
+.amsterdam-page .live-in-word .slider-counter,
+.amsterdam-page .more-expoler .slider-counter {
+    color: var(--amstr)
+}
+
+.amsterdam-page .exploer-btn {
+    background: var(--amstr);
+}
+
+.amsterdam-page .primary-btn {
+    border-color: var(--amstr);
+    color: var(--amstr)
+}
+
+.amsterdam-page .primary-btn:hover {
+    background: var(--amstr);
+    color: var(--bs-white);
+}
+
+.amsterdam-page .live-in-word .slider-counter span,
+.amsterdam-page .more-expoler .slider-counter span {
+    background: var(--amstr);
+}
+
+.amsterdam-page .bottom-row,
+.amsterdam-page .left-col,
+.amsterdam-page .box-calander {
+    border-color: var(--amstr)
+}
+
+.amsterdam-page .day {
+    color: var(--amstr);
+}
+
+.hongkong-page .live-in-word .slider-counter,
+.hongkong-page .more-expoler .slider-counter {
+    color: var(--hong)
+}
+
+.hongkong-page .live-in-word .slider-counter span,
+.hongkong-page .more-expoler .slider-counter span {
+    background: var(--hong);
+}
+
+.hongkong-page .bottom-row,
+.hongkong-page .left-col,
+.hongkong-page .box-calander {
+    border-color: var(--hong)
+}
+
+.hongkong-page .day {
+    color: var(--hong);
+}
+
+.hongkong-page .looking-out h2 {
+    color: #F99076;
+    text-shadow: 5px 0 0 #F25832;
+}
+
+.amsterdam-page .looking-out h2 {
+    color: #92BCD7;
+    text-shadow: 5px 0 0 #669BBC;
+}
+
+.san-page .live-in-word .slider-counter,
+.san-page .more-expoler .slider-counter {
+    color: var(--san)
+}
+
+.san-page .exploer-btn {
+    background: var(--san);
+}
+
+.san-page .primary-btn {
+    border-color: var(--san);
+    color: var(--san)
+}
+
+.san-page .primary-btn:hover {
+    background: var(--san);
+    color: var(--bs-white);
+}
+
+.san-page .live-in-word .slider-counter span,
+.san-page .more-expoler .slider-counter span {
+    background: var(--san);
+}
+
+.san-page .bottom-row,
+.san-page .left-col,
+.san-page .box-calander {
+    border-color: var(--san)
+}
+
+.san-page .day {
+    color: var(--san);
+}
+
+.san-page .looking-out h2 {
+    text-shadow: 5px 0px 0px #92193F;
+    color: #d94a77;
+}
+
+.london-page .live-in-word .slider-counter,
+.london-page .more-expoler .slider-counter {
+    color: var(--london)
+}
+
+.london-page .exploer-btn {
+    background: var(--london);
+}
+
+.london-page .primary-btn {
+    border-color: var(--london);
+    color: var(--london)
+}
+
+.london-page .primary-btn:hover {
+    background: var(--london);
+    color: var(--bs-white);
+}
+
+.london-page .live-in-word .slider-counter span,
+.london-page .more-expoler .slider-counter span {
+    background: var(--london);
+}
+
+.london-page .bottom-row,
+.london-page .left-col,
+.london-page .box-calander {
+    border-color: var(--london)
+}
+
+.london-page .day {
+    color: var(--london);
+}
+
+.london-page .looking-out h2 {
+    color: #FC536B;
+    text-shadow: 5px 0 0 #CC1F38;
+}
+
+.paris-page .live-in-word .slider-counter,
+.paris-page .more-expoler .slider-counter {
+    color: var(--parish)
+}
+
+.paris-page .exploer-btn {
+    background: var(--parish);
+}
+
+.paris-page .primary-btn {
+    border-color: var(--parish);
+    color: var(--parish)
+}
+
+.paris-page .primary-btn:hover {
+    background: var(--parish);
+    color: var(--bs-white);
+}
+
+.paris-page .live-in-word .slider-counter span,
+.paris-page .more-expoler .slider-counter span {
+    background: var(--parish);
+}
+
+.paris-page .bottom-row,
+.paris-page .left-col,
+.paris-page .box-calander {
+    border-color: var(--parish)
+}
+
+.paris-page .day {
+    color: var(--parish);
+}
+
+.paris-page .looking-out h2 {
+    color: #8B5A79;
+    text-shadow: 5px 0 0 #5B1545;
+}
+
 
 /* End street page cess */
 
 @media only screen and (max-width: 600px) {
+    .paris-page .looking-out h2 {
+        text-shadow: 2px 0 0 #5B1545;
+    }
+    .london-page .looking-out h2 {
+        text-shadow: 2px 0 0 #CC1F38;
+    }
+    .san-page .looking-out h2 {
+        text-shadow: 2px 0px 0px #92193F;
+    }
+    .amsterdam-page .looking-out h2 {
+        text-shadow: 2px 0 0 #669BBC;
+    }
+    .hongkong-page .looking-out h2 {
+        text-shadow: 2px 0 0 #f25832;
+    }
+    .portugal-page .looking-out h2 {
+        text-shadow: 2px 0px 0px #e0a50b;
+    }
     .box-calander {
         margin-top: 30px;
     }
@@ -828,6 +1086,7 @@ footer .menu li+li {
         font-size: 18px;
         line-height: 34px;
         margin-bottom: 30px;
+        margin-top: 20px;
     }
     .find-us .card p {
         font-size: 18px;
