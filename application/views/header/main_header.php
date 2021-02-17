@@ -25,7 +25,7 @@
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/header/menu.svg" alt="Map">
                 </button>
                 <a class="navbar-brand p-0 m-0" href="<?php echo BASE_URL(); ?>"><img src="<?php echo BASE_URL(); ?>assets/images/public/header/logo.svg" alt="Map"></a>
-                <a class=" ms-4 d-md-none d-block" href="<?php echo BASE_URL(); ?>"><img src="<?php echo BASE_URL(); ?>assets/images/public/header/call-btn.svg" alt="Map"></a>
+                <a class=" ms-3 d-md-none d-block me-3" href="<?php echo BASE_URL(); ?>"><img src="<?php echo BASE_URL(); ?>assets/images/public/header/call-btn.svg" alt="Map"></a>
 
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto">
