@@ -161,6 +161,21 @@ class Welcome extends CI_Controller {
 		$this->load->view('js/common');
 		$this->load->view('footer/body_end');
 	}
+	public function contact_us()
+	{
+		$this->load->view('header/header_start');
+		$this->load->view('header/header_common');
+		$this->load->view('header/header_end');
+		$this->load->view('header/body_start');
+		$this->load->view('header/main_header');
+		$this->load->view('contact_us');
+		$this->load->view('footer/footer_signup');
+		$this->load->view('footer/main_footer');
+		$this->load->view('footer/footer_common');
+		$this->load->view('js/owl');
+		$this->load->view('js/common');
+		$this->load->view('footer/body_end');
+	}
 	
 	
 	

@@ -1022,6 +1022,112 @@ footer .menu li+li {
 
 /* End street page cess */
 
+
+/* Contact page */
+
+.contect-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contect-content ul li {
+    font-size: 20px;
+    display: flex;
+    color: #03518B;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-right: 80px;
+    letter-spacing: 0.14em;
+}
+
+.contact-map .card {
+    border: 3px solid #03518B !important;
+    border-radius: 0;
+}
+
+.contect-content ul li img {
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.contect-content ul li+li {
+    margin-top: 40px;
+}
+
+.contactus-page .form-area {
+    background: #083D68;
+}
+
+.contactus-page .card {
+    background: transparent;
+    border: 1px solid white;
+}
+
+.form-area .form-control,
+.form-area .form-select {
+    background: transparent !important;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    padding-left: 0;
+    height: 45px;
+    color: white !important;
+    border-color: #FAF7F2 !important;
+    height: 60px;
+}
+
+.form-area .form-select {
+    height: 60px;
+    padding-left: 0 !important;
+    color: #FAF7F2 !important;
+    font-size: 14px;
+    padding-bottom: 0;
+    padding-top: 0 !important;
+    max-width: 275px;
+}
+
+.form-area .form-select:focus {
+    outline: 0;
+    box-shadow: unset;
+}
+
+.form-area .form-control:not(textarea) {
+    max-width: 275px;
+}
+
+.form-area textarea.form-control {
+    width: 675px;
+}
+
+.form-area button {
+    background: transparent;
+    border: 2px solid #FAF7F2;
+    color: #FCFFF7;
+    padding: 20px 97px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.form-area button:hover {
+    background: white;
+    color: #0e3d68;
+}
+
+.form-area .form-floating>label {
+    color: #FAF7F2;
+    padding-left: 0;
+}
+
+.form-area .form-control:focus {
+    outline: 0;
+    box-shadow: unset;
+}
+
+
+/* end Contact page */
+
 @media only screen and (max-width: 600px) {
     .paris-page .looking-out h2 {
         text-shadow: 2px 0 0 #5B1545;
