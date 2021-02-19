@@ -31,13 +31,13 @@
                     <ul class="navbar-nav ms-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Home</a>
+                            <a class="nav-link active" href="<?php echo BASE_URL(); ?>">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Streets</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Brands</a>
+                            <a class="nav-link" href="<?php echo BASE_URL('brand'); ?>">Brands</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Events</a>

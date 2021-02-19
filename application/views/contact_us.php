@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="card py-60 px-60">
+                    <div class="card py-60 px-60 px-20-sm">
                         <div class="row">
                             <div class="col-md-12">
                                 <h1 class="fz40 pr-font text-white d-table mx-auto text-center">Get in touch</h1>
@@ -11,7 +11,7 @@
                         </div>
                         <form action="">
                             <div class="row justify-content-center mt-5">
-                                <div class="col-md-4 pe-5">
+                                <div class="col-md-4 pe-md-5">
                                     <h3 class="pr-font fz24 fz18-sm text-white mb-30 mb-10-sm">Name*</h3>
                                     <div class="form-floating">
 
@@ -38,8 +38,8 @@
 
 
                             </div>
-                            <div class="row justify-content-center mt-5">
-                                <div class="col-md-4 pe-5">
+                            <div class="row justify-content-center mt-md-5">
+                                <div class="col-md-4 pe-md-5">
                                     <h3 class="pr-font fz24 fz18-sm text-white mb-30 mb-10-sm">Name*</h3>
                                     <div class="form-floating">
 
@@ -93,8 +93,8 @@
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/street/cmap.jpg" alt="">
                     </figure>
                 </div>
-                <div class="col-md-5 d-flex flex-fill justify-content-center">
-                    <div class="card py-40 px-40 border d-flex flex-fill">
+                <div class="col-md-5 mt-md-0 mt-3 d-flex flex-fill justify-content-center">
+                    <div class="card py-40 px-40 px-20-sm border d-flex flex-fill">
                             <div class="contect-content">
                                 <ul>
                                     <li><img src="<?php echo BASE_URL(); ?>assets/images/public/home/ccall.svg" alt="">+91-9015222222</li>

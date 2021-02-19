@@ -20,7 +20,7 @@
                                             <label for="floatingInput">Your Name</label>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 ps-4">
+                                    <div class="col-md-4 ps-md-4">
                                         <h3 class="pr-font fz36 fz18-sm text-white mb-30 mb-10-sm">Email Address*</h3>
                                         <div class="form-floating">
                                             <input type="email" autocomplete="false" class="form-control" id="floatingInput" placeholder="Your Email">
