@@ -40,7 +40,7 @@
                             <a class="nav-link" href="<?php echo BASE_URL('brand'); ?>">Brands</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Events</a>
+                            <a class="nav-link" href="<?php echo BASE_URL('event'); ?>">Events</a>
                         </li>
 
                         <li class="nav-item">

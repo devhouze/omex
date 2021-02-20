@@ -1128,11 +1128,12 @@ footer .menu li+li {
 .brand-lgoo {
     position: absolute;
     left: 70px;
-    bottom: -240px;
+    bottom: -160px;
     z-index: 9;
-    width: 320px;
-    height: 320px;
+    width: 244px;
+    height: 233px;
     overflow: hidden;
+    border: 1px solid black;
 }
 
 .shop-details {
@@ -1185,6 +1186,39 @@ footer .menu li+li {
 
 /* Brand Page  */
 
+.crasol-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+    right: 0;
+}
+
+.crasol-btn button {
+    position: relative;
+    border: 0;
+    background: transparent;
+}
+
+.crasol-btn button:focus {
+    outline: 0;
+    box-shadow: unset;
+}
+
+.carousel button {
+    opacity: 1;
+}
+
+.barnd-page .slider-counter {
+    color: var(--h-color);
+}
+
+.barnd-page .slider-counter span {
+    background: var(--h-color);
+}
+
 .bg-color {
     position: absolute;
     right: 0;
@@ -1203,7 +1237,7 @@ footer .menu li+li {
     position: absolute;
     z-index: 1;
     left: 10px;
-    top: 150px;
+    top: 130px;
 }
 
 .about-brand .card {
@@ -1215,11 +1249,12 @@ footer .menu li+li {
 
 .about-brand .card p {
     font-size: 20px;
-    padding-right: 190px;
+    letter-spacing: 1.5px;
 }
 
-.similar.barnd {
-    padding-top: 400px;
+.similar.barnd,
+.c_margin {
+    padding-top: 280px;
 }
 
 .category {
@@ -1254,7 +1289,7 @@ footer .menu li+li {
     bottom: 10px;
     width: 200px;
     height: 200px;
-    right: 100px;
+    right: 40px;
     z-index: 1;
 }
 
@@ -1272,7 +1307,7 @@ footer .menu li+li {
     align-items: center;
     justify-content: center;
     position: relative;
-    bottom: 60px
+    bottom: 80px
 }
 
 .car-ions button {
@@ -1287,21 +1322,120 @@ footer .menu li+li {
 }
 
 .car-ions .carousel-control-next {
-    right: -50px !important;
+    right: -126px !important;
 }
 
 .car-ions .carousel-control-prev {
-    left: 60px;
+    left: 150px;
 }
 
 .whats-new p {
-    padding: 0 132px;
+    padding: 0 65px;
     letter-spacing: 1.4px;
     line-height: 1.8;
 }
 
+.search-brand ul {
+    list-style: none;
+    padding: 0;
+    margin: 40px auto;
+    display: table;
+}
+
+.search-brand ul li a {
+    font-size: 24px;
+    letter-spacing: 1.4px;
+    color: var(--h-color);
+}
+
+.search-brand ul li+li {
+    margin-top: 12px;
+}
+
+.search-brand select {
+    display: table;
+    margin: 0 auto;
+    width: 336px;
+    border: 1px solid var(--h-color);
+    height: 72px;
+    padding: 0 10px;
+    background: transparent;
+}
+
+.product-box figure {
+    border: 1px solid black;
+}
+
+.product-box {
+    font-size: 24px;
+    color: var(--h-color);
+    margin-bottom: 40px;
+}
+
+.event-page .looking-out h2 {
+    color: #083D68;
+    text-shadow: 5px 0px 0px #5A946E;
+}
+
+.event-page .day {
+    color: #5A946E;
+}
+
+.event-page .bottom-row,
+.event-page .box-calander,
+.event-page .left-col {
+    border-color: #5A946E;
+    ;
+}
+
+.about-event p {
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: 1.4px;
+    text-align: center;
+    padding: 0 18%;
+    color: var(--h-color);
+}
+
+.about-event ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 0;
+}
+
+.about-event ul li a {
+    color: var(--h-color);
+    font-size: 21px;
+}
+
+.about-event ul li+li {
+    margin-left: 40px;
+}
+
 
 /* End brand page */
+
+
+/* brand directory page */
+
+.brand-directory ul {
+    list-style: none;
+}
+
+.brand-directory ul li a {
+    font-size: 24px;
+    color: var(--h-color);
+}
+
+.brand-directory ul li+li {
+    margin-left: 15px;
+}
+
+
+/* end brand directory page */
 
 @media only screen and (max-width: 600px) {
     .paris-page .looking-out h2 {
