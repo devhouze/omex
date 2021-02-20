@@ -1125,8 +1125,183 @@ footer .menu li+li {
     box-shadow: unset;
 }
 
+.brand-lgoo {
+    position: absolute;
+    left: 70px;
+    bottom: -240px;
+    z-index: 9;
+    width: 320px;
+    height: 320px;
+    overflow: hidden;
+}
+
+.shop-details {
+    padding-top: 150px;
+}
+
+.shop-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.shop-details ul li img {
+    margin-right: 30px;
+    margin-top: 7px;
+}
+
+.shop-details ul li {
+    color: #083D68;
+    font-size: 20px;
+    padding-right: 150px;
+    display: flex;
+    align-items: flex-start;
+    letter-spacing: 3px;
+}
+
+.shop-details ul li+li {
+    margin-top: 30px;
+}
+
+.key-information ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    list-style: none;
+}
+
+.key-information ul li+li {
+    margin-top: 20px;
+}
+
+.key-information ul li a {
+    font-size: 20px;
+    color: var(--h-color);
+}
+
 
 /* end Contact page */
+
+
+/* Brand Page  */
+
+.bg-color {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 486px;
+    height: 784px;
+    z-index: 0;
+}
+
+.brand-banner .carousel-item img {
+    z-index: 1;
+    position: relative;
+}
+
+.about-brand figure {
+    position: absolute;
+    z-index: 1;
+    left: 10px;
+    top: 150px;
+}
+
+.about-brand .card {
+    margin-left: 100px;
+    background: #F25832;
+    color: white;
+    padding: 110px;
+}
+
+.about-brand .card p {
+    font-size: 20px;
+    padding-right: 190px;
+}
+
+.similar.barnd {
+    padding-top: 400px;
+}
+
+.category {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.category li {
+    width: calc(100% /4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+    color: var(--h-color);
+}
+
+.category li a {
+    color: var(--h-color);
+    letter-spacing: 1.4px;
+}
+
+.category li a span {
+    margin-top: 30px;
+    display: block;
+}
+
+.img-box .brnad-logo {
+    position: absolute;
+    bottom: 10px;
+    width: 200px;
+    height: 200px;
+    right: 100px;
+    z-index: 1;
+}
+
+.img-box .brnad-logo img {
+    z-index: 99999;
+}
+
+.img-box {
+    margin-bottom: 110px;
+}
+
+.car-ions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 60px
+}
+
+.car-ions button {
+    position: relative;
+    border: none;
+    background: transparent;
+}
+
+.car-ions button:focus {
+    outline: 0;
+    box-shadow: unset;
+}
+
+.car-ions .carousel-control-next {
+    right: -50px !important;
+}
+
+.car-ions .carousel-control-prev {
+    left: 60px;
+}
+
+.whats-new p {
+    padding: 0 132px;
+    letter-spacing: 1.4px;
+    line-height: 1.8;
+}
+
+
+/* End brand page */
 
 @media only screen and (max-width: 600px) {
     .paris-page .looking-out h2 {
@@ -1407,5 +1582,21 @@ footer .menu li+li {
     }
     .v-line {
         height: 84px;
+    }
+    .form-area .form-control:not(textarea) {
+        width: 100%;
+    }
+    .form-area textarea.form-control {
+        width: 100%;
+    }
+    form .row>* {
+        margin-top: 30px;
+    }
+    .contect-content ul li {
+        padding-right: 0;
+        font-size: 14px;
+    }
+    .contect-content ul li+li {
+        margin-top: 20px;
     }
 }
