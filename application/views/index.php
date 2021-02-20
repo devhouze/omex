@@ -37,12 +37,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 positoin-relative">
-                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Top Brands</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto">
-                <div class="v-line d-table mx-auto"></div>
+                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 " data-aos="fade-up" data-aos-duration="1500">Top Brands</h5>
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
+                <div class="v-line d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000"></div>
             </div>
         </div>
-        <div class="row justify-content-center align-items-center ">
+        <div class="row justify-content-center align-items-center " data-aos="fade-up" data-aos-duration="1500">
             <div class="col-md-10 mt-20">
                 <div class="owl-carousel owl-theme top-brand ">
                     <div class="item">
@@ -133,7 +133,7 @@
         </div>
         <div class="row mt-md-5 mt-3">
             <div class="col-md-12">
-                <a href="" class="d-table mx-auto primary-btn">View All Brands</a>
+                <a href="" class="d-table mx-auto primary-btn" data-aos="fade-up" data-aos-duration="1500">View All Brands</a>
             </div>
         </div>
     </div>
@@ -142,9 +142,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 positoin-relative">
-                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Experience Best of World Street</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto">
-                <div class="v-line d-table mx-auto"></div>
+                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0" data-aos="fade-up" data-aos-duration="1500">Experience Best of World Street</h5>
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
+                <div class="v-line d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000"></div>
             </div>
         </div>
         <div class="row mt-4 d-md-block d-none">
@@ -355,14 +355,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 positoin-relative">
-                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Explore More</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto">
-                <div class="v-line d-table mx-auto"></div>
+                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0" data-aos="fade-up" data-aos-duration="1500">Explore More</h5>
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
+                <div class="v-line d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000"></div>
             </div>
         </div>
         <div class="row px-md-5 px-3 mt-md-0 mt-5">
             <div class="col-md-4">
-                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0">Eat</h2>
+                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0" data-aos="fade-up" data-aos-duration="1500">Eat</h2>
                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto">
                 <figure class="position-relative mb-0 mt-12">
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e1.jpg" alt="" class="">
@@ -371,7 +371,7 @@
 
             </div>
             <div class="col-md-4">
-                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0">Style</h2>
+                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0" data-aos="fade-up" data-aos-duration="1500">Style</h2>
                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto">
                 <figure class="position-relative mb-0 mt-12">
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e3.jpg" alt="" class="">
@@ -381,7 +381,7 @@
 
             </div>
             <div class="col-md-4">
-                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0">Play</h2>
+                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0" data-aos="fade-up" data-aos-duration="1500">Play</h2>
                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto">
                 <figure class="position-relative mb-0 mt-12">
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e2.jpg" alt="" class="">
@@ -396,9 +396,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 positoin-relative">
-                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Look out for what’s coming up!</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto">
-                <div class="v-line d-table mx-auto"></div>
+                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0" data-aos="fade-up" data-aos-duration="1500">Look out for what’s coming up!</h5>
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
+                <div class="v-line d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000"> </div>
             </div>
         </div>
         <div class="row mt-4 justify-content-center">
@@ -504,9 +504,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 positoin-relative">
-                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Experience Gallery</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto">
-                <div class="v-line d-table mx-auto"></div>
+                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0" data-aos="fade-up" data-aos-duration="1500">Experience Gallery</h5>
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
+                <div class="v-line d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000"> </div>
             </div>
         </div>
         <div class="row">
