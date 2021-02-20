@@ -67,8 +67,29 @@ $route['admin/validate-admin'] = 'admin/Login_Controller/validate_login';
 $route['admin/dashboard'] = 'admin/Dashboard_Controller/index';
 $route['admin/forgot-password'] = 'admin/Login_Controller/forgot_password';
 
+$route['admin/profile'] = 'admin/Dashboard_Controller/admin_profile';
+$route['admin/update-profile'] = 'admin/Dashboard_Controller/save_admin_profile';
+
+$route['admin/change-password'] = 'admin/Dashboard_Controller/change_password';
+
 // Brands Routes
-$route['admin/brands'] = 'admin/Brands_controller/brand_list';
+$route['admin/brands'] = 'admin/Brands_Controller/brand_list';
+$route['admin/add-brand'] = 'admin/Brand_Controller/add_brand';
+
+// Users Routes
+$route['admin/users'] = 'admin/Users_Controller/users_list';
+$route['admin/users/(:num)'] = 'admin/Users_Controller/users_list/$1';
+$route['admin/add-users'] = 'admin/Users_Controller/add_users';
+
+// Brands Routes
+$route['admin/leads'] = 'admin/Lead_controller/lead_list';
+$route['admin/leads/(:num)'] = 'admin/Lead_controller/lead_list/$1';
+$route['admin/add-leads'] = 'admin/Lead_controller/add_lead';
+$route['admin/save-leads'] = 'admin/Lead_controller/save_lead';
+$route['admin/edit-leads/(:num)'] = 'admin/Lead_controller/edit_lead/$1';
+$route['admin/update-leads'] = 'admin/Lead_controller/update_lead';
+
+
 $route['admin/404'] = 'admin/Admin_controller/error404';
 $route['admin/blank'] = 'admin/Admin_controller/blank';
 $route['admin/utilities-other'] = 'admin/Admin_controller/utilities_other';

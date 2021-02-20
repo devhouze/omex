@@ -1,6 +1,7 @@
 $(document).ready(function() {
     const url = $('body').data('url');
-    $('#admin_login').submit(function(e) {
+
+    $('#admin_profile').submit(function(e) {
         e.preventDefault();
         var form = $(this);
         $.ajax({
@@ -12,20 +13,21 @@ $(document).ready(function() {
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
                     $.notify(data.message, "success");
-                    window.location.replace(url + 'dashboard');
+                    setTimeout(function() { window.location.replace(url + 'dashboard'); }, 2000);
                 } else {
                     $.notify(data.message, "error");
                 }
                 if (data.error) {
                     $.each(data.error, function(i, v) {
-                        $('#admin_login input[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
+                        $('#admin_profile input[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                     });
                 }
             }
         });
     });
 
-    $('#forget_pass').submit(function(e) {
+
+    $('#change_password').submit(function(e) {
         e.preventDefault();
         var form = $(this);
         $.ajax({
@@ -37,14 +39,13 @@ $(document).ready(function() {
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
                     $.notify(data.message, "success");
-                    setTimeout(function() { window.location.replace(url + 'admin'); }, 5000);
-
+                    setTimeout(function() { window.location.replace(url + 'dashboard'); }, 2000);
                 } else {
                     $.notify(data.message, "error");
                 }
                 if (data.error) {
                     $.each(data.error, function(i, v) {
-                        $('#forget_pass input[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
+                        $('#change_password input[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                     });
                 }
             }
