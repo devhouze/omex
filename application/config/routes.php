@@ -64,6 +64,7 @@ $route['san-francisco'] = 'Welcome/san_francisco';
 $route['london'] = 'Welcome/london';
 $route['paris'] = 'Welcome/paris';
 $route['contact-us'] = 'Welcome/contact_us';
+$route['brand'] = 'Welcome/brand';
 
 
 $route['admin'] = 'admin/Login_Controller/sign_in';
