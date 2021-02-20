@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Login_Controller extends MY_Controller
+class Login_Controller extends CI_Controller
 {
     function __construct()
     {
@@ -11,6 +11,10 @@ class Login_Controller extends MY_Controller
 
     public function sign_in()
 	{
+        $check_session = $this->session->userdata('admin_details');
+        if(!empty($check_session)){
+            return redirect('admin/dashboard');
+        }
 		$this->load->view('admin/include/header_start');
 		$this->load->view('admin/include/header_end');
 		$this->load->view('admin/include/body_start');

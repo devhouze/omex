@@ -1,4 +1,4 @@
-<script src="<?php echo base_url(); ?>assets/js/admin/jquery.min.js"></script>
+
 <script src="<?php echo base_url(); ?>assets/js/admin/jquery.slimscroll.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/admin/jekyll-search.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/admin/Chart.min.js"></script>
@@ -52,4 +52,4 @@
 
 <script src="<?=base_url();?>assets/js/admin/sleek.bundle.js"></script>
 
-<script src="<?php echo base_url('assets/js/admin/login.js')?>"></script>
+

@@ -1,4 +1,4 @@
-
+<script src="<?php echo base_url('assets/js/admin/login.js')?>"></script>
   <body class="" id="body" data-url="<?php echo base_url();?>">
       <div class="container d-flex flex-column justify-content-between vh-100">
       <div class="row justify-content-center mt-5">
