@@ -33,8 +33,21 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="<?php echo BASE_URL(); ?>">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Streets</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Street
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="<?php echo BASE_URL('london'); ?>">London Street</a></li>
+                                <li><a class="dropdown-item" href="<?php echo BASE_URL('paris'); ?>">Paris Street</a></li>
+                                <li><a class="dropdown-item" href="<?php echo BASE_URL('athens'); ?>">Athens Street</a></li>
+                                <li><a class="dropdown-item" href="<?php echo BASE_URL('portugal'); ?>">Portugal Street</a></li>
+                                <li><a class="dropdown-item" href="<?php echo BASE_URL('amsterdam'); ?>">Amsterdam Street</a></li>
+                                <li><a class="dropdown-item" href="<?php echo BASE_URL('san-francisco'); ?>">San Francisco Street</a></li>
+                                <li><a class="dropdown-item" href="<?php echo BASE_URL('hong-kong'); ?>">Hong Kong Street</a></li>
+                                
+                                
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo BASE_URL('brand'); ?>">Brands</a>

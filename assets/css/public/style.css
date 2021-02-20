@@ -24,11 +24,19 @@ header.header.sticky {
     padding: 9px 0;
 }
 
-.main-menu .navbar-nav li+li {
+.main-menu .dropdown-menu li+li {
+    margin-top: 10px;
+}
+
+.main-menu .dropdown-menu li a {
+    padding: 0 10px !important;
+}
+
+.main-menu .navbar-nav>li+li {
     margin-left: calc(var(--v2) * 30);
 }
 
-.main-menu .navbar-nav li a {
+.main-menu .navbar-nav>li>a {
     padding: 0 !important;
     color: var(--black);
     font-size: calc(var(--v2) * 8);
@@ -1557,7 +1565,7 @@ footer .menu li+li {
     .navbar-toggler:focus {
         box-shadow: unset !important;
     }
-    .main-menu .navbar-nav li+li {
+    .main-menu .navbar-nav>li+li {
         margin-left: 0;
     }
     .main-fooger .row .col-md-5 ul {
