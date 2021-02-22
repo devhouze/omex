@@ -14,4 +14,6 @@
   <link href="<?php echo base_url(); ?>assets/css/admin/daterangepicker.css" rel="stylesheet" />
   <link href="<?php echo base_url(); ?>assets/css/admin/toastr.min.css" rel="stylesheet" />
   <link href="<?php echo base_url(); ?>assets/css/admin/sleek.css" rel="stylesheet"/>
+  <link href="<?php echo base_url(); ?>assets/css/admin/jquery-ui.css" rel="stylesheet"/>
+  <link href="<?php echo base_url(); ?>assets/css/admin/custom.css" rel="stylesheet"/>
   

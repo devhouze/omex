@@ -7,6 +7,13 @@
 <script src="<?php echo base_url(); ?>assets/js/admin/moment.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/admin/daterangepicker.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/admin/notify.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/admin/jquery-ui.js"></script>
+
+<script>
+  $( function() {
+    $( ".datepicker" ).datepicker();
+  } );
+</script>
 <script>
   jQuery(document).ready(function() {
     jQuery('input[name="dateRange"]').daterangepicker({

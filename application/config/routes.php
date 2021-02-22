@@ -84,12 +84,14 @@ $route['admin/change-password'] = 'admin/Dashboard_Controller/change_password';
 
 // Brands Routes
 $route['admin/brands'] = 'admin/Brands_Controller/brand_list';
-$route['admin/add-brand'] = 'admin/Brand_Controller/add_brand';
+$route['admin/add-brands'] = 'admin/Brands_Controller/add_brand';
 
 // Users Routes
 $route['admin/users'] = 'admin/Users_Controller/users_list';
 $route['admin/users/(:num)'] = 'admin/Users_Controller/users_list/$1';
 $route['admin/add-users'] = 'admin/Users_Controller/add_users';
+$route['admin/edit-users/(:num)'] = 'admin/Users_Controller/edit_users/$1';
+$route['admin/check-username'] = 'admin/Users_Controller/check_username';
 
 // Brands Routes
 $route['admin/leads'] = 'admin/Lead_controller/lead_list';
@@ -99,6 +101,12 @@ $route['admin/save-leads'] = 'admin/Lead_controller/save_lead';
 $route['admin/edit-leads/(:num)'] = 'admin/Lead_controller/edit_lead/$1';
 $route['admin/update-leads'] = 'admin/Lead_controller/update_lead';
 
+
+// Events routes
+$route['admin/events'] = 'admin/Event_Controller/events_list';
+$route['admin/events/(:num)'] = 'admin/Event_Controller/events_list/$1';
+$route['admin/add-events'] = 'admin/Event_Controller/add_events';
+$route['admin/edit-events/(:num)'] = 'admin/Event_Controller/edit_events/$1';
 
 $route['admin/404'] = 'admin/Admin_controller/error404';
 $route['admin/blank'] = 'admin/Admin_controller/blank';

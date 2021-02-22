@@ -10,7 +10,7 @@ class Brands_Model extends MY_Model
 
     public function get_brands($per_page,$page,$count=false)
     {
-        $query = $this->db->select('brand_id, brand_name, status, tbl_admin.name as created_by, date_format(tbl_brand.created_on,"%d-%M-%Y") as created_on')
+        $query = $this->db->select('brand_id, brand_name, tbl_brand.status, tbl_admin.name as created_by, date_format(tbl_brand.created_on,"%d-%M-%Y") as created_on')
                           ->join('tbl_admin','admin_id = tbl_brand.created_by')
                           ->get('tbl_brand');
         if($count){

@@ -4,7 +4,25 @@ $(document).ready(function() {
     // Check username availibilty
     $('.username').blur(function() {
         var username = $('.username').val();
-        console.log(username);
+        $.ajax({
+            type: 'post',
+            url: url + 'check-username',
+            data: { username: username },
+            success: function(data) {
+                var data = $.parseJSON(data);
+                $('.error').empty();
+                if (data.status > 0) {
+                    $('.error').html();
+                    $('#submit').attr('disabled', false);
+                    $.notify(data.message, "success");
+                } else {
+                    $('.error').html(data.message);
+                    $('#submit').attr('disabled', 'disabled');
+                    $.notify(data.message, "error");
+
+                }
+            }
+        });
     });
     // Check username availibilty ends here
 
@@ -17,11 +35,12 @@ $(document).ready(function() {
             url: form.attr('action'),
             data: form.serialize(),
             success: function(data) {
+                $('.error').remove();
                 $('.errors_msg').remove();
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
                     $.notify(data.message, "success");
-                    setTimeout(function() { window.location.replace(url + 'dashboard'); }, 2000);
+                    setTimeout(function() { window.location.replace(url + 'users'); }, 2000);
                 } else {
                     $.notify(data.message, "error");
                 }
