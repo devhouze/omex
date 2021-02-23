@@ -1,12 +1,23 @@
 $(document).ready(function() {
     const url = $('body').data('url');
 
-    // Check username availibilty
-    $('.username').blur(function() {
-        var username = $('.username').val();
-        console.log(username);
+    $('#date_availibility').change(function() {
+        var option = $('#date_availibility option:selected').val();
+        if (option == "0") {
+            $('.date').css('display', 'block');
+        } else {
+            $('.date').css('display', 'none');
+        }
     });
-    // Check username availibilty ends here
+
+    $('#show_brand').change(function() {
+        var option = $('#show_brand option:selected').val();
+        if (option == "Yes") {
+            $('.show_brand').css('display', 'block');
+        } else {
+            $('.show_brand').css('display', 'none');
+        }
+    });
 
 
     $('#events_management').submit(function(e) {
@@ -15,7 +26,11 @@ $(document).ready(function() {
         $.ajax({
             type: 'post',
             url: form.attr('action'),
-            data: form.serialize(),
+            data: new FormData(this),
+            processData: false,
+            contentType: false,
+            cache: false,
+            async: false,
             success: function(data) {
                 $('.errors_msg').remove();
                 var data = $.parseJSON(data);

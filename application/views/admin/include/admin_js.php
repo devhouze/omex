@@ -8,7 +8,7 @@
 <script src="<?php echo base_url(); ?>assets/js/admin/daterangepicker.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/admin/notify.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/admin/jquery-ui.js"></script>
-
+<script src="<?=base_url('assets/js/admin/timepicker.js')?>"></script>
 <script>
   $( function() {
     $( ".datepicker" ).datepicker();

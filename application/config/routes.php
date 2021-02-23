@@ -85,6 +85,7 @@ $route['admin/change-password'] = 'admin/Dashboard_Controller/change_password';
 // Brands Routes
 $route['admin/brands'] = 'admin/Brands_Controller/brand_list';
 $route['admin/add-brands'] = 'admin/Brands_Controller/add_brand';
+$route['admin/edit-brands/(:num)'] = 'admin/Brands_Controller/edit_brand/$1';
 
 // Users Routes
 $route['admin/users'] = 'admin/Users_Controller/users_list';

@@ -47,11 +47,11 @@ class Users_Controller extends MY_Controller {
 				if($check['status'] > 0)
 				{
 					$save = $this->um->insert_data('tbl_admin',$data_array);
-						if($save){
-							echo json_encode(['message' => 'Data saved successfully.', 'status' => 1]);
-						} else {
-							echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
-						}
+					if($save){
+						echo json_encode(['message' => 'Data saved successfully.', 'status' => 1]);
+					} else {
+						echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
+					}
 				} else {
 						echo json_encode(['message' => 'Username already taken.', 'error' =>['username' => 'Username already taken.'], 'status' => 0]);
 				}

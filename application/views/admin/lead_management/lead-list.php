@@ -47,7 +47,7 @@
                                     <td><?=$lead['contact'];?></td>
                                     <td><?=$lead['created_by'];?></td>
                                     <td><?=$lead['created_on'];?></td>
-                                    <td><a href="<?=admin_url('edit-leads/'.$lead['id'])?>" class="btn btn-primary"><i class="fa fa-edit"></i></a></td>
+                                    <td><a href="<?=admin_url('edit-leads/'.$lead['id'])?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a></td>
                                 </tr>
                                 <?php } } else {?>
                                     <tr><td colspan="4">No record found</td></tr>

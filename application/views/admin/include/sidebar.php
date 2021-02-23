@@ -80,11 +80,11 @@
             </li>
 
             <li class="has-sub">
-              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#leads" aria-expanded="false" aria-controls="leads">
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#event" aria-expanded="false" aria-controls="event">
                 <i class="mdi mdi-pencil-box-multiple"></i>
                 <span class="nav-text">Events</span> <b class="caret"></b>
               </a>
-              <ul class="collapse" id="leads" data-parent="#sidebar-menu">
+              <ul class="collapse" id="event" data-parent="#sidebar-menu">
                 <div class="sub-menu">
 
                   <li>

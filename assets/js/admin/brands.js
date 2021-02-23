@@ -26,7 +26,7 @@ $(document).ready(function() {
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
                     $.notify(data.message, "success");
-                    setTimeout(function() { window.location.replace(url + 'events'); }, 2000);
+                    setTimeout(function() { window.location.replace(url + 'brands'); }, 2000);
                 } else {
                     $.notify(data.message, "error");
                 }

@@ -30,9 +30,8 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">User Type</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Email</th>
+                                    <th scope="col">Event Name</th>
+                                    <th scope="col">Event Time</th>
                                     <th scope="col">Created By</th>
                                     <th scope="col">Created On</th>
                                     <th scope="col">Action</th>
@@ -42,12 +41,11 @@
                                 <?php if(!empty($events)) { $sno = 1; foreach($events as $event){?>
                                 <tr>
                                     <td scope="row"><?=$sno; $sno++;?></td>
-                                    <td><?=$event['event_type'];?></td>
-                                    <td><?=$event['name'];?></td>
-                                    <td><?=$event['email'];?></td>
+                                    <td><?=$event['event_name'];?></td>
+                                    <td><?=$event['event_time'];?></td>
                                     <td><?=$event['created_by'];?></td>
                                     <td><?=$event['created_on'];?></td>
-                                    <td><a href="<?=admin_url('edit-events/'.$events['event_id'])?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a></td>
+                                    <td><a href="<?=admin_url('edit-events/'.$event['event_id'])?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a></td>
                                 </tr>
                                 <?php } } else {?>
                                     <tr><td colspan="4">No record found</td></tr>

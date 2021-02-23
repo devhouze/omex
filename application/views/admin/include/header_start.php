@@ -16,4 +16,5 @@
   <link href="<?php echo base_url(); ?>assets/css/admin/sleek.css" rel="stylesheet"/>
   <link href="<?php echo base_url(); ?>assets/css/admin/jquery-ui.css" rel="stylesheet"/>
   <link href="<?php echo base_url(); ?>assets/css/admin/custom.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="<?=base_url('assets/css/admin/timepicker.css')?>">
   
