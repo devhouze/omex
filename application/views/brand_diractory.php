@@ -4,7 +4,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 px-0">
-                    <div id="carouselExampleIndicators" class="carousel slide positon-relative" data-bs-ride="carousel">
+                    <div id="carouselExampleIndicators" class="carousel slide positon-relative d-md-block d-none" data-bs-ride="carousel">
 
                         <div class="carousel-inner postion-relative ">
                             <div class="carousel-item active">
@@ -21,6 +21,27 @@
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/right.svg" alt="" class="">
+                            </button>
+                        </div>
+                    </div>
+                    <div id="carouselExampleIndicatorsmob" class="carousel slide positon-relative d-md-none" data-bs-ride="carousel">
+
+                        <div class="carousel-inner postion-relative ">
+                            <div class="carousel-item active">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bs1-m.jpg" alt="" class="">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bs1-m.jpg" alt="" class="">
+                            </div>
+                        </div>
+
+                        
+                        <div class="crasol-btn">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsmob" data-bs-slide="prev">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsmob" data-bs-slide="next">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/right.svg" alt="" class="">
                             </button>
                         </div>
@@ -145,46 +166,46 @@
                 <div class="col-md-10">
                     <div class="row">
                         <div class="col-md-4">
-                           <div class="product-box">
-                            <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/pr.jpg" alt="" class=""></figure>
-                            <div class="name">NIKE</div>
-                            <div class="addrs"><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/map.svg" alt="" class=""> ATHENS ST.</div>
-                           </div>
+                            <div class="product-box">
+                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/pr.jpg" alt="" class=""></figure>
+                                <div class="name">NIKE</div>
+                                <div class="addrs"><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/map.svg" alt="" class=""> ATHENS ST.</div>
+                            </div>
                         </div>
                         <div class="col-md-4">
-                           <div class="product-box">
-                            <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/pr.jpg" alt="" class=""></figure>
-                            <div class="name">NIKE</div>
-                            <div class="addrs"><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/map.svg" alt="" class=""> ATHENS ST.</div>
-                           </div>
+                            <div class="product-box">
+                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/pr.jpg" alt="" class=""></figure>
+                                <div class="name">NIKE</div>
+                                <div class="addrs"><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/map.svg" alt="" class=""> ATHENS ST.</div>
+                            </div>
                         </div>
                         <div class="col-md-4">
-                           <div class="product-box">
-                            <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/pr.jpg" alt="" class=""></figure>
-                            <div class="name">NIKE</div>
-                            <div class="addrs"><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/map.svg" alt="" class=""> ATHENS ST.</div>
-                           </div>
+                            <div class="product-box">
+                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/pr.jpg" alt="" class=""></figure>
+                                <div class="name">NIKE</div>
+                                <div class="addrs"><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/map.svg" alt="" class=""> ATHENS ST.</div>
+                            </div>
                         </div>
                         <div class="col-md-4">
-                           <div class="product-box">
-                            <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/pr.jpg" alt="" class=""></figure>
-                            <div class="name">NIKE</div>
-                            <div class="addrs"><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/map.svg" alt="" class=""> ATHENS ST.</div>
-                           </div>
+                            <div class="product-box">
+                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/pr.jpg" alt="" class=""></figure>
+                                <div class="name">NIKE</div>
+                                <div class="addrs"><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/map.svg" alt="" class=""> ATHENS ST.</div>
+                            </div>
                         </div>
                         <div class="col-md-4">
-                           <div class="product-box">
-                            <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/pr.jpg" alt="" class=""></figure>
-                            <div class="name">NIKE</div>
-                            <div class="addrs"><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/map.svg" alt="" class=""> ATHENS ST.</div>
-                           </div>
+                            <div class="product-box">
+                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/pr.jpg" alt="" class=""></figure>
+                                <div class="name">NIKE</div>
+                                <div class="addrs"><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/map.svg" alt="" class=""> ATHENS ST.</div>
+                            </div>
                         </div>
                         <div class="col-md-4">
-                           <div class="product-box">
-                            <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/pr.jpg" alt="" class=""></figure>
-                            <div class="name">NIKE</div>
-                            <div class="addrs"><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/map.svg" alt="" class=""> ATHENS ST.</div>
-                           </div>
+                            <div class="product-box">
+                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/pr.jpg" alt="" class=""></figure>
+                                <div class="name">NIKE</div>
+                                <div class="addrs"><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/map.svg" alt="" class=""> ATHENS ST.</div>
+                            </div>
                         </div>
                         <div class="col-md-12">
                             <a href="" class="d-table mx-auto primary-btn">LOAD MORE</a>
@@ -220,7 +241,7 @@
             </div>
         </div>
     </div>
-  
+
     <div class="whats-new py-60 gray-bg c_margin">
         <div class="container">
             <div class="row">
