@@ -991,12 +991,31 @@
 /* end bnt styling */
 
 @media only screen and (max-width: 600px) {
-    .mb-10-sm {
+    .mt-sm0 {
+        margin-top: 0;
+    }
+    .pt-sm0 {
+        padding-top: 0;
+    }
+    .mt-20-sm {
+        margin-top: calc(var(--v2) * 10);
+    }
+    .mb-sm-10 {
         margin-bottom: calc(var(--v2) * 5);
     }
-    .py-20-sm {
+    .pt-sm-30 {
+        padding-top: calc(var(--v2) * 15);
+    }
+    .pb-sm-30 {
+        padding-bottom: calc(var(--v2) * 15);
+    }
+    .py-sm-20 {
         padding-top: calc(var(--v2) * 10);
         padding-bottom: calc(var(--v2) * 10);
+    }
+    .py-sm-30 {
+        padding-top: calc(var(--v2) * 15);
+        padding-bottom: calc(var(--v2) * 15);
     }
     .fz18-sm {
         font-size: calc(var(--v2) * 9);

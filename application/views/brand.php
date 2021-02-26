@@ -239,7 +239,7 @@
             </div>
         </div>
     </div>
-    <div class="whats-new py-60 py-20-sm gray-bg">
+    <div class="whats-new py-60 py-sm-20 gray-bg">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
@@ -305,7 +305,7 @@
         </div>
     </div>
 
-    <div class="find-us py-60 py-20-sm gray-bg">
+    <div class="find-us py-60 py-sm-20 gray-bg">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">

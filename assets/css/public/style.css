@@ -29,7 +29,25 @@ header.header.sticky {
 }
 
 .main-menu .dropdown-menu li a {
-    padding: 0 10px !important;
+    padding: 7px 30px 7px 18px !important;
+    font-size: 18px;
+}
+
+.main-menu .dropdown-menu li+li a {
+    border-top: 1px solid var(--black) !important;
+    color: var(--black);
+}
+
+.main-menu .dropdown-menu {
+    border: none;
+    background: #FAF7F2;
+    border-radius: 0 !important;
+    box-shadow: 0 4px 20px rgb(45 48 71 / 10%);
+    margin: 0;
+}
+
+.main-menu .dropdown-menu li a:hover {
+    background: var(--pr-color);
 }
 
 .main-menu .navbar-nav>li+li {
@@ -647,6 +665,7 @@ footer .menu li+li {
     border-radius: 0;
     opacity: 0.9;
     padding: 50px 30px;
+    height: calc(100% - 40px);
 }
 
 .street-banner .card p {
@@ -654,7 +673,7 @@ footer .menu li+li {
     line-height: 44px;
     color: white;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .live-in-word .col-md-4 figure {
@@ -1260,7 +1279,6 @@ footer .menu li+li {
     letter-spacing: 1.5px;
 }
 
-.similar.barnd,
 .c_margin {
     padding-top: 280px;
 }
@@ -1442,6 +1460,87 @@ footer .menu li+li {
     margin-left: 15px;
 }
 
+.brand-directory-page .crsouls-btn-group,
+.event-page .crsouls-btn-group {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+}
+
+.brand-directory-page .crsouls-btn-group button,
+.event-page .crsouls-btn-group button {
+    position: relative;
+    width: auto;
+    height: auto;
+    border: none;
+    background: transparent;
+    margin-left: 50px
+}
+
+.brand-directory-page .about-brand figure img {
+    z-index: 9;
+}
+
+.brand-directory-page .about-brand .carousel-inner,
+.event-page .about-brand .carousel-inner {
+    padding-bottom: 190px;
+}
+
+.street-banner .card>img {
+    display: table;
+    margin: 0 auto;
+}
+
+.street-banner p+img {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+}
+
+.modal.fade .modal-dialog.modal-dialog-zoom {
+    -webkit-transform: translate(0, 0)scale(.5);
+    transform: translate(0, 0)scale(.5);
+}
+
+.modal.show .modal-dialog.modal-dialog-zoom {
+    -webkit-transform: translate(0, 0)scale(1);
+    transform: translate(0, 0)scale(1);
+}
+
+.expoler-modal .modal-body {
+    background: #faf7f2;
+    margin: 40px;
+}
+
+.expoler-modal .modal-body ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.expoler-modal .modal-body ul li {
+    width: calc(100% /5);
+}
+
+.expoler-modal .modal-body button.btn-close {
+    right: 30px;
+    position: absolute;
+    top: 30px;
+}
+
+.expoler-modal .modal-body .exploer-btn img {
+    margin-left: 10px;
+    width: 70px;
+}
+
+.expoler-modal .modal-body .exploer-btn {
+    margin-bottom: 30px;
+}
+
 
 /* end brand directory page */
 
@@ -1509,7 +1608,7 @@ footer .menu li+li {
         font-size: 18px;
         line-height: 34px;
         margin-bottom: 30px;
-        margin-top: 20px;
+        margin-top: 15px;
     }
     .find-us .card p {
         font-size: 18px;
@@ -1544,8 +1643,11 @@ footer .menu li+li {
     .slider-counter {
         left: 0;
         right: 0;
-        bottom: 40px;
+        bottom: 60px;
         justify-content: center;
+    }
+    .tab-area .owl-nav {
+        margin-top: 90px !important;
     }
     div#navbarNavDropdown {
         left: 0;
@@ -1556,7 +1658,7 @@ footer .menu li+li {
         color: var(--h-color);
         box-shadow: 0 0 1px 0 rgb(45 48 71 / 4%);
     }
-    div#navbarNavDropdown ul li a {
+    div#navbarNavDropdown ul li>a {
         color: var(--h-color);
     }
     div#navbarNavDropdown ul li {
@@ -1602,7 +1704,12 @@ footer .menu li+li {
     .footer-signup .sb-btn {
         margin-top: 0;
         margin-top: 40px;
-        margin-bottom: 20px
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .footer-signup form {
+        padding-left: 40px;
+        padding-right: 40px;
     }
     .footer-signup .form-control {
         width: 100%;
@@ -1802,7 +1909,6 @@ footer .menu li+li {
         margin-bottom: 0;
         line-height: 1.8;
     }
-    .similar.barnd,
     .c_margin {
         padding-top: 0;
     }
@@ -1856,5 +1962,101 @@ footer .menu li+li {
     }
     .brand-directory-page .crasol-btn button+button {
         margin-left: 40px;
+    }
+    .search-brand ul li a {
+        font-size: 18px;
+        text-align: center;
+        margin: 0 auto;
+        display: table;
+    }
+    .search-brand .row .col-md-4:nth-child(2) ul {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .search-brand select {
+        width: 100%;
+        height: 48px;
+        margin-bottom: 20px;
+    }
+    .product-box {
+        font-size: 12px;
+    }
+    .addrs {
+        margin-top: 5px;
+    }
+    .brand-directory-page .about-brand .carousel-inner {
+        padding-bottom: 0;
+    }
+    .brand-directory-page .crsouls-btn-group {
+        bottom: -50px;
+    }
+    .brand-directory-page .crsouls-btn-group button {
+        margin-left: 0;
+    }
+    .brand-directory-page .crsouls-btn-group button+button {
+        margin-left: 40px;
+    }
+    .brand-directory ul li a {
+        font-size: 18px;
+    }
+    .brand-directory ul {
+        padding: 0 30px;
+    }
+    .event-page .about-brand .carousel-inner {
+        padding-bottom: 0;
+    }
+    .event-page .crsouls-btn-group {
+        bottom: -50px
+    }
+    .event-page .crsouls-btn-group button {
+        margin-left: 0;
+    }
+    .event-page .crsouls-btn-group button+button {
+        margin-left: 40px;
+    }
+    .about-event p {
+        font-size: 18px;
+        padding: 0 15px;
+        line-height: 1.8;
+    }
+    .about-event ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .about-event ul li+li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .event-page .looking-out h2 {
+        text-shadow: 2px 0px 0px #5a946e;
+    }
+    .street-banner p+img {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+    }
+    .experience .card p+img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 30px;
+    }
+    .accordion-item h2 img {
+        width: 20px;
+    }
+    .main-menu .dropdown-menu {
+        background: white;
+        box-shadow: unset;
+    }
+    .main-menu .dropdown-menu li {
+        margin: 0;
+        padding: 0 !important;
+    }
+    .main-menu .dropdown-menu li a {
+        font-size: 16px;
+        padding: 7px 30px 7px 10px !important;
     }
 }
