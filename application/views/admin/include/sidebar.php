@@ -44,16 +44,16 @@
             </li>
 
             <li class="has-sub">
-              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#app" aria-expanded="false" aria-controls="app">
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#brand" aria-expanded="false" aria-controls="brand">
                 <i class="mdi mdi-pencil-box-multiple"></i>
                 <span class="nav-text">Brand</span> <b class="caret"></b>
               </a>
-              <ul class="collapse" id="app" data-parent="#sidebar-menu">
+              <ul class="collapse" id="brand" data-parent="#sidebar-menu">
                 <div class="sub-menu">
 
                   <li>
-                    <a class="sidenav-item-link" href="<?php echo base_url('brands')?>">
-                      <span class="nav-text">List</span>
+                    <a class="sidenav-item-link" href="<?php echo admin_url('brands')?>">
+                      <span class="nav-text">Brand List</span>
                     </a>
                   </li>
 
@@ -62,28 +62,46 @@
             </li>
 
             <li class="has-sub">
-              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#components" aria-expanded="false" aria-controls="components">
-                <i class="mdi mdi-folder-multiple-outline"></i>
-                <span class="nav-text">Components</span> <b class="caret"></b>
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#leads" aria-expanded="false" aria-controls="leads">
+                <i class="mdi mdi-pencil-box-multiple"></i>
+                <span class="nav-text">Leads</span> <b class="caret"></b>
               </a>
-              <ul class="collapse" id="components" data-parent="#sidebar-menu">
+              <ul class="collapse" id="leads" data-parent="#sidebar-menu">
                 <div class="sub-menu">
 
                   <li>
-                    <a class="sidenav-item-link" href="alert.html">
-                      <span class="nav-text">Alert</span>
+                    <a class="sidenav-item-link" href="<?php echo admin_url('leads')?>">
+                      <span class="nav-text">Lead List</span>
+                    </a>
+                  </li>
+
+                </div>
+              </ul>
+            </li>
+
+            <li class="has-sub">
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#setting" aria-expanded="false" aria-controls="setting">
+                <i class="mdi mdi-folder-multiple-outline"></i>
+                <span class="nav-text">Setting</span> <b class="caret"></b>
+              </a>
+              <ul class="collapse" id="setting" data-parent="#sidebar-menu">
+                <div class="sub-menu">
+
+                  <li>
+                    <a class="sidenav-item-link" href="<?=admin_url('profile');?>">
+                      <span class="nav-text">Profile</span>
                     </a>
                   </li>
 
                   <li>
-                    <a class="sidenav-item-link" href="badge.html">
-                      <span class="nav-text">Badge</span>
+                    <a class="sidenav-item-link" href="<?=admin_url('change-password');?>">
+                      <span class="nav-text">Change Password</span>
                     </a>
                   </li>
 
                   <li>
-                    <a class="sidenav-item-link" href="breadcrumb.html">
-                      <span class="nav-text">Breadcrumb</span>
+                    <a class="sidenav-item-link" href="<?=admin_url('users');?>">
+                      <span class="nav-text">Users</span>
                     </a>
                   </li>
 

@@ -8,6 +8,14 @@ class MY_Model extends CI_Model
         parent::__construct();
     }
 
+    public function admin_id()
+    {
+        $check_admin = $this->session->userdata('admin_details');
+        if(!empty($check_admin)){
+            return $check_admin['admin_id'];
+        }
+    }
+
 
     public function get_data_array($table,$column = "*", $where = "")
     {
@@ -59,7 +67,7 @@ class MY_Model extends CI_Model
 
         if($save)
         {
-            return true;
+            return $this->db->insert_id();
         }
         else
         {
