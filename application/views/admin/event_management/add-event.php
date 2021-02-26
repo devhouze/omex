@@ -44,11 +44,11 @@ $brands = ($events)?$events->brands:'';
                                    </select>
                                 </div>
 
-                                <div class="col-md-6 mb-3 date" style="display:none;">
+                                <div class="col-md-6 mb-3 date" <?php if($date_available == 0){?> style="display:block;" <?php } else { ?>style="display:none;"<?php } ?>>
                                     <label for="">Event Start Date</label>
                                     <input type="text" class="form-control form-control-sm input-sm datepicker" placeholder="Select date" name="start_date" value="<?=$start_date;?>">
                                 </div>
-                                <div class="col-md-6 mb-3 date" style="display:none;">
+                                <div class="col-md-6 mb-3 date" <?php if($date_available == 0){?> style="display:block;" <?php } else { ?>style="display:none;"<?php } ?>>
                                     <label for="">Event End Date</label>
                                     <input type="text" class="form-control form-control-sm input-sm datepicker" placeholder="Select date" name="end_date" value="<?=$end_date;?>">
                                 </div>

@@ -100,5 +100,16 @@ class Lead_controller extends MY_Controller
             echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->form_validation->error_array(), 'status' => 0]);
         }
     }
+
+    public function delete_lead()
+    {
+        $lead_id = $this->input->post('lead_id');
+        $update = $this->lm->update_data('tbl_leads',['status' => 2],['id' => $lead_id]);
+        if($update){
+            echo json_encode(['message' => 'Data deleted successfully.', 'status' => 1]);
+        } else {
+            echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
+        }
+    }
 }
 ?>

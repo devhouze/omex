@@ -54,7 +54,7 @@ class Brands_Controller extends MY_Controller
             $this->form_validation->set_rules('brand_street','Brand Street','required');
             $this->form_validation->set_rules('brand_type','Brand Type','required');
             $this->form_validation->set_rules('brand_contact','Brand Contact','required');
-            $this->form_validation->set_rules('brand_category[]','Brand Category','required');
+            // $this->form_validation->set_rules('brand_category','Brand Category','required');
             $this->form_validation->set_rules('sub_category','Brand Sub Category','required');
             $this->form_validation->set_rules('email_contact','Email Contact','required');
             $this->form_validation->set_rules('brand_audience','Brand Audience','required');
@@ -77,6 +77,10 @@ class Brands_Controller extends MY_Controller
             }
             
             if($this->form_validation->run()){
+                if(empty($this->input->post('brand_category'))){
+                    echo json_encode(['message' => 'The Brand Category field is required.', 'error' => 'The Brand Category field is required.', 'status' => 0]);
+                    exit;
+                }
                 $data_array = array(
                     'brand_name'                    => $this->input->post('brand_name'),
                     'logo_message'                  => $this->input->post('logo_comment'),
@@ -118,6 +122,7 @@ class Brands_Controller extends MY_Controller
                     }
                 }
 
+                $offer_array = [];
                 if($this->input->post('show_brand_offer') == "Yes"){
                     $offer_array = array(
                         'brand_offer_name'                      => $this->input->post('brand_offer_name'),
@@ -287,6 +292,17 @@ class Brands_Controller extends MY_Controller
 		$this->load->view('admin/brands/add-brand',$data);
 		$this->load->view('admin/include/body_end');
 		$this->load->view('admin/include/admin_js');
+    }
+
+    public function delete_brand()
+    {
+        $brand_id = $this->input->post('brand_id');
+        $update = $this->bm->update_data('tbl_brand',['status' => 2],['brand_id' => $brand_id]);
+        if($update){
+            echo json_encode(['message' => 'Data deleted successfully.', 'status' => 1]);
+        } else {
+            echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
+        }
     }
 }
 ?>

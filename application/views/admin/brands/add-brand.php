@@ -169,7 +169,7 @@ $about_brand_offer = (!empty($brands))?$brands->about_brand_offer:'';
                                     <input type="checkbox" name="brand_category[]" value="Shoes"<?php if(in_array("Shoes",$brand_category)){echo "checked";}?>> Shoes
                                     <input type="checkbox" name="brand_category[]" value="Sports & Fitness"<?php if(in_array("Sports & Fitness",$brand_category)){echo "checked";}?>> Sports & Fitness
                                     <br>
-                                    <span class="text-danger brand_category errors_msg"></span>
+                                    <span class="text-danger brand_category[] errors_msg"></span>
                                 </div>
                                 
                                 <div class="col-md-6 mb-3">

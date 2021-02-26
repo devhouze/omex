@@ -84,8 +84,10 @@ $route['admin/change-password'] = 'admin/Dashboard_Controller/change_password';
 
 // Brands Routes
 $route['admin/brands'] = 'admin/Brands_Controller/brand_list';
+$route['admin/brands/(:num)'] = 'admin/Brands_Controller/brand_list/$1';
 $route['admin/add-brands'] = 'admin/Brands_Controller/add_brand';
 $route['admin/edit-brands/(:num)'] = 'admin/Brands_Controller/edit_brand/$1';
+$route['admin/delete-brand'] = 'admin/Brands_Controller/delete_brand';
 
 // Users Routes
 $route['admin/users'] = 'admin/Users_Controller/users_list';
@@ -93,6 +95,7 @@ $route['admin/users/(:num)'] = 'admin/Users_Controller/users_list/$1';
 $route['admin/add-users'] = 'admin/Users_Controller/add_users';
 $route['admin/edit-users/(:num)'] = 'admin/Users_Controller/edit_users/$1';
 $route['admin/check-username'] = 'admin/Users_Controller/check_username';
+$route['admin/delete-user'] = 'admin/Users_Controller/delete_user';
 
 // Brands Routes
 $route['admin/leads'] = 'admin/Lead_controller/lead_list';
@@ -101,13 +104,17 @@ $route['admin/add-leads'] = 'admin/Lead_controller/add_lead';
 $route['admin/save-leads'] = 'admin/Lead_controller/save_lead';
 $route['admin/edit-leads/(:num)'] = 'admin/Lead_controller/edit_lead/$1';
 $route['admin/update-leads'] = 'admin/Lead_controller/update_lead';
-
+$route['admin/delete-lead'] = 'admin/Lead_Controller/delete_lead';
+$route['admin/change-status'] = 'admin/Event_Controller/change_lead_status';
 
 // Events routes
 $route['admin/events'] = 'admin/Event_Controller/events_list';
 $route['admin/events/(:num)'] = 'admin/Event_Controller/events_list/$1';
 $route['admin/add-events'] = 'admin/Event_Controller/add_events';
 $route['admin/edit-events/(:num)'] = 'admin/Event_Controller/edit_events/$1';
+$route['admin/delete-event'] = 'admin/Event_Controller/delete_event';
+$route['admin/change-status'] = 'admin/Event_Controller/change_event_status';
+$route['admin/event-details'] = 'admin/Event_Controller/get_event_details';
 
 $route['admin/404'] = 'admin/Admin_controller/error404';
 $route['admin/blank'] = 'admin/Admin_controller/blank';

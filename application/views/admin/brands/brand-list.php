@@ -1,3 +1,4 @@
+<script src="<?=base_url('assets/js/admin/brands.js')?>"></script>
 <div class="content-wrapper">
     <div class="content">
         <div class="breadcrumb-wrapper">
@@ -43,7 +44,10 @@
                                     <td><?=$brand['brand_name'];?></td>
                                     <td><?=$brand['created_by'];?></td>
                                     <td><?=$brand['created_on'];?></td>
-                                    <td><a href="<?php echo admin_url('edit-brands/'.$brand['brand_id']);?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></td>
+                                    <td>
+                                    <a href="<?php echo admin_url('edit-brands/'.$brand['brand_id']);?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a>
+                                    <a href="javascript:void(0)" data-id="<?=$brand['brand_id'];?>" class="btn btn-danger delete"><span class="mdi mdi-delete"></span></a>
+                                    </td>
                                 </tr>
                                 <?php } } else {?>
                                     <tr><td colspan="4">No record found</td></tr>

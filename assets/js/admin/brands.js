@@ -10,6 +10,26 @@ $(document).ready(function() {
         }
     });
 
+    $('.delete').click(function() {
+        var brand_id = $(this).data('id');
+        if (confirm('Do you want to delte this brand?')) {
+            $.ajax({
+                type: 'post',
+                url: url + 'delete-brand',
+                data: { brand_id: brand_id },
+                success: function(data) {
+                    var data = $.parseJSON(data);
+                    if (data.status > 0) {
+                        $.notify(data.message, "success");
+                        setTimeout(function() { window.location.reload(); }, 2000);
+                    } else {
+                        $.notify(data.message, "error");
+                    }
+                }
+            });
+        }
+    });
+
     $('#brand_management').submit(function(e) {
         e.preventDefault();
         var form = $(this);

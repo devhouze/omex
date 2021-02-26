@@ -186,5 +186,34 @@ class Event_Controller extends MY_Controller
 		$this->load->view('admin/include/body_end');
 		$this->load->view('admin/include/admin_js');
     }
+
+    public function delete_event()
+    {
+        $event_id = $this->input->post('event_id');
+        $update = $this->em->update_data('tbl_event',['status' => 2],['event_id' => $event_id]);
+        if($update){
+            echo json_encode(['message' => 'Data deleted successfully.', 'status' => 1]);
+        } else {
+            echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
+        }
+    }
+
+    public function change_event_status()
+    {
+        $event_id = $this->input->post('id');
+        $stauts = $this->input->post('status');
+        $update = $this->em->update_data('tbl_event',['status' => $stauts],['event_id' => $event_id]);
+        if($update){
+            echo json_encode(['message' => 'Status changed successfully.', 'status' => 1]);
+        } else {
+            echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
+        }
+    }
+
+    public function get_event_details()
+    {
+        $event_id = $this->input->post('event_id');
+        $data = $this->em->get_event_details($event_id);
+    }
 }
 ?>

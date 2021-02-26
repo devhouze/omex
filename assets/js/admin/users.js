@@ -26,6 +26,25 @@ $(document).ready(function() {
     });
     // Check username availibilty ends here
 
+    $('.delete').click(function() {
+        var user_id = $(this).data('id');
+        if (confirm('Do you want to delte this user?')) {
+            $.ajax({
+                type: 'post',
+                url: url + 'delete-user',
+                data: { user_id: user_id },
+                success: function(data) {
+                    var data = $.parseJSON(data);
+                    if (data.status > 0) {
+                        $.notify(data.message, "success");
+                        setTimeout(function() { window.location.reload(); }, 2000);
+                    } else {
+                        $.notify(data.message, "error");
+                    }
+                }
+            });
+        }
+    });
 
     $('#user_management').submit(function(e) {
         e.preventDefault();

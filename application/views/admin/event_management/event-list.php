@@ -1,3 +1,4 @@
+<script src="<?=base_url('assets/js/admin/events.js')?>"></script>
 <div class="content-wrapper">
     <div class="content">
         <div class="breadcrumb-wrapper">
@@ -31,7 +32,9 @@
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Event Name</th>
-                                    <th scope="col">Event Time</th>
+                                    <th scope="col">Event Date</th>
+                                    <th scope="col">Event Type</th>
+                                    <th scope="col">Status</th>
                                     <th scope="col">Created By</th>
                                     <th scope="col">Created On</th>
                                     <th scope="col">Action</th>
@@ -42,10 +45,21 @@
                                 <tr>
                                     <td scope="row"><?=$sno; $sno++;?></td>
                                     <td><?=$event['event_name'];?></td>
-                                    <td><?=$event['event_time'];?></td>
+                                    <td><?=($event['date_available'] != '1')?($event['start_date']."-".$event['end_date']):'N/A';?></td>
+                                    <td><?=$event['event_type'];?></td>
+                                    <td align="center">
+                                        <label class="switch">
+                                          <input type="checkbox" class="chkstatus" value="<?php echo $event['event_id'];?>" <?php echo ($event['status']=="0")?'checked':'' ?>>
+                                          <div class="slider round"></div>
+                                        </label>
+                                    </td>
                                     <td><?=$event['created_by'];?></td>
                                     <td><?=$event['created_on'];?></td>
-                                    <td><a href="<?=admin_url('edit-events/'.$event['event_id'])?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a></td>
+                                    <td>
+                                        <a href="<?=admin_url('edit-events/'.$event['event_id'])?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a>
+                                        <a href="javascript:void(0)" class="btn btn-danger delete" data-id="<?=$event['event_id'];?>"><span class="mdi mdi-delete"></span></a>
+                                        <a href="javascript:void(0)" class="btn btn-primary view_detail" data-id="<?=$event['event_id'];?>"><span class="mdi mdi-eye"></span></a>
+                                    </td>
                                 </tr>
                                 <?php } } else {?>
                                     <tr><td colspan="4">No record found</td></tr>

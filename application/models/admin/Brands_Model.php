@@ -12,6 +12,8 @@ class Brands_Model extends MY_Model
     {
         $query = $this->db->select('brand_id, brand_name, tbl_brand.status, tbl_admin.name as created_by, date_format(tbl_brand.created_on,"%d-%M-%Y") as created_on')
                           ->join('tbl_admin','admin_id = tbl_brand.created_by')
+                          ->where('tbl_brand.status',0)
+                          ->order_by('brand_id','desc')
                           ->get('tbl_brand');
         if($count){
             return $query->num_rows();

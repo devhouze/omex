@@ -128,6 +128,16 @@ class Users_Controller extends MY_Controller {
 				return ['status' => 1];
 			}
 		}
-		
 	}
+
+	public function delete_user()
+    {
+        $user_id = $this->input->post('user_id');
+        $update = $this->um->update_data('tbl_admin',['status' => 2],['admin_id' => $user_id]);
+        if($update){
+            echo json_encode(['message' => 'Data deleted successfully.', 'status' => 1]);
+        } else {
+            echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
+        }
+    }
 }

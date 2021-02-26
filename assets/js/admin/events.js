@@ -10,6 +10,66 @@ $(document).ready(function() {
         }
     });
 
+    $('.delete').click(function() {
+        var event_id = $(this).data('id');
+        if (confirm('Do you want to delte this event?')) {
+            $.ajax({
+                type: 'post',
+                url: url + 'delete-event',
+                data: { event_id: event_id },
+                success: function(data) {
+                    var data = $.parseJSON(data);
+                    if (data.status > 0) {
+                        $.notify(data.message, "success");
+                        setTimeout(function() { window.location.reload(); }, 2000);
+                    } else {
+                        $.notify(data.message, "error");
+                    }
+                }
+            });
+        }
+    });
+
+    $('.view_detail').click(function() {
+        var event_id = $(this).data('id');
+        $.ajax({
+            type: 'post',
+            url: url + 'event-details',
+            data: { event_id: event_id },
+            success: function(data) {
+                var data = $.parseJSON(data);
+                if (data.status > 0) {
+                    $.notify(data.message, "success");
+                    setTimeout(function() { window.location.reload(); }, 2000);
+                } else {
+                    $.notify(data.message, "error");
+                }
+            }
+        });
+    });
+
+    $(".chkstatus").click(function() {
+        if ($(this).is(':checked')) {
+            var status = 0;
+        } else {
+            status = 1;
+        }
+        var id = $(this).val();
+        $.ajax({
+            type: "POST",
+            url: url + 'change-status',
+            data: { id: id, status: status },
+            success: function(data) {
+                var data = $.parseJSON(data);
+                if (data.status > 0) {
+                    $.notify(data.message, "success");
+                } else {
+                    $.notify(data.message, "error");
+                }
+            }
+        });
+    });
+
     $('#show_brand').change(function() {
         var option = $('#show_brand option:selected').val();
         if (option == "Yes") {

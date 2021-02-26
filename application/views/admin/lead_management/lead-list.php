@@ -1,3 +1,4 @@
+<script src="<?=base_url('assets/js/admin/lead_management.js')?>"></script>
 <div class="content-wrapper">
     <div class="content">
         <div class="breadcrumb-wrapper">
@@ -47,7 +48,10 @@
                                     <td><?=$lead['contact'];?></td>
                                     <td><?=$lead['created_by'];?></td>
                                     <td><?=$lead['created_on'];?></td>
-                                    <td><a href="<?=admin_url('edit-leads/'.$lead['id'])?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a></td>
+                                    <td>
+                                        <a href="<?=admin_url('edit-leads/'.$lead['id'])?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a>
+                                        <a href="javascript:void(0)" class="btn btn-danger delete" data-id="<?=$lead['id'];?>"><span class="mdi mdi-delete"></span></a>
+                                    </td>
                                 </tr>
                                 <?php } } else {?>
                                     <tr><td colspan="4">No record found</td></tr>
