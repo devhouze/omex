@@ -99,7 +99,7 @@
 
         </div>
     </div>
-    <div class="about-event py-60 gray-bg">
+    <div class="about-event py-60 py-sm-30 gray-bg">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
@@ -119,36 +119,92 @@
             </div>
 
             <div class="col-md-12 mt-5">
-                            <a href="" class="d-table mx-auto primary-btn">REGISTER NOW</a>
-                        </div>
+                <a href="" class="d-table mx-auto primary-btn">REGISTER NOW</a>
+            </div>
         </div>
     </div>
-    <div class="about-brand gray-bg pt-60 pb-30">
+    <div class="about-brand gray-bg  pb-30 pt-60 pt-sm-30">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5">Past Events</h5>
+                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5">Past Events
+                    </h5>
                     <div class="v-line d-table mx-auto my-4"></div>
                 </div>
             </div>
+
+        </div>
+        <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-10 position-relative">
-                    <figure> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/about.jpg" alt="" class=""></figure>
-                    <div class="card mt-30 border-0 rounded-0">
-                        <div class="row">
-                            <div class="col-md-4 ">
+                <div class="col-md-10">
+                    <div id="carouselExampleControlseven" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-12 position-relative">
+                                        <figure> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/about.jpg" alt="" class=""></figure>
+                                        <div class="card mt-60 border-0 rounded-0">
+                                            <div class="row">
+                                                <div class="col-md-4 ">
+                                                </div>
+                                                <div class="col-md-8 ">
+                                                    <p>Nike, Inc. is an American multinational corporation that is engaged in the design, development, manufacturing, and worldwide marketing and sales of footwear, apparel, equipment, accessories, and services. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-8 ">
-                                <p>Nike, Inc. is an American multinational corporation that is engaged in the design, development, manufacturing, and worldwide marketing and sales of footwear, apparel, equipment, accessories, and services. </p>
+                            <div class="carousel-item">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-12 position-relative">
+                                        <figure> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/about.jpg" alt="" class=""></figure>
+                                        <div class="card mt-60 border-0 rounded-0">
+                                            <div class="row">
+                                                <div class="col-md-4 ">
+                                                </div>
+                                                <div class="col-md-8 ">
+                                                    <p>Nike, Inc. is an American multinational corporation that is engaged in the design, development, manufacturing, and worldwide marketing and sales of footwear, apparel, equipment, accessories, and services. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-12 position-relative">
+                                        <figure> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/about.jpg" alt="" class=""></figure>
+                                        <div class="card mt-60 border-0 rounded-0">
+                                            <div class="row">
+                                                <div class="col-md-4 ">
+                                                </div>
+                                                <div class="col-md-8 ">
+                                                    <p>Nike, Inc. is an American multinational corporation that is engaged in the design, development, manufacturing, and worldwide marketing and sales of footwear, apparel, equipment, accessories, and services. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="crsouls-btn-group">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlseven" data-bs-slide="prev">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlseven" data-bs-slide="next">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/right.svg" alt="" class="">
+                            </button>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-    <div class="similar barnd live-in-word gray-bg pt-30 position-relative">
+    <div class="similar barnd live-in-word gray-bg pt-60  position-relative">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
@@ -213,7 +269,7 @@
                     <div class="slider-counter s_counder"></div>
                 </div>
             </div>
-            <div class="row mt-4 d-lg-none d-block">
+            <div class="row mt-4 d-md-none d-block">
                 <div class="col-md-12">
                     <div class="owl-carousel slider-mobb">
 
@@ -248,7 +304,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-10">
-                    <ul class="category d-flex flex-md-row flex-column justify-content-center align-items-center">
+                    <ul class="category d-flex justify-content-center align-items-center flex-wrap">
                         <li>
                             <a href="">
                                 <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/c1.svg" alt=""></figure>
@@ -278,7 +334,7 @@
             </div>
         </div>
     </div>
-    <div class="whats-new py-60 gray-bg">
+    <div class="whats-new py-60 py-sm-20 gray-bg">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">

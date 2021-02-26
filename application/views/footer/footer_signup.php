@@ -10,7 +10,7 @@
 
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                            <form action="" autocomplete="off" class="py-60 py-20-sm">
+                            <form action="" autocomplete="off" class="py-60 py-sm-20">
                                 <div class="row justify-content-center">
                                     <div class="col-md-4">
                                         <h3 class="pr-font fz36 fz18-sm text-white mb-30 mb-10-sm">Name*</h3>

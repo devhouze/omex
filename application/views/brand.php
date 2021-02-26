@@ -4,7 +4,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 px-0">
-                    <div id="carouselExampleIndicators" class="carousel slide positon-relative" data-bs-ride="carousel">
+                    <div id="carouselExampleIndicators" class="carousel slide positon-relative d-md-block d-none" data-bs-ride="carousel">
 
                         <div class="carousel-inner postion-relative ">
                             <div class="carousel-item active">
@@ -20,11 +20,34 @@
                         <div class="bg-color" style="background-color: #5A946E;"></div>
                         <div class="crasol-btn">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/right.svg" alt="" class="">
-                                                    </button>
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/right.svg" alt="" class="">
+                            </button>
+                        </div>
+                    </div>
+                    <div id="carouselExampleIndicatorsmob" class="carousel slide positon-relative d-md-none d-blockbs" data-bs-ride="carousel">
+
+                        <div class="carousel-inner postion-relative ">
+                            <div class="carousel-item active">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bs1-m.jpg" alt="" class="">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bs1-m.jpg" alt="" class="">
+                            </div>
+                        </div>
+                        <div class="brand-lgoo">
+                            <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/barnd-logo.svg" alt="" class="">
+                        </div>
+                        
+                        <div class="crasol-btn">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsmob" data-bs-slide="prev">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsmob" data-bs-slide="next">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/right.svg" alt="" class="">
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -186,7 +209,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-10">
-                    <ul class="category d-flex flex-md-row flex-column justify-content-center align-items-center">
+                    <ul class="category d-flex flex-wrap justify-content-center align-items-center">
                         <li>
                             <a href="">
                                 <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/c1.svg" alt=""></figure>
@@ -216,7 +239,7 @@
             </div>
         </div>
     </div>
-    <div class="whats-new py-60 gray-bg">
+    <div class="whats-new py-60 py-sm-20 gray-bg">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
@@ -230,7 +253,7 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row flex-fill">
-                                    <div class="col-md-6 pe-4 d-flex flex-fill">
+                                    <div class="col-md-6 pe-md-4 d-flex flex-fill">
                                         <div class="card d-flex flex-fill flex-column align-items-center justify-content-center border-0 rounded-0" style="background-color: #5A946E;">
                                             <h2 class="fz40 fz24-sm pr-font text-white">STORE NAME</h2>
                                             <p class="text-white text-center fz20 fw-5 mt-40 mb-0">The new shops that have opened and the pulse of streets! Here is the list of the new & most popular hotspots at World Street. </p>
@@ -248,7 +271,7 @@
                             </div>
                             <div class="carousel-item">
                                 <div class="row flex-fill">
-                                    <div class="col-md-6 pe-4 d-flex flex-fill">
+                                    <div class="col-md-6 pe-md-4 d-flex flex-fill">
                                         <div class="card d-flex flex-fill flex-column align-items-center justify-content-center border-0 rounded-0" style="background-color: #5A946E;">
                                             <h2 class="fz40 fz24-sm pr-font text-white">STORE NAME</h2>
                                             <p class="text-white text-center fz20 fw-5 mt-40 mb-0">The new shops that have opened and the pulse of streets! Here is the list of the new & most popular hotspots at World Street. </p>
@@ -264,12 +287,12 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
 
                         </div>
                         <div class="car-ions">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
 
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
@@ -282,7 +305,7 @@
         </div>
     </div>
 
-    <div class="find-us py-60 gray-bg">
+    <div class="find-us py-60 py-sm-20 gray-bg">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">

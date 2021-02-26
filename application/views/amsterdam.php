@@ -279,8 +279,8 @@
                 </div>
             </div>
             <div class="row mt-4 justify-content-center">
-                <div class="col-md-10">
-                    <div id="carouselExamControlss" class="carousel slide" data-bs-ride="carousel">
+                <div class="col-md-10 px-md-3 px-0">
+                    <div id="carouselExamControlss" class="carousel slide d-md-block d-none" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <figure class="position-relative mb-0">
@@ -304,6 +304,34 @@
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/street/amsterdam-left.svg" alt="" class="w-100">
                             </a>
                             <a class="carousel-control-next ml-40" href="#carouselExamControlss" role="button" data-bs-slide="next">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/amsterdam-right.svg" alt="" class="w-100">
+                            </a>
+                        </div>
+                    </div>
+                    <div id="carouselExamControlssmob" class="carousel slide d-md-none d-block" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <figure class="position-relative mb-0">
+                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/h1-mob.jpg" alt="" class="w-100">
+
+                                </figure>
+                            </div>
+                            <div class="carousel-item">
+                                <figure class="position-relative mb-0">
+                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/h1-mob.jpg" alt="" class="w-100">
+
+                                </figure>
+                            </div>
+
+                            <div class="abs-block">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/amst.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="d-flex position-absolute btn-controls">
+                            <a class="carousel-control-prev" href="#carouselExamControlssmob" role="button" data-bs-slide="prev">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/amsterdam-left.svg" alt="" class="w-100">
+                            </a>
+                            <a class="carousel-control-next ml-40" href="#carouselExamControlssmob" role="button" data-bs-slide="next">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/street/amsterdam-right.svg" alt="" class="w-100">
                             </a>
                         </div>
