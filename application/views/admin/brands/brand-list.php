@@ -19,8 +19,7 @@
 
         </div>
 
-        <div class="row">
-            
+        <div class="row">            
             <div class="col-lg-12">
                 <div class="card card-default">
                     <div class="card-header card-header-border-bottom">
@@ -32,6 +31,9 @@
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Brand Name</th>
+                                    <th scope="col">Brand Logo</th>
+                                    <th scope="col">Brand Location</th>
+                                    <th scope="col">Status</th>
                                     <th scope="col">Created By</th>
                                     <th scope="col">Created On</th>
                                     <th scope="col">Action</th>
@@ -42,6 +44,14 @@
                                 <tr>
                                     <td scope="row"><?=$sno; $sno++;?></td>
                                     <td><?=$brand['brand_name'];?></td>
+                                    <td><img src="<?=base_url('assets/images/admin/brand/'.$brand['brand_logo']);?>" alt="" style="width:50px; height:50px"></td>
+                                    <td><?=$brand['brand_location'];?></td>
+                                    <td align="center">
+                                        <label class="switch">
+                                          <input type="checkbox" class="chkstatus" value="<?php echo $brand['brand_id'];?>" <?php echo ($brand['status']=="0")?'checked':'' ?>>
+                                          <div class="slider round"></div>
+                                        </label>
+                                    </td>
                                     <td><?=$brand['created_by'];?></td>
                                     <td><?=$brand['created_on'];?></td>
                                     <td>
@@ -50,7 +60,7 @@
                                     </td>
                                 </tr>
                                 <?php } } else {?>
-                                    <tr><td colspan="4">No record found</td></tr>
+                                    <tr><td colspan="8">No record found</td></tr>
                                 <?php } ?>
                             </tbody>
                         </table>

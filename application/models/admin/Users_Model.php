@@ -10,10 +10,10 @@ class Users_Model extends MY_Model
 
     public function get_users($per_page,$page,$count = false)
     {
-        $this->db->select('ta.admin_id, ta.name, ta.email, tbl_admin.name as created_by, (CASE WHEN ta.user_type = "0" THEN "Admin" WHEN ta.user_type = "1" THEN "Editor" WHEN ta.user_type = "2" THEN "Sales Executive" END) as user_type , date_format(ta.created_on,"%d-%M-%Y") as created_on');
+        $this->db->select('ta.admin_id, ta.name, ta.status, ta.email, tbl_admin.name as created_by, (CASE WHEN ta.user_type = "0" THEN "Admin" WHEN ta.user_type = "1" THEN "Editor" WHEN ta.user_type = "2" THEN "Sales Executive" END) as user_type , date_format(ta.created_on,"%d-%m-%Y") as created_on');
         $this->db->join('tbl_admin','ta.created_by = tbl_admin.admin_id');
         (!$count)?$this->db->limit($per_page,$page):'';
-        $this->db->where('ta.status',0);
+        $this->db->where('ta.status !=',2);
         $this->db->order_by('ta.admin_id','desc');
         $query = $this->db->get('tbl_admin ta');
         if($count){

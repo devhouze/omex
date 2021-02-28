@@ -57,7 +57,7 @@ $(document).ready(function() {
         var id = $(this).val();
         $.ajax({
             type: "POST",
-            url: url + 'change-status',
+            url: url + 'change-event-status',
             data: { id: id, status: status },
             success: function(data) {
                 var data = $.parseJSON(data);

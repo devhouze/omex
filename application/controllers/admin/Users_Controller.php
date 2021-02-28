@@ -140,4 +140,16 @@ class Users_Controller extends MY_Controller {
             echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
         }
     }
+
+	public function change_user_status()
+    {
+        $admin_id = $this->input->post('id');
+        $stauts = $this->input->post('status');
+        $update = $this->um->update_data('tbl_admin',['status' => $stauts],['admin_id' => $admin_id]);
+        if($update){
+            echo json_encode(['message' => 'Status changed successfully.', 'status' => 1]);
+        } else {
+            echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
+        }
+    }
 }

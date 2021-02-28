@@ -271,7 +271,6 @@ class Brands_Controller extends MY_Controller
                         }
                     }
                 }
-                // echo "<pre>"; print_r($data_array); die;
                 $final_data = array_merge($data_array,$offer_array);
                 $save = $this->bm->update_data('tbl_brand',$final_data,['brand_id' => $id]);
                 if($save){
@@ -304,5 +303,169 @@ class Brands_Controller extends MY_Controller
             echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
         }
     }
+
+    public function brand_logo_list($page = 0)
+    {
+        $per_page = "10";
+        $page = $this->uri->segment(2);
+        if ($page != 0) {
+			$page = ($page - 1) * $per_page;
+        } else {
+            $page = 0;
+        }
+        $total_count = $this->bm->get_brands_logo($per_page,$page,true);
+        $data['pagination'] = $this->pagination('brand-logo',$total_count,$per_page);
+        $data['brand_logos'] = $this->bm->get_brands_logo($per_page,$page);
+        $end = (($data['brand_logos'])?count($data['brand_logos']):0) + (($page) ? $page : 0);
+        $start = (count($data['brand_logos']) > 0)?($page + 1):0;
+        $data['result_count'] = "Showing " . $start . " - " . $end . " of " . $total_count . " Results";
+        $this->load->view('admin/include/header_start');
+		$this->load->view('admin/include/header_end');
+		$this->load->view('admin/include/body_start');
+        $this->load->view('admin/include/sidebar');
+		$this->load->view('admin/brands/brand-logo-list',$data);
+		$this->load->view('admin/include/body_end');
+		$this->load->view('admin/include/admin_js');
+    }
+
+    public function add_brand_logo()
+    {
+        if($this->input->post()){
+            $this->form_validation->set_rules('name','Name','required');
+            $this->form_validation->set_rules('comment','Comment','required');
+            if(empty($_FILES['brand_logo']['name'])){
+                $this->form_validation->set_rules('brand_logo','Logo','required');
+            }
+
+            if($this->form_validation->run()){
+                $data_array = array(
+                    'name'          => $this->input->post('name'),
+                    'created_by'    => $this->bm->admin_id(),
+                    'created_on'    => date('Y-m-d H:i:s')
+                );
+                
+                if(!empty($_FILES['brand_logo']['name'])){
+                    $brand_logo = $getfilename =  str_replace(' ', '_', $_FILES['brand_logo']['name']);
+                    $file = pathinfo($brand_logo);
+                    $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
+                    $data_array['brand_logo'] = $new_name;
+                    $config['upload_path'] = 'assets/images/admin/brand-logo';
+                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['file_name'] = $new_name;
+                    $this->load->library('upload',$config);
+                    $this->upload->initialize($config);
+                    if(!$this->upload->do_upload('brand_logo')){
+                        echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->upload->display_errors(), 'status' => 0]);
+                        exit;
+                    }
+                }
+                
+                $save = $this->bm->insert_data('tbl_brand_logo',$data_array);
+                if($save){
+                    echo json_encode(['message' => 'Data saved successfully.', 'status' => 1]);
+                } else {
+                    echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
+                }
+            } else {
+                echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->form_validation->error_array(), 'status' => 0]);
+            }
+            exit;
+        }
+        $data['logos'] = '';
+        $this->load->view('admin/include/header_start');
+		$this->load->view('admin/include/header_end');
+		$this->load->view('admin/include/body_start');
+        $this->load->view('admin/include/sidebar');
+		$this->load->view('admin/brands/add-brand-logo',$data);
+		$this->load->view('admin/include/body_end');
+		$this->load->view('admin/include/admin_js');
+    }
+
+    public function edit_brand_logo($id)
+    {
+        if($this->input->post()){
+            $this->form_validation->set_rules('name','Name','required');
+            $this->form_validation->set_rules('comment','Comment','required');
+            
+            if($this->form_validation->run()){
+                $data_array = array(
+                    'name'          => $this->input->post('name'),
+                    'alt_coment'    => $this->input->post('comment'),
+                    'updated_by'    => $this->bm->admin_id(),
+                    'updated_on'    => date('Y-m-d H:i:s')
+                );
+                
+                if(!empty($_FILES['brand_logo']['name'])){
+                    $brand_logo = $getfilename =  str_replace(' ', '_', $_FILES['brand_logo']['name']);
+                    $file = pathinfo($brand_logo);
+                    $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
+                    $data_array['brand_logo'] = $new_name;
+                    $config['upload_path'] = 'assets/images/admin/brand-logo';
+                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['file_name'] = $new_name;
+                    $this->load->library('upload',$config);
+                    $this->upload->initialize($config);
+                    if(!$this->upload->do_upload('brand_logo')){
+                        echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->upload->display_errors(), 'status' => 0]);
+                        exit;
+                    }
+                }
+                
+                $update = $this->bm->update_data('tbl_brand_logo',$data_array,['id' => $id]);
+                if($update){
+                    echo json_encode(['message' => 'Data updated successfully.', 'status' => 1]);
+                } else {
+                    echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
+                }
+            } else {
+                echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->form_validation->error_array(), 'status' => 0]);
+            }
+            exit;
+        }
+        $data['logos'] = $this->bm->get_data_row_array('tbl_brand_logo',"*",['id' => $id]);
+        $this->load->view('admin/include/header_start');
+		$this->load->view('admin/include/header_end');
+		$this->load->view('admin/include/body_start');
+        $this->load->view('admin/include/sidebar');
+		$this->load->view('admin/brands/add-brand-logo',$data);
+		$this->load->view('admin/include/body_end');
+		$this->load->view('admin/include/admin_js');
+    }
+
+    public function delete_brand_logo()
+    {
+        $logo_id = $this->input->post('logo_id');
+        $update = $this->bm->update_data('tbl_brand_logo',['status' => 2],['id' => $logo_id]);
+        if($update){
+            echo json_encode(['message' => 'Data deleted successfully.', 'status' => 1]);
+        } else {
+            echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
+        }
+    }
+
+    public function change_brand_status()
+    {
+        $brand_id = $this->input->post('id');
+        $stauts = $this->input->post('status');
+        $update = $this->bm->update_data('tbl_brand',['status' => $stauts],['brand_id' => $brand_id]);
+        if($update){
+            echo json_encode(['message' => 'Status changed successfully.', 'status' => 1]);
+        } else {
+            echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
+        }
+    }
+
+    public function change_brand_logo_status()
+    {
+        $brand_id = $this->input->post('id');
+        $stauts = $this->input->post('status');
+        $update = $this->bm->update_data('tbl_brand_logo',['status' => $stauts],['id' => $brand_id]);
+        if($update){
+            echo json_encode(['message' => 'Status changed successfully.', 'status' => 1]);
+        } else {
+            echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
+        }
+    }
+    
 }
 ?>

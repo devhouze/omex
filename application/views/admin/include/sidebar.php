@@ -57,6 +57,12 @@
                     </a>
                   </li>
 
+                  <li>
+                    <a class="sidenav-item-link" href="<?php echo admin_url('brand-logo')?>">
+                      <span class="nav-text">Brand Logos</span>
+                    </a>
+                  </li>
+
                 </div>
               </ul>
             </li>
@@ -90,6 +96,43 @@
                   <li>
                     <a class="sidenav-item-link" href="<?php echo admin_url('events')?>">
                       <span class="nav-text">Event List</span>
+                    </a>
+                  </li>
+
+                </div>
+              </ul>
+            </li>
+
+
+            <li class="has-sub">
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#banner" aria-expanded="false" aria-controls="banner">
+                <i class="mdi mdi-pencil-box-multiple"></i>
+                <span class="nav-text">Banners</span> <b class="caret"></b>
+              </a>
+              <ul class="collapse" id="banner" data-parent="#sidebar-menu">
+                <div class="sub-menu">
+
+                  <li>
+                    <a class="sidenav-item-link" href="<?php echo admin_url('banners')?>">
+                      <span class="nav-text">Banner List</span>
+                    </a>
+                  </li>
+
+                </div>
+              </ul>
+            </li>
+
+            <li class="has-sub">
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#gallery" aria-expanded="false" aria-controls="gallery">
+                <i class="mdi mdi-pencil-box-multiple"></i>
+                <span class="nav-text">Gallery</span> <b class="caret"></b>
+              </a>
+              <ul class="collapse" id="gallery" data-parent="#sidebar-menu">
+                <div class="sub-menu">
+
+                  <li>
+                    <a class="sidenav-item-link" href="<?php echo admin_url('gallery')?>">
+                      <span class="nav-text">Gallery List</span>
                     </a>
                   </li>
 

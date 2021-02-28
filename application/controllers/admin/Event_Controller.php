@@ -47,7 +47,8 @@ class Event_Controller extends MY_Controller
             $this->form_validation->set_rules('thumbnail_message','Thumbnail Message','required');
             $this->form_validation->set_rules('event_type','Event Type','required');
             $this->form_validation->set_rules('event_location','Event Location','required');
-            $this->form_validation->set_rules('event_time','Event Time','required');
+            $this->form_validation->set_rules('event_start_time','Event Start Time','required');
+            $this->form_validation->set_rules('event_end_time','Event End Time','required');
             $this->form_validation->set_rules('about_event','About Event','required');
             $this->form_validation->set_rules('event_label','Event Label','required');
             $this->form_validation->set_rules('event_category[]','Event Category','required');
@@ -65,13 +66,15 @@ class Event_Controller extends MY_Controller
                     'thumbnail_message'     => $this->input->post('thumbnail_message'),
                     'event_type'            => $this->input->post('event_type'),
                     'event_location'        => $this->input->post('event_location'),
-                    'event_time'            => $this->input->post('event_time'),
+                    'event_start_time'      => $this->input->post('event_start_time'),
+                    'event_end_time'        => $this->input->post('event_end_time'),
                     'event_label'           => $this->input->post('event_label'),
                     'about_event'           => $this->input->post('about_event'),
                     'event_street'          => $this->input->post('event_street'),
                     'event_category'        => implode(",",$this->input->post('event_category')),
                     'show_brand'            => $this->input->post('show_brand'),
                     'brands'                => $this->input->post('brand'),
+                    'show_reg_btn'          => $this->input->post('show_reg_btn'),
                     'created_by'            => $this->em->admin_id()
                 );
                 
@@ -124,7 +127,8 @@ class Event_Controller extends MY_Controller
             $this->form_validation->set_rules('thumbnail_message','Thumbnail Message','required');
             $this->form_validation->set_rules('event_type','Event Type','required');
             $this->form_validation->set_rules('event_location','Event Location','required');
-            $this->form_validation->set_rules('event_time','Event Time','required');
+            $this->form_validation->set_rules('event_start_time','Event Start Time','required');
+            $this->form_validation->set_rules('event_end_time','Event End Time','required');
             $this->form_validation->set_rules('about_event','About Event','required');
             $this->form_validation->set_rules('event_label','Event Label','required');
             $this->form_validation->set_rules('event_category[]','Event Category','required');
@@ -142,13 +146,15 @@ class Event_Controller extends MY_Controller
                     'thumbnail_message'     => $this->input->post('thumbnail_message'),
                     'event_type'            => $this->input->post('event_type'),
                     'event_location'        => $this->input->post('event_location'),
-                    'event_time'            => $this->input->post('event_time'),
+                    'event_start_time'      => $this->input->post('event_start_time'),
+                    'event_end_time'        => $this->input->post('event_end_time'),
                     'event_label'           => $this->input->post('event_label'),
                     'about_event'           => $this->input->post('about_event'),
                     'event_street'          => $this->input->post('event_street'),
                     'event_category'        => implode(",",$this->input->post('event_category')),
                     'show_brand'            => $this->input->post('show_brand'),
                     'brands'                => $this->input->post('brand'),
+                    'show_reg_btn'          => $this->input->post('show_reg_btn'),
                     'created_by'            => $this->em->admin_id()
                 );
                 

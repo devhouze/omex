@@ -24,7 +24,6 @@
             <div class="col-lg-12">
                 <div class="card card-default">
                     <div class="card-header card-header-border-bottom">
-                        <a href="<?=admin_url('add-leads')?>" class="btn btn-primary">Add</a>
                     </div>
                     <div class="card-body">
                         <table class="table table-hover ">
@@ -34,7 +33,9 @@
                                     <th scope="col">Name</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Contact</th>
-                                    <th scope="col">Created By</th>
+                                    <th scope="col">Source</th>
+                                    <th scope="col">Event Name</th>
+                                    <th scope="col">Query Type</th>
                                     <th scope="col">Created On</th>
                                     <th scope="col">Action</th>
                                 </tr>
@@ -46,15 +47,14 @@
                                     <td><?=$lead['name'];?></td>
                                     <td><?=$lead['email'];?></td>
                                     <td><?=$lead['contact'];?></td>
-                                    <td><?=$lead['created_by'];?></td>
-                                    <td><?=$lead['created_on'];?></td>
-                                    <td>
-                                        <a href="<?=admin_url('edit-leads/'.$lead['id'])?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a>
-                                        <a href="javascript:void(0)" class="btn btn-danger delete" data-id="<?=$lead['id'];?>"><span class="mdi mdi-delete"></span></a>
-                                    </td>
+                                    <td><?=$lead['source'];?></td>
+                                    <td><?=$lead['event_name'];?></td>
+                                    <td><?=$lead['query_type'];?></td>
+                                    <td><?=$lead['registered_at'];?></td>
+                                    <td><a href="javascript:void(0)" data-toggle="modal" data-target="#message" class="btn btn-primary view_message" title="View Message" data-id="<?=$lead['id'];?>"><span class="mdi mdi-eye"></span></a></td>
                                 </tr>
                                 <?php } } else {?>
-                                    <tr><td colspan="4">No record found</td></tr>
+                                    <tr><td colspan="9">No record found</td></tr>
                                 <?php } ?>
                             </tbody>
                         </table>
@@ -66,4 +66,23 @@
         </div>
     </div>
 
+</div>
+
+<div class="modal fade" id="message" tabindex="-1" role="dialog" aria-labelledby="messageLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="messageLabel">Message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <span class="message"></span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>

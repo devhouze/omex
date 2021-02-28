@@ -71,7 +71,7 @@ $about_brand_offer = (!empty($brands))?$brands->about_brand_offer:'';
 
                                 <div class="col-md-12 mb-3">
                                     <label for="">About Brand</label>
-                                    <textarea name="about_brand" class="form-control form-control-sm"><?=$about_brand;?></textarea>
+                                    <textarea name="about_brand" class="form-control form-control-sm ckeditor"><?=$about_brand;?></textarea>
                                 </div>
 
                                 <div class="col-md-6 mb-3">
@@ -127,7 +127,7 @@ $about_brand_offer = (!empty($brands))?$brands->about_brand_offer:'';
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Brand Contact</label>
+                                    <label for="">Brand Contact Number</label>
                                     <input type="text" class="form-control form-control-sm input-sm" name="brand_contact" value="<?=$brand_contact;?>">
                                     <span class="text-danger brand_contact errors_msg"></span>
                                 </div>
@@ -152,39 +152,44 @@ $about_brand_offer = (!empty($brands))?$brands->about_brand_offer:'';
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Brand Street</label>
-                                    <select name="brand_street" class="form-control form-control-sm">
+                                    <label for="">Event Street</label>
+                                    <select name="event_street" class="form-control form-control-sm">
                                         <option selected="" disabled>Select Street</option>
                                         <option value="London Street" <?php if($brand_street == "London Street"){echo "selected"; }?>>London Street</option>
+                                        <option value="Paris Street" <?php if($brand_street == "Paris Street"){echo "selected"; }?>>Paris Street</option>
+                                        <option value="Hong Kong Street" <?php if($brand_street == "Hong Kong Street"){echo "selected"; }?>>Hong Kong Street</option>
+                                        <option value="Amsterdam Street" <?php if($brand_street == "Amsterdam Street"){echo "selected"; }?>>Amsterdam Street</option>
+                                        <option value="Portugal Street" <?php if($brand_street == "Portugal Street"){echo "selected"; }?>>Portugal Street</option>
+                                        <option value="San Francisco Street" <?php if($brand_street == "San Francisco Street"){echo "selected"; }?>>San Francisco Street</option>
+                                        <option value="Athens Street" <?php if($brand_street == "Athens Street"){echo "selected"; }?>>Athens Street</option>
                                     </select>
                                 </div>
 
-                                <div class="col-md-12 mb-3">
-                                    <label for="">Brand Category</label><br>
-                                    <input type="checkbox" name="brand_category[]" value="Jewellery" <?php if(in_array("Jewellery",$brand_category)){echo "checked";}?>> Jewellery
-                                    <input type="checkbox" name="brand_category[]" value="Restaurant"<?php if(in_array("Restaurant",$brand_category)){echo "checked";}?>> Restaurant
-                                    <input type="checkbox" name="brand_category[]" value="Clothing"<?php if(in_array("Clothing",$brand_category)){echo "checked";}?>> Clothing
-                                    <input type="checkbox" name="brand_category[]" value="Fitness"<?php if(in_array("Fitness",$brand_category)){echo "checked";}?>> Fitness
-                                    <input type="checkbox" name="brand_category[]" value="Toys"<?php if(in_array("Toys",$brand_category)){echo "checked";}?>> Toys
-                                    <input type="checkbox" name="brand_category[]" value="Shoes"<?php if(in_array("Shoes",$brand_category)){echo "checked";}?>> Shoes
-                                    <input type="checkbox" name="brand_category[]" value="Sports & Fitness"<?php if(in_array("Sports & Fitness",$brand_category)){echo "checked";}?>> Sports & Fitness
-                                    <br>
-                                    <span class="text-danger brand_category[] errors_msg"></span>
-                                </div>
-                                
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Brand Audience</label><br>
-                                    <input type="radio" name="brand_audience" value="Infants" <?php if($brand_audience == "Infants"){ echo "checked"; }?>> Infants
-                                    <input type="radio" name="brand_audience" value="Kids" <?php if($brand_audience == "Kids"){ echo "checked"; }?>> Kids
-                                    <input type="radio" name="brand_audience" value="Boys" <?php if($brand_audience == "Boys"){ echo "checked"; }?>> Boys
-                                    <input type="radio" name="brand_audience" value="Girls" <?php if($brand_audience == "Girls"){ echo "checked"; }?>> Girls
-                                    <input type="radio" name="brand_audience" value="Men" <?php if($brand_audience == "Men"){ echo "checked"; }?>> Men
-                                    <input type="radio" name="brand_audience" value="Women" <?php if($brand_audience == "Women"){ echo "checked"; }?>> Women
-                                    <input type="radio" name="brand_audience" value="Elderly" <?php if($brand_audience == "Elderly"){ echo "checked"; }?>> Elderly
-                                    <br>
-                                    <span class="text-danger brand_audience errors_msg"></span>
+                                    <label for="">Brand Category</label><br>
+                                    <select name="brand_category[]" class="form-control form-control-sm" multiple>
+                                    <option value="Jewellery" <?php if(in_array("Jewellery",$brand_category)){echo "selected";}?>>Jewellery</option>
+                                    <option value="Restaurant"<?php if(in_array("Restaurant",$brand_category)){echo "selected";}?>>Restaurant</option>
+                                    <option value="Clothing" <?php if(in_array("Clothing",$brand_category)){echo "selected";}?>>Clothing</option>
+                                    <option value="Fitness" <?php if(in_array("Fitness",$brand_category)){echo "selected";}?>>Fitness</option>
+                                    <option value="Toys" <?php if(in_array("Toys",$brand_category)){echo "selected";}?>>Toys</option>
+                                    <option value="Shoes" <?php if(in_array("Shoes",$brand_category)){echo "selected";}?>>Shoes</option>
+                                    <option value="Sports & Fitness"<?php if(in_array("Sports & Fitness",$brand_category)){echo "selected";}?>>Sports & Fitness</option>
+                                    </select>
                                 </div>
 
+                                <div class="col-md-6 mb-3">
+                                    <label for="">Brand Audience</label>
+                                    <select name="brand_audience" class="form-control form-control-sm">
+                                        <option value="Infants" <?php if($brand_audience == "Infants"){ echo "selected"; }?>>Infants</option>
+                                        <option value="Kids" <?php if($brand_audience == "Kids"){ echo "selected"; }?>>Kids</option>
+                                        <option value="Boys" <?php if($brand_audience == "Boys"){ echo "selected"; }?>>Boys</option>
+                                        <option value="Girls" <?php if($brand_audience == "Girls"){ echo "selected"; }?>>Girls</option>
+                                        <option value="Men" <?php if($brand_audience == "Men"){ echo "selected"; }?>>Men</option>
+                                        <option value="Women" <?php if($brand_audience == "Women"){ echo "selected"; }?>>Women</option>
+                                        <option value="Elderly" <?php if($brand_audience == "Elderly"){ echo "selected"; }?>>Elderly</option>
+                                    </select>
+                                </div>
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Feature On Home Page</label><br>
@@ -234,7 +239,7 @@ $about_brand_offer = (!empty($brands))?$brands->about_brand_offer:'';
 
                                 <div class="col-md-12 mb-3 brand_offer" <?php if($brand_offer_status == "Yes"){?> style="display:block;" <?php } else {?> style="display:none;" <?php } ?>>
                                     <label for="">About Brand Offer</label>
-                                    <textarea name="about_brand_offer" class="form-control form-control-sm"><?=$about_brand_offer;?></textarea>
+                                    <textarea name="about_brand_offer" class="form-control form-control-sm ckeditor"><?=$about_brand_offer;?></textarea>
                                 </div>
 
                             </div>

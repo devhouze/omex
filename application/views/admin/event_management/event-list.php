@@ -62,7 +62,7 @@
                                     </td>
                                 </tr>
                                 <?php } } else {?>
-                                    <tr><td colspan="4">No record found</td></tr>
+                                    <tr><td colspan="8">No record found</td></tr>
                                 <?php } ?>
                             </tbody>
                         </table>
