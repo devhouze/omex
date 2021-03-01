@@ -84,20 +84,56 @@ $route['admin/change-password'] = 'admin/Dashboard_Controller/change_password';
 
 // Brands Routes
 $route['admin/brands'] = 'admin/Brands_Controller/brand_list';
-$route['admin/add-brand'] = 'admin/Brand_Controller/add_brand';
+$route['admin/brands/(:num)'] = 'admin/Brands_Controller/brand_list/$1';
+$route['admin/add-brands'] = 'admin/Brands_Controller/add_brand';
+$route['admin/edit-brands/(:num)'] = 'admin/Brands_Controller/edit_brand/$1';
+$route['admin/delete-brand'] = 'admin/Brands_Controller/delete_brand';
+$route['admin/brand-details'] = 'admin/Brands_Controller/get_brand_details';
+
+
+$route['admin/brand-logo'] = 'admin/Brands_Controller/brand_logo_list';
+$route['admin/add-brands-logo'] = 'admin/Brands_Controller/add_brand_logo';
+$route['admin/edit-brands-logo/(:num)'] = 'admin/Brands_Controller/edit_brand_logo/$1';
+$route['admin/delete-brand-logo'] = 'admin/Brands_Controller/delete_brand_logo';
+$route['admin/change-brand-status'] = 'admin/Brands_Controller/change_brand_status';
+$route['admin/change-brand-logo-status'] = 'admin/Brands_Controller/change_brand_logo_status';
 
 // Users Routes
 $route['admin/users'] = 'admin/Users_Controller/users_list';
 $route['admin/users/(:num)'] = 'admin/Users_Controller/users_list/$1';
 $route['admin/add-users'] = 'admin/Users_Controller/add_users';
+$route['admin/edit-users/(:num)'] = 'admin/Users_Controller/edit_users/$1';
+$route['admin/check-username'] = 'admin/Users_Controller/check_username';
+$route['admin/delete-user'] = 'admin/Users_Controller/delete_user';
+$route['admin/change-user-status'] = 'admin/Users_Controller/change_user_status';
 
-// Brands Routes
+// Lead Routes
 $route['admin/leads'] = 'admin/Lead_controller/lead_list';
 $route['admin/leads/(:num)'] = 'admin/Lead_controller/lead_list/$1';
-$route['admin/add-leads'] = 'admin/Lead_controller/add_lead';
-$route['admin/save-leads'] = 'admin/Lead_controller/save_lead';
-$route['admin/edit-leads/(:num)'] = 'admin/Lead_controller/edit_lead/$1';
-$route['admin/update-leads'] = 'admin/Lead_controller/update_lead';
+$route['admin/get-message'] = 'admin/Lead_controller/get_message';
+$route['admin/event-details'] = 'admin/Event_Controller/get_event_details';
+
+
+// Events routes
+$route['admin/events'] = 'admin/Event_Controller/events_list';
+$route['admin/events/(:num)'] = 'admin/Event_Controller/events_list/$1';
+$route['admin/add-events'] = 'admin/Event_Controller/add_events';
+$route['admin/edit-events/(:num)'] = 'admin/Event_Controller/edit_events/$1';
+$route['admin/delete-event'] = 'admin/Event_Controller/delete_event';
+$route['admin/change-event-status'] = 'admin/Event_Controller/change_event_status';
+$route['admin/event-details'] = 'admin/Event_Controller/get_event_details';
+
+// Banners routes
+$route['admin/add-banners'] = "admin/Banner_Controllers/add_banners";
+$route['admin/edit-banners/(:num)'] = "admin/Banner_Controllers/edit_banners/$1";
+$route['admin/banners'] = "admin/Banner_Controllers/banner_list";
+$route['admin/delete-banner'] = 'admin/Banner_Controllers/delete_banner';
+$route['admin/change-banner-status'] = 'admin/Banner_Controllers/change_banner_status';
+
+// Gallery routes
+$route['admin/gallery'] = 'admin/Gallery_Controller/gallery_list';
+$route['admin/add-gallery'] = 'admin/Gallery_Controller/add_gallery';
+$route['admin/change-gallery-status'] = 'admin/Gallery_Controller/change_gallery_status';
 
 
 $route['admin/404'] = 'admin/Admin_controller/error404';

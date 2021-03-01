@@ -366,6 +366,7 @@
                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto">
                 <figure class="position-relative mb-0 mt-12">
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e1.jpg" alt="" class="">
+                    <div class="outer"></div>
                 </figure>
                 <a href="" class="exploer-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
@@ -375,6 +376,7 @@
                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto">
                 <figure class="position-relative mb-0 mt-12">
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e3.jpg" alt="" class="">
+                    <div class="outer"></div>
 
                 </figure>
                 <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
@@ -385,6 +387,7 @@
                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto">
                 <figure class="position-relative mb-0 mt-12">
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e2.jpg" alt="" class="">
+                    <div class="outer"></div>
                 </figure>
                 <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
