@@ -39,5 +39,18 @@ class Brands_Model extends MY_Model
         }
         return [];
     }
+
+    public function get_brand_details($id)
+    {
+        $this->db->select('brand_id, brand_name, brand_logo, logo_message, about_brand, brand_website, brand_label, from_hour_week, to_week_hour, to_weekend_hour, from_hour_weekend, brand_location, brand_street, brand_type, brand_category, brand_sub_category, brand_audience, brand_contact, brand_contact_email, store_map, show_on_home, brand_offer_status, brand_offer_name,brand_offer, brand_offer_validity, brand_offer_validity, about_brand_offer, brand_tag,brand_offer_thumbnail, (case when tb.status = 0 then "Active" WHEN tb.status = 1 THEN "Inactive" end) as status, brand_offer, brand_offer_thumbnail_message');
+        $this->db->join('tbl_admin ta','tb.created_by = admin_id');
+        $this->db->where('brand_id',$id);
+        $query = $this->db->get('tbl_brand tb');
+        if($query->num_rows() > 0)
+        {
+            return $query->row_array();
+        } 
+        return [];
+    }
 }
 ?>

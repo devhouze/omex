@@ -83,7 +83,12 @@ class Users_Controller extends MY_Controller {
 					'updated_by'	=> $this->um->admin_id(),
 					'updated_on'	=> date('Y-m-d H:i:s')
 				);
-				$check = $this->check_username($this->input->post('username'));
+				if($data['users']->user_name != $data_array['user_name']){
+					$check = $this->check_username($this->input->post('username'));
+				} else {
+					$check['status'] = 1;
+				}
+				
 				if($check['status'] > 0)
 				{
 					(!empty($this->input->post('password')))?($data_array['password'] = md5($this->input->post('password'))):'';

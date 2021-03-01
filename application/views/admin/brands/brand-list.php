@@ -2,7 +2,7 @@
 <div class="content-wrapper">
     <div class="content">
         <div class="breadcrumb-wrapper">
-            <h1>Brands List</h1>
+            <h1>Brands Overview</h1>
 
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb p-0">
@@ -57,6 +57,7 @@
                                     <td>
                                     <a href="<?php echo admin_url('edit-brands/'.$brand['brand_id']);?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a>
                                     <a href="javascript:void(0)" data-id="<?=$brand['brand_id'];?>" class="btn btn-danger delete"><span class="mdi mdi-delete"></span></a>
+                                    <a href="javascript:void(0)" class="btn btn-primary view_detail" data-id="<?=$brand['brand_id'];?>" data-toggle="modal" data-target="#brandDetail"><span class="mdi mdi-eye"></span></a>
                                     </td>
                                 </tr>
                                 <?php } } else {?>
@@ -71,5 +72,24 @@
             </div>
         </div>
     </div>
+</div>
 
+<!-- Show brand details modal -->
+<div class="modal fade" id="brandDetail" tabindex="-1" role="dialog" aria-labelledby="brandDetailLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content modal-lg">
+      <div class="modal-header">
+        <h5 class="modal-title" id="brandDetailLabel">Brand Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="details"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>

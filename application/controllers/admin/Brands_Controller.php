@@ -466,6 +466,13 @@ class Brands_Controller extends MY_Controller
             echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
         }
     }
+
+    public function get_brand_details()
+    {
+        $brand_id = $this->input->post('brand_id');
+        $data = $this->bm->get_brand_details($brand_id);
+        echo json_encode($data);
+    }
     
 }
 ?>

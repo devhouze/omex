@@ -220,6 +220,7 @@ class Event_Controller extends MY_Controller
     {
         $event_id = $this->input->post('event_id');
         $data = $this->em->get_event_details($event_id);
+        echo json_encode($data);
     }
 }
 ?>

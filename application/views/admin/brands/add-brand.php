@@ -152,7 +152,7 @@ $about_brand_offer = (!empty($brands))?$brands->about_brand_offer:'';
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Event Street</label>
+                                    <label for="">Brand Street</label>
                                     <select name="event_street" class="form-control form-control-sm">
                                         <option selected="" disabled>Select Street</option>
                                         <option value="London Street" <?php if($brand_street == "London Street"){echo "selected"; }?>>London Street</option>

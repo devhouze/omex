@@ -2,7 +2,7 @@
 <div class="content-wrapper">
     <div class="content">
         <div class="breadcrumb-wrapper">
-            <h1>Events List</h1>
+            <h1>Events Overview</h1>
 
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb p-0">
@@ -58,7 +58,7 @@
                                     <td>
                                         <a href="<?=admin_url('edit-events/'.$event['event_id'])?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a>
                                         <a href="javascript:void(0)" class="btn btn-danger delete" data-id="<?=$event['event_id'];?>"><span class="mdi mdi-delete"></span></a>
-                                        <a href="javascript:void(0)" class="btn btn-primary view_detail" data-id="<?=$event['event_id'];?>"><span class="mdi mdi-eye"></span></a>
+                                        <a href="javascript:void(0)" class="btn btn-primary view_detail" data-id="<?=$event['event_id'];?>" data-toggle="modal" data-target="#eventDetail"><span class="mdi mdi-eye"></span></a>
                                     </td>
                                 </tr>
                                 <?php } } else {?>
@@ -73,5 +73,23 @@
             </div>
         </div>
     </div>
-
+</div>
+<!-- Show event details modal -->
+<div class="modal fade" id="eventDetail" tabindex="-1" role="dialog" aria-labelledby="eventDetailLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="eventDetailLabel">Event Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="details"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>

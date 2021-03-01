@@ -26,12 +26,16 @@ class Event_Model extends MY_Model
 
     public function get_event_details($id)
     {
-        $this->db->select('event_name, date_available, start_date, end_date, event_type, (case when te.status = 0 then "Active" WHEN te.status = 1 THEN "Inactive" end) as status, event_id, brand_name, event_location, event_time, about_event, event_label, event_street, event_category, show_brand, ');
+        $this->db->select('event_name, date_available, start_date, end_date, event_type, (case when te.status = 0 then "Active" WHEN te.status = 1 THEN "Inactive" end) as status, event_id, brand_name, event_location, event_start_time, event_end_time, about_event, event_label, event_street, event_category, show_brand, ');
         $this->db->join('tbl_admin ta','te.created_by = admin_id');
         $this->db->join('tbl_brand','te.brands = brand_id');
         $this->db->where('event_id',$id);
         $query = $this->db->get('tbl_event te');
-        echo $this->db->last_query(); die;
+        if($query->num_rows() > 0)
+        {
+            return $query->row_array();
+        } 
+        return [];
     }
 }
 ?>

@@ -88,6 +88,8 @@ $route['admin/brands/(:num)'] = 'admin/Brands_Controller/brand_list/$1';
 $route['admin/add-brands'] = 'admin/Brands_Controller/add_brand';
 $route['admin/edit-brands/(:num)'] = 'admin/Brands_Controller/edit_brand/$1';
 $route['admin/delete-brand'] = 'admin/Brands_Controller/delete_brand';
+$route['admin/brand-details'] = 'admin/Brands_Controller/get_brand_details';
+
 
 $route['admin/brand-logo'] = 'admin/Brands_Controller/brand_logo_list';
 $route['admin/add-brands-logo'] = 'admin/Brands_Controller/add_brand_logo';
@@ -105,10 +107,12 @@ $route['admin/check-username'] = 'admin/Users_Controller/check_username';
 $route['admin/delete-user'] = 'admin/Users_Controller/delete_user';
 $route['admin/change-user-status'] = 'admin/Users_Controller/change_user_status';
 
-// Brands Routes
+// Lead Routes
 $route['admin/leads'] = 'admin/Lead_controller/lead_list';
 $route['admin/leads/(:num)'] = 'admin/Lead_controller/lead_list/$1';
 $route['admin/get-message'] = 'admin/Lead_controller/get_message';
+$route['admin/event-details'] = 'admin/Event_Controller/get_event_details';
+
 
 // Events routes
 $route['admin/events'] = 'admin/Event_Controller/events_list';
