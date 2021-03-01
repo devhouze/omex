@@ -2059,4 +2059,40 @@ footer .menu li+li {
         font-size: 16px;
         padding: 7px 30px 7px 10px !important;
     }
+    .expoler-modal .modal-body ul {
+        margin: 0;
+        padding: 0;
+    }
+    .expoler-modal .modal-body {
+        margin: 20px;
+    }
+    .expoler-modal .modal-body ul li {
+        width: 50%;
+    }
+    .expoler-modal .modal-body .exploer-btn {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+    .expoler-modal .modal-body button.btn-close {
+        right: 15px;
+        top: 15px;
+    }
+}
+
+.explore-more figure img {
+    position: relative;
+    z-index: 2;
+}
+
+.explore-more figure span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #1c67b4;
+    z-index: 1;
+    transition: transform .3s cubic-bezier(.59, .08, .385, 1);
+    transform-origin: left center;
+    transform: scaleX(0);
 }
