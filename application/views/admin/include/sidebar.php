@@ -27,17 +27,17 @@
                 <div class="sub-menu">
 
                   <li class="active">
-                    <a class="sidenav-item-link" href="index.html">
-                      <span class="nav-text">Ecommerce</span>
+                    <a class="sidenav-item-link" href="<?=admin_url('dashboard');?>">
+                      <span class="nav-text">Dashboard</span>
                     </a>
                   </li>
 
-                  <li>
+                  <!-- <li>
                     <a class="sidenav-item-link" href="analytics.html">
                       <span class="nav-text">Analytics</span>
                       <span class="badge badge-success">new</span>
                     </a>
-                  </li>
+                  </li> -->
 
                 </div>
               </ul>

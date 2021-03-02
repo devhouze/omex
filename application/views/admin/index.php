@@ -1,7 +1,3 @@
-  
-      
-
-
       <div class="content-wrapper">
         <div class="content">
           <!-- Top Statistics -->
@@ -9,22 +5,22 @@
             <div class="col-xl-3 col-sm-6">
               <div class="card card-mini mb-4">
                 <div class="card-body">
-                  <h2 class="mb-1">71,503</h2>
-                  <p>Online Signups</p>
-                  <div class="chartjs-wrapper">
+                  <h2 class="mb-1"><?php echo $counts[1]['brand_count'];?></h2>
+                  <p>Total Brands</p>
+                  <!-- <div class="chartjs-wrapper">
                     <canvas id="barChart"></canvas>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
             <div class="col-xl-3 col-sm-6">
               <div class="card card-mini  mb-4">
                 <div class="card-body">
-                  <h2 class="mb-1">9,503</h2>
-                  <p>New Visitors Today</p>
-                  <div class="chartjs-wrapper">
+                  <h2 class="mb-1"><?php echo $counts[0]['event_count'];?></h2>
+                  <p>Total Events</p>
+                  <!-- <div class="chartjs-wrapper">
                     <canvas id="dual-line"></canvas>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -32,22 +28,22 @@
             <div class="col-xl-3 col-sm-6">
               <div class="card card-mini mb-4">
                 <div class="card-body">
-                  <h2 class="mb-1">71,503</h2>
-                  <p>Monthly Total Order</p>
-                  <div class="chartjs-wrapper">
+                  <h2 class="mb-1"><?php echo $counts[3]['lead_count'];?></h2>
+                  <p>Total Leads</p>
+                  <!-- <div class="chartjs-wrapper">
                     <canvas id="area-chart"></canvas>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
             <div class="col-xl-3 col-sm-6">
               <div class="card card-mini mb-4">
                 <div class="card-body">
-                  <h2 class="mb-1">9,503</h2>
-                  <p>Total Revenue This Year</p>
-                  <div class="chartjs-wrapper">
+                  <h2 class="mb-1"><?php echo $counts[2]['user_count'];?></h2>
+                  <p>Total Users</p>
+                  <!-- <div class="chartjs-wrapper">
                     <canvas id="line"></canvas>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>

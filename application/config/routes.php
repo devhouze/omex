@@ -79,7 +79,6 @@ $route['admin/forgot-password'] = 'admin/Login_Controller/forgot_password';
 
 $route['admin/profile'] = 'admin/Dashboard_Controller/admin_profile';
 $route['admin/update-profile'] = 'admin/Dashboard_Controller/save_admin_profile';
-
 $route['admin/change-password'] = 'admin/Dashboard_Controller/change_password';
 
 // Brands Routes
