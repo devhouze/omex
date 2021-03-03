@@ -2118,7 +2118,8 @@ footer .menu li+li {
     -moz-animation-fill-mode: both;
 }
 
-.live-in-word .owl-item figure:after {
+.live-in-word .owl-item figure:after,
+.expreance-gallary .owl-item .item:after {
     content: '';
     display: block;
     width: 100%;
@@ -2139,17 +2140,22 @@ footer .menu li+li {
     animation: galleryPhotoOverlay 0.6s;
 }
 
-.live-in-word .owl-item.active figure:after {
+.expreance-gallary .owl-item.active .item:after {
+    transition-delay: 0.5s !important;
+}
+
+.live-in-word .owl-item.active figure:after,
+.expreance-gallary .owl-item.active .item:after {
     -webkit-transform: translateX(100%);
     -moz-transform: translateX(100%);
     -ms-transform: translateX(100%);
     -o-transform: translateX(100%);
     transform: translateX(100%);
-    -webkit-transition-delay: 1.2s;
-    -moz-transition-delay: 1.2s;
-    -ms-transition-delay: 1.2s;
-    -o-transition-delay: 1.2s;
-    transition-delay: 1.2s;
+    -webkit-transition-delay: 0.5s;
+    -moz-transition-delay: 0.5s;
+    -ms-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s;
 }
 
 @-webkit-keyframes galleryPhotoOverlay {

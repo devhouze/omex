@@ -6,7 +6,7 @@
 
             <div class="row mt-4 justify-content-center">
                 <div class="col-md-10">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row">
@@ -127,7 +127,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5">Past Events
+                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated">Past Events
                     </h5>
                     <div class="v-line d-table mx-auto my-4"></div>
                 </div>
@@ -208,13 +208,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">#MomentsAtWS</h5>
+                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">#MomentsAtWS</h5>
                     <div class="v-line d-table mx-auto my-4"></div>
                 </div>
             </div>
             <div class="row mt-4 d-lg-flex d-none justify-content-center">
                 <div class="col-md-9">
-                    <div class="owl-carousel slider">
+                    <div class="owl-carousel slider wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
                         <div class="item">
                             <div class="row">
                                 <div class="col-md-4">
@@ -297,7 +297,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Explore other Categories</h5>
+                    <h5 class="fz40 fz24-sm fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Explore other Categories</h5>
 
                     <div class="v-line d-table mx-auto my-4"></div>
                 </div>
@@ -338,13 +338,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">What’s New in the Streets</h5>
+                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">What’s New in the Streets</h5>
                     <div class="v-line d-table mx-auto my-4"></div>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-10">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row flex-fill">
@@ -405,7 +405,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">There’s more to explore</h5>
+                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">There’s more to explore</h5>
 
                     <div class="v-line d-table mx-auto my-4"></div>
                 </div>
