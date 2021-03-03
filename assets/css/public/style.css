@@ -338,6 +338,7 @@ footer .menu li+li {
     border: 2px solid white;
     left: 15px;
     top: 15px;
+    z-index: 1;
 }
 
 .looking-out div#carouselExampleControls .position-absolute {
@@ -738,6 +739,7 @@ footer .menu li+li {
     bottom: 150px;
     font-size: 22px;
     color: var(--ath);
+    z-index: 9;
 }
 
 .live-in-word .slider-counter span {
