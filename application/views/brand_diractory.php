@@ -107,7 +107,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-1-">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5">Search Brands</h5>
+                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated">Search Brands</h5>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -221,7 +221,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5">Discounts & Offers</h5>
+                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated">Discounts & Offers</h5>
                     <div class="v-line d-table mx-auto my-4"></div>
                 </div>
             </div>
@@ -230,7 +230,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-10">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row justify-content-center">
@@ -302,13 +302,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">What’s New in the Streets</h5>
+                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">What’s New in the Streets</h5>
                     <div class="v-line d-table mx-auto my-4"></div>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-10">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row flex-fill">
@@ -368,7 +368,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">Find Us</h5>
+                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Find Us</h5>
 
                     <div class="v-line d-table mx-auto my-4"></div>
                 </div>
@@ -379,7 +379,7 @@
                     <figure class="mb-0 w-100"><img src="<?php echo BASE_URL(); ?>assets/images/public/street/map.jpg" alt="" class="w-100"></figure>
                 </div>
                 <div class="col-md-4 d-flex flex-fill">
-                    <div class="card ath-bg px-40 py-40 rounded-0 border-0">
+                    <div class="card ath-bg px-40 py-40 rounded-0 border-0 wow fadeInRight animated">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/at-s.svg" alt="">
                         <p class="fz20 text-white text-center mt-30">Wander by foot into the heart of the Athens. Start discovering your own world within ours at World Street.</p>
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/street/as-i.svg" alt="" class="d-table mx-auto mt-30">
@@ -394,7 +394,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">There’s more to explore</h5>
+                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">There’s more to explore</h5>
 
                     <div class="v-line d-table mx-auto my-4"></div>
                 </div>
