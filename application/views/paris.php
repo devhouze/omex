@@ -33,34 +33,34 @@
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5">Welcome to Paris Street <span class="d-lg-block"> "The City of Love."</span></h5>
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto">
-                    <div class="v-line d-table mx-auto"></div>
+                    <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1.8s"></div>
                 </div>
             </div>
             <div class="row px-md-5 px-3 mt-md-0 mt-5">
                 <div class="col-md-4">
-                    <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0">Eat</h2>
+                    <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="2s">Eat</h2>
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto">
                     <figure class="position-relative mb-0 mt-12">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e1.jpg" alt="" class="">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e1.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="2.8s">
                     </figure>
                     <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
                 </div>
                 <div class="col-md-4">
-                    <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0">Style</h2>
+                    <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="2s">Style</h2>
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto">
                     <figure class="position-relative mb-0 mt-12">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e3.jpg" alt="" class="">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e3.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="2.8s">
 
                     </figure>
                     <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
                 </div>
                 <div class="col-md-4">
-                    <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0">Play</h2>
+                    <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="2s">Play</h2>
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto">
                     <figure class="position-relative mb-0 mt-12">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e2.jpg" alt="" class="">
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e2.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="2.8s">
                     </figure>
                     <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
@@ -75,9 +75,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Feel the warmth of love at Paris street in your <span class="d-lg-block"> Faridabad!</span></h5>
+                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">Feel the warmth of love at Paris street in your <span class="d-lg-block"> Faridabad!</span></h5>
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto">
-                    <div class="v-line d-table mx-auto"></div>
+                    <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1.8s"></div>
                 </div>
             </div>
             <div class="row mt-4 d-lg-flex d-none justify-content-center">
@@ -166,7 +166,7 @@
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Look out for what’s coming up!</h5>
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto">
-                    <div class="v-line d-table mx-auto"></div>
+                    <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1.8s"></div>
                 </div>
             </div>
             <div class="row mt-4 justify-content-center">
@@ -273,9 +273,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Hello from Paris!</h5>
+                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">Hello from Paris!</h5>
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto">
-                    <div class="v-line d-table mx-auto"></div>
+                    <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1.8s"></div>
                 </div>
             </div>
             <div class="row mt-4 justify-content-center">
@@ -346,9 +346,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Find Us</h5>
+                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">Find Us</h5>
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto">
-                    <div class="v-line d-table mx-auto"></div>
+                    <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1.8s"></div>
                 </div>
             </div>
             <div class="row mt-4 d-flex flex-fill">
@@ -373,8 +373,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">There’s more to explore</h5>
+                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">There’s more to explore</h5>
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto">
-                    <div class="v-line d-table mx-auto"></div>
+                    <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1.8s"></div>
                 </div>
             </div>
