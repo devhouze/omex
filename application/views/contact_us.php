@@ -84,7 +84,7 @@
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-4">Contact Us</h5>
 
-                    <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1.8s"></div>
+                    <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1s"></div>
                 </div>
             </div>
             <div class="row mt-5 d-flex flex-fill">
