@@ -3,7 +3,7 @@
         <div class="modal-content" style="background-image: url('<?php echo BASE_URL(); ?>assets/images/public/home/modal.jpg');">
             <div class="modal-body">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Eat</h5>
+                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">Eat</h5>
                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
                 <ul>
                     <li><img src="<?php echo BASE_URL(); ?>assets/images/public/home/e1.svg" alt=""></li>

@@ -95,9 +95,29 @@ $config = array(
             'field'     => 'password',
             'label'     => 'Password',
             'rules'     => 'required'
+        ),  
+    ),
+    'edit_users' => array(
+        array(
+            'field'     => 'user_type',
+            'label'     => 'User Type',
+            'rules'     => 'required'
         ),
-        
+        array(
+            'field'     => 'username',
+            'label'     => 'Username',
+            'rules'     => 'required'
+        ),
+        array(
+            'field'     => 'name',
+            'label'     => 'Name',
+            'rules'     => 'required'
+        ),
+        array(
+            'field'     => 'email',
+            'label'     => 'Email',
+            'rules'     => 'required'
+        ),
     )
-
 )
 ?>

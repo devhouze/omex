@@ -302,7 +302,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">What’s New in the Streets</h5>
+                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">What’s New in the Streets</h5>
                     <div class="v-line d-table mx-auto my-4"></div>
                 </div>
             </div>
@@ -368,7 +368,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Find Us</h5>
+                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">Find Us</h5>
 
                     <div class="v-line d-table mx-auto my-4"></div>
                 </div>
@@ -394,7 +394,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">There’s more to explore</h5>
+                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">There’s more to explore</h5>
 
                     <div class="v-line d-table mx-auto my-4"></div>
                 </div>
