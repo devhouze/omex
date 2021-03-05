@@ -152,56 +152,56 @@
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
                     <div class="carousel-inner">
-                        <div class="carousel-item position-relative active">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/slider1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-item position-relative active" style="background-image:url(<?php echo BASE_URL(); ?>assets/images/public/home/slider1.jpg);">
+                            
                             <div class="card lon-bg wow fadeInRight animated">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/l-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="carousel-item position-relative">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/slider.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-item position-relative" style="background-image:url('<?php echo BASE_URL(); ?>assets/images/public/home/slider.jpg');">
+                            
                             <div class="card par-bg wow fadeInRight animated" data-wow-duration="1s" data-wow-delay="0.5S">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/parish.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/pa-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="carousel-item position-relative">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/slider3.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-item position-relative" style="background-image:url('<?php echo BASE_URL(); ?>assets/images/public/home/slider3.jpg')">
+                            
                             <div class="card por-bg">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/p-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/p-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="carousel-item position-relative">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/slider4.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-item position-relative" style="background-image:url('<?php echo BASE_URL(); ?>assets/images/public/home/slider4.jpg')">
+                            
                             <div class="card ath-bg">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/at-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/at-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="carousel-item position-relative">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/slider5.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-item position-relative" style="background-image:url('<?php echo BASE_URL(); ?>assets/images/public/home/slider5.jpg')">
+                            
                             <div class="card ams-bg">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/am-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/am-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="carousel-item position-relative">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/slider6.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-item position-relative" style="background-image:url('<?php echo BASE_URL(); ?>assets/images/public/home/slider6.jpg')">
+                            
                             <div class="card san-bg">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/s-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/s-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="carousel-item position-relative">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/slider7.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-item position-relative" style="background-image:url('<?php echo BASE_URL(); ?>assets/images/public/home/slider7.jpg')">
+                            
                             <div class="card hon-bg">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/h-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
