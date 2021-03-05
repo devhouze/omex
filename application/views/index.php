@@ -37,14 +37,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 positoin-relative">
-                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 " data-aos="fade-up" data-aos-duration="1500">Top Brands</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
-                <div class="v-line d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000"></div>
+                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Top Brands</h5>
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
+                <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1s"></div>
             </div>
         </div>
-        <div class="row justify-content-center align-items-center " data-aos="fade-up" data-aos-duration="1500">
+        <div class="row justify-content-center align-items-center wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="0.15s">
             <div class="col-md-10 mt-20">
-                <div class="owl-carousel owl-theme top-brand ">
+                <div class="owl-carousel owl-theme top-brand">
                     <div class="item">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b1.png" alt="" class="d-table mx-auto">
                     </div>
@@ -133,7 +133,7 @@
         </div>
         <div class="row mt-md-5 mt-3">
             <div class="col-md-12">
-                <a href="" class="d-table mx-auto primary-btn" data-aos="fade-up" data-aos-duration="1500">View All Brands</a>
+                <a href="" class="d-table mx-auto primary-btn">View All Brands</a>
             </div>
         </div>
     </div>
@@ -142,66 +142,66 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 positoin-relative">
-                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0" data-aos="fade-up" data-aos-duration="1500">Experience Best of World Street</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
-                <div class="v-line d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000"></div>
+                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Experience Best of World Street</h5>
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown  animated" data-wow-duration="1s" data-wow-delay="0.5s">
+                <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="0.15s"></div>
             </div>
         </div>
-        <div class="row mt-4 d-md-block d-none">
+        <div class="row mt-4 d-md-block d-none wow animated fadeInUp" data-wow-duration="2s" data-wow-delay="2s">
             <div class="col-md-12 px-0">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
                     <div class="carousel-inner">
-                        <div class="carousel-item position-relative active">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/slider1.jpg" class="d-block w-100" alt="...">
-                            <div class="card lon-bg">
+                        <div class="carousel-item position-relative active" style="background-image:url(<?php echo BASE_URL(); ?>assets/images/public/home/slider1.jpg);">
+                            
+                            <div class="card lon-bg wow fadeInRight animated">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/l-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="carousel-item position-relative">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/slider.jpg" class="d-block w-100" alt="...">
-                            <div class="card par-bg">
+                        <div class="carousel-item position-relative" style="background-image:url('<?php echo BASE_URL(); ?>assets/images/public/home/slider.jpg');">
+                            
+                            <div class="card par-bg wow fadeInRight animated" data-wow-duration="1s" data-wow-delay="0.5S">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/parish.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/pa-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="carousel-item position-relative">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/slider3.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-item position-relative" style="background-image:url('<?php echo BASE_URL(); ?>assets/images/public/home/slider3.jpg')">
+                            
                             <div class="card por-bg">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/p-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/p-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="carousel-item position-relative">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/slider4.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-item position-relative" style="background-image:url('<?php echo BASE_URL(); ?>assets/images/public/home/slider4.jpg')">
+                            
                             <div class="card ath-bg">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/at-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/at-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="carousel-item position-relative">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/slider5.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-item position-relative" style="background-image:url('<?php echo BASE_URL(); ?>assets/images/public/home/slider5.jpg')">
+                            
                             <div class="card ams-bg">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/am-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/am-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="carousel-item position-relative">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/slider6.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-item position-relative" style="background-image:url('<?php echo BASE_URL(); ?>assets/images/public/home/slider6.jpg')">
+                            
                             <div class="card san-bg">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/s-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/s-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="carousel-item position-relative">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/slider7.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-item position-relative" style="background-image:url('<?php echo BASE_URL(); ?>assets/images/public/home/slider7.jpg')">
+                            
                             <div class="card hon-bg">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/h-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
@@ -247,14 +247,14 @@
             </div>
 
         </div>
-        <div class="row mt-4 d-md-none d-block">
+        <div class="row mt-4 d-md-none d-block wow fadeInUp animated">
             <div class="col-md-12 px-0">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
                     <div class="carousel-inner">
                         <div class="carousel-item position-relative active">
                             <img src="<?php echo BASE_URL(); ?>assets/images/public/home/london-m.jpg" class="d-block w-100" alt="...">
-                            <div class="card lon-bg">
+                            <div class="card lon-bg wow fadeInRight animated">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/l-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto">
@@ -262,7 +262,7 @@
                         </div>
                         <div class="carousel-item position-relative">
                             <img src="<?php echo BASE_URL(); ?>assets/images/public/home/paris-m.jpg" class="d-block w-100" alt="...">
-                            <div class="card par-bg">
+                            <div class="card par-bg wow fadeInRight animated" data-wow-duration="1s" data-wow-delay="0.5S">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/parish.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/home/pa-s-f.svg" alt="" class="d-table mx-auto">
@@ -355,36 +355,39 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 positoin-relative">
-                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0" data-aos="fade-up" data-aos-duration="1500">Explore More</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
-                <div class="v-line d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000"></div>
+                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Explore More</h5>
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown  animated" data-wow-duration="1s" data-wow-delay="1.5s">
+                <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1s"></div>
             </div>
         </div>
         <div class="row px-md-5 px-3 mt-md-0 mt-5">
             <div class="col-md-4">
-                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0" data-aos="fade-up" data-aos-duration="1500">Eat</h2>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto">
+                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5s">Eat</h2>
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">
                 <figure class="position-relative mb-0 mt-12">
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e1.jpg" alt="" class="">
+                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e1.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
+                    <div class="outer"></div>
                 </figure>
                 <a href="" class="exploer-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
             </div>
             <div class="col-md-4">
-                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0" data-aos="fade-up" data-aos-duration="1500">Style</h2>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto">
+                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5s">Style</h2>
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">
                 <figure class="position-relative mb-0 mt-12">
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e3.jpg" alt="" class="">
+                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e3.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
+                    <div class="outer"></div>
 
                 </figure>
                 <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
             </div>
             <div class="col-md-4">
-                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0" data-aos="fade-up" data-aos-duration="1500">Play</h2>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto">
+                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5s">Play</h2>
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">
                 <figure class="position-relative mb-0 mt-12">
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e2.jpg" alt="" class="">
+                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e2.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
+                    <div class="outer"></div>
                 </figure>
                 <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
@@ -396,14 +399,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 positoin-relative">
-                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0" data-aos="fade-up" data-aos-duration="1500">Look out for what’s coming up!</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
-                <div class="v-line d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000"> </div>
+                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Look out for what’s coming up!</h5>
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown  animated" data-wow-duration="1s" data-wow-delay="0.5s">
+                <div class="v-line d-table mx-auto wow animated zoomIn" data-wow-duration="1s" data-wow-delay="0.15s"> </div>
             </div>
         </div>
         <div class="row mt-4 justify-content-center">
             <div class="col-md-10">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="row">
@@ -504,9 +507,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 positoin-relative">
-                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0" data-aos="fade-up" data-aos-duration="1500">Experience Gallery</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
-                <div class="v-line d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000"> </div>
+                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Experience Gallery</h5>
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown  animated" data-wow-duration="1s" data-wow-delay="1.5s">
+                <div class="v-line d-table mx-auto wow animated zoomIn"></div>
             </div>
         </div>
         <div class="row">
@@ -529,7 +532,7 @@
                     </ul>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <div class="owl-carousel slider">
+                            <div class="owl-carousel slider wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
                                 <div class="item">
                                     <img src="<?php echo BASE_URL(); ?>assets/images/public/home/g1.jpg">
                                 </div>
