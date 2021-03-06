@@ -36,13 +36,18 @@ $banner_type = (!empty($banner))?$banner['banner_type']:'';
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Banner comment</label>
+                                    <label for="">Banner Alt Tag</label>
                                     <input type="text" class="form-control form-control-sm input-sm" name="banner_comment" value="">
                                 </div>
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">For Mobile</label>
                                     <input type="file" class="form-control form-control-sm input-sm" name="banner_mobile" value="">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="">Banner Link</label>
+                                    <input type="text" class="form-control form-control-sm input-sm" name="banner_link" value="">
                                 </div>
 
                                 <div class="col-md-6 mb-3" id="streets" style="display:none">
@@ -72,7 +77,7 @@ $banner_type = (!empty($banner))?$banner['banner_type']:'';
                             </div>
                                 
                             <button class="btn btn-primary" type="submit">Save</button>
-                            <button class="btn btn-danger" type="button" onclick="window.location.replace('<?=admin_url('banners');?>')">Cancel</button>
+                            <button class="btn btn-danger" type="button" onclick="window.location.replace('<?=admin_url('banners');?>')">Go Back</button>
                         </form>
                     </div>
                 </div>

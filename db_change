@@ -1,1 +1,3 @@
 ALTER TABLE `tbl_brand` CHANGE `brand_offer_thumbnail` `brand_offer_thumbnail` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL, CHANGE `brand_offer_thumbnail_message` `brand_offer_thumbnail_message` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL, CHANGE `about_brand_offer` `about_brand_offer` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL, CHANGE `brand_tag` `brand_tag` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL;
+ALTER TABLE `tbl_banner` ADD `banner_link` VARCHAR(255) NULL AFTER `banner_mobile`;
+ALTER TABLE `tbl_gallery` ADD `sequence` INT NOT NULL DEFAULT '0' AFTER `media_type`;

@@ -37,7 +37,7 @@ $(document).ready(function() {
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
                     $.notify(data.message, "success");
-                    setTimeout(function() { window.location.replace(url + 'admin'); }, 5000);
+                    setTimeout(function() { window.location.replace(url); }, 5000);
 
                 } else {
                     $.notify(data.message, "error");

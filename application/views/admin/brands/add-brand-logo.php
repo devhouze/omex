@@ -34,7 +34,7 @@ $alt_coment = (!empty($logos))?$logos['alt_coment']:'';
                             </div>
                                 
                             <button class="btn btn-primary" type="submit">Save</button>
-                            <button class="btn btn-danger" type="button" onclick="window.location.replace('<?=admin_url('banners');?>')">Cancel</button>
+                            <button class="btn btn-danger" type="button" onclick="window.location.replace('<?=admin_url('banners');?>')">Go Back</button>
                         </form>
                     </div>
                 </div>

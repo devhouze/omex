@@ -34,6 +34,7 @@
                                     <th scope="col">Media Type</th>
                                     <th scope="col">Type</th>
                                     <th scope="col">Media File</th>
+                                    <th scope="col">Preference Order</th>
                                     <th scope="col">Status</th>
                                     <th scope="col">Created By</th>
                                     <th scope="col">Created On</th>
@@ -47,6 +48,7 @@
                                     <td><?=$value['file_type'];?></td>
                                     <td><?=$value['type'];?></td>
                                     <td><?=$value['media_name'];?></td>
+                                    <td><?=$value['sequence'];?></td>
                                     <td align="center">
                                         <label class="switch">
                                           <input type="checkbox" class="chkstatus" value="<?php echo $value['id'];?>" <?php echo ($value['status']=="0")?'checked':'' ?>>

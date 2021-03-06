@@ -35,5 +35,27 @@ class Lead_controller extends MY_Controller
         $data = $this->lm->get_data_row_array('tbl_leads',"message",['id' => $lead_id]);
         echo json_encode($data);
     }
+
+    public function exportCSV(){ 
+        // file name 
+        $filename = 'leads_'.date('Ymd').'.csv'; 
+        header("Content-Description: File Transfer"); 
+        header("Content-Disposition: attachment; filename=$filename"); 
+        header("Content-Type: application/csv; ");
+        
+        // get data 
+        $lead_data = $this->lm->get_data_array('tbl_leads');
+     
+        // file creation 
+        $file = fopen('php://output', 'w');
+      
+        $header = array("S.No","Name","Email","Contact","Source","Event Name","Query Type","Message","Registered At"); 
+        fputcsv($file, $header);
+        foreach ($lead_data as $key=>$line){ 
+          fputcsv($file,$line); 
+        }
+        fclose($file); 
+        exit; 
+       }
 }
 ?>

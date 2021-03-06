@@ -1,9 +1,10 @@
 $(document).ready(function() {
     const url = $('body').data('url');
+    const base_url = $('body').data('base_url');
 
     $('.delete').click(function() {
         var banner_id = $(this).data('id');
-        if (confirm('Do you want to delte this brand?')) {
+        if (confirm('Do you want to delete this brand?')) {
             $.ajax({
                 type: 'post',
                 url: url + 'delete-banner',
@@ -73,4 +74,35 @@ $(document).ready(function() {
             }
         });
     });
+
+    // View Banner
+    $('.view_banner').click(function() {
+        var banner_id = $(this).data('id');
+        $.ajax({
+            type: 'post',
+            url: url + 'get-banner-details',
+            data: { banner_id: banner_id },
+            success: function(data) {
+                var data = $.parseJSON(data);
+                if (data.status > 0) {
+                    $.notify(data.message, "success");
+                    var street = (data[0].street != null) ? data[0].street : 'N/A';
+                    var brand_name = (data[0].brand_name != null) ? data[0].brand_name : 'N/A';
+                    value = "<table class='table'>";
+                    value += "<tr><th>Banner Type</th><td>" + data[0].banner_type + "</td></tr>";
+                    value += "<tr><th>Street</th><td>" + street + "</td></tr>";
+                    value += "<tr><th>Brand</th><td>" + brand_name + "</td></tr>";
+                    value += "<tr><th>Alt Tag</th><td>" + data[0].comment + "</td></tr>";
+                    value += "<tr><th>Status</th><td>" + data[0].status + "</td></tr>";
+                    value += "<tr><th>Banner Web</th><td><img src=" + base_url + 'assets/images/admin/banner/' + data[0].banner_web + " style='width:100px; height:100px'></td></tr>";
+                    value += "<tr><th>Banner Mobile</th><td><img src=" + base_url + 'assets/images/admin/banner/' + data[0].banner_mobile + " style='width:100px; height:100px'></td></tr>";
+                    value += "</table>";
+                    $('#bannerDetails').html(value);
+                } else {
+                    $.notify(data.message, "error");
+                }
+            }
+        });
+    });
+
 });

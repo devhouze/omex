@@ -243,24 +243,24 @@
               <!-- User Account -->
               <li class="dropdown user-menu">
                 <button href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                  <img src="<?php echo BASE_URL(); ?>assets/images/admin/user.png" class="user-image" alt="User Image" />
-                  <span class="d-none d-lg-inline-block">Abdus Salam</span>
+                  <img src="<?php echo base_url(); ?>assets/images/admin/user.png" class="user-image" alt="User Image" />
+                  <span class="d-none d-lg-inline-block"><?=$this->session->userdata('admin_details')['name']?></span>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-right">
                   <!-- User image -->
                   <li class="dropdown-header">
-                    <img src="<?php echo BASE_URL(); ?>assets/images/admin/user.png" class="img-circle" alt="User Image" />
+                    <img src="<?php echo base_url(); ?>assets/images/admin/user.png" class="img-circle" alt="User Image" />
                     <div class="d-inline-block">
-                      Abdus Salam <small class="pt-1">iamabdus@gmail.com</small>
+                      <?=$this->session->userdata('admin_details')['name']?> <small class="pt-1"><?=$this->session->userdata('admin_details')['email']?></small>
                     </div>
                   </li>
 
                   <li>
-                    <a href="user-profile.html">
+                    <a href="<?=admin_url('profile');?>">
                       <i class="mdi mdi-account"></i> My Profile
                     </a>
                   </li>
-                  <li>
+                  <!-- <li>
                     <a href="#">
                       <i class="mdi mdi-email"></i> Message
                     </a>
@@ -270,7 +270,7 @@
                   </li>
                   <li class="right-sidebar-in">
                     <a href="javascript:0"> <i class="mdi mdi-settings"></i> Setting </a>
-                  </li>
+                  </li> -->
 
                   <li class="dropdown-footer">
                     <a href="<?php echo base_url('admin/logout');?>"> <i class="mdi mdi-logout"></i> Log Out </a>

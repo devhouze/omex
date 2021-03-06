@@ -51,6 +51,7 @@ class Gallery_Controller extends MY_Controller
                     'media_type'        => $media_type,
                     'filter_type'       => $this->input->post('filter_type'),
                     'media_alt'         => $this->input->post('comment'),
+                    'sequence'          => $this->input->post('sequence'),
                     'created_by'        => $this->gm->admin_id()
                 );
 
@@ -124,6 +125,16 @@ class Gallery_Controller extends MY_Controller
         $update = $this->gm->update_data('tbl_gallery',['status' => $stauts],['id' => $gallery_id]);
         if($update){
             echo json_encode(['message' => 'Status changed successfully.', 'status' => 1]);
+        } else {
+            echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
+        }
+    }
+    public function delete_media()
+    {
+        $media_id = $this->input->post('media_id');
+        $update = $this->gm->update_data('tbl_gallery',['status' => 2],['id' => $media_id]);
+        if($update){
+            echo json_encode(['message' => 'Data deleted successfully.', 'status' => 1]);
         } else {
             echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
         }

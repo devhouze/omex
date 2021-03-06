@@ -23,6 +23,18 @@ class Banner_Model extends MY_Model
         }
         return [];
     }
+
+    public function banner_details($banner_id)
+    {
+        $query = $this->db->select('street, (case when banner_type = 1 then "Home Page" when banner_type = 2 then "Event Page" when banner_type = 3 then "Brand Directory Page" when banner_type = 4 then "Brand Discount" when banner_type = 5 then "Brand" when banner_type = 6 then "About Brand" end) as banner_type, banner_web, banner_mobile, comment, (case when tb.status = 0 then "Active" when tb.status = 2 then "Inactive" end) as status, brand_name')
+                          ->join('tbl_brand','brand_id = brand','left')
+                          ->where('tb.id',$banner_id)
+                          ->get('tbl_banner tb');
+        if($query->num_rows() > 0){
+            return $query->row_array();
+        }
+        return [];
+    }
 }
 
 ?>

@@ -6,10 +6,10 @@
           <div class="card">
             <div class="card-header bg-primary">
               <div class="app-brand">
-                <a href="<?= base_url('admin') ?>">
-                <img src="<?= base_url('') ?>" alt="">
-                  <span class="brand-name">Login</span>
-                </a>
+                <!-- <a href="<?= base_url('admin') ?>"> -->
+                <img src="<?= base_url('assets/images/public/header/logo.svg') ?>" alt="">
+                  <!-- <span class="brand-name">Login</span> -->
+                <!-- </a> -->
               </div>
             </div>
             <div class="card-body p-5">

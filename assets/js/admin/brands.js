@@ -192,17 +192,17 @@ $(document).ready(function() {
                 value += '<tr><th colspan="4" class="text-center">Brand Details</th></tr>';
                 value += '<tr><th>Name</th><td>' + brand_name + '</td><th>Contact</th><td>' + brand_contact + '</td></tr>';
                 value += '<tr><th>Email Contact</th><td>' + brand_contact_email + '</td><th>Website</th><td>' + brand_website + '</td></tr>';
-                value += '<tr><th>From Hour(Week)</th><td>' + from_hour_week + '</td><th>To Hour(Week)</th><td>' + to_week_hour + '</td></tr>';
-                value += '<tr><th>From Hour(Weekend)</th><td>' + from_hour_weekend + '</td><th>To Hour(Weekend)</th><td>' + to_weekend_hour + '</td></tr>';
+                value += '<tr><th>Weekday Operational Start Time</th><td>' + from_hour_week + '</td><th>Weekday Operational End Time</th><td>' + to_week_hour + '</td></tr>';
+                value += '<tr><th>Weekend Operational Start Time</th><td>' + from_hour_weekend + '</td><th>Weekend Operational End Time</th><td>' + to_weekend_hour + '</td></tr>';
                 value += '<tr><th>Type</th><td>' + brand_type + '</td><th>Labels</th><td>' + brand_label + '</td></tr>';
                 value += '<tr><th>Category</th><td>' + brand_category + '</td><th>Subcategory</th><td>' + brand_sub_category + '</td></tr>';
                 value += '<tr><th colspan="2">Street</th><td colspan="2">' + brand_street + '</td></tr>';
                 value += '<tr><th>Brand Audience</th><td>' + brand_audience + '</td><th>Brand Status</th><td>' + status + '</td></tr>';
-                value += '<tr><th>Show On Home</th><td>' + show_on_home + '</td><th>Alt comment</th><td>' + logo_message + '</td></tr>';
+                value += '<tr><th>Show On Home</th><td>' + show_on_home + '</td><th>Alt Tag</th><td>' + logo_message + '</td></tr>';
                 value += '<tr><th colspan="2">About Brand</th><td colspan="2">' + about_brand + '</td></tr>';
                 value += '<tr><th colspan="2">Activate Brand Offer</th><td colspan="2">' + brand_offer_status + '</td></tr>';
                 value += '<tr><th>Offer Name</th><td>' + brand_offer_name + '</td><th>Offer</th><td>' + brand_custom_offer + '</td></tr>';
-                value += '<tr><th>Offer Validity</th><td>' + brand_offer_validity + '</td><th>Offer Alt Comment</th><td>' + brand_offer_thumbnail_message + '</td></tr>';
+                value += '<tr><th>Offer Validity</th><td>' + brand_offer_validity + '</td><th>Offer Alt Tag</th><td>' + brand_offer_thumbnail_message + '</td></tr>';
                 value += '<tr><th colspan="2">About Offer</th><td colspan="2">' + about_brand_offer + '</td></tr>';
                 $('#details').html(value);
             }

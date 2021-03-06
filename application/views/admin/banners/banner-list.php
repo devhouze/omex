@@ -60,6 +60,7 @@
                                     <td>
                                         <a href="<?=admin_url('edit-banners/'.$banner['id'])?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a>
                                         <a href="javascript:void(0)" class="btn btn-danger delete" data-id="<?=$banner['id'];?>"><span class="mdi mdi-delete"></span></a>
+                                        <a href="javascript:void(0)" class="btn btn-primary view_banner" data-id="<?=$banner['id'];?>" data-toggle="modal" data-target="#banner_details"><span class="mdi mdi-eye"></span></a>
                                     </td>
                                 </tr>
                                 <?php } } else {?>
@@ -74,5 +75,26 @@
             </div>
         </div>
     </div>
-
 </div>
+
+<!-- Modal to show banner -->
+<div class="modal fade" id="banner_details" tabindex="-1" role="dialog" aria-labelledby="banner_detailsLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="banner_detailsLabel">Banner Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="bannerDetails"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal to show banner ends here-->

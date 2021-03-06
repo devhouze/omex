@@ -10,7 +10,7 @@ class Lead_Model extends MY_Model
 
     public function get_leads($per_page,$page,$count = false)
     {
-        $this->db->select('id, name, email, source, event_name, query_type, contact, date_format(registered_at,"%d-%m-%Y") as registered_at');
+        $this->db->select('id, name, email, source, event_name, query_type, contact, date_format(registered_at,"%d-%m-%Y %H:%i") as registered_at');
         (!$count)?$this->db->limit($per_page,$page):'';
         $this->db->order_by('id','desc');
         $query = $this->db->get('tbl_leads');

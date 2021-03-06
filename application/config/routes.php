@@ -110,7 +110,7 @@ $route['admin/change-user-status'] = 'admin/Users_Controller/change_user_status'
 $route['admin/leads'] = 'admin/Lead_controller/lead_list';
 $route['admin/leads/(:num)'] = 'admin/Lead_controller/lead_list/$1';
 $route['admin/get-message'] = 'admin/Lead_controller/get_message';
-$route['admin/event-details'] = 'admin/Event_Controller/get_event_details';
+$route['admin/export-leads'] = 'admin/Lead_controller/exportCSV';
 
 
 // Events routes
@@ -128,12 +128,12 @@ $route['admin/edit-banners/(:num)'] = "admin/Banner_Controllers/edit_banners/$1"
 $route['admin/banners'] = "admin/Banner_Controllers/banner_list";
 $route['admin/delete-banner'] = 'admin/Banner_Controllers/delete_banner';
 $route['admin/change-banner-status'] = 'admin/Banner_Controllers/change_banner_status';
-
+$route['admin/get-banner-details'] = "admin/Banner_Controllers/get_banner_details";
 // Gallery routes
 $route['admin/gallery'] = 'admin/Gallery_Controller/gallery_list';
 $route['admin/add-gallery'] = 'admin/Gallery_Controller/add_gallery';
 $route['admin/change-gallery-status'] = 'admin/Gallery_Controller/change_gallery_status';
-
+$route['admin/delete-media'] = 'admin/Gallery_Controller/delete_media';
 
 $route['admin/404'] = 'admin/Admin_controller/error404';
 $route['admin/blank'] = 'admin/Admin_controller/blank';

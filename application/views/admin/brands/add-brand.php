@@ -58,7 +58,7 @@ $about_brand_offer = (!empty($brands))?$brands->about_brand_offer:'';
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Logo Comment</label>
+                                    <label for="">Logo Alt Tag</label>
                                     <input type="text" class="form-control form-control-sm input-sm" name="logo_comment" value="<?=$logo_message;?>">
                                     <span class="text-danger logo_comment errors_msg"></span>
                                 </div>
@@ -86,26 +86,26 @@ $about_brand_offer = (!empty($brands))?$brands->about_brand_offer:'';
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">From Operation Hour(Week)</label>
-                                    <input type="text" class="form-control form-control-sm input-sm from_week_hour" name="from_week_hour" value="<?=$from_hour_week;?>">
+                                    <label for="">Weekday Operational Start Time</label>
+                                    <input type="text" class="form-control form-control-sm input-sm week_hour_start" name="from_week_hour" value="<?=$from_hour_week;?>">
                                     <span class="text-danger from_week_hour errors_msg"></span>
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">To Operation Hour(Week)</label>
-                                    <input type="text" class="form-control form-control-sm input-sm to_week_hour" name="to_week_hour" value="<?=$to_week_hour;?>">
+                                    <label for="">Weekday Operational End Time</label>
+                                    <input type="text" class="form-control form-control-sm input-sm week_end_time" name="to_week_hour" value="<?=$to_week_hour;?>">
                                     <span class="text-danger to_week_hour errors_msg"></span>
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">From Operation Hour(Weekend)</label>
-                                    <input type="text" class="form-control form-control-sm input-sm from_weekend_hour" name="from_weekend_hour" value="<?=$from_hour_weekend;?>">
+                                    <label for="">Weekend Operational Start Time</label>
+                                    <input type="text" class="form-control form-control-sm input-sm weekend_hour_start" name="from_weekend_hour" value="<?=$from_hour_weekend;?>">
                                     <span class="text-danger from_weekend_hour errors_msg"></span>
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">To Operation Hour(Weekend)</label>
-                                    <input type="text" class="form-control form-control-sm input-sm to_weekend_hour" name="to_weekend_hour" value="<?=$to_weekend_hour;?>">
+                                    <label for="">Weekend Operational End Time</label>
+                                    <input type="text" class="form-control form-control-sm input-sm weekend_end_hour" name="to_weekend_hour" value="<?=$to_weekend_hour;?>">
                                     <span class="text-danger to_weekend_hour errors_msg"></span>
                                 </div>
 
@@ -140,13 +140,13 @@ $about_brand_offer = (!empty($brands))?$brands->about_brand_offer:'';
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Email Contact</label>
+                                    <label for="">Brand Email Contact</label>
                                     <input type="text" class="form-control form-control-sm input-sm" name="email_contact" value="<?=$brand_contact_email;?>">
                                     <span class="text-danger email_contact errors_msg"></span>
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Store Map</label>
+                                    <label for="">Store Map URL</label>
                                     <input type="text" class="form-control form-control-sm input-sm" name="store_map" value="<?=$store_map;?>">
                                     <span class="text-danger store_map errors_msg"></span>
                                 </div>
@@ -245,7 +245,7 @@ $about_brand_offer = (!empty($brands))?$brands->about_brand_offer:'';
                             </div>
                                 
                             <button class="btn btn-primary" type="submit">Save</button>
-                            <button class="btn btn-danger" type="button" onclick="window.location.replace('<?=admin_url('brands');?>')">Cancel</button>
+                            <button class="btn btn-danger" type="button" onclick="window.location.replace('<?=admin_url('brands');?>')">Go Back</button>
                         </form>
                     </div>
                 </div>
@@ -255,24 +255,30 @@ $about_brand_offer = (!empty($brands))?$brands->about_brand_offer:'';
 </div>
 <script type="text/javascript">
 $( document ).ready(function(){
-    $(".from_week_hour").timepicker();
-    $(".from_weekend_hour").timepicker();
+    $(".week_hour_start").timepicker();
+    $(".weekend_hour_start").timepicker();
 
 });
 $( document ).ready(function(){
     <?php if(empty($brand_id)){?>
-    $('.from_week_hour').change(function(){
-        var from_time = $('.from_week_hour').val();
+    $('.week_hour_start').change(function(){
+        var from_time = $('.week_hour_start').val();
         var min_time = moment.utc(from_time,'hh:mm').add(1,'hour').format('hh:mm');
-        $(".to_week_hour").timepicker({
+        console.log(min_time);
+        $(".week_end_time").timepicker({
             minTime: min_time,
             timeStep: 5
         });
-    });
+    })
+
+    
+    
+    
     <?php } else { ?>
-    var from_time = $('.from_week_hour').val();
+    var from_time = $('.week_hour_start').val();
+    console.log(from_time);
     var min_time = moment.utc(from_time,'hh:mm').add(1,'hour').format('hh:mm');
-    $(".to_week_hour").timepicker({
+    $(".week_end_time").timepicker({
         minTime: min_time,
         timeStep: 5
     });
@@ -280,18 +286,18 @@ $( document ).ready(function(){
 });
 $( document ).ready(function(){
     <?php if(empty($brand_id)){?>
-    $('.from_weekend_hour').change(function(){
-        var from_time = $('.from_weekend_hour').val();
+    $('.weekend_hour_start').change(function(){
+        var from_time = $('.weekend_hour_start').val();
         var min_time = moment.utc(from_time,'hh:mm').add(1,'hour').format('hh:mm');
-        $(".to_weekend_hour").timepicker({
+        $(".weekend_end_hour").timepicker({
             minTime: min_time,
             timeStep: 5
         });
     });
     <?php } else { ?>
-    var from_time = $('.from_weekend_hour').val();
+    var from_time = $('.weekend_hour_start').val();
     var min_time = moment.utc(from_time,'hh:mm').add(1,'hour').format('hh:mm');
-    $(".to_weekend_hour").timepicker({
+    $(".weekend_end_hour").timepicker({
         minTime: min_time,
         timeStep: 5
     });

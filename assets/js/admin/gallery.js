@@ -1,6 +1,26 @@
 $(document).ready(function() {
     const url = $('body').data('url');
 
+    $('.delete').click(function() {
+        var media_id = $(this).data('id');
+        if (confirm('Do you want to delete this media?')) {
+            $.ajax({
+                type: 'post',
+                url: url + 'delete-media',
+                data: { media_id: media_id },
+                success: function(data) {
+                    var data = $.parseJSON(data);
+                    if (data.status > 0) {
+                        $.notify(data.message, "success");
+                        setTimeout(function() { window.location.reload(); }, 2000);
+                    } else {
+                        $.notify(data.message, "error");
+                    }
+                }
+            });
+        }
+    });
+
     $('#media_type').change(function() {
         var media_type = $('#media_type option:selected').val();
 

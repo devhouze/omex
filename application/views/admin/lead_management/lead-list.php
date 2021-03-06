@@ -23,6 +23,9 @@
             
             <div class="col-lg-12">
                 <div class="card card-default">
+                <div class="card-header card-header-border-bottom">
+                        <a href="<?=admin_url('export-leads')?>" class="btn btn-primary">Export CSV</a>
+                    </div>
                     <div class="card-header card-header-border-bottom">
                     </div>
                     <div class="card-body">
@@ -36,7 +39,7 @@
                                     <th scope="col">Source</th>
                                     <th scope="col">Event Name</th>
                                     <th scope="col">Query Type</th>
-                                    <th scope="col">Created On</th>
+                                    <th scope="col">Sign Up Time</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>

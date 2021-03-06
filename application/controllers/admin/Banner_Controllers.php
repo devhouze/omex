@@ -46,6 +46,7 @@ class Banner_Controllers extends my_controller
                 $this->form_validation->set_rules('banner_mobile','Banner for mobile','required');
             }
             $this->form_validation->set_rules('banner_comment','Banner Comment','required');
+            $this->form_validation->set_rules('banner_link','Banner Link','required');
 
             $banner_type = $this->input->post('banner_type');
 
@@ -68,6 +69,7 @@ class Banner_Controllers extends my_controller
                     'comment'           => $this->input->post('banner_comment'),
                     'street'            => $this->input->post('streets'),
                     'brand'             => $this->input->post('brand'),
+                    'banner_link'       => $this->input->post('banner_link'),
                     'created_by'        => $this->bm->admin_id()
                 );
 
@@ -131,6 +133,7 @@ class Banner_Controllers extends my_controller
         if($this->input->post()){
             $this->form_validation->set_rules('banner_type','Banner Type','required');
             $this->form_validation->set_rules('banner_comment','Banner Comment','required');
+            $this->form_validation->set_rules('banner_link','Banner Link','required');
 
             $banner_type = $this->input->post('banner_type');
 
@@ -140,6 +143,7 @@ class Banner_Controllers extends my_controller
                     'comment'           => $this->input->post('banner_comment'),
                     'street'            => $this->input->post('streets'),
                     'brand'             => $this->input->post('brand'),
+                    'banner_link'       => $this->input->post('banner_link'),
                     'updated_by'        => $this->bm->admin_id(),
                     'updated_on'        => date('Y-m-d H:i:s')
                 );
@@ -221,5 +225,16 @@ class Banner_Controllers extends my_controller
             echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
         }
     }
+
+    public function get_banner_details()
+    {
+        $banner_id = $this->input->post('banner_id');
+        $data = $this->bm->banner_details($banner_id);
+        if(!empty($data)){
+            echo json_encode(['message'=> 'Showing Details','status' => 1, $data]);
+        } else {
+            echo json_encode(['message'=> 'Something went wrong!.','status' => 0]);
+        }
+    } 
 }
 ?>
