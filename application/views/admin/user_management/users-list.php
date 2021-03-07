@@ -20,7 +20,48 @@
         </div>
 
         <div class="row">
-           
+            <div class="col-lg-12">
+                <div class="card card-default">
+                <div class="card-body">
+                <form action="" method="post">
+                <div class="form-row">
+                <div class="col-md-3 mb-3">
+                    <input type="text" value="<?=$this->session->userdata('user')['user_name'];?>" name="user_name" placeholder="Search By Name" class="form-control form-control-sm">
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <input type="text" value="<?=$this->session->userdata('user')['user_email'];?>" name="user_email" placeholder="Search By Email" class="form-control form-control-sm">
+                </div>
+                
+                <?php $status = (!empty($this->session->userdata('user')))?$this->session->userdata('user')['status']:null;?>
+                <div class="col-md-3 mb-3">
+                    <select name="status" class="form-control form-control-sm">
+                        <option selected disabled>Select Status</option>
+                        <option value="0" <?php if($status == "0"){ echo "selected";}?>>Active</option>
+                        <option value="1" <?php if($status == "1"){ echo "selected";}?>>Inactive</option>
+                    </select>
+                </div>
+
+                <?php $user_type = (!empty($this->session->userdata('user')))?$this->session->userdata('user')['user_type']:null;?>
+                <div class="col-md-3 mb-3">
+                    <select name="user_type" class="form-control form-control-sm">
+                        <option selected disabled>Select User Type</option>
+                        <option value="0" <?php if($user_type == "0"){ echo "selected";}?>>Admin</option>
+                        <option value="1" <?php if($user_type == "1"){ echo "selected";}?>>Editor</option>
+                        <option value="2" <?php if($user_type == "2"){ echo "selected";}?>>Sales Executive</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <input type="submit" name="search" class="btn btn-primary" value="Search">
+                    <input type="submit" name="reset" class="btn btn-danger" value="Reset">
+                </div>
+                
+                </form>
+                </div>
+                </div>
+                </div>
+            </div>
             <div class="col-lg-12">
                 <div class="card card-default">
                     <div class="card-header card-header-border-bottom">

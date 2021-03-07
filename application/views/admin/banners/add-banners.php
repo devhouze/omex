@@ -23,9 +23,9 @@ $banner_type = (!empty($banner))?$banner['banner_type']:'';
                                     <option value="1" <?php if($banner_type == '1'){ echo "selected"; }?>>Home Page</option>
                                     <option value="2" <?php if($banner_type == '2'){ echo "selected"; }?>>Event</option>
                                     <option value="3" <?php if($banner_type == '3'){ echo "selected"; }?>>Brand Directory</option>
-                                    <option value="4" <?php if($banner_type == '4'){ echo "selected"; }?>>Brand Discount</option>
-                                    <option value="5" <?php if($banner_type == '5'){ echo "selected"; }?>>Brand</option>
-                                    <option value="6" <?php if($banner_type == '6'){ echo "selected"; }?>>About Brand</option>
+                                    <!-- <option value="4" <?php if($banner_type == '4'){ echo "selected"; }?>>Brand Discount</option> -->
+                                    <!-- <option value="5" <?php if($banner_type == '5'){ echo "selected"; }?>>Brand</option>
+                                    <option value="6" <?php if($banner_type == '6'){ echo "selected"; }?>>About Brand</option> -->
                                    </select>
                                 </div>
 
@@ -95,16 +95,18 @@ $( document ).ready(function(){
         } else if(option == 3) {
             $('#streets').css('display','block');
             $('#brands').css('display','block');
-        } else if(option == 4) {
-            $('#streets').css('display','none');
-            $('#brands').css('display','block');
-        } else if(option == 5) {
-            $('#streets').css('display','block');
-            $('#brands').css('display','block');
-        } else if(option == 6) {
-            $('#streets').css('display','block');
-            $('#brands').css('display','block');
-        } else{
+        }
+        // else if(option == 4) {
+        //     $('#streets').css('display','none');
+        //     $('#brands').css('display','block');
+        // } else if(option == 5) {
+        //     $('#streets').css('display','block');
+        //     $('#brands').css('display','block');
+        // } else if(option == 6) {
+        //     $('#streets').css('display','block');
+        //     $('#brands').css('display','block');
+        // }
+        else{
             $('#streets').css('display','none');
             $('#brands').css('display','none');
         }

@@ -20,7 +20,41 @@
         </div>
 
         <div class="row">
-            
+            <div class="col-lg-12">
+                <div class="card card-default">
+                <div class="card-body">
+                <form action="" method="post">
+                <div class="form-row">
+
+                <?php $status = (!empty($this->session->userdata('banner')))?$this->session->userdata('banner')['status']:null;?>
+                <div class="col-md-3">
+                    <select name="status" class="form-control form-control-sm">
+                        <option selected disabled>Select Status</option>
+                        <option value="0" <?php if($status == "0"){ echo "selected";}?>>Active</option>
+                        <option value="1" <?php if($status == "1"){ echo "selected";}?>>Inactive</option>
+                    </select>
+                </div>
+                
+                <?php $banner_type = (!empty($this->session->userdata('banner')))?$this->session->userdata('banner')['banner_type']:null;?>
+                <div class="col-md-3">
+                    <select name="banner_type" class="form-control form-control-sm">
+                        <option selected disabled>Select Banner Type</option>
+                        <option value="1" <?php if($banner_type == "1"){ echo "selected";}?>>Home</option>
+                        <option value="2" <?php if($banner_type == "2"){ echo "selected";}?>>Event</option>
+                        <option value="3" <?php if($banner_type == "3"){ echo "selected";}?>>Brand Directory</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <input type="submit" name="search" class="btn btn-primary" value="Search">
+                    <input type="submit" name="reset" class="btn btn-danger" value="Reset">
+                </div>
+                
+                </form>
+                </div>
+                </div>
+                </div>
+            </div>
             <div class="col-lg-12">
                 <div class="card card-default">
                     <div class="card-header card-header-border-bottom">
@@ -34,7 +68,7 @@
                                     <th scope="col">Banner Type</th>
                                     <th scope="col">Banner Web</th>
                                     <th scope="col">Banner Mobile</th>
-                                    <th scope="col">Alt Comment</th>
+                                    <th scope="col">Alt Tag</th>
                                     <th scope="col">Status</th>
                                     <th scope="col">Created By</th>
                                     <th scope="col">Created On</th>
@@ -46,8 +80,13 @@
                                 <tr>
                                     <td scope="row"><?=$sno; $sno++;?></td>
                                     <td><?=$banner['banner_type'];?></td>
-                                    <td><img src="<?=base_url('assets/images/admin/banner/'.$banner['banner_web']);?>" alt="" style="width:50px; heigth:50px"></td>
-                                    <td><img src="<?=base_url('assets/images/admin/banner/'.$banner['banner_mobile'])?>" alt="" style="width:50px; heigth:50px"></td>
+                                    <?php if($banner['banner_type'] == "Home" || $banner['banner_type'] == "Event"){?>
+                                    <td><img src="<?=base_url('assets/images/public/home/'.$banner['banner_web']);?>" alt="" style="width:50px; heigth:50px"></td>
+                                    <td><img src="<?=base_url('assets/images/public/home/'.$banner['banner_mobile'])?>" alt="" style="width:50px; heigth:50px"></td>
+                                    <?php } else {?>
+                                        <td><img src="<?=base_url('assets/images/public/brand/'.$banner['banner_web']);?>" alt="" style="width:50px; heigth:50px"></td>
+                                    <td><img src="<?=base_url('assets/images/public/brand/'.$banner['banner_mobile'])?>" alt="" style="width:50px; heigth:50px"></td>
+                                    <?php } ?>
                                     <td><?=$banner['comment'];?></td>
                                     <td align="center">
                                         <label class="switch">

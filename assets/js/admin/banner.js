@@ -66,7 +66,7 @@ $(document).ready(function() {
                 }
                 if (data.error) {
                     $.each(data.error, function(i, v) {
-                        $('#banner_management .' + i + '').html(v);
+                        $('#banner_management input[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                         $('#banner_management select[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                         $('#banner_management textarea[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                     });

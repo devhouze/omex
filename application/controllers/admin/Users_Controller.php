@@ -15,9 +15,26 @@ class Users_Controller extends MY_Controller {
         if ($page != 0) {
 			$page = ($page - 1) * $per_page;
         }
-        $total_count = $this->um->get_users($per_page,$page,true);
+
+		if($this->input->post('search')){
+            $search = array(
+                'user_name'    => trim($this->input->post('user_name')),
+                'user_email'    => trim($this->input->post('user_email')),
+                'user_type'    => trim($this->input->post('user_type')),
+                'status'        => $this->input->post('status')
+            );
+
+            $this->session->set_userdata('user',$search);
+        }
+
+        if($this->input->post('reset')){
+            $this->session->unset_userdata('user');
+        }
+        $keyword = $this->session->userdata('user');
+
+        $total_count = $this->um->get_users($per_page,$page,$keyword,true);
         $data['pagination'] = $this->pagination('users',$total_count,$per_page);
-        $data['users'] = $this->um->get_users($per_page,$page);
+        $data['users'] = $this->um->get_users($per_page,$page,$keyword);
         $end = (($data['users'])?count($data['users']):0) + (($page) ? $page : 0);
         $start = (count($data['users']) > 0)?($page + 1):0;
         $data['result_count'] = "Showing " . $start . " - " . $end . " of " . $total_count . " Results";

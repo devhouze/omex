@@ -81,12 +81,12 @@ $brands = ($events)?$events->brands:'';
                                
                                 <div class="col-md-6 mb-3">
                                     <label for="">Event Start Time</label>
-                                    <input type="time" name="event_start_time" class="form-control form-control-sm input-sm" placeholder="Event Time" value="<?=$event_start_time;?>">
+                                    <input type="text" name="event_start_time" class="form-control form-control-sm input-sm event_start_time" placeholder="Event Start Time" value="<?=$event_start_time;?>">
                                 </div>
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Event End Time</label>
-                                    <input type="time" name="event_end_time" class="form-control form-control-sm input-sm" placeholder="Event Time" value="<?=$event_end_time;?>">
+                                    <input type="text" name="event_end_time" class="form-control form-control-sm input-sm event_end_time" placeholder="Event End Time" value="<?=$event_end_time;?>">
                                 </div>
 
                                 <div class="col-md-12 mb-3">
@@ -170,7 +170,19 @@ $brands = ($events)?$events->brands:'';
 </div>
 <script>
 $( document ).ready(function(){
-    $(".event_start_time").timepicker();
+    $(".event_start_time").timepicker({
+        minTime: '00:00',
+        timeStep: 5
+    });
+
+    $(".event_start_time").change(function(){
+        var start_time = $('.event_start_time').val();
+        var min_time = moment.utc(start_time,'hh:mm').add(1,'hour').format('hh:mm');
+        $(".event_end_time").timepicker({
+            minTime: min_time,
+            timeStep: 5
+        });
+    })
 });
 $(function() {
     $( ".start_date" ).datepicker({

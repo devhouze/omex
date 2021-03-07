@@ -1,3 +1,13 @@
 ALTER TABLE `tbl_brand` CHANGE `brand_offer_thumbnail` `brand_offer_thumbnail` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL, CHANGE `brand_offer_thumbnail_message` `brand_offer_thumbnail_message` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL, CHANGE `about_brand_offer` `about_brand_offer` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL, CHANGE `brand_tag` `brand_tag` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL;
 ALTER TABLE `tbl_banner` ADD `banner_link` VARCHAR(255) NULL AFTER `banner_mobile`;
 ALTER TABLE `tbl_gallery` ADD `sequence` INT NOT NULL DEFAULT '0' AFTER `media_type`;
+
+ALTER TABLE `tbl_brand` DROP `brand_offer_status`, DROP `brand_offer_name`, DROP `brand_offer`, DROP `brand_offer_validity`, DROP `brand_offer_thumbnail`, DROP `brand_offer_thumbnail_message`, DROP `about_brand_offer`;
+
+ALTER TABLE `tbl_brand` ADD `brand_offer_status` VARCHAR(255) NULL AFTER `status`;
+
+ALTER TABLE `tbl_brand_offer` ADD `brand_id` INT NULL AFTER `offer_id`;
+
+ALTER TABLE `tbl_brand` ADD `order_home` INT NULL AFTER `status`;
+ALTER TABLE `tbl_brand` ADD `banner_comment` VARCHAR(255) NULL AFTER `brand_name`;
+ALTER TABLE `tbl_brand` ADD `banner_web` VARCHAR(255) NULL AFTER `brand_name`;

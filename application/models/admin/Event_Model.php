@@ -8,14 +8,20 @@ class Event_Model extends MY_Model
         parent::__construct();
     }
 
-    public function get_events($per_page,$page,$count = false)
+    public function get_events($per_page,$page,$keyword,$count = false)
     {
+        // echo "<pre>"; print_r($keyword); die;
         $this->db->select('event_name, date_available, start_date, end_date, event_type, te.status, event_id, name as created_by, date_format(te.created_on,"%d-%m-%Y") as created_on');
         $this->db->join('tbl_admin ta','te.created_by = admin_id');
+        (!$count)?$this->db->limit($per_page,$page):'';
+        (!empty($keyword['event_name']))?$this->db->like('event_name',$keyword['event_name']):'';
+        (!empty($keyword['status']))?$this->db->where('status',$keyword['status']):'';
+        (!empty($keyword['event_type']))?$this->db->like('event_type',$keyword['event_type']):'';
         (!$count)?$this->db->limit($per_page,$page):'';
         $this->db->where('te.status !=',2);
         $this->db->order_by('event_id','desc');
         $query = $this->db->get('tbl_event te');
+        // echo $this->db->last_query(); die;
         if($count){
             return $query->num_rows();
         } elseif($query->num_rows() > 0){

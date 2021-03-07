@@ -19,7 +19,35 @@
 
         </div>
 
-        <div class="row">            
+        <div class="row">     
+            <div class="col-lg-12">
+                <div class="card card-default">
+                <div class="card-body">
+                <form action="" method="post">
+                <div class="form-row">
+                <div class="col-md-3">
+                        <input type="text" value="<?=$this->session->userdata('brand')['brand_name'];?>" name="name" placeholder="Search By Name" class="form-control form-control-sm">
+                </div>
+                
+                <?php $status = (!empty($this->session->userdata('brand')))?$this->session->userdata('brand')['status']:null;?>
+                <div class="col-md-3">
+                    <select name="status" class="form-control form-control-sm">
+                        <option selected disabled>Select Status</option>
+                        <option value="0" <?php if($status == "0"){ echo "selected";}?>>Active</option>
+                        <option value="1" <?php if($status == "1"){ echo "selected";}?>>Inactive</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <input type="submit" name="search" class="btn btn-primary" value="Search">
+                    <input type="submit" name="reset" class="btn btn-danger" value="Reset">
+                </div>
+                
+                </form>
+                </div>
+                </div>
+                </div>
+            </div>       
             <div class="col-lg-12">
                 <div class="card card-default">
                     <div class="card-header card-header-border-bottom">

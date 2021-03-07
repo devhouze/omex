@@ -20,13 +20,47 @@
         </div>
 
         <div class="row">
-            
+            <div class="col-lg-12">
+                <div class="card card-default">
+                <div class="card-body">
+                <form action="" method="post">
+                <div class="form-row">
+                <div class="col-md-3">
+                    <input type="text" value="<?=$this->session->userdata('lead')['name'];?>" name="name" placeholder="Search By Name" class="form-control form-control-sm">
+                </div>
+
+                <div class="col-md-3">
+                    <input type="text" value="<?=$this->session->userdata('lead')['email'];?>" name="email" placeholder="Search By Email" class="form-control form-control-sm">
+                </div>
+                
+                <?php $query_type = (!empty($this->session->userdata('lead')))?$this->session->userdata('lead')['query_type']:null;?>
+                <div class="col-md-3">
+                    <select name="query_type" class="form-control form-control-sm">
+                        <option selected disabled>Select Query Type</option>
+                        <option value="General Enquiry" <?php if($query_type == "General Enquiry"){ echo "selected";}?>>General Enquiry</option>
+                        <option value="Promotion/Events" <?php if($query_type == "Promotion/Events"){ echo "selected";}?>>Promotion/Events</option>
+                        <option value="Customer feedback" <?php if($query_type == "Customer feedback"){ echo "selected";}?>>Customer feedback</option>
+                        <option value="Renting/Leasing" <?php if($query_type == "Renting/Leasing"){ echo "selected";}?>>Renting/Leasing</option>
+                        <option value="New Brand Registration" <?php if($query_type == "New Brand Registration"){ echo "selected";}?>>New Brand Registration</option>
+                        <option value="Commercial Buyer" <?php if($query_type == "Commercial Buyer"){ echo "selected";}?>>Commercial Buyer</option>
+                        <option value="Partnership" <?php if($query_type == "Partnership"){ echo "selected";}?>>Partnership</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <input type="submit" name="search" class="btn btn-primary" value="Search">
+                    <input type="submit" name="reset" class="btn btn-danger" value="Reset">
+                </div>
+                
+                </form>
+                </div>
+                </div>
+                </div>
+            </div>
             <div class="col-lg-12">
                 <div class="card card-default">
                 <div class="card-header card-header-border-bottom">
                         <a href="<?=admin_url('export-leads')?>" class="btn btn-primary">Export CSV</a>
-                    </div>
-                    <div class="card-header card-header-border-bottom">
                     </div>
                     <div class="card-body">
                         <table class="table table-hover ">

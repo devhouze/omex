@@ -1,8 +1,9 @@
 $(document).ready(function() {
     const url = $('body').data('url');
+    const base_url = $('body').data('base_url');
 
     $('.show_brand_offers').change(function() {
-        var option = $("input:radio.show_brand_offers:checked").val();
+        var option = $(".show_brand_offers").val();
         if (option == 'Yes') {
             $('.brand_offer').css('display', 'block');
         } else {
@@ -74,6 +75,48 @@ $(document).ready(function() {
         });
     });
 
+    $(".activate_offer").click(function() {
+        if ($(this).is(':checked')) {
+            var status = 0;
+        } else {
+            status = 1;
+        }
+        var id = $(this).val();
+        $.ajax({
+            type: "POST",
+            url: url + 'change-brand-offer-status',
+            data: { id: id, status: status },
+            success: function(data) {
+                var data = $.parseJSON(data);
+                if (data.status > 0) {
+                    $.notify(data.message, "success");
+                } else {
+                    $.notify(data.message, "error");
+                }
+            }
+        });
+    });
+
+    $('.delete_offer').click(function() {
+        var logo_id = $(this).data('id');
+        if (confirm('Do you want to delte this brand offer?')) {
+            $.ajax({
+                type: 'post',
+                url: url + 'delete-brand-offer',
+                data: { logo_id: logo_id },
+                success: function(data) {
+                    var data = $.parseJSON(data);
+                    if (data.status > 0) {
+                        $.notify(data.message, "success");
+                        setTimeout(function() { window.location.reload(); }, 2000);
+                    } else {
+                        $.notify(data.message, "error");
+                    }
+                }
+            });
+        }
+    });
+
     $('.delete_logo').click(function() {
         var logo_id = $(this).data('id');
         if (confirm('Do you want to delte this brand?')) {
@@ -92,6 +135,37 @@ $(document).ready(function() {
                 }
             });
         }
+    });
+
+    $('#brand_offer_management').submit(function(e) {
+        e.preventDefault();
+        var form = $(this);
+        $.ajax({
+            type: 'post',
+            url: form.attr('action'),
+            processData: false,
+            contentType: false,
+            cache: false,
+            async: false,
+            data: new FormData(this),
+            success: function(data) {
+                $('.errors_msg').empty();
+                var data = $.parseJSON(data);
+                if (data.status > 0) {
+                    $.notify(data.message, "success");
+                    setTimeout(function() { window.location.replace(url + 'brand-offer'); }, 2000);
+                } else {
+                    $.notify(data.message, "error");
+                }
+                if (data.error) {
+                    $.each(data.error, function(i, v) {
+                        $('#brand_offer_management input[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
+                        $('#brand_offer_management select[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
+                        $('#brand_offer_management textarea[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
+                    });
+                }
+            }
+        });
     });
 
     $('#brand_management').submit(function(e) {
@@ -116,7 +190,7 @@ $(document).ready(function() {
                 }
                 if (data.error) {
                     $.each(data.error, function(i, v) {
-                        $('#brand_management .' + i + '').html(v);
+                        $('#brand_management input[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                         $('#brand_management select[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                         $('#brand_management textarea[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                     });
@@ -125,34 +199,6 @@ $(document).ready(function() {
         });
     });
 
-    $('#brand_logo_management').submit(function(e) {
-        e.preventDefault();
-        var form = $(this);
-        $.ajax({
-            type: 'post',
-            url: form.attr('action'),
-            processData: false,
-            contentType: false,
-            cache: false,
-            async: false,
-            data: new FormData(this),
-            success: function(data) {
-                $('.errors_msg').empty();
-                var data = $.parseJSON(data);
-                if (data.status > 0) {
-                    $.notify(data.message, "success");
-                    setTimeout(function() { window.location.replace(url + 'brand-logo'); }, 2000);
-                } else {
-                    $.notify(data.message, "error");
-                }
-                if (data.error) {
-                    $.each(data.error, function(i, v) {
-                        $('#brand_logo_management input[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
-                    });
-                }
-            }
-        });
-    });
 
     $('.view_detail').click(function() {
         var brand_id = $(this).data('id');
@@ -199,11 +245,36 @@ $(document).ready(function() {
                 value += '<tr><th colspan="2">Street</th><td colspan="2">' + brand_street + '</td></tr>';
                 value += '<tr><th>Brand Audience</th><td>' + brand_audience + '</td><th>Brand Status</th><td>' + status + '</td></tr>';
                 value += '<tr><th>Show On Home</th><td>' + show_on_home + '</td><th>Alt Tag</th><td>' + logo_message + '</td></tr>';
-                value += '<tr><th colspan="2">About Brand</th><td colspan="2">' + about_brand + '</td></tr>';
                 value += '<tr><th colspan="2">Activate Brand Offer</th><td colspan="2">' + brand_offer_status + '</td></tr>';
-                value += '<tr><th>Offer Name</th><td>' + brand_offer_name + '</td><th>Offer</th><td>' + brand_custom_offer + '</td></tr>';
-                value += '<tr><th>Offer Validity</th><td>' + brand_offer_validity + '</td><th>Offer Alt Tag</th><td>' + brand_offer_thumbnail_message + '</td></tr>';
-                value += '<tr><th colspan="2">About Offer</th><td colspan="2">' + about_brand_offer + '</td></tr>';
+                $('#details').html(value);
+            }
+        });
+    });
+
+
+    $('.offer_detail').click(function() {
+        var offer_id = $(this).data('id');
+        $.ajax({
+            type: 'post',
+            url: url + 'offer-details',
+            data: { offer_id: offer_id },
+            success: function(data) {
+                var data = $.parseJSON(data);
+                var brand_name = data[0].brand_name;
+                var offer_name = data[0].offer_name;
+                var offer_thumbnail = data[0].offer_thumbnail;
+                var thumbnail_alt = data[0].thumbnail_alt;
+                var about_brand = data[0].about_brand;
+                var status = data[0].status;
+                value = '';
+                value += '<table class="table">';
+                value += '<tr><th colspan="4" class="text-center">Brand Offer Details</th></tr>';
+                value += '<tr><th>Brand Name</th><td>' + brand_name + '</td></tr>';
+                value += '<tr><th>Offer Name</th><td>' + offer_name + '</td></tr>';
+                value += "<tr><th>Thumbnail</th><td><img src=" + base_url + 'assets/images/admin/brand-offer/' + offer_thumbnail + " style='width:100px; height:100px'></td></tr>";
+                value += '<tr><th>Thumbnail Alt Tag</th><td>' + thumbnail_alt + '</td></tr>';
+                value += '<tr><th>About Offer</th><td>' + about_brand + '</td></tr>';
+                value += '<tr><th>Status</th><td>' + status + '</td></tr>';
                 $('#details').html(value);
             }
         });

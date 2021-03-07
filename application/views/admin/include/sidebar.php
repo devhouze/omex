@@ -14,16 +14,16 @@
         </div>
         <!-- begin sidebar scrollbar -->
         <div class="sidebar-scrollbar">
-
+        <?php $url = $this->uri->segment(2);?>
           <!-- sidebar menu -->
           <ul class="nav sidebar-inner" id="sidebar-menu">
 
-            <li class="has-sub active expand">
+            <li class="has-sub <?php if($url == "dashboard"){ ?>active expand<?php } ?>">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
                 <i class="mdi mdi-view-dashboard-outline"></i>
                 <span class="nav-text">Dashboard</span> <b class="caret"></b>
               </a>
-              <ul class="collapse show" id="dashboard" data-parent="#sidebar-menu">
+              <ul class="collapse <?php if($url == "dashboard"){ ?>show<?php } ?>" id="dashboard" data-parent="#sidebar-menu">
                 <div class="sub-menu">
 
                   <li class="active">
@@ -44,11 +44,29 @@
             </li>
 
             <li class="has-sub">
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#event" aria-expanded="false" aria-controls="event">
+                <i class="mdi mdi-pencil-box-multiple"></i>
+                <span class="nav-text">Events</span> <b class="caret"></b>
+              </a>
+              <ul class="collapse" id="event" data-parent="#sidebar-menu">
+                <div class="sub-menu">
+
+                  <li>
+                    <a class="sidenav-item-link" href="<?php echo admin_url('events')?>">
+                      <span class="nav-text">Event List</span>
+                    </a>
+                  </li>
+
+                </div>
+              </ul>
+            </li>
+
+            <li class="has-sub <?php if($url == "brands" || $url == "brand-logo" || $url == "brand-offer"){ ?>active expand<?php } ?>">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#brand" aria-expanded="false" aria-controls="brand">
                 <i class="mdi mdi-pencil-box-multiple"></i>
                 <span class="nav-text">Brand</span> <b class="caret"></b>
               </a>
-              <ul class="collapse" id="brand" data-parent="#sidebar-menu">
+              <ul class="collapse <?php if($url == "brands" || $url == "brand-logo" || $url == "brand-offer"){ ?>show<?php } ?>" id="brand" data-parent="#sidebar-menu">
                 <div class="sub-menu">
 
                   <li>
@@ -58,8 +76,8 @@
                   </li>
 
                   <li>
-                    <a class="sidenav-item-link" href="<?php echo admin_url('brand-logo')?>">
-                      <span class="nav-text">Brand Logos</span>
+                    <a class="sidenav-item-link" href="<?php echo admin_url('brand-offer')?>">
+                      <span class="nav-text">Brand Offer</span>
                     </a>
                   </li>
 
@@ -85,23 +103,7 @@
               </ul>
             </li>
 
-            <li class="has-sub">
-              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#event" aria-expanded="false" aria-controls="event">
-                <i class="mdi mdi-pencil-box-multiple"></i>
-                <span class="nav-text">Events</span> <b class="caret"></b>
-              </a>
-              <ul class="collapse" id="event" data-parent="#sidebar-menu">
-                <div class="sub-menu">
-
-                  <li>
-                    <a class="sidenav-item-link" href="<?php echo admin_url('events')?>">
-                      <span class="nav-text">Event List</span>
-                    </a>
-                  </li>
-
-                </div>
-              </ul>
-            </li>
+            
 
 
             <li class="has-sub">
@@ -185,7 +187,7 @@
           </button>
           <!-- search form -->
           <div class="search-form d-none d-lg-inline-block">
-            <div class="input-group">
+            <div class="input-group" style="display:none">
               <button type="button" name="search" id="search-btn" class="btn btn-flat">
                 <i class="mdi mdi-magnify"></i>
               </button>
@@ -196,9 +198,9 @@
             </div>
           </div>
 
-          <div class="navbar-right ">
+          <div class="navbar-right">
             <ul class="nav navbar-nav">
-              <li class="dropdown notifications-menu">
+              <li class="dropdown notifications-menu" style="display:none">
                 <button class="dropdown-toggle" data-toggle="dropdown">
                   <i class="mdi mdi-bell-outline"></i>
                 </button>

@@ -15,9 +15,24 @@ class Gallery_Controller extends MY_Controller
         if ($page != 0) {
 			$page = ($page - 1) * $per_page;
         }
-        $total_count = $this->gm->get_gallery($per_page,$page,true);
+
+        if($this->input->post('search')){
+            $search = array(
+                'media_type'        => trim($this->input->post('media_type')),
+                'status'            => $this->input->post('status')
+            );
+
+            $this->session->set_userdata('gallery',$search);
+        }
+
+        if($this->input->post('reset')){
+            $this->session->unset_userdata('gallery');
+        }
+        $keyword = $this->session->userdata('gallery');
+
+        $total_count = $this->gm->get_gallery($per_page,$page,$keyword,true);
         $data['pagination'] = $this->pagination('gallery',$total_count,$per_page);
-        $data['gallery'] = $this->gm->get_gallery($per_page,$page);
+        $data['gallery'] = $this->gm->get_gallery($per_page,$page,$keyword);
         $end = (($data['gallery'])?count($data['gallery']):0) + (($page) ? $page : 0);
         $start = (count($data['gallery']) > 0)?($page + 1):0;
         $data['result_count'] = "Showing " . $start . " - " . $end . " of " . $total_count . " Results";

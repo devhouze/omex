@@ -89,13 +89,14 @@ $route['admin/edit-brands/(:num)'] = 'admin/Brands_Controller/edit_brand/$1';
 $route['admin/delete-brand'] = 'admin/Brands_Controller/delete_brand';
 $route['admin/brand-details'] = 'admin/Brands_Controller/get_brand_details';
 
-
-$route['admin/brand-logo'] = 'admin/Brands_Controller/brand_logo_list';
-$route['admin/add-brands-logo'] = 'admin/Brands_Controller/add_brand_logo';
-$route['admin/edit-brands-logo/(:num)'] = 'admin/Brands_Controller/edit_brand_logo/$1';
-$route['admin/delete-brand-logo'] = 'admin/Brands_Controller/delete_brand_logo';
+// Brand Offer routes
+$route['admin/brand-offer'] = 'admin/Brands_Controller/brand_offer_list';
+$route['admin/add-brands-offer'] = 'admin/Brands_Controller/add_brand_offer';
+$route['admin/edit-brands-offer/(:num)'] = 'admin/Brands_Controller/edit_brand_offer/$1';
+$route['admin/delete-brand-offer'] = 'admin/Brands_Controller/delete_brand_offer';
 $route['admin/change-brand-status'] = 'admin/Brands_Controller/change_brand_status';
-$route['admin/change-brand-logo-status'] = 'admin/Brands_Controller/change_brand_logo_status';
+$route['admin/change-brand-offer-status'] = 'admin/Brands_Controller/change_brand_offer_status';
+$route['admin/offer-details'] = 'admin/Brands_Controller/get_offer_details';
 
 // Users Routes
 $route['admin/users'] = 'admin/Users_Controller/users_list';
@@ -131,6 +132,7 @@ $route['admin/change-banner-status'] = 'admin/Banner_Controllers/change_banner_s
 $route['admin/get-banner-details'] = "admin/Banner_Controllers/get_banner_details";
 // Gallery routes
 $route['admin/gallery'] = 'admin/Gallery_Controller/gallery_list';
+$route['admin/gallery/(:num)'] = 'admin/Gallery_Controller/gallery_list/$1';
 $route['admin/add-gallery'] = 'admin/Gallery_Controller/add_gallery';
 $route['admin/change-gallery-status'] = 'admin/Gallery_Controller/change_gallery_status';
 $route['admin/delete-media'] = 'admin/Gallery_Controller/delete_media';

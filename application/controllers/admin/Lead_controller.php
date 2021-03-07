@@ -14,9 +14,25 @@ class Lead_controller extends MY_Controller
         if ($page != 0) {
 			$page = ($page - 1) * $per_page;
         }
-        $total_count = $this->lm->get_leads($per_page,$page,true);
+
+        if($this->input->post('search')){
+            $search = array(
+                'name'              => trim($this->input->post('name')),
+                'email'             => trim($this->input->post('email')),
+                'query_type'        => $this->input->post('query_type')
+            );
+
+            $this->session->set_userdata('lead',$search);
+        }
+
+        if($this->input->post('reset')){
+            $this->session->unset_userdata('lead');
+        }
+        $keyword = $this->session->userdata('lead');
+        
+        $total_count = $this->lm->get_leads($per_page,$page,$keyword,true);
         $data['pagination'] = $this->pagination('leads',$total_count,$per_page);
-        $data['leads'] = $this->lm->get_leads($per_page,$page);
+        $data['leads'] = $this->lm->get_leads($per_page,$page,$keyword);
         $end = (($data['leads'])?count($data['leads']):0) + (($page) ? $page : 0);
         $start = (count($data['leads']) > 0)?($page + 1):0;
         $data['result_count'] = "Showing " . $start . " - " . $end . " of " . $total_count . " Results";
