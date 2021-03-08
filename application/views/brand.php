@@ -10,7 +10,7 @@
                             <div class="carousel-item active">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bs1.jpg" alt="" class="">
                             </div>
-                            
+
                         </div>
                         <div class="brand-lgoo">
                             <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/barnd-logo.svg" alt="" class="">
@@ -25,18 +25,18 @@
                             </button>
                         </div>
                     </div>
-                    <div id="carouselExampleIndicatorsmob" class="carousel slide positon-relative d-md-none d-blockbs" data-bs-ride="carousel">
+                    <div id="carouselExampleIndicatorsmob" class="carousel slide positon-relative d-md-none d-block" data-bs-ride="carousel">
 
                         <div class="carousel-inner postion-relative ">
                             <div class="carousel-item active">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bs1-m.jpg" alt="" class="">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bs1-m.jpg" alt="" class="w-100">
                             </div>
-                            
+
                         </div>
                         <div class="brand-lgoo">
                             <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/barnd-logo.svg" alt="" class="">
                         </div>
-                        
+
                         <div class="crasol-btn d-none">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsmob" data-bs-slide="prev">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">

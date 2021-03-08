@@ -20,6 +20,7 @@ header.header.sticky {
     z-index: 99;
     left: 0;
     right: 0;
+    top: 0;
     background: white;
     box-shadow: 0 4px 20px rgb(45 48 71 / 10%);
 }
@@ -225,7 +226,7 @@ footer .menu li+li {
 }
 
 .tab-area ul {
-    margin: 15px 114px;
+    margin: 15px 244px;
 }
 
 .tab-area .tab-content {
@@ -268,6 +269,14 @@ footer .menu li+li {
     position: relative;
     width: unset !important;
     opacity: 9;
+}
+
+a.banner-link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 
 .explore-more figure {
@@ -728,7 +737,7 @@ footer .menu li+li {
 
 .athens-page .looking-out h2 {
     color: #083D68;
-    text-shadow: 5px 0px 0px #5A946E;
+    text-shadow: 3px 0px 0px #5A946E;
 }
 
 .athens-page .day {
@@ -755,10 +764,14 @@ footer .menu li+li {
 .live-in-word .slider-counter {
     position: absolute;
     left: 42%;
-    bottom: 110px;
+    bottom: 80px;
     font-size: 22px;
     color: var(--ath);
     z-index: 9;
+}
+
+.barnd-page .live-in-word .slider-counter {
+    bottom: 110px;
 }
 
 .live-in-word .slider-counter span {
@@ -942,12 +955,12 @@ footer .menu li+li {
 
 .hongkong-page .looking-out h2 {
     color: #F99076;
-    text-shadow: 5px 0 0 #F25832;
+    text-shadow: 3px 0 0 #F25832;
 }
 
 .amsterdam-page .looking-out h2 {
     color: #92BCD7;
-    text-shadow: 5px 0 0 #669BBC;
+    text-shadow: 3px 0 0 #669BBC;
 }
 
 .san-page .live-in-word .slider-counter,
@@ -985,7 +998,7 @@ footer .menu li+li {
 }
 
 .san-page .looking-out h2 {
-    text-shadow: 5px 0px 0px #92193F;
+    text-shadow: 3px 0px 0px #92193F;
     color: #d94a77;
 }
 
@@ -1025,7 +1038,7 @@ footer .menu li+li {
 
 .london-page .looking-out h2 {
     color: #FC536B;
-    text-shadow: 5px 0 0 #CC1F38;
+    text-shadow: 3px 0 0 #CC1F38;
 }
 
 .paris-page .live-in-word .slider-counter,
@@ -1064,7 +1077,7 @@ footer .menu li+li {
 
 .paris-page .looking-out h2 {
     color: #8B5A79;
-    text-shadow: 5px 0 0 #5B1545;
+    text-shadow: 3px 0 0 #5B1545;
 }
 
 
@@ -1450,7 +1463,7 @@ footer .menu li+li {
 
 .event-page .looking-out h2 {
     color: #083D68;
-    text-shadow: 5px 0px 0px #5A946E;
+    text-shadow: 3px 0px 0px #5A946E;
 }
 
 .event-page .day {
@@ -1601,6 +1614,9 @@ footer .menu li+li {
 }
 
 @media only screen and (max-width: 600px) {
+    .barnd-page .similar.barnd {
+        padding-top: 50px;
+    }
     .paris-page .looking-out h2 {
         text-shadow: 2px 0 0 #5B1545;
     }
@@ -1793,19 +1809,18 @@ footer .menu li+li {
         font-size: 14px;
     }
     .looking-out h2 {
-        font-size: 36px;
+        font-size: 26px;
         display: table;
-        margin: 0 auto;
         text-shadow: -2px 0px 0px #cc1f38;
         line-height: 45px;
     }
     .time {
-        font-size: 16px;
+        font-size: 23px;
         display: table;
         margin: 0 auto;
     }
     .day {
-        font-size: 24px;
+        font-size: 18px;
         display: table;
         margin: 0 auto;
     }
@@ -1817,7 +1832,7 @@ footer .menu li+li {
     .box-calander {
         margin-left: auto;
         margin-right: auto;
-        height: 160px;
+        width: 210px;
     }
     .exploer-btn img {
         width: 50px;
@@ -1828,7 +1843,7 @@ footer .menu li+li {
         padding: 12px;
     }
     .right-col {
-        font-size: 36px;
+        font-size: 26px;
     }
     .left-col span {
         font-size: 20px;
@@ -1838,9 +1853,6 @@ footer .menu li+li {
         font-size: 14px;
         padding: 0 40px;
         height: calc(100% - 90px);
-    }
-    .top-row {
-        height: 90px;
     }
     .looking-out .primary-btn {
         margin: 100px auto 0px auto;
@@ -1861,6 +1873,8 @@ footer .menu li+li {
         top: 0;
         bottom: 0;
         padding: 40px;
+        position: absolute;
+        height: 100%;
     }
     .explore-more .col-md-4+.col-md-4 {
         margin-top: 50px;

@@ -169,7 +169,26 @@
                     <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1s"></div>
                 </div>
             </div>
-           <?php include('common_events.php');?>
+            <div class="row mt-4 justify-content-center">
+                <div class="col-md-10">
+                    <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
+                    <?php include('common_events.php');?>
+                        <div class="d-flex position-absolute">
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/london-left.svg" alt="" class="w-100">
+                            </a>
+                            <a class="carousel-control-next ml-40" href="#carouselExampleControls" role="button" data-bs-slide="next">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/london-right.svg" alt="" class="w-100">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <a href="" class="primary-btn d-inline-block mt-36">KNOW MORE</a>
+                </div>
+            </div>
             
         </div>
     </div>
