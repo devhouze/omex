@@ -10,13 +10,11 @@
                             <div class="carousel-item active">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bs1.jpg" alt="" class="">
                             </div>
-                            <div class="carousel-item">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bs1.jpg" alt="" class="">
-                            </div>
+                            
                         </div>
 
                         <div class="bg-color" style="background-color: #5A946E;"></div>
-                        <div class="crasol-btn">
+                        <div class="crasol-btn d-none">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
                             </button>
@@ -31,13 +29,11 @@
                             <div class="carousel-item active">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bs1-m.jpg" alt="" class="">
                             </div>
-                            <div class="carousel-item">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bs1-m.jpg" alt="" class="">
-                            </div>
+                           
                         </div>
 
 
-                        <div class="crasol-btn">
+                        <div class="crasol-btn d-none">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsmob" data-bs-slide="prev">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
                             </button>
