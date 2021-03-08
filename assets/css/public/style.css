@@ -283,12 +283,12 @@ footer .menu li+li {
 
 .looking-out h2 {
     color: #DA6170;
-    font-size: 80px;
+    font-size: 40px;
     font-family: 'Helvetica';
-    line-height: 90px;
     margin-bottom: 0;
     margin-top: 0;
-    text-shadow: 5px 0px 0px #cc1f38;
+    text-shadow: 3px 0px 0px #cc1f38;
+    margin-right: 10px;
 }
 
 .looking-out h2 span {
@@ -300,20 +300,20 @@ footer .menu li+li {
 
 .time {
     color: var(--h-color);
-    font-size: 30px;
+    font-size: 36px;
 }
 
 .day {
-    font-size: 36px;
+    font-size: 28px;
     color: #CC1F38;
 }
 
 .box-calander {
-    height: 200px;
     overflow: hidden;
     border: 3.10766px solid #CC1F38;
     width: 330px;
-    margin-top: 58px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .top-row {
@@ -624,8 +624,11 @@ footer .menu li+li {
 .right-col {
     font-size: 40px;
     color: #083D68;
-    margin-left: 20px;
+    margin-left: 10px;
     font-weight: 400;
+    width: calc(100% - 50px);
+    display: flex;
+    align-items: center;
 }
 
 .portugal-page .primary-btn {
@@ -730,10 +733,6 @@ footer .menu li+li {
 
 .athens-page .day {
     color: var(--ath);
-}
-
-.day+img {
-    width: 298px;
 }
 
 .athens-page .top-row,
@@ -1816,7 +1815,6 @@ footer .menu li+li {
         margin: 7px auto 30px auto;
     }
     .box-calander {
-        width: 300px;
         margin-left: auto;
         margin-right: auto;
         height: 160px;

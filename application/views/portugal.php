@@ -178,8 +178,8 @@
                                 <div class="col-md-8">
                                     <div class="d-md-none d-block mobile-look">
                                         <h2 class="position-relative">23-24</h2>
-                                        <div class="time">7 pm - 9 pm</div>
-                                        <div class="day">SAT & SUN</div>
+                                        <div class="time text-center">7 pm - 9 pm</div>
+                                        <div class="day text-center">SAT & SUN</div>
                                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg" alt="">
                                     </div>
                                     <img src="<?php echo BASE_URL(); ?>assets/images/public/home/leftslide.jpg" alt="" class="w-100">
@@ -189,8 +189,8 @@
                                     <div class="pl-12">
                                         <div class="d-md-block d-none">
                                             <h2 class="position-relative">23-24</h2>
-                                            <div class="time">7 pm - 9 pm</div>
-                                            <div class="day">SAT & SUN</div>
+                                            <div class="time text-center">7 pm - 9 pm</div>
+                                            <div class="day text-center">SAT & SUN</div>
                                             <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg" alt="">
                                         </div>
                                         <div class="box-calander">
@@ -215,8 +215,8 @@
                                 <div class="col-md-8">
                                     <div class="d-md-none d-block mobile-look">
                                         <h2 class="position-relative">23-24</h2>
-                                        <div class="time">7 pm - 9 pm</div>
-                                        <div class="day">SAT & SUN</div>
+                                        <div class="time text-center">7 pm - 9 pm</div>
+                                        <div class="day text-center">SAT & SUN</div>
                                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg" alt="">
                                     </div>
                                     <img src="<?php echo BASE_URL(); ?>assets/images/public/home/leftslide.jpg" alt="" class="w-100">
@@ -226,8 +226,8 @@
                                     <div class="pl-12">
                                         <div class="d-md-block d-none">
                                             <h2 class="position-relative">23-24</h2>
-                                            <div class="time">7 pm - 9 pm</div>
-                                            <div class="day">SAT & SUN</div>
+                                            <div class="time text-center">7 pm - 9 pm</div>
+                                            <div class="day text-center">SAT & SUN</div>
                                             <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg" alt="">
                                         </div>
                                         <div class="box-calander">
