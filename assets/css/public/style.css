@@ -3,6 +3,10 @@ img {
     height: auto;
 }
 
+header.header {
+    transition: 0.5s all;
+}
+
 header.sticky .main-menu {
     padding: 5px 0;
 }
@@ -752,7 +756,7 @@ footer .menu li+li {
 .live-in-word .slider-counter {
     position: absolute;
     left: 42%;
-    bottom: 150px;
+    bottom: 110px;
     font-size: 22px;
     color: var(--ath);
     z-index: 9;
@@ -1258,6 +1262,35 @@ footer .menu li+li {
 
 .barnd-page .slider-counter {
     color: var(--h-color);
+}
+
+.barnd-page .live-in-word figure span {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    text-transform: uppercase;
+    background: #00000099;
+    top: 43%;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    padding: 4px 10px;
+    transition: 0.5s all;
+    opacity: 0;
+}
+
+.barnd-page .similar.barnd {
+    padding-top: 250px;
+}
+
+.barnd-page .live-in-word figure {
+    position: relative;
+    cursor: pointer;
+}
+
+.barnd-page .live-in-word figure:hover span {
+    opacity: 9;
 }
 
 .barnd-page .slider-counter span {
