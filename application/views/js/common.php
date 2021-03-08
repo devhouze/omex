@@ -1,7 +1,7 @@
 <script>
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
-        if (scroll >= 41) {
+        if (scroll >= 150) {
             //clearHeader, not clearheader - caps H
             $(".header").addClass("sticky");
         } else {
