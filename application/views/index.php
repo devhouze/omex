@@ -38,7 +38,7 @@
                 <div class="owl-carousel owl-theme top-brand">
                     <?php if(!empty($brand_logo)){ foreach($brand_logo as $logo){?>
                     <div class="item">
-                        <img src="<?php echo base_url('assets/images/public/home/'.$logo['brand_logo']); ?>" alt="<?=$logo['alt_comment'];?>" class="d-table mx-auto">
+                        <img src="<?php echo base_url('assets/images/public/home/'.$logo['brand_logo']); ?>" alt="<?=$logo['banner_comment'];?>" class="d-table mx-auto">
                     </div>
                     <?php } } ?>
                 </div>
