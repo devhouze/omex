@@ -10,15 +10,13 @@
                             <div class="carousel-item active">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bs1.jpg" alt="" class="">
                             </div>
-                            <div class="carousel-item">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bs1.jpg" alt="" class="">
-                            </div>
+                            
                         </div>
                         <div class="brand-lgoo">
                             <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/barnd-logo.svg" alt="" class="">
                         </div>
                         <div class="bg-color" style="background-color: #5A946E;"></div>
-                        <div class="crasol-btn">
+                        <div class="crasol-btn d-none">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
                             </button>
@@ -33,15 +31,13 @@
                             <div class="carousel-item active">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bs1-m.jpg" alt="" class="">
                             </div>
-                            <div class="carousel-item">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bs1-m.jpg" alt="" class="">
-                            </div>
+                            
                         </div>
                         <div class="brand-lgoo">
                             <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/barnd-logo.svg" alt="" class="">
                         </div>
                         
-                        <div class="crasol-btn">
+                        <div class="crasol-btn d-none">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsmob" data-bs-slide="prev">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
                             </button>
@@ -123,48 +119,48 @@
                         <div class="item">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b1.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b2.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><span>Nike</span> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b1.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><span>Nike</span> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b2.jpg" alt="" class="d-table mx-auto"></figure>
                                 </div>
                                 <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b3.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b4.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><span>Nike</span> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b3.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><span>Nike</span> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b4.jpg" alt="" class="d-table mx-auto"></figure>
                                 </div>
                                 <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b5.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b6.jpg" alt="" class="d-table mx-auto"></figure>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b1.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b2.jpg" alt="" class="d-table mx-auto"></figure>
-                                </div>
-                                <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b3.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b4.jpg" alt="" class="d-table mx-auto"></figure>
-                                </div>
-                                <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b5.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b6.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><span>Nike</span> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b5.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><span>Nike</span> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b6.jpg" alt="" class="d-table mx-auto"></figure>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b1.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b2.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><span>Nike</span> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b1.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><span>Nike</span> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b2.jpg" alt="" class="d-table mx-auto"></figure>
                                 </div>
                                 <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b3.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b4.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><span>Nike</span> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b3.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><span>Nike</span> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b4.jpg" alt="" class="d-table mx-auto"></figure>
                                 </div>
                                 <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b5.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b6.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><span>Nike</span> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b5.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><span>Nike</span> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b6.jpg" alt="" class="d-table mx-auto"></figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <figure><span>Nike</span> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b1.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><span>Nike</span> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b2.jpg" alt="" class="d-table mx-auto"></figure>
+                                </div>
+                                <div class="col-md-4">
+                                    <figure><span>Nike</span> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b3.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><span>Nike</span> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b4.jpg" alt="" class="d-table mx-auto"></figure>
+                                </div>
+                                <div class="col-md-4">
+                                    <figure><span>Nike</span> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b5.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><span>Nike</span> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/b6.jpg" alt="" class="d-table mx-auto"></figure>
                                 </div>
                             </div>
                         </div>

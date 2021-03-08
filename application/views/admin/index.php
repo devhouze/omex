@@ -50,7 +50,7 @@
           </div>
 
 
-          <div class="row">
+          <div class="row" style="display:none">
             <div class="col-xl-8 col-md-12">
               <!-- Sales Graph -->
               <div class="card card-default" data-scroll-height="675">
@@ -108,7 +108,7 @@
             </div>
           </div>
 
-          <div class="row">
+          <div class="row" style="display:none">
             <div class="col-xl-4 col-lg-6 col-12">
 
               <!-- Polar and Radar Chart -->
@@ -304,7 +304,7 @@
             </div>
           </div>
 
-          <div class="row">
+          <div class="row" style="display:none">
             <div class="col-12">
               <!-- Recent Order Table -->
               <div class="card card-table-border-none" id="recent-orders">
@@ -460,7 +460,7 @@
             </div>
           </div>
 
-          <div class="row">
+          <div class="row" style="display:none">
             <div class="col-xl-6">
               <!-- To Do list -->
               <div class="card card-default todo-table" id="todo" data-scroll-height="550">
@@ -565,7 +565,7 @@
             </div>
           </div>
 
-          <div class="row">
+          <div class="row" style="display:none">
             <div class="col-xl-5">
               <!-- New Customers -->
               <div class="card card-table-border-none" data-scroll-height="580">
@@ -765,8 +765,8 @@
       <footer class="footer mt-auto">
         <div class="copyright bg-white">
           <p>
-            &copy; <span id="copy-year">2019</span> Copyright Sleek Dashboard Bootstrap Template by
-            <a class="text-primary" href="http://www.iamabdus.com/" target="_blank">Abdus</a>.
+            &copy; <span id="copy-year">2021</span> Copyright Omaxe World Street
+            <!-- <a class="text-primary" href="http://www.iamabdus.com/" target="_blank">Abdus</a>. -->
           </p>
         </div>
         <script>

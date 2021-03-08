@@ -14,9 +14,25 @@ class Lead_controller extends MY_Controller
         if ($page != 0) {
 			$page = ($page - 1) * $per_page;
         }
-        $total_count = $this->lm->get_leads($per_page,$page,true);
+
+        if($this->input->post('search')){
+            $search = array(
+                'name'              => trim($this->input->post('name')),
+                'email'             => trim($this->input->post('email')),
+                'query_type'        => $this->input->post('query_type')
+            );
+
+            $this->session->set_userdata('lead',$search);
+        }
+
+        if($this->input->post('reset')){
+            $this->session->unset_userdata('lead');
+        }
+        $keyword = $this->session->userdata('lead');
+        
+        $total_count = $this->lm->get_leads($per_page,$page,$keyword,true);
         $data['pagination'] = $this->pagination('leads',$total_count,$per_page);
-        $data['leads'] = $this->lm->get_leads($per_page,$page);
+        $data['leads'] = $this->lm->get_leads($per_page,$page,$keyword);
         $end = (($data['leads'])?count($data['leads']):0) + (($page) ? $page : 0);
         $start = (count($data['leads']) > 0)?($page + 1):0;
         $data['result_count'] = "Showing " . $start . " - " . $end . " of " . $total_count . " Results";
@@ -35,5 +51,27 @@ class Lead_controller extends MY_Controller
         $data = $this->lm->get_data_row_array('tbl_leads',"message",['id' => $lead_id]);
         echo json_encode($data);
     }
+
+    public function exportCSV(){ 
+        // file name 
+        $filename = 'leads_'.date('Ymd').'.csv'; 
+        header("Content-Description: File Transfer"); 
+        header("Content-Disposition: attachment; filename=$filename"); 
+        header("Content-Type: application/csv; ");
+        
+        // get data 
+        $lead_data = $this->lm->get_data_array('tbl_leads');
+     
+        // file creation 
+        $file = fopen('php://output', 'w');
+      
+        $header = array("S.No","Name","Email","Contact","Source","Event Name","Query Type","Message","Registered At"); 
+        fputcsv($file, $header);
+        foreach ($lead_data as $key=>$line){ 
+          fputcsv($file,$line); 
+        }
+        fclose($file); 
+        exit; 
+       }
 }
 ?>

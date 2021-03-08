@@ -14,16 +14,16 @@
         </div>
         <!-- begin sidebar scrollbar -->
         <div class="sidebar-scrollbar">
-
+        <?php $url = $this->uri->segment(2);?>
           <!-- sidebar menu -->
           <ul class="nav sidebar-inner" id="sidebar-menu">
 
-            <li class="has-sub active expand">
+            <li class="has-sub <?php if($url == "dashboard"){ ?>active expand<?php } ?>">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
                 <i class="mdi mdi-view-dashboard-outline"></i>
                 <span class="nav-text">Dashboard</span> <b class="caret"></b>
               </a>
-              <ul class="collapse show" id="dashboard" data-parent="#sidebar-menu">
+              <ul class="collapse <?php if($url == "dashboard"){ ?>show<?php } ?>" id="dashboard" data-parent="#sidebar-menu">
                 <div class="sub-menu">
 
                   <li class="active">
@@ -44,11 +44,29 @@
             </li>
 
             <li class="has-sub">
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#event" aria-expanded="false" aria-controls="event">
+                <i class="mdi mdi-pencil-box-multiple"></i>
+                <span class="nav-text">Events</span> <b class="caret"></b>
+              </a>
+              <ul class="collapse" id="event" data-parent="#sidebar-menu">
+                <div class="sub-menu">
+
+                  <li>
+                    <a class="sidenav-item-link" href="<?php echo admin_url('events')?>">
+                      <span class="nav-text">Event List</span>
+                    </a>
+                  </li>
+
+                </div>
+              </ul>
+            </li>
+
+            <li class="has-sub <?php if($url == "brands" || $url == "brand-logo" || $url == "brand-offer"){ ?>active expand<?php } ?>">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#brand" aria-expanded="false" aria-controls="brand">
                 <i class="mdi mdi-pencil-box-multiple"></i>
                 <span class="nav-text">Brand</span> <b class="caret"></b>
               </a>
-              <ul class="collapse" id="brand" data-parent="#sidebar-menu">
+              <ul class="collapse <?php if($url == "brands" || $url == "brand-logo" || $url == "brand-offer"){ ?>show<?php } ?>" id="brand" data-parent="#sidebar-menu">
                 <div class="sub-menu">
 
                   <li>
@@ -58,8 +76,8 @@
                   </li>
 
                   <li>
-                    <a class="sidenav-item-link" href="<?php echo admin_url('brand-logo')?>">
-                      <span class="nav-text">Brand Logos</span>
+                    <a class="sidenav-item-link" href="<?php echo admin_url('brand-offer')?>">
+                      <span class="nav-text">Brand Offer</span>
                     </a>
                   </li>
 
@@ -85,23 +103,7 @@
               </ul>
             </li>
 
-            <li class="has-sub">
-              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#event" aria-expanded="false" aria-controls="event">
-                <i class="mdi mdi-pencil-box-multiple"></i>
-                <span class="nav-text">Events</span> <b class="caret"></b>
-              </a>
-              <ul class="collapse" id="event" data-parent="#sidebar-menu">
-                <div class="sub-menu">
-
-                  <li>
-                    <a class="sidenav-item-link" href="<?php echo admin_url('events')?>">
-                      <span class="nav-text">Event List</span>
-                    </a>
-                  </li>
-
-                </div>
-              </ul>
-            </li>
+            
 
 
             <li class="has-sub">
@@ -185,7 +187,7 @@
           </button>
           <!-- search form -->
           <div class="search-form d-none d-lg-inline-block">
-            <div class="input-group">
+            <div class="input-group" style="display:none">
               <button type="button" name="search" id="search-btn" class="btn btn-flat">
                 <i class="mdi mdi-magnify"></i>
               </button>
@@ -196,9 +198,9 @@
             </div>
           </div>
 
-          <div class="navbar-right ">
+          <div class="navbar-right">
             <ul class="nav navbar-nav">
-              <li class="dropdown notifications-menu">
+              <li class="dropdown notifications-menu" style="display:none">
                 <button class="dropdown-toggle" data-toggle="dropdown">
                   <i class="mdi mdi-bell-outline"></i>
                 </button>
@@ -243,24 +245,24 @@
               <!-- User Account -->
               <li class="dropdown user-menu">
                 <button href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                  <img src="<?php echo BASE_URL(); ?>assets/images/admin/user.png" class="user-image" alt="User Image" />
-                  <span class="d-none d-lg-inline-block">Abdus Salam</span>
+                  <img src="<?php echo base_url(); ?>assets/images/admin/user.png" class="user-image" alt="User Image" />
+                  <span class="d-none d-lg-inline-block"><?=$this->session->userdata('admin_details')['name']?></span>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-right">
                   <!-- User image -->
                   <li class="dropdown-header">
-                    <img src="<?php echo BASE_URL(); ?>assets/images/admin/user.png" class="img-circle" alt="User Image" />
+                    <img src="<?php echo base_url(); ?>assets/images/admin/user.png" class="img-circle" alt="User Image" />
                     <div class="d-inline-block">
-                      Abdus Salam <small class="pt-1">iamabdus@gmail.com</small>
+                      <?=$this->session->userdata('admin_details')['name']?> <small class="pt-1"><?=$this->session->userdata('admin_details')['email']?></small>
                     </div>
                   </li>
 
                   <li>
-                    <a href="user-profile.html">
+                    <a href="<?=admin_url('profile');?>">
                       <i class="mdi mdi-account"></i> My Profile
                     </a>
                   </li>
-                  <li>
+                  <!-- <li>
                     <a href="#">
                       <i class="mdi mdi-email"></i> Message
                     </a>
@@ -270,7 +272,7 @@
                   </li>
                   <li class="right-sidebar-in">
                     <a href="javascript:0"> <i class="mdi mdi-settings"></i> Setting </a>
-                  </li>
+                  </li> -->
 
                   <li class="dropdown-footer">
                     <a href="<?php echo base_url('admin/logout');?>"> <i class="mdi mdi-logout"></i> Log Out </a>

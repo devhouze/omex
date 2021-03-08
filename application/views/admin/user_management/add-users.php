@@ -49,7 +49,7 @@ $email = ($users)?$users->email:'';
                             </div>
                                 
                             <button class="btn btn-primary" type="submit" id="submit">Save</button>
-                            <button class="btn btn-danger" type="button" onclick="window.location.replace('<?=admin_url('users');?>')">Cancel</button>
+                            <button class="btn btn-danger" type="button" onclick="window.location.replace('<?=admin_url('users');?>')">Go Back</button>
                         </form>
                     </div>
                 </div>

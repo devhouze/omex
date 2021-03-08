@@ -1,4 +1,4 @@
-
+<script src="<?php echo base_url('assets/js/admin/login.js')?>"></script>
   <body class="" id="body" data-url="<?php echo base_url();?>">
       <div class="container d-flex flex-column justify-content-between vh-100">
       <div class="row justify-content-center mt-5">
@@ -21,7 +21,7 @@
                     <input type="email" class="form-control input-lg" placeholder="Enter Your Email" name="email">
                   </div>
                   <div class="col-md-12">
-                    <button type="submit" class="btn btn-lg btn-primary btn-block mb-4">Sign In</button>
+                    <button type="submit" class="btn btn-lg btn-primary btn-block mb-4">Reset Password</button>
                   </div>
                 </div>
               </form>

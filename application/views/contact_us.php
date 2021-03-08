@@ -1,3 +1,4 @@
+<script src="<?=base_url('assets/js/public/contact.js');?>"></script>
 <div class="contactus-page ">
     <div class="form-area py-60">
         <div class="container">
@@ -9,55 +10,55 @@
                                 <h1 class="fz40 pr-font text-white d-table mx-auto text-center">Get in touch</h1>
                             </div>
                         </div>
-                        <form action="">
+                        <form action="<?=base_url('contact-us')?>" method="post" id="contact">
                             <div class="row justify-content-center mt-5">
                                 <div class="col-md-4 pe-md-5">
                                     <h3 class="pr-font fz24 fz18-sm text-white mb-30 mb-10-sm">Name*</h3>
                                     <div class="form-floating">
 
-                                        <input type="email" class="form-control" id="floatingInput" placeholder="Your Name">
+                                        <input type="text" name="name" class="form-control" id="floatingInput" placeholder="Your Name">
                                         <label for="floatingInput">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <h3 class="pr-font fz24 fz18-sm text-white mb-30 mb-10-sm">Email Address*</h3>
                                     <div class="form-floating">
-                                        <input type="email" autocomplete="false" class="form-control" id="floatingInput" placeholder="Your Email">
+                                        <input type="email" name="email" autocomplete="false" class="form-control" id="floatingInput" placeholder="Your Email">
                                         <label for="floatingInput">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <h3 class="pr-font fz24 fz18-sm text-white mb-30 mb-10-sm">Mobile Number*</h3>
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="floatingInput" placeholder="Your Number">
+                                        <input type="text" name="contact" class="form-control" id="floatingInput" placeholder="Your Number">
                                         <label for="floatingInput">Your Number</label>
                                     </div>
                                 </div>
 
-
-
-
                             </div>
                             <div class="row justify-content-center mt-md-5">
                                 <div class="col-md-4 pe-md-5">
-                                    <h3 class="pr-font fz24 fz18-sm text-white mb-30 mb-10-sm">Name*</h3>
+                                    <h3 class="pr-font fz24 fz18-sm text-white mb-30 mb-10-sm">Query Type*</h3>
                                     <div class="form-floating">
 
                                         <div class="form-floating">
-                                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                                                <option selected>Category</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
+                                            <select class="form-select" name="query_type" id="floatingSelect" aria-label="Floating label select example">
+                                                <option selected disabled>Select One</option>
+                                                <option value="General Enquiry">General Enquiry</option>
+                                                <option value="Promotion/Events">Promotion/Events</option>
+                                                <option value="Customer feedback">Customer feedback</option>
+                                                <option value="Renting/Leasing">Renting/Leasing</option>
+                                                <option value="New Brand Registration">New Brand Registration</option>
+                                                <option value="Commercial Buyer">Commercial Buyer</option>
+                                                <option value="Partnership">Partnership</option>
                                             </select>
-
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-7">
                                     <h3 class="pr-font fz24 fz18-sm text-white mb-30 mb-10-sm">Message*</h3>
                                     <div class="form-floating">
-                                        <textarea autocomplete="false" class="form-control" id="floatingInput" placeholder="Your Message"></textarea>
+                                        <textarea name="message" autocomplete="false" class="form-control" id="floatingInput" placeholder="Your Message"></textarea>
                                         <label for="floatingInput">Your Message</label>
                                     </div>
                                 </div>
@@ -90,16 +91,16 @@
             <div class="row mt-5 d-flex flex-fill">
                 <div class="col-md-7 d-flex flex-fill">
                     <figure class="pr-5 mb-0">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/cmap.jpg" alt="">
+                        <img src="<?php echo base_url(); ?>assets/images/public/street/cmap.jpg" alt="">
                     </figure>
                 </div>
                 <div class="col-md-5 mt-md-0 mt-3 d-flex flex-fill justify-content-center">
                     <div class="card py-40 px-40 px-20-sm border d-flex flex-fill">
                             <div class="contect-content">
                                 <ul>
-                                    <li><img src="<?php echo BASE_URL(); ?>assets/images/public/home/ccall.svg" alt="">+91-9015222222</li>
-                                    <li><img src="<?php echo BASE_URL(); ?>assets/images/public/home/cmail.svg" alt="">hello@worldstreet.com</li>
-                                    <li><img src="<?php echo BASE_URL(); ?>assets/images/public/home/cmap.svg" alt="">Omaxe Marketing & Sales Office (World Street, Sector 79, Faridabad, Haryana</li>
+                                    <li><img src="<?php echo base_url(); ?>assets/images/public/home/ccall.svg" alt="">+91-9015222222</li>
+                                    <li><img src="<?php echo base_url(); ?>assets/images/public/home/cmail.svg" alt="">hello@worldstreet.com</li>
+                                    <li><img src="<?php echo base_url(); ?>assets/images/public/home/cmap.svg" alt="">Omaxe Marketing & Sales Office (World Street, Sector 79, Faridabad, Haryana</li>
                                     
                                 </ul>
                             </div>
