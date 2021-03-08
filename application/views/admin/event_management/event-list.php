@@ -18,13 +18,49 @@
             </nav>
 
         </div>
-
         <div class="row">
-            
+            <div class="col-lg-12">
+                <div class="card card-default">
+                <div class="card-body">
+                <form action="" method="post">
+                <div class="form-row">
+                <div class="col-md-3">
+                        <input type="text" value="<?=$this->session->userdata('event')['event_name'];?>" name="name" placeholder="Search By Name" class="form-control form-control-sm">
+                </div>
+                
+                <?php $status = (!empty($this->session->userdata('event')))?$this->session->userdata('event')['status']:null;?>
+                <?php $event_type = (!empty($this->session->userdata('event')))?$this->session->userdata('event')['event_type']:null;?>
+                <div class="col-md-3">
+                    <select name="status" class="form-control form-control-sm">
+                        <option selected disabled>Select Status</option>
+                        <option value="0" <?php if($status == "0"){ echo "selected";}?>>Active</option>
+                        <option value="1" <?php if($status == "1"){ echo "selected";}?>>Inactive</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <select name="event_type" class="form-control form-control-sm">
+                        <option selected disabled>Event Type</option>
+                        <option value="Virtual" <?php if($event_type == "Virtual"){ echo "selected";}?>>Virtual</option>
+                        <option value="Offline" <?php if($event_type == "Offline"){ echo "selected";}?>>Offline</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <input type="submit" name="search" class="btn btn-primary" value="Search">
+                    <input type="submit" name="reset" class="btn btn-danger" value="Reset">
+                </div>
+                
+                </form>
+                </div>
+                </div>
+                </div>
+            </div>
             <div class="col-lg-12">
                 <div class="card card-default">
                     <div class="card-header card-header-border-bottom">
                         <a href="<?=admin_url('add-events')?>" class="btn btn-primary">Add</a>
+                        
                     </div>
                     <div class="card-body">
                         <table class="table table-hover ">

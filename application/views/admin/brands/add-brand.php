@@ -20,13 +20,8 @@ $brand_street = (!empty($brands))?$brands->brand_street:'';
 $brand_category = (!empty($brands))?explode(",",$brands->brand_category):[];
 $brand_audience = (!empty($brands))?$brands->brand_audience:'';
 $show_on_home = (!empty($brands))?$brands->show_on_home:'';
-$brand_audience = (!empty($brands))?$brands->brand_audience:'';
 $brand_offer_status = (!empty($brands))?$brands->brand_offer_status:'';
-$brand_offer_name = (!empty($brands))?$brands->brand_offer_name:'';
-$brand_offer_thumbnail_message = (!empty($brands))?$brands->brand_offer_thumbnail_message:'';
-$brand_offer_validity = (!empty($brands))?$brands->brand_offer_validity:'';
-$brand_offer = (!empty($brands))?$brands->brand_offer:'';
-$about_brand_offer = (!empty($brands))?$brands->about_brand_offer:'';
+$order_home = (!empty($brands))?$brands->order_home:'';
 
 ?>
 
@@ -48,25 +43,51 @@ $about_brand_offer = (!empty($brands))?$brands->about_brand_offer:'';
                                 <div class="col-md-6 mb-3">
                                     <label for="">Brand Name</label>
                                     <input type="text" class="form-control form-control-sm input-sm" placeholder="Enter brand name" name="brand_name" value="<?=$brand_name;?>">
-                                    <span class="text-danger brand_name errors_msg"></span>
-                                </div>
-
-                                <div class="col-md-6 mb-3">
-                                    <label for="">Brand Logo</label>
-                                    <input type="file" class="form-control form-control-sm input-sm" name="brand_logo">
-                                    <span class="text-danger brand_logo errors_msg"></span>
-                                </div>
-
-                                <div class="col-md-6 mb-3">
-                                    <label for="">Logo Comment</label>
-                                    <input type="text" class="form-control form-control-sm input-sm" name="logo_comment" value="<?=$logo_message;?>">
-                                    <span class="text-danger logo_comment errors_msg"></span>
                                 </div>
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Brand Website</label>
                                     <input type="text" class="form-control form-control-sm input-sm" name="brand_website" value="<?=$brand_website;?>">
-                                    <span class="text-danger brand_website errors_msg"></span>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="">Brand Logo</label>
+                                    <input type="file" class="form-control form-control-sm input-sm" name="brand_logo">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="">Logo Alt Tag</label>
+                                    <input type="text" class="form-control form-control-sm input-sm" name="logo_comment" value="<?=$logo_message;?>">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="">Brand Banner Web</label>
+                                    <input type="file" class="form-control form-control-sm input-sm" name="banner_web">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="">Brand Banner Alt Tag</label>
+                                    <input type="text" class="form-control form-control-sm input-sm" name="banner_comment" value="<?=$logo_message;?>">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="">Brand Banner Mobile</label>
+                                    <input type="file" class="form-control form-control-sm input-sm" name="banner_mobile">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="">About Brand Banner Web</label>
+                                    <input type="file" class="form-control form-control-sm input-sm" name="about_brand_banner_web">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="">About Brand Banner Alt Tag</label>
+                                    <input type="text" class="form-control form-control-sm input-sm" name="about_brand_banner_alt" value="<?=$logo_message;?>">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="">About Brand Banner Mobile</label>
+                                    <input type="file" class="form-control form-control-sm input-sm" name="banner_mobile">
                                 </div>
 
                                 <div class="col-md-12 mb-3">
@@ -86,33 +107,28 @@ $about_brand_offer = (!empty($brands))?$brands->about_brand_offer:'';
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">From Operation Hour(Week)</label>
-                                    <input type="text" class="form-control form-control-sm input-sm from_week_hour" name="from_week_hour" value="<?=$from_hour_week;?>">
-                                    <span class="text-danger from_week_hour errors_msg"></span>
+                                    <label for="">Weekday Operational Start Time</label>
+                                    <input type="text" class="form-control form-control-sm input-sm week_hour_start" name="from_week_hour" value="<?=$from_hour_week;?>">
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">To Operation Hour(Week)</label>
-                                    <input type="text" class="form-control form-control-sm input-sm to_week_hour" name="to_week_hour" value="<?=$to_week_hour;?>">
-                                    <span class="text-danger to_week_hour errors_msg"></span>
+                                    <label for="">Weekday Operational End Time</label>
+                                    <input type="text" class="form-control form-control-sm input-sm week_end_time" name="to_week_hour" value="<?=$to_week_hour;?>">
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">From Operation Hour(Weekend)</label>
-                                    <input type="text" class="form-control form-control-sm input-sm from_weekend_hour" name="from_weekend_hour" value="<?=$from_hour_weekend;?>">
-                                    <span class="text-danger from_weekend_hour errors_msg"></span>
+                                    <label for="">Weekend Operational Start Time</label>
+                                    <input type="text" class="form-control form-control-sm input-sm weekend_hour_start" name="from_weekend_hour" value="<?=$from_hour_weekend;?>">
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">To Operation Hour(Weekend)</label>
-                                    <input type="text" class="form-control form-control-sm input-sm to_weekend_hour" name="to_weekend_hour" value="<?=$to_weekend_hour;?>">
-                                    <span class="text-danger to_weekend_hour errors_msg"></span>
+                                    <label for="">Weekend Operational End Time</label>
+                                    <input type="text" class="form-control form-control-sm input-sm weekend_end_hour" name="to_weekend_hour" value="<?=$to_weekend_hour;?>">
                                 </div>
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Brand Location</label>
                                     <input type="text" class="form-control form-control-sm input-sm" name="brand_location" value="<?=$brand_location;?>">
-                                    <span class="text-danger brand_location errors_msg"></span>
                                 </div>
 
                                 <div class="col-md-6 mb-3">
@@ -129,31 +145,27 @@ $about_brand_offer = (!empty($brands))?$brands->about_brand_offer:'';
                                 <div class="col-md-6 mb-3">
                                     <label for="">Brand Contact Number</label>
                                     <input type="text" class="form-control form-control-sm input-sm" name="brand_contact" value="<?=$brand_contact;?>">
-                                    <span class="text-danger brand_contact errors_msg"></span>
                                 </div>
 
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Brand Sub Category</label>
                                     <input type="text" class="form-control form-control-sm input-sm" name="sub_category" value="<?=$brand_sub_category;?>">
-                                    <span class="text-danger sub_category errors_msg"></span>
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Email Contact</label>
+                                    <label for="">Brand Email Contact</label>
                                     <input type="text" class="form-control form-control-sm input-sm" name="email_contact" value="<?=$brand_contact_email;?>">
-                                    <span class="text-danger email_contact errors_msg"></span>
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Store Map</label>
+                                    <label for="">Store Map URL</label>
                                     <input type="text" class="form-control form-control-sm input-sm" name="store_map" value="<?=$store_map;?>">
-                                    <span class="text-danger store_map errors_msg"></span>
                                 </div>
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Brand Street</label>
-                                    <select name="event_street" class="form-control form-control-sm">
+                                    <select name="brand_street" class="form-control form-control-sm">
                                         <option selected="" disabled>Select Street</option>
                                         <option value="London Street" <?php if($brand_street == "London Street"){echo "selected"; }?>>London Street</option>
                                         <option value="Paris Street" <?php if($brand_street == "Paris Street"){echo "selected"; }?>>Paris Street</option>
@@ -181,6 +193,7 @@ $about_brand_offer = (!empty($brands))?$brands->about_brand_offer:'';
                                 <div class="col-md-6 mb-3">
                                     <label for="">Brand Audience</label>
                                     <select name="brand_audience" class="form-control form-control-sm">
+                                        <option selected disabled>Select Audience</option>
                                         <option value="Infants" <?php if($brand_audience == "Infants"){ echo "selected"; }?>>Infants</option>
                                         <option value="Kids" <?php if($brand_audience == "Kids"){ echo "selected"; }?>>Kids</option>
                                         <option value="Boys" <?php if($brand_audience == "Boys"){ echo "selected"; }?>>Boys</option>
@@ -193,59 +206,31 @@ $about_brand_offer = (!empty($brands))?$brands->about_brand_offer:'';
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Feature On Home Page</label><br>
-                                    <input type="radio" name="show_on_home" value="Yes" <?php if($show_on_home == "Yes"){echo "checked"; }?>> Yes
-                                    <input type="radio" name="show_on_home" value="No" <?php if($show_on_home == "No"){echo "checked"; }?>> No
-                                    <br>
-                                    <span class="text-danger show_on_home errors_msg"></span>
+                                    <select name="show_on_home" class="form-control form-control-sm">
+                                        <option selected="" disabled>Select One</option>
+                                        <option value="Yes" <?php if($show_on_home == "Yes"){echo "selected"; }?>>Yes</option>
+                                        <option value="No" <?php if($show_on_home == "No"){echo "selected"; }?>>No</option>
+                                    </select>
                                 </div>
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Activate Brand Offer</label><br>
-                                    <input type="radio" name="show_brand_offer" value="Yes" class="show_brand_offers" <?php if($brand_offer_status == "Yes"){echo "checked"; }?>> Yes
-                                    <input type="radio" name="show_brand_offer" value="No" class="show_brand_offers" <?php if($brand_offer_status == "No"){echo "checked"; }?>> No
-                                    <br>
-                                    <span class="text-danger show_brand_offer errors_msg"></span>
+                                    <select name="show_brand_offers" class="form-control form-control-sm">
+                                        <option selected="" disabled>Select One</option>
+                                        <option value="Yes" <?php if($brand_offer_status == "Yes"){echo "selected"; }?>>Yes</option>
+                                        <option value="No" <?php if($brand_offer_status == "No"){echo "selected"; }?>>No</option>
+                                    </select>
                                 </div>
 
-                                <div class="col-md-6 mb-3 brand_offer" <?php if($brand_offer_status == "Yes"){?> style="display:block;" <?php } else {?> style="display:none;" <?php } ?>>
-                                    <label for="">Brand Offer Name</label>
-                                    <input type="text" class="form-control form-control-sm input-sm" name="brand_offer_name" value="<?=$brand_offer_name;?>">
-                                    <span class="text-danger brand_offer_name errors_msg"></span>
-                                </div>
-
-                                <div class="col-md-6 mb-3 brand_offer" <?php if($brand_offer_status == "Yes"){?> style="display:block;" <?php } else {?> style="display:none;" <?php } ?>>
-                                    <label for="">Brand Label Custom Offer</label>
-                                    <input type="text" class="form-control form-control-sm input-sm" name="brand_custom_offer" value="<?=$brand_offer;?>">
-                                    <span class="text-danger brand_custom_offer errors_msg"></span>
-                                </div>
-
-                                <div class="col-md-6 mb-3 brand_offer" <?php if($brand_offer_status == "Yes"){?> style="display:block;" <?php } else {?> style="display:none;" <?php } ?>>
-                                    <label for="">Brand Offer Validity</label>
-                                    <input type="text" class="form-control form-control-sm input-sm datepicker" name="offer_validity" value="<?=$brand_offer_validity;?>">
-                                    <span class="text-danger offer_validity errors_msg"></span>
-                                </div>
-
-                                <div class="col-md-6 mb-3 brand_offer" <?php if($brand_offer_status == "Yes"){?> style="display:block;" <?php } else {?> style="display:none;" <?php } ?>>
-                                    <label for="">Brand Offer Thumbnail</label>
-                                    <input type="file" class="form-control form-control-sm input-sm" name="offer_thumbnail" value="">
-                                    <span class="text-danger offer_thumbnail errors_msg"></span>
-                                </div>
-
-                                <div class="col-md-6 mb-3 brand_offer" <?php if($brand_offer_status == "Yes"){?> style="display:block;" <?php } else {?> style="display:none;" <?php } ?>>
-                                    <label for="">Brand Offer Thumbnail Comment</label>
-                                    <input type="text" class="form-control form-control-sm input-sm" name="thumbnail_message" value="<?=$brand_offer_thumbnail_message;?>">
-                                    <span class="text-danger thumbnail_message errors_msg"></span>
-                                </div>
-
-                                <div class="col-md-12 mb-3 brand_offer" <?php if($brand_offer_status == "Yes"){?> style="display:block;" <?php } else {?> style="display:none;" <?php } ?>>
-                                    <label for="">About Brand Offer</label>
-                                    <textarea name="about_brand_offer" class="form-control form-control-sm ckeditor"><?=$about_brand_offer;?></textarea>
+                                <div class="col-md-6 mb-3">
+                                    <label for="">Order On Home Page</label>
+                                    <input type="text" class="form-control form-control-sm input-sm" name="order_home" value="<?=$order_home;?>">
                                 </div>
 
                             </div>
                                 
                             <button class="btn btn-primary" type="submit">Save</button>
-                            <button class="btn btn-danger" type="button" onclick="window.location.replace('<?=admin_url('brands');?>')">Cancel</button>
+                            <button class="btn btn-danger" type="button" onclick="window.location.replace('<?=admin_url('brands');?>')">Go Back</button>
                         </form>
                     </div>
                 </div>
@@ -255,24 +240,30 @@ $about_brand_offer = (!empty($brands))?$brands->about_brand_offer:'';
 </div>
 <script type="text/javascript">
 $( document ).ready(function(){
-    $(".from_week_hour").timepicker();
-    $(".from_weekend_hour").timepicker();
+    $(".week_hour_start").timepicker({
+        minTime: "00:00",
+        timeStep:5
+    });
+    $(".weekend_hour_start").timepicker({
+        minTime: "00:00",
+        timeStep:5
+    });
 
 });
 $( document ).ready(function(){
     <?php if(empty($brand_id)){?>
-    $('.from_week_hour').change(function(){
-        var from_time = $('.from_week_hour').val();
+    $('.week_hour_start').change(function(){
+        var from_time = $('.week_hour_start').val();
         var min_time = moment.utc(from_time,'hh:mm').add(1,'hour').format('hh:mm');
-        $(".to_week_hour").timepicker({
+        $(".week_end_time").timepicker({
             minTime: min_time,
             timeStep: 5
         });
-    });
+    })
     <?php } else { ?>
-    var from_time = $('.from_week_hour').val();
+    var from_time = $('.week_hour_start').val();
     var min_time = moment.utc(from_time,'hh:mm').add(1,'hour').format('hh:mm');
-    $(".to_week_hour").timepicker({
+    $(".week_end_time").timepicker({
         minTime: min_time,
         timeStep: 5
     });
@@ -280,18 +271,18 @@ $( document ).ready(function(){
 });
 $( document ).ready(function(){
     <?php if(empty($brand_id)){?>
-    $('.from_weekend_hour').change(function(){
-        var from_time = $('.from_weekend_hour').val();
+    $('.weekend_hour_start').change(function(){
+        var from_time = $('.weekend_hour_start').val();
         var min_time = moment.utc(from_time,'hh:mm').add(1,'hour').format('hh:mm');
-        $(".to_weekend_hour").timepicker({
+        $(".weekend_end_hour").timepicker({
             minTime: min_time,
             timeStep: 5
         });
     });
     <?php } else { ?>
-    var from_time = $('.from_weekend_hour').val();
+    var from_time = $('.weekend_hour_start').val();
     var min_time = moment.utc(from_time,'hh:mm').add(1,'hour').format('hh:mm');
-    $(".to_weekend_hour").timepicker({
+    $(".weekend_end_hour").timepicker({
         minTime: min_time,
         timeStep: 5
     });

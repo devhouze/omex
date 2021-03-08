@@ -23,9 +23,9 @@ $banner_type = (!empty($banner))?$banner['banner_type']:'';
                                     <option value="1" <?php if($banner_type == '1'){ echo "selected"; }?>>Home Page</option>
                                     <option value="2" <?php if($banner_type == '2'){ echo "selected"; }?>>Event</option>
                                     <option value="3" <?php if($banner_type == '3'){ echo "selected"; }?>>Brand Directory</option>
-                                    <option value="4" <?php if($banner_type == '4'){ echo "selected"; }?>>Brand Discount</option>
-                                    <option value="5" <?php if($banner_type == '5'){ echo "selected"; }?>>Brand</option>
-                                    <option value="6" <?php if($banner_type == '6'){ echo "selected"; }?>>About Brand</option>
+                                    <!-- <option value="4" <?php if($banner_type == '4'){ echo "selected"; }?>>Brand Discount</option> -->
+                                    <!-- <option value="5" <?php if($banner_type == '5'){ echo "selected"; }?>>Brand</option>
+                                    <option value="6" <?php if($banner_type == '6'){ echo "selected"; }?>>About Brand</option> -->
                                    </select>
                                 </div>
 
@@ -36,13 +36,18 @@ $banner_type = (!empty($banner))?$banner['banner_type']:'';
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Banner comment</label>
+                                    <label for="">Banner Alt Tag</label>
                                     <input type="text" class="form-control form-control-sm input-sm" name="banner_comment" value="">
                                 </div>
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">For Mobile</label>
                                     <input type="file" class="form-control form-control-sm input-sm" name="banner_mobile" value="">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="">Banner Link</label>
+                                    <input type="text" class="form-control form-control-sm input-sm" name="banner_link" value="">
                                 </div>
 
                                 <div class="col-md-6 mb-3" id="streets" style="display:none">
@@ -72,7 +77,7 @@ $banner_type = (!empty($banner))?$banner['banner_type']:'';
                             </div>
                                 
                             <button class="btn btn-primary" type="submit">Save</button>
-                            <button class="btn btn-danger" type="button" onclick="window.location.replace('<?=admin_url('banners');?>')">Cancel</button>
+                            <button class="btn btn-danger" type="button" onclick="window.location.replace('<?=admin_url('banners');?>')">Go Back</button>
                         </form>
                     </div>
                 </div>
@@ -90,16 +95,18 @@ $( document ).ready(function(){
         } else if(option == 3) {
             $('#streets').css('display','block');
             $('#brands').css('display','block');
-        } else if(option == 4) {
-            $('#streets').css('display','none');
-            $('#brands').css('display','block');
-        } else if(option == 5) {
-            $('#streets').css('display','block');
-            $('#brands').css('display','block');
-        } else if(option == 6) {
-            $('#streets').css('display','block');
-            $('#brands').css('display','block');
-        } else{
+        }
+        // else if(option == 4) {
+        //     $('#streets').css('display','none');
+        //     $('#brands').css('display','block');
+        // } else if(option == 5) {
+        //     $('#streets').css('display','block');
+        //     $('#brands').css('display','block');
+        // } else if(option == 6) {
+        //     $('#streets').css('display','block');
+        //     $('#brands').css('display','block');
+        // }
+        else{
             $('#streets').css('display','none');
             $('#brands').css('display','none');
         }

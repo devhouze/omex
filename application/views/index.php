@@ -9,21 +9,12 @@
                         <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/home-banner.jpg" alt="" class="d-table mx-auto w-100">
-
+                        
+                        <?php if(!empty($banner)){$i = 1; foreach($banner as $value){?>
+                        <div class="carousel-item <?=($i == 1)?'active':''; $i++;?>">
+                            <img src="<?php echo base_url('assets/images/public/home/'.$value['banner_web']); ?>" alt="<?=$value['comment'];?>" class="d-table mx-auto w-100">
                         </div>
-                        <div class="carousel-item">
-
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/home-banner.jpg" alt="" class="d-table mx-auto w-100">
-
-                        </div>
-                        <div class="carousel-item">
-
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/home-banner.jpg" alt="" class="d-table mx-auto w-100">
-
-                        </div>
+                        <?php } }?>
 
                     </div>
 
@@ -38,96 +29,18 @@
         <div class="row">
             <div class="col-md-12 positoin-relative">
                 <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Top Brands</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
+                <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
                 <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1s"></div>
             </div>
         </div>
         <div class="row justify-content-center align-items-center wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="0.15s">
             <div class="col-md-10 mt-20">
                 <div class="owl-carousel owl-theme top-brand">
+                    <?php if(!empty($brand_logo)){ foreach($brand_logo as $logo){?>
                     <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b1.png" alt="" class="d-table mx-auto">
+                        <img src="<?php echo base_url('assets/images/public/home/'.$logo['brand_logo']); ?>" alt="<?=$logo['banner_comment'];?>" class="d-table mx-auto">
                     </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b2.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b3.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b4.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b5.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b6.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b7.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b8.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b9.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b10.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b11.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b12.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b13.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b14.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b15.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b16.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b17.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b18.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b19.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b20.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b21.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b22.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b23.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b24.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b25.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b26.png" alt="" class="d-table mx-auto">
-                    </div>
-                    <div class="item">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/b27.png" alt="" class="d-table mx-auto">
-                    </div>
-
-
+                    <?php } } ?>
                 </div>
             </div>
         </div>
@@ -143,7 +56,7 @@
         <div class="row">
             <div class="col-md-12 positoin-relative">
                 <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Experience Best of World Street</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown  animated" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown  animated" data-wow-duration="1s" data-wow-delay="0.5s">
                 <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="0.15s"></div>
             </div>
         </div>
@@ -152,60 +65,60 @@
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
                     <div class="carousel-inner">
-                        <div class="carousel-item position-relative active" style="background-image:url(<?php echo BASE_URL(); ?>assets/images/public/home/slider1.jpg);">
+                        <div class="carousel-item position-relative active" style="background-image:url(<?php echo base_url(); ?>assets/images/public/home/slider1.jpg);">
                             
                             <div class="card lon-bg wow fadeInRight animated">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/l-s.svg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/l-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="carousel-item position-relative" style="background-image:url('<?php echo BASE_URL(); ?>assets/images/public/home/slider.jpg');">
+                        <div class="carousel-item position-relative" style="background-image:url('<?php echo base_url(); ?>assets/images/public/home/slider.jpg');">
                             
                             <div class="card par-bg wow fadeInRight animated" data-wow-duration="1s" data-wow-delay="0.5S">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/parish.svg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/parish.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/pa-s-f.svg" alt="" class="d-table mx-auto">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/pa-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="carousel-item position-relative" style="background-image:url('<?php echo BASE_URL(); ?>assets/images/public/home/slider3.jpg')">
+                        <div class="carousel-item position-relative" style="background-image:url('<?php echo base_url(); ?>assets/images/public/home/slider3.jpg')">
                             
                             <div class="card por-bg">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/p-s.svg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/p-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/p-s-f.svg" alt="" class="d-table mx-auto">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/p-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="carousel-item position-relative" style="background-image:url('<?php echo BASE_URL(); ?>assets/images/public/home/slider4.jpg')">
+                        <div class="carousel-item position-relative" style="background-image:url('<?php echo base_url(); ?>assets/images/public/home/slider4.jpg')">
                             
                             <div class="card ath-bg">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/at-s.svg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/at-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/at-s-f.svg" alt="" class="d-table mx-auto">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/at-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="carousel-item position-relative" style="background-image:url('<?php echo BASE_URL(); ?>assets/images/public/home/slider5.jpg')">
+                        <div class="carousel-item position-relative" style="background-image:url('<?php echo base_url(); ?>assets/images/public/home/slider5.jpg')">
                             
                             <div class="card ams-bg">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/am-s.svg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/am-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/am-s-f.svg" alt="" class="d-table mx-auto">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/am-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="carousel-item position-relative" style="background-image:url('<?php echo BASE_URL(); ?>assets/images/public/home/slider6.jpg')">
+                        <div class="carousel-item position-relative" style="background-image:url('<?php echo base_url(); ?>assets/images/public/home/slider6.jpg')">
                             
                             <div class="card san-bg">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/s-s.svg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/s-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/s-s-f.svg" alt="" class="d-table mx-auto">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/s-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="carousel-item position-relative" style="background-image:url('<?php echo BASE_URL(); ?>assets/images/public/home/slider7.jpg')">
+                        <div class="carousel-item position-relative" style="background-image:url('<?php echo base_url(); ?>assets/images/public/home/slider7.jpg')">
                             
                             <div class="card hon-bg">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/h-s.svg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/h-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/h-s-f.svg" alt="" class="d-table mx-auto">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/h-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
 
@@ -213,32 +126,32 @@
                     </div>
                     <ol class="carousel-indicators position-relative px-0 mx-0">
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/Indicators1.svg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/Indicators1.svg" class="d-block w-100" alt="...">
                             <label class="pr-font">LONDON ST.</label>
 
                         </li>
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/Indicators2.svg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/Indicators2.svg" class="d-block w-100" alt="...">
                             <label class="pr-font">PARIS ST.</label>
                         </li>
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/Indicators3.svg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/Indicators3.svg" class="d-block w-100" alt="...">
                             <label class="pr-font">PORTUGAL ST.</label>
                         </li>
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/Indicators4.svg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/Indicators4.svg" class="d-block w-100" alt="...">
                             <label class="pr-font">ATHENS ST.</label>
                         </li>
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/Indicators5.svg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/Indicators5.svg" class="d-block w-100" alt="...">
                             <label class="pr-font">AMSTERDAM ST.</label>
                         </li>
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/Indicators6.svg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/Indicators6.svg" class="d-block w-100" alt="...">
                             <label class="pr-font">SAN FRANCISCO ST.</label>
                         </li>
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/Indicators7.svg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/Indicators7.svg" class="d-block w-100" alt="...">
                             <label class="pr-font">Hong Kong St.</label>
                         </li>
                     </ol>
@@ -253,59 +166,59 @@
 
                     <div class="carousel-inner">
                         <div class="carousel-item position-relative active">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/london-m.jpg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/london-m.jpg" class="d-block w-100" alt="...">
                             <div class="card lon-bg wow fadeInRight animated">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/l-s.svg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/l-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
                         <div class="carousel-item position-relative">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/paris-m.jpg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/paris-m.jpg" class="d-block w-100" alt="...">
                             <div class="card par-bg wow fadeInRight animated" data-wow-duration="1s" data-wow-delay="0.5S">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/parish.svg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/parish.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/pa-s-f.svg" alt="" class="d-table mx-auto">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/pa-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
                         <div class="carousel-item position-relative">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/port-m.jpg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/port-m.jpg" class="d-block w-100" alt="...">
                             <div class="card por-bg">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/p-s.svg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/p-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/p-s-f.svg" alt="" class="d-table mx-auto">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/p-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
                         <div class="carousel-item position-relative">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/aths-m.jpg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/aths-m.jpg" class="d-block w-100" alt="...">
                             <div class="card ath-bg">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/at-s.svg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/at-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/at-s-f.svg" alt="" class="d-table mx-auto">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/at-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
                         <div class="carousel-item position-relative">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/amst-m.jpg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/amst-m.jpg" class="d-block w-100" alt="...">
                             <div class="card ams-bg">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/am-s.svg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/am-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/am-s-f.svg" alt="" class="d-table mx-auto">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/am-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
                         <div class="carousel-item position-relative">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/san-m.jpg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/san-m.jpg" class="d-block w-100" alt="...">
                             <div class="card san-bg">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/S-S.svg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/S-S.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/s-s-f.svg" alt="" class="d-table mx-auto">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/s-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
                         <div class="carousel-item position-relative">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/hon-m.jpg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/hon-m.jpg" class="d-block w-100" alt="...">
                             <div class="card hon-bg">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/h-S.svg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/h-S.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/h-s-f.svg" alt="" class="d-table mx-auto">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/h-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
 
@@ -314,32 +227,32 @@
 
                     <ol class="carousel-indicators position-relative px-0 mx-0">
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/Indicators1.svg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/Indicators1.svg" class="d-block w-100" alt="...">
                             <label class="pr-font">LONDON ST.</label>
 
                         </li>
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/Indicators2.svg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/Indicators2.svg" class="d-block w-100" alt="...">
                             <label class="pr-font">PARIS ST.</label>
                         </li>
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/Indicators3.svg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/Indicators3.svg" class="d-block w-100" alt="...">
                             <label class="pr-font">PORTUGAL ST.</label>
                         </li>
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/Indicators4.svg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/Indicators4.svg" class="d-block w-100" alt="...">
                             <label class="pr-font">ATHENS ST.</label>
                         </li>
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/Indicators5.svg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/Indicators5.svg" class="d-block w-100" alt="...">
                             <label class="pr-font">AMSTERDAM ST.</label>
                         </li>
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/Indicators6.svg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/Indicators6.svg" class="d-block w-100" alt="...">
                             <label class="pr-font">SAN FRANCISCO ST.</label>
                         </li>
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/Indicators7.svg" class="d-block w-100" alt="...">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/Indicators7.svg" class="d-block w-100" alt="...">
                             <label class="pr-font">Hong Kong St.</label>
                         </li>
                     </ol>
@@ -356,40 +269,40 @@
         <div class="row">
             <div class="col-md-12 positoin-relative">
                 <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Explore More</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown  animated" data-wow-duration="1s" data-wow-delay="1.5s">
+                <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown  animated" data-wow-duration="1s" data-wow-delay="1.5s">
                 <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1s"></div>
             </div>
         </div>
         <div class="row px-md-5 px-3 mt-md-0 mt-5">
             <div class="col-md-4">
                 <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5s">Eat</h2>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">
+                <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">
                 <figure class="position-relative mb-0 mt-12">
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e1.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
+                    <img src="<?php echo base_url(); ?>assets/images/public/home/e1.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
                     <div class="outer"></div>
                 </figure>
-                <a href="" class="exploer-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
+                <a href="" class="exploer-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
             </div>
             <div class="col-md-4">
                 <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5s">Style</h2>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">
+                <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">
                 <figure class="position-relative mb-0 mt-12">
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e3.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
+                    <img src="<?php echo base_url(); ?>assets/images/public/home/e3.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
                     <div class="outer"></div>
 
                 </figure>
-                <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
+                <a href="" class="exploer-btn">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
             </div>
             <div class="col-md-4">
                 <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5s">Play</h2>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">
+                <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">
                 <figure class="position-relative mb-0 mt-12">
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e2.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
+                    <img src="<?php echo base_url(); ?>assets/images/public/home/e2.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
                     <div class="outer"></div>
                 </figure>
-                <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
+                <a href="" class="exploer-btn">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
             </div>
         </div>
@@ -400,7 +313,7 @@
         <div class="row">
             <div class="col-md-12 positoin-relative">
                 <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Look out for what’s coming up!</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown  animated" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown  animated" data-wow-duration="1s" data-wow-delay="0.5s">
                 <div class="v-line d-table mx-auto wow animated zoomIn" data-wow-duration="1s" data-wow-delay="0.15s"> </div>
             </div>
         </div>
@@ -415,9 +328,9 @@
                                         <h2 class="position-relative">23-24</h2>
                                         <div class="time">7 pm - 9 pm</div>
                                         <div class="day">SAT & SUN</div>
-                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/home/long-arrow.svg" alt="">
                                     </div>
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/leftslide.jpg" alt="" class="w-100">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/home/leftslide.jpg" alt="" class="w-100">
 
                                 </div>
                                 <div class="col-md-4">
@@ -426,7 +339,7 @@
                                             <h2 class="position-relative">23-24</h2>
                                             <div class="time">7 pm - 9 pm</div>
                                             <div class="day">SAT & SUN</div>
-                                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg" alt="">
+                                            <img src="<?php echo base_url(); ?>assets/images/public/home/long-arrow.svg" alt="">
                                         </div>
                                         <div class="box-calander">
                                             <div class="bottom-row">
@@ -452,9 +365,9 @@
                                         <h2 class="position-relative">23-24</h2>
                                         <div class="time">7 pm - 9 pm</div>
                                         <div class="day">SAT & SUN</div>
-                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/home/long-arrow.svg" alt="">
                                     </div>
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/leftslide.jpg" alt="" class="w-100">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/home/leftslide.jpg" alt="" class="w-100">
 
                                 </div>
                                 <div class="col-md-4">
@@ -463,7 +376,7 @@
                                             <h2 class="position-relative">23-24</h2>
                                             <div class="time">7 pm - 9 pm</div>
                                             <div class="day">SAT & SUN</div>
-                                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/long-arrow.svg" alt="">
+                                            <img src="<?php echo base_url(); ?>assets/images/public/home/long-arrow.svg" alt="">
                                         </div>
                                         <div class="box-calander">
                                             <div class="bottom-row">
@@ -487,10 +400,10 @@
                     </div>
                     <div class="d-flex position-absolute">
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/left.svg" alt="" class="w-100">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/left.svg" alt="" class="w-100">
                         </a>
                         <a class="carousel-control-next ml-40" href="#carouselExampleControls" role="button" data-bs-slide="next">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
                         </a>
                     </div>
                 </div>
@@ -508,7 +421,7 @@
         <div class="row">
             <div class="col-md-12 positoin-relative">
                 <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Experience Gallery</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown  animated" data-wow-duration="1s" data-wow-delay="1.5s">
+                <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown  animated" data-wow-duration="1s" data-wow-delay="1.5s">
                 <div class="v-line d-table mx-auto wow animated zoomIn"></div>
             </div>
         </div>
@@ -534,16 +447,16 @@
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <div class="owl-carousel slider wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
                                 <div class="item">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/g1.jpg">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g1.jpg">
                                 </div>
                                 <div class="item">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/g2.jpg">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g2.jpg">
                                 </div>
                                 <div class="item">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/g3.jpg">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g3.jpg">
                                 </div>
                                 <div class="item">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/g3.jpg">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g3.jpg">
                                 </div>
 
                             </div>
@@ -553,13 +466,13 @@
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                             <div class="owl-carousel sliders">
                                 <div class="item">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/g1.jpg">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g1.jpg">
                                 </div>
                                 <div class="item">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/g2.jpg">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g2.jpg">
                                 </div>
                                 <div class="item">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/home/g3.jpg">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g3.jpg">
                                 </div>
 
 
@@ -587,7 +500,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/insta.svg" alt="" class="w-100">
+                <img src="<?php echo base_url(); ?>assets/images/public/home/insta.svg" alt="" class="w-100">
             </div>
 
         </div>

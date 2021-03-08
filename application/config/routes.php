@@ -89,13 +89,14 @@ $route['admin/edit-brands/(:num)'] = 'admin/Brands_Controller/edit_brand/$1';
 $route['admin/delete-brand'] = 'admin/Brands_Controller/delete_brand';
 $route['admin/brand-details'] = 'admin/Brands_Controller/get_brand_details';
 
-
-$route['admin/brand-logo'] = 'admin/Brands_Controller/brand_logo_list';
-$route['admin/add-brands-logo'] = 'admin/Brands_Controller/add_brand_logo';
-$route['admin/edit-brands-logo/(:num)'] = 'admin/Brands_Controller/edit_brand_logo/$1';
-$route['admin/delete-brand-logo'] = 'admin/Brands_Controller/delete_brand_logo';
+// Brand Offer routes
+$route['admin/brand-offer'] = 'admin/Brands_Controller/brand_offer_list';
+$route['admin/add-brands-offer'] = 'admin/Brands_Controller/add_brand_offer';
+$route['admin/edit-brands-offer/(:num)'] = 'admin/Brands_Controller/edit_brand_offer/$1';
+$route['admin/delete-brand-offer'] = 'admin/Brands_Controller/delete_brand_offer';
 $route['admin/change-brand-status'] = 'admin/Brands_Controller/change_brand_status';
-$route['admin/change-brand-logo-status'] = 'admin/Brands_Controller/change_brand_logo_status';
+$route['admin/change-brand-offer-status'] = 'admin/Brands_Controller/change_brand_offer_status';
+$route['admin/offer-details'] = 'admin/Brands_Controller/get_offer_details';
 
 // Users Routes
 $route['admin/users'] = 'admin/Users_Controller/users_list';
@@ -110,7 +111,7 @@ $route['admin/change-user-status'] = 'admin/Users_Controller/change_user_status'
 $route['admin/leads'] = 'admin/Lead_controller/lead_list';
 $route['admin/leads/(:num)'] = 'admin/Lead_controller/lead_list/$1';
 $route['admin/get-message'] = 'admin/Lead_controller/get_message';
-$route['admin/event-details'] = 'admin/Event_Controller/get_event_details';
+$route['admin/export-leads'] = 'admin/Lead_controller/exportCSV';
 
 
 // Events routes
@@ -128,12 +129,13 @@ $route['admin/edit-banners/(:num)'] = "admin/Banner_Controllers/edit_banners/$1"
 $route['admin/banners'] = "admin/Banner_Controllers/banner_list";
 $route['admin/delete-banner'] = 'admin/Banner_Controllers/delete_banner';
 $route['admin/change-banner-status'] = 'admin/Banner_Controllers/change_banner_status';
-
+$route['admin/get-banner-details'] = "admin/Banner_Controllers/get_banner_details";
 // Gallery routes
 $route['admin/gallery'] = 'admin/Gallery_Controller/gallery_list';
+$route['admin/gallery/(:num)'] = 'admin/Gallery_Controller/gallery_list/$1';
 $route['admin/add-gallery'] = 'admin/Gallery_Controller/add_gallery';
 $route['admin/change-gallery-status'] = 'admin/Gallery_Controller/change_gallery_status';
-
+$route['admin/delete-media'] = 'admin/Gallery_Controller/delete_media';
 
 $route['admin/404'] = 'admin/Admin_controller/error404';
 $route['admin/blank'] = 'admin/Admin_controller/blank';

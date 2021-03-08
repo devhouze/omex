@@ -48,20 +48,20 @@ $brands = ($events)?$events->brands:'';
 
                                 <div class="col-md-6 mb-3 date" <?php if($date_available == 0){?> style="display:block;" <?php } else { ?>style="display:none;"<?php } ?>>
                                     <label for="">Event Start Date</label>
-                                    <input type="text" class="form-control form-control-sm input-sm datepicker" placeholder="Select date" name="start_date" value="<?=$start_date;?>">
+                                    <input type="text" class="form-control form-control-sm input-sm start_date" placeholder="Select date" name="start_date" value="<?=$start_date;?>">
                                 </div>
                                 <div class="col-md-6 mb-3 date" <?php if($date_available == 0){?> style="display:block;" <?php } else { ?>style="display:none;"<?php } ?>>
                                     <label for="">Event End Date</label>
-                                    <input type="text" class="form-control form-control-sm input-sm datepicker" placeholder="Select date" name="end_date" value="<?=$end_date;?>">
+                                    <input type="text" class="form-control form-control-sm input-sm end_date" placeholder="Select date" name="end_date" value="<?=$end_date;?>">
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Event Thumbnail</label>
+                                    <label for="">Event Banner</label>
                                     <input type="file" class="form-control form-control-sm input-sm" name="thumbnail_image" value="">
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Thumbnail Comment</label>
+                                    <label for="">Banner Alt Tag</label>
                                     <input type="text" class="form-control form-control-sm input-sm" name="thumbnail_message" value="<?=$thumbnail_message;?>">
                                 </div>
                                 
@@ -81,12 +81,12 @@ $brands = ($events)?$events->brands:'';
                                
                                 <div class="col-md-6 mb-3">
                                     <label for="">Event Start Time</label>
-                                    <input type="text" name="event_start_time" class="form-control form-control-sm input-sm event_time" placeholder="Event Time" value="<?=$event_start_time;?>">
+                                    <input type="text" name="event_start_time" class="form-control form-control-sm input-sm event_start_time" placeholder="Event Start Time" value="<?=$event_start_time;?>">
                                 </div>
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Event End Time</label>
-                                    <input type="text" name="event_end_time" class="form-control form-control-sm input-sm event_time" placeholder="Event Time" value="<?=$event_end_time;?>">
+                                    <input type="text" name="event_end_time" class="form-control form-control-sm input-sm event_end_time" placeholder="Event End Time" value="<?=$event_end_time;?>">
                                 </div>
 
                                 <div class="col-md-12 mb-3">
@@ -129,7 +129,7 @@ $brands = ($events)?$events->brands:'';
                                     </select>
                                 </div>
 
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-6 mb-3" style="display:none;">
                                     <label for="">Show Brand Information</label>
                                     <select name="show_brand" id="show_brand" class="form-control form-control-sm">
                                         <option selected="" disabled>Select Option</option>
@@ -160,7 +160,7 @@ $brands = ($events)?$events->brands:'';
                             </div>
                                 
                             <button class="btn btn-primary" type="submit">Save</button>
-                            <button class="btn btn-danger" type="button" onclick="window.location.replace('<?=admin_url('events');?>')">Cancel</button>
+                            <button class="btn btn-danger" type="button" onclick="window.location.replace('<?=admin_url('events');?>')">Go Back</button>
                         </form>
                     </div>
                 </div>
@@ -170,6 +170,34 @@ $brands = ($events)?$events->brands:'';
 </div>
 <script>
 $( document ).ready(function(){
-    $(".event_time").timepicker();
+    $(".event_start_time").timepicker({
+        minTime: '00:00',
+        timeStep: 5
+    });
+
+    $(".event_start_time").change(function(){
+        var start_time = $('.event_start_time').val();
+        var min_time = moment.utc(start_time,'hh:mm').add(1,'hour').format('hh:mm');
+        $(".event_end_time").timepicker({
+            minTime: min_time,
+            timeStep: 5
+        });
+    })
 });
+$(function() {
+    $( ".start_date" ).datepicker({
+        changeMonth: true,
+        changeYear: true,
+        minDate: new Date(),
+        maxDate: '+30Y',
+        onSelect: function(date){
+        var selectedDate = new Date(date);
+        var endDate = new Date(selectedDate);
+        //Set Minimum Date of EndDatePicker After Selected Date of StartDatePicker
+        $(".end_date").datepicker( "option", "minDate", endDate );
+        $(".end_date").datepicker( "option", "maxDate", '+2y' );
+    }
+    });
+});
+
 </script>
