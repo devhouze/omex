@@ -98,9 +98,9 @@ class Welcome_model extends CI_Model
 
     public function get_brand_logo()
     {
-        $query = $this->db->select('brand_logo, alt_comment')
+        $query = $this->db->select('brand_logo, banner_comment')
                           ->where('status',0)
-                          ->order_by('id','desc')
+                          ->order_by('brand_id','desc')
                           ->get('tbl_brand');
         if($query->num_rows() > 0){
             return $query->result_array();
