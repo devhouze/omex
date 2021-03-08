@@ -87,7 +87,7 @@ $order_home = (!empty($brands))?$brands->order_home:'';
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">About Brand Banner Mobile</label>
-                                    <input type="file" class="form-control form-control-sm input-sm" name="banner_mobile">
+                                    <input type="file" class="form-control form-control-sm input-sm" name="about_brand_banner_mobile">
                                 </div>
 
                                 <div class="col-md-12 mb-3">

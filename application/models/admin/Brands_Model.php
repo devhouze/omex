@@ -63,7 +63,7 @@ class Brands_Model extends MY_Model
 
     public function get_offer_details($id)
     {
-       $query = $this->db->select('offer_id, offer_name, (case when tbl_brand_offer.status = 0 then "Active" when tbl_brand_offer.status = 1 then "Inactive" end) as status, tbl_admin.name as created_by, date_format(tbl_brand_offer.created_on,"%d-%m-%Y") as created_on, offer_thumbnail, thumbnail_alt, brand_name')
+       $query = $this->db->select('offer_id, offer_name, (case when tbl_brand_offer.status = 0 then "Active" when tbl_brand_offer.status = 1 then "Inactive" end) as status, tbl_admin.name as created_by, date_format(tbl_brand_offer.created_on,"%d-%m-%Y") as created_on, offer_thumbnail, thumbnail_alt, brand_name, about_offer')
                           ->join('tbl_admin','admin_id = tbl_brand_offer.created_by')
                           ->join('tbl_brand','tbl_brand_offer.brand_id = tbl_brand.brand_id')
                           ->where('offer_id',$id)

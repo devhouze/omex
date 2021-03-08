@@ -94,8 +94,14 @@ $(document).ready(function() {
                     value += "<tr><th>Brand</th><td>" + brand_name + "</td></tr>";
                     value += "<tr><th>Alt Tag</th><td>" + data[0].comment + "</td></tr>";
                     value += "<tr><th>Status</th><td>" + data[0].status + "</td></tr>";
-                    value += "<tr><th>Banner Web</th><td><img src=" + base_url + 'assets/images/admin/banner/' + data[0].banner_web + " style='width:100px; height:100px'></td></tr>";
-                    value += "<tr><th>Banner Mobile</th><td><img src=" + base_url + 'assets/images/admin/banner/' + data[0].banner_mobile + " style='width:100px; height:100px'></td></tr>";
+                    if (data[0].banner_type == "Home Page" || data[0].banner_type == "Event Page") {
+                        value += "<tr><th>Banner Web</th><td><img src=" + base_url + 'assets/images/public/home/' + data[0].banner_web + " style='width:100px; height:100px'></td></tr>";
+                        value += "<tr><th>Banner Mobile</th><td><img src=" + base_url + 'assets/images/public/home/' + data[0].banner_mobile + " style='width:100px; height:100px'></td></tr>";
+                    } else {
+                        value += "<tr><th>Banner Web</th><td><img src=" + base_url + 'assets/images/public/brand/' + data[0].banner_web + " style='width:100px; height:100px'></td></tr>";
+                        value += "<tr><th>Banner Mobile</th><td><img src=" + base_url + 'assets/images/public/brand/' + data[0].banner_mobile + " style='width:100px; height:100px'></td></tr>";
+                    }
+
                     value += "</table>";
                     $('#bannerDetails').html(value);
                 } else {
