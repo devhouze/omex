@@ -991,6 +991,9 @@
 /* end bnt styling */
 
 @media only screen and (max-width: 600px) {
+    .pr-sm0 {
+        padding-right: 0;
+    }
     .mt-sm0 {
         margin-top: 0;
     }

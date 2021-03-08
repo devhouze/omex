@@ -48,10 +48,15 @@ $action = (!empty($gallery))?admin_url():admin_url('add-gallery');
                                     <label for="">Alt comment</label>
                                     <input type="text" name="comment" class="form-control form-control-sm input-sm" placeholder="comment">
                                 </div>
+
+                                <div class="col-md-12 mb-3">
+                                    <label for="">Image Preference</label>
+                                    <input type="text" name="sequence" class="form-control form-control-sm input-sm" placeholder="Image Sequence (e.g.:- 0,1,2)">
+                                </div>
                             </div>
                                 
                             <button class="btn btn-primary" type="submit" id="submit">Save</button>
-                            <button class="btn btn-danger" type="button" onclick="window.location.replace('<?=admin_url('gallery');?>')">Cancel</button>
+                            <button class="btn btn-danger" type="button" onclick="window.location.replace('<?=admin_url('gallery');?>')">Go Back</button>
                         </form>
                     </div>
                 </div>

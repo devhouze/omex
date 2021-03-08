@@ -20,7 +20,40 @@
         </div>
 
         <div class="row">
-            
+            <div class="col-lg-12">
+                <div class="card card-default">
+                <div class="card-body">
+                <form action="" method="post">
+                <div class="form-row">
+
+                <?php $media_type = (!empty($this->session->userdata('gallery')))?$this->session->userdata('gallery')['media_type']:null;?>
+                <div class="col-md-3">
+                    <select name="media_type" class="form-control form-control-sm">
+                        <option selected disabled>Select File Type</option>
+                        <option value="1" <?php if($media_type == "1"){ echo "selected";}?>>Image</option>
+                        <option value="2" <?php if($media_type == "2"){ echo "selected";}?>>Video</option>
+                        <option value="3" <?php if($media_type == "3"){ echo "selected";}?>>YouTube Link</option>
+                    </select>
+                </div>
+                <?php $status = (!empty($this->session->userdata('gallery')))?$this->session->userdata('gallery')['status']:null;?>
+                <div class="col-md-3">
+                    <select name="status" class="form-control form-control-sm">
+                        <option selected disabled>Select Status</option>
+                        <option value="0" <?php if($status == "0"){ echo "selected";}?>>Active</option>
+                        <option value="1" <?php if($status == "1"){ echo "selected";}?>>Inactive</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <input type="submit" name="search" class="btn btn-primary" value="Search">
+                    <input type="submit" name="reset" class="btn btn-danger" value="Reset">
+                </div>
+                
+                </form>
+                </div>
+                </div>
+                </div>
+            </div>
             <div class="col-lg-12">
                 <div class="card card-default">
                     <div class="card-header card-header-border-bottom">
@@ -34,6 +67,7 @@
                                     <th scope="col">Media Type</th>
                                     <th scope="col">Type</th>
                                     <th scope="col">Media File</th>
+                                    <th scope="col">Preference Order</th>
                                     <th scope="col">Status</th>
                                     <th scope="col">Created By</th>
                                     <th scope="col">Created On</th>
@@ -47,6 +81,7 @@
                                     <td><?=$value['file_type'];?></td>
                                     <td><?=$value['type'];?></td>
                                     <td><?=$value['media_name'];?></td>
+                                    <td><?=$value['sequence'];?></td>
                                     <td align="center">
                                         <label class="switch">
                                           <input type="checkbox" class="chkstatus" value="<?php echo $value['id'];?>" <?php echo ($value['status']=="0")?'checked':'' ?>>

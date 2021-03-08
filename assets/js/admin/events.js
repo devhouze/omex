@@ -57,7 +57,8 @@ $(document).ready(function() {
                 value += '<table class="table">';
                 value += '<tr><th colspan="2" class="text-center">Event Details</th></tr>';
                 value += '<tr><th>Event Name</th><td>' + event_name + '</td></tr>';
-                value += '<tr><th>Date Availibilty</th><td>' + date_available + '</td></tr>';
+                value += '<tr><th>About Event</th><td>' + about_event + '</td></tr>';
+                // value += '<tr><th>Date Availibilty</th><td>' + date_available + '</td></tr>';
                 value += '<tr><th>Event Start Date</th><td>' + start_date + '</td></tr>';
                 value += '<tr><th>Event End Date</th><td>' + end_date + '</td></tr>';
                 value += '<tr><th>Event Start Time</th><td>' + event_start_time + '</td></tr>';
@@ -67,10 +68,9 @@ $(document).ready(function() {
                 value += '<tr><th>Event Location</th><td>' + event_location + '</td></tr>';
                 value += '<tr><th>Event Label</th><td>' + event_label + '</td></tr>';
                 value += '<tr><th>Event Category</th><td>' + event_category + '</td></tr>';
-                value += '<tr><th>Event Status</th><td>' + status + '</td></tr>';
+                // value += '<tr><th>Event Status</th><td>' + status + '</td></tr>';
                 value += '<tr><th>Show Brand</th><td>' + show_brand + '</td></tr>';
-                value += '<tr><th>Show Brand</th><td>' + brand_name + '</td></tr>';
-                value += '<tr><th>About Event</th><td>' + about_event + '</td></tr>';
+                value += '<tr><th>Brand Name</th><td>' + brand_name + '</td></tr>';
                 $('#details').html(value);
             }
         });

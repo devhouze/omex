@@ -1,6 +1,5 @@
 
 <script>
-
 $('.slider').on('initialized.owl.carousel changed.owl.carousel', function(e) {
     if (!e.namespace)  {
       return;

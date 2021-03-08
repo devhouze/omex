@@ -15,9 +15,25 @@ class Event_Controller extends MY_Controller
         if ($page != 0) {
 			$page = ($page - 1) * $per_page;
         }
-        $total_count = $this->em->get_events($per_page,$page,true);
+
+        if($this->input->post('search')){
+            $search = array(
+                'event_name'    => trim($this->input->post('name')),
+                'status'        => $this->input->post('status'),
+                'event_type'    => $this->input->post('event_type')
+            );
+
+            $this->session->set_userdata('event',$search);
+        }
+
+        if($this->input->post('reset')){
+            $this->session->unset_userdata('event');
+        }
+        $keyword = $this->session->userdata('event');
+        
+        $total_count = $this->em->get_events($per_page,$page,$keyword,true);
         $data['pagination'] = $this->pagination('events',$total_count,$per_page);
-        $data['events'] = $this->em->get_events($per_page,$page);
+        $data['events'] = $this->em->get_events($per_page,$page,$keyword);
         $end = (($data['events'])?count($data['events']):0) + (($page) ? $page : 0);
         $start = (count($data['events']) > 0)?($page + 1):0;
         $data['result_count'] = "Showing " . $start . " - " . $end . " of " . $total_count . " Results";
