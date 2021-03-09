@@ -1,6 +1,5 @@
-<script src='https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js'></script>
-<script>
 
+<script>
 $('.slider').on('initialized.owl.carousel changed.owl.carousel', function(e) {
     if (!e.namespace)  {
       return;
