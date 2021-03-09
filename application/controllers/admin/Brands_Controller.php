@@ -99,9 +99,9 @@ class Brands_Controller extends MY_Controller
                 }
                 $data_array = array(
                     'brand_name'                    => $this->input->post('brand_name'),
-                    'logo_message'                  => $this->input->post('logo_comment'),
                     'brand_website'                 => $this->input->post('brand_website'),
-                    'about_brand'                   => $this->input->post('about_brand'),
+                    'logo_message'                  => $this->input->post('logo_comment'),
+                    'about_brand'                   => trim($this->input->post('about_brand')),
                     'brand_label'                   => $this->input->post('brand_label'),
                     'from_hour_week'                => $this->input->post('from_week_hour'),
                     'to_week_hour'                  => $this->input->post('to_week_hour'),
@@ -119,6 +119,8 @@ class Brands_Controller extends MY_Controller
                     'brand_offer_status'            => $this->input->post('show_brand_offers'),
                     'brand_audience'                => $this->input->post('brand_audience'),
                     'order_home'                    => $this->input->post('order_home'),
+                    'about_brand_banner_alt'        => $this->input->post('about_brand_banner_alt'),
+                    'banner_comment'                => $this->input->post('banner_comment'),
                     'created_by'                    => $this->bm->admin_id()
                 );
 
@@ -139,8 +141,71 @@ class Brands_Controller extends MY_Controller
                     }
                 }
 
-                $final_data = array_merge($data_array);
-                $save = $this->bm->insert_data('tbl_brand',$final_data);
+                if(!empty($_FILES['banner_web']['name'])){
+                    $logo = $getfilename =  str_replace(' ', '_', $_FILES['banner_web']['name']);
+                    $file = pathinfo($logo);
+                    $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
+                    $data_array['banner_web'] = $new_name;
+                    $config['upload_path'] = 'assets/images/public/brand';
+                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['file_name'] = $new_name;
+                    $this->load->library('upload',$config);
+                    $this->upload->initialize($config);
+                    if(!$this->upload->do_upload('banner_web')){
+                        echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->upload->display_errors(), 'status' => 0]);
+                        exit;
+                    }
+                }
+
+                if(!empty($_FILES['banner_mobile']['name'])){
+                    $logo = $getfilename =  str_replace(' ', '_', $_FILES['banner_mobile']['name']);
+                    $file = pathinfo($logo);
+                    $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
+                    $data_array['banner_mobile'] = $new_name;
+                    $config['upload_path'] = 'assets/images/public/brand';
+                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['file_name'] = $new_name;
+                    $this->load->library('upload',$config);
+                    $this->upload->initialize($config);
+                    if(!$this->upload->do_upload('banner_mobile')){
+                        echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->upload->display_errors(), 'status' => 0]);
+                        exit;
+                    }
+                }
+
+                if(!empty($_FILES['about_brand_banner_web']['name'])){
+                    $logo = $getfilename =  str_replace(' ', '_', $_FILES['about_brand_banner_web']['name']);
+                    $file = pathinfo($logo);
+                    $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
+                    $data_array['about_brand_banner_web'] = $new_name;
+                    $config['upload_path'] = 'assets/images/public/brand';
+                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['file_name'] = $new_name;
+                    $this->load->library('upload',$config);
+                    $this->upload->initialize($config);
+                    if(!$this->upload->do_upload('about_brand_banner_web')){
+                        echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->upload->display_errors(), 'status' => 0]);
+                        exit;
+                    }
+                }
+
+                if(!empty($_FILES['about_brand_banner_mobile']['name'])){
+                    $logo = $getfilename =  str_replace(' ', '_', $_FILES['about_brand_banner_mobile']['name']);
+                    $file = pathinfo($logo);
+                    $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
+                    $data_array['about_brand_banner_mobile'] = $new_name;
+                    $config['upload_path'] = 'assets/images/public/brand';
+                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['file_name'] = $new_name;
+                    $this->load->library('upload',$config);
+                    $this->upload->initialize($config);
+                    if(!$this->upload->do_upload('about_brand_banner_mobile')){
+                        echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->upload->display_errors(), 'status' => 0]);
+                        exit;
+                    }
+                }
+                // echo "<pre>"; print_r($data_array); die;
+                $save = $this->bm->insert_data('tbl_brand',$data_array);
                 if($save){
                     echo json_encode(['message' => 'Data saved successfully.', 'status' => 1]);
                 } else {
@@ -192,9 +257,9 @@ class Brands_Controller extends MY_Controller
             if($this->form_validation->run()){
                 $data_array = array(
                     'brand_name'                    => $this->input->post('brand_name'),
-                    'logo_message'                  => $this->input->post('logo_comment'),
                     'brand_website'                 => $this->input->post('brand_website'),
-                    'about_brand'                   => $this->input->post('about_brand'),
+                    'logo_message'                  => $this->input->post('logo_comment'),
+                    'about_brand'                   => trim($this->input->post('about_brand')),
                     'brand_label'                   => $this->input->post('brand_label'),
                     'from_hour_week'                => $this->input->post('from_week_hour'),
                     'to_week_hour'                  => $this->input->post('to_week_hour'),
@@ -210,10 +275,11 @@ class Brands_Controller extends MY_Controller
                     'store_map'                     => $this->input->post('store_map'),
                     'show_on_home'                  => $this->input->post('show_on_home'),
                     'brand_offer_status'            => $this->input->post('show_brand_offers'),
-                    'order_home'                    => $this->input->post('order_home'),
                     'brand_audience'                => $this->input->post('brand_audience'),
-                    'updated_by'                    => $this->bm->admin_id(),
-                    'updated_on'                    => date('Y-m-d H:i:s')
+                    'order_home'                    => $this->input->post('order_home'),
+                    'about_brand_banner_alt'        => $this->input->post('about_brand_banner_alt'),
+                    'banner_comment'                => $this->input->post('banner_comment'),
+                    'created_by'                    => $this->bm->admin_id()
                 );
 
                 
@@ -232,9 +298,71 @@ class Brands_Controller extends MY_Controller
                         exit;
                     }
                 }
-                
-                $final_data = array_merge($data_array);
-                $save = $this->bm->update_data('tbl_brand',$final_data,['brand_id' => $id]);
+
+                if(!empty($_FILES['banner_web']['name'])){
+                    $logo = $getfilename =  str_replace(' ', '_', $_FILES['banner_web']['name']);
+                    $file = pathinfo($logo);
+                    $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
+                    $data_array['banner_web'] = $new_name;
+                    $config['upload_path'] = 'assets/images/public/brand';
+                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['file_name'] = $new_name;
+                    $this->load->library('upload',$config);
+                    $this->upload->initialize($config);
+                    if(!$this->upload->do_upload('banner_web')){
+                        echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->upload->display_errors(), 'status' => 0]);
+                        exit;
+                    }
+                }
+
+                if(!empty($_FILES['banner_mobile']['name'])){
+                    $logo = $getfilename =  str_replace(' ', '_', $_FILES['banner_mobile']['name']);
+                    $file = pathinfo($logo);
+                    $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
+                    $data_array['banner_mobile'] = $new_name;
+                    $config['upload_path'] = 'assets/images/public/brand';
+                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['file_name'] = $new_name;
+                    $this->load->library('upload',$config);
+                    $this->upload->initialize($config);
+                    if(!$this->upload->do_upload('banner_mobile')){
+                        echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->upload->display_errors(), 'status' => 0]);
+                        exit;
+                    }
+                }
+
+                if(!empty($_FILES['about_brand_banner_web']['name'])){
+                    $logo = $getfilename =  str_replace(' ', '_', $_FILES['about_brand_banner_web']['name']);
+                    $file = pathinfo($logo);
+                    $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
+                    $data_array['about_brand_banner_web'] = $new_name;
+                    $config['upload_path'] = 'assets/images/public/brand';
+                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['file_name'] = $new_name;
+                    $this->load->library('upload',$config);
+                    $this->upload->initialize($config);
+                    if(!$this->upload->do_upload('about_brand_banner_web')){
+                        echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->upload->display_errors(), 'status' => 0]);
+                        exit;
+                    }
+                }
+
+                if(!empty($_FILES['about_brand_banner_mobile']['name'])){
+                    $logo = $getfilename =  str_replace(' ', '_', $_FILES['about_brand_banner_mobile']['name']);
+                    $file = pathinfo($logo);
+                    $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
+                    $data_array['about_brand_banner_mobile'] = $new_name;
+                    $config['upload_path'] = 'assets/images/public/brand';
+                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['file_name'] = $new_name;
+                    $this->load->library('upload',$config);
+                    $this->upload->initialize($config);
+                    if(!$this->upload->do_upload('about_brand_banner_mobile')){
+                        echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->upload->display_errors(), 'status' => 0]);
+                        exit;
+                    }
+                }
+                $save = $this->bm->update_data('tbl_brand',$data_array,['brand_id' => $id]);
                 if($save){
                     echo json_encode(['message' => 'Data updated successfully.', 'status' => 1]);
                 } else {
@@ -289,14 +417,14 @@ class Brands_Controller extends MY_Controller
     public function add_brand_offer()
     {
         $data['brand_offers'] = [];
-        $data['brands'] = $this->bm->get_data_array('tbl_brand','brand_id,brand_name','status !=2');
+        $data['brands'] = $this->bm->get_data_array('tbl_brand','brand_id,brand_name','status !=2 and brand_offer_status = "Yes"');
         if($this->input->post()){
             $this->form_validation->set_rules('brand_offer_name','Offer Name','required');
             $this->form_validation->set_rules('brand_id','Brand','required');
             if(empty($_FILES['offer_thumbnail']['name'])){
                 $this->form_validation->set_rules('offer_thumbnail','Brand Offer Thumbnail','required');
             }
-            $this->form_validation->set_rules('thumbnail_message','Thumbnail Alt Tag','required');
+            $this->form_validation->set_rules('thumbnail_alt','Thumbnail Alt Tag','required');
             $this->form_validation->set_rules('about_brand_offer','About Brand Offer','required');
 
             if($this->form_validation->run()){
@@ -305,7 +433,7 @@ class Brands_Controller extends MY_Controller
                     'brand_id'          => $this->input->post('brand_id'),
                     'offer_name'        => $this->input->post('brand_offer_name'),
                     'thumbnail_alt'     => $this->input->post('thumbnail_alt'),
-                    'about_offer'       => $this->input->post('about_offer'),
+                    'about_offer'       => $this->input->post('about_brand_offer'),
                     'created_by'        => $this->bm->admin_id(),
                 );
 
@@ -314,7 +442,7 @@ class Brands_Controller extends MY_Controller
                     $file = pathinfo($brand_logo);
                     $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
                     $data_array['offer_thumbnail'] = $new_name;
-                    $config['upload_path'] = 'assets/images/public/brand-offer';
+                    $config['upload_path'] = 'assets/images/public/brand';
                     $config['allowed_types'] = 'jpg|jpeg|png|gif';
                     $config['file_name'] = $new_name;
                     $this->load->library('upload',$config);
@@ -343,6 +471,61 @@ class Brands_Controller extends MY_Controller
 		$this->load->view('admin/include/body_end');
 		$this->load->view('admin/include/admin_js');
     } 
+
+    public function edit_brand_offer($id)
+    {
+        $data['brand_offers'] = $this->bm->get_data_row('tbl_brand_offer','*',['offer_id' => $id]);
+        $data['brands'] = $this->bm->get_data_array('tbl_brand','brand_id,brand_name','status !=2 and brand_offer_status = "Yes"');
+        if($this->input->post()){
+            $this->form_validation->set_rules('brand_offer_name','Offer Name','required');
+            $this->form_validation->set_rules('brand_id','Brand','required');
+            $this->form_validation->set_rules('thumbnail_alt','Thumbnail Alt Tag','required');
+            $this->form_validation->set_rules('about_brand_offer','About Brand Offer','required');
+
+            if($this->form_validation->run()){
+
+                $data_array = array(
+                    'brand_id'          => $this->input->post('brand_id'),
+                    'offer_name'        => $this->input->post('brand_offer_name'),
+                    'thumbnail_alt'     => $this->input->post('thumbnail_alt'),
+                    'about_offer'       => $this->input->post('about_brand_offer'),
+                    'created_by'        => $this->bm->admin_id(),
+                );
+
+                if(!empty($_FILES['offer_thumbnail']['name'])){
+                    $brand_logo = $getfilename =  str_replace(' ', '_', $_FILES['offer_thumbnail']['name']);
+                    $file = pathinfo($brand_logo);
+                    $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
+                    $data_array['offer_thumbnail'] = $new_name;
+                    $config['upload_path'] = 'assets/images/public/brand';
+                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['file_name'] = $new_name;
+                    $this->load->library('upload',$config);
+                    $this->upload->initialize($config);
+                    if(!$this->upload->do_upload('offer_thumbnail')){
+                        echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->upload->display_errors(), 'status' => 0]);
+                        exit;
+                    }
+                }
+                $save = $this->bm->update_data('tbl_brand_offer',$data_array,['offer_id' => $id]);
+                if($save){
+                    echo json_encode(['message' => 'Data saved successfully.', 'status' => 1]);
+                } else {
+                    echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
+                }
+            } else {
+                echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->form_validation->error_array(), 'status' => 0]);
+            }
+            exit;
+        }
+        $this->load->view('admin/include/header_start');
+		$this->load->view('admin/include/header_end');
+		$this->load->view('admin/include/body_start');
+        $this->load->view('admin/include/sidebar');
+		$this->load->view('admin/brands/add-brand-offer',$data);
+		$this->load->view('admin/include/body_end');
+		$this->load->view('admin/include/admin_js');
+    }
 
     public function delete_brand_offer()
     {

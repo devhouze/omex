@@ -1,10 +1,9 @@
 
 <?php
-$action = (empty($brand_offers))?admin_url('add-brands-offer'):admin_url('edit-brands-offer/'.$brand_offers['id']);
-$brand_offer_name = (!empty($brand_offers))?$brand_offers->brand_offer_name:'';
-$brand_offer_thumbnail_message = (!empty($brand_offers))?$brand_offers->brand_offer_thumbnail_message:'';
-$brand_offer_validity = (!empty($brand_offers))?$brand_offers->brand_offer_validity:'';
-$brand_offer = (!empty($brand_offers))?$brand_offers->brand_offer:'';
+$action = (empty($brand_offers))?admin_url('add-brands-offer'):admin_url('edit-brands-offer/'.$brand_offers->offer_id);
+$brand_id = (!empty($brand_offers))?$brand_offers->brand_id:'';
+$brand_offer_name = (!empty($brand_offers))?$brand_offers->offer_name:'';
+$brand_offer_thumbnail_message = (!empty($brand_offers))?$brand_offers->thumbnail_alt:'';
 $about_brand_offer = (!empty($brand_offers))?$brand_offers->about_offer:'';
 ?>
 <script src="<?=base_url('assets/js/admin/brands.js')?>"></script>
@@ -25,7 +24,7 @@ $about_brand_offer = (!empty($brand_offers))?$brand_offers->about_offer:'';
                                     <select name="brand_id" class="form-control form-control-sm">
                                         <option selected="" disabled>Select Brand</option>
                                         <?php if(!empty($brands)){ foreach($brands as $brand){?>
-                                        <option value="<?=$brand['brand_id'];?>"><?=$brand['brand_name'];?></option>
+                                        <option value="<?=$brand['brand_id'];?>" <?php if($brand_id == $brand['brand_id']){echo "selected";}?>><?=$brand['brand_name'];?></option>
                                         <?php } }?>
                                     </select>
                                 </div>
@@ -37,12 +36,12 @@ $about_brand_offer = (!empty($brand_offers))?$brand_offers->about_offer:'';
 
                                 <div class="col-md-6 mb-3" style="display:none;">
                                     <label for="">Brand Label Custom Offer</label>
-                                    <input type="text" class="form-control form-control-sm input-sm" name="brand_custom_offer" value="<?=$brand_offer;?>">
+                                    <input type="text" class="form-control form-control-sm input-sm" name="brand_custom_offer" value="">
                                 </div>
 
                                 <div class="col-md-6 mb-3"style="display:none;">
                                     <label for="">Brand Offer Validity</label>
-                                    <input type="text" class="form-control form-control-sm input-sm datepicker" name="offer_validity" value="<?=$brand_offer_validity;?>">
+                                    <input type="text" class="form-control form-control-sm input-sm datepicker" name="offer_validity" value="">
                                 </div>
 
                                 <div class="col-md-6 mb-3">
@@ -57,7 +56,7 @@ $about_brand_offer = (!empty($brand_offers))?$brand_offers->about_offer:'';
 
                                 <div class="col-md-12 mb-3">
                                     <label for="">About Brand Offer</label>
-                                    <textarea name="about_offer" class="form-control form-control-sm ckeditor"><?=$about_brand_offer;?></textarea>
+                                    <textarea name="about_brand_offer" class="form-control form-control-sm ckeditor"><?=$about_brand_offer;?></textarea>
                                 </div>
 
                             </div>

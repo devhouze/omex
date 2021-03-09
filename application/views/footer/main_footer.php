@@ -33,8 +33,8 @@
                     <li>Email: info@omaxews.com</li>
                 </ul>
                 <ul class="d-flex flex-row list-unstyled mb-0">
-                    <li><a href=""><img src="<?php echo BASE_URL(); ?>assets/images/public/footer/fb.svg" alt="facebook" ></a></li>
-                    <li class="ml-40"><a href=""><img src="<?php echo BASE_URL(); ?>assets/images/public/footer/inst.svg" alt="instagram"></a></li>
+                    <li><a href=""><img src="<?php echo base_url(); ?>assets/images/public/footer/fb.svg" alt="facebook" ></a></li>
+                    <li class="ml-40"><a href=""><img src="<?php echo base_url(); ?>assets/images/public/footer/inst.svg" alt="instagram"></a></li>
                 </ul>
 
             </div>

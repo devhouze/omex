@@ -158,7 +158,7 @@ class Banner_Controllers extends my_controller
         if($this->input->post()){
             $this->form_validation->set_rules('banner_type','Banner Type','required');
             $this->form_validation->set_rules('banner_comment','Banner Comment','required');
-            $this->form_validation->set_rules('banner_link','Banner Link','required');
+            // $this->form_validation->set_rules('banner_link','Banner Link','required');
 
             $banner_type = $this->input->post('banner_type');
 
@@ -204,7 +204,7 @@ class Banner_Controllers extends my_controller
                         exit;
                     }
                 }
-
+                // echo "<pre>"; print_r($data_array); die;
                 $update = $this->bm->update_data('tbl_banner',$data_array,['id' => $id]);
                 if($update){
                     echo json_encode(['message' => 'Data updated successfully.', 'status' => 1]);

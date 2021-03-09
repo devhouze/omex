@@ -66,7 +66,9 @@ $route['paris'] = 'Welcome/paris';
 $route['contact-us'] = 'Welcome/contact_us';
 $route['brand'] = 'Welcome/brand';
 $route['event'] = 'Welcome/event';
-$route['brand-diractory'] = 'Welcome/brand_diractory';
+$route['brand-directory'] = 'Welcome/brand_directory';
+$route['sign-up'] = 'Welcome/sign_up';
+$route['get-brands'] = "Welcome/get_brands";
 
 
 $route['admin'] = 'admin/Login_Controller/sign_in';
@@ -92,6 +94,7 @@ $route['admin/brand-details'] = 'admin/Brands_Controller/get_brand_details';
 // Brand Offer routes
 $route['admin/brand-offer'] = 'admin/Brands_Controller/brand_offer_list';
 $route['admin/add-brands-offer'] = 'admin/Brands_Controller/add_brand_offer';
+$route['admin/edit-brand-offer/(:num)'] = 'admin/Brands_Controller/edit_brand_offer/$1';
 $route['admin/edit-brands-offer/(:num)'] = 'admin/Brands_Controller/edit_brand_offer/$1';
 $route['admin/delete-brand-offer'] = 'admin/Brands_Controller/delete_brand_offer';
 $route['admin/change-brand-status'] = 'admin/Brands_Controller/change_brand_status';

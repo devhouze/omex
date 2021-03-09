@@ -13,6 +13,7 @@ class Welcome extends CI_Controller {
 	{
 		$data['banner'] = $this->wm->get_home_banner();
 		$data['brand_logo'] = $this->wm->get_brand_logo();
+		$data['events'] = $this->wm->get_events();
 		// echo "<pre>"; print_r($data); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
@@ -192,8 +193,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('js/common');
 		$this->load->view('footer/body_end');
 	}
-	public function brand_diractory()
+	public function brand_directory()
 	{
+		$data['brand_banner'] = $this->wm->get_brand_directory_banner();
+		echo "<pre>"; print_r($data); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -255,7 +258,38 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer/body_end');
 	}
 	
-	
+	public function sign_up()
+	{
+		$this->form_validation->set_rules('name','Name','required');
+		$this->form_validation->set_rules('email','Email','required');
+		$this->form_validation->set_rules('contact','Mobile Number','required');
+
+		if($this->form_validation->run()){
+			$data_array = array(
+				'name'		=> $this->input->post('name'),
+				'email'		=> $this->input->post('email'),
+				'contact'	=> $this->input->post('contact'),
+				'source'	=> "Sign Up Form",
+			);
+
+			$save = $this->wm->insert_data('tbl_leads',$data_array);
+			if($save){
+				echo json_encode(['message' => 'Data saved successfully.', 'status' => 1]);
+			} else {
+				echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
+			}
+		} else {
+			echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->form_validation->error_array(), 'status' => 0]);
+		}
+		exit;
+	}
+
+	public function get_brands()
+	{
+		$type = $this->input->post('type');
+		$data = $this->wm->get_brands($type);
+		echo json_encode($data);
+	}
 	
 	
 }

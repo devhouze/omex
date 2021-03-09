@@ -187,6 +187,7 @@ $( document ).ready(function(){
 $(function() {
     $( ".start_date" ).datepicker({
         changeMonth: true,
+        dateFormat: 'yy-mm-dd',
         changeYear: true,
         minDate: new Date(),
         maxDate: '+30Y',
@@ -198,6 +199,12 @@ $(function() {
         $(".end_date").datepicker( "option", "maxDate", '+2y' );
     }
     });
+
+    $(".end_date").datepicker({ 
+    dateFormat: 'yy-mm-dd',
+    minDate: new Date(),
+    changeMonth: true
+});
 });
 
 </script>

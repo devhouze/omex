@@ -39,7 +39,7 @@
                 <div class="owl-carousel owl-theme top-brand">
                     <?php if(!empty($brand_logo)){ foreach($brand_logo as $logo){?>
                     <div class="item">
-                        <img src="<?php echo base_url('assets/images/public/home/'.$logo['brand_logo']); ?>" alt="<?=$logo['banner_comment'];?>" class="d-table mx-auto">
+                        <img src="<?php echo base_url('assets/images/public/brand/'.$logo['brand_logo']); ?>" alt="<?=$logo['banner_comment'];?>" class="d-table mx-auto">
                     </div>
                     <?php } } ?>
                 </div>
@@ -47,7 +47,7 @@
         </div>
         <div class="row mt-md-5 mt-3">
             <div class="col-md-12">
-                <a href="" class="d-table mx-auto primary-btn">View All Brands</a>
+                <a href="<?php echo base_url('brand');?>" class="d-table mx-auto primary-btn">View All Brands</a>
             </div>
         </div>
     </div>
@@ -282,7 +282,7 @@
                     <img src="<?php echo base_url(); ?>assets/images/public/home/e1.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
                     <div class="outer"></div>
                 </figure>
-                <a href="" class="exploer-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
+                <a href="" class="exploer-btn" data-type="eat" data-bs-toggle="modal" data-bs-target="#eatModal">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
             </div>
             <div class="col-md-4">
@@ -293,7 +293,7 @@
                     <div class="outer"></div>
 
                 </figure>
-                <a href="" class="exploer-btn">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
+                <a href="" class="exploer-btn" data-type="style" data-bs-toggle="modal" data-bs-target="#styleModal">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
             </div>
             <div class="col-md-4">
@@ -303,7 +303,7 @@
                     <img src="<?php echo base_url(); ?>assets/images/public/home/e2.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
                     <div class="outer"></div>
                 </figure>
-                <a href="" class="exploer-btn">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
+                <a href="" class="exploer-btn" data-type="play" data-bs-toggle="modal" data-bs-target="#playModal">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
             </div>
         </div>
@@ -323,35 +323,37 @@
                 <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
+                        <?php if(!empty($events)) {foreach($events as $event){?>
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="d-md-none d-block mobile-look">
-                                    <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm pr-sm0 mb-md-0 mb-4">Kite Flying Event this season.</h1>
+                                    <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm pr-sm0 mb-md-0 mb-4"><?php echo $event['event_name'];?></h1>
                                     </div>
-                                    <img src="<?php echo base_url(); ?>assets/images/public/home/leftslide.jpg" alt="" class="w-100">
+                                    <img src="<?php echo base_url('assets/images/public/home/'.$event['thumbnail_image']); ?>" alt="<?php echo $event['thumbnail_message']; ?>" class="w-100">
 
                                 </div>
                                 <div class="col-md-4">
                                     <div class="pl-12">
                                         <div class="d-md-block d-none">
-                                            <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm">Kite Flying Event this season.</h1>
+                                            <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm"><?php echo $event['event_name'];?></h1>
                                         </div>
                                         <div class="box-calander">
                                             <div class="top-row">
-                                                <div class="left-col"><span>2021</span></div>
-                                                <div class="right-col"><h2 class="position-relative">23-24</h2>MAR</div>
+                                                <div class="left-col"><span><?php echo ($event['date_available'] != 1)?date('Y',strtotime($event['start_date'])):'N/A';?></span></div>
+                                                <div class="right-col"><h2 class="position-relative"><?php echo ($event['date_available'] != 1)?date('d',strtotime($event['start_date']))."-".(date('d',strtotime($event['end_date']))):'N/A';?></h2>MAR</div>
                                             </div>
 
 
                                         </div>
                                         
-                                            <div class="day text-center">SAT & SUN</div>
-                                            <div class="time text-center">7 pm - 9 pm</div>
+                                            <div class="day text-center"><?php echo ($event['date_available'] != 1)?strtoupper(date('D',strtotime($event['start_date'])))."&".(strtoupper(date('D',strtotime($event['end_date'])))):'N/A';?></div>
+                                            <div class="time text-center"><?php echo date('g a',strtotime($event['event_start_time']));?>-<?php echo date('g a',strtotime($event['event_end_time']));?></div>
                                             <img src="<?php echo base_url(); ?>assets/images/public/home/long-arrow.svg" alt="" class="mt-md-4 mt-3">
                                     </div>
 
                                 </div>
                             </div>
+                            <?php } }?>
                         </div>
                        
 
@@ -389,7 +391,7 @@
                 <div class="tab-area">
                     <ul class="nav nav-tabs justify-content-between" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">ALL
+                            <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">All
                             </a>
                         </li>
                         <li class="nav-item" role="presentation">
@@ -399,7 +401,7 @@
                             <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Exterior</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="last-tab" data-bs-toggle="tab" href="#last" role="tab" aria-controls="last" aria-selected="false">CONSTRUCTION</a>
+                            <a class="nav-link" id="last-tab" data-bs-toggle="tab" href="#last" role="tab" aria-controls="last" aria-selected="false">Construction</a>
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">

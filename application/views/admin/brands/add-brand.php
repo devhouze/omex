@@ -87,7 +87,7 @@ $order_home = (!empty($brands))?$brands->order_home:'';
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">About Brand Banner Mobile</label>
-                                    <input type="file" class="form-control form-control-sm input-sm" name="banner_mobile">
+                                    <input type="file" class="form-control form-control-sm input-sm" name="about_brand_banner_mobile">
                                 </div>
 
                                 <div class="col-md-12 mb-3">
@@ -135,10 +135,9 @@ $order_home = (!empty($brands))?$brands->order_home:'';
                                     <label for="">Brand Type</label><br>
                                     <select name="brand_type" class="form-control form-control-sm">
                                         <option selected="" disabled>Select Type</option>
-                                        <option value="Shop" <?php if($brand_type == "Shop"){echo "selected";}?>>Shop</option>
+                                        <option value="Play" <?php if($brand_type == "Play"){echo "selected";}?>>Play</option>
                                         <option value="Eat" <?php if($brand_type == "Eat"){echo "selected";}?>>Eat</option>
-                                        <option value="Entertainment" <?php if($brand_type == "Entertainment"){echo "selected";}?>>Entertainment</option>
-                                        <option value="Other" <?php if($brand_type == "Other"){echo "selected";}?>>Other </option>
+                                        <option value="Style" <?php if($brand_type == "Style"){echo "selected";}?>>Style</option>
                                     </select>
                                 </div>
 
