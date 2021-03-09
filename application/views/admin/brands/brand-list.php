@@ -72,7 +72,7 @@
                                 <tr>
                                     <td scope="row"><?=$sno; $sno++;?></td>
                                     <td><?=$brand['brand_name'];?></td>
-                                    <td><img src="<?=base_url('assets/images/admin/brand/'.$brand['brand_logo']);?>" alt="" style="width:50px; height:50px"></td>
+                                    <td><img src="<?=base_url('assets/images/public/brand/'.$brand['brand_logo']);?>" alt="" style="width:50px; height:50px"></td>
                                     <td><?=$brand['brand_location'];?></td>
                                     <td align="center">
                                         <label class="switch">

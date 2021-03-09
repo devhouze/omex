@@ -264,16 +264,16 @@ $(document).ready(function() {
                 var offer_name = data[0].offer_name;
                 var offer_thumbnail = data[0].offer_thumbnail;
                 var thumbnail_alt = data[0].thumbnail_alt;
-                var about_brand = data[0].about_brand;
+                var about_offer = data[0].about_offer;
                 var status = data[0].status;
                 value = '';
                 value += '<table class="table">';
                 value += '<tr><th colspan="4" class="text-center">Brand Offer Details</th></tr>';
                 value += '<tr><th>Brand Name</th><td>' + brand_name + '</td></tr>';
                 value += '<tr><th>Offer Name</th><td>' + offer_name + '</td></tr>';
-                value += "<tr><th>Thumbnail</th><td><img src=" + base_url + 'assets/images/admin/brand-offer/' + offer_thumbnail + " style='width:100px; height:100px'></td></tr>";
+                value += "<tr><th>Thumbnail</th><td><img src=" + base_url + 'assets/images/public/brand/' + offer_thumbnail + " style='width:100px; height:100px'></td></tr>";
                 value += '<tr><th>Thumbnail Alt Tag</th><td>' + thumbnail_alt + '</td></tr>';
-                value += '<tr><th>About Offer</th><td>' + about_brand + '</td></tr>';
+                value += '<tr><th>About Offer</th><td>' + about_offer + '</td></tr>';
                 value += '<tr><th>Status</th><td>' + status + '</td></tr>';
                 $('#details').html(value);
             }

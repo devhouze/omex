@@ -77,7 +77,7 @@
                                     <td scope="row"><?=$sno; $sno++;?></td>
                                     <td><?=$value['brand_name'];?></td>
                                     <td><?=$value['offer_name'];?></td>
-                                    <td><img src="<?=base_url('assets/images/admin/brand-offer/'.$value['offer_thumbnail']);?>" alt="" style="width:50px; height:50px"></td>
+                                    <td><img src="<?=base_url('assets/images/public/brand/'.$value['offer_thumbnail']);?>" alt="" style="width:50px; height:50px"></td>
                                     <td align="center">
                                         <label class="switch">
                                           <input type="checkbox" class="activate_offer" value="<?php echo $value['offer_id'];?>" <?php echo ($value['status']=="0")?'checked':'' ?>>
@@ -87,7 +87,7 @@
                                     <td><?=$value['created_by'];?></td>
                                     <td><?=$value['created_on'];?></td>
                                     <td>
-                                    <a href="<?php echo admin_url('edit-brands/'.$value['offer_id']);?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a>
+                                    <a href="<?php echo admin_url('edit-brand-offer/'.$value['offer_id']);?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a>
                                     <a href="javascript:void(0)" data-id="<?=$value['offer_id'];?>" class="btn btn-danger delete_offer"><span class="mdi mdi-delete"></span></a>
                                     <a href="javascript:void(0)" class="btn btn-primary offer_detail" data-id="<?=$value['offer_id'];?>" data-toggle="modal" data-target="#offerDetail"><span class="mdi mdi-eye"></span></a>
                                     </td>
