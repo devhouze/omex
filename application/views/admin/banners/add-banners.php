@@ -37,7 +37,7 @@ $banner_type = (!empty($banner))?$banner['banner_type']:'';
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Banner Alt Tag</label>
-                                    <input type="text" class="form-control form-control-sm input-sm" name="banner_comment" value="">
+                                    <input type="text" class="form-control form-control-sm input-sm" name="banner_comment" value="<?php echo $comment;?>">
                                 </div>
 
                                 <div class="col-md-6 mb-3">

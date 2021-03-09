@@ -100,10 +100,53 @@ class Welcome_model extends CI_Model
     {
         $query = $this->db->select('brand_logo, banner_comment')
                           ->where('status',0)
-                          ->order_by('brand_id','desc')
+                          ->where('show_on_home','Yes')
+                          ->order_by('order_home','desc')
                           ->get('tbl_brand');
         if($query->num_rows() > 0){
             return $query->result_array();
+        }
+        return [];
+    }
+
+    public function get_events()
+    {
+        $query = $this->db->select('event_name, thumbnail_image, thumbnail_message, event_start_time, event_end_time, show_reg_btn, date_available, start_date, end_date, thumbnail_image')
+                          ->where('status',0)
+                          ->where('end_date >',date('Y-m-d'))
+                          ->get('tbl_event');
+        if($query->num_rows() > 0)
+        {
+            return $query->result_array();
+        }
+        return [];
+    }
+
+    public function get_brands($type)
+    {
+        $query = $this->db->select('brand_logo, logo_message')
+                          ->where('status',0)
+                          ->where('show_on_home','Yes')
+                          ->where('brand_type',$type)
+                          ->order_by('brand_id','desc')
+                          ->order_by('order_home','asc')
+                          ->limit(10)
+                          ->get('tbl_brand');
+        if($query->num_rows() > 0){
+            return $query->result_array();
+        }
+        return [];
+    }
+
+    public function get_brand_directory_banner()
+    {
+        $query = $this->db->select('banner_web, banner_mobile, comment')
+                          ->where('status',0)
+                          ->where('banner_type',3)
+                          ->limit(1)
+                          ->get('tbl_banner');
+        if($query->num_rows() > 0){
+        return $query->result_array();
         }
         return [];
     }

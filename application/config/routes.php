@@ -66,9 +66,9 @@ $route['paris'] = 'Welcome/paris';
 $route['contact-us'] = 'Welcome/contact_us';
 $route['brand'] = 'Welcome/brand';
 $route['event'] = 'Welcome/event';
-$route['brand-diractory'] = 'Welcome/brand_diractory';
+$route['brand-directory'] = 'Welcome/brand_directory';
 $route['sign-up'] = 'Welcome/sign_up';
-
+$route['get-brands'] = "Welcome/get_brands";
 
 
 $route['admin'] = 'admin/Login_Controller/sign_in';

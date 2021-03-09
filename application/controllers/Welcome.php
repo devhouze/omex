@@ -13,6 +13,7 @@ class Welcome extends CI_Controller {
 	{
 		$data['banner'] = $this->wm->get_home_banner();
 		$data['brand_logo'] = $this->wm->get_brand_logo();
+		$data['events'] = $this->wm->get_events();
 		// echo "<pre>"; print_r($data); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
@@ -192,8 +193,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('js/common');
 		$this->load->view('footer/body_end');
 	}
-	public function brand_diractory()
+	public function brand_directory()
 	{
+		$data['brand_banner'] = $this->wm->get_brand_directory_banner();
+		echo "<pre>"; print_r($data); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -279,6 +282,13 @@ class Welcome extends CI_Controller {
 			echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->form_validation->error_array(), 'status' => 0]);
 		}
 		exit;
+	}
+
+	public function get_brands()
+	{
+		$type = $this->input->post('type');
+		$data = $this->wm->get_brands($type);
+		echo json_encode($data);
 	}
 	
 	

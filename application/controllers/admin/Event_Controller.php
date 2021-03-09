@@ -77,8 +77,8 @@ class Event_Controller extends MY_Controller
                 $data_array = array(
                     'event_name'            => $this->input->post('event_name'),
                     'date_available'        => $this->input->post('date_availibility'),
-                    'start_date'            => $this->input->post('start_date'),
-                    'end_date'              => $this->input->post('end_date'),
+                    'start_date'            => date('Y-m-d',strtotime($this->input->post('start_date'))),
+                    'end_date'              => date('Y-m-d',strtotime($this->input->post('end_date'))),
                     'thumbnail_message'     => $this->input->post('thumbnail_message'),
                     'event_type'            => $this->input->post('event_type'),
                     'event_location'        => $this->input->post('event_location'),
@@ -99,7 +99,7 @@ class Event_Controller extends MY_Controller
                     $file = pathinfo($thumbnail_image);
                     $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
                     $data_array['thumbnail_image'] = $new_name;
-                    $config['upload_path'] = 'assets/images/admin/event';
+                    $config['upload_path'] = 'assets/images/public/home';
                     $config['allowed_types'] = 'jpg|jpeg|png|gif';
                     $config['file_name'] = $new_name;
                     $this->load->library('upload',$config);
@@ -157,8 +157,8 @@ class Event_Controller extends MY_Controller
                 $data_array = array(
                     'event_name'            => $this->input->post('event_name'),
                     'date_available'        => $this->input->post('date_availibility'),
-                    'start_date'            => $this->input->post('start_date'),
-                    'end_date'              => $this->input->post('end_date'),
+                    'start_date'            => date('Y-m-d',strtotime($this->input->post('start_date'))),
+                    'end_date'              => date('Y-m-d',strtotime($this->input->post('end_date'))),
                     'thumbnail_message'     => $this->input->post('thumbnail_message'),
                     'event_type'            => $this->input->post('event_type'),
                     'event_location'        => $this->input->post('event_location'),
@@ -179,7 +179,7 @@ class Event_Controller extends MY_Controller
                     $file = pathinfo($thumbnail_image);
                     $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
                     $data_array['thumbnail_image'] = $new_name;
-                    $config['upload_path'] = 'assets/images/admin/event';
+                    $config['upload_path'] = 'assets/images/public/home';
                     $config['allowed_types'] = 'jpg|jpeg|png|gif';
                     $config['file_name'] = $new_name;
                     $this->load->library('upload',$config);
