@@ -277,7 +277,7 @@
             <div class="row mt-4 d-flex flex-fill">
                 <div class="col-md-1"></div>
                 <div class="col-md-6 d-flex flex-fill pe-md-5">
-                    <figure class="mb-0 w-100"><img src="<?php echo BASE_URL(); ?>assets/images/public/street/map.jpg" alt="" class="w-100"></figure>
+                    <figure class="mb-0 w-100 d-flex flex-fill"><img src="<?php echo BASE_URL(); ?>assets/images/public/street/map.jpg" alt="" class="w-100"></figure>
                 </div>
                 <div class="col-md-4 d-flex flex-fill">
                     <div class="card ams-bg px-40 py-40 rounded-0 border-0 wow fadeInRight animated">
