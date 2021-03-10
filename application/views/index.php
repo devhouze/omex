@@ -391,7 +391,7 @@
                 <div class="tab-area">
                     <ul class="nav nav-tabs justify-content-between" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">ALL
+                            <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">All
                             </a>
                         </li>
                         <li class="nav-item" role="presentation">
@@ -401,7 +401,7 @@
                             <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Exterior</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="last-tab" data-bs-toggle="tab" href="#last" role="tab" aria-controls="last" aria-selected="false">CONSTRUCTION</a>
+                            <a class="nav-link" id="last-tab" data-bs-toggle="tab" href="#last" role="tab" aria-controls="last" aria-selected="false">Construction</a>
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
