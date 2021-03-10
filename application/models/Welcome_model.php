@@ -143,7 +143,7 @@ class Welcome_model extends CI_Model
         $query = $this->db->select('banner_web, banner_mobile, comment')
                           ->where('status',0)
                           ->where('banner_type',3)
-                          ->limit(1)
+                          ->order_by('id','desc')
                           ->get('tbl_banner');
         if($query->num_rows() > 0){
         return $query->result_array();

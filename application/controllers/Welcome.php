@@ -196,14 +196,13 @@ class Welcome extends CI_Controller {
 	public function brand_directory()
 	{
 		$data['brand_banner'] = $this->wm->get_brand_directory_banner();
-		echo "<pre>"; print_r($data); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
 		$this->load->view('header/main_header');
-		$this->load->view('brand_diractory');
+		$this->load->view('brand_diractory',$data);
 		$this->load->view('more_expoler');
 		$this->load->view('footer/footer_signup');
 		$this->load->view('footer/main_footer');

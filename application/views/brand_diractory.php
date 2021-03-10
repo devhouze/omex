@@ -7,10 +7,11 @@
                     <div id="carouselExampleIndicators" class="carousel slide positon-relative d-md-block d-none" data-bs-ride="carousel">
 
                         <div class="carousel-inner postion-relative ">
-                            <div class="carousel-item active">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bs1.jpg" alt="" class="">
+                            <?php if(!empty('brand_banner')) {$i=1; foreach($brand_banner as $banner){?>
+                            <div class="carousel-item <?php if($i == 1){ echo "active";}?>">
+                                <img src="<?php echo BASE_URL('assets/images/public/brand/'.$banner['banner_web']); ?>" alt="<?php echo $banner['comment'];?>" class="">
                             </div>
-                            
+                            <?php $i++;  } }?>
                         </div>
 
                         <div class="bg-color" style="background-color: #5A946E;"></div>
