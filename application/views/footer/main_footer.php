@@ -7,21 +7,20 @@
                 <div class="f-title fz26 text-white fw5 mb-30">World Street</div>
                 <div class="d-flex">
                 <ul class="menu list-unstyled mr-30">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Shop</a></li>
-                    <li><a href="">Eat</a></li>
-                    <li><a href="">Entertainment</a></li>
-                    <li><a href="">Events</a></li>
-                    <li><a href="">Events</a></li>
+                    <li><a href="<?php echo base_url();?>">Home</a></li>
+                    <li><a href="<?php echo base_url('london');?>">London Street</a></li>
+                    <li><a href="<?php echo base_url('paris');?>">Paris Street</a></li>
+                    <li><a href="<?php echo base_url('athens');?>">Athens Street</a></li>
+                    <li><a href="<?php echo base_url('portugal');?>">Portugal Street</a></li>
+                    <li><a href="<?php echo base_url('amsterdam');?>">Amsterdam Street</a></li>
 
                 </ul>
                 <ul class="menu list-unstyled">
-                    <li><a href="">WS Social</a></li>
-                    <li><a href="">Reach Us</a></li>
-                    <li><a href="">Experience Gallery</a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Terms of Use</a></li>
-                    <li><a href="">Disclaimer</a></li>
+                    <li><a href="<?php echo base_url('san-francisco'); ?>">San Francisco Street</a></li>
+                    <li><a href="<?php echo base_url('hong-kong'); ?>">Hong Kong Street</a></li>
+                    <li><a href="<?php echo base_url('brand-directory'); ?>">Brands</a></li>
+                    <li><a href="<?php echo base_url('event'); ?>">Events</a></li>
+                    <li><a href="<?php echo base_url('contact-us'); ?>">Contact Us</a></li>
                 </ul>
                 </div>
 
@@ -34,7 +33,7 @@
                 </ul>
                 <ul class="d-flex flex-row list-unstyled mb-0">
                     <li><a href=""><img src="<?php echo base_url(); ?>assets/images/public/footer/fb.svg" alt="facebook" ></a></li>
-                    <li class="ml-40"><a href=""><img src="<?php echo base_url(); ?>assets/images/public/footer/inst.svg" alt="instagram"></a></li>
+                    <li class="ml-40"><a href="https://www.instagram.com/omaxeworldstreet/?hl=en" target="_blank"><img src="<?php echo base_url(); ?>assets/images/public/footer/inst.svg" alt="instagram"></a></li>
                 </ul>
 
             </div>

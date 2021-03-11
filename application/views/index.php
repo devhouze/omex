@@ -47,7 +47,7 @@
         </div>
         <div class="row mt-md-5 mt-3">
             <div class="col-md-12">
-                <a href="<?php echo base_url('brand');?>" class="d-table mx-auto primary-btn">View All Brands</a>
+                <a href="<?php echo base_url('brand-directory');?>" class="d-table mx-auto primary-btn">View All Brands</a>
             </div>
         </div>
     </div>
@@ -322,8 +322,8 @@
             <div class="col-md-10">
                 <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <?php if(!empty($events)) {foreach($events as $event){?>
+                        <?php if(!empty($events)) {$i=1; foreach($events as $event){?>
+                        <div class="carousel-item <?php if($i == 1){ echo "active";}?>">
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="d-md-none d-block mobile-look">
@@ -340,21 +340,21 @@
                                         <div class="box-calander">
                                             <div class="top-row">
                                                 <div class="left-col"><span><?php echo ($event['date_available'] != 1)?date('Y',strtotime($event['start_date'])):'N/A';?></span></div>
-                                                <div class="right-col"><h2 class="position-relative"><?php echo ($event['date_available'] != 1)?date('d',strtotime($event['start_date']))."-".(date('d',strtotime($event['end_date']))):'N/A';?></h2>MAR</div>
+                                                <div class="right-col"><h2 class="position-relative"><?php echo ($event['date_available'] != 1)?date('d M',strtotime($event['start_date']))."-".(date('d M',strtotime($event['end_date']))):'N/A';?></h2></div>
                                             </div>
 
 
                                         </div>
                                         
-                                            <div class="day text-center"><?php echo ($event['date_available'] != 1)?strtoupper(date('D',strtotime($event['start_date'])))."&".(strtoupper(date('D',strtotime($event['end_date'])))):'N/A';?></div>
+                                            <div class="day text-center"><?php echo ($event['date_available'] != 1)?strtoupper(date('D',strtotime($event['start_date'])))."-".(strtoupper(date('D',strtotime($event['end_date'])))):'N/A';?></div>
                                             <div class="time text-center"><?php echo date('g a',strtotime($event['event_start_time']));?>-<?php echo date('g a',strtotime($event['event_end_time']));?></div>
                                             <img src="<?php echo base_url(); ?>assets/images/public/home/long-arrow.svg" alt="" class="mt-md-4 mt-3">
                                     </div>
 
                                 </div>
                             </div>
-                            <?php } }?>
                         </div>
+                        <?php } }?>
                        
 
 
@@ -450,9 +450,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-12 mt-30">
+            <!-- <div class="col-md-12 mt-30">
                 <a href="" class="d-table mx-auto primary-btn">VIEW MORE</a>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

@@ -507,6 +507,7 @@ class Brands_Controller extends MY_Controller
                         exit;
                     }
                 }
+                // echo "<pre>"; print_r($data_array);
                 $save = $this->bm->update_data('tbl_brand_offer',$data_array,['offer_id' => $id]);
                 if($save){
                     echo json_encode(['message' => 'Data saved successfully.', 'status' => 1]);
