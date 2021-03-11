@@ -189,12 +189,16 @@ footer .menu li+li {
     left: 42%;
 }
 
+.accordion-item h2 {
+    -webkit-appearance: unset !important;
+}
+
 .tab-pane {
     position: relative;
 }
 
 .tab-area ul li {
-    width: calc(100% / 4);
+    width: calc(100% / 5);
     text-align: center;
     margin: 0;
     padding: 0;
@@ -226,7 +230,7 @@ footer .menu li+li {
 }
 
 .tab-area ul {
-    margin: 15px 244px;
+    margin: 15px 135px;
 }
 
 .tab-area .tab-content {
@@ -292,8 +296,7 @@ a.banner-link {
 
 .looking-out h2 {
     color: #DA6170;
-    font-size: 40px;
-    font-family: 'Helvetica';
+    font-size: 30px;
     margin-bottom: 0;
     margin-top: 0;
     text-shadow: 3px 0px 0px #cc1f38;
@@ -301,10 +304,7 @@ a.banner-link {
 }
 
 .looking-out h2 span {
-    color: #DA6170;
-    position: absolute;
-    left: -6px;
-    top: 0;
+    text-shadow: 0 0 #da6170;
 }
 
 .time {
@@ -763,11 +763,31 @@ a.banner-link {
 
 .live-in-word .slider-counter {
     position: absolute;
-    left: 42%;
+    left: calc(50% - 106px);
     bottom: 80px;
     font-size: 22px;
     color: var(--ath);
     z-index: 9;
+}
+
+.arow-btns {
+    position: absolute;
+    z-index: 9;
+    bottom: 110px;
+    width: 100%;
+}
+
+.arow-btns a {
+    width: 80px;
+    height: 50px;
+}
+
+.arow-btns a.carousel-control-next {
+    right: 10px;
+}
+
+.arow-btns a.carousel-control-prev {
+    left: 10px;
 }
 
 .barnd-page .live-in-word .slider-counter {
@@ -1802,11 +1822,14 @@ a.banner-link {
         margin-right: 0;
     }
     .tab-area ul li {
-        width: 167px;
-        min-width: 197px;
+        width: 140px;
+        min-width: 140px;
     }
     .tab-area ul li a {
         font-size: 14px;
+    }
+    .tab-area .slider-counter {
+        bottom: 60px;
     }
     .looking-out h2 {
         font-size: 26px;
@@ -1832,7 +1855,7 @@ a.banner-link {
     .box-calander {
         margin-left: auto;
         margin-right: auto;
-        width: 210px;
+        width: 270px;
     }
     .exploer-btn img {
         width: 50px;
@@ -2136,7 +2159,11 @@ a.banner-link {
         margin: 20px;
     }
     .expoler-modal .modal-body ul li {
-        width: 50%;
+        width: 46%;
+        margin-bottom: 10px;
+    }
+    .expoler-modal .modal-body ul {
+        justify-content: space-between;
     }
     .expoler-modal .modal-body .exploer-btn {
         font-size: 14px;

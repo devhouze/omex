@@ -9,13 +9,17 @@
                         <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner">
-                        
-                        <?php if(!empty($banner)){$i = 1; foreach($banner as $value){?>
-                        <div class="carousel-item <?=($i == 1)?'active':''; $i++;?>">
-                            <img src="<?php echo base_url('assets/images/public/home/'.$value['banner_web']); ?>" alt="<?=$value['comment'];?>" class="d-table mx-auto w-100">
-                            <a href="#" class="banner-link"></a>
-                        </div>
-                        <?php } }?>
+
+                        <?php if (!empty($banner)) {
+                            $i = 1;
+                            foreach ($banner as $value) { ?>
+                                <div class="carousel-item <?= ($i == 1) ? 'active' : '';
+                                                            $i++; ?>">
+                                    <img src="<?php echo base_url('assets/images/public/home/' . $value['banner_web']); ?>" alt="<?= $value['comment']; ?>" class="d-table mx-auto w-100">
+                                    <a href="#" class="banner-link"></a>
+                                </div>
+                        <?php }
+                        } ?>
 
                     </div>
 
@@ -37,17 +41,19 @@
         <div class="row justify-content-center align-items-center wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="0.15s">
             <div class="col-md-10 mt-20">
                 <div class="owl-carousel owl-theme top-brand">
-                    <?php if(!empty($brand_logo)){ foreach($brand_logo as $logo){?>
-                    <div class="item">
-                        <img src="<?php echo base_url('assets/images/public/brand/'.$logo['brand_logo']); ?>" alt="<?=$logo['banner_comment'];?>" class="d-table mx-auto">
-                    </div>
-                    <?php } } ?>
+                    <?php if (!empty($brand_logo)) {
+                        foreach ($brand_logo as $logo) { ?>
+                            <div class="item">
+                                <img src="<?php echo base_url('assets/images/public/brand/' . $logo['brand_logo']); ?>" alt="<?= $logo['banner_comment']; ?>" class="d-table mx-auto">
+                            </div>
+                    <?php }
+                    } ?>
                 </div>
             </div>
         </div>
         <div class="row mt-md-5 mt-3">
             <div class="col-md-12">
-                <a href="<?php echo base_url('brand');?>" class="d-table mx-auto primary-btn">View All Brands</a>
+                <a href="<?php echo base_url('brand-directory'); ?>" class="d-table mx-auto primary-btn">View All Brands</a>
             </div>
         </div>
     </div>
@@ -67,7 +73,7 @@
 
                     <div class="carousel-inner">
                         <div class="carousel-item position-relative active" style="background-image:url(<?php echo base_url(); ?>assets/images/public/home/slider1.jpg);">
-                            
+
                             <div class="card lon-bg wow fadeInRight animated">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/l-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
@@ -75,7 +81,7 @@
                             </div>
                         </div>
                         <div class="carousel-item position-relative" style="background-image:url('<?php echo base_url(); ?>assets/images/public/home/slider.jpg');">
-                            
+
                             <div class="card par-bg wow fadeInRight animated" data-wow-duration="1s" data-wow-delay="0.5S">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/parish.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
@@ -83,7 +89,7 @@
                             </div>
                         </div>
                         <div class="carousel-item position-relative" style="background-image:url('<?php echo base_url(); ?>assets/images/public/home/slider3.jpg')">
-                            
+
                             <div class="card por-bg">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/p-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
@@ -91,7 +97,7 @@
                             </div>
                         </div>
                         <div class="carousel-item position-relative" style="background-image:url('<?php echo base_url(); ?>assets/images/public/home/slider4.jpg')">
-                            
+
                             <div class="card ath-bg">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/at-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
@@ -99,7 +105,7 @@
                             </div>
                         </div>
                         <div class="carousel-item position-relative" style="background-image:url('<?php echo base_url(); ?>assets/images/public/home/slider5.jpg')">
-                            
+
                             <div class="card ams-bg">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/am-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
@@ -107,7 +113,7 @@
                             </div>
                         </div>
                         <div class="carousel-item position-relative" style="background-image:url('<?php echo base_url(); ?>assets/images/public/home/slider6.jpg')">
-                            
+
                             <div class="card san-bg">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/s-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
@@ -115,7 +121,7 @@
                             </div>
                         </div>
                         <div class="carousel-item position-relative" style="background-image:url('<?php echo base_url(); ?>assets/images/public/home/slider7.jpg')">
-                            
+
                             <div class="card hon-bg">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/h-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
@@ -163,7 +169,7 @@
         </div>
         <div class="row mt-4 d-md-none d-block wow fadeInUp animated">
             <div class="col-md-12 px-0">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicatorsss" class="carousel slide" data-bs-ride="carousel">
 
                     <div class="carousel-inner">
                         <div class="carousel-item position-relative active">
@@ -224,6 +230,14 @@
                         </div>
 
 
+                    </div>
+                    <div class="arow-btns">
+                    <a class="carousel-control-prev" href="#carouselExampleIndicatorsss" role="button" data-bs-slide="prev">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/left.svg" alt="" class="w-100">
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicatorsss" role="button" data-bs-slide="next">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
+                        </a>
                     </div>
 
                     <ol class="carousel-indicators position-relative px-0 mx-0">
@@ -322,42 +336,55 @@
             <div class="col-md-10">
                 <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <?php if(!empty($events)) {foreach($events as $event){?>
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <div class="d-md-none d-block mobile-look">
-                                    <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm pr-sm0 mb-md-0 mb-4"><?php echo $event['event_name'];?></h1>
-                                    </div>
-                                    <img src="<?php echo base_url('assets/images/public/home/'.$event['thumbnail_image']); ?>" alt="<?php echo $event['thumbnail_message']; ?>" class="w-100">
+                        <?php if (!empty($events)) {
+                            $i = 1;
+                            foreach ($events as $event) { ?>
+                                <div class="carousel-item <?php if ($i == 1) {
+                                                                echo "active";
+                                                            } ?>">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="d-md-none d-block mobile-look">
+                                                <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm pr-sm0 mb-md-0 mb-4"><?php echo $event['event_name']; ?></h1>
+                                            </div>
+                                            <img src="<?php echo base_url(); ?>assets/images/public/home/leftslide.jpg" alt="" class="w-100">
 
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="pl-12">
-                                        <div class="d-md-block d-none">
-                                            <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm"><?php echo $event['event_name'];?></h1>
                                         </div>
-                                        <div class="box-calander">
-                                            <div class="top-row">
-                                                <div class="left-col"><span><?php echo ($event['date_available'] != 1)?date('Y',strtotime($event['start_date'])):'N/A';?></span></div>
-                                                <div class="right-col"><h2 class="position-relative"><?php echo ($event['date_available'] != 1)?date('d',strtotime($event['start_date']))."-".(date('d',strtotime($event['end_date']))):'N/A';?></h2>MAR</div>
+                                        <div class="col-md-4">
+                                            <div class="pl-12">
+                                                <div class="d-md-block d-none">
+                                                    <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm"><?php echo $event['event_name']; ?></h1>
+                                                </div>
+                                                <div class="box-calander">
+                                                    <div class="top-row">
+                                                        <div class="left-col"><span><?php if ($event['date_available'] == 0) {
+                                                                                        echo date('Y', strtotime($event['start_date']));
+                                                                                    } ?></span></div>
+                                                        <div class="right-col">
+                                                            <h2 class="position-relative"><?php if ($event['date_available'] == 0) {
+                                                                                                echo date('d M', strtotime($event['start_date'])) . "-" . date('d M', strtotime($event['end_date']));
+                                                                                            } ?>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+
+                                                <div class="day text-center"><?php if ($event['date_available'] == 0) {
+                                                                                    echo strtoupper(date('D', strtotime($event['start_date']))) . "-" . (strtoupper(date('D', strtotime($event['end_date']))));
+                                                                                } ?></div>
+                                                <div class="time text-center"><?php if ($event['date_available'] == 0) {
+                                                                                    echo date('g a', strtotime($event['event_start_time'])) . "-" . date('g a', strtotime($event['event_end_time']));
+                                                                                } ?></div>
+                                                <img src="<?php echo base_url(); ?>assets/images/public/home/long-arrow.svg" alt="" class="mt-md-4 mt-3">
                                             </div>
 
-
                                         </div>
-                                        
-                                            <div class="day text-center"><?php echo ($event['date_available'] != 1)?strtoupper(date('D',strtotime($event['start_date'])))."&".(strtoupper(date('D',strtotime($event['end_date'])))):'N/A';?></div>
-                                            <div class="time text-center"><?php echo date('g a',strtotime($event['event_start_time']));?>-<?php echo date('g a',strtotime($event['event_end_time']));?></div>
-                                            <img src="<?php echo base_url(); ?>assets/images/public/home/long-arrow.svg" alt="" class="mt-md-4 mt-3">
                                     </div>
-
                                 </div>
-                            </div>
-                            <?php } }?>
-                        </div>
-                       
-
-
+                        <?php $i++;
+                            }
+                        } ?>
                     </div>
                     <div class="d-flex position-absolute">
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
@@ -403,54 +430,123 @@
                         <li class="nav-item" role="presentation">
                             <a class="nav-link" id="last-tab" data-bs-toggle="tab" href="#last" role="tab" aria-controls="last" aria-selected="false">Construction</a>
                         </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="video-tab" data-bs-toggle="tab" href="#video" role="tab" aria-controls="last" aria-selected="false">Video</a>
+                        </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <div class="owl-carousel slider wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
-                                <div class="item">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g1.jpg">
-                                </div>
-                                <div class="item">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g2.jpg">
-                                </div>
-                                <div class="item">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g3.jpg">
-                                </div>
-                                <div class="item">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g3.jpg">
-                                </div>
-
+                                <?php if (!empty($all_gallery)) {
+                                    foreach ($all_gallery as $gallery) { ?>
+                                        <?php if ($gallery['media_type'] == 1) { ?>
+                                            <div class="item" data-bs-toggle="modal" data-bs-target="#image-modal">
+                                                <img src="<?php echo base_url('assets/images/public/home/' . $gallery['media_name']); ?>">
+                                            </div>
+                                        <?php } ?>
+                                        <?php if ($gallery['media_type'] == 2) { ?>
+                                            <div class="item" data-bs-toggle="modal" data-bs-target="#image-modal">
+                                                <video width="320" height="240" controls>
+                                                    <source src="<?php echo base_url('assets/images/public/home/' . $gallery['media_name']); ?>" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        <?php } ?>
+                                        <?php if ($gallery['media_type'] == 3) { ?>
+                                            <div class="item" data-bs-toggle="modal" data-bs-target="#image-modal">
+                                                <?php echo $gallery['media_name']; ?>
+                                            </div>
+                                        <?php } ?>
+                                <?php }
+                                } ?>
                             </div>
                             <div class="slider-counter"></div>
 
                         </div>
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                             <div class="owl-carousel sliders">
-                                <div class="item">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g1.jpg">
-                                </div>
-                                <div class="item">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g2.jpg">
-                                </div>
-                                <div class="item">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g3.jpg">
-                                </div>
-
-
+                                <?php if (!empty($interior_gallery)) {
+                                    foreach ($interior_gallery as $interior) { ?>
+                                        <?php if ($interior['media_type'] == 1) { ?>
+                                            <div class="item">
+                                                <img src="<?php echo base_url('assets/images/public/home/' . $interior['media_name']); ?>">
+                                            </div>
+                                        <?php } ?>
+                                        <?php if ($interior['media_type'] == 2) { ?>
+                                            <div class="item">
+                                                <video width="320" height="240" controls>
+                                                    <source src="<?php echo base_url('assets/images/public/home/' . $interior['media_name']); ?>" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        <?php } ?>
+                                        <?php if ($interior['media_type'] == 3) { ?>
+                                            <div class="item">
+                                                <?php echo $interior['media_name']; ?>
+                                            </div>
+                                        <?php } ?>
+                                <?php }
+                                } ?>
                             </div>
-                            <div class="slider-counters"></div>
+                            <div class="slider-counter"></div>
 
                         </div>
                         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-
+                            <div class="owl-carousel sliders">
+                                <?php if (!empty($exterior_gallery)) {
+                                    foreach ($exterior_gallery as $exterior) { ?>
+                                        <?php if ($exterior['media_type'] == 1) { ?>
+                                            <div class="item">
+                                                <img src="<?php echo base_url('assets/images/public/home/' . $exterior['media_name']); ?>">
+                                            </div>
+                                        <?php } ?>
+                                        <?php if ($exterior['media_type'] == 2) { ?>
+                                            <div class="item">
+                                                <video width="320" height="240" controls>
+                                                    <source src="<?php echo base_url('assets/images/public/home/' . $exterior['media_name']); ?>" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        <?php } ?>
+                                        <?php if ($exterior['media_type'] == 3) { ?>
+                                            <div class="item">
+                                                <?php echo $exterior['media_name']; ?>
+                                            </div>
+                                        <?php } ?>
+                                <?php }
+                                } ?>
+                            </div>
+                            <div class="slider-counter"></div>
                         </div>
                         <div class="tab-pane fade" id="last" role="tabpanel" aria-labelledby="last-tab">
-
+                            <div class="owl-carousel sliders">
+                                <?php if (!empty($construction_gallery)) {
+                                    foreach ($construction_gallery as $construction) { ?>
+                                        <?php if ($construction['media_type'] == 1) { ?>
+                                            <div class="item">
+                                                <img src="<?php echo base_url('assets/images/public/home/' . $construction['media_name']); ?>">
+                                            </div>
+                                        <?php } ?>
+                                        <?php if ($construction['media_type'] == 2) { ?>
+                                            <div class="item">
+                                                <video width="320" height="240" controls>
+                                                    <source src="<?php echo base_url('assets/images/public/home/' . $construction['media_name']); ?>" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        <?php } ?>
+                                        <?php if ($construction['media_type'] == 3) { ?>
+                                            <div class="item">
+                                                <?php echo $construction['media_name']; ?>
+                                            </div>
+                                        <?php } ?>
+                                <?php }
+                                } ?>
+                            </div>
+                            <div class="slider-counter"></div>
+                        </div>
+                        <div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="last-tab">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-12 mt-30">
+            <div class="col-md-12 mt-30" style="display:none;">
                 <a href="" class="d-table mx-auto primary-btn">VIEW MORE</a>
             </div>
         </div>

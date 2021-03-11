@@ -79,7 +79,7 @@ class Gallery_Controller extends MY_Controller
                         $file = pathinfo($gallery);
                         $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
                         $data_array['media_name'] = $new_name;
-                        $config['upload_path'] = 'assets/images/admin/gallery';
+                        $config['upload_path'] = 'assets/images/public/home';
                         $config['allowed_types'] = 'jpg|jpeg|png|gif';
                         $config['file_name'] = $new_name;
                         $this->load->library('upload',$config);
@@ -89,7 +89,7 @@ class Gallery_Controller extends MY_Controller
                             exit;
                         } 
                     } elseif($media_type == 2){
-                        $configVideo['upload_path'] = 'assets/images/admin/gallery'; 
+                        $configVideo['upload_path'] = 'assets/images/public/home'; 
                         $configVideo['max_size'] = '102400';
                         $configVideo['allowed_types'] = 'mp4'; # add video extenstion on here
                         $configVideo['overwrite'] = FALSE;

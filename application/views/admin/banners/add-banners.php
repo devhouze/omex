@@ -2,6 +2,7 @@
 $action = (empty($banner))?admin_url('add-banners'):admin_url('edit-banners/'.$banner['id']);
 $comment = (!empty($banner))?$banner['comment']:'';
 $banner_type = (!empty($banner))?$banner['banner_type']:'';
+$banner_link = (!empty($banner))?$banner['banner_link']:'';
 ?>
 <script src="<?=base_url('assets/js/admin/banner.js')?>"></script>
 <div class="content-wrapper">
@@ -47,7 +48,7 @@ $banner_type = (!empty($banner))?$banner['banner_type']:'';
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Banner Link</label>
-                                    <input type="text" class="form-control form-control-sm input-sm" name="banner_link" value="">
+                                    <input type="text" class="form-control form-control-sm input-sm" name="banner_link" value="<?php echo $banner_link; ?>">
                                 </div>
 
                                 <div class="col-md-6 mb-3" id="streets" style="display:none">
