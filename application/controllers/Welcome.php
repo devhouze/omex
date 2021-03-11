@@ -49,6 +49,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('more_expoler');
 		$this->load->view('footer/footer_signup');
 		$this->load->view('footer/main_footer');
+		$this->load->view('modal');
 		$this->load->view('footer/footer_common');
 		$this->load->view('js/owl');
 		$this->load->view('js/street');
@@ -68,6 +69,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('more_expoler');
 		$this->load->view('footer/footer_signup');
 		$this->load->view('footer/main_footer');
+		$this->load->view('modal');
 		$this->load->view('footer/footer_common');
 		$this->load->view('js/owl');
 		$this->load->view('js/portugal');
@@ -87,6 +89,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('more_expoler');
 		$this->load->view('footer/footer_signup');
 		$this->load->view('footer/main_footer');
+		$this->load->view('modal');
 		$this->load->view('footer/footer_common');
 		$this->load->view('js/owl');
 		$this->load->view('js/hong_kong');
@@ -106,6 +109,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('more_expoler');
 		$this->load->view('footer/footer_signup');
 		$this->load->view('footer/main_footer');
+		$this->load->view('modal');
 		$this->load->view('footer/footer_common');
 		$this->load->view('js/owl');
 		$this->load->view('js/amsterdam');
@@ -125,6 +129,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('more_expoler');
 		$this->load->view('footer/footer_signup');
 		$this->load->view('footer/main_footer');
+		$this->load->view('modal');
 		$this->load->view('footer/footer_common');
 		$this->load->view('js/owl');
 		$this->load->view('js/san_francisco');
@@ -144,6 +149,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('more_expoler');
 		$this->load->view('footer/footer_signup');
 		$this->load->view('footer/main_footer');
+		$this->load->view('modal');
 		$this->load->view('footer/footer_common');
 		$this->load->view('js/owl');
 		$this->load->view('js/london');
@@ -163,22 +169,25 @@ class Welcome extends CI_Controller {
 		$this->load->view('more_expoler');
 		$this->load->view('footer/footer_signup');
 		$this->load->view('footer/main_footer');
+		$this->load->view('modal');
 		$this->load->view('footer/footer_common');
 		$this->load->view('js/owl');
 		$this->load->view('js/paris');
 		$this->load->view('js/common');
 		$this->load->view('footer/body_end');
 	}
-	public function brand()
+	public function brand($id)
 	{
 		$data['events'] = $this->wm->get_events();
+		$data['about_brand'] = $this->wm->get_about_brand($id);
+		$data['what_new'] = $this->wm->get_what_new();
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
 		$this->load->view('header/main_header');
-		$this->load->view('brand');
+		$this->load->view('brand',$data);
 		$this->load->view('more_expoler');
 		$this->load->view('footer/footer_signup');
 		$this->load->view('footer/main_footer');
@@ -191,6 +200,7 @@ class Welcome extends CI_Controller {
 	public function event()
 	{
 		$data['events'] = $this->wm->get_events();
+		$data['what_new'] = $this->wm->get_what_new();
 		// echo "<pre>"; print_r($data); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
@@ -213,6 +223,7 @@ class Welcome extends CI_Controller {
 		$data['brand_banner'] = $this->wm->get_brand_directory_banner();
 		$data['brand_offers'] = $this->wm->get_brand_offers();
 		$data['brand'] = $this->wm->get_all_brands();
+		$data['what_new'] = $this->wm->get_what_new();
 		// echo "<pre>"; print_r($data); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');

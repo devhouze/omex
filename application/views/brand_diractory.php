@@ -165,9 +165,11 @@
                     <?php if(!empty($brand)){ foreach($brand as $brands){?>
                         <div class="col-md-4 col-6">
                             <div class="product-box">
+                                <a href="<?php echo base_url('brand/'.$brands['brand_id']); ?>">
                                 <figure><img src="<?php echo base_url('assets/images/public/brand/'.$brands['brand_logo']); ?>" alt="<?php echo $brands['logo_message'];?>" class=""></figure>
                                 <div class="name"><?php echo $brands['brand_name'];?></div>
                                 <div class="addrs"><img src="<?php echo base_url(); ?>assets/images/public/brand/map.svg" alt="" class=""><?php echo $brands['brand_location'];?></div>
+                                </a>
                             </div>
                         </div>
                     <?php } }?>  
@@ -242,44 +244,26 @@
                 <div class="col-md-10">
                     <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
+                            <?php if(!empty($what_new)){$i = 1; foreach($what_new as $new){?>
+                            <div class="carousel-item <?php if($i == 1){echo "active";}?>">
                                 <div class="row flex-fill">
                                     <div class="col-md-6 pe-4 d-flex flex-fill">
                                         <div class="card d-flex flex-fill flex-column align-items-center justify-content-center border-0 rounded-0" style="background-color: #5A946E;">
-                                            <h2 class="fz40 fz24-sm pr-font text-white">STORE NAME</h2>
-                                            <p class="text-white text-center fz20 fw-5 mt-40 mb-0">The new shops that have opened and the pulse of streets! Here is the list of the new & most popular hotspots at World Street. </p>
+                                            <h2 class="fz40 fz24-sm pr-font text-white"><?php echo $new['brand_name']; ?></h2>
+                                            <p class="text-white text-center fz20 fw-5 mt-40 mb-0"><?php echo $new['about_brand']; ?> </p>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="img-box positon-relative">
-                                            <img src="<?php echo base_url(); ?>assets/images/public/brand/news1.jpg" alt="" class="d-table ml-auto">
+                                            <img src="<?php echo base_url('assets/images/public/brand/'.$new['banner_web']); ?>" alt="<?php echo $new['banner_comment']; ?>" class="d-table ml-auto">
                                             <div class="brnad-logo">
-                                                <img src="<?php echo base_url(); ?>assets/images/public/brand/bran2.svg" alt="" class="">
+                                                <img src="<?php echo base_url('assets/images/public/brand/'.$new['brand_logo']); ?>" alt="<?php echo $new['logo_message']; ?>" class="">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <div class="row flex-fill">
-                                    <div class="col-md-6 pe-4 d-flex flex-fill">
-                                        <div class="card d-flex flex-fill flex-column align-items-center justify-content-center border-0 rounded-0" style="background-color: #5A946E;">
-                                            <h2 class="fz40 fz24-sm pr-font text-white">STORE NAME</h2>
-                                            <p class="text-white text-center fz20 fw-5 mt-40 mb-0">The new shops that have opened and the pulse of streets! Here is the list of the new & most popular hotspots at World Street. </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="img-box positon-relative">
-                                            <img src="<?php echo base_url(); ?>assets/images/public/brand/news1.jpg" alt="" class="d-table ml-auto">
-                                            <div class="brnad-logo">
-                                                <img src="<?php echo base_url(); ?>assets/images/public/brand/bran2.svg" alt="" class="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
+                            <?php $i++; } }?>
                         </div>
                         <div class="car-ions">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

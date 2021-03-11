@@ -190,6 +190,27 @@ class Welcome_model extends CI_Model
         }
         return [];
     }
+
+    public function get_what_new()
+    {
+        $this->db->select('brand_name, about_brand, brand_logo, brand_street, banner_web, banner_comment, logo_message');
+        $this->db->where('status',0);
+        $query = $this->db->get('tbl_brand');
+        if($query->num_rows() > 0){
+            return $query->result_array();
+        }
+        return [];
+    }
+
+    public function get_about_brand($id)
+    {
+        $query = $this->db->get_where('tbl_brand',['brand_id' => $id]);
+        if($query->num_rows() > 0)
+        {
+            return $query->row_array();
+        }
+        return [];
+    }
 }
 
 ?>

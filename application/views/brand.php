@@ -8,12 +8,12 @@
 
                         <div class="carousel-inner postion-relative ">
                             <div class="carousel-item active">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bs1.jpg" alt="" class="">
+                                <img src="<?php echo BASE_URL('assets/images/public/brand/'.$about_brand['banner_web']); ?>" alt="<?php echo $about_brand['banner_comment']; ?>" class="">
                             </div>
 
                         </div>
                         <div class="brand-lgoo">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/barnd-logo.svg" alt="" class="">
+                            <img src="<?php echo BASE_URL('assets/images/public/brand/'.$about_brand['brand_logo']); ?>" alt="<?php echo $about_brand['logo_message']; ?>" class="">
                         </div>
                         <div class="bg-color" style="background-color: #5A946E;"></div>
                         <div class="crasol-btn d-none">
@@ -29,12 +29,12 @@
 
                         <div class="carousel-inner postion-relative ">
                             <div class="carousel-item active">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bs1-m.jpg" alt="" class="w-100">
+                                <img src="<?php echo BASE_URL('assets/images/public/brand/'.$about_brand['banner_web']); ?>" alt="<?php echo $about_brand['banner_comment']; ?>" class="w-100">
                             </div>
 
                         </div>
                         <div class="brand-lgoo">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/barnd-logo.svg" alt="" class="">
+                            <img src="<?php echo BASE_URL('assets/images/public/brand/'.$about_brand['brand_logo']); ?>" alt="<?php echo $about_brand['logo_message']; ?>" class="">
                         </div>
 
                         <div class="crasol-btn d-none">
@@ -56,8 +56,8 @@
                 <div class="col-md-8"></div>
                 <div class="col-md-4">
                     <ul>
-                        <li><img src="<?php echo BASE_URL(); ?>assets/images/public/home/cmap.svg" alt="">SHOP NO 32, ATHENS STREET</li>
-                        <li><img src="<?php echo BASE_URL(); ?>assets/images/public/home/ccall.svg" alt="">+91-8797656870</li>
+                        <li><img src="<?php echo BASE_URL(); ?>assets/images/public/home/cmap.svg" alt=""><?php echo $about_brand['brand_location']; ?></li>
+                        <li><img src="<?php echo BASE_URL(); ?>assets/images/public/home/ccall.svg" alt=""><?php echo $about_brand['brand_contact']; ?></li>
 
 
                     </ul>
@@ -85,18 +85,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated">About Nike</h5>
+                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated">About <?php echo $about_brand['brand_name'];?></h5>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-10 position-relative">
-                    <figure> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/about.jpg" alt="" class=""></figure>
+                    <figure> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$about_brand['about_brand_banner_web']); ?>" alt="<?php echo $about_brand['about_brand_banner_alt']; ?>" class=""></figure>
                     <div class="card mt-60 border-0 rounded-0">
                         <div class="row">
                             <div class="col-md-4 ">
                             </div>
                             <div class="col-md-8 ">
-                                <p>Nike, Inc. is an American multinational corporation that is engaged in the design, development, manufacturing, and worldwide marketing and sales of footwear, apparel, equipment, accessories, and services. </p>
+                                <p><?php echo $about_brand['about_brand']; ?></p>
                             </div>
                         </div>
                     </div>
@@ -247,44 +247,26 @@
                 <div class="col-md-10">
                     <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
+                            <?php if(!empty($what_new)){$i = 1; foreach($what_new as $new){?>
+                            <div class="carousel-item  <?php if($i == 1){echo "active";}?>">
                                 <div class="row flex-fill">
                                     <div class="col-md-6 pe-md-4 d-flex flex-fill">
                                         <div class="card d-flex flex-fill flex-column align-items-center justify-content-center border-0 rounded-0" style="background-color: #5A946E;">
-                                            <h2 class="fz40 fz24-sm pr-font text-white">STORE NAME</h2>
-                                            <p class="text-white text-center fz20 fw-5 mt-40 mb-0">The new shops that have opened and the pulse of streets! Here is the list of the new & most popular hotspots at World Street. </p>
+                                            <h2 class="fz40 fz24-sm pr-font text-white"><?php echo $new['brand_name']; ?></h2>
+                                            <p class="text-white text-center fz20 fw-5 mt-40 mb-0"><?php echo $new['about_brand']; ?> </p>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="img-box positon-relative">
-                                            <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/news1.jpg" alt="" class="d-table ml-auto">
+                                            <img src="<?php echo base_url('assets/images/public/brand/'.$new['banner_web']); ?>" alt="<?php echo $new['banner_comment']; ?>" class="d-table ml-auto">
                                             <div class="brnad-logo">
-                                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bran2.svg" alt="" class="">
+                                                <img src="<?php echo base_url('assets/images/public/brand/'.$new['brand_logo']); ?>" alt="<?php echo $new['logo_message']; ?>" class="">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <div class="row flex-fill">
-                                    <div class="col-md-6 pe-md-4 d-flex flex-fill">
-                                        <div class="card d-flex flex-fill flex-column align-items-center justify-content-center border-0 rounded-0" style="background-color: #5A946E;">
-                                            <h2 class="fz40 fz24-sm pr-font text-white">STORE NAME</h2>
-                                            <p class="text-white text-center fz20 fw-5 mt-40 mb-0">The new shops that have opened and the pulse of streets! Here is the list of the new & most popular hotspots at World Street. </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="img-box positon-relative">
-                                            <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/news1.jpg" alt="" class="d-table ml-auto">
-                                            <div class="brnad-logo">
-                                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bran2.svg" alt="" class="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
+                            <?php $i++; } }?>
                         </div>
                         <div class="car-ions">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

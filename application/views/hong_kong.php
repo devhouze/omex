@@ -43,8 +43,7 @@
                     <figure class="position-relative mb-0 mt-12">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e1.jpg"  alt="" class="">
                     </figure>
-                    <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg"  alt=""></a>
-
+                    <a href="" class="exploer-btn" data-type="eat" data-bs-toggle="modal" data-bs-target="#eatModal">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
                 </div>
                 <div class="col-md-4">
                     <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5s">Style</h2>
@@ -53,7 +52,7 @@
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e3.jpg"  alt="" class="">
 
                     </figure>
-                    <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg"  alt=""></a>
+                    <a href="" class="exploer-btn" data-type="style" data-bs-toggle="modal" data-bs-target="#styleModal">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
                 </div>
                 <div class="col-md-4">
@@ -62,7 +61,7 @@
                     <figure class="position-relative mb-0 mt-12">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e2.jpg"  alt="" class="">
                     </figure>
-                    <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg"  alt=""></a>
+                    <a href="" class="exploer-btn" data-type="play" data-bs-toggle="modal" data-bs-target="#playModal">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
                 </div>
             </div>

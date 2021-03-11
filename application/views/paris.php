@@ -3,11 +3,11 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 px-0">
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-banner.jpg" class="d-block w-100" alt="...">
+                    <img src="<?php echo base_url(); ?>assets/images/public/street/paris-banner.jpg" class="d-block w-100" alt="...">
                     <div class="card par-bg wow fadeInRight animated" data-wow-duration="1s" data-wow-delay="0.5S">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/parish.svg" alt="">
+                        <img src="<?php echo base_url(); ?>assets/images/public/home/parish.svg" alt="">
                         <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto">
+                        <img src="<?php echo base_url(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto">
                     </div>
                 </div>
             </div>
@@ -17,11 +17,11 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 px-0">
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-m.jpg" class="d-block w-100" alt="...">
+                    <img src="<?php echo base_url(); ?>assets/images/public/street/paris-m.jpg" class="d-block w-100" alt="...">
                     <div class="card par-bg wow fadeInRight animated" data-wow-duration="1s" data-wow-delay="0.5S">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/parish.svg" alt="">
+                        <img src="<?php echo base_url(); ?>assets/images/public/home/parish.svg" alt="">
                         <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto">
+                        <img src="<?php echo base_url(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto">
                     </div>
                 </div>
             </div>
@@ -32,37 +32,37 @@
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated">Welcome to Paris Street <span class="d-lg-block"> "The City of Love."</span></h5>
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
+                    <img src="<?php echo base_url(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
                     <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1s"></div>
                 </div>
             </div>
             <div class="row px-md-5 px-3 mt-md-0 mt-5">
                 <div class="col-md-4">
                     <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5s">Eat</h2>
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1S">
+                    <img src="<?php echo base_url(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1S">
                     <figure class="position-relative mb-0 mt-12">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e1.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
+                        <img src="<?php echo base_url(); ?>assets/images/public/home/e1.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
                     </figure>
-                    <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
+                    <a href="" class="exploer-btn" data-type="eat" data-bs-toggle="modal" data-bs-target="#eatModal">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
                 </div>
                 <div class="col-md-4">
                     <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5s">Style</h2>
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1S">
+                    <img src="<?php echo base_url(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1S">
                     <figure class="position-relative mb-0 mt-12">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e3.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
+                        <img src="<?php echo base_url(); ?>assets/images/public/home/e3.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
 
                     </figure>
-                    <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
+                    <a href="" class="exploer-btn" data-type="style" data-bs-toggle="modal" data-bs-target="#styleModal">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
                 </div>
                 <div class="col-md-4">
                     <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5s">Play</h2>
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1S">
+                    <img src="<?php echo base_url(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1S">
                     <figure class="position-relative mb-0 mt-12">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e2.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
+                        <img src="<?php echo base_url(); ?>assets/images/public/home/e2.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
                     </figure>
-                    <a href="" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
+                    <a href="" class="exploer-btn" data-type="play" data-bs-toggle="modal" data-bs-target="#playModal">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
                 </div>
             </div>
@@ -70,13 +70,13 @@
     </div>
     <div class="live-in-word gray-bg pt-30 position-relative">
         <div class="street-icon-abs wow fadeInRight animated" data-wow-duration="0.5s" data-wow-delay="0.5s">
-            <img src="<?php echo BASE_URL(); ?>assets/images/public/street/parish-tic.svg" alt="" class="d-table mx-auto">
+            <img src="<?php echo base_url(); ?>assets/images/public/street/parish-tic.svg" alt="" class="d-table mx-auto">
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Feel the warmth of love at Paris street in your <span class="d-lg-block"> Faridabad!</span></h5>
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
+                    <img src="<?php echo base_url(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
                     <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1s"></div>
                 </div>
             </div>
@@ -86,48 +86,48 @@
                         <div class="item">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs1.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs4.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs1.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs4.jpg" alt="" class="d-table mx-auto"></figure>
                                 </div>
                                 <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs2.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs5.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs2.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs5.jpg" alt="" class="d-table mx-auto"></figure>
                                 </div>
                                 <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs3.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs6.jpg" alt="" class="d-table mx-auto"></figure>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs1.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs4.jpg" alt="" class="d-table mx-auto"></figure>
-                                </div>
-                                <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs2.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs5.jpg" alt="" class="d-table mx-auto"></figure>
-                                </div>
-                                <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs3.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs6.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs3.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs6.jpg" alt="" class="d-table mx-auto"></figure>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs1.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs4.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs1.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs4.jpg" alt="" class="d-table mx-auto"></figure>
                                 </div>
                                 <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs2.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs5.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs2.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs5.jpg" alt="" class="d-table mx-auto"></figure>
                                 </div>
                                 <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs3.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs6.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs3.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs6.jpg" alt="" class="d-table mx-auto"></figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs1.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs4.jpg" alt="" class="d-table mx-auto"></figure>
+                                </div>
+                                <div class="col-md-4">
+                                    <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs2.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs5.jpg" alt="" class="d-table mx-auto"></figure>
+                                </div>
+                                <div class="col-md-4">
+                                    <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs3.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs6.jpg" alt="" class="d-table mx-auto"></figure>
                                 </div>
                             </div>
                         </div>
@@ -141,16 +141,16 @@
                     <div class="owl-carousel slider wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
 
                         <div class="item">
-                            <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs1.jpg" alt="" class="d-table mx-auto"></figure>
+                            <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs1.jpg" alt="" class="d-table mx-auto"></figure>
                         </div>
                         <div class="item">
-                            <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs4.jpg" alt="" class="d-table mx-auto"></figure>
+                            <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs4.jpg" alt="" class="d-table mx-auto"></figure>
                         </div>
                         <div class="item">
-                            <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs3.jpg" alt="" class="d-table mx-auto"></figure>
+                            <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs3.jpg" alt="" class="d-table mx-auto"></figure>
                         </div>
                         <div class="item">
-                            <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs6.jpg" alt="" class="d-table mx-auto"></figure>
+                            <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs6.jpg" alt="" class="d-table mx-auto"></figure>
                         </div>
 
                     </div>
@@ -165,7 +165,7 @@
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Look out for what’s coming up!</h5>
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
+                    <img src="<?php echo base_url(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
                     <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1s"></div>
                 </div>
             </div>
@@ -175,10 +175,10 @@
                     <?php include('common_events.php');?>
                         <div class="d-flex position-absolute">
                             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-left.svg" alt="" class="w-100">
+                                <img src="<?php echo base_url(); ?>assets/images/public/street/paris-left.svg" alt="" class="w-100">
                             </a>
                             <a class="carousel-control-next ml-40" href="#carouselExampleControls" role="button" data-bs-slide="next">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-right.svg" alt="" class="w-100">
+                                <img src="<?php echo base_url(); ?>assets/images/public/street/paris-right.svg" alt="" class="w-100">
                             </a>
                         </div>
                     </div>
@@ -197,7 +197,7 @@
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Hello from Paris!</h5>
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
+                    <img src="<?php echo base_url(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
                     <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1s"></div>
                 </div>
             </div>
@@ -207,27 +207,27 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <figure class="position-relative mb-0">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/h1.jpg" alt="" class="w-100">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/street/h1.jpg" alt="" class="w-100">
 
                                 </figure>
                             </div>
                             <div class="carousel-item">
                                 <figure class="position-relative mb-0">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/h1.jpg" alt="" class="w-100">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/street/h1.jpg" alt="" class="w-100">
 
                                 </figure>
                             </div>
 
                             <div class="abs-block">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-icons.svg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/street/paris-icons.svg" alt="">
                             </div>
                         </div>
                         <div class="d-flex position-absolute btn-controls">
                             <a class="carousel-control-prev" href="#carouselExamControlss" role="button" data-bs-slide="prev">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-left.svg" alt="" class="w-100">
+                                <img src="<?php echo base_url(); ?>assets/images/public/street/paris-left.svg" alt="" class="w-100">
                             </a>
                             <a class="carousel-control-next ml-40" href="#carouselExamControlss" role="button" data-bs-slide="next">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-right.svg" alt="" class="w-100">
+                                <img src="<?php echo base_url(); ?>assets/images/public/street/paris-right.svg" alt="" class="w-100">
                             </a>
                         </div>
                     </div>
@@ -235,27 +235,27 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <figure class="position-relative mb-0">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/h1-mob.jpg" alt="" class="w-100">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/street/h1-mob.jpg" alt="" class="w-100">
 
                                 </figure>
                             </div>
                             <div class="carousel-item">
                                 <figure class="position-relative mb-0">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/h1-mob.jpg" alt="" class="w-100">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/street/h1-mob.jpg" alt="" class="w-100">
 
                                 </figure>
                             </div>
 
                             <div class="abs-block">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-icons.svg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/street/paris-icons.svg" alt="">
                             </div>
                         </div>
                         <div class="d-flex position-absolute btn-controls">
                             <a class="carousel-control-prev" href="#carouselExamControlssmob" role="button" data-bs-slide="prev">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-left.svg" alt="" class="w-100">
+                                <img src="<?php echo base_url(); ?>assets/images/public/street/paris-left.svg" alt="" class="w-100">
                             </a>
                             <a class="carousel-control-next ml-40" href="#carouselExamControlssmob" role="button" data-bs-slide="next">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-right.svg" alt="" class="w-100">
+                                <img src="<?php echo base_url(); ?>assets/images/public/street/paris-right.svg" alt="" class="w-100">
                             </a>
                         </div>
                     </div>
@@ -270,22 +270,22 @@
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Find Us</h5>
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
+                    <img src="<?php echo base_url(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
                     <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1s"></div>
                 </div>
             </div>
             <div class="row mt-4 d-flex flex-fill">
                 <div class="col-md-1"></div>
                 <div class="col-md-6 d-flex flex-fill pe-md-5">
-                    <!-- <figure class="mb-0 w-100 d-flex flex-fill"><img src="<?php echo BASE_URL(); ?>assets/images/public/street/map.jpg" alt="" class="w-100"></figure> -->
+                    <!-- <figure class="mb-0 w-100 d-flex flex-fill"><img src="<?php echo base_url(); ?>assets/images/public/street/map.jpg" alt="" class="w-100"></figure> -->
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14040.246250040547!2d77.3528947!3d28.3872085!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5ba6ea082ef6bf15!2sOmaxe%20World%20Street!5e0!3m2!1sen!2spl!4v1605103931187!5m2!1sen!2spl" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
                 <div class="col-md-4 d-flex flex-fill">
                     <div class="card par-bg px-40 py-40 rounded-0 border-0 wow fadeInRight animated">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/parish.svg" alt="">
+                        <img src="<?php echo base_url(); ?>assets/images/public/home/parish.svg" alt="">
                         <p class="fz20 text-white text-center mt-30">Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then?
                         </p>
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto mt-30">
+                        <img src="<?php echo base_url(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto mt-30">
                     </div>
                 </div>
                 <div class="col-md-1"></div>
@@ -298,7 +298,7 @@
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">There’s more to explore</h5>
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
+                    <img src="<?php echo base_url(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
                     <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1s"></div>
                 </div>
             </div>
