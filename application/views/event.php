@@ -7,7 +7,7 @@
             <div class="row mt-4 justify-content-center">
                 <div class="col-md-10">
                     <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
-                    <?php include('common_events.php');?>
+                        <?php include('common_events.php'); ?>
                         <div class="d-flex justify-content-center mt-5">
                             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
                                 <img src="<?php echo base_url(); ?>assets/images/public/street/athens-left.svg" alt="" class="w-100">
@@ -30,25 +30,69 @@
                     <div class="v-line d-table mx-auto my-4"></div>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <?php if(!empty($events)) { foreach($events as $event){?>
-                <div class="col-md-10">
-                    <p><?php echo $event['about_event']; ?></p>
-                    <ul>
-                        <?php $labels = explode(',',$event['event_category']); if(is_array($labels)) { foreach($labels as $cat){ ?>
-                        <li><a href="javascript:void(0)"><?php echo $cat;?></a></li>
-                        <?php } } else {?>
-                        <li><a href="javascript:void(0)"><?php echo $labels;?></a></li>
-                        <?php } ?>
-                    </ul>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <p>Nike, Inc. is an American multinational corporation that is engaged in the design, development, manufacturing, and worldwide marketing and sales of footwear, apparel, equipment, accessories, and services. </p>
+                                <ul>
+                                    <li><a href="">PHOTOGRAPHY</a></li>
+                                    <li><a href="">LIVE BAND</a></li>
+                                    <li><a href="">LIVE FOOD</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-5">
+                            <a href="" class="d-table mx-auto primary-btn">REGISTER NOW</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <p>Nike, Inc. is an American multinational corporation that is engaged in the design, development, manufacturing, and worldwide marketing and sales of footwear, apparel, equipment, accessories, and services. </p>
+                                <ul>
+                                    <li><a href="">PHOTOGRAPHY</a></li>
+                                    <li><a href="">LIVE BAND</a></li>
+                                    <li><a href="">LIVE FOOD</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-5">
+                            <a href="" class="d-table mx-auto primary-btn">REGISTER NOW</a>
+                        </div>
+                    </div>
+                    
                 </div>
-                <?php } }?>
             </div>
-            <?php if(!empty($events)) { foreach($events as $event){ if($event['show_reg_btn'] == "0"){?>
-            <div class="col-md-12 mt-5">
-                <a href="" class="d-table mx-auto primary-btn">REGISTER NOW</a>
+            <div class="row justify-content-center">
+                <?php if (!empty($events)) {
+                    foreach ($events as $event) { ?>
+                        <div class="col-md-10">
+                            <p><?php echo $event['about_event']; ?></p>
+                            <ul>
+                                <?php $labels = explode(',', $event['event_category']);
+                                if (is_array($labels)) {
+                                    foreach ($labels as $cat) { ?>
+                                        <li><a href="javascript:void(0)"><?php echo $cat; ?></a></li>
+                                    <?php }
+                                } else { ?>
+                                    <li><a href="javascript:void(0)"><?php echo $labels; ?></a></li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                <?php }
+                } ?>
             </div>
-            <?php } } }?>
+            <?php if (!empty($events)) {
+                foreach ($events as $event) {
+                    if ($event['show_reg_btn'] == "0") { ?>
+                        <div class="col-md-12 mt-5">
+                            <a href="" class="d-table mx-auto primary-btn">REGISTER NOW</a>
+                        </div>
+            <?php }
+                }
+            } ?>
         </div>
     </div>
     <div class="about-brand gray-bg  pb-30 pt-60 pt-sm-30">
@@ -274,26 +318,32 @@
                 <div class="col-md-10">
                     <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                            <?php if(!empty($what_new)){$i = 1; foreach($what_new as $new){?>
-                            <div class="carousel-item <?php if($i == 1){echo "active";}?>">
-                                <div class="row flex-fill">
-                                    <div class="col-md-6 pe-4 d-flex flex-fill">
-                                        <div class="card d-flex flex-fill flex-column align-items-center justify-content-center border-0 rounded-0" style="background-color: #5A946E;">
-                                            <h2 class="fz40 fz24-sm pr-font text-white"><?php echo $new['brand_name']; ?></h2>
-                                            <p class="text-white text-center fz20 fw-5 mt-40 mb-0"><?php echo $new['about_brand']; ?></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="img-box positon-relative">
-                                            <img src="<?php echo base_url('assets/images/public/brand/'.$new['banner_web']); ?>" alt="<?php echo $new['banner_comment']; ?>" class="d-table ml-auto">
-                                            <div class="brnad-logo">
-                                                <img src="<?php echo base_url('assets/images/public/brand/'.$new['brand_logo']); ?>" alt="<?php echo $new['logo_message']; ?>" class="">
+                            <?php if (!empty($what_new)) {
+                                $i = 1;
+                                foreach ($what_new as $new) { ?>
+                                    <div class="carousel-item <?php if ($i == 1) {
+                                                                    echo "active";
+                                                                } ?>">
+                                        <div class="row flex-fill">
+                                            <div class="col-md-6 pe-4 d-flex flex-fill">
+                                                <div class="card d-flex flex-fill flex-column align-items-center justify-content-center border-0 rounded-0" style="background-color: #5A946E;">
+                                                    <h2 class="fz40 fz24-sm pr-font text-white"><?php echo $new['brand_name']; ?></h2>
+                                                    <p class="text-white text-center fz20 fw-5 mt-40 mb-0"><?php echo $new['about_brand']; ?></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="img-box positon-relative">
+                                                    <img src="<?php echo base_url('assets/images/public/brand/' . $new['banner_web']); ?>" alt="<?php echo $new['banner_comment']; ?>" class="d-table ml-auto">
+                                                    <div class="brnad-logo">
+                                                        <img src="<?php echo base_url('assets/images/public/brand/' . $new['brand_logo']); ?>" alt="<?php echo $new['logo_message']; ?>" class="">
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <?php $i++; } }?>
+                            <?php $i++;
+                                }
+                            } ?>
                         </div>
                         <div class="car-ions">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
