@@ -47,7 +47,7 @@
         </div>
         <div class="row mt-md-5 mt-3">
             <div class="col-md-12">
-                <a href="<?php echo base_url('brand');?>" class="d-table mx-auto primary-btn">View All Brands</a>
+                <a href="<?php echo base_url('brand-directory');?>" class="d-table mx-auto primary-btn">View All Brands</a>
             </div>
         </div>
     </div>
@@ -322,14 +322,14 @@
             <div class="col-md-10">
                 <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                        <?php if(!empty($events)) {foreach($events as $event){?>
+                        <?php if(!empty($events)){ $i = 1;foreach($events as $event){ ?>
+                        <div class="carousel-item <?php if($i==1){echo "active"; }?>">
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="d-md-none d-block mobile-look">
                                     <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm pr-sm0 mb-md-0 mb-4"><?php echo $event['event_name'];?></h1>
                                     </div>
-                                    <img src="<?php echo base_url('assets/images/public/home/'.$event['thumbnail_image']); ?>" alt="<?php echo $event['thumbnail_message']; ?>" class="w-100">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/home/leftslide.jpg" alt="" class="w-100">
 
                                 </div>
                                 <div class="col-md-4">
@@ -339,56 +339,22 @@
                                         </div>
                                         <div class="box-calander">
                                             <div class="top-row">
-                                                <div class="left-col"><span><?php echo ($event['date_available'] != 1)?date('Y',strtotime($event['start_date'])):'N/A';?></span></div>
-                                                <div class="right-col"><h2 class="position-relative"><?php echo ($event['date_available'] != 1)?date('d',strtotime($event['start_date']))."-".(date('d',strtotime($event['end_date']))):'N/A';?></h2>MAR</div>
+                                                <div class="left-col"><span><?php if($event['date_available'] == 0){ echo date('Y',strtotime($event['start_date'])); }?></span></div>
+                                                <div class="right-col"><h2 class="position-relative"><?php if($event['date_available'] == 0){ echo date('d M',strtotime($event['start_date']))."-".date('d M',strtotime($event['end_date'])); }?></div>
                                             </div>
 
 
                                         </div>
                                         
-                                            <div class="day text-center"><?php echo ($event['date_available'] != 1)?strtoupper(date('D',strtotime($event['start_date'])))."&".(strtoupper(date('D',strtotime($event['end_date'])))):'N/A';?></div>
-                                            <div class="time text-center"><?php echo date('g a',strtotime($event['event_start_time']));?>-<?php echo date('g a',strtotime($event['event_end_time']));?></div>
-                                            <img src="<?php echo base_url(); ?>assets/images/public/home/long-arrow.svg" alt="" class="mt-md-4 mt-3">
-                                    </div>
-
-                                </div>
-                            </div>
-                            <?php } }?>
-                        </div>
-                        <div class="carousel-item ">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <div class="d-md-none d-block mobile-look">
-                                    <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm pr-sm0 mb-md-0 mb-4">Kite Flying Event this season.</h1>
-                                    </div>
-                                    <img src="<?php echo base_url(); ?>assets/images/public/home/leftslide.jpg" alt="" class="w-100">
-
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="pl-12">
-                                        <div class="d-md-block d-none">
-                                            <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm">Kite Flying Event this season.</h1>
-                                        </div>
-                                        <div class="box-calander">
-                                            <div class="top-row">
-                                                <div class="left-col"><span>2021</span></div>
-                                                <div class="right-col"><h2 class="position-relative">23-24</h2>MAR</div>
-                                            </div>
-
-
-                                        </div>
-                                        
-                                            <div class="day text-center">SAT & SUN</div>
-                                            <div class="time text-center">7 pm - 9 pm</div>
+                                            <div class="day text-center"><?php if($event['date_available'] == 0){ echo strtoupper(date('D',strtotime($event['start_date'])))."-".(strtoupper(date('D',strtotime($event['end_date'])))); }?></div>
+                                            <div class="time text-center"><?php if($event['date_available'] == 0){ echo date('g a',strtotime($event['event_start_time']))."-".date('g a',strtotime($event['event_end_time'])); }?></div>
                                             <img src="<?php echo base_url(); ?>assets/images/public/home/long-arrow.svg" alt="" class="mt-md-4 mt-3">
                                     </div>
 
                                 </div>
                             </div>
                         </div>
-                       
-
-
+                        <?php $i++;} }?>
                     </div>
                     <div class="d-flex position-absolute">
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
@@ -438,50 +404,106 @@
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <div class="owl-carousel slider wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
+                                <?php if(!empty($all_gallery)){ foreach($all_gallery as $gallery){?>
+                                <?php if($gallery['media_type'] == 1){?>
                                 <div class="item">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g1.jpg">
+                                    <img src="<?php echo base_url('assets/images/public/home/'.$gallery['media_name']); ?>">
                                 </div>
+                                <?php }?>
+                                <?php if($gallery['media_type'] == 2){?>
                                 <div class="item">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g2.jpg">
+                                    <video width="320" height="240" controls>
+                                        <source src="<?php echo base_url('assets/images/public/home/'.$gallery['media_name']); ?>" type="video/mp4">
+                                    </video>
                                 </div>
+                                <?php }?>
+                                <?php if($gallery['media_type'] == 3){?>
                                 <div class="item">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g3.jpg">
+                                    <?php echo $gallery['media_name']; ?>
                                 </div>
-                                <div class="item">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g3.jpg">
-                                </div>
-
+                                <?php }?>
+                                <?php } }?>
                             </div>
                             <div class="slider-counter"></div>
 
                         </div>
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                             <div class="owl-carousel sliders">
+                                <?php if(!empty($interior_gallery)){ foreach($interior_gallery as $interior){?>
+                                <?php if($interior['media_type'] == 1){?>
                                 <div class="item">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g1.jpg">
+                                    <img src="<?php echo base_url('assets/images/public/home/'.$interior['media_name']); ?>">
                                 </div>
+                                <?php }?>
+                                <?php if($interior['media_type'] == 2){?>
                                 <div class="item">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g2.jpg">
+                                    <video width="320" height="240" controls>
+                                        <source src="<?php echo base_url('assets/images/public/home/'.$interior['media_name']); ?>" type="video/mp4">
+                                    </video>
                                 </div>
+                                <?php }?>
+                                <?php if($interior['media_type'] == 3){?>
                                 <div class="item">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/home/g3.jpg">
+                                    <?php echo $interior['media_name']; ?>
                                 </div>
-
-
+                                <?php }?>
+                                <?php } }?>
                             </div>
-                            <div class="slider-counters"></div>
+                            <div class="slider-counter"></div>
 
                         </div>
                         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-
+                            <div class="owl-carousel sliders">
+                                <?php if(!empty($exterior_gallery)){ foreach($exterior_gallery as $exterior){?>
+                                <?php if($exterior['media_type'] == 1){?>
+                                <div class="item">
+                                    <img src="<?php echo base_url('assets/images/public/home/'.$exterior['media_name']); ?>">
+                                </div>
+                                <?php }?>
+                                <?php if($exterior['media_type'] == 2){?>
+                                <div class="item">
+                                    <video width="320" height="240" controls>
+                                        <source src="<?php echo base_url('assets/images/public/home/'.$exterior['media_name']); ?>" type="video/mp4">
+                                    </video>
+                                </div>
+                                <?php }?>
+                                <?php if($exterior['media_type'] == 3){?>
+                                <div class="item">
+                                    <?php echo $exterior['media_name']; ?>
+                                </div>
+                                <?php }?>
+                                <?php } }?>
+                            </div>
+                            <div class="slider-counter"></div>
                         </div>
                         <div class="tab-pane fade" id="last" role="tabpanel" aria-labelledby="last-tab">
-
+                            <div class="owl-carousel sliders">
+                                <?php if(!empty($construction_gallery)){ foreach($construction_gallery as $construction){?>
+                                <?php if($construction['media_type'] == 1){?>
+                                <div class="item">
+                                    <img src="<?php echo base_url('assets/images/public/home/'.$construction['media_name']); ?>">
+                                </div>
+                                <?php }?>
+                                <?php if($construction['media_type'] == 2){?>
+                                <div class="item">
+                                    <video width="320" height="240" controls>
+                                        <source src="<?php echo base_url('assets/images/public/home/'.$construction['media_name']); ?>" type="video/mp4">
+                                    </video>
+                                </div>
+                                <?php }?>
+                                <?php if($construction['media_type'] == 3){?>
+                                <div class="item">
+                                    <?php echo $construction['media_name']; ?>
+                                </div>
+                                <?php }?>
+                                <?php } }?>
+                            </div>
+                            <div class="slider-counter"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-12 mt-30">
+            <div class="col-md-12 mt-30" style="display:none;">
                 <a href="" class="d-table mx-auto primary-btn">VIEW MORE</a>
             </div>
         </div>

@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-md-2">
                     <div class="text-white fw5 ms-auto d-table">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/header/map.svg" alt="Map"><a href="#" class="text-white ms-2">Getting Here</a>
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/header/map.svg" alt="Map"><a href="https://www.google.com/maps/place/Omaxe+World+Street/@28.387209,77.352895,14z/data=!4m5!3m4!1s0x0:0x5ba6ea082ef6bf15!8m2!3d28.3872085!4d77.3528947?hl=en" target="_blank" class="text-white ms-2">Getting Here</a>
                     </div>
                 </div>
             </div>
