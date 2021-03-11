@@ -71,7 +71,7 @@ India</p>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <p class="fz12 text-center d-table mx-auto se-color mb-0">Copyright 2021 | All Rights Reserved by Omaxe Group</p>
+                    <p class="fz12 text-center d-table mx-auto se-color mb-0">©Copyright 2021 | All Rights Reserved by Omaxe Group</p>
 
                 </div>
             </div>
