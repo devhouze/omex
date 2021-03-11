@@ -111,7 +111,7 @@ class Welcome_model extends CI_Model
 
     public function get_events()
     {
-        $query = $this->db->select('event_name, thumbnail_image, thumbnail_message, event_start_time, event_end_time, show_reg_btn, date_available, start_date, end_date, thumbnail_image, about_event, event_category, show_reg_btn')
+        $query = $this->db->select('event_name, thumbnail_image, thumbnail_message, event_start_time, event_end_time, show_reg_btn, date_available, start_date, end_date, thumbnail_image, about_event, event_category, show_reg_btn, event_id')
                           ->where('status',0)
                           ->where('end_date >',date('Y-m-d'))
                           ->get('tbl_event');
@@ -170,6 +170,22 @@ class Welcome_model extends CI_Model
                           ->get('tbl_brand');
         if($query->num_rows() > 0)
         {
+            return $query->result_array();
+        }
+        return [];
+    }
+
+    public function get_gallery($type)
+    {
+        $this->db->select('id, media_type, media_name, media_alt');
+        $this->db->where('status',0);
+        ($type!='all')?$this->db->where('filter_type',$type):'';
+        $this->db->order_by('id','desc');
+        $this->db->limit(10);
+        $query = $this->db->get('tbl_gallery');
+        // echo "<pre>";
+        // echo $this->db->last_query();
+        if($query->num_rows() > 0){
             return $query->result_array();
         }
         return [];
