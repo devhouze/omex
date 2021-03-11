@@ -7,19 +7,20 @@
                     <div id="carouselExampleIndicators" class="carousel slide positon-relative d-md-block d-none" data-bs-ride="carousel">
 
                         <div class="carousel-inner postion-relative ">
-                            <div class="carousel-item active">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bs1.jpg" alt="" class="">
+                            <?php if(!empty('brand_banner')) {$i=1; foreach($brand_banner as $banner){?>
+                            <div class="carousel-item <?php if($i == 1){ echo "active";}?>">
+                                <img src="<?php echo base_url('assets/images/public/brand/'.$banner['banner_web']); ?>" alt="<?php echo $banner['comment'];?>" class="">
                             </div>
-                            
+                            <?php $i++;  } }?>
                         </div>
 
                         <div class="bg-color" style="background-color: #5A946E;"></div>
                         <div class="crasol-btn d-none">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/brand/left.svg" alt="" class="">
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/right.svg" alt="" class="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/brand/right.svg" alt="" class="">
                             </button>
                         </div>
                     </div>
@@ -27,7 +28,7 @@
 
                         <div class="carousel-inner postion-relative ">
                             <div class="carousel-item active">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bs1-m.jpg" alt="" class="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/brand/bs1-m.jpg" alt="" class="">
                             </div>
                            
                         </div>
@@ -35,10 +36,10 @@
 
                         <div class="crasol-btn d-none">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsmob" data-bs-slide="prev">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/brand/left.svg" alt="" class="">
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsmob" data-bs-slide="next">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/right.svg" alt="" class="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/brand/right.svg" alt="" class="">
                             </button>
                         </div>
                     </div>
@@ -161,48 +162,15 @@
             <div class="row justify-content-center mt-4">
                 <div class="col-md-10">
                     <div class="row">
+                    <?php if(!empty($brand)){ foreach($brand as $brands){?>
                         <div class="col-md-4 col-6">
                             <div class="product-box">
-                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/pr.jpg" alt="" class=""></figure>
-                                <div class="name">NIKE</div>
-                                <div class="addrs"><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/map.svg" alt="" class=""> ATHENS ST.</div>
+                                <figure><img src="<?php echo base_url('assets/images/public/brand/'.$brands['brand_logo']); ?>" alt="<?php echo $brands['logo_message'];?>" class=""></figure>
+                                <div class="name"><?php echo $brands['brand_name'];?></div>
+                                <div class="addrs"><img src="<?php echo base_url(); ?>assets/images/public/brand/map.svg" alt="" class=""><?php echo $brands['brand_location'];?></div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-6">
-                            <div class="product-box">
-                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/pr.jpg" alt="" class=""></figure>
-                                <div class="name">NIKE</div>
-                                <div class="addrs"><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/map.svg" alt="" class=""> ATHENS ST.</div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-6">
-                            <div class="product-box">
-                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/pr.jpg" alt="" class=""></figure>
-                                <div class="name">NIKE</div>
-                                <div class="addrs"><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/map.svg" alt="" class=""> ATHENS ST.</div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-6">
-                            <div class="product-box">
-                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/pr.jpg" alt="" class=""></figure>
-                                <div class="name">NIKE</div>
-                                <div class="addrs"><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/map.svg" alt="" class=""> ATHENS ST.</div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-6">
-                            <div class="product-box">
-                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/pr.jpg" alt="" class=""></figure>
-                                <div class="name">NIKE</div>
-                                <div class="addrs"><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/map.svg" alt="" class=""> ATHENS ST.</div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-6">
-                            <div class="product-box">
-                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/pr.jpg" alt="" class=""></figure>
-                                <div class="name">NIKE</div>
-                                <div class="addrs"><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/map.svg" alt="" class=""> ATHENS ST.</div>
-                            </div>
-                        </div>
+                    <?php } }?>  
                         <div class="col-md-12">
                             <a href="" class="d-table mx-auto primary-btn">LOAD MORE</a>
                         </div>
@@ -228,16 +196,17 @@
                 <div class="col-md-10">
                     <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
+                        <?php if(!empty($brand_offers)) { $i=1; foreach($brand_offers as $offers){?>
+                            <div class="carousel-item <?php if($i==1){echo "active"; }?>">
                                 <div class="row justify-content-center">
                                     <div class="col-md-12 position-relative">
-                                        <figure> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/about.jpg" alt="" class=""></figure>
+                                        <figure> <img src="<?php echo base_url('assets/images/public/brand/'.$offers['offer_thumbnail']); ?>" alt="<?php echo $offers['thumbnail_alt'];?>" class=""></figure>
                                         <div class="card  border-0 rounded-0">
                                             <div class="row">
                                                 <div class="col-md-4 ">
                                                 </div>
                                                 <div class="col-md-8 ">
-                                                    <p>Nike, Inc. is an American multinational corporation that is engaged in the design, development, manufacturing, and worldwide marketing and sales of footwear, apparel, equipment, accessories, and services. </p>
+                                                    <p><?php echo $offers['about_offer'];?> </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -245,47 +214,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-12 position-relative">
-                                        <figure> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/about.jpg" alt="" class=""></figure>
-                                        <div class="card  border-0 rounded-0">
-                                            <div class="row">
-                                                <div class="col-md-4 ">
-                                                </div>
-                                                <div class="col-md-8 ">
-                                                    <p>Nike, Inc. is an American multinational corporation that is engaged in the design, development, manufacturing, and worldwide marketing and sales of footwear, apparel, equipment, accessories, and services. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-12 position-relative">
-                                        <figure> <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/about.jpg" alt="" class=""></figure>
-                                        <div class="card border-0 rounded-0">
-                                            <div class="row">
-                                                <div class="col-md-4 ">
-                                                </div>
-                                                <div class="col-md-8 ">
-                                                    <p>Nike, Inc. is an American multinational corporation that is engaged in the design, development, manufacturing, and worldwide marketing and sales of footwear, apparel, equipment, accessories, and services. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
+                        <?php $i++; } }?>
                         </div>
                         <div class="crsouls-btn-group">
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
+                        <img src="<?php echo base_url(); ?>assets/images/public/brand/left.svg" alt="" class="">
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/right.svg" alt="" class="">
+                        <img src="<?php echo base_url(); ?>assets/images/public/brand/right.svg" alt="" class="">
                         </button>
                         </div>
                     </div>
@@ -316,9 +252,9 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="img-box positon-relative">
-                                            <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/news1.jpg" alt="" class="d-table ml-auto">
+                                            <img src="<?php echo base_url(); ?>assets/images/public/brand/news1.jpg" alt="" class="d-table ml-auto">
                                             <div class="brnad-logo">
-                                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bran2.svg" alt="" class="">
+                                                <img src="<?php echo base_url(); ?>assets/images/public/brand/bran2.svg" alt="" class="">
                                             </div>
                                         </div>
                                     </div>
@@ -334,9 +270,9 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="img-box positon-relative">
-                                            <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/news1.jpg" alt="" class="d-table ml-auto">
+                                            <img src="<?php echo base_url(); ?>assets/images/public/brand/news1.jpg" alt="" class="d-table ml-auto">
                                             <div class="brnad-logo">
-                                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/bran2.svg" alt="" class="">
+                                                <img src="<?php echo base_url(); ?>assets/images/public/brand/bran2.svg" alt="" class="">
                                             </div>
                                         </div>
                                     </div>
@@ -347,11 +283,11 @@
                         </div>
                         <div class="car-ions">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/brand/left.svg" alt="" class="">
 
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/right.svg" alt="" class="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/brand/right.svg" alt="" class="">
                             </button>
                         </div>
                     </div>
@@ -372,13 +308,14 @@
             <div class="row mt-4 d-flex flex-fill">
                 <div class="col-md-1"></div>
                 <div class="col-md-6 d-flex flex-fill pe-md-5">
-                    <figure class="mb-0 w-100 d-flex flex-fill"><img src="<?php echo BASE_URL(); ?>assets/images/public/street/map.jpg" alt="" class="w-100"></figure>
+                    <!-- <figure class="mb-0 w-100 d-flex flex-fill"><img src="<?php echo base_url(); ?>assets/images/public/street/map.jpg" alt="" class="w-100"></figure> -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14040.246250040547!2d77.3528947!3d28.3872085!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5ba6ea082ef6bf15!2sOmaxe%20World%20Street!5e0!3m2!1sen!2spl!4v1605103931187!5m2!1sen!2spl" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
                 <div class="col-md-4 d-flex flex-fill">
                     <div class="card ath-bg px-40 py-40 rounded-0 border-0 wow fadeInRight animated">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/home/at-s.svg" alt="">
+                        <img src="<?php echo base_url(); ?>assets/images/public/home/at-s.svg" alt="">
                         <p class="fz20 text-white text-center mt-30">Wander by foot into the heart of the Athens. Start discovering your own world within ours at World Street.</p>
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/as-i.svg" alt="" class="d-table mx-auto mt-30">
+                        <img src="<?php echo base_url(); ?>assets/images/public/street/as-i.svg" alt="" class="d-table mx-auto mt-30">
                     </div>
                 </div>
                 <div class="col-md-1"></div>

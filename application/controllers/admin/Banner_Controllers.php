@@ -178,7 +178,12 @@ class Banner_Controllers extends my_controller
                     $file = pathinfo($logo);
                     $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
                     $data_array['banner_mobile'] = $new_name;
-                    $config1['upload_path'] = 'assets/images/admin/banner';
+                    if($banner_type == 1 || $banner_type == 2){
+                        $config1['upload_path'] = 'assets/images/public/home';
+                    }
+                    if($banner_type == 3){
+                        $config1['upload_path'] = 'assets/images/public/brand';
+                    }
                     $config1['allowed_types'] = 'jpg|jpeg|png|gif';
                     $config1['file_name'] = $new_name;
                     $this->load->library('upload',$config1);
@@ -194,7 +199,12 @@ class Banner_Controllers extends my_controller
                     $file = pathinfo($logo);
                     $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
                     $data_array['banner_web'] = $new_name;
-                    $config['upload_path'] = 'assets/images/admin/banner';
+                    if($banner_type == 1 || $banner_type == 2){
+                        $config['upload_path'] = 'assets/images/public/home';
+                    }
+                    if($banner_type == 3){
+                        $config['upload_path'] = 'assets/images/public/brand';
+                    }
                     $config['allowed_types'] = 'jpg|jpeg|png|gif';
                     $config['file_name'] = $new_name;
                     $this->load->library('upload',$config);

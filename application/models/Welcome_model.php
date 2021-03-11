@@ -111,7 +111,7 @@ class Welcome_model extends CI_Model
 
     public function get_events()
     {
-        $query = $this->db->select('event_name, thumbnail_image, thumbnail_message, event_start_time, event_end_time, show_reg_btn, date_available, start_date, end_date, thumbnail_image')
+        $query = $this->db->select('event_name, thumbnail_image, thumbnail_message, event_start_time, event_end_time, show_reg_btn, date_available, start_date, end_date, thumbnail_image, about_event, event_category, show_reg_btn')
                           ->where('status',0)
                           ->where('end_date >',date('Y-m-d'))
                           ->get('tbl_event');
@@ -143,10 +143,34 @@ class Welcome_model extends CI_Model
         $query = $this->db->select('banner_web, banner_mobile, comment')
                           ->where('status',0)
                           ->where('banner_type',3)
-                          ->limit(1)
+                          ->order_by('id','desc')
                           ->get('tbl_banner');
         if($query->num_rows() > 0){
         return $query->result_array();
+        }
+        return [];
+    }
+
+    public function get_brand_offers()
+    {
+        $query = $this->db->select('offer_thumbnail, thumbnail_alt, about_offer')
+                          ->where('status',0)
+                          ->get('tbl_brand_offer');
+        if($query->num_rows() > 0)
+        {
+            return $query->result_array();
+        }
+        return [];
+    }
+
+    public function get_all_brands()
+    {
+        $query = $this->db->select('brand_name, brand_logo, logo_message, brand_location, brand_id')
+                          ->where('status',0)
+                          ->get('tbl_brand');
+        if($query->num_rows() > 0)
+        {
+            return $query->result_array();
         }
         return [];
     }
