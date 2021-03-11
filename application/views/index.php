@@ -322,8 +322,7 @@
             <div class="col-md-10">
                 <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <?php if(!empty($events)) {$i=1; foreach($events as $event){?>
-                        <div class="carousel-item <?php if($i == 1){ echo "active";}?>">
+                        <div class="carousel-item active">
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="d-md-none d-block mobile-look">
@@ -352,12 +351,8 @@
                                     </div>
 
                                 </div>
-                            </div>
+                            <?php } }?>
                         </div>
-                        <?php } }?>
-                       
-
-
                     </div>
                     <div class="d-flex position-absolute">
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
@@ -450,9 +445,9 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="col-md-12 mt-30">
+            <div class="col-md-12 mt-30">
                 <a href="" class="d-table mx-auto primary-btn">VIEW MORE</a>
-            </div> -->
+            </div>
         </div>
     </div>
 </div>
