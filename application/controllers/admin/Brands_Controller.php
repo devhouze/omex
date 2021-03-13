@@ -375,6 +375,8 @@ class Brands_Controller extends MY_Controller
             exit;
         }
         $data['brands'] = $this->bm->get_data_row('tbl_brand','*',['brand_id' => $id]);
+        $data['category'] = $this->bm->get_data_array('tbl_category','category_name, id','');
+        $data['sub_category'] = $this->bm->get_sub_category($data['brands']->brand_category);
         // echo "<pre>"; print_r($data); die;
         $this->load->view('admin/include/header_start');
 		$this->load->view('admin/include/header_end');

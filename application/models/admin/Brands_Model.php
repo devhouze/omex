@@ -74,10 +74,18 @@ class Brands_Model extends MY_Model
         return [];
     } 
 
-    public function get_sub_category($cat_id)
+    public function get_sub_category($cat_name)
     {
+        $cat_id_query = $this->db->select('id')
+                                 ->where_in('category_name',explode(',',$cat_name))
+                                 ->get('tbl_category')->result_array();
+                                 
+        foreach ($cat_id_query as $value) {
+            $cate_id[] = $value['id'];
+        }
+
         $query = $this->db->select('id, name')
-                          ->where_in('cat_id',$cat_id)
+                          ->where_in('cat_id',$cate_id)
                           ->get('tbl_sub_category');
         if($query->num_rows() > 0)
         {

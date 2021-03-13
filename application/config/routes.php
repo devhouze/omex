@@ -66,7 +66,10 @@ $route['paris'] = 'Welcome/paris';
 $route['contact-us'] = 'Welcome/contact_us';
 $route['brand/(:num)'] = 'Welcome/brand/$1';
 $route['event'] = 'Welcome/event';
+$route['event-details/(:num)'] = 'Welcome/event_details/$1';
 $route['brand-directory'] = 'Welcome/brand_directory';
+// $1 => alphabet, $2 => category
+$route['brand-directory/(:any)/(:any)'] = 'Welcome/brand_directory/$1/$2';
 $route['sign-up'] = 'Welcome/sign_up';
 $route['get-brands'] = "Welcome/get_brands";
 

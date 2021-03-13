@@ -290,7 +290,7 @@ $(document).ready(function() {
             dataType: 'json',
             success: function(data) {
                 $.each(data, function(i, v) {
-                    $('#sub_category').append('<option value="' + v.id + '">' + v.name + '</option>');
+                    $('#sub_category').append('<option value="' + v.name + '">' + v.name + '</option>');
                 });
             }
         })

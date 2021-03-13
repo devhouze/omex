@@ -173,7 +173,7 @@
                 <div class="col-md-10">
                     <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                     <?php include('common_events.php');?>
-                        <div class="d-flex position-absolute">
+                        <div class="d-flex">
                             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/street/san-left.svg" alt="" class="w-100">
                             </a>
@@ -182,11 +182,6 @@
                             </a>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <a href="" class="primary-btn d-inline-block mt-36">KNOW MORE</a>
                 </div>
             </div>
         </div>

@@ -191,7 +191,7 @@ $order_home = (!empty($brands))?$brands->order_home:'';
                                     <label for="">Brand Category</label><br>
                                     <select name="brand_category[]" id="category" class="form-control form-control-sm" multiple>
                                     <?php if(!empty($category)) { foreach($category as $cat){?>
-                                    <option value="<?php echo $cat['id'];?>" <?php if(in_array($cat['id'],$brand_category)){echo "selected";}?>><?php echo $cat['category_name']; ?></option>
+                                    <option value="<?php echo $cat['category_name'];?>" <?php if(in_array($cat['category_name'],$brand_category)){echo "selected";}?>><?php echo $cat['category_name']; ?></option>
                                     <?php } }?>
                                     </select>
                                 </div>
@@ -200,6 +200,9 @@ $order_home = (!empty($brands))?$brands->order_home:'';
                                     <label for="">Brand Sub Category</label>
                                     <select name="sub_category" id="sub_category" class="form-control form-control-sm">
                                         <option disabled="" selected>Select Sub-Category</option>
+                                        <?php if(!empty($sub_category)){ foreach($sub_category as $sc){?>
+                                        <option value="<?php echo $sc['name']; ?>" <?php if($sc['name'] == $brand_sub_category) { echo "selected"; } ?>><?php echo $sc['name']; ?></option>
+                                        <?php } }?>
                                     </select>
                                 </div>
 
