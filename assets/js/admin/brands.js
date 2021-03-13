@@ -280,4 +280,20 @@ $(document).ready(function() {
         });
     });
 
+    // Get brand sub category
+    $('#category').change(function() {
+        var cat_id = $(this).val();
+        $.ajax({
+            type: 'post',
+            url: url + 'get-sub-category',
+            data: { cat_id: cat_id },
+            dataType: 'json',
+            success: function(data) {
+                $.each(data, function(i, v) {
+                    $('#sub_category').append('<option value="' + v.id + '">' + v.name + '</option>');
+                });
+            }
+        })
+    })
+
 });

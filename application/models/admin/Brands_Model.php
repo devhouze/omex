@@ -73,5 +73,17 @@ class Brands_Model extends MY_Model
         }
         return [];
     } 
+
+    public function get_sub_category($cat_id)
+    {
+        $query = $this->db->select('id, name')
+                          ->where_in('cat_id',$cat_id)
+                          ->get('tbl_sub_category');
+        if($query->num_rows() > 0)
+        {
+            return $query->result_array();
+        }
+        return [];
+    }
 }
 ?>

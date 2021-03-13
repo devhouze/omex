@@ -90,6 +90,8 @@ $route['admin/add-brands'] = 'admin/Brands_Controller/add_brand';
 $route['admin/edit-brands/(:num)'] = 'admin/Brands_Controller/edit_brand/$1';
 $route['admin/delete-brand'] = 'admin/Brands_Controller/delete_brand';
 $route['admin/brand-details'] = 'admin/Brands_Controller/get_brand_details';
+$route['admin/get-sub-category'] = 'admin/Brands_Controller/get_sub_category';
+
 
 // Brand Offer routes
 $route['admin/brand-offer'] = 'admin/Brands_Controller/brand_offer_list';

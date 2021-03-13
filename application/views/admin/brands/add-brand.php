@@ -147,10 +147,7 @@ $order_home = (!empty($brands))?$brands->order_home:'';
                                 </div>
 
 
-                                <div class="col-md-6 mb-3">
-                                    <label for="">Brand Sub Category</label>
-                                    <input type="text" class="form-control form-control-sm input-sm" name="sub_category" value="<?=$brand_sub_category;?>">
-                                </div>
+                                
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Brand Email Contact</label>
@@ -177,19 +174,6 @@ $order_home = (!empty($brands))?$brands->order_home:'';
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Brand Category</label><br>
-                                    <select name="brand_category[]" class="form-control form-control-sm" multiple>
-                                    <option value="Jewellery" <?php if(in_array("Jewellery",$brand_category)){echo "selected";}?>>Jewellery</option>
-                                    <option value="Restaurant"<?php if(in_array("Restaurant",$brand_category)){echo "selected";}?>>Restaurant</option>
-                                    <option value="Clothing" <?php if(in_array("Clothing",$brand_category)){echo "selected";}?>>Clothing</option>
-                                    <option value="Fitness" <?php if(in_array("Fitness",$brand_category)){echo "selected";}?>>Fitness</option>
-                                    <option value="Toys" <?php if(in_array("Toys",$brand_category)){echo "selected";}?>>Toys</option>
-                                    <option value="Shoes" <?php if(in_array("Shoes",$brand_category)){echo "selected";}?>>Shoes</option>
-                                    <option value="Sports & Fitness"<?php if(in_array("Sports & Fitness",$brand_category)){echo "selected";}?>>Sports & Fitness</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-md-6 mb-3">
                                     <label for="">Brand Audience</label>
                                     <select name="brand_audience" class="form-control form-control-sm">
                                         <option selected disabled>Select Audience</option>
@@ -202,6 +186,24 @@ $order_home = (!empty($brands))?$brands->order_home:'';
                                         <option value="Elderly" <?php if($brand_audience == "Elderly"){ echo "selected"; }?>>Elderly</option>
                                     </select>
                                 </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="">Brand Category</label><br>
+                                    <select name="brand_category[]" id="category" class="form-control form-control-sm" multiple>
+                                    <?php if(!empty($category)) { foreach($category as $cat){?>
+                                    <option value="<?php echo $cat['id'];?>" <?php if(in_array($cat['id'],$brand_category)){echo "selected";}?>><?php echo $cat['category_name']; ?></option>
+                                    <?php } }?>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="">Brand Sub Category</label>
+                                    <select name="sub_category" id="sub_category" class="form-control form-control-sm">
+                                        <option disabled="" selected>Select Sub-Category</option>
+                                    </select>
+                                </div>
+
+                                
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Feature On Home Page</label><br>

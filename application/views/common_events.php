@@ -1,7 +1,7 @@
 
                     <div class="carousel-inner">
-                        <?php if(!empty($events)) {foreach($events as $event){?>
-                        <div class="carousel-item active">
+                        <?php if(!empty($events)) {$i=1;foreach($events as $event){?>
+                        <div class="carousel-item <?php if($i==1){?>active<?php }?>">
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="d-md-none d-block mobile-look">
@@ -32,7 +32,7 @@
                                 </div>
                             </div>
                         </div>
-                        <?php } } ?>
+                        <?php $i++; } } ?>
                         <?php if(!empty($events)) {foreach($events as $event){?>
                         <div class="carousel-item ">
                             <div class="row">

@@ -50,6 +50,7 @@ class Brands_Controller extends MY_Controller
     public function add_brand()
     {
         $data['brands'] = "";
+        $data['category'] = $this->bm->get_data_array('tbl_category','category_name, id','');
         if($this->input->post()){
             // Form Validation rules
             $this->form_validation->set_rules('brand_name','Brand Name','required');
@@ -600,6 +601,13 @@ class Brands_Controller extends MY_Controller
 		$this->load->view('admin/include/body_end');
 		$this->load->view('admin/include/admin_js');
     } 
+
+    public function get_sub_category()
+    {
+        $cat_id = $this->input->post('cat_id');
+        $data = $this->bm->get_sub_category($cat_id);
+        echo json_encode($data);
+    }
     
 }
 ?>
