@@ -112,26 +112,24 @@
                     <div class="row">
                         <div class="col-md-4">
                             <ul>
-                                <li><a href="">POPULAR</a></li>
-                                <li><a href="">NEW IN</a></li>
-                                <li><a href="">EXCLUSIVE WS</a></li>
-                                <li><a href="">SALES & OFFER</a></li>
+                                <li><a href="<?php echo base_url('brand-directory/null/Restaurants')?>">Restaurants</a></li>
+                                <li><a href="<?php echo base_url('brand-directory/null/Entertainment')?>">Entertainment</a></li>
+                                <li><a href="<?php echo base_url('brand-directory/null/Watches')?>">Watches</a></li>
+                                <li><a href="<?php echo base_url('brand-directory/null/Watches')?>">Bank</a></li>
                             </ul>
                         </div>
                         <div class="col-md-4">
                             <ul>
-                                <li><a href="">POPULAR</a></li>
-                                <li><a href="">NEW IN</a></li>
-                                <li><a href="">EXCLUSIVE WS</a></li>
-                                <li><a href="">SALES & OFFER</a></li>
+                                <li><a href="<?php echo base_url('brand-directory/null/Departmental Store')?>">Departmental Store</a></li>
+                                <li><a href="<?php echo base_url('brand-directory/null/Footwear')?>">Footwear</a></li>
+                                <li><a href="<?php echo base_url('brand-directory/null/Unisex Fashion')?>">Unisex Fashion</a></li>
                             </ul>
                         </div>
                         <div class="col-md-4">
                             <ul>
-                                <li><a href="">APPAREL</a></li>
-                                <li><a href="">RESTAURANTS</a></li>
-                                <li><a href="">GROOMING</a></li>
-                                <li><a href="">DAILY NEEDS</a></li>
+                                <li><a href="<?php echo base_url('brand-directory/null/Groceries')?>">Groceries</a></li>
+                                <li><a href="<?php echo base_url('brand-directory/null/Designer Wear')?>">Designer Wear</a></li>
+                                <li><a href="<?php echo base_url('brand-directory/null/Cinema')?>">Cinema</a></li>
                             </ul>
                         </div>
                     </div>
@@ -142,7 +140,7 @@
                     <div class="row">
                         <div class="col-md-4 col-6">
                             <?php $brand_street = "";?>
-                            <select name="" id="" class="select">
+                            <select id="street" class="select">
                                 <option disabled="" selected>Select Street</option>
                                 <option value="London Street" <?php if($brand_street == "London Street"){echo "selected"; }?>>London Street</option>
                                 <option value="Paris Street" <?php if($brand_street == "Paris Street"){echo "selected"; }?>>Paris Street</option>
@@ -154,17 +152,17 @@
                             </select>
                         </div>
                         <div class="col-md-4 col-6">
-                            <select name="" id="" class="select">
+                            <select id="sort" class="select">
                                 <option disabled="" selected>Short By</option>
                                 <option value="A-Z">A-Z</option>
                                 <option value="Z-A">Z-A</option>
                             </select>
                         </div>
                         <div class="col-md-4 col-8 justify-content-center mx-auto">
-                            <select name="" id="" class="select">
+                            <select id="filter" class="select">
                                 <option disabled="" selected>FILTER</option>
                                 <?php if(!empty($filter)){ foreach($filter as $filters){?>
-                                    <option value="<?php echo $filters['id'];?>"><?php echo $filters['name'];?></option>
+                                    <option value="<?php echo $filters['name'];?>"><?php echo $filters['name'];?></option>
                                 <?php } }?>
                             </select>
                         </div>
