@@ -61,32 +61,32 @@
                 <div class="col-md-10">
                     <ul class="me-0 mt-40 p-0 d-flex justify-content-center flex-wrap">
 
-                        <li><a href="">A </a></li>
-                        <li><a href="">B </a></li>
-                        <li><a href="">C </a></li>
-                        <li><a href="">D </a></li>
-                        <li><a href="">E </a></li>
-                        <li><a href="">F </a></li>
-                        <li><a href="">G </a></li>
-                        <li><a href="">H </a></li>
-                        <li><a href="">I </a></li>
-                        <li><a href="">J </a></li>
-                        <li><a href="">K </a></li>
-                        <li><a href="">L </a></li>
-                        <li><a href="">M </a></li>
-                        <li><a href="">N </a></li>
-                        <li><a href="">O </a></li>
-                        <li><a href="">P </a></li>
-                        <li><a href="">Q </a></li>
-                        <li><a href="">R </a></li>
-                        <li><a href="">S </a></li>
-                        <li><a href="">T </a></li>
-                        <li><a href="">U </a></li>
-                        <li><a href="">V </a></li>
-                        <li><a href="">W </a></li>
-                        <li><a href="">X </a></li>
-                        <li><a href="">Y </a></li>
-                        <li><a href="">z </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/a')?>">A </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/b')?>">B </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/c')?>">C </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/d')?>">D </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/e')?>">E </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/f')?>">F </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/g')?>">G </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/h')?>">H </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/i')?>">I </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/j')?>">J </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/k')?>">K </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/l')?>">L </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/m')?>">M </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/n')?>">N </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/o')?>">O </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/p')?>">P </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/q')?>">Q </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/r')?>">R </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/s')?>">S </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/t')?>">T </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/u')?>">U </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/v')?>">V </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/w')?>">W </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/x')?>">X </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/y')?>">Y </a></li>
+                        <li><a href="<?php echo base_url('brand-directory/z')?>">z </a></li>
                     </ul>
                 </div>
             </div>
@@ -141,18 +141,31 @@
                 <div class="col-md-10">
                     <div class="row">
                         <div class="col-md-4 col-6">
-                            <select name="" id="">
-                                <option value="">Select</option>
+                            <?php $brand_street = "";?>
+                            <select name="" id="" class="select">
+                                <option disabled="" selected>Select Street</option>
+                                <option value="London Street" <?php if($brand_street == "London Street"){echo "selected"; }?>>London Street</option>
+                                <option value="Paris Street" <?php if($brand_street == "Paris Street"){echo "selected"; }?>>Paris Street</option>
+                                <option value="Hong Kong Street" <?php if($brand_street == "Hong Kong Street"){echo "selected"; }?>>Hong Kong Street</option>
+                                <option value="Amsterdam Street" <?php if($brand_street == "Amsterdam Street"){echo "selected"; }?>>Amsterdam Street</option>
+                                <option value="Portugal Street" <?php if($brand_street == "Portugal Street"){echo "selected"; }?>>Portugal Street</option>
+                                <option value="San Francisco Street" <?php if($brand_street == "San Francisco Street"){echo "selected"; }?>>San Francisco Street</option>
+                                <option value="Athens Street" <?php if($brand_street == "Athens Street"){echo "selected"; }?>>Athens Street</option>
                             </select>
                         </div>
                         <div class="col-md-4 col-6">
-                            <select name="" id="">
-                                <option value="">short</option>
+                            <select name="" id="" class="select">
+                                <option disabled="" selected>Short By</option>
+                                <option value="A-Z">A-Z</option>
+                                <option value="Z-A">Z-A</option>
                             </select>
                         </div>
                         <div class="col-md-4 col-8 justify-content-center mx-auto">
-                            <select name="" id="">
-                                <option value="">FILTER</option>
+                            <select name="" id="" class="select">
+                                <option disabled="" selected>FILTER</option>
+                                <?php if(!empty($filter)){ foreach($filter as $filters){?>
+                                    <option value="<?php echo $filters['id'];?>"><?php echo $filters['name'];?></option>
+                                <?php } }?>
                             </select>
                         </div>
                     </div>
@@ -163,13 +176,13 @@
                 <div class="col-md-10">
                     <div class="row">
                     <?php if(!empty($brand)){ foreach($brand as $brands){?>
-                        <div class="col-md-4 col-6">
+                        <div class="col-md-3 col-6">
                             <div class="product-box">
-                                <a href="<?php echo base_url('brand/'.$brands['brand_id']); ?>">
+                                <a href="<?php echo base_url('brand/'.$brands['brand_id']); ?>"></a>
                                 <figure><img src="<?php echo base_url('assets/images/public/brand/'.$brands['brand_logo']); ?>" alt="<?php echo $brands['logo_message'];?>" class=""></figure>
                                 <div class="name"><?php echo $brands['brand_name'];?></div>
                                 <div class="addrs"><img src="<?php echo base_url(); ?>assets/images/public/brand/map.svg" alt="" class=""><?php echo $brands['brand_location'];?></div>
-                                </a>
+                                
                             </div>
                         </div>
                     <?php } }?>  

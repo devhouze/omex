@@ -71,10 +71,9 @@
                 <div class="col-md-12">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 mt-40">Key Information</h5>
                     <ul class="d-table mx-auto mt-5">
-                        <li><a href="#"> NIKE</a></li>
-                        <li><a href="#"> MENS WEAR</a></li>
-                        <li><a href="#"> WOMENS WEAR</a></li>
-                        <li><a href="#"> KIDS WEAR</a></li>
+                        <?php $cat[] = array_slice($key_info,0,5); foreach($key_info as $info){?>
+                        <li><a href="#"><?php echo $info; ?></a></li>
+                        <?php } ?>
                     </ul>
                     <div class="v-line d-table mx-auto mt-4"></div>
                 </div>

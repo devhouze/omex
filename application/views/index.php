@@ -357,13 +357,10 @@
                                                 </div>
                                                 <div class="box-calander">
                                                     <div class="top-row">
-                                                        <div class="left-col"><span><?php if ($event['date_available'] == 0) {
-                                                                                        echo date('Y', strtotime($event['start_date']));
-                                                                                    } ?></span></div>
+
+                                                        <div class="left-col"><span><?php if ($event['date_available'] == 0) { echo date('Y', strtotime($event['start_date']));} ?></span></div>
                                                         <div class="right-col">
-                                                            <h2 class="position-relative"><?php if ($event['date_available'] == 0) {
-                                                                                                echo date('d M', strtotime($event['start_date'])) . "-" . date('d M', strtotime($event['end_date']));
-                                                                                            } ?>
+                                                            <h2 class="position-relative"><?php echo date('d',strtotime($event['start_date']));?> <span><?php echo date('M',strtotime($event['start_date']));?></span>-<?php echo date('d',strtotime($event['end_date']));?> <span><?php echo date('M',strtotime($event['end_date']));?></span></h2>
                                                         </div>
                                                     </div>
 
@@ -379,6 +376,11 @@
                                                 <img src="<?php echo base_url(); ?>assets/images/public/home/long-arrow.svg" alt="" class="mt-md-4 mt-3">
                                             </div>
 
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-10">
+                                            <a href="<?php echo base_url('event-details/'.$event['event_id'])?>" class="primary-btn d-inline-block mt-36">KNOW MORE</a>
                                         </div>
                                     </div>
                                 </div>
@@ -397,11 +399,7 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-md-10">
-                <a href="" class="primary-btn d-inline-block mt-36">KNOW MORE</a>
-            </div>
-        </div>
+        
     </div>
 </div>
 <div class="expreance-gallary py-30 gray-bg">
@@ -439,23 +437,9 @@
                             <div class="owl-carousel slider wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
                                 <?php if (!empty($all_gallery)) {
                                     foreach ($all_gallery as $gallery) { ?>
-                                        <?php if ($gallery['media_type'] == 1) { ?>
                                             <div class="item" data-bs-toggle="modal" data-bs-target="#image-modal">
                                                 <img src="<?php echo base_url('assets/images/public/home/' . $gallery['media_name']); ?>">
                                             </div>
-                                        <?php } ?>
-                                        <?php if ($gallery['media_type'] == 2) { ?>
-                                            <div class="item" data-bs-toggle="modal" data-bs-target="#image-modal">
-                                                <video width="320" height="240" controls>
-                                                    <source src="<?php echo base_url('assets/images/public/home/' . $gallery['media_name']); ?>" type="video/mp4">
-                                                </video>
-                                            </div>
-                                        <?php } ?>
-                                        <?php if ($gallery['media_type'] == 3) { ?>
-                                            <div class="item" data-bs-toggle="modal" data-bs-target="#image-modal">
-                                                <?php echo $gallery['media_name']; ?>
-                                            </div>
-                                        <?php } ?>
                                 <?php }
                                 } ?>
                             </div>
@@ -466,23 +450,9 @@
                             <div class="owl-carousel sliders">
                                 <?php if (!empty($interior_gallery)) {
                                     foreach ($interior_gallery as $interior) { ?>
-                                        <?php if ($interior['media_type'] == 1) { ?>
                                             <div class="item">
                                                 <img src="<?php echo base_url('assets/images/public/home/' . $interior['media_name']); ?>">
                                             </div>
-                                        <?php } ?>
-                                        <?php if ($interior['media_type'] == 2) { ?>
-                                            <div class="item">
-                                                <video width="320" height="240" controls>
-                                                    <source src="<?php echo base_url('assets/images/public/home/' . $interior['media_name']); ?>" type="video/mp4">
-                                                </video>
-                                            </div>
-                                        <?php } ?>
-                                        <?php if ($interior['media_type'] == 3) { ?>
-                                            <div class="item">
-                                                <?php echo $interior['media_name']; ?>
-                                            </div>
-                                        <?php } ?>
                                 <?php }
                                 } ?>
                             </div>
@@ -493,23 +463,9 @@
                             <div class="owl-carousel sliders">
                                 <?php if (!empty($exterior_gallery)) {
                                     foreach ($exterior_gallery as $exterior) { ?>
-                                        <?php if ($exterior['media_type'] == 1) { ?>
                                             <div class="item">
                                                 <img src="<?php echo base_url('assets/images/public/home/' . $exterior['media_name']); ?>">
                                             </div>
-                                        <?php } ?>
-                                        <?php if ($exterior['media_type'] == 2) { ?>
-                                            <div class="item">
-                                                <video width="320" height="240" controls>
-                                                    <source src="<?php echo base_url('assets/images/public/home/' . $exterior['media_name']); ?>" type="video/mp4">
-                                                </video>
-                                            </div>
-                                        <?php } ?>
-                                        <?php if ($exterior['media_type'] == 3) { ?>
-                                            <div class="item">
-                                                <?php echo $exterior['media_name']; ?>
-                                            </div>
-                                        <?php } ?>
                                 <?php }
                                 } ?>
                             </div>
@@ -519,29 +475,35 @@
                             <div class="owl-carousel sliders">
                                 <?php if (!empty($construction_gallery)) {
                                     foreach ($construction_gallery as $construction) { ?>
-                                        <?php if ($construction['media_type'] == 1) { ?>
                                             <div class="item">
                                                 <img src="<?php echo base_url('assets/images/public/home/' . $construction['media_name']); ?>">
                                             </div>
-                                        <?php } ?>
-                                        <?php if ($construction['media_type'] == 2) { ?>
-                                            <div class="item">
-                                                <video width="320" height="240" controls>
-                                                    <source src="<?php echo base_url('assets/images/public/home/' . $construction['media_name']); ?>" type="video/mp4">
-                                                </video>
-                                            </div>
-                                        <?php } ?>
-                                        <?php if ($construction['media_type'] == 3) { ?>
-                                            <div class="item">
-                                                <?php echo $construction['media_name']; ?>
-                                            </div>
-                                        <?php } ?>
+                                        
                                 <?php }
                                 } ?>
                             </div>
                             <div class="slider-counter"></div>
                         </div>
                         <div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="last-tab">
+                            <div class="owl-carousel sliders">
+                                <?php if (!empty($gallery_video)) {
+                                    foreach ($gallery_video as $video) { ?>
+                                        <?php if ($video['media_type'] == 2) { ?>
+                                            <div class="item">
+                                                <video width="320" height="240" controls>
+                                                    <source src="<?php echo base_url('assets/images/public/home/' . $video['media_name']); ?>" type="video/mp4">
+                                                </video>
+                                            </div>
+                                        <?php } ?>
+                                        <?php if ($video['media_type'] == 3) { ?>
+                                            <div class="item">
+                                                <?php echo $video['media_name']; ?>
+                                            </div>
+                                        <?php } ?>
+                                <?php }
+                                } ?>
+                            </div>
+                            <div class="slider-counter"></div>
                         </div>
                     </div>
                 </div>

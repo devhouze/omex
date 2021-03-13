@@ -18,6 +18,7 @@ class Welcome extends CI_Controller {
 		$data['interior_gallery'] = $this->wm->get_gallery(1);
 		$data['exterior_gallery'] = $this->wm->get_gallery(2);
 		$data['construction_gallery'] = $this->wm->get_gallery(3);
+		$data['gallery_video'] = $this->wm->gallery_video();
 		// Get Instagram feeds
 		// echo "<pre>"; print_r($data); die;
 		$this->load->view('header/header_start');
@@ -180,7 +181,9 @@ class Welcome extends CI_Controller {
 	{
 		$data['events'] = $this->wm->get_events();
 		$data['about_brand'] = $this->wm->get_about_brand($id);
+		$data['key_info'] = $this->wm->key_information($data['about_brand']['brand_category'],$data['about_brand']['brand_sub_category']);
 		$data['what_new'] = $this->wm->get_what_new();
+		$data['similar_brands'] = $this->wm->get_similar_brands($data['about_brand']['brand_category']);
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -201,6 +204,7 @@ class Welcome extends CI_Controller {
 	{
 		$data['events'] = $this->wm->get_events();
 		$data['what_new'] = $this->wm->get_what_new();
+		$data['past_event'] = $this->wm->get_past_events();
 		// echo "<pre>"; print_r($data); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
@@ -218,16 +222,42 @@ class Welcome extends CI_Controller {
 		$this->load->view('js/common');
 		$this->load->view('footer/body_end');
 	}
-	public function brand_directory()
+
+	public function event_details($id)
 	{
-		$data['brand_banner'] = $this->wm->get_brand_directory_banner();
-		$data['brand_offers'] = $this->wm->get_brand_offers();
-		$data['brand'] = $this->wm->get_all_brands();
+		$data['event'] = $this->wm->get_event_detail($id);
 		$data['what_new'] = $this->wm->get_what_new();
+		$data['past_event'] = $this->wm->get_past_events();
 		// echo "<pre>"; print_r($data); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
+		$this->load->view('header/header_end');
+		$this->load->view('header/body_start');
+		$this->load->view('header/main_header');
+		$this->load->view('event-details',$data);
+		$this->load->view('more_expoler');
+		$this->load->view('footer/footer_signup');
+		$this->load->view('footer/main_footer');
+		$this->load->view('footer/footer_common');
+		$this->load->view('js/owl');
+		$this->load->view('js/event');
+		$this->load->view('js/common');
+		$this->load->view('footer/body_end');
+	}
+
+	public function brand_directory($alphabet = null,$category = null)
+	{
+		$data['brand_banner'] = $this->wm->get_brand_directory_banner();
+		$data['brand_offers'] = $this->wm->get_brand_offers();
+		$data['brand'] = $this->wm->get_all_brands($alphabet,$category);
+		$data['what_new'] = $this->wm->get_what_new();
+		$data['filter'] = $this->wm->get_filters();
+		// echo "<pre>"; print_r($data); die;
+		$this->load->view('header/header_start');
+		$this->load->view('header/header_common');
+		$this->load->view('header/owl_css');
+		$this->load->view('header/select2_css');
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
 		$this->load->view('header/main_header');
@@ -238,6 +268,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer/footer_common');
 		$this->load->view('js/owl');
 		$this->load->view('js/brand_diractory');
+		$this->load->view('js/select2_js');
 		$this->load->view('js/common');
 		$this->load->view('footer/body_end');
 	}
