@@ -66,7 +66,10 @@ $route['paris'] = 'Welcome/paris';
 $route['contact-us'] = 'Welcome/contact_us';
 $route['brand/(:num)'] = 'Welcome/brand/$1';
 $route['event'] = 'Welcome/event';
+$route['event-details/(:num)'] = 'Welcome/event_details/$1';
 $route['brand-directory'] = 'Welcome/brand_directory';
+// $1 => alphabet, $2 => category
+$route['brand-directory/(:any)/(:any)'] = 'Welcome/brand_directory/$1/$2';
 $route['sign-up'] = 'Welcome/sign_up';
 $route['get-brands'] = "Welcome/get_brands";
 
@@ -90,6 +93,8 @@ $route['admin/add-brands'] = 'admin/Brands_Controller/add_brand';
 $route['admin/edit-brands/(:num)'] = 'admin/Brands_Controller/edit_brand/$1';
 $route['admin/delete-brand'] = 'admin/Brands_Controller/delete_brand';
 $route['admin/brand-details'] = 'admin/Brands_Controller/get_brand_details';
+$route['admin/get-sub-category'] = 'admin/Brands_Controller/get_sub_category';
+
 
 // Brand Offer routes
 $route['admin/brand-offer'] = 'admin/Brands_Controller/brand_offer_list';
