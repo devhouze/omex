@@ -181,9 +181,10 @@ class Welcome extends CI_Controller {
 	{
 		$data['events'] = $this->wm->get_events();
 		$data['about_brand'] = $this->wm->get_about_brand($id);
-		$data['key_info'] = $this->wm->key_information($data['about_brand']['brand_category'],$data['about_brand']['brand_sub_category']);
+		$data['key_info'] = array_merge(explode(',',$data['about_brand']['brand_category']),(!empty($data['about_brand']['brand_sub_category']))?explode(',',$data['about_brand']['brand_sub_category']):[]);
 		$data['what_new'] = $this->wm->get_what_new();
 		$data['similar_brands'] = $this->wm->get_similar_brands($data['about_brand']['brand_category']);
+		// echo "<pre>"; print_r($data); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -248,6 +249,7 @@ class Welcome extends CI_Controller {
 
 	public function brand_directory($alphabet = null,$category = null)
 	{
+		$category = str_replace('%20',' ',$category);
 		$data['brand_banner'] = $this->wm->get_brand_directory_banner();
 		$data['brand_offers'] = $this->wm->get_brand_offers();
 		$data['brand'] = $this->wm->get_all_brands($alphabet,$category);
@@ -348,6 +350,15 @@ class Welcome extends CI_Controller {
 		$type = $this->input->post('type');
 		$data = $this->wm->get_brands($type);
 		echo json_encode($data);
+	}
+
+	public function search_brand()
+	{
+		$street = $this->input->post('street');
+		$sort = $this->input->post('sort');
+		$filter = $this->input->post('filter');
+
+		$data = $this->wm->filter_brand($street,$sort,$filter);
 	}
 	
 	

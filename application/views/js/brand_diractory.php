@@ -89,3 +89,35 @@ $(document).ready(function(){
     $('.select').select2();
 });
 </script>
+
+<script>
+$(document).ready(function(){
+    $('#street'),change(function(){
+        get_brands();
+    });
+
+    $('#sort'),change(function(){
+        get_brands();
+    });
+
+    $('#filter'),change(function(){
+        get_brands();
+    });
+
+    function get_brands(){
+        var street = $('#street').val();
+        var sort = $('#sort').val();
+        var filter = $('#filter').val();
+
+        $.ajax({
+            type:'post',
+            url:'<?php echo base_url('search-brand')?>',
+            data:{street:street, sort:sort,filter:filter},
+            dataType:'json',
+            success:function(data){
+                
+            }
+        })
+    }
+});
+</script>
