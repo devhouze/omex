@@ -184,11 +184,7 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-md-10">
-                <a href="" class="primary-btn d-inline-block mt-36">KNOW MORE</a>
-            </div>
-        </div>
+        
         </div>
     </div>
 

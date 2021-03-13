@@ -111,7 +111,7 @@ class Welcome_model extends CI_Model
 
     public function get_events()
     {
-        $query = $this->db->select('event_name, thumbnail_image, thumbnail_message, event_start_time, event_end_time, show_reg_btn, date_available, start_date, end_date, thumbnail_image, about_event, event_category, show_reg_btn, event_id')
+        $query = $this->db->select('event_name, thumbnail_message, event_start_time, event_end_time, date_available, start_date, end_date, thumbnail_image, about_event, event_category, show_reg_btn, event_id')
                           ->where('status',0)
                           ->where('end_date >',date('Y-m-d'))
                           ->get('tbl_event');
@@ -121,6 +121,20 @@ class Welcome_model extends CI_Model
         }
         return [];
     }
+
+    public function get_event_detail($id)
+    {
+        $query = $this->db->select('event_name, thumbnail_message, event_start_time, event_end_time, date_available, start_date, end_date, thumbnail_image, about_event, event_category, show_reg_btn, event_id')
+                          ->where('status',0)
+                          ->where('event_id',$id)
+                          ->get('tbl_event');
+        if($query->num_rows() > 0)
+        {
+            return $query->row_array();
+        }
+        return [];
+    }
+    
 
     public function get_brands($type)
     {
@@ -163,11 +177,21 @@ class Welcome_model extends CI_Model
         return [];
     }
 
-    public function get_all_brands()
+    public function get_all_brands($alphabet,$category)
     {
-        $query = $this->db->select('brand_name, brand_logo, logo_message, brand_location, brand_id')
-                          ->where('status',0)
-                          ->get('tbl_brand');
+        $this->db->select('brand_name, brand_logo, logo_message, brand_location, brand_id');
+        $this->db->where('status',0);
+        ($alphabet !='null' && $alphabet != '')?$this->db->like('brand_name',$alphabet):'';    
+        if(($category != 'null' && $category !='') && $category == 'fashion'){
+            $this->db->where_in('brand_category',['Men’s Fashion','Women’s Fashion','	
+            Footwear']);
+        } elseif(($category != 'null' && $category !='') && $category == 'fitness'){
+            $this->db->where_in('brand_category',['Sports & Fitness']);
+        } elseif(($category != 'null' && $category !='')) {
+            $this->db->where('brand_category',$category);
+        }     
+        $query = $this->db->get('tbl_brand');
+        // echo $this->db->last_query(); die;
         if($query->num_rows() > 0)
         {
             return $query->result_array();
@@ -177,14 +201,29 @@ class Welcome_model extends CI_Model
 
     public function get_gallery($type)
     {
-        $this->db->select('id, media_type, media_name, media_alt');
+        $this->db->select('id, media_name, media_alt');
         $this->db->where('status',0);
+        $this->db->where('media_type',1);
         ($type!='all')?$this->db->where('filter_type',$type):'';
         $this->db->order_by('id','desc');
         $this->db->limit(10);
         $query = $this->db->get('tbl_gallery');
         // echo "<pre>";
         // echo $this->db->last_query();
+        if($query->num_rows() > 0){
+            return $query->result_array();
+        }
+        return [];
+    }
+
+    public function gallery_video()
+    {
+        $this->db->select('id, media_type, media_name, media_alt');
+        $this->db->where('status',0);
+        $this->db->where('media_type !=',1);
+        $this->db->order_by('id','desc');
+        $this->db->limit(10);
+        $query = $this->db->get('tbl_gallery');
         if($query->num_rows() > 0){
             return $query->result_array();
         }
@@ -210,6 +249,58 @@ class Welcome_model extends CI_Model
             return $query->row_array();
         }
         return [];
+    }
+
+    public function key_information($category,$subcategory = 0)
+    {   
+        $category_id = explode(",",$category);
+        foreach ($category_id as $value) {
+            $cat_query = $this->db->select('category_name as name')
+                              ->where('id',$value)
+                              ->get('tbl_category')->row_array();
+            $category_name[] = $cat_query['name'];
+        }
+        $subcategory_name = [];
+        if($subcategory !=0){
+            $subcat_query = $this->db->select('name')
+                              ->where('id',$subcategory)
+                              ->get('tbl_sub_category')->row_array();
+            $subcategory_name[] = $subcat_query['name'];
+        }
+        
+        $final_data = array_merge($category_name, $subcategory_name);
+        return $final_data;
+    }
+
+    public function get_similar_brands($category_id)
+    {
+        $this->db->select('brand_name, brand_logo, logo_message');
+        $this->db->where_in('brand_category',explode(',',$category_id));
+        $query = $this->db->get('tbl_brand');
+        if($query->num_rows() > 0){
+            return $query->result_array();
+        }
+        return [];
+    }
+
+    public function get_past_events()
+    {
+        $query = $this->db->select('thumbnail_message, thumbnail_image, about_event')
+                          ->where('end_date <',date('Y-m-d'))
+                          ->get('tbl_event');
+        if($query->num_rows() > 0)
+        {
+            return $query->result_array();
+        }
+        return [];
+    }
+
+    public function get_filters()
+    {
+        $category = $this->db->select('id, category_name as name')->get('tbl_category')->result_array();
+        $subcategory = $this->db->get('tbl_sub_category')->result_array();
+        $final_data = array_merge($category,$subcategory);
+        return $final_data;
     }
 }
 
