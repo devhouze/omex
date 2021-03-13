@@ -282,6 +282,7 @@ $(document).ready(function() {
 
     // Get brand sub category
     $('#category').change(function() {
+        $('#sub_category').empty();
         var cat_id = $(this).val();
         $.ajax({
             type: 'post',

@@ -251,27 +251,6 @@ class Welcome_model extends CI_Model
         return [];
     }
 
-    public function key_information($category,$subcategory = 0)
-    {   
-        $category_id = explode(",",$category);
-        foreach ($category_id as $value) {
-            $cat_query = $this->db->select('category_name as name')
-                              ->where('id',$value)
-                              ->get('tbl_category')->row_array();
-            $category_name[] = $cat_query['name'];
-        }
-        $subcategory_name = [];
-        if($subcategory !=0){
-            $subcat_query = $this->db->select('name')
-                              ->where('id',$subcategory)
-                              ->get('tbl_sub_category')->row_array();
-            $subcategory_name[] = $subcat_query['name'];
-        }
-        
-        $final_data = array_merge($category_name, $subcategory_name);
-        return $final_data;
-    }
-
     public function get_similar_brands($category_id)
     {
         $this->db->select('brand_name, brand_logo, logo_message');
@@ -301,6 +280,11 @@ class Welcome_model extends CI_Model
         $subcategory = $this->db->get('tbl_sub_category')->result_array();
         $final_data = array_merge($category,$subcategory);
         return $final_data;
+    }
+
+    public function filter_brand($street,$sort,$filter)
+    {
+        
     }
 }
 

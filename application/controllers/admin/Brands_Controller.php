@@ -71,7 +71,6 @@ class Brands_Controller extends MY_Controller
             $this->form_validation->set_rules('brand_type','Brand Type','required');
             $this->form_validation->set_rules('brand_contact','Brand Contact','required');
             $this->form_validation->set_rules('brand_category[]','Brand Category','required');
-            $this->form_validation->set_rules('sub_category','Brand Sub Category','required');
             $this->form_validation->set_rules('email_contact','Email Contact','required');
             $this->form_validation->set_rules('brand_audience','Brand Audience','required');
             $this->form_validation->set_rules('store_map','Store Map','required');
@@ -245,7 +244,6 @@ class Brands_Controller extends MY_Controller
             $this->form_validation->set_rules('brand_type','Brand Type','required');
             $this->form_validation->set_rules('brand_contact','Brand Contact','required');
             $this->form_validation->set_rules('brand_category[]','Brand Category','required');
-            $this->form_validation->set_rules('sub_category','Brand Sub Category','required');
             $this->form_validation->set_rules('email_contact','Email Contact','required');
             $this->form_validation->set_rules('brand_audience','Brand Audience','required');
             $this->form_validation->set_rules('store_map','Store Map','required');
@@ -376,7 +374,8 @@ class Brands_Controller extends MY_Controller
         }
         $data['brands'] = $this->bm->get_data_row('tbl_brand','*',['brand_id' => $id]);
         $data['category'] = $this->bm->get_data_array('tbl_category','category_name, id','');
-        $data['sub_category'] = $this->bm->get_sub_category($data['brands']->brand_category);
+        $category[] = $data['brands']->brand_category;
+        $data['sub_category'] = $this->bm->get_sub_category($category);
         // echo "<pre>"; print_r($data); die;
         $this->load->view('admin/include/header_start');
 		$this->load->view('admin/include/header_end');
