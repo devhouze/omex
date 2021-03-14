@@ -177,21 +177,17 @@ class Welcome_model extends CI_Model
         return [];
     }
 
-    public function get_all_brands($alphabet,$category)
+    public function get_all_brands($category,$limit,$count = false)
     {
         $this->db->select('brand_name, brand_logo, logo_message, brand_location, brand_id');
         $this->db->where('status',0);
-        ($alphabet !='null' && $alphabet != '')?$this->db->like('brand_name',$alphabet):'';    
-        if(($category != 'null' && $category !='') && $category == 'fashion'){
-            $this->db->where_in('brand_category',['Men’s Fashion','Women’s Fashion','	
-            Footwear']);
-        } elseif(($category != 'null' && $category !='') && $category == 'fitness'){
-            $this->db->where_in('brand_category',['Sports & Fitness']);
-        } elseif(($category != 'null' && $category !='')) {
-            $this->db->where('brand_category',$category);
-        }     
+        $this->db->like('brand_category',$category);
+        (!$count && $limit!='null')?$this->db->limit($limit):''; 
         $query = $this->db->get('tbl_brand');
         // echo $this->db->last_query(); die;
+        if($count){
+            return $query->num_rows();
+        }
         if($query->num_rows() > 0)
         {
             return $query->result_array();
@@ -251,10 +247,12 @@ class Welcome_model extends CI_Model
         return [];
     }
 
-    public function get_similar_brands($category_id)
+    public function get_similar_brands($brand_type,$start=null,$end=null)
     {
-        $this->db->select('brand_name, brand_logo, logo_message');
-        $this->db->where_in('brand_category',explode(',',$category_id));
+        $this->db->select('brand_id, brand_name, brand_logo, logo_message');
+        $this->db->like('brand_type',$brand_type);
+        ($start!='null')?$this->db->limit($start,$end):'';
+        $this->db->order_by('brand_id','desc');
         $query = $this->db->get('tbl_brand');
         if($query->num_rows() > 0){
             return $query->result_array();
@@ -282,9 +280,33 @@ class Welcome_model extends CI_Model
         return $final_data;
     }
 
-    public function filter_brand($street,$sort,$filter)
+    public function filter_brand($street,$sort,$filter,$limit,$letter,$category,$count = false)
     {
-        
+        ($street !='null' && $street !='')?$this->db->like('brand_street',$street):'';
+        ($category !='null' && $category !='')?$this->db->like('brand_category',$category):'';
+        ($letter !='null' && $street !='')?$this->db->like('brand_name',$letter):'';
+        if($sort = 'A-Z'){
+            $this->db->order_by('brand_name','asc');
+        } elseif($sort = 'Z-A'){
+            $this->db->order_by('brand_name','desc');
+        } else {
+            $this->db->order_by('brand_name','desc');
+        }
+        if($filter != '')
+        {
+            $this->db->like('brand_category',$filter);
+            $this->db->or_where('brand_sub_category',$filter);
+
+        }
+        (!$count)?$this->db->limit($limit):'';
+        $query = $this->db->get('tbl_brand');
+        if($count){
+            return $query->num_rows();
+        }
+        if($query->num_rows() > 0){
+            return $query->result_array();
+        }
+        return [];
     }
 }
 
