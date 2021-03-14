@@ -61,32 +61,32 @@
                 <div class="col-md-10">
                     <ul class="me-0 mt-40 p-0 d-flex justify-content-center flex-wrap">
 
-                        <li><a href="<?php echo base_url('brand-directory/a')?>">A </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/b')?>">B </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/c')?>">C </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/d')?>">D </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/e')?>">E </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/f')?>">F </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/g')?>">G </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/h')?>">H </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/i')?>">I </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/j')?>">J </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/k')?>">K </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/l')?>">L </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/m')?>">M </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/n')?>">N </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/o')?>">O </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/p')?>">P </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/q')?>">Q </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/r')?>">R </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/s')?>">S </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/t')?>">T </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/u')?>">U </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/v')?>">V </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/w')?>">W </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/x')?>">X </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/y')?>">Y </a></li>
-                        <li><a href="<?php echo base_url('brand-directory/z')?>">z </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="a">A </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="b">B </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="c">C </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="d">D </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="e">E </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="f">F </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="g">G </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="h">H </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="i">I </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="j">J </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="k">K </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="l">L </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="m">M </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="n">N </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="o">O </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="p">P </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="q">Q </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="r">R </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="s">S </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="t">T </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="u">U </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="v">V </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="w">W </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="x">X </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="y">Y </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="z">z </a></li>
                     </ul>
                 </div>
             </div>
@@ -100,6 +100,7 @@
 
         </div>
     </div>
+    
     <div class="search-brand gray-bg">
         <div class="container">
             <div class="row justify-content-center">
@@ -111,25 +112,26 @@
                 <div class="col-md-10">
                     <div class="row">
                         <div class="col-md-4">
+                            
                             <ul>
-                                <li><a href="<?php echo base_url('brand-directory/null/Restaurants')?>">Restaurants</a></li>
-                                <li><a href="<?php echo base_url('brand-directory/null/Entertainment')?>">Entertainment</a></li>
-                                <li><a href="<?php echo base_url('brand-directory/null/Watches')?>">Watches</a></li>
-                                <li><a href="<?php echo base_url('brand-directory/null/Watches')?>">Bank</a></li>
+                                <li><a href="javascript:void(0)" class="category" data-category="Restaurants">Restaurants</a></li>
+                                <li><a href="javascript:void(0)" class="category" data-category="Entertainment">Entertainment</a></li>
+                                <li><a href="javascript:void(0)" class="category" data-category="Watches">Watches</a></li>
+                                
                             </ul>
                         </div>
                         <div class="col-md-4">
                             <ul>
-                                <li><a href="<?php echo base_url('brand-directory/null/Departmental Store')?>">Departmental Store</a></li>
-                                <li><a href="<?php echo base_url('brand-directory/null/Footwear')?>">Footwear</a></li>
-                                <li><a href="<?php echo base_url('brand-directory/null/Unisex Fashion')?>">Unisex Fashion</a></li>
+                                <li><a href="javascript:void(0)" class="category" data-category="Departmental Store">Departmental Store</a></li>
+                                <li><a href="javascript:void(0)" class="category" data-category="Footwear">Footwear</a></li>
+                                <li><a href="javascript:void(0)" class="category" data-category="Unisex Fashion">Unisex Fashion</a></li>
                             </ul>
                         </div>
                         <div class="col-md-4">
                             <ul>
-                                <li><a href="<?php echo base_url('brand-directory/null/Groceries')?>">Groceries</a></li>
-                                <li><a href="<?php echo base_url('brand-directory/null/Designer Wear')?>">Designer Wear</a></li>
-                                <li><a href="<?php echo base_url('brand-directory/null/Cinema')?>">Cinema</a></li>
+                                <li><a href="javascript:void(0)" class="category" data-category="Groceries">Groceries</a></li>
+                                <li><a href="javascript:void(0)" class="category" data-category="Designer Wear">Designer Wear</a></li>
+                                <li><a href="javascript:void(0)" class="category" data-category="Cinema">Cinema</a></li>
                             </ul>
                         </div>
                     </div>
@@ -169,10 +171,11 @@
                     </div>
 
                 </div>
+                
             </div>
             <div class="row justify-content-center mt-4">
                 <div class="col-md-10">
-                    <div class="row">
+                    <div class="row" id="brand">
                     <?php if(!empty($brand)){ foreach($brand as $brands){?>
                         <div class="col-md-3 col-6">
                             <div class="product-box">
@@ -183,10 +186,12 @@
                                 
                             </div>
                         </div>
-                    <?php } }?>  
+                    <?php } }?>
+                    <?php if(!empty($limit)){?>
                         <div class="col-md-12">
-                            <a href="" class="d-table mx-auto primary-btn">LOAD MORE</a>
+                            <a href="javascript:void(0)" class="d-table mx-auto primary-btn" data-limit="<?php echo $limit; ?>">LOAD MORE</a>
                         </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -327,3 +332,4 @@
                     <div class="v-line d-table mx-auto my-4"></div>
                 </div>
             </div>
+

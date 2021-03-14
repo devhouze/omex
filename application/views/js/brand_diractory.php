@@ -92,15 +92,71 @@ $(document).ready(function(){
 
 <script>
 $(document).ready(function(){
-    $('#street'),change(function(){
+    const base_url = $('body').data('url');
+    $('#street').change(function(){
         get_brands();
     });
 
-    $('#sort'),change(function(){
+    $('#sort').change(function(){
         get_brands();
     });
 
-    $('#filter'),change(function(){
+    
+    $('.primary-btn').click(function(){
+        var street = $('#street').val();
+        var sort = $('#sort').val();
+        var filter = $('#filter').val();
+        var limit = $(this).data('limit');
+        $('#brand').empty();
+        $.ajax({
+            type:'post',
+            url:'<?php echo base_url('search-brand')?>',
+            data:{street:street, sort:sort,filter:filter,limit:limit},
+            dataType:'json',
+            success:function(data){
+                $('.primary-btn').attr('data-limit',data.limit);
+                $.each(data,function(i,v){
+                    var value = '<div class="col-md-3 col-6">';
+                    value += "<a href='"+base_url+"brand/"+v.brand_id+"'>";
+                    value += "<figure><img src='"+base_url+"/assets/images/public/brand/"+v.brand_logo+"' alt='"+v.logo_message+"'></figure>";
+                    value += '<div class="name">'+v.brand_name+'</div>';
+                    value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+'</div>';
+                    value += '</div>';
+                    console.log(value);
+                    $('#brand').append(value);
+                });
+            }
+        })
+    });
+
+    $('.letter').click(function(){
+        var street = $('#street').val();
+        var sort = $('#sort').val();
+        var filter = $('#filter').val();
+        var letter = $(this).data('letter');
+        var limit = $('#limit').val();
+        $('#brand').empty();
+        $.ajax({
+            type:'post',
+            url:'<?php echo base_url('search-brand')?>',
+            data:{street:street, sort:sort,filter:filter,limit:limit,letter:letter},
+            dataType:'json',
+            success:function(data){
+                $.each(data,function(i,v){
+                    var value = '<div class="col-md-3 col-6">';
+                    value += "<a href='"+base_url+"brand/"+v.brand_id+"'>";
+                    value += "<figure><img src='"+base_url+"/assets/images/public/brand/"+v.brand_logo+"' alt='"+v.logo_message+"'></figure>";
+                    value += '<div class="name">'+v.brand_name+'</div>';
+                    value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+'</div>';
+                    value += '</div>';
+                    console.log(value);
+                    $('#brand').append(value);
+                });
+            }
+        })
+    });
+
+    $('#filter').change(function(){
         get_brands();
     });
 
@@ -108,14 +164,26 @@ $(document).ready(function(){
         var street = $('#street').val();
         var sort = $('#sort').val();
         var filter = $('#filter').val();
-
+        var letter = $(this).data('letter');
+        var category = $(this).val('category');
+        var limit = $('#limit').val();
+        $('#brand').empty();
         $.ajax({
             type:'post',
             url:'<?php echo base_url('search-brand')?>',
-            data:{street:street, sort:sort,filter:filter},
+            data:{street:street, sort:sort,filter:filter,limit:limit,letter:letter},
             dataType:'json',
             success:function(data){
-                
+                $.each(data,function(i,v){
+                    var value = '<div class="col-md-3 col-6">';
+                    value += "<a href='"+base_url+"brand/"+v.brand_id+"'>";
+                    value += "<figure><img src='"+base_url+"/assets/images/public/brand/"+v.brand_logo+"' alt='"+v.logo_message+"'></figure>";
+                    value += '<div class="name">'+v.brand_name+'</div>';
+                    value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+'</div>';
+                    value += '</div>';
+                    console.log(value);
+                    $('#brand').append(value);
+                });
             }
         })
     }

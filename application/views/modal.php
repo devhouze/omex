@@ -60,23 +60,19 @@
         <div class="modal-content">
 
             <div class="modal-body">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div id="all_images" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="..." class="d-block w-100" alt="...">
+                    <?php if (!empty($all_gallery)) { $i=1; foreach ($all_gallery as $gallery) { ?>
+                        <div class="carousel-item <?php if($i==1){echo "active";} $i;?>">
+                            <img src="<?php echo base_url('assets/images/public/home/' . $gallery['media_name']); ?>" class="d-block w-100" alt="...">
                         </div>
-                        <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="...">
-                        </div>
+                        <?php $i++; } } ?>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#all_images" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#all_images" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -86,3 +82,122 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="interior-image-modal" tabindex="-1" aria-labelledby="interior-image-modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <div id="interior_images" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                    <?php if (!empty($interior_gallery)) { $i=1; foreach ($interior_gallery as $interior) { ?>
+                        <div class="carousel-item <?php if($i==1){echo "active";} $i;?>">
+                            <img src="<?php echo base_url('assets/images/public/home/' . $interior['media_name']); ?>" class="d-block w-100" alt="...">
+                        </div>
+                        <?php $i++; } } ?>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#interior_images" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#interior_images" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exterior-image-modal" tabindex="-1" aria-labelledby="exterior-image-modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <div id="exterior_images" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                    <?php if (!empty($exterior_gallery)) { $i=1; foreach ($exterior_gallery as $exterior) { ?>
+                        <div class="carousel-item <?php if($i==1){echo "active";} $i;?>">
+                            <img src="<?php echo base_url('assets/images/public/home/' . $exterior['media_name']); ?>" class="d-block w-100" alt="...">
+                        </div>
+                        <?php $i++; } } ?>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#exterior_images" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#exterior_images" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="construction-image-modal" tabindex="-1" aria-labelledby="construction-image-modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <div id="construction_images" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                    <?php if (!empty($construction_gallery)) { $i=1; foreach ($construction_gallery as $construction) { ?>
+                        <div class="carousel-item <?php if($i==1){echo "active";} $i;?>">
+                            <img src="<?php echo base_url('assets/images/public/home/' . $construction['media_name']); ?>" class="d-block w-100" alt="...">
+                        </div>
+                        <?php $i++; } } ?>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#construction_images" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#construction_images" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<script>
+$(function() {
+  $('.all').on('click', function(event) {
+    //Gets the Item that was clicked
+    var $this = $(event.currentTarget);
+    $('#image-modal').modal('show');
+    //Use the slide number of the clicked Item to open the slide on the carousel
+    $('#all_images').carousel($this.data('slide'));
+  });
+
+  $('.interior').on('click', function(event) {
+    //Gets the Item that was clicked
+    var $this = $(event.currentTarget);
+    $('#interior-image-modal').modal('show');
+    //Use the slide number of the clicked Item to open the slide on the carousel
+    $('#interior_images').carousel($this.data('slide'));
+  });
+
+  $('.exterior').on('click', function(event) {
+    //Gets the Item that was clicked
+    var $this = $(event.currentTarget);
+    $('#exterior-image-modal').modal('show');
+    //Use the slide number of the clicked Item to open the slide on the carousel
+    $('#exterior_images').carousel($this.data('slide'));
+  });
+
+  $('.construction').on('click', function(event) {
+    //Gets the Item that was clicked
+    var $this = $(event.currentTarget);
+    $('#construction-image-modal').modal('show');
+    //Use the slide number of the clicked Item to open the slide on the carousel
+    $('#construction_images').carousel($this.data('slide'));
+  });
+});
+</script>
