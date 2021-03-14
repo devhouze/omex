@@ -114,8 +114,7 @@ $(document).ready(function(){
             data:{street:street, sort:sort,filter:filter,limit:limit},
             dataType:'json',
             success:function(data){
-                $('.primary-btn').attr('data-limit',data.limit);
-                $.each(data,function(i,v){
+                $.each(data.brand,function(i,v){
                     var value = '<div class="col-md-3 col-6">';
                     value += "<a href='"+base_url+"brand/"+v.brand_id+"'>";
                     value += "<figure><img src='"+base_url+"/assets/images/public/brand/"+v.brand_logo+"' alt='"+v.logo_message+"'></figure>";
@@ -125,6 +124,10 @@ $(document).ready(function(){
                     console.log(value);
                     $('#brand').append(value);
                 });
+                limit = '<div class="col-md-12">';
+                limit += '<a href="javascript:void(0)" class="d-table mx-auto primary-btn" data-limit="'+data.limit+'">LOAD MORE</a>'
+                limit += '</div>';      
+                $('#brand').append(limit);
             }
         })
     });
