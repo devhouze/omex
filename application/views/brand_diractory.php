@@ -176,7 +176,7 @@
             <div class="row justify-content-center mt-4">
                 <div class="col-md-10">
                     <div class="row" id="brand">
-                    <?php if(!empty($brand)){ foreach($brand as $brands){?>
+                        <?php if(!empty($brand)){ foreach($brand as $brands){?>
                         <div class="col-md-3 col-6">
                             <div class="product-box">
                                 <a href="<?php echo base_url('brand/'.$brands['brand_id']); ?>"></a>
@@ -186,8 +186,8 @@
                                 
                             </div>
                         </div>
-                    <?php } }?>
-                    <?php if(!empty($limit)){?>
+                        <?php } }?>
+                        <?php if(!empty($limit)){?>
                         <div class="col-md-12">
                             <a href="javascript:void(0)" class="d-table mx-auto primary-btn" data-limit="<?php echo $limit; ?>">LOAD MORE</a>
                         </div>
