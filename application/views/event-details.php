@@ -277,25 +277,25 @@
                 <div class="col-md-10">
                     <ul class="category d-flex justify-content-center align-items-center flex-wrap">
                         <li>
-                            <a href="">
+                        <a href="<?php echo base_url('brand-directory/fashion')?>">
                                 <figure><img src="<?php echo base_url(); ?>assets/images/public/brand/c1.svg" alt=""></figure>
                                 <span>FASHION</span>
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="<?php echo base_url('brand-directory/restaurant')?>">
                                 <figure><img src="<?php echo base_url(); ?>assets/images/public/brand/c2.svg" alt=""></figure>
                                 <span>FOOD</span>
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="<?php echo base_url('brand-directory/health')?>">
                                 <figure><img src="<?php echo base_url(); ?>assets/images/public/brand/c3.svg" alt=""></figure>
                                 <span>HEALTH & BEAUTY</span>
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="<?php echo base_url('brand-directory/entertainment')?>">
                                 <figure><img src="<?php echo base_url(); ?>assets/images/public/brand/c4.svg" alt=""></figure>
                                 <span>ENTERTAINMENT</span>
                             </a>
