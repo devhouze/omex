@@ -373,12 +373,13 @@ class Welcome extends CI_Controller {
 		$category = ($this->input->post('category'))?$this->input->post('category'):'';
 		$count = $this->wm->filter_brand($street,$sort,$filter,$limit,$letter,$category,true);
 		
-		$data = $this->wm->filter_brand($street,$sort,$filter,$limit,$letter,$category);
+		$data['brand'] = $this->wm->filter_brand($street,$sort,$filter,$limit,$letter,$category);
 		if($limit != 'null' && $count > $limit){
 			$data['limit'] = $limit + 8;
 		} else {
 			$data['limit'] = '';
 		}
+		// echo "<pre>"; print_r($data); die;
 		echo json_encode($data);
 	}
 	
