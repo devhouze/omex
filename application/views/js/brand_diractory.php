@@ -106,7 +106,8 @@ $(document).ready(function(){
         var street = $('#street').val();
         var sort = $('#sort').val();
         var filter = $('#filter').val();
-        var limit = $(this).data('limit');
+        var limit = $('#limit').val();
+        console.log(limit);
         $('#brand').empty();
         $.ajax({
             type:'post',
@@ -116,18 +117,21 @@ $(document).ready(function(){
             success:function(data){
                 $.each(data.brand,function(i,v){
                     var value = '<div class="col-md-3 col-6">';
+                    value += '<div class="product-box">';
                     value += "<a href='"+base_url+"brand/"+v.brand_id+"'>";
                     value += "<figure><img src='"+base_url+"/assets/images/public/brand/"+v.brand_logo+"' alt='"+v.logo_message+"'></figure>";
                     value += '<div class="name">'+v.brand_name+'</div>';
                     value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+'</div>';
                     value += '</div>';
-                    console.log(value);
+                    value += '</div>';
                     $('#brand').append(value);
                 });
-                limit = '<div class="col-md-12">';
-                limit += '<a href="javascript:void(0)" class="d-table mx-auto primary-btn" data-limit="'+data.limit+'">LOAD MORE</a>'
-                limit += '</div>';      
-                $('#brand').append(limit);
+                $('#limit').val(data.limit);
+                if(data.limit == ''){
+                    $('#load_btn').css('display','none');
+                } else {
+                    $('#load_btn').css('display','block');
+                }
             }
         })
     });

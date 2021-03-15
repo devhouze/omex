@@ -63,7 +63,7 @@ $(document).ready(function() {
                 value += '<tr><th>Event End Date</th><td>' + end_date + '</td></tr>';
                 value += '<tr><th>Event Start Time</th><td>' + event_start_time + '</td></tr>';
                 value += '<tr><th>Event End Time</th><td>' + event_end_time + '</td></tr>';
-                value += '<tr><th>Event Type</th><td>' + event_type + '</td></tr>';
+                // value += '<tr><th>Event Type</th><td>' + event_type + '</td></tr>';
                 value += '<tr><th>Event Street</th><td>' + event_street + '</td></tr>';
                 value += '<tr><th>Event Location</th><td>' + event_location + '</td></tr>';
                 value += '<tr><th>Event Label</th><td>' + event_label + '</td></tr>';

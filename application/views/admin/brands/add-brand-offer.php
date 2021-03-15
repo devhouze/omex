@@ -13,7 +13,7 @@ $about_brand_offer = (!empty($brand_offers))?$brand_offers->about_offer:'';
             <div class="col-lg-12">
                 <div class="card card-default">
                     <div class="card-header card-header-border-bottom">
-                        <h2>Brand Logo</h2>
+                        <h2>Brand Offer</h2>
                     </div>
                     <div class="card-body">
                         <form action="<?=$action;?>" method="post" id="brand_offer_management" autocomplete="off" enctype="multipart/form-data">

@@ -25,16 +25,16 @@
                 <div class="card-body">
                 <form action="" method="post">
                 <div class="form-row">
-                <div class="col-md-3">
+                <div class="col-md-3 mt-3">
                     <input type="text" value="<?=$this->session->userdata('lead')['name'];?>" name="name" placeholder="Search By Name" class="form-control form-control-sm">
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3 mt-3">
                     <input type="text" value="<?=$this->session->userdata('lead')['email'];?>" name="email" placeholder="Search By Email" class="form-control form-control-sm">
                 </div>
                 
                 <?php $query_type = (!empty($this->session->userdata('lead')))?$this->session->userdata('lead')['query_type']:null;?>
-                <div class="col-md-3">
+                <div class="col-md-3 mt-3">
                     <select name="query_type" class="form-control form-control-sm">
                         <option selected disabled>Select Query Type</option>
                         <option value="General Enquiry" <?php if($query_type == "General Enquiry"){ echo "selected";}?>>General Enquiry</option>
@@ -47,7 +47,15 @@
                     </select>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3 mt-3">
+                    <input type="text" value="<?=$this->session->userdata('lead')['email'];?>" name="from_date" placeholder="Date from" class="form-control form-control-sm datepicker">
+                </div>
+
+                <div class="col-md-3 mt-3">
+                    <input type="text" value="<?=$this->session->userdata('lead')['email'];?>" name="to_date" placeholder="Date to" class="form-control form-control-sm datepicker">
+                </div>
+
+                <div class="col-md-3 mt-3">
                     <input type="submit" name="search" class="btn btn-primary" value="Search">
                     <input type="submit" name="reset" class="btn btn-danger" value="Reset">
                 </div>
