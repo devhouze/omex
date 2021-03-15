@@ -16,10 +16,13 @@ class Lead_controller extends MY_Controller
         }
 
         if($this->input->post('search')){
+           
             $search = array(
                 'name'              => trim($this->input->post('name')),
                 'email'             => trim($this->input->post('email')),
-                'query_type'        => $this->input->post('query_type')
+                'query_type'        => $this->input->post('query_type'),
+                'date_from'         => date('Y-m-d',strtotime($this->input->post('from_date'))),
+                'date_to'           => date('Y-m-d',strtotime($this->input->post('to_date')))
             );
 
             $this->session->set_userdata('lead',$search);

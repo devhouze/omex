@@ -65,7 +65,9 @@
             <div class="col-lg-12">
                 <div class="card card-default">
                     <div class="card-header card-header-border-bottom">
+                        <?php if($this->session->userdata('admin_details')['user_type'] == "0"){?>
                         <a href="<?=admin_url('add-users')?>" class="btn btn-primary">Add</a>
+                        <?php } ?>
                     </div>
                     <div class="card-body">
                         <table class="table table-hover ">
@@ -78,7 +80,9 @@
                                     <th scope="col">Status</th>
                                     <th scope="col">Created By</th>
                                     <th scope="col">Created On</th>
+                                    <?php if($this->session->userdata('admin_details')['user_type'] == "0"){?>
                                     <th scope="col">Action</th>
+                                    <?php } ?>
                                 </tr>
                             </thead>
                             <tbody>
@@ -96,14 +100,17 @@
                                     </td>
                                     <td><?=$user['created_by'];?></td>
                                     <td><?=$user['created_on'];?></td>
+                                    <?php if($this->session->userdata('admin_details')['user_type'] == "0"){?>
                                     <td>
                                         <a href="<?=admin_url('edit-users/'.$user['admin_id'])?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a>
                                         <a href="javascript:void(0)" class="btn btn-danger delete" data-id="<?=$user['admin_id'];?>"><span class="mdi mdi-delete"></span></a>
                                     </td>
+                                    <?php } ?>
                                 </tr>
                                 <?php } } else {?>
                                     <tr><td colspan="7">No record found</td></tr>
                                 <?php } ?>
+                                
                             </tbody>
                         </table>
                         <div class="total_count"><?=$result_count;?></div>

@@ -188,7 +188,7 @@ $order_home = (!empty($brands))?$brands->order_home:'';
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Brand Category</label><br>
+                                    <label for="">Brand Category (Single/Multi Select with Shift Key)</label><br>
                                     <select name="brand_category[]" id="category" class="form-control form-control-sm" multiple>
                                     <?php if(!empty($category)) { foreach($category as $cat){?>
                                     <option value="<?php echo $cat['category_name'];?>" <?php if(in_array($cat['category_name'],$brand_category)){echo "selected";}?>><?php echo $cat['category_name']; ?></option>
@@ -197,7 +197,7 @@ $order_home = (!empty($brands))?$brands->order_home:'';
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Brand Sub Category</label>
+                                    <label for="">Brand Sub Category (Single/Multi Select with Shift Key)</label>
                                     <select name="sub_category" id="sub_category" class="form-control form-control-sm">
                                         <option disabled="" selected>Select Sub-Category</option>
                                         <?php if(!empty($sub_category)){ foreach($sub_category as $sc){?>
@@ -209,7 +209,7 @@ $order_home = (!empty($brands))?$brands->order_home:'';
                                 
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Feature On Home Page</label><br>
+                                    <label for="">Feature On Home Page (Under top brands)</label><br>
                                     <select name="show_on_home" class="form-control form-control-sm">
                                         <option selected="" disabled>Select One</option>
                                         <option value="Yes" <?php if($show_on_home == "Yes"){echo "selected"; }?>>Yes</option>
@@ -217,7 +217,7 @@ $order_home = (!empty($brands))?$brands->order_home:'';
                                     </select>
                                 </div>
 
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-6 mb-3" style="display:none">
                                     <label for="">Activate Brand Offer</label><br>
                                     <select name="show_brand_offers" class="form-control form-control-sm">
                                         <option selected="" disabled>Select One</option>
@@ -228,7 +228,14 @@ $order_home = (!empty($brands))?$brands->order_home:'';
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Order On Home Page</label>
-                                    <input type="text" class="form-control form-control-sm input-sm" name="order_home" value="<?=$order_home;?>">
+                                    <select name="order_home" class="form-control form-control-sm input-sm" >
+                                    <option disabled="" selected>Select Preference</option>
+                                    <option value="1" <?php if($order_home == "1"){echo "selected";}?>>1</option>
+                                    <option value="2" <?php if($order_home == "2"){echo "selected";}?>>2</option>
+                                    <option value="3" <?php if($order_home == "3"){echo "selected";}?>>3</option>
+                                    <option value="4" <?php if($order_home == "4"){echo "selected";}?>>4</option>
+                                    <option value="5" <?php if($order_home == "5"){echo "selected";}?>>5</option>
+                                    </select>
                                 </div>
 
                             </div>

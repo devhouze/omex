@@ -419,7 +419,7 @@ class Brands_Controller extends MY_Controller
     public function add_brand_offer()
     {
         $data['brand_offers'] = [];
-        $data['brands'] = $this->bm->get_data_array('tbl_brand','brand_id,brand_name','status !=2 and brand_offer_status = "Yes"');
+        $data['brands'] = $this->bm->get_data_array('tbl_brand','brand_id,brand_name','status !=2');
         if($this->input->post()){
             $this->form_validation->set_rules('brand_offer_name','Offer Name','required');
             $this->form_validation->set_rules('brand_id','Brand','required');
