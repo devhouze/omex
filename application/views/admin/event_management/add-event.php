@@ -108,10 +108,32 @@ $brands = ($events)?$events->brands:'';
                                 <div class="col-md-6 mb-3">
                                     <label for="">Event Category</label>
                                     <select name="event_category[]"  class="form-control form-control-sm" multiple>
-                                    <option value="Shop" <?php if(in_array("Shop",$event_category)){echo "selected";}?>>Shop</option>
-                                    <option value="Eat" <?php if(in_array("Eat",$event_category)){echo "selected";}?>>Eat</option>
+                                    <option value="Live Music Show" <?php if(in_array("Live Music Show",$event_category)){echo "selected";}?>>Live Music Show</option>
+                                    <option value="Kids Workshop" <?php if(in_array("Kids Workshop",$event_category)){echo "selected";}?>>Kids Workshop</option>
+                                    <option value="Performing Arts" <?php if(in_array("Performing Arts",$event_category)){echo "selected";}?>>Performing Arts</option>
+                                    <option value="National Festival" <?php if(in_array("National Festival",$event_category)){echo "selected";}?>>National Festival</option>
+                                    <option value="Talks" <?php if(in_array("Talks",$event_category)){echo "selected";}?>>Talks</option>
+                                    <option value="Brand Preview" <?php if(in_array("Brand Preview",$event_category)){echo "selected";}?>>Brand Preview</option>
+                                    <option value="Brand Sale" <?php if(in_array("Brand Sale",$event_category)){echo "selected";}?>>Brand Sale</option>
+                                    <option value="Festival Bonanza" <?php if(in_array("Festival Bonanza",$event_category)){echo "selected";}?>>Festival Bonanza</option>
+                                    <option value="Sale Festival" <?php if(in_array("Sale Festival",$event_category)){echo "selected";}?>>Sale Festival</option>
+                                    <option value="Charity" <?php if(in_array("Charity",$event_category)){echo "selected";}?>>Charity</option>
+                                    <option value="Fund Raising" <?php if(in_array("Fund Raising",$event_category)){echo "selected";}?>>Fund Raising</option>
+                                    <option value="Cleanliness Drive" <?php if(in_array("Cleanliness Drive",$event_category)){echo "selected";}?>>Cleanliness Drive</option>
+                                    <option value="Celebrity Shoot" <?php if(in_array("Celebrity Shoot",$event_category)){echo "selected";}?>>Celebrity Shoot</option>
                                     <option value="Entertainment" <?php if(in_array("Entertainment",$event_category)){echo "selected";}?>>Entertainment</option>
-                                    <option value="Festive Offers" <?php if(in_array("Festive Offers",$event_category)){echo "selected";}?>>Festive Offers</option>
+                                    <option value="Photography" <?php if(in_array("Photography",$event_category)){echo "selected";}?>>Photography</option>
+                                    <option value="Live Food" <?php if(in_array("Live Food",$event_category)){echo "selected";}?>>Live Food</option>
+                                    <option value="Family Fun" <?php if(in_array("Family Fun",$event_category)){echo "selected";}?>>Family Fun</option>
+                                    <option value="Exhibitions & Fairs" <?php if(in_array("Exhibitions & Fairs",$event_category)){echo "selected";}?>>Exhibitions & Fairs</option>
+                                    <option value="Fashion" <?php if(in_array("Fashion",$event_category)){echo "selected";}?>>Fashion</option>
+                                    <option value="Sports & Fitness" <?php if(in_array("Sports & Fitness",$event_category)){echo "selected";}?>>Sports & Fitness</option>
+                                    <option value="Beauty" <?php if(in_array("Beauty",$event_category)){echo "selected";}?>>Beauty</option>
+                                    <option value="Party & Drinks" <?php if(in_array("Party & Drinks",$event_category)){echo "selected";}?>>Party & Drinks</option>
+                                    <option value="Social Cause" <?php if(in_array("Social Cause",$event_category)){echo "selected";}?>>Social Cause</option>
+                                    <option value="WS Tour" <?php if(in_array("WS Tour",$event_category)){echo "selected";}?>>WS Tour</option>
+                                    <option value="Kids Fun" <?php if(in_array("Kids Fun",$event_category)){echo "selected";}?>>Kids Fun</option>
+                                    <option value="Hi-Tea" <?php if(in_array("Hi-Tea",$event_category)){echo "selected";}?>>Hi-Tea</option>
                                     </select>
                                 </div>                                
 

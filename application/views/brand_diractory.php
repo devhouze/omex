@@ -187,9 +187,13 @@
                             </div>
                         </div>
                         <?php } }?>
-                        <?php if(!empty($limit)){?>
-                        <div class="col-md-12">
-                            <a href="javascript:void(0)" class="d-table mx-auto primary-btn" data-limit="<?php echo $limit; ?>">LOAD MORE</a>
+                        
+                    </div>
+                    <div class="row">
+                    <?php if(!empty($limit)){?>
+                        <div class="col-md-12" id="load_btn">
+                            <input type="hidden" id="limit" value="<?php echo $limit; ?>">
+                            <a href="javascript:void(0)" class="d-table mx-auto primary-btn">LOAD MORE</a>
                         </div>
                         <?php } ?>
                     </div>
