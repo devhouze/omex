@@ -9,10 +9,9 @@ class Banner_Controllers extends my_controller
         $this->load->model('admin/Banner_Model','bm');
     }
 
-    public function banner_list()
+    public function banner_list($page=0,$column=null,$order=null)
     {
         $per_page = "10";
-        $page = $this->pagination->cur_page;
         if ($page != 0) {
 			$page = ($page - 1) * $per_page;
         } else {
@@ -33,9 +32,9 @@ class Banner_Controllers extends my_controller
         }
         $keyword = $this->session->userdata('banner');
 
-        $total_count = $this->bm->banners_list($per_page,$page,$keyword,true);
+        $total_count = $this->bm->banners_list($per_page,$page,$keyword,$column,$order,true);
         $data['pagination'] = $this->pagination('banners',$total_count,$per_page);
-        $data['banners'] = $this->bm->banners_list($per_page,$page,$keyword);
+        $data['banners'] = $this->bm->banners_list($per_page,$page,$keyword,$column,$order);
         $end = (($data['banners'])?count($data['banners']):0) + (($page) ? $page : 0);
         $start = (count($data['banners']) > 0)?($page + 1):0;
         $data['result_count'] = "Showing " . $start . " - " . $end . " of " . $total_count . " Results";

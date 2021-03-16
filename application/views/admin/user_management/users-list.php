@@ -74,12 +74,12 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">User Type</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Email</th>
+                                    <th scope="col">User Type <a href="<?php echo admin_url('users/'.$this->pagination->current_place().'/user_type/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('users/'.$this->pagination->current_place().'/user_type/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
+                                    <th scope="col">Name <a href="<?php echo admin_url('users/'.$this->pagination->current_place().'/name/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('users/'.$this->pagination->current_place().'/name/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
+                                    <th scope="col">Email <a href="<?php echo admin_url('users/'.$this->pagination->current_place().'/email/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('users/'.$this->pagination->current_place().'/email/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
                                     <th scope="col">Status</th>
                                     <th scope="col">Created By</th>
-                                    <th scope="col">Created On</th>
+                                    <th scope="col">Created On <a href="<?php echo admin_url('users/'.$this->pagination->current_place().'/created_on/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('users/'.$this->pagination->current_place().'/created_on/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
                                     <?php if($this->session->userdata('admin_details')['user_type'] == "0"){?>
                                     <th scope="col">Action</th>
                                     <?php } ?>

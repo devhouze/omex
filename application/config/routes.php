@@ -90,6 +90,7 @@ $route['admin/change-password'] = 'admin/Dashboard_Controller/change_password';
 // Brands Routes
 $route['admin/brands'] = 'admin/Brands_Controller/brand_list';
 $route['admin/brands/(:num)'] = 'admin/Brands_Controller/brand_list/$1';
+$route['admin/brands/(:num)/(:any)/(:any)'] = 'admin/Brands_Controller/brand_list/$1/$2/$3';
 $route['admin/add-brands'] = 'admin/Brands_Controller/add_brand';
 $route['admin/edit-brands/(:num)'] = 'admin/Brands_Controller/edit_brand/$1';
 $route['admin/delete-brand'] = 'admin/Brands_Controller/delete_brand';
@@ -99,6 +100,8 @@ $route['admin/get-sub-category'] = 'admin/Brands_Controller/get_sub_category';
 
 // Brand Offer routes
 $route['admin/brand-offer'] = 'admin/Brands_Controller/brand_offer_list';
+$route['admin/brand-offer/(:num)'] = 'admin/Brands_Controller/brand_offer_list/$1';
+$route['admin/brand-offer/(:num)/(:any)/(:any)'] = 'admin/Brands_Controller/brand_offer_list/$1/$2/$3';
 $route['admin/add-brands-offer'] = 'admin/Brands_Controller/add_brand_offer';
 $route['admin/edit-brand-offer/(:num)'] = 'admin/Brands_Controller/edit_brand_offer/$1';
 $route['admin/edit-brands-offer/(:num)'] = 'admin/Brands_Controller/edit_brand_offer/$1';
@@ -110,6 +113,7 @@ $route['admin/offer-details'] = 'admin/Brands_Controller/get_offer_details';
 // Users Routes
 $route['admin/users'] = 'admin/Users_Controller/users_list';
 $route['admin/users/(:num)'] = 'admin/Users_Controller/users_list/$1';
+$route['admin/users/(:num)/(:any)/(:any)'] = 'admin/Users_Controller/users_list/$1/$2/$3';
 $route['admin/add-users'] = 'admin/Users_Controller/add_users';
 $route['admin/edit-users/(:num)'] = 'admin/Users_Controller/edit_users/$1';
 $route['admin/check-username'] = 'admin/Users_Controller/check_username';
@@ -119,6 +123,7 @@ $route['admin/change-user-status'] = 'admin/Users_Controller/change_user_status'
 // Lead Routes
 $route['admin/leads'] = 'admin/Lead_controller/lead_list';
 $route['admin/leads/(:num)'] = 'admin/Lead_controller/lead_list/$1';
+$route['admin/leads/(:num)/(:any)/(:any)'] = 'admin/Lead_controller/lead_list/$1/$2/$3';
 $route['admin/get-message'] = 'admin/Lead_controller/get_message';
 $route['admin/export-leads'] = 'admin/Lead_controller/exportCSV';
 
@@ -126,6 +131,7 @@ $route['admin/export-leads'] = 'admin/Lead_controller/exportCSV';
 // Events routes
 $route['admin/events'] = 'admin/Event_Controller/events_list';
 $route['admin/events/(:num)'] = 'admin/Event_Controller/events_list/$1';
+$route['admin/events/(:num)/(:any)/(:any)'] = 'admin/Event_Controller/events_list/$1/$2/$3';
 $route['admin/add-events'] = 'admin/Event_Controller/add_events';
 $route['admin/edit-events/(:num)'] = 'admin/Event_Controller/edit_events/$1';
 $route['admin/delete-event'] = 'admin/Event_Controller/delete_event';
@@ -136,13 +142,17 @@ $route['admin/event-details'] = 'admin/Event_Controller/get_event_details';
 $route['admin/add-banners'] = "admin/Banner_Controllers/add_banners";
 $route['admin/edit-banners/(:num)'] = "admin/Banner_Controllers/edit_banners/$1";
 $route['admin/banners'] = "admin/Banner_Controllers/banner_list";
+$route['admin/banners/(:num)'] = "admin/Banner_Controllers/banner_list/$1";
+$route['admin/banners/(:num)/(:any)/(:any)'] = "admin/Banner_Controllers/banner_list/$1/$2/$3";
 $route['admin/delete-banner'] = 'admin/Banner_Controllers/delete_banner';
 $route['admin/change-banner-status'] = 'admin/Banner_Controllers/change_banner_status';
 $route['admin/get-banner-details'] = "admin/Banner_Controllers/get_banner_details";
 // Gallery routes
 $route['admin/gallery'] = 'admin/Gallery_Controller/gallery_list';
 $route['admin/gallery/(:num)'] = 'admin/Gallery_Controller/gallery_list/$1';
+$route['admin/gallery/(:num)/(:any)/(:any)'] = 'admin/Gallery_Controller/gallery_list/$1/$2/$3';
 $route['admin/add-gallery'] = 'admin/Gallery_Controller/add_gallery';
+$route['admin/edit-gallery/(:num)'] = 'admin/Gallery_Controller/edit_gallery/$1';
 $route['admin/change-gallery-status'] = 'admin/Gallery_Controller/change_gallery_status';
 $route['admin/delete-media'] = 'admin/Gallery_Controller/delete_media';
 

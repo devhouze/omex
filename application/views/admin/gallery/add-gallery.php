@@ -53,11 +53,9 @@ $action = (!empty($gallery))?admin_url():admin_url('add-gallery');
                                     <label for="">Media Preference</label>
                                     <select name="sequence" class="form-control form-control-sm input-sm" >
                                     <option disabled="" selected>Select Preference</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
+                                    <?php for($i=1;$i<10;$i++){?>
+                                    <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                    <?php }?>
                                     </select>
                                 </div>
                             </div>

@@ -8,7 +8,7 @@ class Users_Model extends MY_Model
         parent::__construct();
     }
 
-    public function get_users($per_page,$page,$keyword,$count = false)
+    public function get_users($per_page,$page,$keyword,$column,$order,$count = false)
     {
         // echo "<pre>"; print_r($keyword); die;
         $this->db->select('ta.admin_id, ta.name, ta.status, ta.email, tbl_admin.name as created_by, (CASE WHEN ta.user_type = "0" THEN "Admin" WHEN ta.user_type = "1" THEN "Editor" WHEN ta.user_type = "2" THEN "Sales Executive" END) as user_type , date_format(ta.created_on,"%d-%m-%Y") as created_on');
@@ -19,7 +19,7 @@ class Users_Model extends MY_Model
         (!empty($keyword['user_email']))?$this->db->where('ta.email',$keyword['user_email']):'';
         (!empty($keyword['user_type']))?$this->db->where('ta.user_type',$keyword['user_type']):'';
         (!empty($keyword['status']))?$this->db->where('ta.status',$keyword['status']):'';
-        $this->db->order_by('ta.admin_id','desc');
+        (!empty($column) && !empty($order))?$this->db->order_by($column,$order):$this->db->order_by('ta.admin_id','desc');
         $query = $this->db->get('tbl_admin ta');
         if($count){
             return $query->num_rows();

@@ -368,11 +368,12 @@ class Welcome extends CI_Controller {
 		$street = ($this->input->post('street'))?$this->input->post('street'):'';
 		$sort = ($this->input->post('sort'))?$this->input->post('sort'):'';
 		$filter = ($this->input->post('filter'))?$this->input->post('sort'):'';
-		$limit = ($this->input->post('limit'))?$this->input->post('limit'):"";
+		$limit = ($this->input->post('limit'))?$this->input->post('limit'):"8";
 		$letter = ($this->input->post('letter'))?$this->input->post('letter'):"";
 		$category = ($this->input->post('category'))?$this->input->post('category'):'';
 		$count = $this->wm->filter_brand($street,$sort,$filter,$limit,$letter,$category,true);
 		$data['brand'] = $this->wm->filter_brand($street,$sort,$filter,$limit,$letter,$category);
+		// print_r($count); die;
 		if($limit != 'null' && $count > $limit){
 			$data['limit'] = $limit + 8;
 			$data['count'] = $count;
@@ -380,7 +381,6 @@ class Welcome extends CI_Controller {
 			$data['limit'] = '';
 			$data['count'] = $count;
 		}
-		// echo "<pre>"; print_r($data); die;
 		echo json_encode($data);
 	}
 	

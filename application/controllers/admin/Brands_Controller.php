@@ -8,10 +8,9 @@ class Brands_Controller extends MY_Controller
         $this->load->model('admin/Brands_Model','bm');
     }
 
-    public function brand_list()
+    public function brand_list($page=0,$column=null,$order=null)
     {
         $per_page = "10";
-        $page = $this->uri->segment(2);
         if ($page != 0) {
 			$page = ($page - 1) * $per_page;
         } else {
@@ -32,12 +31,13 @@ class Brands_Controller extends MY_Controller
         }
         $keyword = $this->session->userdata('brand');
 
-        $total_count = $this->bm->get_brands($per_page,$page,$keyword,true);
+        $total_count = $this->bm->get_brands($per_page,$page,$keyword,$column,$order,true);
         $data['pagination'] = $this->pagination('brands',$total_count,$per_page);
-        $data['brands'] = $this->bm->get_brands($per_page,$page,$keyword);
+        $data['brands'] = $this->bm->get_brands($per_page,$page,$keyword,$column,$order);
         $end = (($data['brands'])?count($data['brands']):0) + (($page) ? $page : 0);
         $start = (count($data['brands']) > 0)?($page + 1):0;
         $data['result_count'] = "Showing " . $start . " - " . $end . " of " . $total_count . " Results";
+        // die;
         $this->load->view('admin/include/header_start');
 		$this->load->view('admin/include/header_end');
 		$this->load->view('admin/include/body_start');
@@ -110,7 +110,7 @@ class Brands_Controller extends MY_Controller
                     'brand_location'                => $this->input->post('brand_location'),
                     'brand_street'                  => $this->input->post('brand_street'),
                     'brand_category'                => implode(",",$this->input->post('brand_category')),
-                    'brand_sub_category'            => $this->input->post('sub_category'),
+                    'brand_sub_category'            => implode(",",$this->input->post('sub_category')),
                     'brand_type'                    => $this->input->post('brand_type'),
                     'brand_contact'                 => $this->input->post('brand_contact'),
                     'brand_contact_email'           => $this->input->post('email_contact'),
@@ -267,7 +267,7 @@ class Brands_Controller extends MY_Controller
                     'brand_location'                => $this->input->post('brand_location'),
                     'brand_street'                  => $this->input->post('brand_street'),
                     'brand_category'                => implode(",",$this->input->post('brand_category')),
-                    'brand_sub_category'            => $this->input->post('sub_category'),
+                    'brand_sub_category'            => implode(",",$this->input->post('sub_category')),
                     'brand_type'                    => $this->input->post('brand_type'),
                     'brand_contact'                 => $this->input->post('brand_contact'),
                     'brand_contact_email'           => $this->input->post('email_contact'),
@@ -374,7 +374,7 @@ class Brands_Controller extends MY_Controller
         }
         $data['brands'] = $this->bm->get_data_row('tbl_brand','*',['brand_id' => $id]);
         $data['category'] = $this->bm->get_data_array('tbl_category','category_name, id','');
-        $category[] = $data['brands']->brand_category;
+        $category = $data['brands']->brand_category;
         $data['sub_category'] = $this->bm->get_sub_category($category);
         // echo "<pre>"; print_r($data); die;
         $this->load->view('admin/include/header_start');
@@ -447,10 +447,11 @@ class Brands_Controller extends MY_Controller
                     $config['upload_path'] = 'assets/images/public/brand';
                     $config['allowed_types'] = 'jpg|jpeg|png|gif';
                     $config['file_name'] = $new_name;
+                    $config['max_size'] = 2000;
                     $this->load->library('upload',$config);
                     $this->upload->initialize($config);
                     if(!$this->upload->do_upload('offer_thumbnail')){
-                        echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->upload->display_errors(), 'status' => 0]);
+                        echo json_encode(['message' => 'Something went wrong!.', 'upload_error' => $this->upload->display_errors(), 'status' => 0]);
                         exit;
                     }
                 }
@@ -502,10 +503,11 @@ class Brands_Controller extends MY_Controller
                     $config['upload_path'] = 'assets/images/public/brand';
                     $config['allowed_types'] = 'jpg|jpeg|png|gif';
                     $config['file_name'] = $new_name;
+                    $config['max_size'] = 2000;
                     $this->load->library('upload',$config);
                     $this->upload->initialize($config);
                     if(!$this->upload->do_upload('offer_thumbnail')){
-                        echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->upload->display_errors(), 'status' => 0]);
+                        echo json_encode(['message' => 'Something went wrong!.', 'upload_error' => $this->upload->display_errors(), 'status' => 0]);
                         exit;
                     }
                 }
@@ -563,10 +565,9 @@ class Brands_Controller extends MY_Controller
 
     
 
-    public function brand_offer_list()
+    public function brand_offer_list($page=0,$column=null,$order=null)
     {
         $per_page = "10";
-        $page = $this->uri->segment(2);
         if ($page != 0) {
 			$page = ($page - 1) * $per_page;
         } else {
@@ -588,9 +589,9 @@ class Brands_Controller extends MY_Controller
         }
         $keyword = $this->session->userdata('brand_offer');
 
-        $total_count = $this->bm->get_brands_offer($per_page,$page,$keyword,true);
+        $total_count = $this->bm->get_brands_offer($per_page,$page,$keyword,$column,$order,true);
         $data['pagination'] = $this->pagination('brand-offer',$total_count,$per_page);
-        $data['brands_offer'] = $this->bm->get_brands_offer($per_page,$page,$keyword);
+        $data['brands_offer'] = $this->bm->get_brands_offer($per_page,$page,$keyword,$column,$order);
         $end = (($data['brands_offer'])?count($data['brands_offer']):0) + (($page) ? $page : 0);
         $start = (count($data['brands_offer']) > 0)?($page + 1):0;
         $data['result_count'] = "Showing " . $start . " - " . $end . " of " . $total_count . " Results";
@@ -605,7 +606,7 @@ class Brands_Controller extends MY_Controller
 
     public function get_sub_category()
     {
-        $cat_id = $this->input->post('cat_id');
+        $cat_id = implode(',',$this->input->post('cat_id'));
         $data = $this->bm->get_sub_category($cat_id);
         echo json_encode($data);
     }

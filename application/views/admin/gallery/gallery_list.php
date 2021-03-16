@@ -64,13 +64,13 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Media Type</th>
-                                    <th scope="col">Type</th>
+                                    <th scope="col">Media Type <a href="<?php echo admin_url('gallery/'.$this->pagination->current_place().'/file_type/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('gallery/'.$this->pagination->current_place().'/file_type/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
+                                    <th scope="col">Type <a href="<?php echo admin_url('gallery/'.$this->pagination->current_place().'/type/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('gallery/'.$this->pagination->current_place().'/type/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
                                     <th scope="col">Media File</th>
-                                    <th scope="col">Preference Order</th>
+                                    <th scope="col">Preference Order <a href="<?php echo admin_url('gallery/'.$this->pagination->current_place().'/sequence/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('gallery/'.$this->pagination->current_place().'/sequence/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
                                     <th scope="col">Status</th>
                                     <th scope="col">Created By</th>
-                                    <th scope="col">Created On</th>
+                                    <th scope="col">Created On <a href="<?php echo admin_url('gallery/'.$this->pagination->current_place().'/created_on/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('gallery/'.$this->pagination->current_place().'/created_on/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>

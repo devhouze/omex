@@ -1,4 +1,12 @@
 <script src="<?=base_url('assets/js/admin/events.js')?>"></script>
+<?php 
+if(!empty($this->uri->segment(4))){
+    $order = $this->uri->segment(4);
+} else {
+    $order = 'desc';
+}
+
+?>
 <div class="content-wrapper">
     <div class="content">
         <div class="breadcrumb-wrapper">
@@ -67,12 +75,12 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Event Name</th>
-                                    <th scope="col">Event Date</th>
+                                    <th scope="col">Event Name <a href="<?php echo admin_url('events/'.$this->pagination->current_place().'/event_name/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('events/'.$this->pagination->current_place().'/event_name/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
+                                    <th scope="col">Event Date<a href="<?php echo admin_url('events/'.$this->pagination->current_place().'/start_date/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('events/'.$this->pagination->current_place().'/start_date/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
                                     <!-- <th scope="col">Event Type</th> -->
                                     <th scope="col">Status</th>
                                     <th scope="col">Created By</th>
-                                    <th scope="col">Created On</th>
+                                    <th scope="col">Created On<a href="<?php echo admin_url('events/'.$this->pagination->current_place().'/created_on/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('events/'.$this->pagination->current_place().'/created_on/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
