@@ -215,7 +215,7 @@
                         <div class="carousel-item position-relative">
                             <img src="<?php echo base_url(); ?>assets/images/public/home/san-m.jpg" class="d-block w-100" alt="...">
                             <div class="card san-bg">
-                                <img src="<?php echo base_url(); ?>assets/images/public/home/S-S.svg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/s-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/s-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
@@ -223,7 +223,7 @@
                         <div class="carousel-item position-relative">
                             <img src="<?php echo base_url(); ?>assets/images/public/home/hon-m.jpg" class="d-block w-100" alt="...">
                             <div class="card hon-bg">
-                                <img src="<?php echo base_url(); ?>assets/images/public/home/h-S.svg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/h-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/h-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
@@ -402,7 +402,7 @@
         
     </div>
 </div>
-<div class="expreance-gallary py-30 gray-bg">
+<div class="expreance-gallary py-30 gray-bg ">
     <div class="container">
         <div class="row">
             <div class="col-md-12 positoin-relative">
