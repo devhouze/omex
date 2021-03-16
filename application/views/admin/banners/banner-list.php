@@ -65,13 +65,13 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Banner Type</th>
+                                    <th scope="col">Banner Type <a href="<?php echo admin_url('banners/'.$this->pagination->current_place().'/banner_type/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('banners/'.$this->pagination->current_place().'/banner_type/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
                                     <th scope="col">Banner Web</th>
                                     <th scope="col">Banner Mobile</th>
                                     <th scope="col">Alt Tag</th>
                                     <th scope="col">Status</th>
                                     <th scope="col">Created By</th>
-                                    <th scope="col">Created On</th>
+                                    <th scope="col">Created On <a href="<?php echo admin_url('banners/'.$this->pagination->current_place().'/created_on/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('banners/'.$this->pagination->current_place().'/created_on/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>

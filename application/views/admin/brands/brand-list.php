@@ -58,12 +58,12 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Brand Name</th>
+                                    <th scope="col">Brand Name <a href="<?php echo admin_url('brands/'.$this->pagination->current_place().'/brand_name/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('brands/'.$this->pagination->current_place().'/brand_name/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
                                     <th scope="col">Brand Logo</th>
-                                    <th scope="col">Brand Location</th>
+                                    <th scope="col">Brand Location <a href="<?php echo admin_url('brands/'.$this->pagination->current_place().'/brand_location/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('brands/'.$this->pagination->current_place().'/brand_location/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
                                     <th scope="col">Status</th>
                                     <th scope="col">Created By</th>
-                                    <th scope="col">Created On</th>
+                                    <th scope="col">Created On<a href="<?php echo admin_url('brands/'.$this->pagination->current_place().'/created_on/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('brands/'.$this->pagination->current_place().'/created_on/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>

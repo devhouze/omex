@@ -177,6 +177,39 @@ class Welcome extends CI_Controller {
 		$this->load->view('js/common');
 		$this->load->view('footer/body_end');
 	}
+	public function privacy_policy()
+	{
+		$data['events'] = $this->wm->get_events();
+		$this->load->view('header/header_start');
+		$this->load->view('header/header_common');
+		$this->load->view('header/owl_css');
+		$this->load->view('header/header_end');
+		$this->load->view('header/body_start');
+		$this->load->view('header/main_header');
+		$this->load->view('privacy_policy');
+		$this->load->view('footer/footer_signup');
+		$this->load->view('footer/main_footer');
+		$this->load->view('footer/footer_common');
+		$this->load->view('js/common');
+		$this->load->view('footer/body_end');
+	}
+	
+	public function term_conditions()
+	{
+		$data['events'] = $this->wm->get_events();
+		$this->load->view('header/header_start');
+		$this->load->view('header/header_common');
+		$this->load->view('header/owl_css');
+		$this->load->view('header/header_end');
+		$this->load->view('header/body_start');
+		$this->load->view('header/main_header');
+		$this->load->view('term_conditions');
+		$this->load->view('footer/footer_signup');
+		$this->load->view('footer/main_footer');
+		$this->load->view('footer/footer_common');
+		$this->load->view('js/common');
+		$this->load->view('footer/body_end');
+	}
 	public function brand($id)
 	{
 		$data['events'] = $this->wm->get_events();
@@ -368,11 +401,12 @@ class Welcome extends CI_Controller {
 		$street = ($this->input->post('street'))?$this->input->post('street'):'';
 		$sort = ($this->input->post('sort'))?$this->input->post('sort'):'';
 		$filter = ($this->input->post('filter'))?$this->input->post('sort'):'';
-		$limit = ($this->input->post('limit'))?$this->input->post('limit'):"";
+		$limit = ($this->input->post('limit'))?$this->input->post('limit'):"8";
 		$letter = ($this->input->post('letter'))?$this->input->post('letter'):"";
 		$category = ($this->input->post('category'))?$this->input->post('category'):'';
 		$count = $this->wm->filter_brand($street,$sort,$filter,$limit,$letter,$category,true);
 		$data['brand'] = $this->wm->filter_brand($street,$sort,$filter,$limit,$letter,$category);
+		// print_r($count); die;
 		if($limit != 'null' && $count > $limit){
 			$data['limit'] = $limit + 8;
 			$data['count'] = $count;
@@ -380,7 +414,6 @@ class Welcome extends CI_Controller {
 			$data['limit'] = '';
 			$data['count'] = $count;
 		}
-		// echo "<pre>"; print_r($data); die;
 		echo json_encode($data);
 	}
 	

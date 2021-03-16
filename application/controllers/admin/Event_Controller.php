@@ -9,7 +9,7 @@ class Event_Controller extends MY_Controller
         $this->load->model('admin/Event_Model','em');
     }
 
-    public function events_list($page = 0)
+    public function events_list($page = 0,$column=null,$order=null)
     {
         $per_page = "10";
         if ($page != 0) {
@@ -31,9 +31,9 @@ class Event_Controller extends MY_Controller
         }
         $keyword = $this->session->userdata('event');
         
-        $total_count = $this->em->get_events($per_page,$page,$keyword,true);
+        $total_count = $this->em->get_events($per_page,$page,$keyword,$column,$order,true);
         $data['pagination'] = $this->pagination('events',$total_count,$per_page);
-        $data['events'] = $this->em->get_events($per_page,$page,$keyword);
+        $data['events'] = $this->em->get_events($per_page,$page,$keyword,$column,$order);
         $end = (($data['events'])?count($data['events']):0) + (($page) ? $page : 0);
         $start = (count($data['events']) > 0)?($page + 1):0;
         $data['result_count'] = "Showing " . $start . " - " . $end . " of " . $total_count . " Results";
@@ -56,6 +56,8 @@ class Event_Controller extends MY_Controller
             if($this->input->post('date_availibility') == 0){
                 $this->form_validation->set_rules('start_date','Start Date','required');
                 $this->form_validation->set_rules('end_date','End Date','required');
+                $this->form_validation->set_rules('event_start_time','Event Start Time','required');
+                $this->form_validation->set_rules('event_end_time','Event End Time','required');
             }
             if(empty($_FILES['thumbnail_image']['name'])){
                 $this->form_validation->set_rules('thumbnail_image','Thumbnail','required');
@@ -63,8 +65,6 @@ class Event_Controller extends MY_Controller
             $this->form_validation->set_rules('thumbnail_message','Thumbnail Message','required');
             $this->form_validation->set_rules('event_type','Event Type','required');
             $this->form_validation->set_rules('event_location','Event Location','required');
-            $this->form_validation->set_rules('event_start_time','Event Start Time','required');
-            $this->form_validation->set_rules('event_end_time','Event End Time','required');
             $this->form_validation->set_rules('about_event','About Event','required');
             $this->form_validation->set_rules('event_label','Event Label','required');
             $this->form_validation->set_rules('event_category[]','Event Category','required');
@@ -139,12 +139,12 @@ class Event_Controller extends MY_Controller
             if($this->input->post('date_availibility') == 0){
                 $this->form_validation->set_rules('start_date','Start Date','required');
                 $this->form_validation->set_rules('end_date','End Date','required');
+                $this->form_validation->set_rules('event_start_time','Event Start Time','required');
+                $this->form_validation->set_rules('event_end_time','Event End Time','required');
             }
             $this->form_validation->set_rules('thumbnail_message','Thumbnail Message','required');
             $this->form_validation->set_rules('event_type','Event Type','required');
             $this->form_validation->set_rules('event_location','Event Location','required');
-            $this->form_validation->set_rules('event_start_time','Event Start Time','required');
-            $this->form_validation->set_rules('event_end_time','Event End Time','required');
             $this->form_validation->set_rules('about_event','About Event','required');
             $this->form_validation->set_rules('event_label','Event Label','required');
             $this->form_validation->set_rules('event_category[]','Event Category','required');
