@@ -43,7 +43,7 @@
                     <figure class="position-relative mb-0 mt-12">
                         <img src="<?php echo base_url(); ?>assets/images/public/home/e1.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
                     </figure>
-                    <a href="<?php echo base_url('brand-directory/null/restaurant'); ?>" class="exploer-btn">VIEW MORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="" class="ml-4"></a>
+                    <a href="<?php echo base_url('brand-directory/null/restaurant'); ?>" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="" class="ml-4"></a>
                 </div>
                 <div class="col-md-4">
                     <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5s">Style</h2>
@@ -52,7 +52,7 @@
                         <img src="<?php echo base_url(); ?>assets/images/public/home/e3.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
 
                     </figure>
-                    <a href="<?php echo base_url('brand-directory/null/fashion'); ?>" class="exploer-btn">VIEW MORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="" class="ml-4"></a>
+                    <a href="<?php echo base_url('brand-directory/null/fashion'); ?>" class="exploer-btn">EXPLORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="" class="ml-4"></a>
 
                 </div>
                 <div class="col-md-4">

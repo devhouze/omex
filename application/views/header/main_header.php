@@ -7,7 +7,7 @@
                 </div>
                 <div class="col-md-5">
                     <div class="text-white fw5">
-                        <img src="<?php echo BASE_URL(); ?>assets/images/public/header/call.svg" alt=""> <a href="" class="text-white me-1">+91-9015222222</a>
+                        <img src="<?php echo BASE_URL(); ?>assets/images/public/header/call.svg" alt=""> <a href="tel:+91-9015222222" class="text-white me-1">+91-9015222222</a>
                     </div>
                 </div>
                 <div class="col-md-2">
