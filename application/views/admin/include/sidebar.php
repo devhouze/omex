@@ -16,6 +16,7 @@
         <div class="sidebar-scrollbar">
         <?php $url = $this->uri->segment(2);?>
           <!-- sidebar menu -->
+          <?php if($this->session->userdata('admin_details')['user_type'] == "0"){?>
           <ul class="nav sidebar-inner" id="sidebar-menu">
 
             <li class="has-sub <?php if($url == "dashboard"){ ?>active expand<?php } ?>">
@@ -31,13 +32,6 @@
                       <span class="nav-text">Dashboard</span>
                     </a>
                   </li>
-
-                  <!-- <li>
-                    <a class="sidenav-item-link" href="analytics.html">
-                      <span class="nav-text">Analytics</span>
-                      <span class="badge badge-success">new</span>
-                    </a>
-                  </li> -->
 
                 </div>
               </ul>
@@ -173,6 +167,211 @@
             </li>
             
           </ul>
+          <?php } ?>
+
+          <?php if($this->session->userdata('admin_details')['user_type'] == "1"){?>
+          <ul class="nav sidebar-inner" id="sidebar-menu">
+
+            <li class="has-sub <?php if($url == "dashboard"){ ?>active expand<?php } ?>">
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
+                <i class="mdi mdi-view-dashboard-outline"></i>
+                <span class="nav-text">Dashboard</span> <b class="caret"></b>
+              </a>
+              <ul class="collapse <?php if($url == "dashboard"){ ?>show<?php } ?>" id="dashboard" data-parent="#sidebar-menu">
+                <div class="sub-menu">
+
+                  <li class="active">
+                    <a class="sidenav-item-link" href="<?=admin_url('dashboard');?>">
+                      <span class="nav-text">Dashboard</span>
+                    </a>
+                  </li>
+
+                </div>
+              </ul>
+            </li>
+
+            <li class="has-sub">
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#event" aria-expanded="false" aria-controls="event">
+                <i class="mdi mdi-pencil-box-multiple"></i>
+                <span class="nav-text">Events</span> <b class="caret"></b>
+              </a>
+              <ul class="collapse" id="event" data-parent="#sidebar-menu">
+                <div class="sub-menu">
+
+                  <li>
+                    <a class="sidenav-item-link" href="<?php echo admin_url('events')?>">
+                      <span class="nav-text">Event List</span>
+                    </a>
+                  </li>
+
+                </div>
+              </ul>
+            </li>
+
+            <li class="has-sub <?php if($url == "brands" || $url == "brand-logo" || $url == "brand-offer"){ ?>active expand<?php } ?>">
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#brand" aria-expanded="false" aria-controls="brand">
+                <i class="mdi mdi-pencil-box-multiple"></i>
+                <span class="nav-text">Brand</span> <b class="caret"></b>
+              </a>
+              <ul class="collapse <?php if($url == "brands" || $url == "brand-logo" || $url == "brand-offer"){ ?>show<?php } ?>" id="brand" data-parent="#sidebar-menu">
+                <div class="sub-menu">
+
+                  <li>
+                    <a class="sidenav-item-link" href="<?php echo admin_url('brands')?>">
+                      <span class="nav-text">Brand List</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="sidenav-item-link" href="<?php echo admin_url('brand-offer')?>">
+                      <span class="nav-text">Brand Offer</span>
+                    </a>
+                  </li>
+
+                </div>
+              </ul>
+            </li>
+
+            <li class="has-sub">
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#banner" aria-expanded="false" aria-controls="banner">
+                <i class="mdi mdi-pencil-box-multiple"></i>
+                <span class="nav-text">Banners</span> <b class="caret"></b>
+              </a>
+              <ul class="collapse" id="banner" data-parent="#sidebar-menu">
+                <div class="sub-menu">
+
+                  <li>
+                    <a class="sidenav-item-link" href="<?php echo admin_url('banners')?>">
+                      <span class="nav-text">Banner List</span>
+                    </a>
+                  </li>
+
+                </div>
+              </ul>
+            </li>
+
+            <li class="has-sub">
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#gallery" aria-expanded="false" aria-controls="gallery">
+                <i class="mdi mdi-pencil-box-multiple"></i>
+                <span class="nav-text">Gallery</span> <b class="caret"></b>
+              </a>
+              <ul class="collapse" id="gallery" data-parent="#sidebar-menu">
+                <div class="sub-menu">
+
+                  <li>
+                    <a class="sidenav-item-link" href="<?php echo admin_url('gallery')?>">
+                      <span class="nav-text">Gallery List</span>
+                    </a>
+                  </li>
+
+                </div>
+              </ul>
+            </li>
+
+            <li class="has-sub">
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#setting" aria-expanded="false" aria-controls="setting">
+                <i class="mdi mdi-folder-multiple-outline"></i>
+                <span class="nav-text">Setting</span> <b class="caret"></b>
+              </a>
+              <ul class="collapse" id="setting" data-parent="#sidebar-menu">
+                <div class="sub-menu">
+
+                  <li>
+                    <a class="sidenav-item-link" href="<?=admin_url('profile');?>">
+                      <span class="nav-text">Profile</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="sidenav-item-link" href="<?=admin_url('change-password');?>">
+                      <span class="nav-text">Change Password</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="sidenav-item-link" href="<?=admin_url('users');?>">
+                      <span class="nav-text">Users</span>
+                    </a>
+                  </li>
+
+                </div>
+              </ul>
+            </li>
+            
+          </ul>
+          <?php } ?>
+
+          <?php if($this->session->userdata('admin_details')['user_type'] == "2"){?>
+          <ul class="nav sidebar-inner" id="sidebar-menu">
+
+            <li class="has-sub <?php if($url == "dashboard"){ ?>active expand<?php } ?>">
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
+                <i class="mdi mdi-view-dashboard-outline"></i>
+                <span class="nav-text">Dashboard</span> <b class="caret"></b>
+              </a>
+              <ul class="collapse <?php if($url == "dashboard"){ ?>show<?php } ?>" id="dashboard" data-parent="#sidebar-menu">
+                <div class="sub-menu">
+
+                  <li class="active">
+                    <a class="sidenav-item-link" href="<?=admin_url('dashboard');?>">
+                      <span class="nav-text">Dashboard</span>
+                    </a>
+                  </li>
+
+                </div>
+              </ul>
+            </li>
+
+            <li class="has-sub">
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#leads" aria-expanded="false" aria-controls="leads">
+                <i class="mdi mdi-pencil-box-multiple"></i>
+                <span class="nav-text">Leads</span> <b class="caret"></b>
+              </a>
+              <ul class="collapse" id="leads" data-parent="#sidebar-menu">
+                <div class="sub-menu">
+
+                  <li>
+                    <a class="sidenav-item-link" href="<?php echo admin_url('leads')?>">
+                      <span class="nav-text">Lead List</span>
+                    </a>
+                  </li>
+
+                </div>
+              </ul>
+            </li>
+
+            <li class="has-sub">
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#setting" aria-expanded="false" aria-controls="setting">
+                <i class="mdi mdi-folder-multiple-outline"></i>
+                <span class="nav-text">Setting</span> <b class="caret"></b>
+              </a>
+              <ul class="collapse" id="setting" data-parent="#sidebar-menu">
+                <div class="sub-menu">
+
+                  <li>
+                    <a class="sidenav-item-link" href="<?=admin_url('profile');?>">
+                      <span class="nav-text">Profile</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="sidenav-item-link" href="<?=admin_url('change-password');?>">
+                      <span class="nav-text">Change Password</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="sidenav-item-link" href="<?=admin_url('users');?>">
+                      <span class="nav-text">Users</span>
+                    </a>
+                  </li>
+
+                </div>
+              </ul>
+            </li>
+            
+          </ul>
+          <?php } ?>
 
         </div>
       </div>

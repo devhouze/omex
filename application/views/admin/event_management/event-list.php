@@ -69,7 +69,7 @@
                                     <th scope="col">#</th>
                                     <th scope="col">Event Name</th>
                                     <th scope="col">Event Date</th>
-                                    <th scope="col">Event Type</th>
+                                    <!-- <th scope="col">Event Type</th> -->
                                     <th scope="col">Status</th>
                                     <th scope="col">Created By</th>
                                     <th scope="col">Created On</th>
@@ -82,7 +82,7 @@
                                     <td scope="row"><?=$sno; $sno++;?></td>
                                     <td><?=$event['event_name'];?></td>
                                     <td><?=($event['date_available'] != '1')?($event['start_date']."-".$event['end_date']):'N/A';?></td>
-                                    <td><?=$event['event_type'];?></td>
+                                    <!-- <td><?=$event['event_type'];?></td> -->
                                     <td align="center">
                                         <label class="switch">
                                           <input type="checkbox" class="chkstatus" value="<?php echo $event['event_id'];?>" <?php echo ($event['status']=="0")?'checked':'' ?>>

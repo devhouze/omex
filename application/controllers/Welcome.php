@@ -181,9 +181,15 @@ class Welcome extends CI_Controller {
 	{
 		$data['events'] = $this->wm->get_events();
 		$data['about_brand'] = $this->wm->get_about_brand($id);
-		$data['key_info'] = $this->wm->key_information($data['about_brand']['brand_category'],$data['about_brand']['brand_sub_category']);
+		$data['key_info'] = array_merge(explode(',',$data['about_brand']['brand_category']),(!empty($data['about_brand']['brand_sub_category']))?explode(',',$data['about_brand']['brand_sub_category']):[]);
 		$data['what_new'] = $this->wm->get_what_new();
-		$data['similar_brands'] = $this->wm->get_similar_brands($data['about_brand']['brand_category']);
+		$data['similar_brands'] = $this->wm->get_similar_brands($data['about_brand']['brand_type'],null);
+		$data['first_similar_brands'] = $this->wm->get_similar_brands($data['about_brand']['brand_type'],6);
+		$data['second_similar_brands'] = $this->wm->get_similar_brands($data['about_brand']['brand_type'],6,6);
+		$data['third_similar_brands'] = $this->wm->get_similar_brands($data['about_brand']['brand_type'],6,12);
+		// echo "<pre>"; print_r($data['first_similar_brands']);
+		// echo "<pre>"; print_r($data['second_similar_brands']);
+		// echo "<pre>"; print_r($data['third_similar_brands']); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -246,14 +252,21 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer/body_end');
 	}
 
-	public function brand_directory($alphabet = null,$category = null)
+	public function brand_directory($category=null,$limit=8)
 	{
+		$category = str_replace('%20',' ',$category);
 		$data['brand_banner'] = $this->wm->get_brand_directory_banner();
 		$data['brand_offers'] = $this->wm->get_brand_offers();
-		$data['brand'] = $this->wm->get_all_brands($alphabet,$category);
+		$data['count'] = $this->wm->get_all_brands($category,$limit,true);
+		$data['brand'] = $this->wm->get_all_brands($category,$limit);
 		$data['what_new'] = $this->wm->get_what_new();
 		$data['filter'] = $this->wm->get_filters();
-		// echo "<pre>"; print_r($data); die;
+		if($limit != 'null' && $data['count'] > $limit){
+			$data['limit'] = $limit + 8;
+		} else {
+			$data['limit'] = '';
+		}
+		// echo "<pre>"; print_r($data['count']); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -347,6 +360,27 @@ class Welcome extends CI_Controller {
 	{
 		$type = $this->input->post('type');
 		$data = $this->wm->get_brands($type);
+		echo json_encode($data);
+	}
+
+	public function search_brand()
+	{
+		$street = ($this->input->post('street'))?$this->input->post('street'):'';
+		$sort = ($this->input->post('sort'))?$this->input->post('sort'):'';
+		$filter = ($this->input->post('filter'))?$this->input->post('sort'):'';
+		$limit = ($this->input->post('limit'))?$this->input->post('limit'):"";
+		$letter = ($this->input->post('letter'))?$this->input->post('letter'):"";
+		$category = ($this->input->post('category'))?$this->input->post('category'):'';
+		$count = $this->wm->filter_brand($street,$sort,$filter,$limit,$letter,$category,true);
+		$data['brand'] = $this->wm->filter_brand($street,$sort,$filter,$limit,$letter,$category);
+		if($limit != 'null' && $count > $limit){
+			$data['limit'] = $limit + 8;
+			$data['count'] = $count;
+		} else {
+			$data['limit'] = '';
+			$data['count'] = $count;
+		}
+		// echo "<pre>"; print_r($data); die;
 		echo json_encode($data);
 	}
 	

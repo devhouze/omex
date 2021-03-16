@@ -45,13 +45,20 @@ $action = (!empty($gallery))?admin_url():admin_url('add-gallery');
                                 </div>
                                 
                                 <div class="col-md-12 mb-3">
-                                    <label for="">Alt comment</label>
+                                    <label for="">Media Alt Tag</label>
                                     <input type="text" name="comment" class="form-control form-control-sm input-sm" placeholder="comment">
                                 </div>
 
                                 <div class="col-md-12 mb-3">
-                                    <label for="">Image Preference</label>
-                                    <input type="text" name="sequence" class="form-control form-control-sm input-sm" placeholder="Image Sequence (e.g.:- 0,1,2)">
+                                    <label for="">Media Preference</label>
+                                    <select name="sequence" class="form-control form-control-sm input-sm" >
+                                    <option disabled="" selected>Select Preference</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    </select>
                                 </div>
                             </div>
                                 
