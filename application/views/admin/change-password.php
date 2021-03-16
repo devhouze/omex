@@ -6,13 +6,13 @@
             <div class="col-lg-12">
                 <div class="card card-default">
                     <div class="card-header card-header-border-bottom">
-                        <h2>Leads</h2>
+                        <h2>Change Password</h2>
                     </div>
                     <div class="card-body">
                         <form action="<?=admin_url('change-password');?>" method="post" id="change_password" autocomplete="off">
                             <div class="form-row">
                                 <div class="col-md-12 mb-3">
-                                    <label for="">New Passwod</label>
+                                    <label for="">New Password</label>
                                     <input type="password" class="form-control form-control-sm input-sm" placeholder="Enter new password" name="password">
                                 </div>
                             </div>

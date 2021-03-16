@@ -288,12 +288,6 @@
                     </a>
                   </li>
 
-                  <li>
-                    <a class="sidenav-item-link" href="<?=admin_url('users');?>">
-                      <span class="nav-text">Users</span>
-                    </a>
-                  </li>
-
                 </div>
               </ul>
             </li>
@@ -357,12 +351,6 @@
                   <li>
                     <a class="sidenav-item-link" href="<?=admin_url('change-password');?>">
                       <span class="nav-text">Change Password</span>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="sidenav-item-link" href="<?=admin_url('users');?>">
-                      <span class="nav-text">Users</span>
                     </a>
                   </li>
 

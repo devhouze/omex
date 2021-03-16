@@ -181,7 +181,7 @@ $(document).ready(function(){
             data:{street:street, sort:sort,filter:filter,limit:limit,letter:letter},
             dataType:'json',
             success:function(data){
-                $.each(data,function(i,v){
+                $.each(data.brand,function(i,v){
                     var value = '<div class="col-md-3 col-6">';
                     value += "<a href='"+base_url+"brand/"+v.brand_id+"'>";
                     value += "<figure><img src='"+base_url+"/assets/images/public/brand/"+v.brand_logo+"' alt='"+v.logo_message+"'></figure>";
@@ -191,6 +191,12 @@ $(document).ready(function(){
                     console.log(value);
                     $('#brand').append(value);
                 });
+                $('#limit').val(data.limit);
+                if(data.limit == ''){
+                    $('#load_btn').css('display','none');
+                } else {
+                    $('#load_btn').css('display','block');
+                }
             }
         })
     }

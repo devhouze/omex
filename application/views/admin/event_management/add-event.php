@@ -2,7 +2,7 @@
 $event_id = ($events)?$events->event_id:'';
 $action = (empty($events))?admin_url('add-events'):admin_url('edit-events/'.$event_id);
 $event_name = ($events)?$events->event_name:'';
-$date_available = ($events)?$events->date_available:'';
+$date_available = ($events)?$events->date_available:'1';
 $start_date = ($events)?$events->start_date:'';
 $end_date = ($events)?$events->end_date:'';
 $thumbnail_message = ($events)?$events->thumbnail_message:'';
@@ -79,12 +79,12 @@ $brands = ($events)?$events->brands:'';
                                     <input type="text" class="form-control form-control-sm input-sm" name="event_location" value="<?=$event_location;?>">
                                 </div>
                                
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-6 mb-3 start_time" <?php if($date_available == 0){?> style="display:block;" <?php } else { ?>style="display:none;"<?php } ?>>
                                     <label for="">Event Start Time</label>
                                     <input type="text" name="event_start_time" class="form-control form-control-sm input-sm event_start_time" placeholder="Event Start Time" value="<?=$event_start_time;?>">
                                 </div>
 
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-6 mb-3 end_time" <?php if($date_available == 0){?> style="display:block;" <?php } else { ?>style="display:none;"<?php } ?>>
                                     <label for="">Event End Time</label>
                                     <input type="text" name="event_end_time" class="form-control form-control-sm input-sm event_end_time" placeholder="Event End Time" value="<?=$event_end_time;?>">
                                 </div>

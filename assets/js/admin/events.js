@@ -5,8 +5,12 @@ $(document).ready(function() {
         var option = $('#date_availibility option:selected').val();
         if (option == "0") {
             $('.date').css('display', 'block');
+            $('.start_time').css('display', 'block');
+            $('.end_time').css('display', 'block');
         } else {
             $('.date').css('display', 'none');
+            $('.start_time').css('display', 'none');
+            $('.end_time').css('display', 'none');
         }
     });
 

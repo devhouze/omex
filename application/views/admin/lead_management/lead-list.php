@@ -29,10 +29,6 @@
                     <input type="text" value="<?=$this->session->userdata('lead')['name'];?>" name="name" placeholder="Search By Name" class="form-control form-control-sm">
                 </div>
 
-                <div class="col-md-3 mt-3">
-                    <input type="text" value="<?=$this->session->userdata('lead')['email'];?>" name="email" placeholder="Search By Email" class="form-control form-control-sm">
-                </div>
-                
                 <?php $query_type = (!empty($this->session->userdata('lead')))?$this->session->userdata('lead')['query_type']:null;?>
                 <div class="col-md-3 mt-3">
                     <select name="query_type" class="form-control form-control-sm">
@@ -48,11 +44,11 @@
                 </div>
 
                 <div class="col-md-3 mt-3">
-                    <input type="text" value="<?=$this->session->userdata('lead')['email'];?>" name="from_date" placeholder="Date from" class="form-control form-control-sm datepicker">
+                    <input type="text" value="<?=$this->session->userdata('lead')['date_from'];?>" name="from_date" placeholder="Date from" class="form-control form-control-sm datepicker">
                 </div>
 
                 <div class="col-md-3 mt-3">
-                    <input type="text" value="<?=$this->session->userdata('lead')['email'];?>" name="to_date" placeholder="Date to" class="form-control form-control-sm datepicker">
+                    <input type="text" value="<?=$this->session->userdata('lead')['date_to'];?>" name="to_date" placeholder="Date to" class="form-control form-control-sm datepicker">
                 </div>
 
                 <div class="col-md-3 mt-3">
@@ -75,13 +71,13 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Email</th>
+                                    <th scope="col">Name <a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/name/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/name/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
+                                    <th scope="col">Email <a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/email/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/email/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
                                     <th scope="col">Contact</th>
-                                    <th scope="col">Source</th>
-                                    <th scope="col">Event Name</th>
-                                    <th scope="col">Query Type</th>
-                                    <th scope="col">Sign Up Time</th>
+                                    <th scope="col">Source <a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/source/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/source/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
+                                    <th scope="col">Event Name <a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/event_name/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/event_name/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
+                                    <th scope="col">Query Type <a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/query_type/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/query_type/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
+                                    <th scope="col">Sign Up Time <a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/registered_at/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/registered_at/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
