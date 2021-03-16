@@ -296,7 +296,7 @@
                     <img src="<?php echo base_url(); ?>assets/images/public/home/e1.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
                     <div class="outer"></div>
                 </figure>
-                <a href="" class="exploer-btn" data-type="eat" data-bs-toggle="modal" data-bs-target="#eatModal">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
+                <a href="javascript:void(0)" class="exploer-btn" data-type="eat" data-bs-toggle="modal" data-bs-target="#eatModal">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
             </div>
             <div class="col-md-4">
@@ -451,7 +451,7 @@
                                 <?php if (!empty($interior_gallery)) {
                                     foreach ($interior_gallery as $interior) { ?>
                                             <div class="item">
-                                                <img src="<?php echo base_url('assets/images/public/home/' . $interior['media_name']); ?>">
+                                                <img src="<?php echo base_url('assets/images/public/home/' . $interior['media_name']); ?>" class="interior">
                                             </div>
                                 <?php }
                                 } ?>
@@ -464,7 +464,7 @@
                                 <?php if (!empty($exterior_gallery)) {
                                     foreach ($exterior_gallery as $exterior) { ?>
                                             <div class="item">
-                                                <img src="<?php echo base_url('assets/images/public/home/' . $exterior['media_name']); ?>">
+                                                <img src="<?php echo base_url('assets/images/public/home/' . $exterior['media_name']); ?>" class="all" class="exterior">
                                             </div>
                                 <?php }
                                 } ?>
@@ -476,7 +476,7 @@
                                 <?php if (!empty($construction_gallery)) {
                                     foreach ($construction_gallery as $construction) { ?>
                                             <div class="item">
-                                                <img src="<?php echo base_url('assets/images/public/home/' . $construction['media_name']); ?>">
+                                                <img src="<?php echo base_url('assets/images/public/home/' . $construction['media_name']); ?>" class="construction">
                                             </div>
                                         
                                 <?php }

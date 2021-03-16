@@ -4,7 +4,7 @@ $(document).ready(function() {
 
     $('.delete').click(function() {
         var banner_id = $(this).data('id');
-        if (confirm('Do you want to delete this brand?')) {
+        if (confirm('Do you want to delete this banner?')) {
             $.ajax({
                 type: 'post',
                 url: url + 'delete-banner',

@@ -57,7 +57,7 @@ class Users_Controller extends MY_Controller {
 					'user_name'		=> $this->input->post('username'),
 					'name'			=> $this->input->post('name'),
 					'email'			=> $this->input->post('email'),
-					'password'		=> $this->input->post('password'),
+					'password'		=> md5($this->input->post('password')),
 					'created_by'	=> $this->um->admin_id()
 				);
 				$check = $this->check_username($this->input->post('username'));

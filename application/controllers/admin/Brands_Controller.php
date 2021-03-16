@@ -54,44 +54,43 @@ class Brands_Controller extends MY_Controller
         if($this->input->post()){
             // Form Validation rules
             $this->form_validation->set_rules('brand_name','Brand Name','required');
-            if (empty($_FILES['brand_logo']['name']))
-            {
-                $this->form_validation->set_rules('brand_logo','Brand Logo','required');
-            }
-            $this->form_validation->set_rules('logo_comment','Logo Comment','required');
-            $this->form_validation->set_rules('brand_website','Brand Website','required');
-            $this->form_validation->set_rules('about_brand','About Brand','required');
-            $this->form_validation->set_rules('brand_label','Brand Label','required');
-            $this->form_validation->set_rules('from_week_hour','Week Hours','required');
-            $this->form_validation->set_rules('to_week_hour','Week Hours','required');
-            $this->form_validation->set_rules('from_weekend_hour','Weekend Hours','required');
-            $this->form_validation->set_rules('to_weekend_hour','Weekend Hours','required');
-            $this->form_validation->set_rules('brand_location','Brand Location','required');
-            $this->form_validation->set_rules('brand_street','Brand Street','required');
-            $this->form_validation->set_rules('brand_type','Brand Type','required');
-            $this->form_validation->set_rules('brand_contact','Brand Contact','required');
-            $this->form_validation->set_rules('brand_category[]','Brand Category','required');
-            $this->form_validation->set_rules('sub_category','Brand Sub Category','required');
-            $this->form_validation->set_rules('email_contact','Email Contact','required');
-            $this->form_validation->set_rules('brand_audience','Brand Audience','required');
-            $this->form_validation->set_rules('store_map','Store Map','required');
-            $this->form_validation->set_rules('show_on_home','Show On Home','required');
-            $this->form_validation->set_rules('banner_comment','Brand Banner Alt Tag','required');
-            $this->form_validation->set_rules('about_brand_banner_alt','About Brand Banner Alt Tag','required');
-            $this->form_validation->set_rules('show_brand_offers','Show Brand Offer','required');
-            $this->form_validation->set_rules('order_home','Order On Home Page','required');
-            if (empty($_FILES['banner_web']['name']))
-            {
-            $this->form_validation->set_rules('banner_web','Brand Banner Web','required');
-            }
-            if (empty($_FILES['about_brand_banner_web']['name']))
-            {
-            $this->form_validation->set_rules('about_brand_banner_web','About Brand Banner Web','required');
-            }
-            if (empty($_FILES['banner_mobile']['name']))
-            {
-            $this->form_validation->set_rules('banner_mobile','Brand Banner Mobile','required');
-            }
+            // if (empty($_FILES['brand_logo']['name']))
+            // {
+            //     $this->form_validation->set_rules('brand_logo','Brand Logo','required');
+            // }
+            // $this->form_validation->set_rules('logo_comment','Logo Comment','required');
+            // $this->form_validation->set_rules('brand_website','Brand Website','required');
+            // $this->form_validation->set_rules('about_brand','About Brand','required');
+            // $this->form_validation->set_rules('brand_label','Brand Label','required');
+            // $this->form_validation->set_rules('from_week_hour','Week Hours','required');
+            // $this->form_validation->set_rules('to_week_hour','Week Hours','required');
+            // $this->form_validation->set_rules('from_weekend_hour','Weekend Hours','required');
+            // $this->form_validation->set_rules('to_weekend_hour','Weekend Hours','required');
+            // $this->form_validation->set_rules('brand_location','Brand Location','required');
+            // $this->form_validation->set_rules('brand_street','Brand Street','required');
+            // $this->form_validation->set_rules('brand_type','Brand Type','required');
+            // $this->form_validation->set_rules('brand_contact','Brand Contact','required');
+            // $this->form_validation->set_rules('brand_category[]','Brand Category','required');
+            // $this->form_validation->set_rules('email_contact','Email Contact','required');
+            // $this->form_validation->set_rules('brand_audience','Brand Audience','required');
+            // $this->form_validation->set_rules('store_map','Store Map','required');
+            // $this->form_validation->set_rules('show_on_home','Show On Home','required');
+            // $this->form_validation->set_rules('banner_comment','Brand Banner Alt Tag','required');
+            // $this->form_validation->set_rules('about_brand_banner_alt','About Brand Banner Alt Tag','required');
+            // $this->form_validation->set_rules('show_brand_offers','Show Brand Offer','required');
+            // $this->form_validation->set_rules('order_home','Order On Home Page','required');
+            // if (empty($_FILES['banner_web']['name']))
+            // {
+            // $this->form_validation->set_rules('banner_web','Brand Banner Web','required');
+            // }
+            // if (empty($_FILES['about_brand_banner_web']['name']))
+            // {
+            // $this->form_validation->set_rules('about_brand_banner_web','About Brand Banner Web','required');
+            // }
+            // if (empty($_FILES['banner_mobile']['name']))
+            // {
+            // $this->form_validation->set_rules('banner_mobile','Brand Banner Mobile','required');
+            // }
          
             if($this->form_validation->run()){
                 if(empty($this->input->post('brand_category'))){
@@ -232,28 +231,27 @@ class Brands_Controller extends MY_Controller
         if($this->input->post()){
             // Form Validation rules
             $this->form_validation->set_rules('brand_name','Brand Name','required');
-            $this->form_validation->set_rules('logo_comment','Logo Comment','required');
-            $this->form_validation->set_rules('brand_website','Brand Website','required');
-            $this->form_validation->set_rules('about_brand','About Brand','required');
-            $this->form_validation->set_rules('brand_label','Brand Label','required');
-            $this->form_validation->set_rules('from_week_hour','Week Hours','required');
-            $this->form_validation->set_rules('to_week_hour','Week Hours','required');
-            $this->form_validation->set_rules('from_weekend_hour','Weekend Hours','required');
-            $this->form_validation->set_rules('to_weekend_hour','Weekend Hours','required');
-            $this->form_validation->set_rules('brand_location','Brand Location','required');
-            $this->form_validation->set_rules('brand_street','Brand Street','required');
-            $this->form_validation->set_rules('brand_type','Brand Type','required');
-            $this->form_validation->set_rules('brand_contact','Brand Contact','required');
-            $this->form_validation->set_rules('brand_category[]','Brand Category','required');
-            $this->form_validation->set_rules('sub_category','Brand Sub Category','required');
-            $this->form_validation->set_rules('email_contact','Email Contact','required');
-            $this->form_validation->set_rules('brand_audience','Brand Audience','required');
-            $this->form_validation->set_rules('store_map','Store Map','required');
-            $this->form_validation->set_rules('show_on_home','Show On Home','required');
-            $this->form_validation->set_rules('banner_comment','Brand Banner Alt Tag','required');
-            $this->form_validation->set_rules('about_brand_banner_alt','About Brand Banner Alt Tag','required');
-            $this->form_validation->set_rules('show_brand_offers','Show Brand Offer','required');
-            $this->form_validation->set_rules('order_home','Order On Home Page','required');
+            // $this->form_validation->set_rules('logo_comment','Logo Comment','required');
+            // $this->form_validation->set_rules('brand_website','Brand Website','required');
+            // $this->form_validation->set_rules('about_brand','About Brand','required');
+            // $this->form_validation->set_rules('brand_label','Brand Label','required');
+            // $this->form_validation->set_rules('from_week_hour','Week Hours','required');
+            // $this->form_validation->set_rules('to_week_hour','Week Hours','required');
+            // $this->form_validation->set_rules('from_weekend_hour','Weekend Hours','required');
+            // $this->form_validation->set_rules('to_weekend_hour','Weekend Hours','required');
+            // $this->form_validation->set_rules('brand_location','Brand Location','required');
+            // $this->form_validation->set_rules('brand_street','Brand Street','required');
+            // $this->form_validation->set_rules('brand_type','Brand Type','required');
+            // $this->form_validation->set_rules('brand_contact','Brand Contact','required');
+            // $this->form_validation->set_rules('brand_category[]','Brand Category','required');
+            // $this->form_validation->set_rules('email_contact','Email Contact','required');
+            // $this->form_validation->set_rules('brand_audience','Brand Audience','required');
+            // $this->form_validation->set_rules('store_map','Store Map','required');
+            // $this->form_validation->set_rules('show_on_home','Show On Home','required');
+            // $this->form_validation->set_rules('banner_comment','Brand Banner Alt Tag','required');
+            // $this->form_validation->set_rules('about_brand_banner_alt','About Brand Banner Alt Tag','required');
+            // $this->form_validation->set_rules('show_brand_offers','Show Brand Offer','required');
+            // $this->form_validation->set_rules('order_home','Order On Home Page','required');
             
             if($this->form_validation->run()){
                 $data_array = array(
@@ -376,7 +374,8 @@ class Brands_Controller extends MY_Controller
         }
         $data['brands'] = $this->bm->get_data_row('tbl_brand','*',['brand_id' => $id]);
         $data['category'] = $this->bm->get_data_array('tbl_category','category_name, id','');
-        $data['sub_category'] = $this->bm->get_sub_category($data['brands']->brand_category);
+        $category[] = $data['brands']->brand_category;
+        $data['sub_category'] = $this->bm->get_sub_category($category);
         // echo "<pre>"; print_r($data); die;
         $this->load->view('admin/include/header_start');
 		$this->load->view('admin/include/header_end');
@@ -420,7 +419,7 @@ class Brands_Controller extends MY_Controller
     public function add_brand_offer()
     {
         $data['brand_offers'] = [];
-        $data['brands'] = $this->bm->get_data_array('tbl_brand','brand_id,brand_name','status !=2 and brand_offer_status = "Yes"');
+        $data['brands'] = $this->bm->get_data_array('tbl_brand','brand_id,brand_name','status !=2');
         if($this->input->post()){
             $this->form_validation->set_rules('brand_offer_name','Offer Name','required');
             $this->form_validation->set_rules('brand_id','Brand','required');
