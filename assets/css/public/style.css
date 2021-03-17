@@ -1703,6 +1703,20 @@ span.text-danger.errors_msg {
     display: none !important;
 }
 
+.expoler-modal .modal-body ul li a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.expoler-modal .modal-body ul li {
+    position: relative;
+}
+
 
 /* end brand directory page */
 
