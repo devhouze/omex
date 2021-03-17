@@ -359,8 +359,11 @@ a.banner-link {
     background: transparent;
 }
 
-#image-modal button {
-    border: blanchedalmond;
+#image-modal button,
+#interior_images button,
+#exterior-image-modal button,
+#construction-image-modal button {
+    border: transparent;
     background: transparent;
 }
 
@@ -508,6 +511,14 @@ span.text-danger.errors_msg {
 
 .top-brands .owl-item.active+.owl-item.active {
     border-left: 3px solid #dadada4f;
+}
+
+.top-brands .owl-item.active .item a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 
 .top-brands .owl-item.active .item {
@@ -1353,6 +1364,16 @@ span.text-danger.errors_msg {
     cursor: pointer;
 }
 
+.barnd-page .live-in-word figure a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .barnd-page .live-in-word figure:hover span {
     opacity: 9;
 }
@@ -1676,6 +1697,10 @@ span.text-danger.errors_msg {
 
 .expoler-modal .modal-body .exploer-btn {
     margin-bottom: 30px;
+}
+
+.event-page .looking-out .primary-btn {
+    display: none !important;
 }
 
 
@@ -2067,9 +2092,6 @@ span.text-danger.errors_msg {
         margin-bottom: 30px;
         font-size: 14px;
     }
-    .category li img {
-        width: 120px;
-    }
     .whats-new .row>* {
         padding: 0 !important;
     }
@@ -2260,9 +2282,10 @@ span.text-danger.errors_msg {
     .find-us iframe {
         height: 400px;
     }
-    .looking-out div#carouselExampleControls .position-absolute a img,
+    .looking-out a img,
     .owl-nav button img,
-    .live-in-word .owl-nav button img {
+    .live-in-word .owl-nav button img,
+    .about-brand button img {
         width: 80px !important;
     }
     .tab-area ul li a {
