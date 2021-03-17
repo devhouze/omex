@@ -98,7 +98,7 @@ class Welcome_model extends CI_Model
 
     public function get_brand_logo()
     {
-        $query = $this->db->select('brand_logo, banner_comment')
+        $query = $this->db->select('brand_logo, banner_comment, brand_id')
                           ->where('status',0)
                           ->where('show_on_home','Yes')
                           ->order_by('order_home','desc')
@@ -113,7 +113,8 @@ class Welcome_model extends CI_Model
     {
         $query = $this->db->select('event_name, thumbnail_message, event_start_time, event_end_time, date_available, start_date, end_date, thumbnail_image, about_event, event_category, show_reg_btn, event_id')
                           ->where('status',0)
-                          ->where('end_date >',date('Y-m-d'))
+                        //   ->where('end_date >',date('Y-m-d'))
+                          ->order_by('event_id','desc')
                           ->get('tbl_event');
         if($query->num_rows() > 0)
         {
@@ -138,7 +139,7 @@ class Welcome_model extends CI_Model
 
     public function get_brands($type)
     {
-        $query = $this->db->select('brand_logo, logo_message')
+        $query = $this->db->select('brand_logo, logo_message, brand_id')
                           ->where('status',0)
                           ->where('show_on_home','Yes')
                           ->where('brand_type',$type)
@@ -154,7 +155,7 @@ class Welcome_model extends CI_Model
 
     public function get_brand_directory_banner()
     {
-        $query = $this->db->select('banner_web, banner_mobile, comment')
+        $query = $this->db->select('banner_web, banner_mobile, comment, banner_mobile')
                           ->where('status',0)
                           ->where('banner_type',3)
                           ->order_by('id','desc')

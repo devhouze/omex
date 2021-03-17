@@ -24,13 +24,15 @@
                             </button>
                         </div>
                     </div>
+
                     <div id="carouselExampleIndicatorsmob" class="carousel slide positon-relative d-md-none" data-bs-ride="carousel">
 
-                        <div class="carousel-inner postion-relative ">
-                            <div class="carousel-item active">
-                                <img src="<?php echo base_url(); ?>assets/images/public/brand/bs1-m.jpg" alt="" class="">
+                    <div class="carousel-inner postion-relative ">
+                            <?php if(!empty('brand_banner')) {$i=1; foreach($brand_banner as $banner){?>
+                            <div class="carousel-item <?php if($i == 1){ echo "active";}?>">
+                                <img src="<?php echo base_url('assets/images/public/brand/'.$banner['banner_mobile']); ?>" alt="<?php echo $banner['comment'];?>" class="">
                             </div>
-                           
+                            <?php $i++;  } }?>
                         </div>
 
 
