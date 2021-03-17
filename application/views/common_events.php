@@ -32,7 +32,7 @@
                                 </div>
                             </div>
                             <div class="row justify-content-center">
-                                <div class="col-md-10">
+                                <div class="col-md-12">
                                 <a href="<?php echo base_url('event-details/'.$event['event_id'])?>" class="primary-btn d-inline-block mt-36">KNOW MORE</a>
                                 </div>
                             </div>
@@ -71,7 +71,7 @@
                             </div>
                         </div>
                         <div class="row justify-content-center">
-                            <div class="col-md-10">
+                            <div class="col-md-12">
                             <a href="<?php echo base_url('event-details/'.$event['event_id'])?>" class="primary-btn d-inline-block mt-36">KNOW MORE</a>
                             </div>
                         </div>

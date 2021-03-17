@@ -510,6 +510,14 @@ span.text-danger.errors_msg {
     border-left: 3px solid #dadada4f;
 }
 
+.top-brands .owl-item.active .item a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
 .top-brands .owl-item.active .item {
     width: 150px;
     height: 160px;
@@ -1351,6 +1359,16 @@ span.text-danger.errors_msg {
 .barnd-page .live-in-word figure {
     position: relative;
     cursor: pointer;
+}
+
+.barnd-page .live-in-word figure a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .barnd-page .live-in-word figure:hover span {
