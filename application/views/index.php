@@ -44,7 +44,7 @@
                     <?php if (!empty($brand_logo)) {
                         foreach ($brand_logo as $logo) { ?>
                             <div class="item">
-                                <a href="#"></a>
+                                <a href="<?php echo base_url('brand/'.$logo['brand_id']);?>"></a>
                                 <img src="<?php echo base_url('assets/images/public/brand/' . $logo['brand_logo']); ?>" alt="<?= $logo['banner_comment']; ?>" class="d-table mx-auto">
                             </div>
                     <?php }
