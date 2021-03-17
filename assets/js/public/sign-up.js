@@ -16,6 +16,7 @@ $(document).ready(function() {
                 $('.errors_msg').empty();
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
+                    $('#success').css('display', 'block');
                     $('#sign-up').trigger('reset');
                     $.notify(data.message, "success");
                 } else {

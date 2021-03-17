@@ -505,13 +505,13 @@ span.text-danger.errors_msg {
 .top-brands .owl-theme .owl-nav .owl-prev {
     position: absolute;
     left: -110px;
-    bottom: 30px;
+    bottom: 40%;
 }
 
 .top-brands .owl-theme .owl-nav .owl-next {
     right: -110px;
     position: absolute;
-    bottom: 30px;
+    bottom: 40%;
 }
 
 .top-brands .owl-item.active+.owl-item.active {
@@ -1724,6 +1724,16 @@ span.text-danger.errors_msg {
 
 .expoler-modal .modal-body ul li {
     position: relative;
+}
+
+.live-in-word .col-md-4 figure a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 
 

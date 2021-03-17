@@ -115,22 +115,26 @@ $(document).ready(function(){
             data:{street:street, sort:sort,filter:filter,limit:limit},
             dataType:'json',
             success:function(data){
-                $.each(data.brand,function(i,v){
+                if(data.brand != ''){
+                    $.each(data.brand,function(i,v){
                     var value = '<div class="col-md-3 col-6">';
                     value += '<div class="product-box">';
-                    value += "<a href='"+base_url+"brand/"+v.brand_id+"'>";
+                    value += "<a href='"+base_url+"brand/"+v.brand_id+"'></a>";
                     value += "<figure><img src='"+base_url+"/assets/images/public/brand/"+v.brand_logo+"' alt='"+v.logo_message+"'></figure>";
                     value += '<div class="name">'+v.brand_name+'</div>';
                     value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+'</div>';
                     value += '</div>';
                     value += '</div>';
                     $('#brand').append(value);
-                });
-                $('#limit').val(data.limit);
-                if(data.limit == ''){
-                    $('#load_btn').css('display','none');
+                    });
+                    $('#limit').val(data.limit);
+                    if(data.limit == ''){
+                        $('#load_btn').css('display','none');
+                    } else {
+                        $('#load_btn').css('display','block');
+                    }
                 } else {
-                    $('#load_btn').css('display','block');
+                    $('#brand').html('No match found!.');
                 }
             }
         })
@@ -149,16 +153,67 @@ $(document).ready(function(){
             data:{street:street, sort:sort,filter:filter,limit:limit,letter:letter},
             dataType:'json',
             success:function(data){
-                $.each(data,function(i,v){
+                if(data.brand != ''){
+                    $.each(data.brand,function(i,v){
                     var value = '<div class="col-md-3 col-6">';
-                    value += "<a href='"+base_url+"brand/"+v.brand_id+"'>";
+                    value += '<div class="product-box">';
+                    value += "<a href='"+base_url+"brand/"+v.brand_id+"'></a>";
                     value += "<figure><img src='"+base_url+"/assets/images/public/brand/"+v.brand_logo+"' alt='"+v.logo_message+"'></figure>";
                     value += '<div class="name">'+v.brand_name+'</div>';
                     value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+'</div>';
                     value += '</div>';
-                    console.log(value);
+                    value += '</div>';
                     $('#brand').append(value);
-                });
+                    });
+                    $('#limit').val(data.limit);
+                    if(data.limit == ''){
+                        $('#load_btn').css('display','none');
+                    } else {
+                        $('#load_btn').css('display','block');
+                    }
+                } else {
+                    $('#brand').html('No match found!.');
+                    $('#load_btn').css('display','none');
+                }
+            }
+        })
+    });
+
+    $('.category').click(function(){
+        var street = $('#street').val();
+        var sort = $('#sort').val();
+        var filter = $('#filter').val();
+        var category = $(this).data('category');
+        var limit = $('#limit').val();
+        $('#brand').empty();
+        $.ajax({
+            type:'post',
+            url:'<?php echo base_url('search-brand')?>',
+            data:{street:street, sort:sort,filter:filter,limit:limit,category:category},
+            dataType:'json',
+            success:function(data){
+                if(data.brand != ''){
+                    $.each(data.brand,function(i,v){
+                    var value = '<div class="col-md-3 col-6">';
+                    value += '<div class="product-box">';
+                    value += "<a href='"+base_url+"brand/"+v.brand_id+"'></a>";
+                    value += "<figure><img src='"+base_url+"/assets/images/public/brand/"+v.brand_logo+"' alt='"+v.logo_message+"'></figure>";
+                    value += '<div class="name">'+v.brand_name+'</div>';
+                    value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+'</div>';
+                    value += '</div>';
+                    value += '</div>';
+                    $('#brand').append(value);
+                    });
+                    $('#limit').val(data.limit);
+                    if(data.limit == ''){
+                        $('#load_btn').css('display','none');
+                    } else {
+                        $('#load_btn').css('display','block');
+                    }
+                } else {
+                    $('#brand').html('No match found!.');
+                    $('#load_btn').css('display','none');
+                }
             }
         })
     });
@@ -171,32 +226,37 @@ $(document).ready(function(){
         var street = $('#street').val();
         var sort = $('#sort').val();
         var filter = $('#filter').val();
-        var letter = $(this).data('letter');
-        var category = $(this).val('category');
         var limit = $('#limit').val();
         $('#brand').empty();
         $.ajax({
             type:'post',
             url:'<?php echo base_url('search-brand')?>',
-            data:{street:street, sort:sort,filter:filter,limit:limit,letter:letter},
+            data:{street:street, sort:sort,filter:filter,limit:limit},
             dataType:'json',
             success:function(data){
-                $.each(data.brand,function(i,v){
+                if(data.brand != ''){
+                    $.each(data.brand,function(i,v){
                     var value = '<div class="col-md-3 col-6">';
-                    value += "<a href='"+base_url+"brand/"+v.brand_id+"'>";
+                    value += '<div class="product-box">';
+                    value += "<a href='"+base_url+"brand/"+v.brand_id+"'></a>";
                     value += "<figure><img src='"+base_url+"/assets/images/public/brand/"+v.brand_logo+"' alt='"+v.logo_message+"'></figure>";
                     value += '<div class="name">'+v.brand_name+'</div>';
                     value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+'</div>';
                     value += '</div>';
-                    console.log(value);
+                    value += '</div>';
                     $('#brand').append(value);
-                });
-                $('#limit').val(data.limit);
-                if(data.limit == ''){
-                    $('#load_btn').css('display','none');
+                    });
+                    $('#limit').val(data.limit);
+                    if(data.limit == ''){
+                        $('#load_btn').css('display','none');
+                    } else {
+                        $('#load_btn').css('display','block');
+                    }
                 } else {
-                    $('#load_btn').css('display','block');
+                    $('#brand').html('No match found!.');
+                    $('#load_btn').css('display','none');
                 }
+                
             }
         })
     }
