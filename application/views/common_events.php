@@ -18,7 +18,7 @@
                                         <div class="box-calander">
                                             <div class="top-row">
                                                 <div class="left-col"><span><?php echo ($event['date_available'] != 1)?date('Y',strtotime($event['start_date'])):'N/A';?></span></div>
-                                                <div class="right-col"><h2 class="position-relative"><?php echo date('d',strtotime($event['start_date']));?><span> <?php echo date('M',strtotime($event['start_date']));?></span>-<?php echo date('d',strtotime($event['end_date']));?> <span><?php echo date('M',strtotime($event['end_date']));?></span></h2></div>
+                                                <div class="right-col"><h2 class="position-relative"><?php echo date('d',strtotime($event['start_date']));?><span> <?php echo date('M',strtotime($event['start_date']));?></span> - <?php echo date('d',strtotime($event['end_date']));?> <span><?php echo date('M',strtotime($event['end_date']));?></span></h2></div>
                                             </div>
 
 
