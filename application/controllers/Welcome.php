@@ -299,7 +299,7 @@ class Welcome extends CI_Controller {
 		} else {
 			$data['limit'] = '';
 		}
-		// echo "<pre>"; print_r($data['count']); die;
+		// echo "<pre>"; print_r($data['brand_banner']); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
