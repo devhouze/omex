@@ -440,8 +440,8 @@
                             <div class="owl-carousel slider wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
                                 <?php if (!empty($all_gallery)) {
                                     foreach ($all_gallery as $gallery) { ?>
-                                        <div class="item" data-bs-toggle="modal" data-bs-target="#image-modal">
-                                            <img src="<?php echo base_url('assets/images/public/home/' . $gallery['media_name']); ?>">
+                                        <div class="item">
+                                            <img src="<?php echo base_url('assets/images/public/home/' . $gallery['media_name']); ?>" class="all">
                                         </div>
                                 <?php }
                                 } ?>
@@ -453,7 +453,7 @@
                             <div class="owl-carousel sliders">
                                 <?php if (!empty($interior_gallery)) {
                                     foreach ($interior_gallery as $interior) { ?>
-                                        <div class="item">
+                                        <div class="item" data-bs-toggle="modal" data-bs-target="#interior-image-modal">
                                             <img src="<?php echo base_url('assets/images/public/home/' . $interior['media_name']); ?>" class="interior">
                                         </div>
                                 <?php }
@@ -466,8 +466,8 @@
                             <div class="owl-carousel sliders">
                                 <?php if (!empty($exterior_gallery)) {
                                     foreach ($exterior_gallery as $exterior) { ?>
-                                        <div class="item">
-                                            <img src="<?php echo base_url('assets/images/public/home/' . $exterior['media_name']); ?>" class="all" class="exterior">
+                                        <div class="item" data-bs-toggle="modal" data-bs-target="#exterior-image-modal">
+                                            <img src="<?php echo base_url('assets/images/public/home/' . $exterior['media_name']); ?>" class="exterior">
                                         </div>
                                 <?php }
                                 } ?>

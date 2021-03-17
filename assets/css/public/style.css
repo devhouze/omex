@@ -1726,6 +1726,16 @@ span.text-danger.errors_msg {
     position: relative;
 }
 
+.live-in-word .col-md-4 figure a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
 
 /* end brand directory page */
 
