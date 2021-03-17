@@ -359,8 +359,11 @@ a.banner-link {
     background: transparent;
 }
 
-#image-modal button {
-    border: blanchedalmond;
+#image-modal button,
+#interior_images button,
+#exterior-image-modal button,
+#construction-image-modal button {
+    border: transparent;
     background: transparent;
 }
 
@@ -1696,6 +1699,10 @@ span.text-danger.errors_msg {
     margin-bottom: 30px;
 }
 
+.event-page .looking-out .primary-btn {
+    display: none !important;
+}
+
 
 /* end brand directory page */
 
@@ -2085,9 +2092,6 @@ span.text-danger.errors_msg {
         margin-bottom: 30px;
         font-size: 14px;
     }
-    .category li img {
-        width: 120px;
-    }
     .whats-new .row>* {
         padding: 0 !important;
     }
@@ -2278,9 +2282,10 @@ span.text-danger.errors_msg {
     .find-us iframe {
         height: 400px;
     }
-    .looking-out div#carouselExampleControls .position-absolute a img,
+    .looking-out a img,
     .owl-nav button img,
-    .live-in-word .owl-nav button img {
+    .live-in-word .owl-nav button img,
+    .about-brand button img {
         width: 80px !important;
     }
     .tab-area ul li a {
