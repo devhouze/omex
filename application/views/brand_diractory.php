@@ -24,6 +24,7 @@
                             </button>
                         </div>
                     </div>
+                    
                     <div id="carouselExampleIndicatorsmob" class="carousel slide positon-relative d-md-none" data-bs-ride="carousel">
 
                     <div class="carousel-inner postion-relative ">

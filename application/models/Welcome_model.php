@@ -98,7 +98,7 @@ class Welcome_model extends CI_Model
 
     public function get_brand_logo()
     {
-        $query = $this->db->select('brand_logo, banner_comment')
+        $query = $this->db->select('brand_logo, banner_comment, brand_id')
                           ->where('status',0)
                           ->where('show_on_home','Yes')
                           ->order_by('order_home','desc')
@@ -138,7 +138,7 @@ class Welcome_model extends CI_Model
 
     public function get_brands($type)
     {
-        $query = $this->db->select('brand_logo, logo_message')
+        $query = $this->db->select('brand_logo, logo_message, brand_id')
                           ->where('status',0)
                           ->where('show_on_home','Yes')
                           ->where('brand_type',$type)
