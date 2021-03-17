@@ -72,6 +72,7 @@ $route['event-details/(:num)'] = 'Welcome/event_details/$1';
 $route['brand-directory'] = 'Welcome/brand_directory';
 //$1=> category, $2=>limit
 $route['brand-directory/(:any)/(:any)'] = 'Welcome/brand_directory/$1/$2';
+$route['brand-directory/(:any)'] = 'Welcome/brand_directory/$1';
 $route['search-brand'] = 'Welcome/search_brand';
 $route['sign-up'] = 'Welcome/sign_up';
 $route['get-brands'] = "Welcome/get_brands";
