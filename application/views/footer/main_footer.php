@@ -1,5 +1,5 @@
 
-<footer class="pt-60">
+<footer class="pt-60 pt-sm-30">
     <div class="main-fooger">
     <div class="container">
         <div class="row">

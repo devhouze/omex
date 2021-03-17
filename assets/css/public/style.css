@@ -815,7 +815,7 @@ span.text-danger.errors_msg {
 }
 
 .barnd-page .live-in-word .slider-counter {
-    bottom: 110px;
+    bottom: 40px;
 }
 
 .live-in-word .slider-counter span {
@@ -1338,14 +1338,14 @@ span.text-danger.errors_msg {
     top: 43%;
     text-align: center;
     color: white;
-    font-size: 30px;
-    padding: 4px 10px;
+    font-size: 18px;
+    padding: 10px 10px;
     transition: 0.5s all;
     opacity: 0;
 }
 
 .barnd-page .similar.barnd {
-    padding-top: 250px;
+    padding-top: 320px;
 }
 
 .barnd-page .live-in-word figure {
@@ -1432,6 +1432,7 @@ span.text-danger.errors_msg {
     height: 200px;
     right: 40px;
     z-index: 1;
+    background: white;
 }
 
 .img-box .brnad-logo img {
@@ -1712,7 +1713,10 @@ span.text-danger.errors_msg {
         margin-top: 30px;
     }
     .live-in-word .owl-nav {
-        padding: 0px 0 20px 0;
+        padding: 20px 0 20px 0;
+    }
+    .category li img {
+        width: 60%;
     }
     .live-in-word .slider-counter {
         left: 0;
@@ -1792,7 +1796,7 @@ span.text-danger.errors_msg {
         justify-content: center;
     }
     .tab-area .owl-nav {
-        margin-top: 90px !important;
+        margin-top: 60px !important;
     }
     div#navbarNavDropdown {
         left: 0;
@@ -1882,10 +1886,10 @@ span.text-danger.errors_msg {
         font-size: 14px;
     }
     .tab-area .slider-counter {
-        bottom: 60px;
+        bottom: 35px;
     }
     .looking-out h2 {
-        font-size: 26px;
+        font-size: 22px;
         display: table;
         text-shadow: -2px 0px 0px #cc1f38;
         line-height: 45px;
@@ -1972,7 +1976,7 @@ span.text-danger.errors_msg {
         bottom: 40%;
     }
     .top-brands .owl-theme .owl-nav [class*='owl-'] img {
-        width: 50px;
+        width: 50px !important;
     }
     .v-line {
         height: 84px;
@@ -1994,10 +1998,11 @@ span.text-danger.errors_msg {
         margin-top: 20px;
     }
     .brand-lgoo {
-        width: 190px;
-        height: auto;
+        width: 160px;
+        height: 180px;
         left: 0;
         bottom: -90px;
+        padding: 10px;
     }
     .bg-color {
         width: 100%;
@@ -2094,7 +2099,7 @@ span.text-danger.errors_msg {
     }
     .car-ions {
         justify-content: space-between;
-        bottom: 34px;
+        bottom: 15px;
     }
     .img-box {
         margin-bottom: 50px;
@@ -2212,7 +2217,7 @@ span.text-danger.errors_msg {
         margin: 20px;
     }
     .expoler-modal .modal-body ul li {
-        width: 46%;
+        width: calc(100% / 2 - 30px);
         margin-bottom: 10px;
     }
     .expoler-modal .modal-body ul {
@@ -2254,6 +2259,21 @@ span.text-danger.errors_msg {
     }
     .find-us iframe {
         height: 400px;
+    }
+    .looking-out div#carouselExampleControls .position-absolute a img,
+    .owl-nav button img,
+    .live-in-word .owl-nav button img {
+        width: 80px !important;
+    }
+    .tab-area ul li a {
+        margin-bottom: 0 !important;
+    }
+    .slider-counter span,
+    .more-expoler .slider-counter span {
+        width: 60px;
+    }
+    .slider-counter {
+        font-size: 20px;
     }
 }
 
