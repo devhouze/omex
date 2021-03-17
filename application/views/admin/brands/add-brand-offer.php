@@ -45,7 +45,7 @@ $about_brand_offer = (!empty($brand_offers))?$brand_offers->about_offer:'';
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Brand Offer Thumbnail</label>
+                                    <label for="">Brand Offer Thumbnail</label> <span>(1900px X 600px size and jpg,jpeg,png type)</span>
                                     <input type="file" class="form-control form-control-sm input-sm" name="offer_thumbnail" value="">
                                 </div>
 

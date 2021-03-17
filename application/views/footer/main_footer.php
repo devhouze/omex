@@ -1,5 +1,5 @@
 
-<footer class="pt-60">
+<footer class="pt-60 pt-sm-30">
     <div class="main-fooger">
     <div class="container">
         <div class="row">
@@ -13,20 +13,25 @@
                     <li><a href="<?php echo base_url('athens');?>">Athens Street</a></li>
                     <li><a href="<?php echo base_url('portugal');?>">Portugal Street</a></li>
                     <li><a href="<?php echo base_url('amsterdam');?>">Amsterdam Street</a></li>
+                    <li><a href="<?php echo base_url('san-francisco'); ?>">San Francisco Street</a></li>
+                    <li><a href="<?php echo base_url('hong-kong'); ?>">Hong Kong Street</a></li>
 
                 </ul>
                 <ul class="menu list-unstyled">
-                    <li><a href="<?php echo base_url('san-francisco'); ?>">San Francisco Street</a></li>
-                    <li><a href="<?php echo base_url('hong-kong'); ?>">Hong Kong Street</a></li>
+                    
                     <li><a href="<?php echo base_url('brand-directory'); ?>">Brands</a></li>
                     <li><a href="<?php echo base_url('event'); ?>">Events</a></li>
                     <li><a href="<?php echo base_url('contact-us'); ?>">Contact Us</a></li>
+                    <li><a href="<?php echo base_url('privacy-policy'); ?>">Privacy Policy</a></li>
+                    <li><a href="<?php echo base_url('term-conditions'); ?>">Terms of Use</a></li>
+                    <li><a href="<?php echo base_url('contact-us'); ?>">Disclaimer</a></li>
+                    <li><a href="https://g.page/OmaxeWS?share" target="_blank">Locate Us</a></li>
                 </ul>
                 </div>
 
             </div>
             <div class="col-md-4 ps-md-5">
-                <div class="f-title fz26 text-white fw5 mb-30 mt-md-0 mt-4">Contact</div>
+                <div class="f-title fz26 text-white fw5 mb-30 mt-md-0 mt-3 mb-sm-10">Contact</div>
                 <ul class="menu list-unstyled mb-20">
                     <li>Call: +91-9015222222</li>
                     <li>Email: info@omaxews.com</li>
@@ -34,13 +39,14 @@
                 <ul class="d-flex flex-row list-unstyled mb-0">
                     <li><a href="https://www.facebook.com/omaxeworldsreet/" target="_blank"><img src="<?php echo base_url(); ?>assets/images/public/footer/fb.svg" alt="facebook" ></a></li>
                     <li class="ml-40"><a href="https://www.instagram.com/omaxeworldstreet/?hl=en" target="_blank"><img src="<?php echo base_url(); ?>assets/images/public/footer/inst.svg" alt="instagram"></a></li>
+                    <li class="ml-40"><a href="https://www.instagram.com/omaxeworldstreet/?hl=en" target="_blank"><img src="<?php echo base_url(); ?>assets/images/public/footer/what.svg" alt="whatsapp"></a></li>
                 </ul>
 
             </div>
             <div class="col-md-3">
             
             <div class="address">
-            <div class="f-title fz26 text-white fw5 mb-30  mt-md-0 mt-4">Addresss</div>
+            <div class="f-title fz26 text-white fw5 mb-30 mt-md-0 mt-3 mb-sm-10">Addresss</div>
             <p>Omaxe Marketing & Sales Office (World Street, Sector 79, Faridabad, Haryana 121004
 India</p>
             </div>
@@ -67,11 +73,11 @@ India</p>
         </div>
         </div>
     </div>
-    <div class="copyright py-30">
+    <div class="copyright py-30 py-sm-20">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <p class="fz12 text-center d-table mx-auto se-color mb-0">©Copyright 2021 | All Rights Reserved by Omaxe Group</p>
+                    <p class="fz12 text-center d-table mx-auto se-color mb-0">© Copyright 2021 | All Rights Reserved by Omaxe Group</p>
 
                 </div>
             </div>

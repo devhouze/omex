@@ -14,7 +14,7 @@ $brand_location = (!empty($brands))?$brands->brand_location:'';
 $brand_type = (!empty($brands))?$brands->brand_type:'';
 $brand_contact = (!empty($brands))?$brands->brand_contact:'';
 $brand_contact_email = (!empty($brands))?$brands->brand_contact_email:'';
-$brand_sub_category = (!empty($brands))?$brands->brand_sub_category:'';
+$brand_sub_category = (!empty($brands))?explode(",",$brands->brand_sub_category):[];
 $store_map = (!empty($brands))?$brands->store_map:'';
 $brand_street = (!empty($brands))?$brands->brand_street:'';
 $brand_category = (!empty($brands))?explode(",",$brands->brand_category):[];
@@ -106,22 +106,22 @@ $order_home = (!empty($brands))?$brands->order_home:'';
                                     </select>
                                 </div>
 
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-6 mb-3 d-none">
                                     <label for="">Weekday Operational Start Time</label>
                                     <input type="text" class="form-control form-control-sm input-sm week_hour_start" name="from_week_hour" value="<?=$from_hour_week;?>">
                                 </div>
 
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-6 mb-3 d-none">
                                     <label for="">Weekday Operational End Time</label>
                                     <input type="text" class="form-control form-control-sm input-sm week_end_time" name="to_week_hour" value="<?=$to_week_hour;?>">
                                 </div>
 
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-6 mb-3 d-none">
                                     <label for="">Weekend Operational Start Time</label>
                                     <input type="text" class="form-control form-control-sm input-sm weekend_hour_start" name="from_weekend_hour" value="<?=$from_hour_weekend;?>">
                                 </div>
 
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-6 mb-3 d-none">
                                     <label for="">Weekend Operational End Time</label>
                                     <input type="text" class="form-control form-control-sm input-sm weekend_end_hour" name="to_weekend_hour" value="<?=$to_weekend_hour;?>">
                                 </div>
@@ -132,7 +132,7 @@ $order_home = (!empty($brands))?$brands->order_home:'';
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Brand Type</label><br>
+                                    <label for="">Brand Type (For homepage & street display)</label><br>
                                     <select name="brand_type" class="form-control form-control-sm">
                                         <option selected="" disabled>Select Type</option>
                                         <option value="Play" <?php if($brand_type == "Play"){echo "selected";}?>>Play</option>
@@ -147,9 +147,7 @@ $order_home = (!empty($brands))?$brands->order_home:'';
                                 </div>
 
 
-                                
-
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-6 mb-3 d-none">
                                     <label for="">Brand Email Contact</label>
                                     <input type="text" class="form-control form-control-sm input-sm" name="email_contact" value="<?=$brand_contact_email;?>">
                                 </div>
@@ -173,7 +171,7 @@ $order_home = (!empty($brands))?$brands->order_home:'';
                                     </select>
                                 </div>
 
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-6 mb-3 d-none">
                                     <label for="">Brand Audience</label>
                                     <select name="brand_audience" class="form-control form-control-sm">
                                         <option selected disabled>Select Audience</option>
@@ -195,13 +193,12 @@ $order_home = (!empty($brands))?$brands->order_home:'';
                                     <?php } }?>
                                     </select>
                                 </div>
-
                                 <div class="col-md-6 mb-3">
                                     <label for="">Brand Sub Category (Single/Multi Select with Shift Key)</label>
-                                    <select name="sub_category" id="sub_category" class="form-control form-control-sm">
+                                    <select name="sub_category[]" id="sub_category" class="form-control form-control-sm" multiple>
                                         <option disabled="" selected>Select Sub-Category</option>
                                         <?php if(!empty($sub_category)){ foreach($sub_category as $sc){?>
-                                        <option value="<?php echo $sc['name']; ?>" <?php if($sc['name'] == $brand_sub_category) { echo "selected"; } ?>><?php echo $sc['name']; ?></option>
+                                        <option value="<?php echo $sc['name']; ?>" <?php if(in_array($sc['name'],$brand_sub_category)){echo "selected";}?>><?php echo $sc['name']; ?></option>
                                         <?php } }?>
                                     </select>
                                 </div>
@@ -230,11 +227,9 @@ $order_home = (!empty($brands))?$brands->order_home:'';
                                     <label for="">Order On Home Page</label>
                                     <select name="order_home" class="form-control form-control-sm input-sm" >
                                     <option disabled="" selected>Select Preference</option>
-                                    <option value="1" <?php if($order_home == "1"){echo "selected";}?>>1</option>
-                                    <option value="2" <?php if($order_home == "2"){echo "selected";}?>>2</option>
-                                    <option value="3" <?php if($order_home == "3"){echo "selected";}?>>3</option>
-                                    <option value="4" <?php if($order_home == "4"){echo "selected";}?>>4</option>
-                                    <option value="5" <?php if($order_home == "5"){echo "selected";}?>>5</option>
+                                    <?php for($i=1;$i<=30;$i++){?>
+                                    <option value="<?php echo $i; ?>" <?php if($i == $order_home){echo "selected";}?>><?php echo $i; ?></option>
+                                    <?php } ?>
                                     </select>
                                 </div>
 

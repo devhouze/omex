@@ -215,7 +215,7 @@
                         <div class="carousel-item position-relative">
                             <img src="<?php echo base_url(); ?>assets/images/public/home/san-m.jpg" class="d-block w-100" alt="...">
                             <div class="card san-bg">
-                                <img src="<?php echo base_url(); ?>assets/images/public/home/S-S.svg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/s-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/s-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
@@ -223,7 +223,7 @@
                         <div class="carousel-item position-relative">
                             <img src="<?php echo base_url(); ?>assets/images/public/home/hon-m.jpg" class="d-block w-100" alt="...">
                             <div class="card hon-bg">
-                                <img src="<?php echo base_url(); ?>assets/images/public/home/h-S.svg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/h-s.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/h-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
@@ -232,7 +232,7 @@
 
                     </div>
                     <div class="arow-btns">
-                    <a class="carousel-control-prev" href="#carouselExampleIndicatorsss" role="button" data-bs-slide="prev">
+                        <a class="carousel-control-prev" href="#carouselExampleIndicatorsss" role="button" data-bs-slide="prev">
                             <img src="<?php echo base_url(); ?>assets/images/public/home/left.svg" alt="" class="w-100">
                         </a>
                         <a class="carousel-control-next" href="#carouselExampleIndicatorsss" role="button" data-bs-slide="next">
@@ -358,9 +358,11 @@
                                                 <div class="box-calander">
                                                     <div class="top-row">
 
-                                                        <div class="left-col"><span><?php if ($event['date_available'] == 0) { echo date('Y', strtotime($event['start_date']));} ?></span></div>
+                                                        <div class="left-col"><span><?php if ($event['date_available'] == 0) {
+                                                                                        echo date('Y', strtotime($event['start_date']));
+                                                                                    } ?></span></div>
                                                         <div class="right-col">
-                                                            <h2 class="position-relative"><?php echo date('d',strtotime($event['start_date']));?> <span><?php echo date('M',strtotime($event['start_date']));?></span>-<?php echo date('d',strtotime($event['end_date']));?> <span><?php echo date('M',strtotime($event['end_date']));?></span></h2>
+                                                            <h2 class="position-relative"><?php echo date('d', strtotime($event['start_date'])); ?> <span><?php echo date('M', strtotime($event['start_date'])); ?></span> - <?php echo date('d', strtotime($event['end_date'])); ?> <span><?php echo date('M', strtotime($event['end_date'])); ?></span></h2>
                                                         </div>
                                                     </div>
 
@@ -379,8 +381,8 @@
                                         </div>
                                     </div>
                                     <div class="row justify-content-center">
-                                        <div class="col-md-10">
-                                            <a href="<?php echo base_url('event-details/'.$event['event_id'])?>" class="primary-btn d-inline-block mt-36">KNOW MORE</a>
+                                        <div class="col-md-12">
+                                            <a href="<?php echo base_url('event-details/' . $event['event_id']) ?>" class="primary-btn d-inline-block mt-36">KNOW MORE</a>
                                         </div>
                                     </div>
                                 </div>
@@ -399,10 +401,10 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 </div>
-<div class="expreance-gallary py-30 gray-bg">
+<div class="expreance-gallary py-30 gray-bg ">
     <div class="container">
         <div class="row">
             <div class="col-md-12 positoin-relative">
@@ -437,9 +439,9 @@
                             <div class="owl-carousel slider wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
                                 <?php if (!empty($all_gallery)) {
                                     foreach ($all_gallery as $gallery) { ?>
-                                            <div class="item" data-bs-toggle="modal" data-bs-target="#image-modal">
-                                                <img src="<?php echo base_url('assets/images/public/home/' . $gallery['media_name']); ?>">
-                                            </div>
+                                        <div class="item" data-bs-toggle="modal" data-bs-target="#image-modal">
+                                            <img src="<?php echo base_url('assets/images/public/home/' . $gallery['media_name']); ?>">
+                                        </div>
                                 <?php }
                                 } ?>
                             </div>
@@ -450,9 +452,9 @@
                             <div class="owl-carousel sliders">
                                 <?php if (!empty($interior_gallery)) {
                                     foreach ($interior_gallery as $interior) { ?>
-                                            <div class="item">
-                                                <img src="<?php echo base_url('assets/images/public/home/' . $interior['media_name']); ?>" class="interior">
-                                            </div>
+                                        <div class="item">
+                                            <img src="<?php echo base_url('assets/images/public/home/' . $interior['media_name']); ?>" class="interior">
+                                        </div>
                                 <?php }
                                 } ?>
                             </div>
@@ -463,9 +465,9 @@
                             <div class="owl-carousel sliders">
                                 <?php if (!empty($exterior_gallery)) {
                                     foreach ($exterior_gallery as $exterior) { ?>
-                                            <div class="item">
-                                                <img src="<?php echo base_url('assets/images/public/home/' . $exterior['media_name']); ?>" class="all" class="exterior">
-                                            </div>
+                                        <div class="item">
+                                            <img src="<?php echo base_url('assets/images/public/home/' . $exterior['media_name']); ?>" class="all" class="exterior">
+                                        </div>
                                 <?php }
                                 } ?>
                             </div>
@@ -475,10 +477,10 @@
                             <div class="owl-carousel sliders">
                                 <?php if (!empty($construction_gallery)) {
                                     foreach ($construction_gallery as $construction) { ?>
-                                            <div class="item">
-                                                <img src="<?php echo base_url('assets/images/public/home/' . $construction['media_name']); ?>" class="construction">
-                                            </div>
-                                        
+                                        <div class="item">
+                                            <img src="<?php echo base_url('assets/images/public/home/' . $construction['media_name']); ?>" class="construction">
+                                        </div>
+
                                 <?php }
                                 } ?>
                             </div>

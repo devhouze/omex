@@ -60,7 +60,7 @@ header.header.sticky {
 }
 
 .main-menu .navbar-nav>li>a {
-    padding: 0 !important;
+    padding: 10px 5px !important;
     color: var(--black);
     font-size: calc(var(--v2) * 8);
 }
@@ -354,9 +354,23 @@ a.banner-link {
     z-index: 1;
 }
 
+.image-modal button {
+    border: none;
+    background: transparent;
+}
+
+#image-modal button {
+    border: blanchedalmond;
+    background: transparent;
+}
+
 .looking-out div#carouselExampleControls .position-absolute {
     right: 0px;
-    bottom: -87px;
+    bottom: 20px;
+}
+
+span.text-danger.errors_msg {
+    color: white !important;
 }
 
 .exploer-btn {
@@ -407,6 +421,7 @@ a.banner-link {
     position: relative;
     overflow: hidden;
     border-radius: 50%;
+    -webkit-border-radius: 50%;
 }
 
 .experience .carousel-indicators li+li {
@@ -492,7 +507,16 @@ a.banner-link {
 }
 
 .top-brands .owl-item.active+.owl-item.active {
-    border-left: 3px solid #dadada;
+    border-left: 3px solid #dadada4f;
+}
+
+.top-brands .owl-item.active .item {
+    width: 150px;
+    height: 160px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .top-brands .owl-theme .owl-nav [class*='owl-'] {
@@ -791,7 +815,7 @@ a.banner-link {
 }
 
 .barnd-page .live-in-word .slider-counter {
-    bottom: 110px;
+    bottom: 40px;
 }
 
 .live-in-word .slider-counter span {
@@ -1122,6 +1146,10 @@ a.banner-link {
     letter-spacing: 0.14em;
 }
 
+.contect-content ul li a {
+    color: #03518B;
+}
+
 .contact-map .card {
     border: 3px solid #03518B !important;
     border-radius: 0;
@@ -1215,6 +1243,10 @@ a.banner-link {
     height: 233px;
     overflow: hidden;
     border: 1px solid black;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .shop-details {
@@ -1306,14 +1338,14 @@ a.banner-link {
     top: 43%;
     text-align: center;
     color: white;
-    font-size: 30px;
-    padding: 4px 10px;
+    font-size: 18px;
+    padding: 10px 10px;
     transition: 0.5s all;
     opacity: 0;
 }
 
 .barnd-page .similar.barnd {
-    padding-top: 250px;
+    padding-top: 320px;
 }
 
 .barnd-page .live-in-word figure {
@@ -1400,6 +1432,7 @@ a.banner-link {
     height: 200px;
     right: 40px;
     z-index: 1;
+    background: white;
 }
 
 .img-box .brnad-logo img {
@@ -1473,12 +1506,32 @@ a.banner-link {
 
 .product-box figure {
     border: 1px solid black;
+    width: 250px;
+    height: 200px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-box figure img {
+    max-width: 100%;
+}
+
+.product-box a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 
 .product-box {
     font-size: 24px;
     color: var(--h-color);
     margin-bottom: 40px;
+    position: relative;
 }
 
 .event-page .looking-out h2 {
@@ -1607,6 +1660,7 @@ a.banner-link {
 
 .expoler-modal .modal-body ul li {
     width: calc(100% /5);
+    margin: 15px;
 }
 
 .expoler-modal .modal-body button.btn-close {
@@ -1659,7 +1713,10 @@ a.banner-link {
         margin-top: 30px;
     }
     .live-in-word .owl-nav {
-        padding: 0px 0 20px 0;
+        padding: 20px 0 20px 0;
+    }
+    .category li img {
+        width: 60%;
     }
     .live-in-word .slider-counter {
         left: 0;
@@ -1739,7 +1796,7 @@ a.banner-link {
         justify-content: center;
     }
     .tab-area .owl-nav {
-        margin-top: 90px !important;
+        margin-top: 60px !important;
     }
     div#navbarNavDropdown {
         left: 0;
@@ -1829,10 +1886,10 @@ a.banner-link {
         font-size: 14px;
     }
     .tab-area .slider-counter {
-        bottom: 60px;
+        bottom: 35px;
     }
     .looking-out h2 {
-        font-size: 26px;
+        font-size: 22px;
         display: table;
         text-shadow: -2px 0px 0px #cc1f38;
         line-height: 45px;
@@ -1878,7 +1935,7 @@ a.banner-link {
         height: calc(100% - 90px);
     }
     .looking-out .primary-btn {
-        margin: 100px auto 0px auto;
+        margin: 40px auto 0px auto;
         display: table !important;
     }
     .looking-out div#carouselExampleControls .position-absolute {
@@ -1912,14 +1969,14 @@ a.banner-link {
     }
     .top-brands .owl-theme .owl-nav .owl-prev {
         left: 0px;
-        bottom: 40px;
+        bottom: 40%;
     }
     .top-brands .owl-theme .owl-nav .owl-next {
         right: 0px;
-        bottom: 40px;
+        bottom: 40%;
     }
     .top-brands .owl-theme .owl-nav [class*='owl-'] img {
-        width: 50px;
+        width: 50px !important;
     }
     .v-line {
         height: 84px;
@@ -1931,7 +1988,7 @@ a.banner-link {
         width: 100%;
     }
     form .row>* {
-        margin-top: 30px;
+        margin-top: 10px;
     }
     .contect-content ul li {
         padding-right: 0;
@@ -1941,10 +1998,11 @@ a.banner-link {
         margin-top: 20px;
     }
     .brand-lgoo {
-        width: 190px;
-        height: auto;
+        width: 160px;
+        height: 180px;
         left: 0;
         bottom: -90px;
+        padding: 10px;
     }
     .bg-color {
         width: 100%;
@@ -2013,7 +2071,7 @@ a.banner-link {
         width: 120px;
     }
     .whats-new .row>* {
-        padding: 0;
+        padding: 0 !important;
     }
     .whats-new p {
         padding: 0 60px;
@@ -2028,7 +2086,7 @@ a.banner-link {
         right: 0;
         margin: auto;
         width: 112px;
-        height: auto;
+        height: 120px;
         bottom: -20px;
     }
     .car-ions .carousel-control-prev {
@@ -2041,7 +2099,7 @@ a.banner-link {
     }
     .car-ions {
         justify-content: space-between;
-        bottom: 34px;
+        bottom: 15px;
     }
     .img-box {
         margin-bottom: 50px;
@@ -2159,7 +2217,7 @@ a.banner-link {
         margin: 20px;
     }
     .expoler-modal .modal-body ul li {
-        width: 46%;
+        width: calc(100% / 2 - 30px);
         margin-bottom: 10px;
     }
     .expoler-modal .modal-body ul {
@@ -2172,6 +2230,50 @@ a.banner-link {
     .expoler-modal .modal-body button.btn-close {
         right: 15px;
         top: 15px;
+    }
+    .barnd-page .live-in-word figure img {
+        max-width: 250px;
+    }
+    .main-menu .dropdown-menu li+li a {
+        border: none !important;
+    }
+    .expreance-gallary {
+        padding-top: 80px;
+    }
+    .footer-signup h3 {
+        margin-bottom: 0;
+    }
+    .form-area h3 {
+        margin-bottom: 0;
+    }
+    .form-area form .row>* {
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+    .contact-map iframe {
+        height: 400px;
+    }
+    .product-box figure {
+        width: 100%;
+        height: 140px;
+    }
+    .find-us iframe {
+        height: 400px;
+    }
+    .looking-out div#carouselExampleControls .position-absolute a img,
+    .owl-nav button img,
+    .live-in-word .owl-nav button img {
+        width: 80px !important;
+    }
+    .tab-area ul li a {
+        margin-bottom: 0 !important;
+    }
+    .slider-counter span,
+    .more-expoler .slider-counter span {
+        width: 60px;
+    }
+    .slider-counter {
+        font-size: 20px;
     }
 }
 

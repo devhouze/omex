@@ -994,6 +994,9 @@
     .pr-sm0 {
         padding-right: 0;
     }
+    .mt-sm-30 {
+        margin-top: calc(var(--v2) * 15);
+    }
     .mt-sm0 {
         margin-top: 0;
     }
@@ -1022,6 +1025,9 @@
     }
     .fz18-sm {
         font-size: calc(var(--v2) * 9);
+    }
+    .fz16-sm {
+        font-size: calc(var(--v2) * 8);
     }
     .fz20-sm {
         font-size: calc(var(--v2) * 10);

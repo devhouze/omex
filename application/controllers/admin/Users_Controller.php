@@ -9,7 +9,7 @@ class Users_Controller extends MY_Controller {
 		$this->load->model('admin/Users_Model','um');
 	}
 	
-	public function users_list($page = 0)
+	public function users_list($page = 0,$column=null,$order=null)
 	{
 		$per_page = "10";
         if ($page != 0) {
@@ -32,9 +32,9 @@ class Users_Controller extends MY_Controller {
         }
         $keyword = $this->session->userdata('user');
 
-        $total_count = $this->um->get_users($per_page,$page,$keyword,true);
+        $total_count = $this->um->get_users($per_page,$page,$keyword,$column,$order,true);
         $data['pagination'] = $this->pagination('users',$total_count,$per_page);
-        $data['users'] = $this->um->get_users($per_page,$page,$keyword);
+        $data['users'] = $this->um->get_users($per_page,$page,$keyword,$column,$order);
         $end = (($data['users'])?count($data['users']):0) + (($page) ? $page : 0);
         $start = (count($data['users']) > 0)?($page + 1):0;
         $data['result_count'] = "Showing " . $start . " - " . $end . " of " . $total_count . " Results";

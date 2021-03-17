@@ -284,7 +284,7 @@ class Welcome_model extends CI_Model
     {
         ($street !='null' && $street !='')?$this->db->like('brand_street',$street):'';
         ($category !='null' && $category !='')?$this->db->like('brand_category',$category):'';
-        ($letter !='null' && $street !='')?$this->db->like('brand_name',$letter):'';
+        ($letter !='null' && $letter !='')?$this->db->like('brand_name',$letter):'';
         if($sort = 'A-Z'){
             $this->db->order_by('brand_name','asc');
         } elseif($sort = 'Z-A'){
@@ -298,15 +298,16 @@ class Welcome_model extends CI_Model
             $this->db->or_where('brand_sub_category',$filter);
 
         }
-        (!$count)?$this->db->limit($limit):'';
+        (!$count)?$this->db->limit($limit,0):'';
         $query = $this->db->get('tbl_brand');
         if($count){
             return $query->num_rows();
         }
         if($query->num_rows() > 0){
             return $query->result_array();
+        } else {
+            return [];
         }
-        return [];
     }
 }
 

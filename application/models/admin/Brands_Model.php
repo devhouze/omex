@@ -8,7 +8,7 @@ class Brands_Model extends MY_Model
         $this->load->model('Brands_Model','bm');
     }
 
-    public function get_brands($per_page,$page,$keyword,$count=false)
+    public function get_brands($per_page,$page,$keyword,$column,$order,$count=false)
     {
         $this->db->select('brand_id, brand_name, tbl_brand.status, tbl_admin.name as created_by, date_format(tbl_brand.created_on,"%d-%m-%Y") as created_on, brand_location, brand_logo');
         $this->db->join('tbl_admin','admin_id = tbl_brand.created_by');
@@ -16,8 +16,9 @@ class Brands_Model extends MY_Model
         (!empty($keyword['brand_name']))?$this->db->like('brand_name',$keyword['brand_name']):'';
         (!empty($keyword['status']))?$this->db->where('tbl_brand.status',$keyword['status']):'';
         (!$count)?$this->db->limit($per_page,$page):'';
-        $this->db->order_by('brand_id','desc');
+        (!empty($column) && !empty($order))?$this->db->order_by($column,$order):$this->db->order_by('brand_id','desc');
         $query = $this->db->get('tbl_brand');
+        // echo $this->db->last_query();
         if($count){
             return $query->num_rows();
         } elseif($query->num_rows() > 0){
@@ -27,7 +28,7 @@ class Brands_Model extends MY_Model
         return [];
     }
 
-    public function get_brands_offer($per_page,$page,$keyword,$count=false)
+    public function get_brands_offer($per_page,$page,$keyword,$column,$order,$count=false)
     {
        $this->db->select('offer_id, offer_name, tbl_brand_offer.status, tbl_admin.name as created_by, date_format(tbl_brand_offer.created_on,"%d-%m-%Y") as created_on, offer_thumbnail, thumbnail_alt, brand_name');
         $this->db->join('tbl_admin','admin_id = tbl_brand_offer.created_by');
@@ -37,7 +38,7 @@ class Brands_Model extends MY_Model
         (!empty($keyword['offer_name']))?$this->db->like('offer_name',$keyword['offer_name']):'';
         (!empty($keyword['status']))?$this->db->where('tbl_brand.status',$keyword['status']):'';
         (!$count)?$this->db->limit($per_page,$page):'';
-        $this->db->order_by('offer_id','desc');
+        (!empty($column) && !empty($order))?$this->db->order_by($column,$order):$this->db->order_by('offer_id','desc');
         $query = $this->db->get('tbl_brand_offer');
         if($count){
             return $query->num_rows();
@@ -76,18 +77,21 @@ class Brands_Model extends MY_Model
 
     public function get_sub_category($cat_name)
     {
-        $cat_id_query = $this->db->select('id')
-                                 ->where_in('category_name',$cat_name)
-                                 ->get('tbl_category')->result_array();
-        foreach ($cat_id_query as $value) {
-            $cate_id[] = $value['id'];
+        foreach (explode(',',$cat_name) as $value) {
+            $cat_id_query = $this->db->select('id')
+                                 ->where('category_name',$value)
+                                 ->get('tbl_category')->row_array();
+            
+            $query = $this->db->select('id, name,cat_id')
+                                 ->where('cat_id',$cat_id_query['id'])
+                                 ->get('tbl_sub_category');
+            if($query->num_rows() > 0)
+            {
+                $sb_cat = $query->result_array();
+            }
         }
-        $query = $this->db->select('id, name')
-                          ->where_in('cat_id',$cate_id)
-                          ->get('tbl_sub_category');
-        if($query->num_rows() > 0)
-        {
-            return $query->result_array();
+        if(!empty($sb_cat)){
+            return $sb_cat;
         }
         return [];
     }
