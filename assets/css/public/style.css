@@ -1454,6 +1454,10 @@ span.text-danger.errors_msg {
     right: 40px;
     z-index: 1;
     background: white;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    padding: 20px;
 }
 
 .img-box .brnad-logo img {
