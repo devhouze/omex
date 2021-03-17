@@ -36,10 +36,15 @@ header.header.sticky {
 .main-menu .dropdown-menu li a {
     padding: 7px 30px 7px 18px !important;
     font-size: 18px;
+    color: #083d68 !important;
+}
+
+.main-menu .navbar-nav li a {
+    color: #083d68 !important;
 }
 
 .main-menu .dropdown-menu li+li a {
-    border-top: 1px solid var(--black) !important;
+    border-top: 1px solid rgb(51 51 51 / 20%) !important;
     color: var(--black);
 }
 
@@ -66,7 +71,7 @@ header.header.sticky {
 }
 
 .main-menu .navbar-nav li a.active {
-    color: var(--primary-color);
+    color: #1c67b4 !important;
     font-weight: 600;
 }
 
