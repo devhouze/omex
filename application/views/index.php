@@ -45,7 +45,7 @@
                             foreach ($banner as $value) { ?>
                                 <div class="carousel-item <?= ($i == 1) ? 'active' : '';
                                                             $i++; ?>">
-                                    <img src="<?php echo base_url('assets/images/public/home/' . $value['banner_web']); ?>" alt="<?= $value['comment']; ?>" class="d-table mx-auto w-100">
+                                    <img src="<?php echo base_url('assets/images/public/home/' . $value['banner_mobile']); ?>" alt="<?= $value['comment']; ?>" class="d-table mx-auto w-100">
                                     <a href="#" class="banner-link"></a>
                                 </div>
                         <?php }
