@@ -980,6 +980,8 @@
     background: transparent;
     font-size: calc(var(--v2) * 10);
     padding: 20px 52px;
+    position: relative;
+    z-index: 1;
 }
 
 .primary-btn:hover {
