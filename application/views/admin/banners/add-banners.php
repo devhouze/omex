@@ -4,7 +4,7 @@ $comment = (!empty($banner))?$banner['comment']:'';
 $banner_type = (!empty($banner))?$banner['banner_type']:'';
 $banner_link = (!empty($banner))?$banner['banner_link']:'';
 ?>
-<script src="<?=base_url('assets/js/admin/banner.js')?>"></script>
+
 <div class="content-wrapper">
     <div class="content">
         <div class="row">
@@ -33,7 +33,8 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
 
                                 <div class="col-md-5 mb-3">
                                     <label for="">For Web<span class="image-type">(For best view upload images in 1366px*553px)</span></label>
-                                    <input type="file" class="form-control form-control-sm input-sm" name="banner_web" value="" onchange="checkFileDetails()">
+                                    <input type="file"  class="form-control form-control-sm input-sm" name="banner_web" value="" onchange="checkFileDetails(1341,553,this)">
+                                       <span style="color: red;font-size: 9px;"></span>
 
                                 </div>
                                 <div class="col-md-1 mb-3">
@@ -51,7 +52,8 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
 
                             <div class="col-md-5 mb-3">
                                 <label for="">For Mobile<span class="image-type">(For best view upload images in 748px*1102px)</span></label>
-                                <input type="file" class="form-control form-control-sm input-sm" name="banner_mobile" value="">
+                                <input type="file" class="form-control form-control-sm input-sm" name="banner_mobile" value="" onchange="checkFileDetails(748,1102,this)">
+                                   <span style="color: red;font-size: 9px;"></span>
                                 
                             </div>
                             <div class="col-md-1 mb-3">
@@ -64,6 +66,19 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
                           <div class="col-md-6 mb-3">
                             <label for="">Banner Link</label>
                             <input type="text" class="form-control form-control-sm input-sm" name="banner_link" value="<?php echo $banner_link; ?>">
+                        </div>
+
+                          <div class="col-md-6 mb-3" id="streets" style="display:none">
+                            <label for="">Link</label>
+                            <select name="link_type" class="form-control form-control-sm link_type" >
+                                <option value="1">Event</option>
+                                <option value="2">Brand</option>
+                                <option value="3">What’s New</option>
+                                <option value="4">Street</option>
+                                <option value="5">Contact Us</option>
+                                <option value="6">Any Other</option>
+                             
+                            </select>
                         </div>
 
                         <div class="col-md-6 mb-3" id="streets" style="display:none">
@@ -101,6 +116,8 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
 </div>
 </div>
 </div>
+
+<script src="<?=base_url('assets/js/admin/banner.js')?>"></script>
 <script>
     $( document ).ready(function(){
         $('#banner_type').change(function(){
@@ -132,4 +149,63 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
     });
 
 
+</script>
+
+<script>
+    function checkFileDetails(width,height,file) {
+        var fi = file;
+        if (fi.files.length > 0) {      // FIRST CHECK IF ANY FILE IS SELECTED.
+           
+            for (var i = 0; i <= fi.files.length - 1; i++) {
+                var fileName, fileExtension, fileSize, fileType, dateModified;
+
+                // FILE NAME AND EXTENSION.
+                fileName = fi.files.item(i).name;
+                fileExtension = fileName.replace(/^.*\./, '');
+
+                // CHECK IF ITS AN IMAGE FILE.
+                // TO GET THE IMAGE WIDTH AND HEIGHT, WE'LL USE fileReader().
+                if (fileExtension == 'png' || fileExtension == 'jpg' || fileExtension == 'jpeg') {
+                   readImageFile(fi.files.item(i),width,height, fi);             // GET IMAGE INFO USING fileReader().
+                }
+               
+            }
+
+            // GET THE IMAGE WIDTH AND HEIGHT USING fileReader() API.
+            function readImageFile(file,width,heigh, fi) {
+                var reader = new FileReader(); // CREATE AN NEW INSTANCE.
+
+                reader.onload = function (e) {
+                    var img = new Image();      
+                    img.src = e.target.result;
+
+                    img.onload = function () {
+                        var w = this.width;
+                        var h = this.height;
+
+                        if(w==width && h==height){
+                          $(fi).nextAll('span:first').text('');
+                            $('.submit-form').removeAttr('disabled');
+                        }else{
+
+                            $('.submit-form').prop("disabled", true);
+                             $(fi).nextAll('span:first').text('Image Dimension must be '+width+' x '+height);
+                        }
+
+
+                        // document.getElementById('fileInfo').innerHTML =
+                        //     document.getElementById('fileInfo').innerHTML + '<br /> ' +
+                        //         'Name: <b>' + file.name + '</b> <br />' +
+                        //         'File Extension: <b>' + fileExtension + '</b> <br />' +
+                        //         'Size: <b>' + Math.round((file.size / 1024)) + '</b> KB <br />' +
+                        //         'Width: <b>' + w + '</b> <br />' +
+                        //         'Height: <b>' + h + '</b> <br />' +
+                        //         'Type: <b>' + file.type + '</b> <br />' +
+                        //         'Last Modified: <b>' + file.lastModifiedDate + '</b> <br />';
+                    }
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    }
 </script>

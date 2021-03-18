@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() {
     const url = $('body').data('url');
     const base_url = $('body').data('base_url');
@@ -118,3 +120,5 @@ $(document).ready(function() {
     });
 
 });
+
+
