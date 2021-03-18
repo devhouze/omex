@@ -232,6 +232,8 @@ class Banner_Controllers extends my_controller
 		$this->load->view('admin/include/header_end');
 		$this->load->view('admin/include/body_start');
         $this->load->view('admin/include/sidebar');
+
+        // print_r($data); die;
 		$this->load->view('admin/banners/add-banners',$data);
 		$this->load->view('admin/include/body_end');
 		$this->load->view('admin/include/admin_js');
