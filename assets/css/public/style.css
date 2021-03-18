@@ -1708,8 +1708,11 @@ span.text-danger.errors_msg {
     margin-bottom: 30px;
 }
 
-.event-page .looking-out .primary-btn {
-    display: none !important;
+.event-p-carosol {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
 }
 
 .expoler-modal .modal-body ul li a {
@@ -1724,6 +1727,25 @@ span.text-danger.errors_msg {
 
 .expoler-modal .modal-body ul li {
     position: relative;
+}
+
+.about-brand .carousel figure {
+    width: 390px;
+    height: 530px;
+}
+
+.about-brand .carousel figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.street-carosul {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    justify-content: center;
 }
 
 
