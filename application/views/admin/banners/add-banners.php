@@ -21,9 +21,9 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
                                     <label for="">Banner Type</label>
                                     <select name="banner_type" id="banner_type" class="form-control form-control-sm">
                                         <option selected="" disabled>Select Option</option>
-                                        <option value="1" <?php if($banner_type == '1'){ echo "selected"; }?>>Home Page</option>
-                                        <option value="2" <?php if($banner_type == '2'){ echo "selected"; }?>>Event</option>
-                                        <option value="3" <?php if($banner_type == '3'){ echo "selected"; }?>>Brand Directory</option>
+                                        <option value="1" <?php if($banner_type == '1'){ echo "selected";  }?>>Home Page</option>
+                                        <option value="2" <?php if($banner_type == '2'){ echo "selected";  }?>>Event</option>
+                                        <option value="3" <?php if($banner_type == '3'){ echo "selected";  }?>>Brand Directory</option>
                                         <!-- <option value="4" <?php if($banner_type == '4'){ echo "selected"; }?>>Brand Discount</option> -->
                                     <!-- <option value="5" <?php if($banner_type == '5'){ echo "selected"; }?>>Brand</option>
                                         <option value="6" <?php if($banner_type == '6'){ echo "selected"; }?>>About Brand</option> -->
@@ -33,14 +33,14 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
 
                                 <div class="col-md-5 mb-3">
                                     <label for="">For Web<span class="image-type">(For best view upload images in 1366px*553px)</span></label>
-                                    <input type="file" class="form-control form-control-sm input-sm" name="banner_web" value="">
+                                    <input type="file" class="form-control form-control-sm input-sm" name="banner_web" value="" onchange="checkFileDetails()">
 
                                 </div>
                                 <div class="col-md-1 mb-3">
-
-                                    <?php  if(is_file("assets/images/public/home/".$banner['banner_web'])){ ?>
+                                    <?php if($banner_type==1){ $folder='home'; }elseif($banner_type==2){ $folder='event'; }else{ $folder='brand'; } ?>
+                                    <?php if(is_file("assets/images/public/".$folder."/".$banner['banner_web'])){ ?>
                                       <input type="hidden" class="form-control" name="banner_web" value="<?php echo $banner['banner_web'] ?>">  
-                                      <img src="<?php echo base_url(); ?>assets/images/public/home/<?php echo $banner['banner_web']; ?>" class="img-thumb" style="width:100px !important;" />
+                                      <img src="<?php echo base_url(); ?>assets/images/public/<?php echo $folder; ?>/<?php echo $banner['banner_web']; ?>" class="img-thumb" style="width:100px !important;" />
                                   <?php } ?>
                               </div>
 
@@ -55,9 +55,9 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
                                 
                             </div>
                             <div class="col-md-1 mb-3">
-                                <?php  if(is_file("assets/images/public/home/".$banner['banner_mobile'])){ ?>
+                                <?php  if(is_file("assets/images/public/".$folder."/".$banner['banner_mobile'])){ ?>
                                   <input type="hidden" class="form-control" name="banner_mobile" value="<?php echo $banner['banner_mobile'] ?>">  
-                                  <img src="<?php echo base_url(); ?>assets/images/public/home/<?php echo $banner['banner_mobile']; ?>" class="img-thumb" style="width:100px !important;" />
+                                  <img src="<?php echo base_url(); ?>assets/images/public/<?php echo $folder; ?>/<?php echo $banner['banner_mobile']; ?>" class="img-thumb" style="width:100px !important;" />
                               <?php } ?>
                           </div>
 
