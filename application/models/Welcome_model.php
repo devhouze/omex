@@ -84,7 +84,7 @@ class Welcome_model extends CI_Model
 
     public function get_home_banner()
     {
-        $query = $this->db->select('banner_web, comment')
+        $query = $this->db->select('banner_web,banner_mobile, comment')
                           ->where('status',0)
                           ->where('banner_type',1)
                           ->limit(3)
