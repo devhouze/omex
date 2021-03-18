@@ -115,6 +115,9 @@ $(document).ready(function() {
     $('#events_management').submit(function(e) {
         e.preventDefault();
         var form = $(this);
+        for (instance in CKEDITOR.instances) {
+            CKEDITOR.instances[instance].updateElement();
+        }
         $.ajax({
             type: 'post',
             url: form.attr('action'),
