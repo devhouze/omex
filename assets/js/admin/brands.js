@@ -203,7 +203,17 @@ $(document).ready(function() {
                         $('#brand_management select[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                         $('#brand_management textarea[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                     });
+                }
 
+                if (data.logo_error) {
+                    $('#brand_management input[name="brand_logo"]').after('<span class="text-danger errors_msg">' + data.logo_error + '</span>');
+                }
+
+                if (data.banner_web_error) {
+                    $('#brand_management input[name="banner_web"]').after('<span class="text-danger errors_msg">' + data.banner_web_error + '</span>');
+                }
+                if (data.banner_mobile_error) {
+                    $('#brand_management input[name="banner_mobile"]').after('<span class="text-danger errors_msg">' + data.banner_mobile_error + '</span>');
                 }
 
             }
