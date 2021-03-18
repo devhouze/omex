@@ -1,6 +1,6 @@
 <div class="main-slider d-flex flex-fill">
     <div class="container-fluid d-flex flex-fill">
-        <div class="row d-flex flex-fill">
+        <div class="row d-md-flex d-none flex-fill">
             <div class="col-md-12 d-flex flex-fill px-0">
                 <div id="carouselExampleIndicatorss" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
                     <ol class="carousel-indicators">
@@ -26,6 +26,33 @@
                 </div>
             </div>
         </div>
+        <div class="row d-md-none d-flex flex-fill">
+            <div class="col-md-12 d-flex flex-fill px-0">
+                <div id="carouselExampleIndicatorss" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="1"></li>
+                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+
+                        <?php if (!empty($banner)) {
+                            $i = 1;
+                            foreach ($banner as $value) { ?>
+                                <div class="carousel-item <?= ($i == 1) ? 'active' : '';
+                                                            $i++; ?>">
+                                    <img src="<?php echo base_url('assets/images/public/home/' . $value['banner_web']); ?>" alt="<?= $value['comment']; ?>" class="d-table mx-auto w-100">
+                                    <a href="#" class="banner-link"></a>
+                                </div>
+                        <?php }
+                        } ?>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 <div class="top-brands gray-bg py-30">
