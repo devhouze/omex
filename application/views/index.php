@@ -1,6 +1,36 @@
 <div class="main-slider d-flex flex-fill">
     <div class="container-fluid d-flex flex-fill">
-        <div class="row d-flex flex-fill">
+        <div class="row d-md-flex d-none flex-fill">
+            <div class="col-md-12 d-flex flex-fill px-0">
+                <div id="carouselExampleIndicatorss" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="1"></li>
+                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="2"></li>
+                    </ol>
+
+                    
+                    <div class="carousel-inner">
+
+                        <?php if (!empty($banner)) {
+                            $i = 1;
+                            foreach ($banner as $value) { ?>
+                                <div class="carousel-item <?= ($i == 1) ? 'active' : '';
+                                                            $i++; ?>">
+                                    <img src="<?php echo base_url('assets/images/public/home/' . $value['banner_web']); ?>" alt="<?= $value['comment']; ?>" class="d-table mx-auto w-100">
+                                    <a href="#" class="banner-link"></a>
+                                </div>
+                        <?php }
+                        } ?>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row d-md-none d-flex flex-fill">
             <div class="col-md-12 d-flex flex-fill px-0">
                 <div id="carouselExampleIndicatorss" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
                     <ol class="carousel-indicators">
@@ -26,6 +56,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 <div class="top-brands gray-bg py-30">
@@ -440,8 +471,8 @@
                             <div class="owl-carousel slider wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
                                 <?php if (!empty($all_gallery)) {
                                     foreach ($all_gallery as $gallery) { ?>
-                                        <div class="item" data-bs-toggle="modal" data-bs-target="#image-modal">
-                                            <img src="<?php echo base_url('assets/images/public/home/' . $gallery['media_name']); ?>">
+                                        <div class="item">
+                                            <img src="<?php echo base_url('assets/images/public/home/' . $gallery['media_name']); ?>" class="all">
                                         </div>
                                 <?php }
                                 } ?>
@@ -453,7 +484,7 @@
                             <div class="owl-carousel sliders">
                                 <?php if (!empty($interior_gallery)) {
                                     foreach ($interior_gallery as $interior) { ?>
-                                        <div class="item">
+                                        <div class="item" data-bs-toggle="modal" data-bs-target="#interior-image-modal">
                                             <img src="<?php echo base_url('assets/images/public/home/' . $interior['media_name']); ?>" class="interior">
                                         </div>
                                 <?php }
@@ -466,8 +497,8 @@
                             <div class="owl-carousel sliders">
                                 <?php if (!empty($exterior_gallery)) {
                                     foreach ($exterior_gallery as $exterior) { ?>
-                                        <div class="item">
-                                            <img src="<?php echo base_url('assets/images/public/home/' . $exterior['media_name']); ?>" class="all" class="exterior">
+                                        <div class="item" data-bs-toggle="modal" data-bs-target="#exterior-image-modal">
+                                            <img src="<?php echo base_url('assets/images/public/home/' . $exterior['media_name']); ?>" class="exterior">
                                         </div>
                                 <?php }
                                 } ?>

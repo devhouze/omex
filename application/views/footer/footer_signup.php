@@ -38,10 +38,13 @@
                                         <button type="submit" class="d-table mx-auto mt-60 sb-btn">SUBMIT</button>
                                     </div>
 
-
+                                    
 
                                 </div>
                             </form>
+                            <div class="col-md-12" id="success" style="display:none">
+                                <span class="text-white">Thank You!.</span>
+                            </div> 
                         </div>
                     </div>
                 </div>

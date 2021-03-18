@@ -120,25 +120,25 @@
                             <div class="row">
                                 <?php if(!empty($first_similar_brands[0]) && !empty($first_similar_brands[1])){?>
                                 <div class="col-md-4">
-                                    <figure><a href="#"></a><span><?php echo $first_similar_brands[0]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$first_similar_brands[0]['brand_logo']); ?>" alt="<?php echo $first_similar_brands[0]['brand_logo']?>" class="d-table mx-auto"></figure>
+                                    <figure><a href="<?php echo base_url('brand/'.$first_similar_brands[0]['brand_id'])?>"></a><span><?php echo $first_similar_brands[0]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$first_similar_brands[0]['brand_logo']); ?>" alt="<?php echo $first_similar_brands[0]['brand_logo']?>" class="d-table mx-auto"></figure>
 
-                                    <figure><a href="#"></a><span><?php echo $first_similar_brands[1]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$first_similar_brands[1]['brand_logo']); ?>" alt="<?php echo $first_similar_brands[1]['brand_logo']?>" class="d-table mx-auto"></figure>
+                                    <figure><a href="<?php echo base_url('brand/'.$first_similar_brands[1]['brand_id'])?>"></a><span><?php echo $first_similar_brands[1]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$first_similar_brands[1]['brand_logo']); ?>" alt="<?php echo $first_similar_brands[1]['brand_logo']?>" class="d-table mx-auto"></figure>
                                 </div>
                                 <?php } ?>
 
                                 <?php if(!empty($first_similar_brands[2]) && !empty($first_similar_brands[3])){?>
                                 <div class="col-md-4">
-                                    <figure><a href="#"></a><span><?php echo $first_similar_brands[2]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$first_similar_brands[2]['brand_logo']); ?>" alt="<?php echo $first_similar_brands[2]['brand_logo']?>" class="d-table mx-auto"></figure>
+                                    <figure><a href="<?php echo base_url('brand/'.$first_similar_brands[2]['brand_id'])?>"></a><span><?php echo $first_similar_brands[2]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$first_similar_brands[2]['brand_logo']); ?>" alt="<?php echo $first_similar_brands[2]['brand_logo']?>" class="d-table mx-auto"></figure>
 
-                                    <figure><a href="#"></a><span><?php echo $first_similar_brands[3]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$first_similar_brands[3]['brand_logo']); ?>" alt="<?php echo $first_similar_brands[3]['brand_logo']?>" class="d-table mx-auto"></figure>
+                                    <figure><a href="<?php echo base_url('brand/'.$first_similar_brands[3]['brand_id'])?>"></a><span><?php echo $first_similar_brands[3]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$first_similar_brands[3]['brand_logo']); ?>" alt="<?php echo $first_similar_brands[3]['brand_logo']?>" class="d-table mx-auto"></figure>
                                 </div>
                                 <?php } ?>
                                 
                                 <?php if(!empty($first_similar_brands[4]) && !empty($first_similar_brands[5])){?>
                                 <div class="col-md-4">
-                                    <figure><a href="#"></a><span><?php echo $first_similar_brands[4]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$first_similar_brands[4]['brand_logo']); ?>" alt="<?php echo $first_similar_brands[4]['brand_logo']?>" class="d-table mx-auto"></figure>
+                                    <figure><a href="<?php echo base_url('brand/'.$first_similar_brands[4]['brand_id'])?>"></a><span><?php echo $first_similar_brands[4]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$first_similar_brands[4]['brand_logo']); ?>" alt="<?php echo $first_similar_brands[4]['brand_logo']?>" class="d-table mx-auto"></figure>
 
-                                    <figure><a href="#"></a><span><?php echo $first_similar_brands[5]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$first_similar_brands[5]['brand_logo']); ?>" alt="<?php echo $first_similar_brands[5]['brand_logo']?>" class="d-table mx-auto"></figure>
+                                    <figure><a href="<?php echo base_url('brand/'.$first_similar_brands[5]['brand_id'])?>"></a><span><?php echo $first_similar_brands[5]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$first_similar_brands[5]['brand_logo']); ?>" alt="<?php echo $first_similar_brands[5]['brand_logo']?>" class="d-table mx-auto"></figure>
                                 </div>
                                 <?php } ?>
                             </div>
@@ -150,25 +150,25 @@
                             <div class="row">
                                 <?php if(!empty($second_similar_brands[0]) && !empty($second_similar_brands[1])){?>
                                 <div class="col-md-4">
-                                    <figure><span><?php echo $second_similar_brands[0]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$second_similar_brands[0]['brand_logo']); ?>" alt="<?php echo $second_similar_brands[0]['brand_logo']?>" class="d-table mx-auto"></figure>
+                                    <figure><a href="<?php echo base_url('brand/'.$second_similar_brands[0]['brand_id'])?>"></a><span><?php echo $second_similar_brands[0]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$second_similar_brands[0]['brand_logo']); ?>" alt="<?php echo $second_similar_brands[0]['brand_logo']?>" class="d-table mx-auto"></figure>
 
-                                    <figure><span><?php echo $second_similar_brands[1]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$second_similar_brands[1]['brand_logo']); ?>" alt="<?php echo $second_similar_brands[1]['brand_logo']?>" class="d-table mx-auto"></figure>
+                                    <figure><span><a href="<?php echo base_url('brand/'.$second_similar_brands[1]['brand_id'])?>"></a><?php echo $second_similar_brands[1]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$second_similar_brands[1]['brand_logo']); ?>" alt="<?php echo $second_similar_brands[1]['brand_logo']?>" class="d-table mx-auto"></figure>
                                 </div>
                                 <?php } ?>
 
                                 <?php if(!empty($second_similar_brands[2]) && !empty($second_similar_brands[3])){?>
                                 <div class="col-md-4">
-                                    <figure><span><?php echo $second_similar_brands[2]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$second_similar_brands[2]['brand_logo']); ?>" alt="<?php echo $second_similar_brands[2]['brand_logo']?>" class="d-table mx-auto"></figure>
+                                    <figure><span><a href="<?php echo base_url('brand/'.$second_similar_brands[2]['brand_id'])?>"></a><?php echo $second_similar_brands[2]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$second_similar_brands[2]['brand_logo']); ?>" alt="<?php echo $second_similar_brands[2]['brand_logo']?>" class="d-table mx-auto"></figure>
 
-                                    <figure><span><?php echo $second_similar_brands[3]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$second_similar_brands[3]['brand_logo']); ?>" alt="<?php echo $second_similar_brands[3]['brand_logo']?>" class="d-table mx-auto"></figure>
+                                    <figure><span><a href="<?php echo base_url('brand/'.$second_similar_brands[3]['brand_id'])?>"></a><?php echo $second_similar_brands[3]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$second_similar_brands[3]['brand_logo']); ?>" alt="<?php echo $second_similar_brands[3]['brand_logo']?>" class="d-table mx-auto"></figure>
                                 </div>
                                 <?php } ?>
                                 
                                 <?php if(!empty($second_similar_brands[4]) && !empty($second_similar_brands[5])){?>
                                 <div class="col-md-4">
-                                    <figure><span><?php echo $second_similar_brands[4]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$second_similar_brands[4]['brand_logo']); ?>" alt="<?php echo $second_similar_brands[4]['brand_logo']?>" class="d-table mx-auto"></figure>
+                                    <figure><span><a href="<?php echo base_url('brand/'.$second_similar_brands[4]['brand_id'])?>"></a><?php echo $second_similar_brands[4]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$second_similar_brands[4]['brand_logo']); ?>" alt="<?php echo $second_similar_brands[4]['brand_logo']?>" class="d-table mx-auto"></figure>
 
-                                    <figure><span><?php echo $second_similar_brands[5]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$second_similar_brands[5]['brand_logo']); ?>" alt="<?php echo $second_similar_brands[5]['brand_logo']?>" class="d-table mx-auto"></figure>
+                                    <figure><span><a href="<?php echo base_url('brand/'.$second_similar_brands[5]['brand_id'])?>"></a><?php echo $second_similar_brands[5]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$second_similar_brands[5]['brand_logo']); ?>" alt="<?php echo $second_similar_brands[5]['brand_logo']?>" class="d-table mx-auto"></figure>
                                 </div>
                                 <?php } ?>
                             </div>
@@ -180,25 +180,25 @@
                             <div class="row">
                                 <?php if(!empty($third_similar_brands[0]) && !empty($third_similar_brands[1])){?>
                                 <div class="col-md-4">
-                                    <figure><span><?php echo $third_similar_brands[0]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$third_similar_brands[0]['brand_logo']); ?>" alt="<?php echo $third_similar_brands[0]['brand_logo']?>" class="d-table mx-auto"></figure>
+                                    <figure><span><a href="<?php echo base_url('brand/'.$third_similar_brands[0]['brand_id'])?>"></a><?php echo $third_similar_brands[0]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$third_similar_brands[0]['brand_logo']); ?>" alt="<?php echo $third_similar_brands[0]['brand_logo']?>" class="d-table mx-auto"></figure>
 
-                                    <figure><span><?php echo $third_similar_brands[1]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$third_similar_brands[1]['brand_logo']); ?>" alt="<?php echo $third_similar_brands[1]['brand_logo']?>" class="d-table mx-auto"></figure>
+                                    <figure><span><a href="<?php echo base_url('brand/'.$third_similar_brands[1]['brand_id'])?>"></a><?php echo $third_similar_brands[1]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$third_similar_brands[1]['brand_logo']); ?>" alt="<?php echo $third_similar_brands[1]['brand_logo']?>" class="d-table mx-auto"></figure>
                                 </div>
                                 <?php } ?>
 
                                 <?php if(!empty($third_similar_brands[2]) && !empty($third_similar_brands[3])){?>
                                 <div class="col-md-4">
-                                    <figure><span><?php echo $third_similar_brands[2]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$third_similar_brands[2]['brand_logo']); ?>" alt="<?php echo $third_similar_brands[2]['brand_logo']?>" class="d-table mx-auto"></figure>
+                                    <figure><span><a href="<?php echo base_url('brand/'.$third_similar_brands[2]['brand_id'])?>"></a><?php echo $third_similar_brands[2]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$third_similar_brands[2]['brand_logo']); ?>" alt="<?php echo $third_similar_brands[2]['brand_logo']?>" class="d-table mx-auto"></figure>
 
-                                    <figure><span><?php echo $third_similar_brands[3]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$third_similar_brands[3]['brand_logo']); ?>" alt="<?php echo $third_similar_brands[3]['brand_logo']?>" class="d-table mx-auto"></figure>
+                                    <figure><span><a href="<?php echo base_url('brand/'.$third_similar_brands[3]['brand_id'])?>"></a><?php echo $third_similar_brands[3]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$third_similar_brands[3]['brand_logo']); ?>" alt="<?php echo $third_similar_brands[3]['brand_logo']?>" class="d-table mx-auto"></figure>
                                 </div>
                                 <?php } ?>
                                 
                                 <?php if(!empty($third_similar_brands[4]) && !empty($third_similar_brands[5])){?>
                                 <div class="col-md-4">
-                                    <figure><span><?php echo $third_similar_brands[4]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$third_similar_brands[4]['brand_logo']); ?>" alt="<?php echo $third_similar_brands[4]['brand_logo']?>" class="d-table mx-auto"></figure>
+                                    <figure><a href="<?php echo base_url('brand/'.$third_similar_brands[4]['brand_id'])?>"></a><span><?php echo $third_similar_brands[4]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$third_similar_brands[4]['brand_logo']); ?>" alt="<?php echo $third_similar_brands[4]['brand_logo']?>" class="d-table mx-auto"></figure>
 
-                                    <figure><span><?php echo $third_similar_brands[5]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$third_similar_brands[5]['brand_logo']); ?>" alt="<?php echo $third_similar_brands[5]['brand_logo']?>" class="d-table mx-auto"></figure>
+                                    <figure><span><a href="<?php echo base_url('brand/'.$third_similar_brands[5]['brand_id'])?>"></a><?php echo $third_similar_brands[5]['brand_name']?></span> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$third_similar_brands[5]['brand_logo']); ?>" alt="<?php echo $third_similar_brands[5]['brand_logo']?>" class="d-table mx-auto"></figure>
                                 </div>
                                 <?php } ?>
                             </div>
@@ -281,13 +281,13 @@
                             <div class="carousel-item  <?php if($i == 1){echo "active";}?>">
                                 <div class="row flex-fill">
                                     <div class="col-md-6 pe-md-4 d-flex flex-fill">
-                                        <div class="card d-flex flex-fill flex-column align-items-center justify-content-center border-0 rounded-0" style="background-color: #5A946E;">
+                                        <div class="card d-flex flex-fill flex-column align-items-center justify-content-center border-0 rounded-0 py-5" style="background-color: #5A946E;">
                                             <h2 class="fz40 fz24-sm pr-font text-white"><?php echo $new['brand_name']; ?></h2>
-                                            <p class="text-white text-center fz20 fw-5 mt-40 mb-0"><?php echo $new['about_brand']; ?></p>
+                                            <div class="text-white text-center fz20 fw-5 mt-40 mb-0 content-box"><?php echo $new['about_brand']; ?></div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="img-box positon-relative">
+                                        <div class="img-box positon-relative position-relative">
                                             <img src="<?php echo base_url('assets/images/public/brand/'.$new['banner_web']); ?>" alt="<?php echo $new['banner_comment']; ?>" class="d-table ml-auto">
                                             <div class="brnad-logo">
                                                 <img src="<?php echo base_url('assets/images/public/brand/'.$new['brand_logo']); ?>" alt="<?php echo $new['logo_message']; ?>" class="">

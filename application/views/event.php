@@ -8,7 +8,7 @@
                 <div class="col-md-10">
                     <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                         <?php include('common_events.php'); ?>
-                        <div class="d-flex justify-content-center mt-5">
+                        <div class="d-flex justify-content-center event-p-carosol">
                             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
                                 <img src="<?php echo base_url(); ?>assets/images/public/street/athens-left.svg" alt="" class="w-100">
                             </a>
@@ -129,7 +129,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <?php } }?>
+                            <?php $i++; } }?>
                         </div>
                         <div class="crsouls-btn-group">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlseven" data-bs-slide="prev">
