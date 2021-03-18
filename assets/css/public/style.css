@@ -1,4 +1,4 @@
-img {
+    img {
     max-width: 100%;
     height: auto;
 }
@@ -1453,7 +1453,7 @@ span.text-danger.errors_msg {
 
 .img-box .brnad-logo {
     position: absolute;
-    bottom: 10px;
+    bottom: 70px;
     width: 200px;
     height: 200px;
     right: 40px;
@@ -1729,7 +1729,6 @@ span.text-danger.errors_msg {
     position: relative;
 }
 
-
 .about-brand .carousel figure {
     width: 390px;
     height: 530px;
@@ -1747,721 +1746,707 @@ span.text-danger.errors_msg {
     right: 0;
     left: 0;
     justify-content: center;
-
-.live-in-word .col-md-4 figure a {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
-
-
-/* end brand directory page */
-
-@media only screen and (min-width: 1600px) {
-    .experience .carousel-item {
-        height: 550px;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .barnd-page .similar.barnd {
-        padding-top: 50px;
-    }
-    .paris-page .looking-out h2 {
-        text-shadow: 2px 0 0 #5B1545;
-    }
-    .london-page .looking-out h2 {
-        text-shadow: 2px 0 0 #CC1F38;
-    }
-    .san-page .looking-out h2 {
-        text-shadow: 2px 0px 0px #92193F;
-    }
-    .amsterdam-page .looking-out h2 {
-        text-shadow: 2px 0 0 #669BBC;
-    }
-    .hongkong-page .looking-out h2 {
-        text-shadow: 2px 0 0 #f25832;
-    }
-    .portugal-page .looking-out h2 {
-        text-shadow: 2px 0px 0px #e0a50b;
-    }
-    .box-calander {
-        margin-top: 30px;
-    }
-    .live-in-word .owl-nav {
-        padding: 20px 0 20px 0;
-    }
-    .category li img {
-        width: 60%;
-    }
-    .live-in-word .slider-counter {
-        left: 0;
-        bottom: 60px;
-        display: none;
-    }
-    .navbar-brand {
-        max-width: 180px;
-    }
-    .street-icon-abs {
+    .live-in-word .col-md-4 figure a {
         position: absolute;
-        right: 15px;
-        top: 120px;
-        width: 100px;
-    }
-    .abs-block {
-        width: 150px;
-        height: 54px;
-    }
-    .abs-block img {
-        max-width: 100px;
-    }
-    .hello-area .btn-controls a+a {
-        margin-left: 50px;
-    }
-    .live-in-word .owl-nav button+button {
-        margin-left: 50px;
-    }
-    .street-banner .card {
         left: 0;
         right: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        padding: 30px 20px;
-    }
-    .street-banner .card p {
-        font-size: 18px;
-        line-height: 34px;
-        margin-bottom: 30px;
-        margin-top: 15px;
-    }
-    .find-us .card p {
-        font-size: 18px;
-    }
-    .find-us .card {
-        padding: 30px;
-        margin-top: 40px;
-    }
-    .more-expoler .item figure {
-        width: auto;
-        height: auto;
-    }
-    .more-expoler .item figure span {
-        font-size: 18px;
-    }
-    .more-expoler .owl-nav button+button {
-        margin-left: 50px;
-    }
-    .athens-page .looking-out h2 {
-        text-shadow: 2px 0px 0px #5a946e;
-    }
-    .experience .carousel-indicators li {
-        display: none;
-        margin-left: 0 !important;
-    }
-    .experience .carousel-indicators li.active {
-        display: block;
-    }
-    .tab-area .owl-nav button+button {
-        margin-left: 40px;
-    }
-    .slider-counter {
-        left: 0;
-        right: 0;
-        bottom: 60px;
-        justify-content: center;
-    }
-    .tab-area .owl-nav {
-        margin-top: 60px !important;
-    }
-    div#navbarNavDropdown {
-        left: 0;
-        position: absolute;
-        top: 100%;
-        z-index: 9999;
-        background: white;
-        color: var(--h-color);
-        box-shadow: 0 0 1px 0 rgb(45 48 71 / 4%);
-    }
-    div#navbarNavDropdown ul li>a {
-        color: var(--h-color);
-    }
-    div#navbarNavDropdown ul li {
-        padding: 10px;
-    }
-    .navbar-toggler:focus {
-        box-shadow: unset !important;
-    }
-    .main-menu .navbar-nav>li+li {
-        margin-left: 0;
-    }
-    .main-fooger .row .col-md-5 ul {
-        width: 50%;
-        margin: 0;
-        padding-left: 50px;
-    }
-    .main-fooger .row .col-md-5 ul+ul {
-        padding-left: 20px;
-    }
-    footer ul li a {
-        font-size: 12px;
-    }
-    ul.menu.list-unstyled.mb-20 {
-        text-align: center;
-        font-size: 12px;
-    }
-    .menu+ul {
-        justify-content: center;
-    }
-    .footer-bottom.mt-60 {
-        display: none;
-    }
-    .address p {
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 50px;
-        text-align: center;
-        font-size: 12px;
-    }
-    .f-title {
-        text-align: center;
-    }
-    .footer-signup .sb-btn {
-        margin-top: 0;
-        margin-top: 40px;
-        margin-bottom: 20px;
-        width: 100%;
-    }
-    .footer-signup form {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-    .footer-signup .form-control {
-        width: 100%;
-        max-width: 100%;
-    }
-    .form-floating>label {
-        line-height: 4px;
-        padding: 33px 2px 0 0 !important;
-    }
-    .footer-signup .col-md-4 {
-        margin-bottom: 30px;
-    }
-    .tab-area ul {
-        flex-wrap: nowrap;
-        flex-direction: row;
-        overflow-x: auto;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .tab-area ul li {
-        width: 140px;
-        min-width: 140px;
-    }
-    .tab-area ul li a {
-        font-size: 14px;
-    }
-    .tab-area .slider-counter {
-        bottom: 35px;
-    }
-    .looking-out h2 {
-        font-size: 22px;
-        display: table;
-        text-shadow: -2px 0px 0px #cc1f38;
-        line-height: 45px;
-    }
-    .time {
-        font-size: 23px;
-        display: table;
-        margin: 0 auto;
-    }
-    .day {
-        font-size: 18px;
-        display: table;
-        margin: 0 auto;
-    }
-    .mobile-look img {
-        width: 210px;
-        display: table;
-        margin: 7px auto 30px auto;
-    }
-    .box-calander {
-        margin-left: auto;
-        margin-right: auto;
-        width: 270px;
-    }
-    .exploer-btn img {
-        width: 50px;
-    }
-    .exploer-btn {
-        font-size: 16px;
-        max-width: 246px;
-        padding: 12px;
-    }
-    .right-col {
-        font-size: 26px;
-    }
-    .left-col span {
-        font-size: 20px;
-        top: 67px;
-    }
-    .bottom-row {
-        font-size: 14px;
-        padding: 0 40px;
-        height: calc(100% - 90px);
-    }
-    .looking-out .primary-btn {
-        margin: 40px auto 0px auto;
-        display: table !important;
-    }
-    .looking-out div#carouselExampleControls .position-absolute {
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        bottom: -50px;
-        right: 0;
-        position: relative !important;
-    }
-    .experience .card {
-        width: 100%;
-        left: 0;
-        right: 0;
-        top: 0;
         bottom: 0;
-        padding: 40px;
-        position: absolute;
+        top: 0;
+        width: 100%;
         height: 100%;
     }
-    .explore-more .col-md-4+.col-md-4 {
-        margin-top: 50px;
+    /* end brand directory page */
+    @media only screen and (min-width: 1600px) {
+        .experience .carousel-item {
+            height: 550px;
+        }
     }
-    .experience .card p {
-        line-height: 35px;
-        font-size: 18px;
+    @media only screen and (max-width: 600px) {
+        .barnd-page .similar.barnd {
+            padding-top: 50px;
+        }
+        .paris-page .looking-out h2 {
+            text-shadow: 2px 0 0 #5B1545;
+        }
+        .london-page .looking-out h2 {
+            text-shadow: 2px 0 0 #CC1F38;
+        }
+        .san-page .looking-out h2 {
+            text-shadow: 2px 0px 0px #92193F;
+        }
+        .amsterdam-page .looking-out h2 {
+            text-shadow: 2px 0 0 #669BBC;
+        }
+        .hongkong-page .looking-out h2 {
+            text-shadow: 2px 0 0 #f25832;
+        }
+        .portugal-page .looking-out h2 {
+            text-shadow: 2px 0px 0px #e0a50b;
+        }
+        .box-calander {
+            margin-top: 30px;
+        }
+        .live-in-word .owl-nav {
+            padding: 20px 0 20px 0;
+        }
+        .category li img {
+            width: 60%;
+        }
+        .live-in-word .slider-counter {
+            left: 0;
+            bottom: 60px;
+            display: none;
+        }
+        .navbar-brand {
+            max-width: 180px;
+        }
+        .street-icon-abs {
+            position: absolute;
+            right: 15px;
+            top: 120px;
+            width: 100px;
+        }
+        .abs-block {
+            width: 150px;
+            height: 54px;
+        }
+        .abs-block img {
+            max-width: 100px;
+        }
+        .hello-area .btn-controls a+a {
+            margin-left: 50px;
+        }
+        .live-in-word .owl-nav button+button {
+            margin-left: 50px;
+        }
+        .street-banner .card {
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            padding: 30px 20px;
+        }
+        .street-banner .card p {
+            font-size: 18px;
+            line-height: 34px;
+            margin-bottom: 30px;
+            margin-top: 15px;
+        }
+        .find-us .card p {
+            font-size: 18px;
+        }
+        .find-us .card {
+            padding: 30px;
+            margin-top: 40px;
+        }
+        .more-expoler .item figure {
+            width: auto;
+            height: auto;
+        }
+        .more-expoler .item figure span {
+            font-size: 18px;
+        }
+        .more-expoler .owl-nav button+button {
+            margin-left: 50px;
+        }
+        .athens-page .looking-out h2 {
+            text-shadow: 2px 0px 0px #5a946e;
+        }
+        .experience .carousel-indicators li {
+            display: none;
+            margin-left: 0 !important;
+        }
+        .experience .carousel-indicators li.active {
+            display: block;
+        }
+        .tab-area .owl-nav button+button {
+            margin-left: 40px;
+        }
+        .slider-counter {
+            left: 0;
+            right: 0;
+            bottom: 60px;
+            justify-content: center;
+        }
+        .tab-area .owl-nav {
+            margin-top: 60px !important;
+        }
+        div#navbarNavDropdown {
+            left: 0;
+            position: absolute;
+            top: 100%;
+            z-index: 9999;
+            background: white;
+            color: var(--h-color);
+            box-shadow: 0 0 1px 0 rgb(45 48 71 / 4%);
+        }
+        div#navbarNavDropdown ul li>a {
+            color: var(--h-color);
+        }
+        div#navbarNavDropdown ul li {
+            padding: 10px;
+        }
+        .navbar-toggler:focus {
+            box-shadow: unset !important;
+        }
+        .main-menu .navbar-nav>li+li {
+            margin-left: 0;
+        }
+        .main-fooger .row .col-md-5 ul {
+            width: 50%;
+            margin: 0;
+            padding-left: 50px;
+        }
+        .main-fooger .row .col-md-5 ul+ul {
+            padding-left: 20px;
+        }
+        footer ul li a {
+            font-size: 12px;
+        }
+        ul.menu.list-unstyled.mb-20 {
+            text-align: center;
+            font-size: 12px;
+        }
+        .menu+ul {
+            justify-content: center;
+        }
+        .footer-bottom.mt-60 {
+            display: none;
+        }
+        .address p {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 50px;
+            text-align: center;
+            font-size: 12px;
+        }
+        .f-title {
+            text-align: center;
+        }
+        .footer-signup .sb-btn {
+            margin-top: 0;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        .footer-signup form {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        .footer-signup .form-control {
+            width: 100%;
+            max-width: 100%;
+        }
+        .form-floating>label {
+            line-height: 4px;
+            padding: 33px 2px 0 0 !important;
+        }
+        .footer-signup .col-md-4 {
+            margin-bottom: 30px;
+        }
+        .tab-area ul {
+            flex-wrap: nowrap;
+            flex-direction: row;
+            overflow-x: auto;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .tab-area ul li {
+            width: 140px;
+            min-width: 140px;
+        }
+        .tab-area ul li a {
+            font-size: 14px;
+        }
+        .tab-area .slider-counter {
+            bottom: 35px;
+        }
+        .looking-out h2 {
+            font-size: 22px;
+            display: table;
+            text-shadow: -2px 0px 0px #cc1f38;
+            line-height: 45px;
+        }
+        .time {
+            font-size: 23px;
+            display: table;
+            margin: 0 auto;
+        }
+        .day {
+            font-size: 18px;
+            display: table;
+            margin: 0 auto;
+        }
+        .mobile-look img {
+            width: 210px;
+            display: table;
+            margin: 7px auto 30px auto;
+        }
+        .box-calander {
+            margin-left: auto;
+            margin-right: auto;
+            width: 270px;
+        }
+        .exploer-btn img {
+            width: 50px;
+        }
+        .exploer-btn {
+            font-size: 16px;
+            max-width: 246px;
+            padding: 12px;
+        }
+        .right-col {
+            font-size: 26px;
+        }
+        .left-col span {
+            font-size: 20px;
+            top: 67px;
+        }
+        .bottom-row {
+            font-size: 14px;
+            padding: 0 40px;
+            height: calc(100% - 90px);
+        }
+        .looking-out .primary-btn {
+            margin: 40px auto 0px auto;
+            display: table !important;
+        }
+        .looking-out div#carouselExampleControls .position-absolute {
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            bottom: -50px;
+            right: 0;
+            position: relative !important;
+        }
+        .experience .card {
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            padding: 40px;
+            position: absolute;
+            height: 100%;
+        }
+        .explore-more .col-md-4+.col-md-4 {
+            margin-top: 50px;
+        }
+        .experience .card p {
+            line-height: 35px;
+            font-size: 18px;
+        }
+        .top-brands .owl-item {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+        .top-brands .owl-theme .owl-nav .owl-prev {
+            left: 0px;
+            bottom: 40%;
+        }
+        .top-brands .owl-theme .owl-nav .owl-next {
+            right: 0px;
+            bottom: 40%;
+        }
+        .top-brands .owl-theme .owl-nav [class*='owl-'] img {
+            width: 50px !important;
+        }
+        .v-line {
+            height: 84px;
+        }
+        .form-area .form-control:not(textarea) {
+            width: 100%;
+        }
+        .form-area textarea.form-control {
+            width: 100%;
+        }
+        form .row>* {
+            margin-top: 10px;
+        }
+        .contect-content ul li {
+            padding-right: 0;
+            font-size: 14px;
+        }
+        .contect-content ul li+li {
+            margin-top: 20px;
+        }
+        .brand-lgoo {
+            width: 160px;
+            height: 180px;
+            left: 0;
+            bottom: -90px;
+            padding: 10px;
+        }
+        .bg-color {
+            width: 100%;
+            height: calc(100% + 90px);
+        }
+        .crasol-btn {
+            bottom: -50px;
+            justify-content: flex-end;
+        }
+        .brand-banner {
+            background: #5A946E !important;
+            padding-bottom: 90px;
+        }
+        .crasol-btn button {
+            width: 60px;
+            filter: brightness(0) invert(1);
+        }
+        .crasol-btn button+button {
+            margin-left: 10px;
+        }
+        .crasol-btn button img {
+            filter: grayscale(0);
+        }
+        .shop-details ul li {
+            font-size: 14px;
+            padding-right: 0;
+        }
+        .shop-details {
+            padding-top: 60px;
+            padding-left: 40px;
+        }
+        .shop-details ul li img {
+            margin-top: 0;
+        }
+        .about-brand figure {
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin-bottom: 0;
+            margin-top: 30px;
+        }
+        .about-brand .row>* {
+            padding: 0;
+        }
+        .about-brand .card {
+            width: 100%;
+            margin: 0;
+            padding: 40px;
+        }
+        .about-brand .card p {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 0;
+            line-height: 1.8;
+        }
+        .c_margin {
+            padding-top: 0;
+        }
+        .category li {
+            width: 50%;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .whats-new .row>* {
+            padding: 0 !important;
+        }
+        .whats-new .content-box {
+            padding: 0 60px;
+            margin-top: 30px;
+            font-size: 18px;
+        }
+        .whats-new .card {
+            padding: 40px 0;
+        }
+        .img-box .brnad-logo {
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 112px;
+            height: 120px;
+            bottom: -20px;
+        }
+        .car-ions .carousel-control-prev {
+            left: 20px !important;
+            width: 70px;
+        }
+        .car-ions .carousel-control-next {
+            right: 20px !important;
+            width: 70px;
+        }
+        .car-ions {
+            justify-content: space-between;
+            bottom: 15px;
+        }
+        .img-box {
+            margin-bottom: 50px;
+        }
+        .brand-directory-page .crasol-btn {
+            justify-content: center;
+        }
+        .brand-directory-page .crasol-btn button {
+            width: 70px;
+        }
+        .brand-directory-page .crasol-btn button+button {
+            margin-left: 40px;
+        }
+        .search-brand ul li a {
+            font-size: 18px;
+            text-align: center;
+            margin: 0 auto;
+            display: table;
+        }
+        .search-brand .row .col-md-4:nth-child(2) ul {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .search-brand select {
+            width: 100%;
+            height: 48px;
+            margin-bottom: 20px;
+        }
+        .product-box {
+            font-size: 12px;
+        }
+        .addrs {
+            margin-top: 5px;
+        }
+        .brand-directory-page .about-brand .carousel-inner {
+            padding-bottom: 0;
+        }
+        .brand-directory-page .crsouls-btn-group {
+            bottom: -50px;
+        }
+        .brand-directory-page .crsouls-btn-group button {
+            margin-left: 0;
+        }
+        .brand-directory-page .crsouls-btn-group button+button {
+            margin-left: 40px;
+        }
+        .brand-directory ul li a {
+            font-size: 18px;
+        }
+        .brand-directory ul {
+            padding: 0 30px;
+        }
+        .event-page .about-brand .carousel-inner {
+            padding-bottom: 0;
+        }
+        .event-page .crsouls-btn-group {
+            bottom: -50px
+        }
+        .event-page .crsouls-btn-group button {
+            margin-left: 0;
+        }
+        .event-page .crsouls-btn-group button+button {
+            margin-left: 40px;
+        }
+        .about-event p {
+            font-size: 18px;
+            padding: 0 15px;
+            line-height: 1.8;
+        }
+        .about-event ul {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .about-event ul li+li {
+            margin-left: 0;
+            margin-top: 10px;
+        }
+        .event-page .looking-out h2 {
+            text-shadow: 2px 0px 0px #5a946e;
+        }
+        .street-banner p+img {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+        }
+        .experience .card p+img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 30px;
+        }
+        .accordion-item h2 img {
+            width: 20px;
+        }
+        .main-menu .dropdown-menu {
+            background: white;
+            box-shadow: unset;
+        }
+        .main-menu .dropdown-menu li {
+            margin: 0;
+            padding: 0 !important;
+        }
+        .main-menu .dropdown-menu li a {
+            font-size: 16px;
+            padding: 7px 30px 7px 10px !important;
+        }
+        .expoler-modal .modal-body ul {
+            margin: 0;
+            padding: 0;
+        }
+        .expoler-modal .modal-body {
+            margin: 20px;
+        }
+        .expoler-modal .modal-body ul li {
+            width: calc(100% / 2 - 30px);
+            margin-bottom: 10px;
+        }
+        .expoler-modal .modal-body ul {
+            justify-content: space-between;
+        }
+        .expoler-modal .modal-body .exploer-btn {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .expoler-modal .modal-body button.btn-close {
+            right: 15px;
+            top: 15px;
+        }
+        .barnd-page .live-in-word figure img {
+            max-width: 250px;
+        }
+        .main-menu .dropdown-menu li+li a {
+            border: none !important;
+        }
+        .expreance-gallary {
+            padding-top: 80px;
+        }
+        .footer-signup h3 {
+            margin-bottom: 0;
+        }
+        .form-area h3 {
+            margin-bottom: 0;
+        }
+        .form-area form .row>* {
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+        .contact-map iframe {
+            height: 400px;
+        }
+        .product-box figure {
+            width: 100%;
+            height: 140px;
+        }
+        .find-us iframe {
+            height: 400px;
+        }
+        .looking-out a img,
+        .owl-nav button img,
+        .live-in-word .owl-nav button img,
+        .about-brand button img {
+            width: 80px !important;
+        }
+        .tab-area ul li a {
+            margin-bottom: 0 !important;
+        }
+        .slider-counter span,
+        .more-expoler .slider-counter span {
+            width: 60px;
+        }
+        .slider-counter {
+            font-size: 20px;
+        }
     }
-    .top-brands .owl-item {
-        padding-left: 60px;
-        padding-right: 60px;
-    }
-    .top-brands .owl-theme .owl-nav .owl-prev {
-        left: 0px;
-        bottom: 40%;
-    }
-    .top-brands .owl-theme .owl-nav .owl-next {
-        right: 0px;
-        bottom: 40%;
-    }
-    .top-brands .owl-theme .owl-nav [class*='owl-'] img {
-        width: 50px !important;
-    }
-    .v-line {
-        height: 84px;
-    }
-    .form-area .form-control:not(textarea) {
-        width: 100%;
-    }
-    .form-area textarea.form-control {
-        width: 100%;
-    }
-    form .row>* {
-        margin-top: 10px;
-    }
-    .contect-content ul li {
-        padding-right: 0;
-        font-size: 14px;
-    }
-    .contect-content ul li+li {
-        margin-top: 20px;
-    }
-    .brand-lgoo {
-        width: 160px;
-        height: 180px;
+    /* for animation  */
+    .carousel-item:after {
+        content: '';
+        display: block;
+        position: absolute;
         left: 0;
-        bottom: -90px;
-        padding: 10px;
-    }
-    .bg-color {
-        width: 100%;
-        height: calc(100% + 90px);
-    }
-    .crasol-btn {
-        bottom: -50px;
-        justify-content: flex-end;
-    }
-    .brand-banner {
-        background: #5A946E !important;
-        padding-bottom: 90px;
-    }
-    .crasol-btn button {
-        width: 60px;
-        filter: brightness(0) invert(1);
-    }
-    .crasol-btn button+button {
-        margin-left: 10px;
-    }
-    .crasol-btn button img {
-        filter: grayscale(0);
-    }
-    .shop-details ul li {
-        font-size: 14px;
-        padding-right: 0;
-    }
-    .shop-details {
-        padding-top: 60px;
-        padding-left: 40px;
-    }
-    .shop-details ul li img {
-        margin-top: 0;
-    }
-    .about-brand figure {
-        position: relative;
         top: 0;
-        left: 0;
-        right: 0;
-        margin-bottom: 0;
-        margin-top: 30px;
-    }
-    .about-brand .row>* {
-        padding: 0;
-    }
-    .about-brand .card {
         width: 100%;
-        margin: 0;
-        padding: 40px;
-    }
-    .about-brand .card p {
-        font-size: 18px;
-        text-align: center;
-        margin-bottom: 0;
-        line-height: 1.8;
-    }
-    .c_margin {
-        padding-top: 0;
-    }
-    .category li {
-        width: 50%;
-        margin-bottom: 30px;
-        font-size: 14px;
-    }
-    .whats-new .row>* {
-        padding: 0 !important;
-    }
-    .whats-new .content-box {
-        padding: 0 60px;
-        margin-top: 30px;
-        font-size: 18px;
-    }
-    .whats-new .card {
-        padding: 40px 0;
-    }
-    .img-box .brnad-logo {
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 112px;
-        height: 120px;
-        bottom: -20px;
-    }
-    .car-ions .carousel-control-prev {
-        left: 20px !important;
-        width: 70px;
-    }
-    .car-ions .carousel-control-next {
-        right: 20px !important;
-        width: 70px;
-    }
-    .car-ions {
-        justify-content: space-between;
-        bottom: 15px;
-    }
-    .img-box {
-        margin-bottom: 50px;
-    }
-    .brand-directory-page .crasol-btn {
-        justify-content: center;
-    }
-    .brand-directory-page .crasol-btn button {
-        width: 70px;
-    }
-    .brand-directory-page .crasol-btn button+button {
-        margin-left: 40px;
-    }
-    .search-brand ul li a {
-        font-size: 18px;
-        text-align: center;
-        margin: 0 auto;
-        display: table;
-    }
-    .search-brand .row .col-md-4:nth-child(2) ul {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-    .search-brand select {
-        width: 100%;
-        height: 48px;
-        margin-bottom: 20px;
-    }
-    .product-box {
-        font-size: 12px;
-    }
-    .addrs {
-        margin-top: 5px;
-    }
-    .brand-directory-page .about-brand .carousel-inner {
-        padding-bottom: 0;
-    }
-    .brand-directory-page .crsouls-btn-group {
-        bottom: -50px;
-    }
-    .brand-directory-page .crsouls-btn-group button {
-        margin-left: 0;
-    }
-    .brand-directory-page .crsouls-btn-group button+button {
-        margin-left: 40px;
-    }
-    .brand-directory ul li a {
-        font-size: 18px;
-    }
-    .brand-directory ul {
-        padding: 0 30px;
-    }
-    .event-page .about-brand .carousel-inner {
-        padding-bottom: 0;
-    }
-    .event-page .crsouls-btn-group {
-        bottom: -50px
-    }
-    .event-page .crsouls-btn-group button {
-        margin-left: 0;
-    }
-    .event-page .crsouls-btn-group button+button {
-        margin-left: 40px;
-    }
-    .about-event p {
-        font-size: 18px;
-        padding: 0 15px;
-        line-height: 1.8;
-    }
-    .about-event ul {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 40px;
-    }
-    .about-event ul li+li {
-        margin-left: 0;
-        margin-top: 10px;
-    }
-    .event-page .looking-out h2 {
-        text-shadow: 2px 0px 0px #5a946e;
-    }
-    .street-banner p+img {
-        position: absolute;
-        bottom: 20px;
-        left: 0;
-        right: 0;
-    }
-    .experience .card p+img {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 30px;
-    }
-    .accordion-item h2 img {
-        width: 20px;
-    }
-    .main-menu .dropdown-menu {
-        background: white;
-        box-shadow: unset;
-    }
-    .main-menu .dropdown-menu li {
-        margin: 0;
-        padding: 0 !important;
-    }
-    .main-menu .dropdown-menu li a {
-        font-size: 16px;
-        padding: 7px 30px 7px 10px !important;
-    }
-    .expoler-modal .modal-body ul {
-        margin: 0;
-        padding: 0;
-    }
-    .expoler-modal .modal-body {
-        margin: 20px;
-    }
-    .expoler-modal .modal-body ul li {
-        width: calc(100% / 2 - 30px);
-        margin-bottom: 10px;
-    }
-    .expoler-modal .modal-body ul {
-        justify-content: space-between;
-    }
-    .expoler-modal .modal-body .exploer-btn {
-        font-size: 14px;
-        margin-top: 20px;
-    }
-    .expoler-modal .modal-body button.btn-close {
-        right: 15px;
-        top: 15px;
-    }
-    .barnd-page .live-in-word figure img {
-        max-width: 250px;
-    }
-    .main-menu .dropdown-menu li+li a {
-        border: none !important;
-    }
-    .expreance-gallary {
-        padding-top: 80px;
-    }
-    .footer-signup h3 {
-        margin-bottom: 0;
-    }
-    .form-area h3 {
-        margin-bottom: 0;
-    }
-    .form-area form .row>* {
-        margin-top: 0;
-        margin-bottom: 40px;
-    }
-    .contact-map iframe {
-        height: 400px;
-    }
-    .product-box figure {
-        width: 100%;
-        height: 140px;
-    }
-    .find-us iframe {
-        height: 400px;
-    }
-    .looking-out a img,
-    .owl-nav button img,
-    .live-in-word .owl-nav button img,
-    .about-brand button img {
-        width: 80px !important;
-    }
-    .tab-area ul li a {
-        margin-bottom: 0 !important;
-    }
-    .slider-counter span,
-    .more-expoler .slider-counter span {
-        width: 60px;
-    }
-    .slider-counter {
-        font-size: 20px;
-    }
-}
-
-
-/* for animation  */
-
-.carousel-item:after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #FAF7F2;
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-    -webkit-transition-delay: 0.3s;
-    -moz-transition-delay: 0.3s;
-    -ms-transition-delay: 0.3s;
-    -o-transition-delay: 0.3s;
-    transition-delay: 0.3s;
-}
-
-.carousel-item.active:after {
-    -webkit-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    -o-transform: translateX(100%);
-    -moz-animation-fill-mode: both;
-}
-
-.live-in-word .owl-item figure:after,
-.expreance-gallary .owl-item .item:after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: #FAF7F2;
-    left: 0;
-    top: 0;
-    position: absolute;
-    -webkit-transition: all 0.6s;
-    -moz-transition: all 0.6s;
-    transition: all 0.6s;
-    -webkit-transition-delay: 0s;
-    -moz-transition-delay: 0s;
-    -ms-transition-delay: 0s;
-    -o-transition-delay: 0s;
-    transition-delay: 0s;
-    -webkit-animation: galleryPhotoOverlay 0.6s;
-    animation: galleryPhotoOverlay 0.6s;
-}
-
-.expreance-gallary .owl-item.active .item:after {
-    transition-delay: 0.5s !important;
-}
-
-.live-in-word .owl-item.active figure:after,
-.expreance-gallary .owl-item.active .item:after {
-    -webkit-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    -o-transform: translateX(100%);
-    transform: translateX(100%);
-    -webkit-transition-delay: 0.5s;
-    -moz-transition-delay: 0.5s;
-    -ms-transition-delay: 0.5s;
-    -o-transition-delay: 0.5s;
-    transition-delay: 0.5s;
-}
-
-@-webkit-keyframes galleryPhotoOverlay {
-    0% {
+        height: 100%;
+        background: #FAF7F2;
         -webkit-transform: translateX(0);
         -moz-transform: translateX(0);
         -ms-transform: translateX(0);
         -o-transform: translateX(0);
         transform: translateX(0);
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        -webkit-transition-delay: 0.3s;
+        -moz-transition-delay: 0.3s;
+        -ms-transition-delay: 0.3s;
+        -o-transition-delay: 0.3s;
+        transition-delay: 0.3s;
     }
-    100% {
+    .carousel-item.active:after {
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+        -moz-animation-fill-mode: both;
+    }
+    .live-in-word .owl-item figure:after,
+    .expreance-gallary .owl-item .item:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #FAF7F2;
+        left: 0;
+        top: 0;
+        position: absolute;
+        -webkit-transition: all 0.6s;
+        -moz-transition: all 0.6s;
+        transition: all 0.6s;
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        -ms-transition-delay: 0s;
+        -o-transition-delay: 0s;
+        transition-delay: 0s;
+        -webkit-animation: galleryPhotoOverlay 0.6s;
+        animation: galleryPhotoOverlay 0.6s;
+    }
+    .expreance-gallary .owl-item.active .item:after {
+        transition-delay: 0.5s !important;
+    }
+    .live-in-word .owl-item.active figure:after,
+    .expreance-gallary .owl-item.active .item:after {
         -webkit-transform: translateX(100%);
         -moz-transform: translateX(100%);
         -ms-transform: translateX(100%);
         -o-transform: translateX(100%);
         transform: translateX(100%);
+        -webkit-transition-delay: 0.5s;
+        -moz-transition-delay: 0.5s;
+        -ms-transition-delay: 0.5s;
+        -o-transition-delay: 0.5s;
+        transition-delay: 0.5s;
     }
-}
-
-@keyframes galleryPhotoOverlay {
-    0% {
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
-        transform: translateX(0);
+    @-webkit-keyframes galleryPhotoOverlay {
+        0% {
+            -webkit-transform: translateX(0);
+            -moz-transform: translateX(0);
+            -ms-transform: translateX(0);
+            -o-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(100%);
+            -moz-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+            -o-transform: translateX(100%);
+            transform: translateX(100%);
+        }
     }
-    100% {
-        -webkit-transform: translateX(100%);
-        -moz-transform: translateX(100%);
-        -ms-transform: translateX(100%);
-        -o-transform: translateX(100%);
-        transform: translateX(100%);
+    @keyframes galleryPhotoOverlay {
+        0% {
+            -webkit-transform: translateX(0);
+            -moz-transform: translateX(0);
+            -ms-transform: translateX(0);
+            -o-transform: translateX(0);
+            transform: translateX(0);
+        }
+        100% {
+            -webkit-transform: translateX(100%);
+            -moz-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+            -o-transform: translateX(100%);
+            transform: translateX(100%);
+        }
     }
-}
