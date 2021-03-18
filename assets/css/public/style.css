@@ -1501,7 +1501,7 @@ span.text-danger.errors_msg {
     left: 150px;
 }
 
-.whats-new p {
+.whats-new .content-box {
     padding: 0 65px;
     letter-spacing: 1.4px;
     line-height: 1.8;
@@ -2150,7 +2150,7 @@ span.text-danger.errors_msg {
     .whats-new .row>* {
         padding: 0 !important;
     }
-    .whats-new p {
+    .whats-new .content-box {
         padding: 0 60px;
         margin-top: 30px;
         font-size: 18px;
