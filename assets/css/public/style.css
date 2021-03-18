@@ -1729,6 +1729,7 @@ span.text-danger.errors_msg {
     position: relative;
 }
 
+
 .about-brand .carousel figure {
     width: 390px;
     height: 530px;
@@ -1746,6 +1747,15 @@ span.text-danger.errors_msg {
     right: 0;
     left: 0;
     justify-content: center;
+
+.live-in-word .col-md-4 figure a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 
 

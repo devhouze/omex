@@ -129,7 +129,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <?php } }?>
+                            <?php $i++; } }?>
                         </div>
                         <div class="crsouls-btn-group">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlseven" data-bs-slide="prev">
