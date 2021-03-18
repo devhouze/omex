@@ -8,6 +8,8 @@
                         <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="1"></li>
                         <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="2"></li>
                     </ol>
+
+                    
                     <div class="carousel-inner">
 
                         <?php if (!empty($banner)) {
@@ -24,6 +26,8 @@
                     </div>
 
                 </div>
+
+
             </div>
         </div>
         <div class="row d-md-none d-flex flex-fill">
