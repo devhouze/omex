@@ -190,7 +190,7 @@ class Brands_Controller extends MY_Controller
                     $this->load->library('upload',$config);
                     $this->upload->initialize($config);
                     if(!$this->upload->do_upload('about_brand_banner_web')){
-                        echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->upload->display_errors(), 'status' => 0]);
+                        echo json_encode(['message' => 'Something went wrong!.', 'about_brand_banner_web_error' => $this->upload->display_errors(), 'status' => 0]);
                         exit;
                     }
                 }
@@ -206,7 +206,7 @@ class Brands_Controller extends MY_Controller
                     $this->load->library('upload',$config);
                     $this->upload->initialize($config);
                     if(!$this->upload->do_upload('about_brand_banner_mobile')){
-                        echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->upload->display_errors(), 'status' => 0]);
+                        echo json_encode(['message' => 'Something went wrong!.', 'about_brand_banner_mobile_error' => $this->upload->display_errors(), 'status' => 0]);
                         exit;
                     }
                 }
