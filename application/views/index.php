@@ -18,8 +18,8 @@
                             foreach ($banner as $value) { 
                                 // echo base_url('assets/images/public/home/' . $value['banner_web']);
                                 if(is_file("assets/images/public/home/".$value['banner_web'])){?>
-                                <div class="carousel-item <?= ($i == 1) ? 'active' : '';$i++; ?>">
-                                    <img src="<?php echo base_url('assets/images/public/home/' . $value['banner_web']); ?>" alt="<?= $value['comment']; ?>" class="d-table mx-auto w-100">
+                                <div class="carousel-item <?= ($i == 1) ? 'active' : '';$i++; ?>" style="background-image: url('<?php echo base_url('assets/images/public/home/' . $value['banner_web']); ?>');">
+                                    <!-- <img src="" alt="<?= $value['comment']; ?>" class="d-table mx-auto w-100"> -->
                                     <a href="<?php echo (empty($value['banner_link']))?$value['banner_link']:base_url();?>" target="_blank" class="banner-link"></a>
                                 </div>
                         <?php } }
