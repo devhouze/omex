@@ -22,6 +22,12 @@ $brand_audience = (!empty($brands))?$brands->brand_audience:'';
 $show_on_home = (!empty($brands))?$brands->show_on_home:'';
 $brand_offer_status = (!empty($brands))?$brands->brand_offer_status:'';
 $order_home = (!empty($brands))?$brands->order_home:'';
+$brand_logo = (!empty($brands))?$brands->brand_logo:'';
+$banner_web = (!empty($brands))?$brands->banner_web:'';
+$banner_mobile = (!empty($brands))?$brands->banner_mobile:'';
+$about_brand_banner_web = (!empty($brands))?$brands->about_brand_banner_web:'';
+$about_brand_banner_mobile = (!empty($brands))?$brands->about_brand_banner_mobile:'';
+
 
 ?>
 
@@ -50,9 +56,16 @@ $order_home = (!empty($brands))?$brands->order_home:'';
                                     <input type="text" class="form-control form-control-sm input-sm" name="brand_website" value="<?=$brand_website;?>">
                                 </div>
 
-                                <div class="col-md-6 mb-3">
-                                    <label for="">Brand Logo</label>
+                                <div class="col-md-5 mb-3">
+                                    <label for="">Brand Logo(For Best View Upload Images In 285px*240px)</label>
                                     <input type="file" class="form-control form-control-sm input-sm" name="brand_logo">
+                                </div>
+
+                                <div class="col-md-1 mb-3">
+                                    <?php if(is_file("assets/images/public/brand/".$brand_logo)){ ?>
+                                        
+                                      <img src="<?php echo base_url("assets/images/public/brand/".$brand_logo); ?>" class="img-thumb" style="width:100px !important;" />
+                                  <?php } ?>
                                 </div>
 
                                 <div class="col-md-6 mb-3">
@@ -60,9 +73,16 @@ $order_home = (!empty($brands))?$brands->order_home:'';
                                     <input type="text" class="form-control form-control-sm input-sm" name="logo_comment" value="<?=$logo_message;?>">
                                 </div>
 
-                                <div class="col-md-6 mb-3">
-                                    <label for="">Brand Banner Web</label>
+                                <div class="col-md-4 mb-3">
+                                    <label for="">Brand Banner Web(For Best View Upload Images In   1283px*450px)</label>
                                     <input type="file" class="form-control form-control-sm input-sm" name="banner_web">
+                                </div>
+
+                                <div class="col-md-2 mb-3">
+                                    <?php if(is_file("assets/images/public/brand/".$about_brand_banner_web)){ ?>
+                                        
+                                      <img src="<?php echo base_url("assets/images/public/brand/".$about_brand_banner_web); ?>" class="img-thumb" style="width:100px !important;" />
+                                  <?php } ?>
                                 </div>
 
                                 <div class="col-md-6 mb-3">
@@ -70,14 +90,30 @@ $order_home = (!empty($brands))?$brands->order_home:'';
                                     <input type="text" class="form-control form-control-sm input-sm" name="banner_comment" value="<?=$logo_message;?>">
                                 </div>
 
-                                <div class="col-md-6 mb-3">
-                                    <label for="">Brand Banner Mobile</label>
+                                <div class="col-md-4 mb-3">
+                                    <label for="">Brand Banner Mobile(For Best View Upload Images In 748px*1102px)</label>
                                     <input type="file" class="form-control form-control-sm input-sm" name="banner_mobile">
                                 </div>
 
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-2 mb-3">
+                                    <?php if(is_file("assets/images/public/brand/".$banner_mobile)){ ?>
+                                        
+                                      <img src="<?php echo base_url("assets/images/public/brand/".$banner_mobile); ?>" class="img-thumb" style="width:100px !important;" />
+                                  <?php } ?>
+                                </div>
+
+                                
+
+                                <div class="col-md-4 mb-3">
                                     <label for="">About Brand Banner Web</label>
                                     <input type="file" class="form-control form-control-sm input-sm" name="about_brand_banner_web">
+                                </div>
+
+                                <div class="col-md-2 mb-3">
+                                    <?php if(is_file("assets/images/public/brand/".$about_brand_banner_web)){ ?>
+                                        
+                                      <img src="<?php echo base_url("assets/images/public/brand/".$about_brand_banner_web); ?>" class="img-thumb" style="width:100px !important;" />
+                                  <?php } ?>
                                 </div>
 
                                 <div class="col-md-6 mb-3">
@@ -85,9 +121,16 @@ $order_home = (!empty($brands))?$brands->order_home:'';
                                     <input type="text" class="form-control form-control-sm input-sm" name="about_brand_banner_alt" value="<?=$logo_message;?>">
                                 </div>
 
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-4 mb-3">
                                     <label for="">About Brand Banner Mobile</label>
                                     <input type="file" class="form-control form-control-sm input-sm" name="about_brand_banner_mobile">
+                                </div>
+
+                                <div class="col-md-2 mb-3">
+                                    <?php if(is_file("assets/images/public/brand/".$about_brand_banner_mobile)){ ?>
+                                        
+                                      <img src="<?php echo base_url("assets/images/public/brand/".$about_brand_banner_mobile); ?>" class="img-thumb" style="width:100px !important;" />
+                                  <?php } ?>
                                 </div>
 
                                 <div class="col-md-12 mb-3">
