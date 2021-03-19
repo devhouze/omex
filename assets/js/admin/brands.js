@@ -219,10 +219,6 @@ $(document).ready(function() {
                     $('#brand_management input[name="banner_mobile"]').after('<span class="text-danger errors_msg">' + data.banner_mobile_error + '</span>');
                 }
 
-                if (data.about_brand_banner_mobile_error) {
-                    $('#brand_management input[name="about_brand_banner_mobile"]').after('<span class="text-danger errors_msg">' + data.about_brand_banner_mobile_error + '</span>');
-                }
-
                 if (data.about_brand_banner_web_error) {
                     $('#brand_management input[name="about_brand_banner_web"]').after('<span class="text-danger errors_msg">' + data.about_brand_banner_web_error + '</span>');
                 }
@@ -252,18 +248,22 @@ $(document).ready(function() {
                 var show_on_home = data.show_on_home;
                 var status = data.status;
                 var brand_logo = data.brand_logo;
+                var banner_web = data.banner_web;
+                var banner_mobile = data.banner_mobile;
+                var about_brand_banner_web = data.about_brand_banner_web;
                 value = '';
                 value += '<table class="table">';
                 value += '<tr><th colspan="4" class="text-center">Brand Details</th></tr>';
                 value += '<tr><th>Name</th><td>' + brand_name + '</td><th>Contact</th><td>' + brand_contact + '</td></tr>';
-                value += '<tr><th colspan="2">Website</th><td colspan="2">' + brand_website + '</td></tr>';
+                // value += '<tr><th colspan="2">Website</th><td colspan="2">' + brand_website + '</td></tr>';
                 // value += '<tr><th>Weekday Operational Start Time</th><td>' + from_hour_week + '</td><th>Weekday Operational End Time</th><td>' + to_week_hour + '</td></tr>';
                 // value += '<tr><th>Weekend Operational Start Time</th><td>' + from_hour_weekend + '</td><th>Weekend Operational End Time</th><td>' + to_weekend_hour + '</td></tr>';
                 value += '<tr><th>Type</th><td>' + brand_type + '</td><th>Labels</th><td>' + brand_label + '</td></tr>';
                 value += '<tr><th>Category</th><td>' + brand_category + '</td><th>Subcategory</th><td>' + brand_sub_category + '</td></tr>';
                 value += '<tr><th>Street</th><td>' + brand_street + '</td><th>Brand Status</th><td>' + status + '</td></tr>';
                 value += '<tr><th>Show On Home</th><td>' + show_on_home + '</td><th>Alt Tag</th><td>' + logo_message + '</td></tr>';
-                value += '<tr><th colspan="2">Brand Logo</th><td colspan="2"><img src="' + base_url + 'assets/images/public/brand/' + brand_logo + '" width="100px" height="100px"></td></tr>';
+                value += '<tr><th>Brand Logo</th><td><img src="' + base_url + 'assets/images/public/brand/' + brand_logo + '"></td><th>Banner Web</th><td><img src="' + base_url + 'assets/images/public/brand/' + banner_web + '" width="100px" height="100px"></td></tr>';
+                value += '<tr><th>Banner Mobile</th><td><img src="' + base_url + 'assets/images/public/brand/' + banner_mobile + '" width="100px" height="100px"></td><th>About Brand Banner</th><td><img src="' + base_url + 'assets/images/public/brand/' + about_brand_banner_web + '" width="100px" height="100px"></td></tr>';
                 $('#details').html(value);
             }
         });

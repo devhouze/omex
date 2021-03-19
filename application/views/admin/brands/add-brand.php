@@ -45,24 +45,41 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                         <form action="<?= $action; ?>" method="post" id="brand_management" autocomplete="off" enctype="multipart/form-data">
                             <div class="form-row">
                                 <input type="hidden" name="brand_id" value="<?= $brand_id; ?>">
-
+                                
                                 <div class="col-md-6 mb-3">
                                     <label for="">Brand Name</label>
                                     <input type="text" class="form-control form-control-sm input-sm" placeholder="Enter brand name" name="brand_name" value="<?= $brand_name; ?>">
                                 </div>
 
                                 <div class="col-md-6 mb-3">
+                                    <label for="">Brand Location</label>
+                                    <input type="text" class="form-control form-control-sm input-sm" name="brand_location" value="<?= $brand_location; ?>">
+                                </div>
+
+                                <div class="col-md-6 mb-3 d-none">
                                     <label for="">Brand Website</label>
                                     <input type="text" class="form-control form-control-sm input-sm" name="brand_website" value="<?= $brand_website; ?>">
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="col-md-5 mb-3">
+                                <div class="col-md-6 mb-3">
                                     <label for="">Brand Logo(285px x 240px) .PNG</label>
                                     <input type="file" class="form-control form-control-sm input-sm" name="brand_logo">
                                 </div>
 
-                                <div class="col-md-1 mb-3">
+                                
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="">Brand Banner Web(1283px x 450px), PNG | JPG</label>
+                                    <input type="file" class="form-control form-control-sm input-sm" name="banner_web">
+                                </div>
+
+                                
+                                
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-md-6 mb-3">
                                     <?php if (is_file("assets/images/public/brand/" . $brand_logo)) { ?>
 
                                         <img src="<?php echo base_url("assets/images/public/brand/" . $brand_logo); ?>" class="img-thumb" style="width:100px !important;" />
@@ -70,21 +87,18 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Logo Alt Tag</label>
-                                    <input type="text" class="form-control form-control-sm input-sm" name="logo_comment" value="<?= $logo_message; ?>">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-md-5 mb-3">
-                                    <label for="">Brand Banner Web(1283px x 450px), PNG | JPG</label>
-                                    <input type="file" class="form-control form-control-sm input-sm" name="banner_web">
-                                </div>
-
-                                <div class="col-md-1 mb-3">
                                     <?php if (is_file("assets/images/public/brand/" . $about_brand_banner_web)) { ?>
 
                                         <img src="<?php echo base_url("assets/images/public/brand/" . $about_brand_banner_web); ?>" class="img-thumb" style="width:100px !important;" />
                                     <?php } ?>
+                                </div>
+                            
+                            </div>
+                            <div class="form-row">
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="">Logo Alt Tag</label>
+                                    <input type="text" class="form-control form-control-sm input-sm" name="logo_comment" value="<?= $logo_message; ?>">
                                 </div>
 
                                 <div class="col-md-6 mb-3">
@@ -93,67 +107,43 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="col-md-5 mb-3">
+                                <div class="col-md-6 mb-3">
                                     <label for="">Brand Banner Mobile(748px x 1102px), PNG | JPG</label>
                                     <input type="file" class="form-control form-control-sm input-sm" name="banner_mobile">
                                 </div>
 
-                                <div class="col-md-1 mb-3">
+                                <div class="col-md-6 mb-3">
+                                    <label for="">About Brand Banner (748px X 1102px), PNG | JPG</label>
+                                    <input type="file" class="form-control form-control-sm input-sm" name="about_brand_banner_web">
+                                </div>
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-md-6 mb-3">
                                     <?php if (is_file("assets/images/public/brand/" . $banner_mobile)) { ?>
 
                                         <img src="<?php echo base_url("assets/images/public/brand/" . $banner_mobile); ?>" class="img-thumb" style="width:100px !important;" />
                                     <?php } ?>
                                 </div>
 
-
-
-                                <div class="col-md-5 mb-3">
-                                    <label for="">About Brand Banner (748px X 1102px), PNG | JPG</label>
-                                    <input type="file" class="form-control form-control-sm input-sm" name="about_brand_banner_web">
-                                </div>
-
-                                <div class="col-md-1 mb-3">
+                                <div class="col-md-6 mb-3">
                                     <?php if (is_file("assets/images/public/brand/" . $about_brand_banner_web)) { ?>
 
                                         <img src="<?php echo base_url("assets/images/public/brand/" . $about_brand_banner_web); ?>" class="img-thumb" style="width:100px !important;" />
                                     <?php } ?>
                                 </div>
-
+                            
                             </div>
                             <div class="form-row">
-                                <div class="col-md-12 mb-3">
+                                <div class="col-md-6 mb-3">
                                     <label for="">About Brand Banner Alt Tag</label>
                                     <input type="text" class="form-control form-control-sm input-sm" name="about_brand_banner_alt" value="<?= $logo_message; ?>">
                                 </div>
 
-                                <div class="col-md-2 mb-3">
-                                    <?php if (is_file("assets/images/public/brand/" . $about_brand_banner_mobile)) { ?>
-
-                                        <img src="<?php echo base_url("assets/images/public/brand/" . $about_brand_banner_mobile); ?>" class="img-thumb" style="width:100px !important;" />
-                                    <?php } ?>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-md-12 mb-3">
-                                    <label for="">About Brand</label>
-                                    <textarea name="about_brand" class="form-control form-control-sm ckeditor"><?= $about_brand; ?></textarea>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="">Feature On Home Page (Under top brands)</label><br>
-                                    <select name="show_on_home" class="form-control form-control-sm">
-                                        <option selected="" disabled>Select One</option>
-                                        <option value="Yes" <?php if ($show_on_home == "Yes") {
-                                                                echo "selected";
-                                                            } ?>>Yes</option>
-                                        <option value="No" <?php if ($show_on_home == "No") {
-                                                                echo "selected";
-                                                            } ?>>No</option>
-                                    </select>
-                                </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="">Brand Label</label>
-                                    <select name="brand_label" class="form-control form-control-sm">
-                                        <option selected="" disabled>Select Label</option>
+                                    <select name="brand_label" class="form-control form-control-sm select-box">
                                         <option value="New In" <?php if ($brand_label == "New In") {
                                                                     echo 'selected';
                                                                 } ?>>New In</option>
@@ -168,6 +158,25 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                                                         } ?>>Exclusive WS</option>
                                     </select>
                                 </div>
+
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-12 mb-3">
+                                    <label for="">About Brand</label>
+                                    <textarea name="about_brand" class="form-control form-control-sm ckeditor"><?= $about_brand; ?></textarea>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="">Feature On Home Page (Under top brands)</label><br>
+                                    <select name="show_on_home" class="form-control form-control-sm select-box">
+                                        <option value="Yes" <?php if ($show_on_home == "Yes") {
+                                                                echo "selected";
+                                                            } ?>>Yes</option>
+                                        <option value="No" <?php if ($show_on_home == "No") {
+                                                                echo "selected";
+                                                            } ?>>No</option>
+                                    </select>
+                                </div>
+                                
 
                                 <div class="col-md-6 mb-3 d-none">
                                     <label for="">Weekday Operational Start Time</label>
@@ -189,15 +198,11 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                     <input type="text" class="form-control form-control-sm input-sm weekend_end_hour" name="to_weekend_hour" value="<?= $to_weekend_hour; ?>">
                                 </div>
 
-                                <div class="col-md-6 mb-3">
-                                    <label for="">Brand Location</label>
-                                    <input type="text" class="form-control form-control-sm input-sm" name="brand_location" value="<?= $brand_location; ?>">
-                                </div>
+                                
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Brand Type (For homepage & street display)</label><br>
-                                    <select name="brand_type" class="form-control form-control-sm">
-                                        <option selected="" disabled>Select Type</option>
+                                    <select name="brand_type" class="form-control form-control-sm select-box">
                                         <option value="Play" <?php if ($brand_type == "Play") {
                                                                     echo "selected";
                                                                 } ?>>Play</option>
@@ -221,15 +226,14 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                     <input type="text" class="form-control form-control-sm input-sm" name="email_contact" value="<?= $brand_contact_email; ?>">
                                 </div>
 
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-6 mb-3 d-none">
                                     <label for="">Store Map URL</label>
                                     <input type="text" class="form-control form-control-sm input-sm" name="store_map" value="<?= $store_map; ?>">
                                 </div>
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Brand Street</label>
-                                    <select name="brand_street" class="form-control form-control-sm">
-                                        <option selected="" disabled>Select Street</option>
+                                    <select name="brand_street" class="form-control form-control-sm select-box">
                                         <option value="London Street" <?php if ($brand_street == "London Street") {
                                                                             echo "selected";
                                                                         } ?>>London Street</option>
@@ -256,8 +260,7 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
 
                                 <div class="col-md-6 mb-3 d-none">
                                     <label for="">Brand Audience</label>
-                                    <select name="brand_audience" class="form-control form-control-sm">
-                                        <option selected disabled>Select Audience</option>
+                                    <select name="brand_audience" class="form-control form-control-sm select-box">
                                         <option value="Infants" <?php if ($brand_audience == "Infants") {
                                                                     echo "selected";
                                                                 } ?>>Infants</option>
@@ -283,8 +286,8 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Brand Category (Single/Multi Select with Shift Key)</label><br>
-                                    <select name="brand_category[]" id="category" class="form-control form-control-sm" multiple>
+                                    <label for="">Brand Category</label><br>
+                                    <select name="brand_category[]" id="category" class="form-control form-control-sm select-box" multiple>
                                         <?php if (!empty($category)) {
                                             foreach ($category as $cat) { ?>
                                                 <option value="<?php echo $cat['category_name']; ?>" <?php if (in_array($cat['category_name'], $brand_category)) {
@@ -295,9 +298,8 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                     </select>
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Brand Sub Category (Single/Multi Select with Shift Key)</label>
-                                    <select name="sub_category[]" id="sub_category" class="form-control form-control-sm" multiple>
-                                        <option disabled="" selected>Select Sub-Category</option>
+                                    <label for="">Brand Sub Category</label>
+                                    <select name="sub_category[]" id="sub_category" class="form-control form-control-sm select-box" multiple>
                                         <?php if (!empty($sub_category)) {
                                             foreach ($sub_category as $sc) { ?>
                                                 <option value="<?php echo $sc['name']; ?>" <?php if (in_array($sc['name'], $brand_sub_category)) {
@@ -308,14 +310,9 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                     </select>
                                 </div>
 
-
-
-
-
                                 <div class="col-md-6 mb-3" style="display:none">
                                     <label for="">Activate Brand Offer</label><br>
-                                    <select name="show_brand_offers" class="form-control form-control-sm">
-                                        <option selected="" disabled>Select One</option>
+                                    <select name="show_brand_offers" class="form-control form-control-sm select-box">
                                         <option value="Yes" <?php if ($brand_offer_status == "Yes") {
                                                                 echo "selected";
                                                             } ?>>Yes</option>
@@ -324,8 +321,6 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                                             } ?>>No</option>
                                     </select>
                                 </div>
-
-
 
                             </div>
 

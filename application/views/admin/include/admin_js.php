@@ -9,12 +9,20 @@
 <script src="<?php echo base_url(); ?>assets/js/admin/notify.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/admin/jquery-ui.js"></script>
 <script src="<?=base_url('assets/js/admin/timepicker.js')?>"></script>
-
+<script src="<?= base_url() ?>assets/js/admin/select2.js"></script>
 <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
 <script>
   $( function() {
     $( ".datepicker" ).datepicker();
+    $('.select-box').select2({
+      placeholder: "Select from the list",
+      allowClear: true
+    });
   } );
+
+  $(document).ready(function() {
+    
+  });
 </script>
 
 <script>
