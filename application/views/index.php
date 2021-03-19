@@ -34,10 +34,10 @@
         </div>
         <div class="row d-md-none d-flex flex-fill">
             <div class="col-md-12 d-flex flex-fill px-0">
-                <div id="carouselExampleIndicatorss" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
+                <div id="carouselExampleIndicatorssmob" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
                     <ol class="carousel-indicators">
                     <?php $count = count($banner); for($i=1; $i <= $count; $i++){?>
-                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="<?php echo $i; ?>" <?php if($i == 1){?>class="active" <?php } ?>></li>
+                        <li data-bs-target="#carouselExampleIndicatorssmob" data-bs-slide-to="<?php echo $i; ?>" <?php if($i == 1){?>class="active" <?php } ?>></li>
                     <?php } ?>
                     </ol>
                     <div class="carousel-inner">

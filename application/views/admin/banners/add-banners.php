@@ -32,7 +32,7 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
 
 
                                 <div class="col-md-5 mb-3">
-                                    <label for="">For Web<span class="image-type">(For best view upload images in 1366px*553px)</span></label>
+                                    <label for="">For Web<span class="image-type">(For best view upload images in 1366px * 553px)</span></label>
                                     <input type="file"  class="form-control form-control-sm input-sm" name="banner_web" value="" onchange="checkFileDetails(1366,553,this)">
                                        <span style="color: red;font-size: 9px;"></span>
 
