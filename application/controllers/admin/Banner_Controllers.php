@@ -69,8 +69,8 @@ class Banner_Controllers extends my_controller
             }
             //  || $banner_type == '5' || $banner_type == '6'
             if($banner_type == '3'){
-                $this->form_validation->set_rules('streets','Streerts','required');
-                $this->form_validation->set_rules('brand','Brands','required');
+                // $this->form_validation->set_rules('streets','Streerts','required');
+                // $this->form_validation->set_rules('brand','Brands','required');
             }
 
             // if($banner_type == '4'){
