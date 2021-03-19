@@ -22,7 +22,7 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
                                     <select name="banner_type" id="banner_type" class="form-control form-control-sm">
                                         <option selected="" disabled>Select Option</option>
                                         <option value="1" <?php if($banner_type == '1'){ echo "selected";  }?>>Home Page</option>
-                                        <option value="2" <?php if($banner_type == '2'){ echo "selected";  }?>>Event</option>
+                                      <!--   <option value="2" <?php if($banner_type == '2'){ echo "selected";  }?>>Event</option> -->
                                         <option value="3" <?php if($banner_type == '3'){ echo "selected";  }?>>Brand Directory</option>
                                         <!-- <option value="4" <?php if($banner_type == '4'){ echo "selected"; }?>>Brand Discount</option> -->
                                     <!-- <option value="5" <?php if($banner_type == '5'){ echo "selected"; }?>>Brand</option>
@@ -63,25 +63,24 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
                               <?php } ?>
                           </div>
 
+                        
+                        
+                        <!--  <div class="col-md-6 mb-3" id="banner_link_section" style="display:none">
+                            <label for="">Banner Linking</label>
+                            <select id="banner_link" name="banner_link" class="form-control form-control-sm">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                               
+                            </select>
+                        </div> -->
+
                           <div class="col-md-6 mb-3">
                             <label for="">Banner Link</label>
                             <input type="text" class="form-control form-control-sm input-sm" name="banner_link" value="<?php echo $banner_link; ?>">
                         </div>
 
-                          <div class="col-md-6 mb-3" id="streets" style="display:none">
-                            <label for="">Link</label>
-                            <select name="link_type" class="form-control form-control-sm link_type" >
-                                <option value="1">Event</option>
-                                <option value="2">Brand</option>
-                                <option value="3">What’s New</option>
-                                <option value="4">Street</option>
-                                <option value="5">Contact Us</option>
-                                <option value="6">Any Other</option>
-                             
-                            </select>
-                        </div>
 
-                        <div class="col-md-6 mb-3" id="streets" style="display:none">
+                     <!--    <div class="col-md-6 mb-3" id="streets" style="display:none">
                             <label for="">Street</label>
                             <select name="streets" class="form-control form-control-sm">
                                 <option selected="" disabled>Select Street</option>
@@ -93,9 +92,9 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
                                 <option value="San Francisco Street">San Francisco Street</option>
                                 <option value="Athens Street">Athens Street</option>
                             </select>
-                        </div>
+                        </div> -->
 
-                        <div class="col-md-6 mb-3" id="brands" style="display:none">
+                     <!--    <div class="col-md-6 mb-3" id="brands" style="display:none">
                             <label for="">Brand</label>
                             <select name="brand" class="form-control form-control-sm">
                                 <option disabled selected>Select Brand</option>
@@ -103,7 +102,7 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
                                     <option value="<?=$brand['brand_id']?>"><?=$brand['brand_name']?></option>
                                 <?php } }?>
                             </select>
-                        </div>
+                        </div> -->
 
                     </div>
 
@@ -125,27 +124,32 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
             if(option == 2){
                 $('#streets').css('display','block');
                 $('#brands').css('display','none');
+                $('#banner_link_section').css('display','none');
             } else if(option == 3) {
                 $('#streets').css('display','block');
                 $('#brands').css('display','block');
-            }
-        // else if(option == 4) {
-        //     $('#streets').css('display','none');
-        //     $('#brands').css('display','block');
-        // } else if(option == 5) {
-        //     $('#streets').css('display','block');
-        //     $('#brands').css('display','block');
-        // } else if(option == 6) {
-        //     $('#streets').css('display','block');
-        //     $('#brands').css('display','block');
-        // }
-        else{
+                $('#banner_link_section').css('display','block');
+            } else{
             $('#streets').css('display','none');
             $('#brands').css('display','none');
+            $('#banner_link_section').css('display','none');
         }
 
         
     });
+
+        $('#banner_link').change(function(){
+
+              var option = $('#banner_link').val();
+            if(option == 'yes'){
+                  $('#streets').css('display','block');
+                $('#brands').css('display','block');
+            }else{
+                  $('#streets').css('display','none');
+              $('#brands').css('display','none');
+            }
+
+        })
     });
 
 

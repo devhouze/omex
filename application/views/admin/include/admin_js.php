@@ -82,7 +82,13 @@
                 // CHECK IF ITS AN IMAGE FILE.
                 // TO GET THE IMAGE WIDTH AND HEIGHT, WE'LL USE fileReader().
                 if (fileExtension == 'png' || fileExtension == 'jpg' || fileExtension == 'jpeg') {
-                   readImageFile(fi.files.item(i),width,height, fi);             // GET IMAGE INFO USING fileReader().
+                   // readImageFile(fi.files.item(i),width,height, fi);             // GET IMAGE INFO USING fileReader().
+                    $(fi).nextAll('span:first').text('');
+                    $('.submit-form').removeAttr('disabled');
+
+                }else{
+                     $('.submit-form').prop("disabled", true);
+                    $(fi).nextAll('span:first').text('Image formate should be (jpeg,jpg,png)');
                 }
                
             }
@@ -99,13 +105,13 @@
                         var w = this.width;
                         var h = this.height;
 
-                        if(w==width && h==height){
+                        if(w>=width && h>=height){
                           $(fi).nextAll('span:first').text('');
                             $('.submit-form').removeAttr('disabled');
                         }else{
 
                             $('.submit-form').prop("disabled", true);
-                             $(fi).nextAll('span:first').text('Image Dimension must be '+width+' x '+height);
+                             $(fi).nextAll('span:first').text('For Best View Upload Images In '+width+' x '+height);
                         }
 
 
