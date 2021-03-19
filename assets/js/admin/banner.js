@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() {
     const url = $('body').data('url');
     const base_url = $('body').data('base_url');
@@ -50,6 +52,7 @@ $(document).ready(function() {
         for (instance in CKEDITOR.instances) {
             CKEDITOR.instances[instance].updateElement();
         }
+        $('.btn-primary').html('<i class="fa fa-spinner fa-spin"></i>Loading');
         $.ajax({
             type: 'post',
             url: form.attr('action'),
@@ -63,7 +66,8 @@ $(document).ready(function() {
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
                     $.notify(data.message, "success");
-                    setTimeout(function() { window.location.replace(url + 'banners'); }, 2000);
+                    $('.btn-primary').text('Save');
+                    setTimeout(function() { window.location.replace(url + 'banners'); },1000);
                 } else {
                     $.notify(data.message, "error");
                 }
@@ -74,6 +78,7 @@ $(document).ready(function() {
                         $('#banner_management textarea[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                     });
                 }
+
             }
         });
     });
@@ -115,3 +120,5 @@ $(document).ready(function() {
     });
 
 });
+
+

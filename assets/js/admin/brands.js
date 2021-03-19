@@ -143,6 +143,7 @@ $(document).ready(function() {
         for (instance in CKEDITOR.instances) {
             CKEDITOR.instances[instance].updateElement();
         }
+        $('.btn-primary').html('<i class="fa fa-spinner fa-spin"></i>Loading');
         $.ajax({
             type: 'post',
             url: form.attr('action'),
@@ -170,6 +171,7 @@ $(document).ready(function() {
                 if (data.upload_error) {
                     $('#brand_offer_management input[name="offer_thumbnail"]').after('<span class="text-danger errors_msg">' + data.upload_error + '</span>');
                 }
+
             }
         });
     });
@@ -180,6 +182,7 @@ $(document).ready(function() {
         for (instance in CKEDITOR.instances) {
             CKEDITOR.instances[instance].updateElement();
         }
+        $('.btn-primary').html('<i class="fa fa-spinner fa-spin"></i>Loading');
         $.ajax({
             type: 'post',
             url: form.attr('action'),
@@ -193,7 +196,7 @@ $(document).ready(function() {
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
                     $.notify(data.message, "success");
-                    setTimeout(function() { window.location.replace(url + 'brands'); }, 2000);
+                    window.location.replace(url + 'brands');
                 } else {
                     $.notify(data.message, "error");
                 }
@@ -203,7 +206,25 @@ $(document).ready(function() {
                         $('#brand_management select[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                         $('#brand_management textarea[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                     });
+                }
 
+                if (data.logo_error) {
+                    $('#brand_management input[name="brand_logo"]').after('<span class="text-danger errors_msg">' + data.logo_error + '</span>');
+                }
+
+                if (data.banner_web_error) {
+                    $('#brand_management input[name="banner_web"]').after('<span class="text-danger errors_msg">' + data.banner_web_error + '</span>');
+                }
+                if (data.banner_mobile_error) {
+                    $('#brand_management input[name="banner_mobile"]').after('<span class="text-danger errors_msg">' + data.banner_mobile_error + '</span>');
+                }
+
+                if (data.about_brand_banner_mobile_error) {
+                    $('#brand_management input[name="about_brand_banner_mobile"]').after('<span class="text-danger errors_msg">' + data.about_brand_banner_mobile_error + '</span>');
+                }
+
+                if (data.about_brand_banner_web_error) {
+                    $('#brand_management input[name="about_brand_banner_web"]').after('<span class="text-danger errors_msg">' + data.about_brand_banner_web_error + '</span>');
                 }
 
             }

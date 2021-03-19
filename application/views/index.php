@@ -1,12 +1,13 @@
+<?php if(!empty($banner)){?>
 <div class="main-slider d-flex flex-fill">
     <div class="container-fluid d-flex flex-fill">
         <div class="row d-md-flex d-none flex-fill">
             <div class="col-md-12 d-flex flex-fill px-0">
                 <div id="carouselExampleIndicatorss" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
                     <ol class="carousel-indicators">
-                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="0" class="active"></li>
-                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="1"></li>
-                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="2"></li>
+                    <?php $count = count($banner); for($i=1; $i <= $count; $i++){?>
+                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="<?php echo $i; ?>" <?php if($i == 1){?>class="active" <?php } ?>></li>
+                    <?php } ?>
                     </ol>
 
                     
@@ -14,13 +15,14 @@
 
                         <?php if (!empty($banner)) {
                             $i = 1;
-                            foreach ($banner as $value) { ?>
-                                <div class="carousel-item <?= ($i == 1) ? 'active' : '';
-                                                            $i++; ?>">
+                            foreach ($banner as $value) { 
+                                // echo base_url('assets/images/public/home/' . $value['banner_web']);
+                                if(is_file("assets/images/public/home/".$value['banner_web'])){?>
+                                <div class="carousel-item <?= ($i == 1) ? 'active' : '';$i++; ?>">
                                     <img src="<?php echo base_url('assets/images/public/home/' . $value['banner_web']); ?>" alt="<?= $value['comment']; ?>" class="d-table mx-auto w-100">
-                                    <a href="#" class="banner-link"></a>
+                                    <a href="<?php echo (empty($value['banner_link']))?$value['banner_link']:base_url();?>" target="_blank" class="banner-link"></a>
                                 </div>
-                        <?php }
+                        <?php } }
                         } ?>
 
                     </div>
@@ -34,22 +36,22 @@
             <div class="col-md-12 d-flex flex-fill px-0">
                 <div id="carouselExampleIndicatorss" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
                     <ol class="carousel-indicators">
-                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="0" class="active"></li>
-                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="1"></li>
-                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="2"></li>
+                    <?php $count = count($banner); for($i=1; $i <= $count; $i++){?>
+                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="<?php echo $i; ?>" <?php if($i == 1){?>class="active" <?php } ?>></li>
+                    <?php } ?>
                     </ol>
                     <div class="carousel-inner">
 
                         <?php if (!empty($banner)) {
                             $i = 1;
-                            foreach ($banner as $value) { ?>
-                                <div class="carousel-item <?= ($i == 1) ? 'active' : '';
-                                                            $i++; ?>">
+                            foreach ($banner as $value) { 
+                                if(is_file("assets/images/public/home/".$value['banner_mobile'])){
+                                ?>
+                                <div class="carousel-item <?= ($i == 1) ? 'active' : ''; $i++; ?>">
                                     <img src="<?php echo base_url('assets/images/public/home/' . $value['banner_mobile']); ?>" alt="<?= $value['comment']; ?>" class="d-table mx-auto w-100">
-                                    <a href="#" class="banner-link"></a>
+                                    <a href="<?php echo (empty($value['banner_link']))?$value['banner_link']:base_url();?>" target="_blank" class="banner-link"></a>
                                 </div>
-                        <?php }
-                        } ?>
+                        <?php } } }?>
 
                     </div>
 
@@ -59,6 +61,8 @@
 
     </div>
 </div>
+<?php } ?>
+<?php if (!empty($brand_logo)) {?>
 <div class="top-brands gray-bg py-30">
 
     <div class="container">
@@ -72,14 +76,12 @@
         <div class="row justify-content-center align-items-center wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="0.15s">
             <div class="col-md-10 mt-20">
                 <div class="owl-carousel owl-theme top-brand">
-                    <?php if (!empty($brand_logo)) {
-                        foreach ($brand_logo as $logo) { ?>
+                    <?php foreach ($brand_logo as $logo) { ?>
                             <div class="item">
                                 <a href="<?php echo base_url('brand/'.$logo['brand_id']);?>"></a>
                                 <img src="<?php echo base_url('assets/images/public/brand/' . $logo['brand_logo']); ?>" alt="<?= $logo['banner_comment']; ?>" class="d-table mx-auto">
                             </div>
-                    <?php }
-                    } ?>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -90,6 +92,7 @@
         </div>
     </div>
 </div>
+<?php } ?>
 <div class="experience gray-bg py-30">
     <div class="container-fluid">
         <div class="row">
@@ -355,6 +358,7 @@
         </div>
     </div>
 </div>
+<?php if (!empty($events)) {?>
 <div class="looking-out gray-bg py-30">
     <div class="container">
         <div class="row">
@@ -368,8 +372,7 @@
             <div class="col-md-10">
                 <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                        <?php if (!empty($events)) {
-                            $i = 1;
+                        <?php $i = 1;
                             foreach ($events as $event) { ?>
                                 <div class="carousel-item <?php if ($i == 1) {
                                                                 echo "active";
@@ -389,24 +392,30 @@
                                                 </div>
                                                 <div class="box-calander">
                                                     <div class="top-row">
-
-                                                        <div class="left-col"><span><?php if ($event['date_available'] == 0) {
+                                                        <?php if ($event['date_available'] == 0) {?>
+                                                        <div class="left-col"><span><?php
                                                                                         echo date('Y', strtotime($event['start_date']));
-                                                                                    } ?></span></div>
+                                                                                     ?></span></div>
                                                         <div class="right-col">
                                                             <h2 class="position-relative"><?php echo date('d', strtotime($event['start_date'])); ?> <span><?php echo date('M', strtotime($event['start_date'])); ?></span> - <?php echo date('d', strtotime($event['end_date'])); ?> <span><?php echo date('M', strtotime($event['end_date'])); ?></span></h2>
                                                         </div>
+                                                        <?php } else {?>
+                                                            <div class="right-col">
+                                                            <h2 class="position-relative">Coming Soon!</span></h2>
+                                                        </div>
+                                                        <?php } ?>
                                                     </div>
 
 
                                                 </div>
-
-                                                <div class="day text-center"><?php if ($event['date_available'] == 0) {
+                                                <?php if ($event['date_available'] == 0) {?>
+                                                <div class="day text-center"><?php
                                                                                     echo strtoupper(date('D', strtotime($event['start_date']))) . "-" . (strtoupper(date('D', strtotime($event['end_date']))));
-                                                                                } ?></div>
-                                                <div class="time text-center"><?php if ($event['date_available'] == 0) {
+                                                                                 ?></div>
+                                                <div class="time text-center"><?php
                                                                                     echo date('g a', strtotime($event['event_start_time'])) . "-" . date('g a', strtotime($event['event_end_time']));
-                                                                                } ?></div>
+                                                                                 ?></div>
+                                                <?php } ?>
                                                 <img src="<?php echo base_url(); ?>assets/images/public/home/long-arrow.svg" alt="" class="mt-md-4 mt-3">
                                             </div>
 
@@ -420,8 +429,9 @@
                                 </div>
                         <?php $i++;
                             }
-                        } ?>
+                         ?>
                     </div>
+                    <?php if(count($events) > 1){?>
                     <div class="d-flex position-absolute">
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
                             <img src="<?php echo base_url(); ?>assets/images/public/home/left.svg" alt="" class="w-100">
@@ -430,12 +440,14 @@
                             <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
                         </a>
                     </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
 
     </div>
 </div>
+<?php } ?>
 <div class="expreance-gallary py-30 gray-bg ">
     <div class="container">
         <div class="row">

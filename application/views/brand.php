@@ -1,4 +1,5 @@
 <div class="barnd-page">
+    <?php if(!empty($about_brand)){?>
     <div class="brand-banner">
 
         <div class="container-fluid">
@@ -7,15 +8,19 @@
                     <div id="carouselExampleIndicators" class="carousel slide positon-relative d-md-block d-none" data-bs-ride="carousel">
 
                         <div class="carousel-inner postion-relative ">
+                            <?php if(is_file('assets/images/public/brand/'.$about_brand['banner_web'])){?>
                             <div class="carousel-item active">
                                 <img src="<?php echo BASE_URL('assets/images/public/brand/'.$about_brand['banner_web']); ?>" alt="<?php echo $about_brand['banner_comment']; ?>" class="">
                             </div>
-
+                            <?php } ?>
                         </div>
+                        <?php if(is_file('assets/images/public/brand/'.$about_brand['brand_logo'])){?>
                         <div class="brand-lgoo">
                             <img src="<?php echo BASE_URL('assets/images/public/brand/'.$about_brand['brand_logo']); ?>" alt="<?php echo $about_brand['logo_message']; ?>" class="">
                         </div>
+                        <?php } ?>
                         <div class="bg-color" style="background-color: #5A946E;"></div>
+                        <?php if(count($about_brand) > 1){?>
                         <div class="crasol-btn d-none">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
@@ -24,19 +29,24 @@
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/right.svg" alt="" class="">
                             </button>
                         </div>
+                        <?php } ?>
                     </div>
                     <div id="carouselExampleIndicatorsmob" class="carousel slide positon-relative d-md-none d-block" data-bs-ride="carousel">
 
                         <div class="carousel-inner postion-relative ">
+                            <?php if(is_file('assets/images/public/brand/'.$about_brand['banner_web'])){?>
                             <div class="carousel-item active">
                                 <img src="<?php echo BASE_URL('assets/images/public/brand/'.$about_brand['banner_web']); ?>" alt="<?php echo $about_brand['banner_comment']; ?>" class="w-100">
                             </div>
+                            <?php } ?>
 
                         </div>
+                        <?php if(is_file('assets/images/public/brand/'.$about_brand['brand_logo'])){?>
                         <div class="brand-lgoo">
                             <img src="<?php echo BASE_URL('assets/images/public/brand/'.$about_brand['brand_logo']); ?>" alt="<?php echo $about_brand['logo_message']; ?>" class="">
                         </div>
-
+                        <?php } ?>
+                        <?php if(count($about_brand) > 1){?>
                         <div class="crasol-btn d-none">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsmob" data-bs-slide="prev">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
@@ -45,11 +55,13 @@
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/right.svg" alt="" class="">
                             </button>
                         </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <?php } ?>
     <div class="shop-details gray-bg">
         <div class="container">
             <div class="row">
@@ -65,6 +77,7 @@
             </div>
         </div>
     </div>
+    <?php if(!empty($key_info)){?>
     <div class="key-information gray-bg pt-60 pb-30">
         <div class="container">
             <div class="row">
@@ -80,6 +93,8 @@
             </div>
         </div>
     </div>
+    <?php } ?>
+    <?php if(!empty($about_brand)){?>
     <div class="about-brand gray-bg  pb-30">
         <div class="container">
             <div class="row">
@@ -104,6 +119,9 @@
             </div>
         </div>
     </div>
+    <?php } ?>
+
+    <?php if((!empty($first_similar_brands)) || (!empty($second_similar_brands)) || (!empty($third_similar_brands))){?>
     <div class="similar barnd live-in-word gray-bg pt-30 position-relative">
         <div class="container">
             <div class="row">
@@ -224,6 +242,7 @@
         </div>
 
     </div>
+    <?php } ?>
     <div class="expoler-category gray-bg pt-60 pb-30">
         <div class="container">
             <div class="row">
@@ -265,6 +284,7 @@
             </div>
         </div>
     </div>
+    <?php if(!empty($what_new)){?>
     <div class="whats-new py-60 py-sm-20 gray-bg">
         <div class="container">
             <div class="row">
@@ -277,7 +297,7 @@
                 <div class="col-md-10">
                     <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                            <?php if(!empty($what_new)){$i = 1; foreach($what_new as $new){?>
+                            <?php $i = 1; foreach($what_new as $new){?>
                             <div class="carousel-item  <?php if($i == 1){echo "active";}?>">
                                 <div class="row flex-fill">
                                     <div class="col-md-6 pe-md-4 d-flex flex-fill">
@@ -296,8 +316,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <?php $i++; } }?>
+                            <?php $i++; } ?>
                         </div>
+                        <?php if(count($what_new) > 1){?>
                         <div class="car-ions">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
@@ -307,12 +328,13 @@
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/right.svg" alt="" class="">
                             </button>
                         </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    <?php } ?>
     <div class="find-us py-60 py-sm-20 gray-bg">
         <div class="container">
             <div class="row">
