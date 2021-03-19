@@ -56,7 +56,7 @@ $brands = ($events)?$events->brands:'';
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Event Banner</label>
+                                    <label for="">Event Banner(600px * 400px), JPG | PNG</label>
                                     <input type="file" class="form-control form-control-sm input-sm" name="thumbnail_image" value="">
                                 </div>
 
@@ -65,14 +65,7 @@ $brands = ($events)?$events->brands:'';
                                     <input type="text" class="form-control form-control-sm input-sm" name="thumbnail_message" value="<?=$thumbnail_message;?>">
                                 </div>
                                 
-                                <div class="col-md-6 mb-3">
-                                    <label for="">Event Type</label>
-                                    <select name="event_type"class="form-control form-control-sm">
-                                        <option selected="" disabled>Select Type</option>
-                                        <option value="Virtual" <?php if($event_type == "Virtual"){ echo "selected";}?>>Virtual</option>
-                                        <option value="Offline" <?php if($event_type == "Offline"){ echo "selected";}?>>Offline</option>
-                                    </select>
-                                </div>
+                               
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Event Location</label>

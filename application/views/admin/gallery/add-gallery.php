@@ -40,7 +40,7 @@ $action = (!empty($gallery))?admin_url():admin_url('add-gallery');
                                 </div>
 
                                 <div class="col-md-12 mb-3" id="media" style="display:none">
-                                    <label for="">Media File</label>
+                                    <label for="">Media File (Must be add the images in equal size)</label>
                                     <input type="file" name="gallery" class="form-control form-control-sm input-sm">
                                 </div>
                                 

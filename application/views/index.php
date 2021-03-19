@@ -18,8 +18,8 @@
                             foreach ($banner as $value) { 
                                 // echo base_url('assets/images/public/home/' . $value['banner_web']);
                                 if(is_file("assets/images/public/home/".$value['banner_web'])){?>
-                                <div class="carousel-item <?= ($i == 1) ? 'active' : '';$i++; ?>">
-                                    <img src="<?php echo base_url('assets/images/public/home/' . $value['banner_web']); ?>" alt="<?= $value['comment']; ?>" class="d-table mx-auto w-100">
+                                <div class="carousel-item <?= ($i == 1) ? 'active' : '';$i++; ?>" style="background-image: url('<?php echo base_url('assets/images/public/home/' . $value['banner_web']); ?>');">
+                                    <!-- <img src="" alt="<?= $value['comment']; ?>" class="d-table mx-auto w-100"> -->
                                     <a href="<?php echo (empty($value['banner_link']))?$value['banner_link']:base_url();?>" target="_blank" class="banner-link"></a>
                                 </div>
                         <?php } }
@@ -34,10 +34,10 @@
         </div>
         <div class="row d-md-none d-flex flex-fill">
             <div class="col-md-12 d-flex flex-fill px-0">
-                <div id="carouselExampleIndicatorss" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
+                <div id="carouselExampleIndicatorssmob" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
                     <ol class="carousel-indicators">
                     <?php $count = count($banner); for($i=1; $i <= $count; $i++){?>
-                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="<?php echo $i; ?>" <?php if($i == 1){?>class="active" <?php } ?>></li>
+                        <li data-bs-target="#carouselExampleIndicatorssmob" data-bs-slide-to="<?php echo $i; ?>" <?php if($i == 1){?>class="active" <?php } ?>></li>
                     <?php } ?>
                     </ol>
                     <div class="carousel-inner">
