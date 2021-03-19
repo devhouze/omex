@@ -84,10 +84,9 @@ class Welcome_model extends CI_Model
 
     public function get_home_banner()
     {
-        $query = $this->db->select('banner_web, comment')
+        $query = $this->db->select('banner_web,banner_mobile, comment, banner_link')
                           ->where('status',0)
                           ->where('banner_type',1)
-                          ->limit(3)
                           ->order_by('id','desc')
                           ->get('tbl_banner');
         if($query->num_rows() > 0){
@@ -301,6 +300,7 @@ class Welcome_model extends CI_Model
         }
         (!$count)?$this->db->limit($limit,0):'';
         $query = $this->db->get('tbl_brand');
+        echo $this->db->last_query(); die;
         if($count){
             return $query->num_rows();
         }
