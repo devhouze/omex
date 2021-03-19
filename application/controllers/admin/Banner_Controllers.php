@@ -241,7 +241,7 @@ class Banner_Controllers extends my_controller
 
     public function delete_banner()
     {
-        $logo_id = $this->input->post('logo_id');
+        $logo_id = $this->input->post('banner_id');
         $update = $this->bm->update_data('tbl_banner',['status' => 2],['id' => $logo_id]);
         if($update){
             echo json_encode(['message' => 'Data deleted successfully.', 'status' => 1]);
@@ -272,5 +272,7 @@ class Banner_Controllers extends my_controller
             echo json_encode(['message'=> 'Something went wrong!.','status' => 0]);
         }
     } 
+
+    
 }
 ?>
