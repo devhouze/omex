@@ -118,6 +118,9 @@ $(document).ready(function() {
         for (instance in CKEDITOR.instances) {
             CKEDITOR.instances[instance].updateElement();
         }
+        $('.btn-primary').html('<i class="fa fa-spinner fa-spin"></i>Loading');
+        $('.submit-form').prop("disabled", true);
+
         $.ajax({
             type: 'post',
             url: form.attr('action'),
@@ -131,7 +134,11 @@ $(document).ready(function() {
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
                     $.notify(data.message, "success");
-                    setTimeout(function() { window.location.replace(url + 'events'); }, 2000);
+                    setTimeout(function() {
+                        window.location.replace(url + 'events');
+                        $('.btn-primary').text('Save');
+                    }, 2000);
+
                 } else {
                     $.notify(data.message, "error");
                 }
@@ -140,6 +147,8 @@ $(document).ready(function() {
                         $('#events_management input[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                         $('#events_management select[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                     });
+                    $('.btn-primary').text('Save');
+                    $('.submit-form').removeAttr('disabled');
                 }
             }
         });

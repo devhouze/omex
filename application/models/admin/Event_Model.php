@@ -18,6 +18,7 @@ class Event_Model extends MY_Model
         (!empty($keyword['event_type']))?$this->db->like('event_type',$keyword['event_type']):'';
         (!$count)?$this->db->limit($per_page,$page):'';
         $this->db->where('te.status !=',2);
+        $this->db->order_by('start_date','desc');
         (!empty($column) && !empty($order))?$this->db->order_by($column,$order):$this->db->order_by('event_id','desc');
         $query = $this->db->get('tbl_event te');
         if($count){

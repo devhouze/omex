@@ -4,6 +4,7 @@ $brand_id = (!empty($brand_offers)) ? $brand_offers->brand_id : '';
 $brand_offer_name = (!empty($brand_offers)) ? $brand_offers->offer_name : '';
 $brand_offer_thumbnail_message = (!empty($brand_offers)) ? $brand_offers->thumbnail_alt : '';
 $about_brand_offer = (!empty($brand_offers)) ? $brand_offers->about_offer : '';
+$offer_thumbnail = (!empty($brand_offers)) ? $brand_offers->offer_thumbnail : '';
 ?>
 <script src="<?= base_url('assets/js/admin/brands.js') ?>"></script>
 <div class="content-wrapper">
@@ -20,7 +21,7 @@ $about_brand_offer = (!empty($brand_offers)) ? $brand_offers->about_offer : '';
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Select Brand</label>
-                                    <select name="brand_id" class="form-control form-control-sm">
+                                    <select name="brand_id" class="form-control form-control-sm select-box">
                                         <option selected="" disabled>Select Brand</option>
                                         <?php if (!empty($brands)) {
                                             foreach ($brands as $brand) { ?>
@@ -49,12 +50,20 @@ $about_brand_offer = (!empty($brand_offers)) ? $brand_offers->about_offer : '';
 
                                 <div class="col-md-6 mb-3">
                                     <label class="d-block" for="">Brand Offer Thumbnail (748px X 1102px), PNG | JPG</span>
-                                    <input type="file" class="form-control form-control-sm input-sm" name="offer_thumbnail" value="">
+                                    <input type="file" class="form-control form-control-sm input-sm" name="offer_thumbnail" value="" onchange="checkFileDetails(748,1102,this)">
+                                    <span style="color: red;font-size: 9px;"></span>
                                 </div>
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Brand Offer Thumbnail Alt Tag</label>
                                     <input type="text" class="form-control form-control-sm input-sm" name="thumbnail_alt" value="<?= $brand_offer_thumbnail_message; ?>">
+                                </div>
+
+                                <div class="col-md-12 mb-3">
+                                <?php if (is_file("assets/images/public/brand/" . $offer_thumbnail)) { ?>
+
+                                    <img src="<?php echo base_url("assets/images/public/brand/" . $offer_thumbnail); ?>" class="img-thumb" style="width:100px !important;" />
+                                    <?php } ?>
                                 </div>
 
                                 <div class="col-md-12 mb-3">
@@ -64,7 +73,7 @@ $about_brand_offer = (!empty($brand_offers)) ? $brand_offers->about_offer : '';
 
                             </div>
 
-                            <button class="btn btn-primary" type="submit">Save</button>
+                            <button class="btn btn-primary submit-form" type="submit">Save</button>
                             <button class="btn btn-danger" type="button" onclick="window.location.replace('<?= admin_url('brand-offer'); ?>')">Go Back</button>
                         </form>
                     </div>

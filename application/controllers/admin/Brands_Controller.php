@@ -99,6 +99,7 @@ class Brands_Controller extends MY_Controller
                 }
                 $data_array = array(
                     'brand_name'                    => $this->input->post('brand_name'),
+                    'brand_slug'                    => url_title($this->input->post('brand_name'), 'dash', true),
                     'brand_website'                 => $this->input->post('brand_website'),
                     'logo_message'                  => $this->input->post('logo_comment'),
                     'about_brand'                   => trim($this->input->post('about_brand')),
@@ -240,6 +241,7 @@ class Brands_Controller extends MY_Controller
             if($this->form_validation->run()){
                 $data_array = array(
                     'brand_name'                    => $this->input->post('brand_name'),
+                    'brand_slug'                    => url_title($this->input->post('brand_name'), 'dash', true),
                     'brand_website'                 => $this->input->post('brand_website'),
                     'logo_message'                  => $this->input->post('logo_comment'),
                     'about_brand'                   => trim($this->input->post('about_brand')),
@@ -405,6 +407,7 @@ class Brands_Controller extends MY_Controller
 
                 $data_array = array(
                     'brand_id'          => $this->input->post('brand_id'),
+                    'offer_slug'        => url_title($this->input->post('brand_offer_name'), 'dash', true),
                     'offer_name'        => $this->input->post('brand_offer_name'),
                     'thumbnail_alt'     => $this->input->post('thumbnail_alt'),
                     'about_offer'       => $this->input->post('about_brand_offer'),
@@ -450,7 +453,7 @@ class Brands_Controller extends MY_Controller
     public function edit_brand_offer($id)
     {
         $data['brand_offers'] = $this->bm->get_data_row('tbl_brand_offer','*',['offer_id' => $id]);
-        $data['brands'] = $this->bm->get_data_array('tbl_brand','brand_id,brand_name','status !=2 and brand_offer_status = "Yes"');
+        $data['brands'] = $this->bm->get_data_array('tbl_brand','brand_id,brand_name',['status' => 0]);
         if($this->input->post()){
             $this->form_validation->set_rules('brand_offer_name','Offer Name','required');
             $this->form_validation->set_rules('brand_id','Brand','required');
@@ -461,6 +464,7 @@ class Brands_Controller extends MY_Controller
 
                 $data_array = array(
                     'brand_id'          => $this->input->post('brand_id'),
+                    'offer_slug'        => url_title($this->input->post('brand_offer_name'), 'dash', true),
                     'offer_name'        => $this->input->post('brand_offer_name'),
                     'thumbnail_alt'     => $this->input->post('thumbnail_alt'),
                     'about_offer'       => $this->input->post('about_brand_offer'),

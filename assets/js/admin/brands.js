@@ -144,6 +144,7 @@ $(document).ready(function() {
             CKEDITOR.instances[instance].updateElement();
         }
         $('.btn-primary').html('<i class="fa fa-spinner fa-spin"></i>Loading');
+        $('.submit-form').prop("disabled", true);
         $.ajax({
             type: 'post',
             url: form.attr('action'),
@@ -157,7 +158,10 @@ $(document).ready(function() {
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
                     $.notify(data.message, "success");
-                    setTimeout(function() { window.location.replace(url + 'brand-offer'); }, 2000);
+                    setTimeout(function() {
+                        window.location.replace(url + 'brand-offer');
+                        $('.btn-primary').text('Save');
+                    }, 2000);
                 } else {
                     $.notify(data.message, "error");
                 }
@@ -167,10 +171,15 @@ $(document).ready(function() {
                         $('#brand_offer_management select[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                         $('#brand_offer_management textarea[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                     });
+                    $('.btn-primary').text('Save');
+                    $('.submit-form').removeAttr('disabled');
                 }
                 if (data.upload_error) {
                     $('#brand_offer_management input[name="offer_thumbnail"]').after('<span class="text-danger errors_msg">' + data.upload_error + '</span>');
+                    $('.btn-primary').text('Save');
+                    $('.submit-form').removeAttr('disabled');
                 }
+
 
             }
         });
@@ -183,6 +192,7 @@ $(document).ready(function() {
             CKEDITOR.instances[instance].updateElement();
         }
         $('.btn-primary').html('<i class="fa fa-spinner fa-spin"></i>Loading');
+        $('.submit-form').prop("disabled", true);
         $.ajax({
             type: 'post',
             url: form.attr('action'),
@@ -196,7 +206,10 @@ $(document).ready(function() {
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
                     $.notify(data.message, "success");
-                    window.location.replace(url + 'brands');
+                    setTimeout(function() {
+                        window.location.replace(url + 'brands');
+                        $('.btn-primary').text('Save');
+                    }, 2000);
                 } else {
                     $.notify(data.message, "error");
                 }
@@ -206,21 +219,31 @@ $(document).ready(function() {
                         $('#brand_management select[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                         $('#brand_management textarea[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                     });
+                    $('.btn-primary').text('Save');
+                    $('.submit-form').removeAttr('disabled');
                 }
 
                 if (data.logo_error) {
                     $('#brand_management input[name="brand_logo"]').after('<span class="text-danger errors_msg">' + data.logo_error + '</span>');
+                    $('.btn-primary').text('Save');
+                    $('.submit-form').removeAttr('disabled');
                 }
 
                 if (data.banner_web_error) {
                     $('#brand_management input[name="banner_web"]').after('<span class="text-danger errors_msg">' + data.banner_web_error + '</span>');
+                    $('.btn-primary').text('Save');
+                    $('.submit-form').removeAttr('disabled');
                 }
                 if (data.banner_mobile_error) {
                     $('#brand_management input[name="banner_mobile"]').after('<span class="text-danger errors_msg">' + data.banner_mobile_error + '</span>');
+                    $('.btn-primary').text('Save');
+                    $('.submit-form').removeAttr('disabled');
                 }
 
                 if (data.about_brand_banner_web_error) {
                     $('#brand_management input[name="about_brand_banner_web"]').after('<span class="text-danger errors_msg">' + data.about_brand_banner_web_error + '</span>');
+                    $('.btn-primary').text('Save');
+                    $('.submit-form').removeAttr('disabled');
                 }
 
             }
