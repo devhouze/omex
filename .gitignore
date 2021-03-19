@@ -1,5 +1,3 @@
 .htaccess
-
-.env
-assets
+assets/images
 .env
