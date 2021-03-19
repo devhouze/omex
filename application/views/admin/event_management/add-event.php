@@ -12,12 +12,12 @@ $event_start_time = ($events)?$events->event_start_time:'';
 $event_end_time = ($events)?$events->event_end_time:'';
 $event_label = ($events)?$events->event_label:'';
 $about_event = ($events)?$events->about_event:'';
-$event_street = ($events)?$events->event_street:'';
+$event_street = ($events)?explode(',',$events->event_street):'';
 $event_category = ($events)?explode(",",$events->event_category):[];
 $show_brand = ($events)?$events->show_brand:1;
 $show_reg_btn = ($events)?$events->show_reg_btn:1;
 $brands = ($events)?$events->brands:'';
-
+$thumbnail_image = ($events)?$events->thumbnail_image:'';
 ?>
 <script src="<?=base_url('assets/js/admin/events.js')?>"></script>
 <div class="content-wrapper">
@@ -57,7 +57,8 @@ $brands = ($events)?$events->brands:'';
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Event Banner(600px * 400px), JPG | PNG</label>
-                                    <input type="file" class="form-control form-control-sm input-sm" name="thumbnail_image" value="">
+                                    <input type="file" class="form-control form-control-sm input-sm" name="thumbnail_image" value="" onchange="checkFileDetails(600,400,this)">
+                                    <span style="color: red;font-size: 9px;"></span>
                                 </div>
 
                                 <div class="col-md-6 mb-3">
@@ -65,6 +66,12 @@ $brands = ($events)?$events->brands:'';
                                     <input type="text" class="form-control form-control-sm input-sm" name="thumbnail_message" value="<?=$thumbnail_message;?>">
                                 </div>
                                 
+                                <div class="col-md-6 mb-3">
+                                    <?php if (is_file("assets/images/public/home/" . $thumbnail_image)) { ?>
+
+                                        <img src="<?php echo base_url("assets/images/public/home/" . $thumbnail_image); ?>" class="img-thumb" style="width:100px !important;" />
+                                    <?php } ?>
+                                </div>
                                
 
                                 <div class="col-md-6 mb-3">
@@ -89,8 +96,8 @@ $brands = ($events)?$events->brands:'';
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Event Label</label><br>
-                                    <select name="event_label" class="form-control form-control-sm">
-                                        <option selected="" disabled>Select Option</option>
+                                    <select name="event_label" class="form-control form-control-sm select-box">
+                                    <option value="">Select Label</option>
                                         <option value="New" <?php if($event_label == "New"){echo "selected"; }?>>New</option>
                                         <option value="Popular" <?php if($event_label == "Popular"){echo "selected"; }?>>Popular</option>
                                         <option value="Coming Soon" <?php if($event_label == "Coming Soon"){echo "selected"; }?>>Coming Soon</option>
@@ -100,7 +107,7 @@ $brands = ($events)?$events->brands:'';
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Event Category</label>
-                                    <select name="event_category[]"  class="form-control form-control-sm" multiple>
+                                    <select name="event_category[]"  class="form-control form-control-sm select-box" multiple>
                                     <option value="Live Music Show" <?php if(in_array("Live Music Show",$event_category)){echo "selected";}?>>Live Music Show</option>
                                     <option value="Kids Workshop" <?php if(in_array("Kids Workshop",$event_category)){echo "selected";}?>>Kids Workshop</option>
                                     <option value="Performing Arts" <?php if(in_array("Performing Arts",$event_category)){echo "selected";}?>>Performing Arts</option>
@@ -132,22 +139,21 @@ $brands = ($events)?$events->brands:'';
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Event Street</label>
-                                    <select name="event_street" class="form-control form-control-sm">
-                                        <option selected="" disabled>Select Street</option>
-                                        <option value="London Street" <?php if($event_street == "London Street"){echo "selected"; }?>>London Street</option>
-                                        <option value="Paris Street" <?php if($event_street == "Paris Street"){echo "selected"; }?>>Paris Street</option>
-                                        <option value="Hong Kong Street" <?php if($event_street == "Hong Kong Street"){echo "selected"; }?>>Hong Kong Street</option>
-                                        <option value="Amsterdam Street" <?php if($event_street == "Amsterdam Street"){echo "selected"; }?>>Amsterdam Street</option>
-                                        <option value="Portugal Street" <?php if($event_street == "Portugal Street"){echo "selected"; }?>>Portugal Street</option>
-                                        <option value="San Francisco Street" <?php if($event_street == "San Francisco Street"){echo "selected"; }?>>San Francisco Street</option>
-                                        <option value="Athens Street" <?php if($event_street == "Athens Street"){echo "selected"; }?>>Athens Street</option>
+                                    <select name="event_street[]" class="form-control form-control-sm select-box" multiple>
+                                        <option value="London Street" <?php if(in_array("London Street",$event_street)){echo "selected"; }?>>London Street</option>
+                                        <option value="Paris Street" <?php if(in_array("Paris Street",$event_street)){echo "selected"; }?>>Paris Street</option>
+                                        <option value="Hong Kong Street" <?php if(in_array("Hong Kong Street",$event_street)){echo "selected"; }?>>Hong Kong Street</option>
+                                        <option value="Amsterdam Street" <?php if(in_array("Amsterdam Street",$event_street)){echo "selected"; }?>>Amsterdam Street</option>
+                                        <option value="Portugal Street" <?php if(in_array("Portugal Street",$event_street)){echo "selected"; }?>>Portugal Street</option>
+                                        <option value="San Francisco Street" <?php if(in_array("San Francisco Street",$event_street)){echo "selected"; }?>>San Francisco Street</option>
+                                        <option value="Athens Street" <?php if(in_array("Athens Street",$event_street)){echo "selected"; }?>>Athens Street</option>
                                     </select>
                                 </div>
 
                                 <div class="col-md-6 mb-3" style="display:none;">
                                     <label for="">Show Brand Information</label>
                                     <select name="show_brand" id="show_brand" class="form-control form-control-sm">
-                                        <option selected="" disabled>Select Option</option>
+                                        <option value="">Select Option</option>
                                         <option value="0" <?php if($show_brand == 0){echo "selected"; }?>>Yes</option>
                                         <option value="1" <?php if($show_brand == 1){echo "selected"; }?>>No</option>
                                     </select>
@@ -156,7 +162,7 @@ $brands = ($events)?$events->brands:'';
                                 <div class="col-md-6 mb-3 show_brand" <?php if($show_brand == 1){ ?> style="display:none;" <?php } else {?> style="display:block;"<?php } ?>>
                                     <label for="">Select Brand</label>
                                     <select name="brand" class="form-control form-control-sm">
-                                        <option selected="" disabled>Select Brand</option>
+                                        <option value>Select Brand</option>
                                         <?php if(!empty($brands_list)) { foreach($brands_list as $brand){?>
                                         <option value="<?=$brand['brand_id'];?>" <?php if($brand['brand_id'] == $brands){echo "selected"; }?>><?=$brand['brand_name'];?></option>
                                         <?php } } ?>
@@ -166,7 +172,7 @@ $brands = ($events)?$events->brands:'';
                                 <div class="col-md-6 mb-3">
                                     <label for="">Enable Register Button</label>
                                     <select name="show_reg_btn" class="form-control form-control-sm">
-                                        <option selected="" disabled>Select Option</option>
+                                        <option value>Select Option</option>
                                         <option value="0" <?php if($show_reg_btn == 0){echo "selected"; }?>>Yes</option>
                                         <option value="1" <?php if($show_reg_btn == 1){echo "selected"; }?>>No</option>
                                     </select>
@@ -174,7 +180,7 @@ $brands = ($events)?$events->brands:'';
 
                             </div>
                                 
-                            <button class="btn btn-primary" type="submit">Save</button>
+                            <button class="btn btn-primary submit-form" type="submit">Save</button>
                             <button class="btn btn-danger" type="button" onclick="window.location.replace('<?=admin_url('events');?>')">Go Back</button>
                         </form>
                     </div>

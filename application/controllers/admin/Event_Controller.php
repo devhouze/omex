@@ -63,12 +63,11 @@ class Event_Controller extends MY_Controller
                 $this->form_validation->set_rules('thumbnail_image','Thumbnail','required');
             }
             $this->form_validation->set_rules('thumbnail_message','Thumbnail Message','required');
-            $this->form_validation->set_rules('event_type','Event Type','required');
             $this->form_validation->set_rules('event_location','Event Location','required');
             $this->form_validation->set_rules('about_event','About Event','required');
-            $this->form_validation->set_rules('event_label','Event Label','required');
+            // $this->form_validation->set_rules('event_label','Event Label','required');
             $this->form_validation->set_rules('event_category[]','Event Category','required');
-            $this->form_validation->set_rules('event_street','Event Street','required');
+            $this->form_validation->set_rules('event_street[]','Event Street','required');
             $this->form_validation->set_rules('show_brand','Show Brand Information','required');
             if($this->input->post('show_brand') == "Yes"){
                 $this->form_validation->set_rules('brand','Select Brand','required');
@@ -76,6 +75,7 @@ class Event_Controller extends MY_Controller
             if($this->form_validation->run()){
                 $data_array = array(
                     'event_name'            => $this->input->post('event_name'),
+                    'event_slug'            => url_title($this->input->post('event_name'), 'dash', true),
                     'date_available'        => $this->input->post('date_availibility'),
                     'start_date'            => date('Y-m-d',strtotime($this->input->post('start_date'))),
                     'end_date'              => date('Y-m-d',strtotime($this->input->post('end_date'))),
@@ -86,7 +86,7 @@ class Event_Controller extends MY_Controller
                     'event_end_time'        => $this->input->post('event_end_time'),
                     'event_label'           => $this->input->post('event_label'),
                     'about_event'           => $this->input->post('about_event'),
-                    'event_street'          => $this->input->post('event_street'),
+                    'event_street'          => (is_array($this->input->post('event_street')))?implode(',',$this->input->post('event_street')):$this->input->post('event_street'),
                     'event_category'        => implode(",",$this->input->post('event_category')),
                     'show_brand'            => $this->input->post('show_brand'),
                     'brands'                => $this->input->post('brand'),
@@ -143,12 +143,11 @@ class Event_Controller extends MY_Controller
                 $this->form_validation->set_rules('event_end_time','Event End Time','required');
             }
             $this->form_validation->set_rules('thumbnail_message','Thumbnail Message','required');
-            $this->form_validation->set_rules('event_type','Event Type','required');
             $this->form_validation->set_rules('event_location','Event Location','required');
             $this->form_validation->set_rules('about_event','About Event','required');
-            $this->form_validation->set_rules('event_label','Event Label','required');
+            // $this->form_validation->set_rules('event_label','Event Label','required');
             $this->form_validation->set_rules('event_category[]','Event Category','required');
-            $this->form_validation->set_rules('event_street','Event Street','required');
+            $this->form_validation->set_rules('event_street[]','Event Street','required');
             $this->form_validation->set_rules('show_brand','Show Brand Information','required');
             if($this->input->post('show_brand') == "Yes"){
                 $this->form_validation->set_rules('brand','Select Brand','required');
@@ -156,6 +155,7 @@ class Event_Controller extends MY_Controller
             if($this->form_validation->run()){
                 $data_array = array(
                     'event_name'            => $this->input->post('event_name'),
+                    'event_slug'            => url_title($this->input->post('event_name'), 'dash', true),
                     'date_available'        => $this->input->post('date_availibility'),
                     'start_date'            => date('Y-m-d',strtotime($this->input->post('start_date'))),
                     'end_date'              => date('Y-m-d',strtotime($this->input->post('end_date'))),
@@ -166,7 +166,7 @@ class Event_Controller extends MY_Controller
                     'event_end_time'        => $this->input->post('event_end_time'),
                     'event_label'           => $this->input->post('event_label'),
                     'about_event'           => $this->input->post('about_event'),
-                    'event_street'          => $this->input->post('event_street'),
+                    'event_street'          => (is_array($this->input->post('event_street')))?implode(',',$this->input->post('event_street')):$this->input->post('event_street'),
                     'event_category'        => implode(",",$this->input->post('event_category')),
                     'show_brand'            => $this->input->post('show_brand'),
                     'brands'                => $this->input->post('brand'),

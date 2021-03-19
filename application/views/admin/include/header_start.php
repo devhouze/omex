@@ -17,5 +17,17 @@
   <link href="<?php echo base_url(); ?>assets/css/admin/jquery-ui.css" rel="stylesheet"/>
   <link href="<?php echo base_url(); ?>assets/css/admin/custom.css" rel="stylesheet"/>
   <link rel="stylesheet" href="<?=base_url('assets/css/admin/timepicker.css')?>">
+  <link rel="stylesheet" href="<?= base_url()?>assets/css/admin/select2.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+  <style>
+    .pageloader {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		z-index: 999999;
+		background: url('<?php echo base_url('assets/admin/images/loader.gif'); ?>') 50% 50% no-repeat rgb(249, 249, 249);
+		opacity: .8;
+	}
+  </style>

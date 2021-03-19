@@ -80,7 +80,7 @@
                                     <td scope="row"><?=$sno; $sno++;?></td>
                                     <td><?=$value['file_type'];?></td>
                                     <td><?=$value['type'];?></td>
-                                    <td><?=$value['media_name'];?></td>
+                                    <td><?=(empty($value['media_name']))?$value['media_video']:$value['media_name'];?></td>
                                     <td><?=$value['sequence'];?></td>
                                     <td align="center">
                                         <label class="switch">

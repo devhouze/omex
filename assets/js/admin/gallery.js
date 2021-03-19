@@ -21,18 +21,65 @@ $(document).ready(function() {
         }
     });
 
-    $('#media_type').change(function() {
+    function check_file() {
         var media_type = $('#media_type option:selected').val();
 
-        if (media_type == 1 || media_type == 2) {
-            $('#media').css('display', 'block');
-        } else if (media_type == 3) {
-            $('#youtube').css('display', 'block');
-            $('#media').css('display', 'none');
-        } else {
-            $('#media').css('display', 'none');
+        if (media_type == 1) {
+            $('.filter_type').empty();
+            $('#image').css('display', 'block');
             $('#youtube').css('display', 'none');
+            $('#video').css('display', 'none');
+            value = "<option value=''>Select Option</option>";
+            value += "<option value='1'>Interior</option>";
+            value += "<option value='2'>Exterior</option>";
+            value += "<option value='3'>Construction</option>";
+            $('.filter_type').append(value);
+        } else if (media_type == 3) {
+            $('.filter_type').empty();
+            $('#youtube').css('display', 'block');
+            $('#image').css('display', 'none');
+            $('#video').css('display', 'none');
+            value = "<option value=''>Select Option</option>";
+            value += "<option value='4'>Video</option>";
+            $('.filter_type').append(value);
+        } else if (media_type == 2) {
+            $('.filter_type').empty();
+            $('#youtube').css('display', 'none');
+            $('#image').css('display', 'none');
+            $('#video').css('display', 'block');
+            value = "<option value=''>Select Option</option>";
+            value += "<option value='4'>Video</option>";
+            $('.filter_type').append(value);
+        } else {
+            $('#image').css('display', 'none');
+            $('#youtube').css('display', 'none');
+            $('#video').css('display', 'none');
         }
+
+
+
+        $.ajax({
+            type: 'post',
+            url: url + 'get-sequence',
+            data: { media_type: media_type },
+            dataType: 'json',
+            success: function(data) {
+                if (data != '') {
+                    $.each(data, function(i, v) {
+                        $('#sequence').find('option[value="' + v.sequence + '"]').prop('disabled', true);
+                    })
+                } else {
+                    $('#sequence').find('option').prop('disabled', false);
+                }
+
+            }
+        })
+    }
+
+    // check_file();
+
+    $('#media_type').change(function() {
+        check_file();
     });
 
     $(".chkstatus").click(function() {
@@ -63,6 +110,9 @@ $(document).ready(function() {
         for (instance in CKEDITOR.instances) {
             CKEDITOR.instances[instance].updateElement();
         }
+        $('.btn-primary').html('<i class="fa fa-spinner fa-spin"></i>Loading');
+        $('.submit-form').prop("disabled", true);
+
         $.ajax({
             type: 'post',
             url: form.attr('action'),
@@ -76,7 +126,11 @@ $(document).ready(function() {
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
                     $.notify(data.message, "success");
-                    setTimeout(function() { window.location.replace(url + 'gallery'); }, 2000);
+                    setTimeout(function() {
+                        window.location.replace(url + 'gallery');
+                        $('.btn-primary').text('Save');
+                    }, 2000);
+
                 } else {
                     $.notify(data.message, "error");
                 }
@@ -85,6 +139,8 @@ $(document).ready(function() {
                         $('#gallery_management input[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                         $('#gallery_management select[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                     });
+                    $('.btn-primary').text('Save');
+                    $('.submit-form').removeAttr('disabled');
                 }
             }
         });

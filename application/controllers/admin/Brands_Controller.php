@@ -99,6 +99,7 @@ class Brands_Controller extends MY_Controller
                 }
                 $data_array = array(
                     'brand_name'                    => $this->input->post('brand_name'),
+                    'brand_slug'                    => url_title($this->input->post('brand_name'), 'dash', true),
                     'brand_website'                 => $this->input->post('brand_website'),
                     'logo_message'                  => $this->input->post('logo_comment'),
                     'about_brand'                   => trim($this->input->post('about_brand')),
@@ -131,10 +132,8 @@ class Brands_Controller extends MY_Controller
                     $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
                     $data_array['brand_logo'] = $new_name;
                     $config['upload_path'] = 'assets/images/public/brand';
-                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['allowed_types'] = 'png';
                     $config['file_name'] = $new_name;
-                    $config['max_width']  = '285';
-                    $config['max_height']  = '240';
                     $this->load->library('upload',$config);
                     $this->upload->initialize($config);
                     if(!$this->upload->do_upload('brand_logo')){
@@ -149,10 +148,8 @@ class Brands_Controller extends MY_Controller
                     $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
                     $data_array['banner_web'] = $new_name;
                     $config['upload_path'] = 'assets/images/public/brand';
-                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['allowed_types'] = 'jpg|jpeg|png';
                     $config['file_name'] = $new_name;
-                    $config['max_width']  = '1283';
-                    $config['max_height']  = '450';
                     $this->load->library('upload',$config);
                     $this->upload->initialize($config);
                     if(!$this->upload->do_upload('banner_web')){
@@ -167,10 +164,8 @@ class Brands_Controller extends MY_Controller
                     $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
                     $data_array['banner_mobile'] = $new_name;
                     $config['upload_path'] = 'assets/images/public/brand';
-                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['allowed_types'] = 'jpg|jpeg|png';
                     $config['file_name'] = $new_name;
-                    $config['max_width']  = '748';
-                    $config['max_height']  = '1102';
                     $this->load->library('upload',$config);
                     $this->upload->initialize($config);
                     if(!$this->upload->do_upload('banner_mobile')){
@@ -185,7 +180,7 @@ class Brands_Controller extends MY_Controller
                     $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
                     $data_array['about_brand_banner_web'] = $new_name;
                     $config['upload_path'] = 'assets/images/public/brand';
-                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['allowed_types'] = 'jpg|jpeg|png';
                     $config['file_name'] = $new_name;
                     $this->load->library('upload',$config);
                     $this->upload->initialize($config);
@@ -195,22 +190,6 @@ class Brands_Controller extends MY_Controller
                     }
                 }
 
-                if(!empty($_FILES['about_brand_banner_mobile']['name'])){
-                    $logo = $getfilename =  str_replace(' ', '_', $_FILES['about_brand_banner_mobile']['name']);
-                    $file = pathinfo($logo);
-                    $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
-                    $data_array['about_brand_banner_mobile'] = $new_name;
-                    $config['upload_path'] = 'assets/images/public/brand';
-                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
-                    $config['file_name'] = $new_name;
-                    $this->load->library('upload',$config);
-                    $this->upload->initialize($config);
-                    if(!$this->upload->do_upload('about_brand_banner_mobile')){
-                        echo json_encode(['message' => 'Something went wrong!.', 'about_brand_banner_mobile_error' => $this->upload->display_errors(), 'status' => 0]);
-                        exit;
-                    }
-                }
-                // echo "<pre>"; print_r($data_array); die;
                 $save = $this->bm->insert_data('tbl_brand',$data_array);
                 if($save){
                     echo json_encode(['message' => 'Data saved successfully.', 'status' => 1]);
@@ -262,6 +241,7 @@ class Brands_Controller extends MY_Controller
             if($this->form_validation->run()){
                 $data_array = array(
                     'brand_name'                    => $this->input->post('brand_name'),
+                    'brand_slug'                    => url_title($this->input->post('brand_name'), 'dash', true),
                     'brand_website'                 => $this->input->post('brand_website'),
                     'logo_message'                  => $this->input->post('logo_comment'),
                     'about_brand'                   => trim($this->input->post('about_brand')),
@@ -294,12 +274,13 @@ class Brands_Controller extends MY_Controller
                     $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
                     $data_array['brand_logo'] = $new_name;
                     $config['upload_path'] = 'assets/images/public/brand';
-                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['allowed_types'] = 'jpg|jpeg|png';
                     $config['file_name'] = $new_name;
+                    $config['max_size'] = 2000;
                     $this->load->library('upload',$config);
                     $this->upload->initialize($config);
                     if(!$this->upload->do_upload('brand_logo')){
-                        echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->upload->display_errors(), 'status' => 0]);
+                        echo json_encode(['message' => 'Something went wrong!.', 'logo_error' => $this->upload->display_errors(), 'status' => 0]);
                         exit;
                     }
                 }
@@ -310,12 +291,13 @@ class Brands_Controller extends MY_Controller
                     $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
                     $data_array['banner_web'] = $new_name;
                     $config['upload_path'] = 'assets/images/public/brand';
-                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['allowed_types'] = 'jpg|jpeg|png';
                     $config['file_name'] = $new_name;
+                    $config['max_size'] = 2000;
                     $this->load->library('upload',$config);
                     $this->upload->initialize($config);
                     if(!$this->upload->do_upload('banner_web')){
-                        echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->upload->display_errors(), 'status' => 0]);
+                        echo json_encode(['message' => 'Something went wrong!.', 'banner_web_error' => $this->upload->display_errors(), 'status' => 0]);
                         exit;
                     }
                 }
@@ -326,12 +308,13 @@ class Brands_Controller extends MY_Controller
                     $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
                     $data_array['banner_mobile'] = $new_name;
                     $config['upload_path'] = 'assets/images/public/brand';
-                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['allowed_types'] = 'jpg|jpeg|png';
                     $config['file_name'] = $new_name;
+                    $config['max_size'] = 2000;
                     $this->load->library('upload',$config);
                     $this->upload->initialize($config);
                     if(!$this->upload->do_upload('banner_mobile')){
-                        echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->upload->display_errors(), 'status' => 0]);
+                        echo json_encode(['message' => 'Something went wrong!.', 'banner_mobile_error' => $this->upload->display_errors(), 'status' => 0]);
                         exit;
                     }
                 }
@@ -342,31 +325,17 @@ class Brands_Controller extends MY_Controller
                     $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
                     $data_array['about_brand_banner_web'] = $new_name;
                     $config['upload_path'] = 'assets/images/public/brand';
-                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['allowed_types'] = 'jpg|jpeg|png';
                     $config['file_name'] = $new_name;
+                    $config['max_size'] = 2000;
                     $this->load->library('upload',$config);
                     $this->upload->initialize($config);
                     if(!$this->upload->do_upload('about_brand_banner_web')){
-                        echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->upload->display_errors(), 'status' => 0]);
+                        echo json_encode(['message' => 'Something went wrong!.', 'about_brand_banner_web_error' => $this->upload->display_errors(), 'status' => 0]);
                         exit;
                     }
                 }
 
-                if(!empty($_FILES['about_brand_banner_mobile']['name'])){
-                    $logo = $getfilename =  str_replace(' ', '_', $_FILES['about_brand_banner_mobile']['name']);
-                    $file = pathinfo($logo);
-                    $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
-                    $data_array['about_brand_banner_mobile'] = $new_name;
-                    $config['upload_path'] = 'assets/images/public/brand';
-                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
-                    $config['file_name'] = $new_name;
-                    $this->load->library('upload',$config);
-                    $this->upload->initialize($config);
-                    if(!$this->upload->do_upload('about_brand_banner_mobile')){
-                        echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->upload->display_errors(), 'status' => 0]);
-                        exit;
-                    }
-                }
                 $save = $this->bm->update_data('tbl_brand',$data_array,['brand_id' => $id]);
                 if($save){
                     echo json_encode(['message' => 'Data updated successfully.', 'status' => 1]);
@@ -382,7 +351,6 @@ class Brands_Controller extends MY_Controller
         $data['category'] = $this->bm->get_data_array('tbl_category','category_name, id','');
         $category = $data['brands']->brand_category;
         $data['sub_category'] = $this->bm->get_sub_category($category);
-        // echo "<pre>"; print_r($data); die;
         $this->load->view('admin/include/header_start');
 		$this->load->view('admin/include/header_end');
 		$this->load->view('admin/include/body_start');
@@ -425,7 +393,7 @@ class Brands_Controller extends MY_Controller
     public function add_brand_offer()
     {
         $data['brand_offers'] = [];
-        $data['brands'] = $this->bm->get_data_array('tbl_brand','brand_id,brand_name','status !=2');
+        $data['brands'] = $this->bm->get_data_array('tbl_brand','brand_id,brand_name',['status' => 0]);
         if($this->input->post()){
             $this->form_validation->set_rules('brand_offer_name','Offer Name','required');
             $this->form_validation->set_rules('brand_id','Brand','required');
@@ -439,6 +407,7 @@ class Brands_Controller extends MY_Controller
 
                 $data_array = array(
                     'brand_id'          => $this->input->post('brand_id'),
+                    'offer_slug'        => url_title($this->input->post('brand_offer_name'), 'dash', true),
                     'offer_name'        => $this->input->post('brand_offer_name'),
                     'thumbnail_alt'     => $this->input->post('thumbnail_alt'),
                     'about_offer'       => $this->input->post('about_brand_offer'),
@@ -451,7 +420,7 @@ class Brands_Controller extends MY_Controller
                     $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
                     $data_array['offer_thumbnail'] = $new_name;
                     $config['upload_path'] = 'assets/images/public/brand';
-                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['allowed_types'] = 'jpg|jpeg|png';
                     $config['file_name'] = $new_name;
                     $config['max_size'] = 2000;
                     $this->load->library('upload',$config);
@@ -484,7 +453,7 @@ class Brands_Controller extends MY_Controller
     public function edit_brand_offer($id)
     {
         $data['brand_offers'] = $this->bm->get_data_row('tbl_brand_offer','*',['offer_id' => $id]);
-        $data['brands'] = $this->bm->get_data_array('tbl_brand','brand_id,brand_name','status !=2 and brand_offer_status = "Yes"');
+        $data['brands'] = $this->bm->get_data_array('tbl_brand','brand_id,brand_name',['status' => 0]);
         if($this->input->post()){
             $this->form_validation->set_rules('brand_offer_name','Offer Name','required');
             $this->form_validation->set_rules('brand_id','Brand','required');
@@ -495,6 +464,7 @@ class Brands_Controller extends MY_Controller
 
                 $data_array = array(
                     'brand_id'          => $this->input->post('brand_id'),
+                    'offer_slug'        => url_title($this->input->post('brand_offer_name'), 'dash', true),
                     'offer_name'        => $this->input->post('brand_offer_name'),
                     'thumbnail_alt'     => $this->input->post('thumbnail_alt'),
                     'about_offer'       => $this->input->post('about_brand_offer'),
@@ -507,7 +477,7 @@ class Brands_Controller extends MY_Controller
                     $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
                     $data_array['offer_thumbnail'] = $new_name;
                     $config['upload_path'] = 'assets/images/public/brand';
-                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    $config['allowed_types'] = 'jpg|jpeg|png';
                     $config['file_name'] = $new_name;
                     $config['max_size'] = 2000;
                     $this->load->library('upload',$config);
