@@ -53,6 +53,8 @@ $(document).ready(function() {
             CKEDITOR.instances[instance].updateElement();
         }
         $('.btn-primary').html('<i class="fa fa-spinner fa-spin"></i>Loading');
+
+        $('.submit-form').prop("disabled", true);
         $.ajax({
             type: 'post',
             url: form.attr('action'),
@@ -66,8 +68,8 @@ $(document).ready(function() {
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
                     $.notify(data.message, "success");
-                    $('.btn-primary').text('Save');
-                    setTimeout(function() { window.location.replace(url + 'banners'); },1000);
+                    
+                    setTimeout(function() { window.location.replace(url + 'banners');$('.btn-primary').text('Save'); },2000);
                 } else {
                     $.notify(data.message, "error");
                 }
@@ -77,6 +79,8 @@ $(document).ready(function() {
                         $('#banner_management select[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                         $('#banner_management textarea[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                     });
+                    $('.btn-primary').text('Save');
+                    $('.submit-form').removeAttr('disabled');
                 }
 
             }
