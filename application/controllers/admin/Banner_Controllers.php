@@ -60,7 +60,8 @@ class Banner_Controllers extends my_controller
                 $this->form_validation->set_rules('banner_mobile','Banner for mobile','required');
             }
             $this->form_validation->set_rules('banner_comment','Banner Comment','required');
-            // $this->form_validation->set_rules('banner_link','Banner Link','required');
+
+            $this->form_validation->set_rules("banner_link", "Banner Link", "callback_valid_url");
 
             $banner_type = $this->input->post('banner_type');
 
@@ -152,6 +153,9 @@ class Banner_Controllers extends my_controller
 		$this->load->view('admin/include/admin_js');
     }
 
+     public function valid_url($str) {
+        return (filter_var($str, FILTER_VALIDATE_URL) !== FALSE);
+    }
     public function edit_banners($id)
     {
         if($this->input->post()){
