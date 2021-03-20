@@ -45,7 +45,7 @@ $media_alt = (!empty($gallery))?$gallery['media_alt']:'';
                                 </div>
 
                                 <div class="col-md-6 mb-3" id="youtube" <?php if($media_type == 3){?>style="display:block" <?php } else {?>style="display:none"<?php } ?>>
-                                    <label for="">Add YouTube Link</label>
+                                    <label for="">Add YouTube Link(Enter embeded link for YouTube Video)</label>
                                     <input type="text" name="youtube_link" class="form-control form-control-sm input-sm" placeholder="YouTube Link" value="<?php echo $media_name; ?>">
                                 </div>
                                 

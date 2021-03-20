@@ -162,7 +162,7 @@ $(document).ready(function() {
                 var media_name = data.media_name;
                 var media_video = data.media_video;
                 if (media_type == 3) {
-                    value = '<iframe src="' + media_name + '"></iframe>';
+                    value = '<iframe src="' + media_name + '" height="100%" width="100%"></iframe>';
                 }
                 if (media_type == 2) {
                     value = '<video width="320" height="240" controls>';
