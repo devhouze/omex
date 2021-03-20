@@ -37,7 +37,7 @@ class Login_Controller extends CI_Controller
                 } else {
                     unset($validate['data']['password']);
                     $this->session->set_userdata('admin_details',$validate['data']);
-                    echo json_encode(['message' => 'Login Success', 'status' => 1]);
+                    echo json_encode(['message' => 'Login Success', 'status' => 1,'user_type'=>$validate['data']['user_type']]);
                 }
             } else {
                 echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->form_validation->error_array(), 'status' => 0]);
