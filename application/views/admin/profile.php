@@ -23,10 +23,10 @@ $email = ($admin_profile)?$admin_profile->email:'';
                                     <label for="">Email</label>
                                     <input type="email" class="form-control form-control-sm input-sm" placeholder="Email Address" name="email" value="<?=$email;?>">
                                 </div>
-                                <div class="col-md-12 mb-3">
+                                <!-- <div class="col-md-12 mb-3">
                                     <label for="">Password</label>
                                     <input type="password" name="password" class="form-control form-control-sm input-sm" placeholder="Password">
-                                </div>
+                                </div> -->
                             </div>
                                 
                             <button class="btn btn-primary" type="submit">Save</button>

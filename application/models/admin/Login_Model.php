@@ -13,7 +13,7 @@ class Login_Model extends MY_Model
         $check_username = $this->db->get_where('tbl_admin',['user_name' => $data['username']]);
         
         if($check_username->num_rows() > 0){
-            $check_password = $this->db->get_where('tbl_admin',['password' => md5($data['password'])]);
+             $check_password = $this->db->get_where('tbl_admin',['password' => md5($data['password']),'user_name' => $data['username']]);
 
             if($check_password->num_rows() > 0){
                 $query = $this->db->get_where('tbl_admin',['user_name' => $data['username'], 'password' => md5($data['password'])]);
@@ -23,7 +23,7 @@ class Login_Model extends MY_Model
                 return ['message' => 'Password is incorrect.', 'status' => 0];
             }
         } else {
-            return ['message' => 'Username does not belong to any account.', 'status' => 0];
+            return ['message' => 'Invalid Username/Password', 'status' => 0];
         }
     }
 
