@@ -214,12 +214,14 @@ class Welcome extends CI_Controller {
 	{
 		$data['events'] = $this->wm->get_events();
 		$data['about_brand'] = $this->wm->get_about_brand($id);
-		$data['key_info'] = array_merge(explode(',',$data['about_brand']['brand_category']),(!empty($data['about_brand']['brand_sub_category']))?explode(',',$data['about_brand']['brand_sub_category']):[]);
-		$data['what_new'] = $this->wm->get_what_new();
-		$data['similar_brands'] = $this->wm->get_similar_brands($data['about_brand']['brand_type'],null);
-		$data['first_similar_brands'] = $this->wm->get_similar_brands($data['about_brand']['brand_type'],6);
-		$data['second_similar_brands'] = $this->wm->get_similar_brands($data['about_brand']['brand_type'],6,6);
-		$data['third_similar_brands'] = $this->wm->get_similar_brands($data['about_brand']['brand_type'],6,12);
+
+		// $data['key_info'] = array_merge(explode(',',$data['about_brand']['brand_category']),(!empty($data['about_brand']['brand_sub_category']))?explode(',',$data['about_brand']['brand_sub_category']):[]);
+		$data['key_info'] = explode(',',$data['about_brand']['brand_sub_category']);
+		$data['what_new'] = $this->wm->get_what_new($id,$data['about_brand']['brand_street']);
+		$data['similar_brands'] = $this->wm->get_similar_brands($id,$data['about_brand']['brand_type'],null);
+		$data['first_similar_brands'] = $this->wm->get_similar_brands($id,$data['about_brand']['brand_type'],6);
+		$data['second_similar_brands'] = $this->wm->get_similar_brands($id,$data['about_brand']['brand_type'],6,6);
+		$data['third_similar_brands'] = $this->wm->get_similar_brands($id,$data['about_brand']['brand_type'],6,12);
 		// echo "<pre>"; print_r($data['first_similar_brands']);
 		// echo "<pre>"; print_r($data['second_similar_brands']);
 		// echo "<pre>"; print_r($data['third_similar_brands']); die;
@@ -392,7 +394,15 @@ class Welcome extends CI_Controller {
 	public function get_brands()
 	{
 		$type = $this->input->post('type');
-		$data = $this->wm->get_brands($type);
+		$data = $this->wm->get_brands($type,$street='');
+		echo json_encode($data);
+	}
+
+	public function get_brands_like()
+	{
+		$type = $this->input->post('type');
+		$street = str_replace("-"," ",$this->input->post('street'));
+		$data = $this->wm->get_brands_like($type,$street);
 		echo json_encode($data);
 	}
 
@@ -400,13 +410,12 @@ class Welcome extends CI_Controller {
 	{
 		$street = ($this->input->post('street'))?$this->input->post('street'):'';
 		$sort = ($this->input->post('sort'))?$this->input->post('sort'):'';
-		$filter = ($this->input->post('filter'))?$this->input->post('sort'):'';
+		$filter = ($this->input->post('filter'))?$this->input->post('filter'):'';
 		$limit = ($this->input->post('limit'))?$this->input->post('limit'):"8";
 		$letter = ($this->input->post('letter'))?$this->input->post('letter'):"";
 		$category = ($this->input->post('category'))?$this->input->post('category'):'';
 		$count = $this->wm->filter_brand($street,$sort,$filter,$limit,$letter,$category,true);
 		$data['brand'] = $this->wm->filter_brand($street,$sort,$filter,$limit,$letter,$category);
-		// print_r($count); die;
 		if($limit != 'null' && $count > $limit){
 			$data['limit'] = $limit + 8;
 			$data['count'] = $count;

@@ -97,7 +97,7 @@ class Welcome_model extends CI_Model
 
     public function get_brand_logo()
     {
-        $query = $this->db->select('brand_logo, banner_comment, brand_id')
+        $query = $this->db->select('brand_logo, banner_comment, brand_id,brand_slug')
                           ->where('status',0)
                           ->where('show_on_home','Yes')
                           ->order_by('order_home','desc')
@@ -138,7 +138,7 @@ class Welcome_model extends CI_Model
 
     public function get_brands($type)
     {
-        $query = $this->db->select('brand_logo, logo_message, brand_id')
+        $query = $this->db->select('brand_logo, logo_message, brand_id,brand_slug')
                           ->where('status',0)
                           ->where('show_on_home','Yes')
                           ->where('brand_type',$type)
@@ -152,9 +152,25 @@ class Welcome_model extends CI_Model
         return [];
     }
 
+    public function get_brands_like($type,$street)
+    {
+        $query = $this->db->select('brand_logo, logo_message, brand_id,brand_slug')
+                          ->where('status',0)
+                          ->where('brand_type',$type)
+                          ->where("brand_street LIKE '%$street%'")
+                          ->order_by('brand_id','desc')
+                          ->order_by('order_home','asc')
+                          ->limit(10)
+                          ->get('tbl_brand');
+        if($query->num_rows() > 0){
+            return $query->result_array();
+        }
+        return [];
+    }
+
     public function get_brand_directory_banner()
     {
-        $query = $this->db->select('banner_web, banner_mobile, comment, banner_mobile')
+        $query = $this->db->select('banner_web, banner_mobile, comment, banner_mobile,banner_link')
                           ->where('status',0)
                           ->where('banner_type',3)
                           ->order_by('id','desc')
@@ -179,7 +195,7 @@ class Welcome_model extends CI_Model
 
     public function get_all_brands($category,$limit,$count = false)
     {
-        $this->db->select('brand_name, brand_logo, logo_message, brand_location, brand_id');
+        $this->db->select('brand_name, brand_logo, logo_message, brand_location, brand_id,brand_slug,brand_street');
         $this->db->where('status',0);
         $this->db->like('brand_category',$category);
         (!$count && $limit!='null')?$this->db->limit($limit):''; 
@@ -226,10 +242,16 @@ class Welcome_model extends CI_Model
         return [];
     }
 
-    public function get_what_new()
+    public function get_what_new($id='',$street='')
     {
         $this->db->select('brand_name, about_brand, brand_logo, brand_street, banner_web, banner_comment, logo_message');
         $this->db->where('status',0);
+        if($id){
+        $this->db->where('brand_slug !=',$id);
+        }
+        if($street){
+        $this->db->where("brand_street LIKE '%$street%'");
+        }
         $query = $this->db->get('tbl_brand');
         if($query->num_rows() > 0){
             return $query->result_array();
@@ -237,9 +259,11 @@ class Welcome_model extends CI_Model
         return [];
     }
 
+
+
     public function get_about_brand($id)
     {
-        $query = $this->db->get_where('tbl_brand',['brand_id' => $id]);
+        $query = $this->db->get_where('tbl_brand',['brand_slug' => $id,'status' => 0]);
         if($query->num_rows() > 0)
         {
             return $query->row_array();
@@ -247,10 +271,23 @@ class Welcome_model extends CI_Model
         return [];
     }
 
-    public function get_similar_brands($brand_type,$start=null,$end=null)
+    public function get_sub_cat_name($id)
     {
-        $this->db->select('brand_id, brand_name, brand_logo, logo_message');
+        $query = $this->db->get_where('tbl_sub_category',['id' => $id]);
+        if($query->num_rows() > 0)
+        {
+            $result=$query->row_array();
+            return $result['name'];
+        }
+        return [];
+    }
+
+    public function get_similar_brands($id,$brand_type,$start=null,$end=null)
+    {
+        $this->db->select('brand_id, brand_name, brand_logo, logo_message,brand_slug');
         $this->db->like('brand_type',$brand_type);
+        $this->db->where('brand_slug !=',$id);
+         $this->db->where('status',0);
         ($start!='null')?$this->db->limit($start,$end):'';
         $this->db->order_by('brand_id','desc');
         $query = $this->db->get('tbl_brand');
@@ -294,13 +331,15 @@ class Welcome_model extends CI_Model
         }
         if($filter != '')
         {
-            $this->db->like('brand_category',$filter);
-            $this->db->or_where('brand_sub_category',$filter);
+            // $this->db->like('brand_category',$filter);
+            $this->db->where('find_in_set("'.$filter.'", brand_category) <> 0');
+
+            // $this->db->or_where('brand_sub_category',$filter);
 
         }
         (!$count)?$this->db->limit($limit,0):'';
         $query = $this->db->get('tbl_brand');
-        echo $this->db->last_query(); die;
+        // echo $this->db->last_query(); die;
         if($count){
             return $query->num_rows();
         }

@@ -119,10 +119,10 @@ $(document).ready(function(){
                     $.each(data.brand,function(i,v){
                     var value = '<div class="col-md-3 col-6">';
                     value += '<div class="product-box">';
-                    value += "<a href='"+base_url+"brand/"+v.brand_id+"'></a>";
+                   value += "<a href='"+base_url+"brand/"+v.brand_slug+"'></a>";
                     value += "<figure><img src='"+base_url+"/assets/images/public/brand/"+v.brand_logo+"' alt='"+v.logo_message+"'></figure>";
                     value += '<div class="name">'+v.brand_name+'</div>';
-                    value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+'</div>';
+                    value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+','+v.brand_street+'</div>';
                     value += '</div>';
                     value += '</div>';
                     $('#brand').append(value);
@@ -146,6 +146,8 @@ $(document).ready(function(){
         var filter = $('#filter').val();
         var letter = $(this).data('letter');
         var limit = $('#limit').val();
+        $('.letter').removeClass('active');
+        $(this).addClass("active");   
         $('#brand').empty();
         $.ajax({
             type:'post',
@@ -157,10 +159,10 @@ $(document).ready(function(){
                     $.each(data.brand,function(i,v){
                     var value = '<div class="col-md-3 col-6">';
                     value += '<div class="product-box">';
-                    value += "<a href='"+base_url+"brand/"+v.brand_id+"'></a>";
+                    value += "<a href='"+base_url+"brand/"+v.brand_slug+"'></a>";
                     value += "<figure><img src='"+base_url+"/assets/images/public/brand/"+v.brand_logo+"' alt='"+v.logo_message+"'></figure>";
                     value += '<div class="name">'+v.brand_name+'</div>';
-                    value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+'</div>';
+                    value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+','+v.brand_street+'</div>';
                     value += '</div>';
                     value += '</div>';
                     $('#brand').append(value);
@@ -196,10 +198,10 @@ $(document).ready(function(){
                     $.each(data.brand,function(i,v){
                     var value = '<div class="col-md-3 col-6">';
                     value += '<div class="product-box">';
-                    value += "<a href='"+base_url+"brand/"+v.brand_id+"'></a>";
+                    value += "<a href='"+base_url+"brand/"+v.brand_slug+"'></a>";
                     value += "<figure><img src='"+base_url+"/assets/images/public/brand/"+v.brand_logo+"' alt='"+v.logo_message+"'></figure>";
                     value += '<div class="name">'+v.brand_name+'</div>';
-                    value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+'</div>';
+                    value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+','+v.brand_street+'</div>';
                     value += '</div>';
                     value += '</div>';
                     $('#brand').append(value);
@@ -238,10 +240,10 @@ $(document).ready(function(){
                     $.each(data.brand,function(i,v){
                     var value = '<div class="col-md-3 col-6">';
                     value += '<div class="product-box">';
-                    value += "<a href='"+base_url+"brand/"+v.brand_id+"'></a>";
+                    value += "<a href='"+base_url+"brand/"+v.brand_slug+"'></a>";
                     value += "<figure><img src='"+base_url+"/assets/images/public/brand/"+v.brand_logo+"' alt='"+v.logo_message+"'></figure>";
                     value += '<div class="name">'+v.brand_name+'</div>';
-                    value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+'</div>';
+                    value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+','+v.brand_street+'</div>';
                     value += '</div>';
                     value += '</div>';
                     $('#brand').append(value);
