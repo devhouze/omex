@@ -26,8 +26,8 @@
                   <div class="col-md-12">
                     <div class="d-flex my-2 justify-content-between">
                       
-                      <p><a class="text-blue" href="<?= base_url('admin/forgot-password') ?>">Forgot Your 
-                        Password?</a></p>
+                   <!--    <p><a class="text-blue" href="<?= base_url('admin/forgot-password') ?>">Forgot Your 
+                        Password?</a></p> -->
                     </div>
                     <button type="submit" class="btn btn-lg btn-primary btn-block mb-4">Sign In</button>
                   </div>
