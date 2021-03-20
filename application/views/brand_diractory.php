@@ -216,7 +216,7 @@
         </div>
     </div>
 
-    <?php if(!empty($brand_offers)) {?>
+    <?php if(!empty($brand_offers[0])) {?>
     <div class="about-brand gray-bg  pb-30 pt-60">
         <div class="container">
             <div class="row">
@@ -252,6 +252,8 @@
                             </div>
                         <?php $i++; } }?>
                         </div>
+
+                        <?php if(count($brand_offers)>1){ ?>
                         <div class="crsouls-btn-group">
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                         <img src="<?php echo base_url(); ?>assets/images/public/brand/left.svg" alt="" class="">
@@ -260,6 +262,7 @@
                         <img src="<?php echo base_url(); ?>assets/images/public/brand/right.svg" alt="" class="">
                         </button>
                         </div>
+                    <?php } ?>
                     </div>
                 </div>
             </div>

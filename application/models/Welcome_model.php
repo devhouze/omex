@@ -337,6 +337,7 @@ class Welcome_model extends CI_Model
             // $this->db->or_where('brand_sub_category',$filter);
 
         }
+        $this->db->where('status',0);
         (!$count)?$this->db->limit($limit,0):'';
         $query = $this->db->get('tbl_brand');
         // echo $this->db->last_query(); die;
