@@ -76,20 +76,13 @@ class Brands_Model extends MY_Model
 
     public function get_sub_category($cat_name)
     {
-        foreach (explode(',',$cat_name) as $value) {
-            $cat_id_query = $this->db->select('id')
-                                 ->where('category_name',$value)
-                                 ->get('tbl_category')->row_array();
             
-            $query = $this->db->select('id, name,cat_id')
-                                 ->where('cat_id',$cat_id_query['id'])
-                                 ->get('tbl_sub_category');
-            if($query->num_rows() > 0)
-            {
-                $sb_cat = $query->result_array();
-            }
-        }
-        if(!empty($sb_cat)){
+        $query = $this->db->select('id, name,cat_id')
+                                ->where_in('cat_id',$cat_name)
+                                ->get('tbl_sub_category');
+        if($query->num_rows() > 0)
+        {
+            $sb_cat = $query->result_array();
             return $sb_cat;
         }
         return [];

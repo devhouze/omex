@@ -63,7 +63,7 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                             </div>
                             <div class="form-row">
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Brand Logo(285px x 240px) .PNG</label>
+                                    <label for="">Brand Logo(285px x 240px), PNG | JPG</label>
                                     <input type="file" class="form-control form-control-sm input-sm" name="brand_logo" onchange="checkFileDetails(285,240,this)">
                                     <span style="color: red;font-size: 9px;"></span>
                                 </div>
@@ -71,7 +71,7 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                 
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Brand Banner Web(1283px x 450px), PNG | JPG</label>
+                                    <label for="">Brand Banner Web(1283px x 450px), PNG | JPG | JPEG</label>
                                     <input type="file" class="form-control form-control-sm input-sm" name="banner_web" onchange="checkFileDetails(1283,450,this)">
                                     <span style="color: red;font-size: 9px;"></span>
                                 </div>
@@ -224,7 +224,7 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
 
                                 <div class="col-md-6 mb-3">
                                     <label for="">Brand Contact Number</label>
-                                    <input type="text" class="form-control form-control-sm input-sm" name="brand_contact" value="<?= $brand_contact; ?>">
+                                    <input type="text" class="form-control form-control-sm input-sm" placeholder="e.g.:9876543210" pattern="[/^[0-9]{10}$/]" name="brand_contact" value="<?= $brand_contact; ?>">
                                 </div>
 
 
@@ -299,7 +299,7 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                     <select name="brand_category[]" id="category" class="form-control form-control-sm select-box" multiple>
                                         <?php if (!empty($category)) {
                                             foreach ($category as $cat) { ?>
-                                                <option value="<?php echo $cat['category_name']; ?>" <?php if (in_array($cat['category_name'], $brand_category)) {
+                                                <option value="<?php echo $cat['id']; ?>" data-id="<?php echo $cat['id'];?>" <?php if (in_array($cat['category_name'], $brand_category)) {
                                                                                                             echo "selected";
                                                                                                         } ?>><?php echo $cat['category_name']; ?></option>
                                         <?php }

@@ -160,6 +160,7 @@ $route['admin/edit-gallery/(:num)'] = 'admin/Gallery_Controller/edit_gallery/$1'
 $route['admin/change-gallery-status'] = 'admin/Gallery_Controller/change_gallery_status';
 $route['admin/delete-media'] = 'admin/Gallery_Controller/delete_media';
 $route['admin/get-sequence'] = 'admin/Gallery_Controller/get_sequence';
+$route['admin/gallery-details'] = 'admin/Gallery_Controller/get_gallery_details';
 
 $route['admin/404'] = 'admin/Admin_controller/error404';
 $route['admin/blank'] = 'admin/Admin_controller/blank';
