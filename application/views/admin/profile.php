@@ -30,7 +30,7 @@ $email = ($admin_profile)?$admin_profile->email:'';
                             </div>
                                 
                             <button class="btn btn-primary" type="submit">Save</button>
-                            <button class="btn btn-danger" type="button" onclick="window.location.replace('<?=admin_url('dashboard');?>')">Go Back</button>
+                            <button class="btn btn-danger" type="button" onclick="window.history.back()">Go Back</button>
                         </form>
                     </div>
                 </div>
