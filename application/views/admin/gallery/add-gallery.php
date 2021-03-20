@@ -51,7 +51,7 @@ $media_alt = (!empty($gallery))?$gallery['media_alt']:'';
                                 
 
                                 <div class="col-md-6 mb-3" id="image" <?php if($media_type == 1){?>style="display:block" <?php } else {?>style="display:none"<?php } ?>>
-                                    <label for="">Media File (Must be add the images in equal size)</label>
+                                    <label for="">For best view (250 X 264), JPG | PNG | JPEG</label>
                                     <input type="file" name="image" class="form-control form-control-sm input-sm" onchange="checkFileDetails(748,1102,this)">
                                     <span style="color: red;font-size: 9px;"></span>
                                 </div>
@@ -65,7 +65,7 @@ $media_alt = (!empty($gallery))?$gallery['media_alt']:'';
 
 
                                 <div class="col-md-6 mb-3" id="video"  <?php if($media_type == 2){?>style="display:block" <?php } else {?>style="display:none"<?php } ?>>
-                                    <label for="">Media File (Must be add the images in equal size)</label>
+                                    <label for="">MP4</label>
                                     <input type="file" name="video" class="form-control form-control-sm input-sm" onchange="checkImageFile(748,1102,this)">
                                     <span style="color: red;font-size: 9px;"></span>
                                 </div>
@@ -127,7 +127,7 @@ $media_alt = (!empty($gallery))?$gallery['media_alt']:'';
 
                 }else{
                      $('.submit-form').prop("disabled", true);
-                    $(fi).nextAll('span:first').text('Video formate should be (mp4)');
+                    $(fi).nextAll('span:first').text('Video format should be (mp4)');
                 }
                
             }

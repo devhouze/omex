@@ -55,9 +55,9 @@ class Event_Controller extends MY_Controller
             $this->form_validation->set_rules('date_availibility','Date Availibility','required');
             if($this->input->post('date_availibility') == 0){
                 $this->form_validation->set_rules('start_date','Start Date','required');
-                $this->form_validation->set_rules('end_date','End Date','required');
+                // $this->form_validation->set_rules('end_date','End Date','required');
                 $this->form_validation->set_rules('event_start_time','Event Start Time','required');
-                $this->form_validation->set_rules('event_end_time','Event End Time','required');
+                // $this->form_validation->set_rules('event_end_time','Event End Time','required');
             }
             if(empty($_FILES['thumbnail_image']['name'])){
                 $this->form_validation->set_rules('thumbnail_image','Thumbnail','required');

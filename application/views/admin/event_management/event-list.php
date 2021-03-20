@@ -93,7 +93,7 @@ if(!empty($this->uri->segment(4))){
                                     <!-- <td><?=$event['event_type'];?></td> -->
                                     <td align="center">
                                         <label class="switch">
-                                          <input type="checkbox" <?php if(date('Y-m-d',strtotime($event['end_date'])) < date('Y-m-d')){ echo "disabled";}?> class="chkstatus" value="<?php echo $event['event_id'];?>" <?php echo ($event['status']=="0")?'checked':'' ?>>
+                                          <input type="checkbox" <?php if($event['date_available'] == 0 && date('Y-m-d',strtotime($event['end_date'])) < date('Y-m-d')){ echo "disabled";}?> class="chkstatus" value="<?php echo $event['event_id'];?>" <?php echo ($event['status']=="0")?'checked':'' ?>>
                                           <div class="slider round"></div>
                                         </label>
                                     </td>

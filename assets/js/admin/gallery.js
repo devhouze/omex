@@ -1,5 +1,6 @@
 $(document).ready(function() {
     const url = $('body').data('url');
+    const base_url = $('body').data('base_url');
 
     $('.delete').click(function() {
         var media_id = $(this).data('id');
@@ -23,6 +24,7 @@ $(document).ready(function() {
 
     function check_file() {
         var media_type = $('#media_type option:selected').val();
+        var filter_type = $('.filter_type option:selected').val();
 
         if (media_type == 1) {
             $('.filter_type').empty();
@@ -55,13 +57,15 @@ $(document).ready(function() {
             $('#youtube').css('display', 'none');
             $('#video').css('display', 'none');
         }
+    }
 
-
-
+    $('.filter_type').change(function() {
+        var media_type = $('#media_type option:selected').val();
+        var filter_type = $('.filter_type option:selected').val();
         $.ajax({
             type: 'post',
             url: url + 'get-sequence',
-            data: { media_type: media_type },
+            data: { media_type: media_type, filter_type: filter_type },
             dataType: 'json',
             success: function(data) {
                 if (data != '') {
@@ -74,7 +78,7 @@ $(document).ready(function() {
 
             }
         })
-    }
+    });
 
     // check_file();
 
@@ -145,4 +149,33 @@ $(document).ready(function() {
             }
         });
     });
+
+    $('.view_detail').click(function() {
+        var gallery_id = $(this).data('id');
+        $.ajax({
+            type: 'post',
+            url: url + 'gallery-details',
+            data: { gallery_id: gallery_id },
+            success: function(data) {
+                var data = $.parseJSON(data);
+                var media_type = data.media_type;
+                var media_name = data.media_name;
+                var media_video = data.media_video;
+                if (media_type == 3) {
+                    value = '<iframe src="' + media_name + '"></iframe>';
+                }
+                if (media_type == 2) {
+                    value = '<video width="320" height="240" controls>';
+                    value += '<source src="' + base_url + 'assets/images/public/home/' + media_video + '" type="video/mp4">';
+                }
+                if (media_type == 1) {
+                    value = '<img src="' + base_url + 'assets/images/public/home/' + media_name + '">';
+                }
+                $('#details').html(value);
+            }
+        });
+    })
+
+
+
 });

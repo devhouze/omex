@@ -48,7 +48,8 @@ class Gallery_Controller extends MY_Controller
     public function get_sequence()
     {
         $media_type = $this->input->post('media_type');
-        $data = $this->gm->get_sequence($media_type);
+        $filter_type = $this->input->post('filter_type');
+        $data = $this->gm->get_sequence($media_type,$filter_type);
         echo json_encode($data);
     }
 
@@ -258,6 +259,13 @@ class Gallery_Controller extends MY_Controller
 		$this->load->view('admin/gallery/add-gallery',$data);
 		$this->load->view('admin/include/body_end');
 		$this->load->view('admin/include/admin_js');
+    }
+
+    public function get_gallery_details()
+    {
+        $gallery_id = $this->input->post('gallery_id');
+        $data = $this->gm->get_data_row_array('tbl_gallery',"media_type, media_name, media_video",['id' => $gallery_id]);
+        echo json_encode($data);
     }
 }
 ?>

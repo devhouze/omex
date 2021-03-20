@@ -13,7 +13,7 @@ $(document).ready(function() {
 
     $('.delete').click(function() {
         var brand_id = $(this).data('id');
-        if (confirm('Do you want to delte this brand?')) {
+        if (confirm('Do you want to delete this brand?')) {
             $.ajax({
                 type: 'post',
                 url: url + 'delete-brand',
@@ -99,7 +99,7 @@ $(document).ready(function() {
 
     $('.delete_offer').click(function() {
         var logo_id = $(this).data('id');
-        if (confirm('Do you want to delte this brand offer?')) {
+        if (confirm('Do you want to delete this brand offer?')) {
             $.ajax({
                 type: 'post',
                 url: url + 'delete-brand-offer',
@@ -119,7 +119,7 @@ $(document).ready(function() {
 
     $('.delete_logo').click(function() {
         var logo_id = $(this).data('id');
-        if (confirm('Do you want to delte this brand?')) {
+        if (confirm('Do you want to delete this brand?')) {
             $.ajax({
                 type: 'post',
                 url: url + 'delete-brand-logo',
@@ -214,6 +214,7 @@ $(document).ready(function() {
                     $.notify(data.message, "error");
                 }
                 if (data.error) {
+                    console.log(1);
                     $.each(data.error, function(i, v) {
                         $('#brand_management input[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                         $('#brand_management select[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
@@ -231,6 +232,11 @@ $(document).ready(function() {
 
                 if (data.banner_web_error) {
                     $('#brand_management input[name="banner_web"]').after('<span class="text-danger errors_msg">' + data.banner_web_error + '</span>');
+                    $('.btn-primary').text('Save');
+                    $('.submit-form').removeAttr('disabled');
+                }
+                if (data.cat_error) {
+                    $('#brand_management select[name="brand_category[]"]').after('<span class="text-danger errors_msg">' + data.cat_error + '</span>');
                     $('.btn-primary').text('Save');
                     $('.submit-form').removeAttr('disabled');
                 }
@@ -332,7 +338,7 @@ $(document).ready(function() {
             dataType: 'json',
             success: function(data) {
                 $.each(data, function(i, v) {
-                    $('#sub_category').append('<option value="' + v.name + '">' + v.name + '</option>');
+                    $('#sub_category').append('<option value="' + v.id + '">' + v.name + '</option>');
                 });
             }
         })

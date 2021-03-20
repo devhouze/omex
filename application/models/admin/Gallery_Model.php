@@ -27,12 +27,12 @@ class Gallery_Model extends MY_Model
         return [];
     }
 
-    public function get_sequence($media_type)
+    public function get_sequence($media_type,$filter_type)
     {
         $this->db->select('distinct(sequence) as sequence');
         $this->db->where('media_type',$media_type);
+        $this->db->where('filter_type',$filter_type);
         $query = $this->db->get('tbl_gallery');
-
         if($query->num_rows() > 0){
             return $query->result_array();
         }

@@ -134,6 +134,7 @@ $thumbnail_image = ($events)?$events->thumbnail_image:'';
                                     <option value="WS Tour" <?php if(in_array("WS Tour",$event_category)){echo "selected";}?>>WS Tour</option>
                                     <option value="Kids Fun" <?php if(in_array("Kids Fun",$event_category)){echo "selected";}?>>Kids Fun</option>
                                     <option value="Hi-Tea" <?php if(in_array("Hi-Tea",$event_category)){echo "selected";}?>>Hi-Tea</option>
+                                    <option value="Comedy Show" <?php if(in_array("Comedy Show",$event_category)){echo "selected";}?>>Comedy Show</option>
                                     </select>
                                 </div>                                
 

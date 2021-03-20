@@ -54,10 +54,10 @@ class Brands_Controller extends MY_Controller
         if($this->input->post()){
             // Form Validation rules
             $this->form_validation->set_rules('brand_name','Brand Name','required');
-            // if (empty($_FILES['brand_logo']['name']))
-            // {
-            //     $this->form_validation->set_rules('brand_logo','Brand Logo','required');
-            // }
+            if (empty($_FILES['brand_logo']['name']))
+            {
+                $this->form_validation->set_rules('brand_logo','Brand Logo','required');
+            }
             // $this->form_validation->set_rules('logo_comment','Logo Comment','required');
             // $this->form_validation->set_rules('brand_website','Brand Website','required');
             // $this->form_validation->set_rules('about_brand','About Brand','required');
@@ -69,7 +69,7 @@ class Brands_Controller extends MY_Controller
             // $this->form_validation->set_rules('brand_location','Brand Location','required');
             // $this->form_validation->set_rules('brand_street','Brand Street','required');
             // $this->form_validation->set_rules('brand_type','Brand Type','required');
-            // $this->form_validation->set_rules('brand_contact','Brand Contact','required');
+            $this->form_validation->set_rules('brand_contact','Brand Contact','regex_match[/^[0-9]{10}$/]');
             // $this->form_validation->set_rules('brand_category[]','Brand Category','required');
             // $this->form_validation->set_rules('email_contact','Email Contact','required');
             // $this->form_validation->set_rules('brand_audience','Brand Audience','required');
@@ -94,7 +94,7 @@ class Brands_Controller extends MY_Controller
          
             if($this->form_validation->run()){
                 if(empty($this->input->post('brand_category'))){
-                    echo json_encode(['message' => 'The Brand Category field is required.', 'error' => 'The Brand Category field is required.', 'status' => 0]);
+                    echo json_encode(['message' => 'The Brand Category field is required.', 'cat_error' => 'The Brand Category field is required.', 'status' => 0]);
                     exit;
                 }
                 $data_array = array(
@@ -132,7 +132,7 @@ class Brands_Controller extends MY_Controller
                     $new_name = $file['filename']."_".rand(0000,9999).".".strtolower($file['extension']);
                     $data_array['brand_logo'] = $new_name;
                     $config['upload_path'] = 'assets/images/public/brand';
-                    $config['allowed_types'] = 'png';
+                    $config['allowed_types'] = 'png|jpg|jpeg';
                     $config['file_name'] = $new_name;
                     $this->load->library('upload',$config);
                     $this->upload->initialize($config);
@@ -227,7 +227,7 @@ class Brands_Controller extends MY_Controller
             // $this->form_validation->set_rules('brand_location','Brand Location','required');
             // $this->form_validation->set_rules('brand_street','Brand Street','required');
             // $this->form_validation->set_rules('brand_type','Brand Type','required');
-            // $this->form_validation->set_rules('brand_contact','Brand Contact','required');
+            $this->form_validation->set_rules('brand_contact','Brand Contact','regex_match[/^[0-9]{10}$/]');
             // $this->form_validation->set_rules('brand_category[]','Brand Category','required');
             // $this->form_validation->set_rules('email_contact','Email Contact','required');
             // $this->form_validation->set_rules('brand_audience','Brand Audience','required');
@@ -582,7 +582,7 @@ class Brands_Controller extends MY_Controller
 
     public function get_sub_category()
     {
-        $cat_id = implode(',',$this->input->post('cat_id'));
+        $cat_id = $this->input->post('cat_id');
         $data = $this->bm->get_sub_category($cat_id);
         echo json_encode($data);
     }
