@@ -96,7 +96,7 @@
 
                 }else{
                      $('.submit-form').prop("disabled", true);
-                    $(fi).nextAll('span:first').text('Image formate should be (jpeg,jpg,png)');
+                    $(fi).nextAll('span:first').text('Image format should be (jpeg,jpg,png)');
                 }
                
             }
