@@ -66,7 +66,7 @@ $route['paris'] = 'Welcome/paris';
 $route['privacy-policy'] = 'Welcome/privacy_policy';
 $route['term-conditions'] = 'Welcome/term_conditions';
 $route['contact-us'] = 'Welcome/contact_us';
-$route['brand/(:num)'] = 'Welcome/brand/$1';
+$route['brand/(:any)'] = 'Welcome/brand/$1';
 $route['event'] = 'Welcome/event';
 $route['event-details/(:num)'] = 'Welcome/event_details/$1';
 $route['brand-directory'] = 'Welcome/brand_directory';
@@ -76,6 +76,7 @@ $route['brand-directory/(:any)'] = 'Welcome/brand_directory/$1';
 $route['search-brand'] = 'Welcome/search_brand';
 $route['sign-up'] = 'Welcome/sign_up';
 $route['get-brands'] = "Welcome/get_brands";
+$route['get-brands-like'] = "Welcome/get_brands_like";
 
 
 $route['admin'] = 'admin/Login_Controller/sign_in';

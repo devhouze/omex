@@ -89,9 +89,9 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <?php if (is_file("assets/images/public/brand/" . $about_brand_banner_web)) { ?>
+                                    <?php if (is_file("assets/images/public/brand/" . $banner_web)) { ?>
 
-                                        <img src="<?php echo base_url("assets/images/public/brand/" . $about_brand_banner_web); ?>" class="img-thumb" style="width:100px !important;" />
+                                        <img src="<?php echo base_url("assets/images/public/brand/" . $banner_web); ?>" class="img-thumb" style="width:100px !important;" />
                                     <?php } ?>
                                 </div>
                             
@@ -299,7 +299,7 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                     <select name="brand_category[]" id="category" class="form-control form-control-sm select-box" multiple>
                                         <?php if (!empty($category)) {
                                             foreach ($category as $cat) { ?>
-                                                <option value="<?php echo $cat['id']; ?>" data-id="<?php echo $cat['id'];?>" <?php if (in_array($cat['category_name'], $brand_category)) {
+                                                <option value="<?php echo $cat['id']; ?>" data-id="<?php echo $cat['id'];?>" <?php if (in_array($cat['id'], $brand_category)) {
                                                                                                             echo "selected";
                                                                                                         } ?>><?php echo $cat['category_name']; ?></option>
                                         <?php }
@@ -311,7 +311,7 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                     <select name="sub_category[]" id="sub_category" class="form-control form-control-sm select-box" multiple>
                                         <?php if (!empty($sub_category)) {
                                             foreach ($sub_category as $sc) { ?>
-                                                <option value="<?php echo $sc['name']; ?>" <?php if (in_array($sc['name'], $brand_sub_category)) {
+                                                <option value="<?php echo $sc['id']; ?>" <?php if (in_array($sc['id'], $brand_sub_category)) {
                                                                                                 echo "selected";
                                                                                             } ?>><?php echo $sc['name']; ?></option>
                                         <?php }
