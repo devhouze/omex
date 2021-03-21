@@ -100,7 +100,7 @@
                         <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="w">W </a></li>
                         <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="x">X </a></li>
                         <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="y">Y </a></li>
-                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="z">z </a></li>
+                        <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="z">Z </a></li>
                     </ul>
                 </div>
             </div>
