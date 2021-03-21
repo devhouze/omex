@@ -55,7 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 
-
+$route['whatenew'] = 'Welcome/whatenew';
 $route['athens'] = 'Welcome/athens';
 $route['portugal'] = 'Welcome/portugal';
 $route['hong-kong'] = 'Welcome/hong_kong';
