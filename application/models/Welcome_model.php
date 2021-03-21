@@ -222,7 +222,7 @@ class Welcome_model extends CI_Model
         $this->db->where('status',0);
         $this->db->where('media_type',1);
         ($type!='all')?$this->db->where('filter_type',$type):'';
-        $this->db->order_by('id','desc');
+        $this->db->order_by('sequence','desc');
         $this->db->limit(10);
         $query = $this->db->get('tbl_gallery');
         // echo "<pre>";
