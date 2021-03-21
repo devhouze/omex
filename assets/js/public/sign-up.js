@@ -18,9 +18,9 @@ $(document).ready(function() {
                 if (data.status > 0) {
                     $('#success').css('display', 'block');
                     $('#sign-up').trigger('reset');
-                    $.notify(data.message, "success");
+                    // $.notify(data.message, "success");
                 } else {
-                    $.notify(data.message, "error");
+                    // $.notify(data.message, "error");
                 }
                 if (data.error) {
                     $.each(data.error, function(i, v) {
