@@ -70,7 +70,7 @@ $(document).ready(function() {
                 value += '<tr><th>Event Street</th><td>' + event_street + '</td><th>Event Location</th><td>' + event_location + '</td></tr>';
                 value += '<tr><th>Event Label</th><td>' + event_label + '</td><th>Event Category</th><td>' + event_category + '</td></tr>';
                 // value += '<tr><th>Event Status</th><td>' + status + '</td></tr>';
-                value += '<tr><th>Event Status</th><td colspan="3"><img src="' + base_url + 'assets/images/public/home/' + thumbnail_image + '" width="200px" height="200px"></td></tr>';
+                value += '<tr><th>Event Banner</th><td colspan="3"><img src="' + base_url + 'assets/images/public/home/' + thumbnail_image + '" width="200px" height="200px"></td></tr>';
                 $('#details').html(value);
             }
         });

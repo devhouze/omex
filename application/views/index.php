@@ -35,9 +35,9 @@
             <div class="col-md-12 d-flex flex-fill px-0">
                 <div id="carouselExampleIndicatorssmob" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
                     <ol class="carousel-indicators">
-                    <?php $count = count($banner); for($i=0; $i < $count; $i++){?>
+                    <?php $count = count($banner); if($count > 1){ for($i=0; $i < $count; $i++){?>
                         <li data-bs-target="#carouselExampleIndicatorssmob" data-bs-slide-to="<?php echo $i; ?>" <?php if($i == 1){?>class="active" <?php } ?>></li>
-                    <?php } ?>
+                    <?php } } ?>
                     </ol>
                     <div class="carousel-inner">
 
@@ -372,16 +372,39 @@
                 <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <?php $i = 1;
-                            foreach ($events as $event) { ?>
-                                <div class="carousel-item <?php if ($i == 1) {
-                                                                echo "active";
-                                                            } ?>">
+                            $event_count = 0;
+                            foreach ($events as $event) { 
+                                if($date['date_available'] == 0){
+                                    if(!empty($event['end_date']) && $event['end_date'] != '0000-00-00'){
+                                        if( date('Y-m-d',strtotime($event['end_date'])) < date('Y-m-d')){
+                                            $expired = 1;//event is expred
+                                        } else {
+                                            $event_count += 1; 
+                                            $expired = 0;//event not expred
+                                        }
+                                    } elseif($event['start_date'] > date('Y-m-d')) {
+                                        $expired = 1;//event is expred
+                                    } else {
+                                        $event_count += 1;
+                                        $expired = 0;//event not expred
+                                    }
+                                } else {
+                                    $event_count += 1;
+                                    $expired = 0;//event not expred 
+                                }
+                                $street = explode(',',$event['event_street']);
+                                $count = count($street);
+                                // if($count)
+                                $class = ($count > 1)?'athens_street':strtolower(str_replace(' ', '_',$event['event_street']));
+                                if($expired == 0){
+                            ?>
+                                <div class="carousel-item <?php echo $class; if ($i == 1) { echo " active"; } ?>">
                                     <div class="row">
                                         <div class="col-md-8">
                                             <div class="d-md-none d-block mobile-look">
                                                 <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm pr-sm0 mb-md-0 mb-4"><?php echo $event['event_name']; ?></h1>
                                             </div>
-                                            <img src="<?php echo base_url(); ?>assets/images/public/home/leftslide.jpg" alt="" class="w-100">
+                                            <img src="<?php echo base_url('assets/images/public/home/'.$event['thumbnail_image']); ?>" alt="<?php echo $event['thumbnail_message']?>" class="w-100">
 
                                         </div>
                                         <div class="col-md-4">
@@ -392,13 +415,18 @@
                                                 <div class="box-calander">
                                                     <div class="top-row">
                                                         <?php if ($event['date_available'] == 0) {?>
-                                                        <div class="left-col"><span><?php
-                                                                                        echo date('Y', strtotime($event['start_date']));
-                                                                                     ?></span></div>
+                                                        <div class="left-col"><span><?php echo date('Y', strtotime($event['start_date'])); ?></span></div>
                                                         <div class="right-col">
-                                                            <h2 class="position-relative"><?php echo date('d', strtotime($event['start_date'])); ?> <span><?php echo date('M', strtotime($event['start_date'])); ?></span> - <?php echo date('d', strtotime($event['end_date'])); ?> <span><?php echo date('M', strtotime($event['end_date'])); ?></span></h2>
+                                                            <h2 class="position-relative"><?php echo date('d', strtotime($event['start_date'])); ?> 
+                                                            <span><?php echo date('M', strtotime($event['start_date'])); ?></span>
+                                                            <?php if(!empty($event['end_date']) && $event['end_date'] != '0000-00-00'){?>
+                                                            - <?php echo date('d', strtotime($event['end_date'])); ?> <span>
+                                                            <?php echo date('M', strtotime($event['end_date'])); ?></span>
+                                                            <?php } ?>
+                                                            </h2>
                                                         </div>
                                                         <?php } else {?>
+                                                            <div class="left-col"><span><?php echo date('Y');?></span></div>
                                                             <div class="right-col">
                                                             <h2 class="position-relative">Coming Soon!</span></h2>
                                                         </div>
@@ -408,12 +436,16 @@
 
                                                 </div>
                                                 <?php if ($event['date_available'] == 0) {?>
-                                                <div class="day text-center"><?php
-                                                                                    echo strtoupper(date('D', strtotime($event['start_date']))) . "-" . (strtoupper(date('D', strtotime($event['end_date']))));
-                                                                                 ?></div>
-                                                <div class="time text-center"><?php
-                                                                                    echo date('g a', strtotime($event['event_start_time'])) . "-" . date('g a', strtotime($event['event_end_time']));
-                                                                                 ?></div>
+                                                <div class="day text-center"><?php echo strtoupper(date('D', strtotime($event['start_date']))); ?> 
+                                                <?php if(!empty($event['end_date']) && $event['end_date'] != '0000-00-00'){?> - 
+                                                <?php echo strtoupper(date('D', strtotime($event['end_date']))); ?></div>
+                                                <?php } ?>
+                                                <div class="time text-center"><?php 
+                                                echo date('g a', strtotime($event['event_start_time'])) ?>
+                                                <?php if(!empty($event['event_end_time'])){?>-
+                                                <?php echo date('g a', strtotime($event['event_end_time'])); ?>
+                                                <?php } ?>
+                                                </div>
                                                 <?php } ?>
                                                 <img src="<?php echo base_url(); ?>assets/images/public/home/long-arrow.svg" alt="" class="mt-md-4 mt-3">
                                             </div>
@@ -422,15 +454,15 @@
                                     </div>
                                     <div class="row justify-content-center">
                                         <div class="col-md-12">
-                                            <a href="<?php echo base_url('event-details/' . $event['event_id']) ?>" class="primary-btn d-inline-block mt-36">KNOW MORE</a>
+                                            <a href="<?php echo base_url('event-details/' . $event['event_slug']) ?>" class="primary-btn d-inline-block mt-36">KNOW MORE</a>
                                         </div>
                                     </div>
                                 </div>
                         <?php $i++;
-                            }
+                            } } 
                          ?>
                     </div>
-                    <?php if(count($events) > 1){?>
+                    <?php if($event_count > 1){?>
                     <div class="d-flex position-absolute">
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
                             <img src="<?php echo base_url(); ?>assets/images/public/home/left.svg" alt="" class="w-100">

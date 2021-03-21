@@ -10,7 +10,7 @@ class Gallery_Model extends MY_Model
 
     public function get_gallery($per_page,$page,$keyword,$column,$order,$count = false)
     {
-        $this->db->select('id, (case when media_type = 1 then "Image" when media_type = 2 then "Video" when media_type = 3 then "YouTubeLink" end) as file_type, (case when filter_type = 1 then "Interior" when filter_type = 2 then "Exterior" when filter_type = 3 then "Construction" when filter_type = 4 then "Video" end) as type, media_name, media_video, tbl_gallery.status, name as created_by, date_format(tbl_gallery.created_on,"%d-%m-%Y") as created_on, sequence');
+        $this->db->select('id, (case when media_type = 1 then "Image" when media_type = 2 then "Video" when media_type = 3 then "YouTubeLink" end) as file_type, (case when filter_type = 1 then "Interior" when filter_type = 2 then "Exterior" when filter_type = 3 then "Construction" when filter_type = 4 then "Video" end) as type, media_name, media_video, tbl_gallery.status, name as created_by, date_format(tbl_gallery.created_on,"%d-%m-%Y") as created_on, sequence, media_type');
         $this->db->join('tbl_admin ta','tbl_gallery.created_by = admin_id');
         (!$count)?$this->db->limit($per_page,$page):'';
         (!empty($keyword['media_type']))?$this->db->where('media_type',$keyword['media_type']):'';

@@ -93,7 +93,9 @@
                                     <td>
                                         <a href="<?=admin_url('edit-gallery/'.$value['id'])?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a>
                                         <a href="javascript:void(0)" class="btn btn-danger delete" data-id="<?=$value['id'];?>"><span class="mdi mdi-delete"></span></a>
+                                        <?php if($value['media_type'] != '3'){?>
                                         <a href="javascript:void(0)" class="btn btn-primary view_detail" data-id="<?=$value['id'];?>" data-toggle="modal" data-target="#galleryDetail"><span class="mdi mdi-eye"></span></a>
+                                        <?php } ?>
                                     </td>
                                 </tr>
                                 <?php } } else {?>

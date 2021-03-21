@@ -1,6 +1,6 @@
 <div class="event-page">
 
-
+<?php if(!empty($events)){?>
     <div class="looking-out gray-bg pb-60 pt-60 pt-sm0 pb-sm-30">
         <div class="container">
 
@@ -8,6 +8,7 @@
                 <div class="col-md-10">
                     <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                         <?php include('common_events.php'); ?>
+                        <?php if(count($events) > 1){?>
                         <div class="d-flex justify-content-center event-p-carosol">
                             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
                                 <img src="<?php echo base_url(); ?>assets/images/public/street/athens-left.svg" alt="" class="">
@@ -16,12 +17,14 @@
                                 <img src="<?php echo base_url(); ?>assets/images/public/street/athens-right.svg" alt="" class="w-100">
                             </a>
                         </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
+    <?php } ?>
     <div class="about-event py-60 py-sm-30 gray-bg" style="display:none">
         <div class="container">
             <div class="row">
@@ -95,6 +98,7 @@
             } ?>
         </div>
     </div>
+    <?php if(!empty($past_event)){?>
     <div class="about-brand gray-bg  pb-30 pt-60 pt-sm-30">
         <div class="container">
             <div class="row">
@@ -131,6 +135,7 @@
                             </div>
                             <?php $i++; } }?>
                         </div>
+                        <?php if(count($past_event) > 1){?>
                         <div class="crsouls-btn-group">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlseven" data-bs-slide="prev">
                                 <img src="<?php echo base_url(); ?>assets/images/public/brand/left.svg" alt="" class="">
@@ -139,11 +144,13 @@
                                 <img src="<?php echo base_url(); ?>assets/images/public/brand/right.svg" alt="" class="">
                             </button>
                         </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <?php } ?>
     <div class="similar barnd live-in-word gray-bg pt-60  position-relative">
         <div class="container">
             <div class="row">
@@ -274,6 +281,7 @@
             </div>
         </div>
     </div>
+    <?php if (!empty($what_new)) {?>
     <div class="whats-new py-60 py-sm-20 gray-bg">
         <div class="container">
             <div class="row">
@@ -286,7 +294,7 @@
                 <div class="col-md-10">
                     <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                            <?php if (!empty($what_new)) {
+                            <?php
                                 $i = 1;
                                 foreach ($what_new as $new) { ?>
                                     <div class="carousel-item <?php if ($i == 1) {
@@ -311,7 +319,7 @@
                                     </div>
                             <?php $i++;
                                 }
-                            } ?>
+                             ?>
                         </div>
                         <div class="car-ions">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -327,6 +335,7 @@
             </div>
         </div>
     </div>
+    <?php } ?>
 
 
     <div class="more-expoler pt-30 pb-60 gray-bg">

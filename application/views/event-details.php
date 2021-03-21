@@ -25,15 +25,40 @@
                                         </div>
                                         <div class="box-calander">
                                             <div class="top-row">
-                                                <div class="left-col"><span><?php echo ($event['date_available'] != 1)?date('Y',strtotime($event['start_date'])):'N/A';?></span></div>
-                                                <div class="right-col"><h2 class="position-relative"><?php echo date('d',strtotime($event['start_date']));?><span> <?php echo date('M',strtotime($event['start_date']));?></span>-<?php echo date('d',strtotime($event['end_date']));?> <span><?php echo date('M',strtotime($event['end_date']));?></span></h2></div>
+                                                <div class="left-col"><span>
+                                                <?php 
+                                                    if($event['date_available'] == 0){
+                                                        echo date('Y',strtotime($event['start_date']));
+                                                    } else {
+                                                        echo date('Y');
+                                                    }
+                                                ?>
+                                                </span></div>
+                                                <div class="right-col"><h2 class="position-relative">
+                                                <?php 
+                                                    if($event['date_available'] == 0){
+                                                        echo date('d',strtotime($event['start_date']))." ".date('M',strtotime($event['start_date']));
+                                                        if(!empty($event['end_date']) && $event['end_date'] != '0000-00-00'){
+                                                            echo "-".date('d',strtotime($event['end_date']))." ".date('M',strtotime($event['end_date']));
+                                                        }
+                                                    } else {
+                                                        echo 'Coming Soon';
+                                                    }
+                                                ?>
+                                                </span></h2></div>
                                             </div>
 
 
                                         </div>
                                         
-                                        <div class="day text-center"><?php echo ($event['date_available'] != 1)?strtoupper(date('D',strtotime($event['start_date'])))."-".(strtoupper(date('D',strtotime($event['end_date'])))):'N/A';?></div>
-                                        <div class="time text-center"><?php echo date('g a',strtotime($event['event_start_time']));?>-<?php echo date('g a',strtotime($event['event_end_time']));?></div>
+                                        <div class="day text-center">
+                                        <?php if($event['date_available'] == 0){ echo strtoupper(date('D',strtotime($event['start_date']))); 
+                                        
+                                        if(!empty($event['end_date']) && $event['end_date'] != '0000-00-00'){
+                                           echo "-".(strtoupper(date('D',strtotime($event['end_date']))));
+                                        } } ?>
+                                        </div>
+                                        <div class="time text-center"><?php if($event['date_available'] == 0){echo date('g a',strtotime($event['event_start_time']));?>-<?php echo date('g a',strtotime($event['event_end_time']));}?></div>
                                         <img src="<?php echo base_url(); ?>assets/images/public/home/long-arrow.svg" alt="" class="mt-md-4 mt-3">
                                     </div>
 
@@ -58,15 +83,47 @@
                                         </div>
                                         <div class="box-calander">
                                             <div class="top-row">
-                                                <div class="left-col"><span><?php echo ($event['date_available'] != 1)?date('Y',strtotime($event['start_date'])):'N/A';?></span></div>
-                                                <div class="right-col"><h2 class="position-relative"><?php echo ($event['date_available'] != 1)?date('d M',strtotime($event['start_date']))."-".(date('d M',strtotime($event['end_date']))):'N/A';?></h2></div>
+                                            <div class="left-col"><span>
+                                                <?php 
+                                                    if($event['date_available'] == 0){
+                                                        echo date('Y',strtotime($event['start_date']));
+                                                    } else {
+                                                        echo date('Y');
+                                                    }
+                                                ?>
+                                                </span></div>
+                                                <div class="right-col"><h2 class="position-relative">
+                                                <?php 
+                                                    if($event['date_available'] == 0){
+                                                        echo date('d',strtotime($event['start_date']))." ".date('M',strtotime($event['start_date']));
+                                                        if(!empty($event['end_date']) && $event['end_date'] != '0000-00-00'){
+                                                            echo "-".date('d',strtotime($event['end_date']))." ".date('M',strtotime($event['end_date']));
+                                                        }
+                                                    } else {
+                                                        echo 'Coming Soon';
+                                                    }
+                                                ?>
+                                                </span></h2></div>
                                             </div>
 
 
                                         </div>
                                         
-                                        <div class="day text-center"><?php echo ($event['date_available'] != 1)?strtoupper(date('D',strtotime($event['start_date'])))."-".(strtoupper(date('D',strtotime($event['end_date'])))):'N/A';?></div>
-                                            <div class="time text-center"><?php echo date('g a',strtotime($event['event_start_time']));?>-<?php echo date('g a',strtotime($event['event_end_time']));?></div>
+                                        <?php if($event['date_available'] == 0){ ?> 
+                                        <div class="day text-center">
+                                            <?php echo date('D',strtotime($event['start_date']));
+                                            if(!empty($event['end_date']) && $event['end_date'] != '0000-00-00'){
+                                                echo "-".date('D',strtotime($event['end_date']));
+                                            }?>
+                                        </div>
+                                            <div class="time text-center">
+                                                <?php 
+                                                echo date('g a', strtotime($event['event_start_time'])) ?>
+                                                <?php if(!empty($event['event_end_time'])){?>-
+                                                <?php echo date('g a', strtotime($event['event_end_time'])); ?>
+                                                <?php } ?>
+                                            </div>
+                                                <?php } ?>
                                             <img src="<?php echo base_url(); ?>assets/images/public/home/long-arrow.svg" alt="" class="mt-md-4 mt-3">
                                     </div>
 
@@ -77,7 +134,7 @@
                         <?php } ?>
 
                     </div>
-                        <div class="d-flex justify-content-center mt-5">
+                        <div class="d-flex justify-content-center mt-5 d-none">
                             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
                                 <img src="<?php echo base_url(); ?>assets/images/public/street/athens-left.svg" alt="" class="w-100">
                             </a>
@@ -126,6 +183,7 @@
             } ?>
         </div>
     </div>
+    <?php if(!empty($past_event)){?>
     <div class="about-brand gray-bg  pb-30 pt-60 pt-sm-30">
         <div class="container">
             <div class="row">
@@ -152,7 +210,7 @@
                                                 <div class="col-md-4 ">
                                                 </div>
                                                 <div class="col-md-8 ">
-                                                    <p><?php echo $pe['about_event']; ?>/p>
+                                                    <p><?php echo $pe['about_event']; ?></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -162,6 +220,7 @@
                             </div>
                             <?php } }?>
                         </div>
+                        <?php if(count($past_event) > 1){?>
                         <div class="crsouls-btn-group">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlseven" data-bs-slide="prev">
                                 <img src="<?php echo base_url(); ?>assets/images/public/brand/left.svg" alt="" class="">
@@ -170,11 +229,13 @@
                                 <img src="<?php echo base_url(); ?>assets/images/public/brand/right.svg" alt="" class="">
                             </button>
                         </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <?php } ?>
     <div class="similar barnd live-in-word gray-bg pt-60  position-relative">
         <div class="container">
             <div class="row">

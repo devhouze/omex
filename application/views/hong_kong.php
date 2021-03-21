@@ -159,6 +159,7 @@
         </div>
 
     </div>
+    <?php if(!empty($events)){?>
     <div class="looking-out gray-bg py-30">
     <div class="container">
         <div class="row">
@@ -172,20 +173,23 @@
             <div class="col-md-10">
                 <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                 <?php include('common_events.php');?>
+                <?php if(count($events) > 1){?>
                         <div class="d-flex position-absolute">
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hong-left.svg" alt="" class="w-100">
-                        </a>
-                        <a class="carousel-control-next ml-40" href="#carouselExampleControls" role="button" data-bs-slide="next">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hong-right.svg" alt="" class="w-100">
-                        </a>
-                    </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-left.svg" alt="" class="w-100">
+                            </a>
+                            <a class="carousel-control-next ml-40" href="#carouselExampleControls" role="button" data-bs-slide="next">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-right.svg" alt="" class="w-100">
+                            </a>
+                        </div>
+                        <?php } ?>
                 </div>
             </div>
         </div>
         
     </div>
 </div>
+<?php } ?>
 
     <div class="hello-area looking-out gray-bg py-30 position-relative">
         <div class="container">

@@ -116,7 +116,7 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">About Brand Banner (748px X 1102px), PNG | JPG</label>
+                                    <label for="">About Brand Banner (748px X 1102px), PNG | JPG | JPEG</label>
                                     <input type="file" class="form-control form-control-sm input-sm" name="about_brand_banner_web" onchange="checkFileDetails(748,1102,this)">
                                     <span style="color: red;font-size: 9px;"></span>
                                 </div>

@@ -77,8 +77,8 @@ class Event_Controller extends MY_Controller
                     'event_name'            => $this->input->post('event_name'),
                     'event_slug'            => url_title($this->input->post('event_name'), 'dash', true),
                     'date_available'        => $this->input->post('date_availibility'),
-                    'start_date'            => date('Y-m-d',strtotime($this->input->post('start_date'))),
-                    'end_date'              => date('Y-m-d',strtotime($this->input->post('end_date'))),
+                    'start_date'            => (!empty($this->input->post('start_date')))?date('Y-m-d',strtotime($this->input->post('start_date'))):'0000-00-00',
+                    'end_date'              => (!empty($this->input->post('end_date')))?date('Y-m-d',strtotime($this->input->post('end_date'))):'0000-00-00',
                     'thumbnail_message'     => $this->input->post('thumbnail_message'),
                     'event_type'            => $this->input->post('event_type'),
                     'event_location'        => $this->input->post('event_location'),
@@ -132,15 +132,15 @@ class Event_Controller extends MY_Controller
     public function edit_events($id){
         $data['events'] = $this->em->get_data_row('tbl_event','*',['event_id' => $id]);
         $data['brands_list'] = $this->em->get_data_array('tbl_brand','brand_id,brand_name');
-        // echo "<pre>"; print_r($data); die;
         if($this->input->post()){
+            // echo "<pre>"; print_r($this->input->post()); die;
             $this->form_validation->set_rules('event_name','Event Name','required');
             $this->form_validation->set_rules('date_availibility','Date Availibility','required');
             if($this->input->post('date_availibility') == 0){
                 $this->form_validation->set_rules('start_date','Start Date','required');
-                $this->form_validation->set_rules('end_date','End Date','required');
+                // $this->form_validation->set_rules('end_date','End Date','required');
                 $this->form_validation->set_rules('event_start_time','Event Start Time','required');
-                $this->form_validation->set_rules('event_end_time','Event End Time','required');
+                // $this->form_validation->set_rules('event_end_time','Event End Time','required');
             }
             $this->form_validation->set_rules('thumbnail_message','Thumbnail Message','required');
             $this->form_validation->set_rules('event_location','Event Location','required');
@@ -157,8 +157,8 @@ class Event_Controller extends MY_Controller
                     'event_name'            => $this->input->post('event_name'),
                     'event_slug'            => url_title($this->input->post('event_name'), 'dash', true),
                     'date_available'        => $this->input->post('date_availibility'),
-                    'start_date'            => date('Y-m-d',strtotime($this->input->post('start_date'))),
-                    'end_date'              => date('Y-m-d',strtotime($this->input->post('end_date'))),
+                    'start_date'            => (!empty($this->input->post('start_date')))?date('Y-m-d',strtotime($this->input->post('start_date'))):'0000-00-00',
+                    'end_date'              => (!empty($this->input->post('end_date')) && $this->input->post('end_date')!='0000-00-00')?date('Y-m-d',strtotime($this->input->post('end_date'))):'0000-00-00',
                     'thumbnail_message'     => $this->input->post('thumbnail_message'),
                     'event_type'            => $this->input->post('event_type'),
                     'event_location'        => $this->input->post('event_location'),

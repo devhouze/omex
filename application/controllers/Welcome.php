@@ -20,7 +20,7 @@ class Welcome extends CI_Controller {
 		$data['construction_gallery'] = $this->wm->get_gallery(3);
 		$data['gallery_video'] = $this->wm->gallery_video();
 		// Get Instagram feeds
-		// echo "<pre>"; print_r($data); die;
+		// echo "<pre>"; print_r($data['events']); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -39,7 +39,9 @@ class Welcome extends CI_Controller {
 	}
 	public function athens()
 	{
-		$data['events'] = $this->wm->get_events();
+		$events = $this->wm->get_events_by_street('Athens Street');
+		$data['events'] = $this->check_event_expiry($events);
+		// echo "<pre>"; print_r($data); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -59,7 +61,8 @@ class Welcome extends CI_Controller {
 	}
 	public function portugal()
 	{
-		$data['events'] = $this->wm->get_events();
+		$events = $this->wm->get_events_by_street('Portugal Street');
+		$data['events'] = $this->check_event_expiry($events);
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -79,7 +82,8 @@ class Welcome extends CI_Controller {
 	}
 	public function hong_kong()
 	{
-		$data['events'] = $this->wm->get_events();
+		$events = $this->wm->get_events_by_street('Hong Kong Street');
+		$data['events'] = $this->check_event_expiry($events);
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -99,7 +103,9 @@ class Welcome extends CI_Controller {
 	}
 	public function amsterdam()
 	{
-		$data['events'] = $this->wm->get_events();
+		$events = $this->wm->get_events_by_street('Amsterdam Street');
+		$data['events'] = $this->check_event_expiry($events);
+		// echo "<pre>"; print_r($data); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -119,7 +125,8 @@ class Welcome extends CI_Controller {
 	}
 	public function san_francisco()
 	{
-		$data['events'] = $this->wm->get_events();
+		$events = $this->wm->get_events_by_street('San Francisco Street');
+		$data['events'] = $this->check_event_expiry($events);
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -139,7 +146,8 @@ class Welcome extends CI_Controller {
 	}
 	public function london()
 	{
-		$data['events'] = $this->wm->get_events();
+		$events = $this->wm->get_events_by_street('London Street');
+		$data['events'] = $this->check_event_expiry($events);
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -159,7 +167,8 @@ class Welcome extends CI_Controller {
 	}
 	public function paris()
 	{
-		$data['events'] = $this->wm->get_events();
+		$events = $this->wm->get_events_by_street('Paris Street');
+		$data['events'] = $this->check_event_expiry($events);
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -241,10 +250,12 @@ class Welcome extends CI_Controller {
 	}
 	public function event()
 	{
-		$data['events'] = $this->wm->get_events();
+		$events = $this->wm->get_events();
+		$data['events'] = $this->check_event_expiry($events);
 		$data['what_new'] = $this->wm->get_what_new();
-		$data['past_event'] = $this->wm->get_past_events();
-		// echo "<pre>"; print_r($data); die;
+		$past_event= $this->wm->get_past_events();
+		$data['past_event'] = $this->filter_expired_events($past_event);
+		// echo "<pre>"; print_r($data['past_event']); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -262,12 +273,13 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer/body_end');
 	}
 
-	public function event_details($id)
+	public function event_details($slug)
 	{
-		$data['event'] = $this->wm->get_event_detail($id);
+		$data['event'] = $this->wm->get_event_detail($slug);
 		$data['what_new'] = $this->wm->get_what_new();
-		$data['past_event'] = $this->wm->get_past_events();
-		// echo "<pre>"; print_r($data); die;
+		$past_event= $this->wm->get_past_events();
+		$data['past_event'] = $this->filter_expired_events($past_event);
+		// echo "<pre>"; print_r($data['event']); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -415,6 +427,46 @@ class Welcome extends CI_Controller {
 			$data['count'] = $count;
 		}
 		echo json_encode($data);
+	}
+
+	public function check_event_expiry($events)
+	{
+		$active_events = [];
+		foreach($events as $event){
+			if($event['date_available'] == 0){
+				if(!empty($event['end_date']) && $event['end_date'] != '0000-00-00'){
+					if($event['end_date'] > date('Y-m-d')){
+						$active_events[] = $event;
+					}
+				} elseif($event['start_date'] > date('Y-m-d')){
+					$active_events[] = $event;
+				}
+			}
+			else {
+				$active_events[] = $event;
+			}
+		}
+		return $active_events;
+	}
+
+	public function filter_expired_events($events)
+	{
+		$expired_events = [];
+		foreach($events as $event){
+			if($event['date_available'] == 0){
+				if(!empty($event['end_date']) && $event['end_date'] != '0000-00-00'){
+					if($event['end_date'] > date('Y-m-d')){
+						$expired_events[] = $event;
+					}
+				} elseif($event['start_date'] < date('Y-m-d')){
+					$expired_events[] = $event;
+				}
+			}
+			// else {
+			// 	$expired_events[] = $event;
+			// }
+		}
+		return $expired_events;
 	}
 	
 	
