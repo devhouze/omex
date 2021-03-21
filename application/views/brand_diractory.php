@@ -20,7 +20,15 @@
                                 // echo base_url('assets/images/public/home/' . $value['banner_web']);
                                 if(is_file("assets/images/public/brand/".$value['banner_web'])){?>
                                 <div class="carousel-item <?= ($i == 1) ? 'active' : '';$i++; ?>" style="background-image: url('<?php echo base_url('assets/images/public/brand/' . $value['banner_web']); ?>');">
-                                    <a href="<?php echo (!empty($value['banner_link']))?$value['banner_link']:base_url();?>" target="_blank" class="banner-link"></a>
+                                <?php if($value['banner_link'] == 1){?>
+                                    <a href="<?php echo base_url('event-details/'.$value['link_to'])?>" target="_blank" class="banner-link"></a>
+                                    <?php }elseif($value['banner_link'] == 2){?>
+                                    <a href="<?php echo base_url('brand/'.$value['link_to'])?>" target="_blank" class="banner-link"></a>
+                                    <?php } elseif($value['banner_link'] == 3){?>
+                                    <a href="<?php echo base_url('brand/'.$value['link_to'])?>" target="_blank" class="banner-link"></a>
+                                    <?php } elseif($value['banner_link'] == 4){?>
+                                    <a href="<?php echo base_url($value['link_to'])?>" target="_blank" class="banner-link"></a>
+                                    <?php } ?>
                                 </div>
                         <?php } }
                         } ?>

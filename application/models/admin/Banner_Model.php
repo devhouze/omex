@@ -38,6 +38,27 @@ class Banner_Model extends MY_Model
         }
         return [];
     }
+
+    public function get_linking_data($link_type)
+    {
+        if($link_type == '1'){
+            $this->db->select('event_slug as slug, event_name as name');
+            $this->db->where('status',0);
+            $query = $this->db->get('tbl_event');
+        } elseif($link_type == '2'){
+            $this->db->select('brand_slug as slug, brand_name as name');
+            $this->db->where('status',0);
+            $query = $this->db->get('tbl_brand');
+        } elseif($media_type == 3){
+            $this->db->select('brand_slug as slug, brand_name as name');
+            $this->db->where('status',0);
+            $query = $this->db->get('tbl_brand');
+        }
+        if($query->num_rows() > 0){
+            return $query->result_array();
+        }
+        return [];
+    }
 }
 
 ?>

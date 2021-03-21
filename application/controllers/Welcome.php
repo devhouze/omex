@@ -20,7 +20,7 @@ class Welcome extends CI_Controller {
 		$data['construction_gallery'] = $this->wm->get_gallery(3);
 		$data['gallery_video'] = $this->wm->gallery_video();
 		// Get Instagram feeds
-		// echo "<pre>"; print_r($data['events']); die;
+		// echo "<pre>"; print_r($data['banner']); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -257,7 +257,7 @@ class Welcome extends CI_Controller {
 		$data['what_new'] = $this->wm->get_what_new();
 		$past_event= $this->wm->get_past_events();
 		$data['past_event'] = $this->filter_expired_events($past_event);
-		// echo "<pre>"; print_r($data['past_event']); die;
+		// echo "<pre>"; print_r($data['events']); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
