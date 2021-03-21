@@ -6,134 +6,142 @@
             <div class="row mt-4 justify-content-center">
                 <div class="col-md-10">
                     <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
-                        
-                    <div class="carousel-inner">
-                        <?php if(!empty($event)) {?>
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <div class="d-md-none d-block mobile-look">
-                                    <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm pr-sm0 mb-md-0 mb-4"><?php echo $event['event_name'];?></h1>
-                                    </div>
-                                    <img src="<?php echo base_url('assets/images/public/home/'.$event['thumbnail_image']); ?>" alt="<?php echo $event['thumbnail_message']; ?>" class="">
 
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="pl-12">
-                                        <div class="d-md-block d-none">
-                                            <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm"><?php echo $event['event_name'];?></h1>
+                        <div class="carousel-inner">
+                            <?php if (!empty($event)) { ?>
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="d-md-none d-block mobile-look">
+                                                <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm pr-sm0 mb-md-0 mb-4"><?php echo $event['event_name']; ?></h1>
+                                            </div>
+                                            <img src="<?php echo base_url('assets/images/public/home/' . $event['thumbnail_image']); ?>" alt="<?php echo $event['thumbnail_message']; ?>" class="">
+
                                         </div>
-                                        <div class="box-calander">
-                                            <div class="top-row">
-                                                <div class="left-col"><span>
-                                                <?php 
-                                                    if($event['date_available'] == 0){
-                                                        echo date('Y',strtotime($event['start_date']));
-                                                    } else {
-                                                        echo date('Y');
-                                                    }
-                                                ?>
-                                                </span></div>
-                                                <div class="right-col"><h2 class="position-relative">
-                                                <?php 
-                                                    if($event['date_available'] == 0){
-                                                        echo date('d',strtotime($event['start_date']))." ".date('M',strtotime($event['start_date']));
-                                                        if(!empty($event['end_date']) && $event['end_date'] != '0000-00-00'){
-                                                            echo "-".date('d',strtotime($event['end_date']))." ".date('M',strtotime($event['end_date']));
+                                        <div class="col-md-4">
+                                            <div class="pl-12">
+                                                <div class="d-md-block d-none">
+                                                    <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm"><?php echo $event['event_name']; ?></h1>
+                                                </div>
+                                                <div class="box-calander">
+                                                    <div class="top-row">
+                                                        <div class="left-col"><span>
+                                                                <?php
+                                                                if ($event['date_available'] == 0) {
+                                                                    echo date('Y', strtotime($event['start_date']));
+                                                                } else {
+                                                                    echo date('Y');
+                                                                }
+                                                                ?>
+                                                            </span></div>
+                                                        <div class="right-col">
+                                                            <h2 class="position-relative">
+                                                                <?php
+                                                                if ($event['date_available'] == 0) {
+                                                                    echo date('d', strtotime($event['start_date'])) . " " . date('M', strtotime($event['start_date']));
+                                                                    if (!empty($event['end_date']) && $event['end_date'] != '0000-00-00') {
+                                                                        echo "-" . date('d', strtotime($event['end_date'])) . " " . date('M', strtotime($event['end_date']));
+                                                                    }
+                                                                } else {
+                                                                    echo 'Coming Soon';
+                                                                }
+                                                                ?>
+                                                                </span></h2>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+
+                                                <div class="day text-center">
+                                                    <?php if ($event['date_available'] == 0) {
+                                                        echo strtoupper(date('D', strtotime($event['start_date'])));
+
+                                                        if (!empty($event['end_date']) && $event['end_date'] != '0000-00-00') {
+                                                            echo "-" . (strtoupper(date('D', strtotime($event['end_date']))));
                                                         }
-                                                    } else {
-                                                        echo 'Coming Soon';
-                                                    }
-                                                ?>
-                                                </span></h2></div>
+                                                    } ?>
+                                                </div>
+                                                <div class="time text-center"><?php if ($event['date_available'] == 0) {
+                                                                                    echo date('g a', strtotime($event['event_start_time'])); ?>-<?php echo date('g a', strtotime($event['event_end_time']));
+                                                                                                                                            } ?></div>
+                                                <img src="<?php echo base_url(); ?>assets/images/public/home/long-arrow.svg" alt="" class="mt-md-4 mt-3">
                                             </div>
 
-
                                         </div>
-                                        
-                                        <div class="day text-center">
-                                        <?php if($event['date_available'] == 0){ echo strtoupper(date('D',strtotime($event['start_date']))); 
-                                        
-                                        if(!empty($event['end_date']) && $event['end_date'] != '0000-00-00'){
-                                           echo "-".(strtoupper(date('D',strtotime($event['end_date']))));
-                                        } } ?>
-                                        </div>
-                                        <div class="time text-center"><?php if($event['date_available'] == 0){echo date('g a',strtotime($event['event_start_time']));?>-<?php echo date('g a',strtotime($event['event_end_time']));}?></div>
-                                        <img src="<?php echo base_url(); ?>assets/images/public/home/long-arrow.svg" alt="" class="mt-md-4 mt-3">
                                     </div>
-
                                 </div>
-                            </div>
-                        </div>
-                        <?php } ?>
-                        <?php if(!empty($event)) {?>
-                        <div class="carousel-item ">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <div class="d-md-none d-block mobile-look">
-                                    <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm pr-sm0 mb-md-0 mb-4"><?php echo $event['event_name'];?></h1>
-                                    </div>
-                                    <img src="<?php echo base_url('assets/images/public/home/'.$event['thumbnail_image']); ?>" alt="<?php echo $event['thumbnail_message']; ?>" class="">
-
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="pl-12">
-                                        <div class="d-md-block d-none">
-                                            <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm"><?php echo $event['event_name'];?></h1>
-                                        </div>
-                                        <div class="box-calander">
-                                            <div class="top-row">
-                                            <div class="left-col"><span>
-                                                <?php 
-                                                    if($event['date_available'] == 0){
-                                                        echo date('Y',strtotime($event['start_date']));
-                                                    } else {
-                                                        echo date('Y');
-                                                    }
-                                                ?>
-                                                </span></div>
-                                                <div class="right-col"><h2 class="position-relative">
-                                                <?php 
-                                                    if($event['date_available'] == 0){
-                                                        echo date('d',strtotime($event['start_date']))." ".date('M',strtotime($event['start_date']));
-                                                        if(!empty($event['end_date']) && $event['end_date'] != '0000-00-00'){
-                                                            echo "-".date('d',strtotime($event['end_date']))." ".date('M',strtotime($event['end_date']));
-                                                        }
-                                                    } else {
-                                                        echo 'Coming Soon';
-                                                    }
-                                                ?>
-                                                </span></h2></div>
+                            <?php } ?>
+                            <?php if (!empty($event)) { ?>
+                                <div class="carousel-item ">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="d-md-none d-block mobile-look">
+                                                <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm pr-sm0 mb-md-0 mb-4"><?php echo $event['event_name']; ?></h1>
                                             </div>
-
+                                            <img src="<?php echo base_url('assets/images/public/home/' . $event['thumbnail_image']); ?>" alt="<?php echo $event['thumbnail_message']; ?>" class="">
 
                                         </div>
-                                        
-                                        <?php if($event['date_available'] == 0){ ?> 
-                                        <div class="day text-center">
-                                            <?php echo date('D',strtotime($event['start_date']));
-                                            if(!empty($event['end_date']) && $event['end_date'] != '0000-00-00'){
-                                                echo "-".date('D',strtotime($event['end_date']));
-                                            }?>
-                                        </div>
-                                            <div class="time text-center">
-                                                <?php 
-                                                echo date('g a', strtotime($event['event_start_time'])) ?>
-                                                <?php if(!empty($event['event_end_time'])){?>-
-                                                <?php echo date('g a', strtotime($event['event_end_time'])); ?>
+                                        <div class="col-md-4">
+                                            <div class="pl-12">
+                                                <div class="d-md-block d-none">
+                                                    <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm"><?php echo $event['event_name']; ?></h1>
+                                                </div>
+                                                <div class="box-calander">
+                                                    <div class="top-row">
+                                                        <div class="left-col"><span>
+                                                                <?php
+                                                                if ($event['date_available'] == 0) {
+                                                                    echo date('Y', strtotime($event['start_date']));
+                                                                } else {
+                                                                    echo date('Y');
+                                                                }
+                                                                ?>
+                                                            </span></div>
+                                                        <div class="right-col">
+                                                            <h2 class="position-relative">
+                                                                <?php
+                                                                if ($event['date_available'] == 0) {
+                                                                    echo date('d', strtotime($event['start_date'])) . " " . date('M', strtotime($event['start_date']));
+                                                                    if (!empty($event['end_date']) && $event['end_date'] != '0000-00-00') {
+                                                                        echo "-" . date('d', strtotime($event['end_date'])) . " " . date('M', strtotime($event['end_date']));
+                                                                    }
+                                                                } else {
+                                                                    echo 'Coming Soon';
+                                                                }
+                                                                ?>
+                                                                </span></h2>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+
+                                                <?php if ($event['date_available'] == 0) { ?>
+                                                    <div class="day text-center">
+                                                        <?php echo date('D', strtotime($event['start_date']));
+                                                        if (!empty($event['end_date']) && $event['end_date'] != '0000-00-00') {
+                                                            echo "-" . date('D', strtotime($event['end_date']));
+                                                        } ?>
+                                                    </div>
+                                                    <div class="time text-center">
+                                                        <?php
+                                                        echo date('g a', strtotime($event['event_start_time'])) ?>
+                                                        <?php if (!empty($event['event_end_time'])) { ?>-
+                                                        <?php echo date('g a', strtotime($event['event_end_time'])); ?>
+                                                    <?php } ?>
+                                                    </div>
                                                 <?php } ?>
+                                                <img src="<?php echo base_url(); ?>assets/images/public/home/long-arrow.svg" alt="" class="mt-md-4 mt-3">
                                             </div>
-                                                <?php } ?>
-                                            <img src="<?php echo base_url(); ?>assets/images/public/home/long-arrow.svg" alt="" class="mt-md-4 mt-3">
+
+                                        </div>
                                     </div>
-
                                 </div>
-                            </div>
-                        </div>
-                       
-                        <?php } ?>
 
-                    </div>
+                            <?php } ?>
+
+                        </div>
                         <div class="d-flex justify-content-center mt-5 d-none">
                             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
                                 <img src="<?php echo base_url(); ?>assets/images/public/street/athens-left.svg" alt="" class="w-100">
@@ -156,85 +164,90 @@
                     <div class="v-line d-table mx-auto my-4"></div>
                 </div>
             </div>
-            
+
             <div class="row justify-content-center">
-                <?php if (!empty($event)) {?>
-                        <div class="col-md-10">
-                            <p><?php echo $event['about_event']; ?></p>
-                            <ul>
-                                <?php $labels = explode(',', $event['event_category']);
-                                if (is_array($labels)) {
-                                    foreach ($labels as $cat) { ?>
-                                        <li><a href="javascript:void(0)"><?php echo $cat; ?></a></li>
-                                    <?php }
-                                } else { ?>
-                                    <li><a href="javascript:void(0)"><?php echo $labels; ?></a></li>
-                                <?php } ?>
-                            </ul>
-                        </div>
+                <?php if (!empty($event)) { ?>
+                    <div class="col-md-10">
+                        <p><?php echo $event['about_event']; ?></p>
+                        <ul>
+                            <?php $labels = explode(',', $event['event_category']);
+                            if (is_array($labels)) {
+                                foreach ($labels as $cat) { ?>
+                                    <li><a href="javascript:void(0)"><?php echo $cat; ?></a></li>
+                                <?php }
+                            } else { ?>
+                                <li><a href="javascript:void(0)"><?php echo $labels; ?></a></li>
+                            <?php } ?>
+                        </ul>
+                    </div>
                 <?php } ?>
             </div>
             <?php if (!empty($event)) {
-                    if ($event['show_reg_btn'] == "0") { ?>
-                        <div class="col-md-12 mt-5">
-                            <a href="" class="d-table mx-auto primary-btn">REGISTER NOW</a>
-                        </div>
+                if ($event['show_reg_btn'] == "0") { ?>
+                    <div class="col-md-12 mt-5">
+                        <a href="" class="d-table mx-auto primary-btn" data-bs-toggle="modal" data-bs-target="#registernow">REGISTER NOW</a>
+                    </div>
             <?php }
             } ?>
         </div>
     </div>
-    <?php if(!empty($past_event)){?>
-    <div class="about-brand gray-bg  pb-30 pt-60 pt-sm-30">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated">Past Events
-                    </h5>
-                    <div class="v-line d-table mx-auto my-4"></div>
+    <?php if (!empty($past_event)) { ?>
+        <div class="about-brand gray-bg  pb-30 pt-60 pt-sm-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 positoin-relative">
+                        <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated">Past Events
+                        </h5>
+                        <div class="v-line d-table mx-auto my-4"></div>
+                    </div>
                 </div>
-            </div>
 
-        </div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <div id="carouselExampleControlseven" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <?php if(!empty($past_event)) { $i = 1; foreach($past_event as $pe){?>
-                            <div class="carousel-item <?php if($i == 1){echo "active";}?>">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-12 position-relative">
-                                        <figure> <img src="<?php echo base_url('assets/images/public/home/'.$pe['thumbnail_image']); ?>" alt="<?php echo $pe['thumbnail_message']; ?>" class=""></figure>
-                                        <div class="card mt-60 border-0 rounded-0">
-                                            <div class="row">
-                                                <div class="col-md-4 ">
-                                                </div>
-                                                <div class="col-md-8 ">
-                                                    <p><?php echo $pe['about_event']; ?></p>
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div id="carouselExampleControlseven" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <?php if (!empty($past_event)) {
+                                    $i = 1;
+                                    foreach ($past_event as $pe) { ?>
+                                        <div class="carousel-item <?php if ($i == 1) {
+                                                                        echo "active";
+                                                                    } ?>">
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-12 position-relative">
+                                                    <figure> <img src="<?php echo base_url('assets/images/public/home/' . $pe['thumbnail_image']); ?>" alt="<?php echo $pe['thumbnail_message']; ?>" class=""></figure>
+                                                    <div class="card mt-60 border-0 rounded-0">
+                                                        <div class="row">
+                                                            <div class="col-md-4 ">
+                                                            </div>
+                                                            <div class="col-md-8 ">
+                                                                <p><?php echo $pe['about_event']; ?></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
-
-                                    </div>
-                                </div>
+                                <?php }
+                                } ?>
                             </div>
-                            <?php } }?>
+                            <?php if (count($past_event) > 1) { ?>
+                                <div class="crsouls-btn-group">
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlseven" data-bs-slide="prev">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/brand/left.svg" alt="" class="">
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlseven" data-bs-slide="next">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/brand/right.svg" alt="" class="">
+                                    </button>
+                                </div>
+                            <?php } ?>
                         </div>
-                        <?php if(count($past_event) > 1){?>
-                        <div class="crsouls-btn-group">
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlseven" data-bs-slide="prev">
-                                <img src="<?php echo base_url(); ?>assets/images/public/brand/left.svg" alt="" class="">
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlseven" data-bs-slide="next">
-                                <img src="<?php echo base_url(); ?>assets/images/public/brand/right.svg" alt="" class="">
-                            </button>
-                        </div>
-                        <?php } ?>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     <?php } ?>
     <div class="similar barnd live-in-word gray-bg pt-60  position-relative">
         <div class="container">
@@ -338,25 +351,25 @@
                 <div class="col-md-10">
                     <ul class="category d-flex justify-content-center align-items-center flex-wrap">
                         <li>
-                        <a href="<?php echo base_url('brand-directory/fashion')?>">
+                            <a href="<?php echo base_url('brand-directory/fashion') ?>">
                                 <figure><img src="<?php echo base_url(); ?>assets/images/public/brand/c1.svg" alt=""></figure>
                                 <span>FASHION</span>
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url('brand-directory/restaurant')?>">
+                            <a href="<?php echo base_url('brand-directory/restaurant') ?>">
                                 <figure><img src="<?php echo base_url(); ?>assets/images/public/brand/c2.svg" alt=""></figure>
                                 <span>FOOD</span>
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url('brand-directory/health')?>">
+                            <a href="<?php echo base_url('brand-directory/health') ?>">
                                 <figure><img src="<?php echo base_url(); ?>assets/images/public/brand/c3.svg" alt=""></figure>
                                 <span>HEALTH & BEAUTY</span>
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo base_url('brand-directory/entertainment')?>">
+                            <a href="<?php echo base_url('brand-directory/entertainment') ?>">
                                 <figure><img src="<?php echo base_url(); ?>assets/images/public/brand/c4.svg" alt=""></figure>
                                 <span>ENTERTAINMENT</span>
                             </a>
@@ -420,6 +433,41 @@
         </div>
     </div>
 
+    <div class="modal fade" id="registernow" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <div class="modal-body">
+                    <form action="">
+                        <div class="mb-4">
+                            <label for="formGroupExampleInput" class="form-label">Name *</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Name">
+                        </div>
+                        <div class="mb-4">
+                            <label for="formGroupExampleInput" class="form-label">Email Address*</label>
+                            <input type="email" class="form-control" id="formGroupExampleInput" placeholder="Your Email">
+                        </div>
+                        <div class="mb-4">
+                            <label for="formGroupExampleInput" class="form-label">Mobile Number*</label>
+                            <input type="email" class="form-control" id="formGroupExampleInput" placeholder="Your Number">
+                        </div>
+                        <div class="mb-4">
+                            <label for="formGroupExampleInput" class="form-label">Mobile Number*</label>
+                            <textarea class="form-control" id="formGroupExampleInput" placeholder="Your Message"></textarea>
+                        </div>
+                        <div class="mt-5">
+                            <button type="submit" class="submit-bnt d-table mx-auto">REGISTER NOW</button>
+                            <p class="mt-5 d-table mx-auto pr-color fz26">Thank You!</p>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <div class="more-expoler pt-30 pb-60 gray-bg">
         <div class="container">
