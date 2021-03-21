@@ -10,7 +10,7 @@
 
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                            <form action="<?php echo base_url('sign-up')?>" autocomplete="off" class="py-60 py-sm-20" id="sign-up">
+                            <form action="<?php echo base_url('sign-up') ?>" autocomplete="off" class="py-60 py-sm-20" id="sign-up">
                                 <div class="row justify-content-center">
                                     <div class="col-md-4">
                                         <h3 class="pr-font fz36 fz18-sm text-white mb-30 mb-10-sm">Name*</h3>
@@ -35,20 +35,31 @@
                                         </div>
                                     </div>
                                     <div class="col-md-12">
-                                        <button type="submit" class="d-table mx-auto mt-60 sb-btn">SUBMIT</button>
+                                        <button type="submit" class="d-table mx-auto mt-60 sb-btn" data-bs-toggle="modal" data-bs-target="#thanksmodal">SUBMIT</button>
                                     </div>
 
-                                    
+
 
                                 </div>
                             </form>
                             <div class="col-md-12" id="success" style="display:none">
                                 <span class="text-white">Thank You!.</span>
-                            </div> 
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="thanksmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><img src="<?php echo base_url(); ?>assets/images/public/footer/close.svg" alt="facebook"></button>
+            <div class="modal-body">
+                <h1 class="d-table mx-auto">Thank You!</h1>
+            </div>
+
         </div>
     </div>
 </div>
