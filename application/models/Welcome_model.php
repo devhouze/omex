@@ -198,13 +198,26 @@ class Welcome_model extends CI_Model
         return [];
     }
 
+     public function main_category()
+    {
+        $query = $this->db->select('id, name,')
+                          ->get('tbl_maincatgory');
+        if($query->num_rows() > 0)
+        {
+            return $query->result_array();
+        }
+        return [];
+    }
+
     public function get_all_brands($category,$limit,$count = false)
     {
-        $this->db->select('brand_name, brand_logo, logo_message, brand_location, brand_id,brand_slug,brand_street');
+        $this->db->select('DISTINCT(b.brand_id),b.brand_name, b.brand_logo, b.logo_message, b.brand_location, b.brand_id,b.brand_slug,b.brand_street');
+        $this->db->join("tbl_category AS ct","find_in_set(ct.id,b.brand_category)<> 0","left",false);
         $this->db->where('status',0);
-        $this->db->like('brand_category',$category);
+        $this->db->or_like('ct.category_name',$category);
+        $this->db->or_like('b.brand_type',$category);
         (!$count && $limit!='null')?$this->db->limit($limit):''; 
-        $query = $this->db->get('tbl_brand');
+        $query = $this->db->get('tbl_brand as b');
         // echo $this->db->last_query(); die;
         if($count){
             return $query->num_rows();
@@ -324,27 +337,31 @@ class Welcome_model extends CI_Model
 
     public function filter_brand($street,$sort,$filter,$limit,$letter,$category,$count = false)
     {
-        ($street !='null' && $street !='')?$this->db->like('brand_street',$street):'';
-        ($category !='null' && $category !='')?$this->db->like('brand_category',$category):'';
-        ($letter !='null' && $letter !='')?$this->db->like('brand_name',$letter):'';
-        if($sort = 'A-Z'){
-            $this->db->order_by('brand_name','asc');
-        } elseif($sort = 'Z-A'){
-            $this->db->order_by('brand_name','desc');
+        ($street !='null' && $street !='')?$this->db->like('b.brand_street',$street):'';
+        ($letter !='null' && $letter !='')?$this->db->like('b.brand_name',$letter):'';
+        ($category !='null' && $category !='')?$this->db->like('cm.name',$category):'';
+        if($sort == 'A-Z'){
+            $this->db->order_by('b.brand_name','asc');
+        } elseif($sort == 'Z-A'){
+            $this->db->order_by('b.brand_name','desc');
         } else {
-            $this->db->order_by('brand_name','desc');
+            $this->db->order_by('b.brand_name','desc');
         }
+            $this->db->group_by('b.brand_id');
         if($filter != '')
         {
             // $this->db->like('brand_category',$filter);
-            $this->db->where('find_in_set("'.$filter.'", brand_category) <> 0');
+            $this->db->where('find_in_set("'.$filter.'", b.brand_category) <> 0');
+            // $this->db->where('find_in_set("'.$filter.'", b.brand_sub_category) <> 0');
 
             // $this->db->or_where('brand_sub_category',$filter);
 
         }
         $this->db->where('status',0);
         (!$count)?$this->db->limit($limit,0):'';
-        $query = $this->db->get('tbl_brand');
+        $this->db->join("tbl_category AS ct","find_in_set(ct.id,b.brand_category)<> 0","left",false);
+        $this->db->join("tbl_maincatgory AS cm","find_in_set(cm.id,ct.main_cat_id)<> 0","left",false);
+        $query = $this->db->get('tbl_brand as b');
         // echo $this->db->last_query(); die;
         if($count){
             return $query->num_rows();

@@ -8,7 +8,7 @@
                 <ul id="eat">
 
                 </ul>
-                <a href="<?php echo base_url('brand-directory/eat'); ?>" class="exploer-btn">VIEW MORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="" class="ml-4"></a>
+                <a href="<?php echo base_url('brand-directory/eat'); ?>" class="exploer-btn-modal">VIEW MORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="" class="ml-4"></a>
             </div>
 
         </div>
@@ -25,7 +25,7 @@
                 <ul id="style">
 
                 </ul>
-                <a href="<?php echo base_url('brand-directory/style'); ?>" class="exploer-btn">VIEW MORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="" class="ml-4"></a>
+                <a href="<?php echo base_url('brand-directory/style'); ?>" class="exploer-btn-modal">VIEW MORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="" class="ml-4"></a>
             </div>
 
         </div>
@@ -42,7 +42,7 @@
                 <ul id="play">
 
                 </ul>
-                <a href="<?php echo base_url('brand-directory/play'); ?>" class="exploer-btn">VIEW MORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="" class="ml-4"></a>
+                <a href="<?php echo base_url('brand-directory/play'); ?>" class="exploer-btn-modal">VIEW MORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="" class="ml-4"></a>
             </div>
 
         </div>
