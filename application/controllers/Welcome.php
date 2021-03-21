@@ -479,21 +479,15 @@ class Welcome extends CI_Controller {
 
 	public function filter_expired_events($events)
 	{
+		// echo "<pre>";
 		$expired_events = [];
 		foreach($events as $event){
-			if($event['date_available'] == 0){
-				if(!empty($event['end_date']) && $event['end_date'] != '0000-00-00'){
-					if($event['end_date'] > date('Y-m-d')){
+			if($event['end_date']=== '1970-01-01' || $event['start_date'] < date('Y-m-d') || $event['end_date'] < date('Y-m-d') ){
 						$expired_events[] = $event;
-					}
-				} elseif($event['start_date'] < date('Y-m-d')){
-					$expired_events[] = $event;
-				}
 			}
-			// else {
-			// 	$expired_events[] = $event;
-			// }
 		}
+		// print_r($events);
+		// print_r($expired_events); die;
 		return $expired_events;
 	}
 	
