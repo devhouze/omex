@@ -6,7 +6,7 @@
                 <div id="carouselExampleIndicatorss" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
                     <ol class="carousel-indicators">
                     <?php $count = count($banner); for($i=0; $i < $count; $i++){?>
-                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="<?php echo $i; ?>" <?php if($i == 1){?>class="active" <?php } ?>></li>
+                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="<?php echo $i; ?>" <?php if($i == 0){?>class="active" <?php } ?>></li>
                     <?php } ?>
                     </ol>
 
@@ -75,12 +75,14 @@
         <div class="row justify-content-center align-items-center wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="0.15s">
             <div class="col-md-10 mt-20">
                 <div class="owl-carousel owl-theme top-brand">
-                    <?php foreach ($brand_logo as $logo) { ?>
+                    <?php foreach ($brand_logo as $logo) { 
+                         if(is_file("assets/images/public/brand/".$logo['brand_logo'])){
+                     ?>
                             <div class="item">
-                                <a href="<?php echo base_url('brand/'.$logo['brand_id']);?>"></a>
+                                <a href="<?php echo base_url('brand/'.$logo['brand_slug']);?>"></a>
                                 <img src="<?php echo base_url('assets/images/public/brand/' . $logo['brand_logo']); ?>" alt="<?= $logo['banner_comment']; ?>" class="d-table mx-auto">
                             </div>
-                    <?php } ?>
+                    <?php } } ?>
                 </div>
             </div>
         </div>
