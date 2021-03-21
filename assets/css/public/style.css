@@ -91,11 +91,51 @@ header.header.sticky {
 }
 
 #thanksmodal .modal-content {
-    width: 500px;
+    max-width: 500px;
     height: 250px;
     border: none;
     border-radius: 0;
     z-index: 9;
+}
+
+#registernow .modal-content {
+    max-width: 550px;
+    padding: 60px;
+    background: #FAF7F2;
+}
+
+#registernow button.btn-close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+#registernow .form-control {
+    border-bottom: 1px solid #083D68 !important;
+    border-radius: 0;
+    border: none;
+    background: transparent;
+    padding-left: 0;
+}
+
+#registernow .form-control::placeholder {
+    color: #083D68;
+    font-size: 14px;
+}
+
+#registernow label {
+    margin-bottom: 30px;
+    font-size: 26px;
+    color: #083D68;
+    font-family: var(--pr-font) !important;
+}
+
+#registernow .submit-bnt {
+    background: #003471;
+    border: none;
+    color: white;
+    font-size: 19px;
+    padding: 17px 60px;
 }
 
 #thanksmodal .modal-content .modal-body {
