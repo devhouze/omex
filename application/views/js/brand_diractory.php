@@ -227,6 +227,8 @@
         });
 
         $('#filter').change(function(){
+             $('.letter').removeClass('active');
+            $('.category').removeClass('active');
             get_brands();
         });
 
