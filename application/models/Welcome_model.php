@@ -338,7 +338,7 @@ class Welcome_model extends CI_Model
     public function filter_brand($street,$sort,$filter,$limit,$letter,$category,$count = false)
     {
         ($street !='null' && $street !='')?$this->db->like('b.brand_street',$street):'';
-        ($letter !='null' && $letter !='')?$this->db->like('b.brand_name',$letter):'';
+        ($letter !='null' && $letter !='')?$this->db->like('b.brand_name',$letter,'after'):'';
         ($category !='null' && $category !='')?$this->db->like('cm.name',$category):'';
         if($sort == 'A-Z'){
             $this->db->order_by('b.brand_name','asc');
