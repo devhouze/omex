@@ -350,9 +350,8 @@ class Welcome_model extends CI_Model
             $this->db->group_by('b.brand_id');
         if($filter != '')
         {
-            // $this->db->like('brand_category',$filter);
-            $this->db->where('find_in_set("'.$filter.'", b.brand_category) <> 0');
-            // $this->db->where('find_in_set("'.$filter.'", b.brand_sub_category) <> 0');
+            $this->db->or_where('find_in_set("'.$filter.'", b.brand_category) <> 0');
+            $this->db->or_where('find_in_set("'.$filter.'", b.brand_sub_category) <> 0');
 
             // $this->db->or_where('brand_sub_category',$filter);
 
@@ -360,6 +359,7 @@ class Welcome_model extends CI_Model
         $this->db->where('status',0);
         (!$count)?$this->db->limit($limit,0):'';
         $this->db->join("tbl_category AS ct","find_in_set(ct.id,b.brand_category)<> 0","left",false);
+        $this->db->join("tbl_sub_category AS st","find_in_set(st.id,b.brand_sub_category)<> 0","left",false);
         $this->db->join("tbl_maincatgory AS cm","find_in_set(cm.id,ct.main_cat_id)<> 0","left",false);
         $query = $this->db->get('tbl_brand as b');
         // echo $this->db->last_query(); die;

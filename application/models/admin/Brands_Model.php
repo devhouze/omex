@@ -87,5 +87,18 @@ class Brands_Model extends MY_Model
         }
         return [];
     }
+
+    function getFieldWhere($filed,$tbl,$where,$id){ 
+
+    $query = $this->db->select($filed)
+                                ->where_in($where,$id)
+                                ->get($tbl);
+        if($query->num_rows() > 0)
+        {
+
+            $result = $query->result_array();
+            return $result[0][$filed];
+        }   
+}
 }
 ?>

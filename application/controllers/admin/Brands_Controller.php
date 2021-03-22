@@ -385,8 +385,24 @@ class Brands_Controller extends MY_Controller
 
     public function get_brand_details()
     {
+        $cat='';
+        $sabcat='';
         $brand_id = $this->input->post('brand_id');
         $data = $this->bm->get_brand_details($brand_id);
+        $cat_data=explode(',',$data['brand_category']);
+        foreach ($cat_data as $value) {
+                $cat.=$this->bm->getFieldWhere('category_name','tbl_category','id',$value).',';
+        }
+
+        $sub_cat_data=explode(',',$data['brand_sub_category']);
+        foreach ($cat_data as $value) {
+                $sabcat.=$this->bm->getFieldWhere('name','tbl_sub_category','id',$value).',';
+        }
+
+        $data['brand_category']=$cat;
+        $data['brand_sub_category']=$sabcat;
+        // echo ;
+
         echo json_encode($data);
     }
 
@@ -586,6 +602,8 @@ class Brands_Controller extends MY_Controller
         $data = $this->bm->get_sub_category($cat_id);
         echo json_encode($data);
     }
+
+
     
 }
 ?>

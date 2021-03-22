@@ -91,32 +91,32 @@
                         <div class="col-md-10">
                             <ul class="me-0 mt-40 p-0 d-flex justify-content-center flex-wrap">
 
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="a">A</a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="b">B </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="c">C </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="d">D </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="e">E </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="f">F </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="g">G </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="h">H </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="i">I </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="j">J </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="k">K </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="l">L </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="m">M </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="n">N </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="o">O </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="p">P </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="q">Q </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="r">R </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="s">S </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="t">T </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="u">U </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="v">V </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="w">W </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="x">X </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="y">Y </a></li>
-                                <li><a href="javascript:void(0)" style="cursor:pointer" class="letter" data-letter="z">Z </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="a">A</a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="b">B </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="c">C </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="d">D </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="e">E </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="f">F </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="g">G </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="h">H </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="i">I </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="j">J </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="k">K </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="l">L </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="m">M </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="n">N </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="o">O </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="p">P </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="q">Q </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="r">R </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="s">S </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="t">T </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="u">U </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="v">V </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="w">W </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="x">X </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="y">Y </a></li>
+                                <li><a href="#search-box" style="cursor:pointer" class="letter" data-letter="z">Z </a></li>
                             </ul>
                         </div>
                     </div>
@@ -131,7 +131,7 @@
                 </div>
             </div>
 
-            <div class="search-brand gray-bg">
+            <div class="search-brand gray-bg" >
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-md-1-">
@@ -141,8 +141,8 @@
                     <div class="row justify-content-center">
                         <div class="col-md-10">
                             <div class="row">
-                                <div class="col-md-4">
-
+                                <div class="col-md-4" id="search-box">
+                                     
                                     <ul>
                                         <?php $i=1; if(!empty($main_category)){ foreach($main_category as $value){?>
                                             <li><a href="javascript:void(0)" class="category" data-category="<?php echo $value['name'] ?>"><?php echo $value['name'] ?></a></li>
@@ -155,11 +155,12 @@
 
                                             <?php $i++; } }?>
 
+                               
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row justify-content-center mt-4">
+                        <div class="row justify-content-center mt-4" >
                             <div class="col-md-10">
                                 <div class="row">
                                     <div class="col-md-4 col-6">
