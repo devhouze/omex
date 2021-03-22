@@ -14,9 +14,9 @@ $(document).ready(function() {
             data: new FormData(this),
             success: function(data) {
                 $('.errors_msg').empty();
-                $('#contact').trigger('reset');
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
+                    $('#contact').trigger('reset');
                     $('#thanksmodal').modal('show');
                     $('.success_msg').html('Thank You! Omaxe WS Team will get in touch with you shortly.');
                 }
