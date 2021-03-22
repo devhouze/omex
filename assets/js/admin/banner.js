@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
     const url = $('body').data('url');
     const base_url = $('body').data('base_url');
@@ -68,8 +66,11 @@ $(document).ready(function() {
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
                     $.notify(data.message, "success");
-                    
-                    setTimeout(function() { window.location.replace(url + 'banners');$('.btn-primary').text('Save'); },2000);
+
+                    setTimeout(function() {
+                        window.location.replace(url + 'banners');
+                        $('.btn-primary').text('Save');
+                    }, 2000);
                 } else {
                     $.notify(data.message, "error");
                 }
@@ -123,6 +124,26 @@ $(document).ready(function() {
         });
     });
 
+    // Get data for filter
+    $('#banner_link').change(function() {
+        var link_type = $(this).val();
+        if (link_type != null && (link_type != 5 || link_type != 6)) {
+            $('#link_to').css('display', 'block');
+            $('.link_to').empty();
+            $('.link_to').append($('<option></option>').attr("value", '').text('Choose from the list'));
+            $.ajax({
+                type: 'post',
+                url: url + 'get-link-data',
+                data: { link_type: link_type },
+                success: function(data) {
+                    var data = $.parseJSON(data);
+                    $.each(data, function(i, v) {
+                        $('.link_to').append($('<option></option>').attr("value", v.slug).text(v.name));
+                    })
+                }
+            });
+        }
+
+    });
+
 });
-
-

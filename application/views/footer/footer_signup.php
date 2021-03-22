@@ -35,16 +35,14 @@
                                         </div>
                                     </div>
                                     <div class="col-md-12">
-                                        <button type="submit" class="d-table mx-auto mt-60 sb-btn" data-bs-toggle="modal" data-bs-target="#thanksmodal">SUBMIT</button>
+                                        <button type="submit" class="d-table mx-auto mt-60 sb-btn">SUBMIT</button>
                                     </div>
 
 
 
                                 </div>
                             </form>
-                            <div class="col-md-12" id="success" style="display:none">
-                                <span class="text-white">Thank You!.</span>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -52,7 +50,7 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="thanksmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="thanksmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" role="dialog">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><img src="<?php echo base_url(); ?>assets/images/public/footer/close.svg" alt="facebook"></button>

@@ -20,7 +20,7 @@ class Welcome extends CI_Controller {
 		$data['construction_gallery'] = $this->wm->get_gallery(3);
 		$data['gallery_video'] = $this->wm->gallery_video();
 		// Get Instagram feeds
-		// echo "<pre>"; print_r($data['events']); die;
+		// echo "<pre>"; print_r($data['banner']); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -275,7 +275,7 @@ class Welcome extends CI_Controller {
 		$data['what_new'] = $this->wm->get_what_new();
 		$past_event= $this->wm->get_past_events();
 		$data['past_event'] = $this->filter_expired_events($past_event);
-		// echo "<pre>"; print_r($data['past_event']); die;
+		// echo "<pre>"; print_r($data['events']); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -400,7 +400,7 @@ class Welcome extends CI_Controller {
 	{
 		$this->form_validation->set_rules('name','Name','required');
 		$this->form_validation->set_rules('email','Email','required');
-		$this->form_validation->set_rules('contact','Mobile Number','required');
+		$this->form_validation->set_rules('contact','Mobile Number','required|regex_match[/^[0-9]{10}$/]');
 
 		if($this->form_validation->run()){
 			$data_array = array(
@@ -408,6 +408,35 @@ class Welcome extends CI_Controller {
 				'email'		=> $this->input->post('email'),
 				'contact'	=> $this->input->post('contact'),
 				'source'	=> "Sign Up Form",
+			);
+
+			$save = $this->wm->insert_data('tbl_leads',$data_array);
+			if($save){
+				echo json_encode(['message' => 'Data saved successfully.', 'status' => 1]);
+			} else {
+				echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
+			}
+		} else {
+			echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->form_validation->error_array(), 'status' => 0]);
+		}
+		exit;
+	}
+
+	public function register()
+	{
+		$this->form_validation->set_rules('name','Name','required');
+		$this->form_validation->set_rules('email','Email','required');
+		$this->form_validation->set_rules('message','Message','required');
+		$this->form_validation->set_rules('contact','Mobile Number','required|regex_match[/^[0-9]{10}$/]');
+
+		if($this->form_validation->run()){
+			$data_array = array(
+				'name'		=> $this->input->post('name'),
+				'email'		=> $this->input->post('email'),
+				'contact'	=> $this->input->post('contact'),
+				'source'	=> 'events',
+				'event_name'	=> $this->input->post('event_name'),
+				'message'	=> $this->input->post('message'),
 			);
 
 			$save = $this->wm->insert_data('tbl_leads',$data_array);

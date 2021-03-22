@@ -73,14 +73,22 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
                                
                             </select>
                         </div> -->
-
                           <div class="col-md-6 mb-3">
                             <label for="">Banner Link</label>
-                            <input type="text" class="form-control form-control-sm input-sm" name="banner_link" value="<?php echo $banner_link; ?>">
+                            <select name="banner_link" class="form-control form-control-sm select-box" id="banner_link">
+                            <option value="">Select One</option>
+                            <option value="1" <?php if($banner_link == '1'){echo 'selected'; }?>>Event</option>
+                            <option value="2" <?php if($banner_link == '2'){echo 'selected'; }?>>Brand</option>
+                            <option value="3" <?php if($banner_link == '3'){echo 'selected'; }?>>What's New</option>
+                            <option value="4" <?php if($banner_link == '4'){echo 'selected'; }?>>Street</option>
+                            <option value="5" <?php if($banner_link == '5'){echo 'selected'; }?>>Contact Us</option>
+                            <option value="6" <?php if($banner_link == '6'){echo 'selected'; }?>>No Linking</option>
+                            </select>
+                            <!-- <input type="text" class="form-control form-control-sm input-sm" name="banner_link" value="<?php echo $banner_link; ?>"> -->
                         </div>
 
 
-                     <!--    <div class="col-md-6 mb-3" id="streets" style="display:none">
+                        <!-- <div class="col-md-6 mb-3" id="streets" style="display:none">
                             <label for="">Street</label>
                             <select name="streets" class="form-control form-control-sm">
                                 <option selected="" disabled>Select Street</option>
@@ -93,16 +101,15 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
                                 <option value="Athens Street">Athens Street</option>
                             </select>
                         </div> -->
-
-                     <!--    <div class="col-md-6 mb-3" id="brands" style="display:none">
-                            <label for="">Brand</label>
-                            <select name="brand" class="form-control form-control-sm">
-                                <option disabled selected>Select Brand</option>
-                                <?php if(!empty($brands)) { foreach($brands as $brand){?>
-                                    <option value="<?=$brand['brand_id']?>"><?=$brand['brand_name']?></option>
+                        
+                        <div class="col-md-6 mb-3" id="link_to" <?php if($banner_link != '5' || $banner_link != '6'){?>style="display:block"<?php } else {?> style="display:none"<?php } ?>>
+                            <label for="">Choose One</label>
+                            <select name="link_to" class="form-control form-control-sm link_to">
+                                <?php if(!empty($link_to)){ foreach ($link_to as $value) { ?>
+                                    <option value="<?php echo $value['slug']; ?>"><?php echo $value['name']; ?></option>
                                 <?php } }?>
                             </select>
-                        </div> -->
+                        </div>
 
                     </div>
 

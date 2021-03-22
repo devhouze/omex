@@ -1,7 +1,9 @@
 
                     <div class="carousel-inner">
-                        <?php $event_count = 0; $i=1;foreach($events as $event){ ?>
-                        <div class="carousel-item <?php if($i==1){?>active<?php }?>">
+                        <?php $event_count = 0; $i=1;foreach($events as $event){ 
+                        $class = ($count > 1)?'athens_street':strtolower(str_replace(' ', '_',$event['event_street']));
+                        ?>
+                        <div class="carousel-item <?php echo $class; if($i==1){?> active<?php }?>">
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="d-md-none d-block mobile-look">

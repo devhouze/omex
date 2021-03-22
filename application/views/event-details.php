@@ -441,22 +441,23 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
                 <div class="modal-body">
-                    <form action="">
+                    <form action="<?php echo base_url('register-in-event')?>" method="post" id="register">
                         <div class="mb-4">
                             <label for="formGroupExampleInput" class="form-label">Name *</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Name">
+                            <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="Your Name">
                         </div>
                         <div class="mb-4">
                             <label for="formGroupExampleInput" class="form-label">Email Address*</label>
-                            <input type="email" class="form-control" id="formGroupExampleInput" placeholder="Your Email">
+                            <input type="email" name="email" class="form-control" id="formGroupExampleInput" placeholder="Your Email">
                         </div>
                         <div class="mb-4">
                             <label for="formGroupExampleInput" class="form-label">Mobile Number*</label>
-                            <input type="email" class="form-control" id="formGroupExampleInput" placeholder="Your Number">
+                            <input type="text" name="contact" class="form-control" id="formGroupExampleInput" placeholder="Your Number">
                         </div>
+                        <input type="hidden" name="event_name" value="<?php echo $event['event_name'];?>">
                         <div class="mb-4">
-                            <label for="formGroupExampleInput" class="form-label">Mobile Number*</label>
-                            <textarea class="form-control" id="formGroupExampleInput" placeholder="Your Message"></textarea>
+                            <label for="formGroupExampleInput" class="form-label">Your Message*</label>
+                            <textarea class="form-control" name="message" id="formGroupExampleInput" placeholder="Your Message"></textarea>
                         </div>
                         <div class="mt-5">
                             <button type="submit" class="submit-bnt d-table mx-auto">REGISTER NOW</button>

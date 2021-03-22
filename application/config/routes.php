@@ -75,6 +75,7 @@ $route['brand-directory/(:any)/(:any)'] = 'Welcome/brand_directory/$1/$2';
 $route['brand-directory/(:any)'] = 'Welcome/brand_directory/$1';
 $route['search-brand'] = 'Welcome/search_brand';
 $route['sign-up'] = 'Welcome/sign_up';
+$route['register-in-event'] = 'Welcome/register';
 $route['get-brands'] = "Welcome/get_brands";
 $route['get-brands-like'] = "Welcome/get_brands_like";
 
@@ -151,6 +152,7 @@ $route['admin/banners/(:num)/(:any)/(:any)'] = "admin/Banner_Controllers/banner_
 $route['admin/delete-banner'] = 'admin/Banner_Controllers/delete_banner';
 $route['admin/change-banner-status'] = 'admin/Banner_Controllers/change_banner_status';
 $route['admin/get-banner-details'] = "admin/Banner_Controllers/get_banner_details";
+$route['admin/get-link-data'] = "admin/Banner_Controllers/get_linking_data";
 
 // Gallery routes
 $route['admin/gallery'] = 'admin/Gallery_Controller/gallery_list';

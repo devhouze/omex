@@ -19,7 +19,15 @@
                                 // echo base_url('assets/images/public/home/' . $value['banner_web']);
                                 if(is_file("assets/images/public/home/".$value['banner_web'])){?>
                                 <div class="carousel-item <?= ($i == 1) ? 'active' : '';$i++; ?>" style="background-image: url('<?php echo base_url('assets/images/public/home/' . $value['banner_web']); ?>');">
-                                    <a href="<?php echo (!empty($value['banner_link']))?$value['banner_link']:base_url();?>" target="_blank" class="banner-link"></a>
+                                    <?php if($value['banner_link'] == 1){?>
+                                    <a href="<?php echo base_url('event-details/'.$value['link_to'])?>" target="_blank" class="banner-link"></a>
+                                    <?php }elseif($value['banner_link'] == 2){?>
+                                    <a href="<?php echo base_url('brand/'.$value['link_to'])?>" target="_blank" class="banner-link"></a>
+                                    <?php } elseif($value['banner_link'] == 3){?>
+                                    <a href="<?php echo base_url('brand/'.$value['link_to'])?>" target="_blank" class="banner-link"></a>
+                                    <?php } elseif($value['banner_link'] == 4){?>
+                                    <a href="<?php echo base_url($value['link_to'])?>" target="_blank" class="banner-link"></a>
+                                    <?php } ?>
                                 </div>
                         <?php } }
                         } ?>
@@ -515,11 +523,11 @@
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <div class="owl-carousel slider wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
                                 <?php if (!empty($all_gallery)) {
-                                    foreach ($all_gallery as $gallery) { ?>
+                                    foreach ($all_gallery as $gallery) { if(is_file('assets/images/public/home/' . $gallery['media_name'])){?>
                                         <div class="item">
                                             <img src="<?php echo base_url('assets/images/public/home/' . $gallery['media_name']); ?>" class="all">
                                         </div>
-                                <?php }
+                                <?php } }
                                 } ?>
                             </div>
                             <div class="slider-counter"></div>
@@ -528,11 +536,11 @@
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                             <div class="owl-carousel sliders">
                                 <?php if (!empty($interior_gallery)) {
-                                    foreach ($interior_gallery as $interior) { ?>
+                                    foreach ($interior_gallery as $interior) { if(is_file('assets/images/public/home/' . $interior['media_name'])){?>
                                         <div class="item" data-bs-toggle="modal" data-bs-target="#interior-image-modal">
                                             <img src="<?php echo base_url('assets/images/public/home/' . $interior['media_name']); ?>" class="interior">
                                         </div>
-                                <?php }
+                                <?php } }
                                 } ?>
                             </div>
                             <div class="slider-counter"></div>
@@ -541,11 +549,11 @@
                         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                             <div class="owl-carousel sliders">
                                 <?php if (!empty($exterior_gallery)) {
-                                    foreach ($exterior_gallery as $exterior) { ?>
+                                    foreach ($exterior_gallery as $exterior) { if(is_file('assets/images/public/home/' . $exterior['media_name'])){?>
                                         <div class="item" data-bs-toggle="modal" data-bs-target="#exterior-image-modal">
                                             <img src="<?php echo base_url('assets/images/public/home/' . $exterior['media_name']); ?>" class="exterior">
                                         </div>
-                                <?php }
+                                <?php } }
                                 } ?>
                             </div>
                             <div class="slider-counter"></div>
@@ -553,12 +561,12 @@
                         <div class="tab-pane fade" id="last" role="tabpanel" aria-labelledby="last-tab">
                             <div class="owl-carousel sliders">
                                 <?php if (!empty($construction_gallery)) {
-                                    foreach ($construction_gallery as $construction) { ?>
+                                    foreach ($construction_gallery as $construction) {  if(is_file('assets/images/public/home/' . $construction['media_name'])){?>
                                         <div class="item">
                                             <img src="<?php echo base_url('assets/images/public/home/' . $construction['media_name']); ?>" class="construction">
                                         </div>
 
-                                <?php }
+                                <?php } }
                                 } ?>
                             </div>
                             <div class="slider-counter"></div>

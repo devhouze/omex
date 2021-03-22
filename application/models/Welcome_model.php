@@ -84,7 +84,7 @@ class Welcome_model extends CI_Model
 
     public function get_home_banner()
     {
-        $query = $this->db->select('banner_web,banner_mobile, comment,banner_link')
+        $query = $this->db->select('banner_web,banner_mobile, comment,banner_link, link_to')
                           ->where('status',0)
                           ->where('banner_type',1)
                           ->order_by('id','desc')
@@ -175,7 +175,7 @@ class Welcome_model extends CI_Model
 
     public function get_brand_directory_banner()
     {
-        $query = $this->db->select('banner_web, banner_mobile, comment, banner_mobile,banner_link')
+        $query = $this->db->select('banner_web, banner_mobile, comment, banner_mobile,banner_link, link_to')
                           ->where('status',0)
                           ->where('banner_type',3)
                           ->order_by('id','desc')
@@ -235,7 +235,7 @@ class Welcome_model extends CI_Model
         $this->db->where('status',0);
         $this->db->where('media_type',1);
         ($type!='all')?$this->db->where('filter_type',$type):'';
-        $this->db->order_by('id','desc');
+        $this->db->order_by('sequence','desc');
         $this->db->limit(10);
         $query = $this->db->get('tbl_gallery');
         // echo "<pre>";

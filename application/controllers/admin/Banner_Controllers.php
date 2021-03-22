@@ -61,7 +61,7 @@ class Banner_Controllers extends my_controller
             }
             $this->form_validation->set_rules('banner_comment','Banner Comment','required');
 
-            $this->form_validation->set_rules("banner_link", "Banner Link", "callback_valid_url");
+            $this->form_validation->set_rules("banner_link", "Banner Link");
 
             $banner_type = $this->input->post('banner_type');
 
@@ -85,6 +85,7 @@ class Banner_Controllers extends my_controller
                     'street'            => $this->input->post('streets'),
                     'brand'             => $this->input->post('brand'),
                     'banner_link'       => $this->input->post('banner_link'),
+                    'link_to'           => $this->input->post('link_to'),
                     'created_by'        => $this->bm->admin_id()
                 );
 
@@ -172,6 +173,7 @@ class Banner_Controllers extends my_controller
                     'street'            => $this->input->post('streets'),
                     'brand'             => $this->input->post('brand'),
                     'banner_link'       => $this->input->post('banner_link'),
+                    'link_to'           => $this->input->post('link_to'),
                     'updated_by'        => $this->bm->admin_id(),
                     'updated_on'        => date('Y-m-d H:i:s')
                 );
@@ -231,13 +233,50 @@ class Banner_Controllers extends my_controller
             }
         }
         $data['banner'] = $this->bm->get_data_row_array('tbl_banner',"*",['id' => $id]);
-        $data['brands'] = $this->bm->get_data_array('tbl_brand',$column = "brand_id, brand_name");
+        $banner_link = $data['banner']['banner_link'];
+        
+        if($banner_link == '1' || $banner_link == '2' || $banner_link == '3'){
+            $data['link_to'] = $this->bm->get_linking_data($banner_link);
+           
+        } elseif($banner_link == 4){
+            $data['link_to'] = array(
+                '0' => array(
+                    'slug'  => 'london',
+                    'name'  => 'London street'
+                ),
+                '1' => array(
+                    'slug'  => 'paris',
+                    'name'  => 'Paris street'
+                ),
+                '2' => array(
+                    'slug'  => 'athens',
+                    'name'  => 'Athens street'
+                ),
+                '3' => array(
+                    'slug'  => 'portugal',
+                    'name'  => 'Portugal street'
+                ),
+                '4' => array(
+                    'slug'  => 'amsterdam',
+                    'name'  => 'Amsterdam street'
+                ),
+                '5' => array(
+                    'slug'  => 'san-francisco',
+                    'name'  => 'San Fran Cisco street'
+                ),
+                '5' => array(
+                    'slug'  => 'hong-kong',
+                    'name'  => 'Hong Kong street'
+                ),
+            );
+            
+        }
+        // echo "<pre>";print_r($data); die;
         $this->load->view('admin/include/header_start');
 		$this->load->view('admin/include/header_end');
 		$this->load->view('admin/include/body_start');
         $this->load->view('admin/include/sidebar');
 
-        // print_r($data); die;
 		$this->load->view('admin/banners/add-banners',$data);
 		$this->load->view('admin/include/body_end');
 		$this->load->view('admin/include/admin_js');
@@ -276,6 +315,48 @@ class Banner_Controllers extends my_controller
             echo json_encode(['message'=> 'Something went wrong!.','status' => 0]);
         }
     } 
+
+
+    public function get_linking_data()
+    {
+        $link_type = $this->input->post('link_type');
+        if($link_type == 4){
+            $street_array = array(
+                '0' => array(
+                    'slug'  => 'london',
+                    'name'  => 'London street'
+                ),
+                '1' => array(
+                    'slug'  => 'paris',
+                    'name'  => 'Paris street'
+                ),
+                '2' => array(
+                    'slug'  => 'athens',
+                    'name'  => 'Athens street'
+                ),
+                '3' => array(
+                    'slug'  => 'portugal',
+                    'name'  => 'Portugal street'
+                ),
+                '4' => array(
+                    'slug'  => 'amsterdam',
+                    'name'  => 'Amsterdam street'
+                ),
+                '5' => array(
+                    'slug'  => 'san-francisco',
+                    'name'  => 'San Fran Cisco street'
+                ),
+                '5' => array(
+                    'slug'  => 'hong-kong',
+                    'name'  => 'Hong Kong street'
+                ),
+            );
+            echo json_encode($street_array);
+            exit;
+        }
+        $data = $this->bm->get_linking_data($link_type);
+        echo json_encode($data);
+    }
 
     
 }
