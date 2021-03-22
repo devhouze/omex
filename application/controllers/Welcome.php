@@ -275,7 +275,6 @@ class Welcome extends CI_Controller {
 		$data['what_new'] = $this->wm->get_what_new();
 		$past_event= $this->wm->get_past_events();
 		$data['past_event'] = $this->filter_expired_events($past_event);
-		// echo "<pre>"; print_r($data['events']); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');

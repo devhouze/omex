@@ -292,7 +292,7 @@
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-md-10">
-                            <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
+                            <div id="carouselExampleControls_whats" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <?php
                                     $i = 1;
@@ -322,12 +322,12 @@
                                 ?>
                             </div>
                             <?php if(count($what_new) > 1){?>
-                                <div class="car-ions d-none">
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <div class="car-ions ">
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls_whats" data-bs-slide="prev">
                                         <img src="<?php echo base_url(); ?>assets/images/public/brand/left.svg" alt="" class="">
 
                                     </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls_whats" data-bs-slide="next">
                                         <img src="<?php echo base_url(); ?>assets/images/public/brand/right.svg" alt="" class="">
                                     </button>
                                 </div>
