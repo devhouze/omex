@@ -606,7 +606,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <img src="<?php echo base_url(); ?>assets/images/public/home/insta.svg" alt="" class="w-100">
+                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-ae2c3bbc-0072-4184-8297-822e84f86eaa"></div>
             </div>
 
         </div>

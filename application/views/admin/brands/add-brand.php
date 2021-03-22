@@ -149,18 +149,10 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                     <label for="">Brand Label</label>
                                     <select name="brand_label" class="form-control form-control-sm select-box">
                                         <option value="">Select Label</option>
-                                        <option value="New In" <?php if ($brand_label == "New In") {
-                                                                    echo 'selected';
-                                                                } ?>>New In</option>
-                                        <option value="Sale & Offers" <?php if ($brand_label == "Sale & Offers") {
-                                                                            echo 'selected';
-                                                                        } ?>>Sale & Offers</option>
-                                        <option value="Popular" <?php if ($brand_label == "Popular") {
-                                                                    'selected';
-                                                                } ?>>Popular</option>
-                                        <option value="Exclusive WS" <?php if ($brand_label == "Exclusive WS") {
-                                                                            'selected';
-                                                                        } ?>>Exclusive WS</option>
+                                        <option value="New In" <?php if ($brand_label == "New In") { echo 'selected'; } ?>>New In</option>
+                                        <option value="Sale & Offers" <?php if ($brand_label == "Sale & Offers") { echo 'selected';} ?>>Sale & Offers</option>
+                                        <option value="Popular" <?php if ($brand_label == "Popular") {'selected';} ?>>Popular</option>
+                                        <option value="exclusive"   <?php echo $brand_label=='exclusive'?'selected':'' ?>>Exclusive WS</option>
                                     </select>
                                 </div>
 
