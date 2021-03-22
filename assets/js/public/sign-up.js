@@ -18,6 +18,8 @@ $(document).ready(function() {
                 if (data.status > 0) {
                     $('#thanksmodal').modal('show');
                     $('#sign-up').trigger('reset');
+                    $('.success_msg').html('Thank You! You have successfully signed up for WS Updates.');
+                    $('#thanksmodal').modal('show');
                     // $.notify(data.message, "success");
                 } else {
                     // $.notify(data.message, "error");
@@ -46,8 +48,9 @@ $(document).ready(function() {
                 $('.errors_msg').empty();
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
-                    $('#registernow').modal('hide');
+                    $('.success_msg').html('Thank You! You have successfully signed up for WS Updates.');
                     $('#thanksmodal').modal('show');
+                    $('#registernow').modal('hide');
                     $('#registernow').trigger('reset');
                     // $.notify(data.message, "success");
                 } else {

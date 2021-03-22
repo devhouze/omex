@@ -42,7 +42,7 @@
                                     <div class="form-floating">
 
                                         <div class="form-floating">
-                                            <select class="form-select" name="query_type" id="floatingSelect" aria-label="Floating label select example">
+                                            <select class="form-select select-box" name="query_type" id="floatingSelect" aria-label="Floating label select example">
                                                 <option selected disabled>Select One</option>
                                                 <option value="General Enquiry">General Enquiry</option>
                                                 <option value="Promotion/Events">Promotion/Events</option>
@@ -56,7 +56,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-7">
-                                    <h3 class="pr-font fz24 fz18-sm text-white mb-30 mb-10-sm">Message*</h3>
+                                    <h3 class="pr-font fz24 fz18-sm text-white mb-30 mb-10-sm">Message</h3>
                                     <div class="form-floating">
                                         <textarea name="message" autocomplete="false" class="form-control" id="floatingInput" placeholder="Your Message"></textarea>
                                         <label for="floatingInput">Your Message</label>
@@ -111,3 +111,8 @@
         </div>
     </div>
 </div>
+<script>
+$(document).ready(function(){
+    $('.select-box').select2();
+});
+</script>

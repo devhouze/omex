@@ -461,7 +461,6 @@
                         </div>
                         <div class="mt-5">
                             <button type="submit" class="submit-bnt d-table mx-auto">REGISTER NOW</button>
-                            <p class="mt-5 d-table mx-auto pr-color fz26">Thank You!</p>
                         </div>
                     </form>
                 </div>

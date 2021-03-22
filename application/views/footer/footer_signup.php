@@ -55,7 +55,7 @@
         <div class="modal-content">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><img src="<?php echo base_url(); ?>assets/images/public/footer/close.svg" alt="facebook"></button>
             <div class="modal-body">
-                <h1 class="d-table mx-auto">Thank You!</h1>
+                <h1 class="d-table mx-auto success_msg"></h1>
             </div>
 
         </div>

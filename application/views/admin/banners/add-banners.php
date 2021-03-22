@@ -87,7 +87,6 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
                             <!-- <input type="text" class="form-control form-control-sm input-sm" name="banner_link" value="<?php echo $banner_link; ?>"> -->
                         </div>
 
-
                         <!-- <div class="col-md-6 mb-3" id="streets" style="display:none">
                             <label for="">Street</label>
                             <select name="streets" class="form-control form-control-sm">
@@ -102,7 +101,7 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
                             </select>
                         </div> -->
                         
-                        <div class="col-md-6 mb-3" id="link_to" <?php if($banner_link != '5' || $banner_link != '6'){?>style="display:block"<?php } else {?> style="display:none"<?php } ?>>
+                        <div class="col-md-6 mb-3" id="link_to" <?php if(!empty($banner_link) && ($banner_link != '5' || $banner_link != '6')){?>style="display:block"<?php } else {?> style="display:none"<?php } ?>>
                             <label for="">Choose One</label>
                             <select name="link_to" class="form-control form-control-sm link_to">
                                 <?php if(!empty($link_to)){ foreach ($link_to as $value) { ?>

@@ -60,6 +60,7 @@ class Gallery_Controller extends MY_Controller
             $this->form_validation->set_rules('media_type','Media Type','required');
             $this->form_validation->set_rules('filter_type','Filter Type','required');
             $this->form_validation->set_rules('comment','Comment','required');
+            $this->form_validation->set_rules('sequence','Order Preference','required');
             
             $media_type = $this->input->post('media_type');
 
@@ -131,7 +132,7 @@ class Gallery_Controller extends MY_Controller
                 }
 
                 $save = $this->gm->insert_data('tbl_gallery',$data_array);
-                
+                // echo $this->db->last_query(); die;
                 if($save){
                     echo json_encode(['message' => 'Data updated successfully.', 'status' => 1]);
                 } else {
@@ -181,6 +182,7 @@ class Gallery_Controller extends MY_Controller
             $this->form_validation->set_rules('media_type','Media Type','required');
             $this->form_validation->set_rules('filter_type','Filter Type','required');
             $this->form_validation->set_rules('comment','Comment','required');
+            $this->form_validation->set_rules('sequence','Order Preference','required');
             
             $media_type = $this->input->post('media_type');
 

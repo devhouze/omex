@@ -127,7 +127,7 @@ $(document).ready(function() {
     // Get data for filter
     $('#banner_link').change(function() {
         var link_type = $(this).val();
-        if (link_type != null && (link_type != 5 || link_type != 6)) {
+        if (link_type == 1 || link_type == 2 || link_type == 3 || link_type == 4) {
             $('#link_to').css('display', 'block');
             $('.link_to').empty();
             $('.link_to').append($('<option></option>').attr("value", '').text('Choose from the list'));

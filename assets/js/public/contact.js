@@ -14,12 +14,11 @@ $(document).ready(function() {
             data: new FormData(this),
             success: function(data) {
                 $('.errors_msg').empty();
+                $('#contact').trigger('reset');
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
-                    $.notify(data.message, "success");
-                    setTimeout(function() { window.location.replace(url + 'contact-us'); }, 2000);
-                } else {
-                    $.notify(data.message, "error");
+                    $('#thanksmodal').modal('show');
+                    $('.success_msg').html('Thank You! Omaxe WS Team will get in touch with you shortly.');
                 }
                 if (data.error) {
                     $.each(data.error, function(i, v) {
