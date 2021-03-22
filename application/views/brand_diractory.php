@@ -1,16 +1,18 @@
 <div class="brand-directory-page barnd-page">
- <?php if(!empty($brand_banner)){?>
-    <div class="main-slider d-flex flex-fill">
-        <div class="container-fluid d-flex flex-fill">
-            <div class="row d-md-flex d-none flex-fill">
-                <div class="col-md-12 d-flex flex-fill px-0">
-                    <div id="carouselExampleIndicatorss" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <?php $count = count($brand_banner); for($i=0; $i < $count; $i++){?>
-                                <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="<?php echo $i; ?>" <?php if($i == 0){?>class="active" <?php } ?>></li>
-                            <?php } ?>
-                        </ol>
+<?php if(!empty($brand_banner)){?>
+<div class="main-slider d-flex flex-fill">
+    <div class="container-fluid d-flex flex-fill">
+        <div class="row d-md-flex d-none flex-fill">
+            <div class="col-md-12 d-flex flex-fill px-0">
+                <div id="carouselExampleIndicatorss" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
+                    <ol class="carousel-indicators">
+                    <?php $count = count($brand_banner); for($i=0; $i < $count; $i++){?>
+                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="<?php echo $i; ?>" <?php if($i == 0){?>class="active" <?php } ?>></li>
+                    <?php } ?>
+                    </ol>
 
+                    
+                    <div class="carousel-inner">
 
                         <?php if (!empty($brand_banner)) {
                             $i = 1;
@@ -18,7 +20,7 @@
                                 // echo base_url('assets/images/public/home/' . $value['banner_web']);
                                 if(is_file("assets/images/public/brand/".$value['banner_web'])){?>
                                 <div class="carousel-item <?= ($i == 1) ? 'active' : '';$i++; ?>" style="background-image: url('<?php echo base_url('assets/images/public/brand/' . $value['banner_web']); ?>');">
-                                <?php if($value['banner_link'] == 1){?>
+                                    <?php if($value['banner_link'] == 1){?>
                                     <a href="<?php echo base_url('event-details/'.$value['link_to'])?>" target="_blank" class="banner-link"></a>
                                     <?php }elseif($value['banner_link'] == 2){?>
                                     <a href="<?php echo base_url('brand/'.$value['link_to'])?>" target="_blank" class="banner-link"></a>
@@ -31,54 +33,51 @@
                         <?php } }
                         } ?>
 
-                            <?php if (!empty($brand_banner)) {
-                                $i = 1;
-                                foreach ($brand_banner as $value) { 
-                                // echo base_url('assets/images/public/home/' . $value['banner_web']);
-                                    if(is_file("assets/images/public/brand/".$value['banner_web'])){?>
-                                        <div class="carousel-item <?= ($i == 1) ? 'active' : '';$i++; ?>" style="background-image: url('<?php echo base_url('assets/images/public/brand/' . $value['banner_web']); ?>');">
-                                            <a href="<?php echo (!empty($value['banner_link']))?$value['banner_link']:base_url();?>" target="_blank" class="banner-link"></a>
-                                        </div>
-                                    <?php } }
-                                } ?>
-
-                            </div>
-
-                        </div>
-
-
                     </div>
+
                 </div>
-                <div class="row d-md-none d-flex flex-fill">
-                    <div class="col-md-12 d-flex flex-fill px-0">
-                        <div id="carouselExampleIndicatorssmob" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <?php $count = count($brand_banner); for($i=0; $i < $count; $i++){?>
-                                    <li data-bs-target="#carouselExampleIndicatorssmob" data-bs-slide-to="<?php echo $i; ?>" <?php if($i == 0){?>class="active" <?php } ?>></li>
-                                <?php } ?>
-                            </ol>
-                            <div class="carousel-inner">
 
-                                <?php if (!empty($brand_banner)) {
-                                    $i = 1;
-                                    foreach ($brand_banner as $value) { 
-                                        if(is_file("assets/images/public/brand/".$value['banner_mobile'])){
-                                            ?>
-                                            <div class="carousel-item <?= ($i == 1) ? 'active' : ''; $i++; ?>">
-                                                <img src="<?php echo base_url('assets/images/public/brand/' . $value['banner_mobile']); ?>" alt="<?= $value['comment']; ?>" class="d-table mx-auto w-100">
-                                                <a href="<?php echo (!empty($value['banner_link']))?$value['banner_link']:base_url();?>" target="_blank" class="banner-link"></a>
-                                            </div>
-                                        <?php } } }?>
 
-                                    </div>
+            </div>
+        </div>
+        <div class="row d-md-none d-flex flex-fill">
+            <div class="col-md-12 d-flex flex-fill px-0">
+                <div id="carouselExampleIndicatorssmob" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
+                    <ol class="carousel-indicators">
+                    <?php $count = count($brand_banner); if($count > 1){ for($i=0; $i < $count; $i++){?>
+                        <li data-bs-target="#carouselExampleIndicatorssmob" data-bs-slide-to="<?php echo $i; ?>" <?php if($i == 1){?>class="active" <?php } ?>></li>
+                    <?php } } ?>
+                    </ol>
+                    <div class="carousel-inner">
 
+                        <?php if (!empty($brand_banner)) {
+                            $i = 1;
+                            foreach ($brand_banner as $value) { 
+                                if(is_file("assets/images/public/brand/".$value['banner_mobile'])){
+                                ?>
+                                <div class="carousel-item <?= ($i == 1) ? 'active' : ''; $i++; ?>">
+                                    <img src="<?php echo base_url('assets/images/public/brand/' . $value['banner_mobile']); ?>" alt="<?= $value['comment']; ?>" class="d-table mx-auto w-100">
+                                    <?php if($value['banner_link'] == 1){?>
+                                    <a href="<?php echo base_url('event-details/'.$value['link_to'])?>" target="_blank" class="banner-link"></a>
+                                    <?php }elseif($value['banner_link'] == 2){?>
+                                    <a href="<?php echo base_url('brand/'.$value['link_to'])?>" target="_blank" class="banner-link"></a>
+                                    <?php } elseif($value['banner_link'] == 3){?>
+                                    <a href="<?php echo base_url('brand/'.$value['link_to'])?>" target="_blank" class="banner-link"></a>
+                                    <?php } elseif($value['banner_link'] == 4){?>
+                                    <a href="<?php echo base_url($value['link_to'])?>" target="_blank" class="banner-link"></a>
+                                    <?php } ?>
                                 </div>
-                            </div>
-                        </div>
+                        <?php } } }?>
 
                     </div>
+
                 </div>
-            <?php } ?>
+            </div>
+        </div>
+
+    </div>
+</div>
+<?php } ?>
             <div class="brand-directory gray-bg pt-60 pt-sm-30 pb-30">
                 <div class="container">
                     <div class="row justify-content-center">
