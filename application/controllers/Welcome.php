@@ -429,7 +429,7 @@ class Welcome extends CI_Controller {
 		$this->form_validation->set_rules('name','Name','required');
 		$this->form_validation->set_rules('email','Email','required');
 		$this->form_validation->set_rules('message','Message','required');
-		$this->form_validation->set_rules('contact','Mobile Number','required|regex_match[/^[0-9]{10}$/]');
+		$this->form_validation->set_rules('contact','Mobile Number','required|regex_match[/^[0-9]{10,15}$/]');
 
 		if($this->form_validation->run()){
 			$data_array = array(
