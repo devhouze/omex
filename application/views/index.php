@@ -547,7 +547,7 @@
 
                         </div>
                         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                            <div class="owl-carousel sliders">
+                            <div class="owl-carousel slider_ext">
                                 <?php if (!empty($exterior_gallery)) {
                                     foreach ($exterior_gallery as $exterior) { if(is_file('assets/images/public/home/' . $exterior['media_name'])){?>
                                         <div class="item" data-bs-toggle="modal" data-bs-target="#exterior-image-modal">
@@ -559,7 +559,7 @@
                             <div class="slider-counter"></div>
                         </div>
                         <div class="tab-pane fade" id="last" role="tabpanel" aria-labelledby="last-tab">
-                            <div class="owl-carousel sliders">
+                            <div class="owl-carousel sliders_con">
                                 <?php if (!empty($construction_gallery)) {
                                     foreach ($construction_gallery as $construction) {  if(is_file('assets/images/public/home/' . $construction['media_name'])){?>
                                         <div class="item">
@@ -572,7 +572,7 @@
                             <div class="slider-counter"></div>
                         </div>
                         <div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="last-tab">
-                            <div class="owl-carousel sliders">
+                            <div class="owl-carousel sliders_video">
                                 <?php if (!empty($gallery_video)) {
                                     foreach ($gallery_video as $video) { ?>
                                         <?php if ($video['media_type'] == 2) { ?>
