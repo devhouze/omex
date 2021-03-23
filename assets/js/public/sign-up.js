@@ -48,7 +48,7 @@ $(document).ready(function() {
                 $('.errors_msg').empty();
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
-                    $('.success_msg').html('Thank You! You have successfully signed up for WS Updates.');
+                    $('.success_msg').html('Thank You! You have successfully registered.');
                     $('#thanksmodal').modal('show');
                     $('#registernow').modal('hide');
                     $('#registernow').trigger('reset');

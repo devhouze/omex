@@ -205,14 +205,14 @@
                         </div>
                         <div class="col-md-4 my-md-0 my-4">
                             <select id="sort" class="select">
-                                <option disabled="" selected>Short By</option>
+                                <option disabled="" selected>Sort By</option>
                                 <option value="A-Z">A-Z</option>
                                 <option value="Z-A">Z-A</option>
                             </select>
                         </div>
                         <div class="col-md-4 justify-content-center mx-auto">
                             <select id="filter" class="select">
-                                <option disabled="" selected>FILTER</option>
+                                <option disabled="" selected>Filter</option>
                                 <?php if (!empty($filter)) {
                                     foreach ($filter as $filters) { ?>
                                         <option value="<?php echo $filters['id']; ?>"><?php echo $filters['name']; ?></option>

@@ -149,7 +149,7 @@ class Welcome_model extends CI_Model
         ->where('brand_type',$type)
         ->order_by('brand_id','desc')
         ->order_by('order_home','asc')
-        ->limit(10)
+        ->limit(6)
         ->get('tbl_brand');
         if($query->num_rows() > 0){
             return $query->result_array();
@@ -209,13 +209,15 @@ class Welcome_model extends CI_Model
         return [];
     }
 
-    public function get_all_brands($category,$limit,$count = false)
+    public function get_all_brands($category='',$limit,$count = false)
     {
         $this->db->select('DISTINCT(b.brand_id),b.brand_name, b.brand_logo, b.logo_message, b.brand_location, b.brand_id,b.brand_slug,b.brand_street');
         $this->db->join("tbl_category AS ct","find_in_set(ct.id,b.brand_category)<> 0","left",false);
-        $this->db->where('status',0);
+        $this->db->where('b.status',0);
+        if($category){
         $this->db->like('ct.category_name',$category);
         $this->db->or_like('b.brand_type',$category);
+        }
         (!$count && $limit!='null')?$this->db->limit($limit):''; 
         $query = $this->db->get('tbl_brand as b');
         // echo $this->db->last_query(); die;
