@@ -351,25 +351,25 @@
             <div class="col-md-10">
                 <ul class="category d-flex justify-content-center align-items-center flex-wrap">
                     <li>
-                        <a href="<?php echo base_url('brand-directory/fashion') ?>">
+                        <a href="<?php echo base_url('brand-directory/fashion#search-box') ?>">
                             <figure><img src="<?php echo base_url(); ?>assets/images/public/brand/c1.svg" alt=""></figure>
                             <span>FASHION</span>
                         </a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('brand-directory/restaurant') ?>">
+                        <a href="<?php echo base_url('brand-directory/restaurant#search-box') ?>">
                             <figure><img src="<?php echo base_url(); ?>assets/images/public/brand/c2.svg" alt=""></figure>
                             <span>FOOD</span>
                         </a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('brand-directory/health') ?>">
+                        <a href="<?php echo base_url('brand-directory/health#search-box') ?>">
                             <figure><img src="<?php echo base_url(); ?>assets/images/public/brand/c3.svg" alt=""></figure>
                             <span>HEALTH & BEAUTY</span>
                         </a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url('brand-directory/entertainment') ?>">
+                        <a href="<?php echo base_url('brand-directory/entertainment#search-box') ?>">
                             <figure><img src="<?php echo base_url(); ?>assets/images/public/brand/c4.svg" alt=""></figure>
                             <span>ENTERTAINMENT</span>
                         </a>

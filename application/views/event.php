@@ -253,25 +253,25 @@
                     <div class="col-md-10">
                         <ul class="category d-flex justify-content-center align-items-center flex-wrap">
                             <li>
-                                <a href="<?php echo base_url('brand-directory/fashion')?>">
+                                <a href="<?php echo base_url('brand-directory/fashion#search-box')?>">
                                     <figure><img src="<?php echo base_url(); ?>assets/images/public/brand/c1.svg" alt=""></figure>
                                     <span>FASHION</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url('brand-directory/restaurant')?>">
+                                <a href="<?php echo base_url('brand-directory/restaurant#search-box')?>">
                                     <figure><img src="<?php echo base_url(); ?>assets/images/public/brand/c2.svg" alt=""></figure>
                                     <span>FOOD</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url('brand-directory/health')?>">
+                                <a href="<?php echo base_url('brand-directory/health#search-box')?>">
                                     <figure><img src="<?php echo base_url(); ?>assets/images/public/brand/c3.svg" alt=""></figure>
                                     <span>HEALTH & BEAUTY</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url('brand-directory/entertainment')?>">
+                                <a href="<?php echo base_url('brand-directory/entertainment#search-box')?>">
                                     <figure><img src="<?php echo base_url(); ?>assets/images/public/brand/c4.svg" alt=""></figure>
                                     <span>ENTERTAINMENT</span>
                                 </a>
@@ -304,7 +304,7 @@
                                             <div class="col-md-6 pe-4 d-flex flex-fill">
                                                 <div class="card d-flex flex-fill flex-column align-items-center justify-content-center border-0 rounded-0" style="background-color: #5A946E;">
                                                     <h2 class="fz40 fz24-sm pr-font text-white"><?php echo $new['brand_name']; ?></h2>
-                                                    <div class="text-white text-center fz20 fw-5 mt-40 mb-0 content-box"><?php echo $new['about_brand']; ?></p>
+                                                    <div class="text-white text-center fz20 fw-5 mt-40 mb-0 content-box"><?php echo $new['about_brand']; ?></p></div>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
