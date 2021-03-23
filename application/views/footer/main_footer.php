@@ -39,7 +39,7 @@
                 <ul class="d-flex flex-row list-unstyled mb-0">
                     <li><a href="https://www.facebook.com/omaxeworldsreet/" target="_blank"><img src="<?php echo base_url(); ?>assets/images/public/footer/fb.svg" alt="facebook" ></a></li>
                     <li class="ml-40"><a href="https://www.instagram.com/omaxeworldstreet/?hl=en" target="_blank"><img src="<?php echo base_url(); ?>assets/images/public/footer/inst.svg" alt="instagram"></a></li>
-                    <li class="ml-40"><a href="https://www.instagram.com/omaxeworldstreet/?hl=en" target="_blank"><img src="<?php echo base_url(); ?>assets/images/public/footer/what.svg" alt="whatsapp"></a></li>
+                    
                 </ul>
 
             </div>

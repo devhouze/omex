@@ -118,15 +118,15 @@
                     <div class="carousel-inner">
                         <div class="carousel-item position-relative active" style="background-image:url(<?php echo base_url(); ?>assets/images/public/home/slider1.jpg);">
 
-                            <div class="card lon-bg wow fadeInRight animated">
+                            <div class="card lon-bg ">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/l-s.svg" alt="">
-                                <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                                <p>Did you know? London, a global icon, is built on ruins! Want to have a taste of the London aura? Come and visit World Street, Faridabad. </p>
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
                         <div class="carousel-item position-relative" style="background-image:url('<?php echo base_url(); ?>assets/images/public/home/slider.jpg');">
 
-                            <div class="card par-bg wow fadeInRight animated" data-wow-duration="1s" data-wow-delay="0.5S">
+                            <div class="card par-bg " >
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/parish.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/pa-s-f.svg" alt="" class="d-table mx-auto">
@@ -136,7 +136,7 @@
 
                             <div class="card por-bg">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/p-s.svg" alt="">
-                                <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                                <p>Portugal is famous for its unique style of music. Why not come to its streets and enjoy a musical evening?</p>
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/p-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
@@ -144,7 +144,7 @@
 
                             <div class="card ath-bg">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/at-s.svg" alt="">
-                                <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                                <p>Wander by foot into the heart of the Athens. Start discovering your own world within ours!</p>
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/at-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
@@ -152,7 +152,7 @@
 
                             <div class="card ams-bg">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/am-s.svg" alt="">
-                                <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                                <p>The small city of Amsterdam has more canals than Venice and more bridges than Paris.</p>
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/am-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
@@ -160,7 +160,7 @@
 
                             <div class="card san-bg">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/s-s.svg" alt="">
-                                <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                                <p>An energizing fact about this American city. There are over three hundred coffee houses within the city boundaries of San Francisco.</p>
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/s-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
@@ -168,7 +168,7 @@
 
                             <div class="card hon-bg">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/h-s.svg" alt="">
-                                <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                                <p>Hong Kong has one of the highest numbers of restaurants or cafes per capita. So why not have a taste of it in New Faridabad?</p>
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/h-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
@@ -220,13 +220,13 @@
                             <img src="<?php echo base_url(); ?>assets/images/public/home/london-m.jpg" class="d-block w-100" alt="...">
                             <div class="card lon-bg wow fadeInRight animated">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/l-s.svg" alt="">
-                                <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                                <p>Did you know? London, a global icon, is built on ruins! Want to have a taste of the London aura? Come and visit World Street, Faridabad. </p>
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
                         <div class="carousel-item position-relative">
                             <img src="<?php echo base_url(); ?>assets/images/public/home/paris-m.jpg" class="d-block w-100" alt="...">
-                            <div class="card par-bg wow fadeInRight animated" data-wow-duration="1s" data-wow-delay="0.5S">
+                            <div class="card par-bg " >
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/parish.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/pa-s-f.svg" alt="" class="d-table mx-auto">
@@ -236,7 +236,7 @@
                             <img src="<?php echo base_url(); ?>assets/images/public/home/port-m.jpg" class="d-block w-100" alt="...">
                             <div class="card por-bg">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/p-s.svg" alt="">
-                                <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                                <p>Portugal is famous for its unique style of music. Why not come to its streets and enjoy a musical evening?</p>
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/p-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
@@ -244,7 +244,7 @@
                             <img src="<?php echo base_url(); ?>assets/images/public/home/aths-m.jpg" class="d-block w-100" alt="...">
                             <div class="card ath-bg">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/at-s.svg" alt="">
-                                <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                                <p>Wander by foot into the heart of the Athens. Start discovering your own world within ours!</p>
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/at-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
@@ -252,7 +252,7 @@
                             <img src="<?php echo base_url(); ?>assets/images/public/home/amst-m.jpg" class="d-block w-100" alt="...">
                             <div class="card ams-bg">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/am-s.svg" alt="">
-                                <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                                <p>The small city of Amsterdam has more canals than Venice and more bridges than Paris. </p>
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/am-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
@@ -260,7 +260,7 @@
                             <img src="<?php echo base_url(); ?>assets/images/public/home/san-m.jpg" class="d-block w-100" alt="...">
                             <div class="card san-bg">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/s-s.svg" alt="">
-                                <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                                <p>An energizing fact about this American city. There are over three hundred coffee houses within the city boundaries of San Francisco.</p>
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/s-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
@@ -268,7 +268,8 @@
                             <img src="<?php echo base_url(); ?>assets/images/public/home/hon-m.jpg" class="d-block w-100" alt="...">
                             <div class="card hon-bg">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/h-s.svg" alt="">
-                                <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                                <p>Hong Kong has one of the highest numbers of restaurants or cafes per capita. So why not have a taste of it in New Faridabad?
+</p>
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/h-s-f.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
@@ -414,7 +415,7 @@
                                             <div class="d-md-none d-block mobile-look">
                                                 <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm pr-sm0 mb-md-0 mb-4"><?php echo $event['event_name']; ?></h1>
                                             </div>
-                                            <img src="<?php echo base_url('assets/images/public/home/'.$event['thumbnail_image']); ?>" alt="<?php echo $event['thumbnail_message']?>" class="w-100">
+                                            <figure><img src="<?php echo base_url('assets/images/public/home/'.$event['thumbnail_image']); ?>" alt="<?php echo $event['thumbnail_message']?>" class=""></figure>
 
                                         </div>
                                         <div class="col-md-4">
@@ -530,7 +531,7 @@
                                 <?php } }
                                 } ?>
                             </div>
-                            <div class="slider-counter"></div>
+                            <div class="slider-counter counter-all"></div>
 
                         </div>
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -543,7 +544,7 @@
                                 <?php } }
                                 } ?>
                             </div>
-                            <div class="slider-counter"></div>
+                            <div class="slider-counter counter_in"></div>
 
                         </div>
                         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
@@ -556,7 +557,7 @@
                                 <?php } }
                                 } ?>
                             </div>
-                            <div class="slider-counter"></div>
+                            <div class="slider-counter counter_ext"></div>
                         </div>
                         <div class="tab-pane fade" id="last" role="tabpanel" aria-labelledby="last-tab">
                             <div class="owl-carousel sliders_con">
@@ -569,7 +570,7 @@
                                 <?php } }
                                 } ?>
                             </div>
-                            <div class="slider-counter"></div>
+                            <div class="slider-counter counter_con"></div>
                         </div>
                         <div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="last-tab">
                             <div class="owl-carousel sliders_video">
@@ -584,13 +585,13 @@
                                         <?php } ?>
                                         <?php if ($video['media_type'] == 3) { ?>
                                             <div class="item">
-                                                <iframe src="https://www.youtube.com/embed/<?php $data = explode('=',$video['media_name']); echo $data[1];?>" width="320" height="240" frameborder="0"></iframe>
+                                                <iframe src="https://www.youtube.com/embed/<?php $data = explode('=',$video['media_name']); echo $data[1];?>" width="100%" height="350" frameborder="0"></iframe>
                                             </div>
                                         <?php } ?>
                                 <?php }
                                 } ?>
                             </div>
-                            <div class="slider-counter"></div>
+                            <div class="slider-counter counter-video"></div>
                         </div>
                     </div>
                 </div>
