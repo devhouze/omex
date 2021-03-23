@@ -148,6 +148,19 @@ header.header.sticky {
 #thanksmodal .modal-content .modal-body h1 {
     font-family: var(--pr-font) !important;
     color: white;
+    text-align: center;
+}
+
+.hello-area.looking-out figure {
+    width: 100%;
+    height: auto;
+}
+
+.looking-out figure {
+    width: 700px;
+    height: 480px;
+    overflow: hidden;
+    margin-bottom: 0;
 }
 
 #thanksmodal .btn-close {
@@ -339,32 +352,34 @@ footer .menu li+li {
 }
 
 .tab-area ul {
-    border: 2px solid #03518B;
     margin: 0;
 }
 
 .tab-area ul li a.active {
-    border: none !important;
     background: #03518B !important;
     color: white !important;
 }
 
 .tab-area ul li a {
-    margin-bottom: -2px !important;
+    margin-bottom: 0px !important;
     border-radius: 0 !important;
     color: #03518B;
     font-size: 20px;
     font-weight: 400;
     padding: 17px 0;
     border: none !important;
+    border-top: 3px solid #03518B !important;
+    border-bottom: 3px solid #03518B !important;
+    border-left: 3px solid #03518B !important;
 }
 
-.tab-area ul li+li {
-    border-left: 3px solid #15518b;
+.tab-area ul li:last-child a {
+    border-right: 3px solid #15518b !important;
 }
 
 .tab-area ul {
     margin: 15px 135px;
+    border-bottom: none;
 }
 
 .tab-area .tab-content {
@@ -392,6 +407,11 @@ footer .menu li+li {
 
 .tab-area .owl-nav button+button {
     margin-left: 490px;
+}
+
+.tab-area .owl-nav button:focus {
+    outline: 0;
+    box-sizing: unset;
 }
 
 .tab-area .owl-nav {
@@ -538,7 +558,6 @@ span.text-danger.errors_msg {
     transition: transform 2s ease;
 }
 
-
 .exploer-btn-modal {
     background: #03518B;
     width: 100%;
@@ -550,7 +569,7 @@ span.text-danger.errors_msg {
     align-items: center;
     justify-content: space-around;
     margin-top: 30px;
-    max-width: 310px;
+    max-width: 320px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1577,9 +1596,15 @@ span.text-danger.errors_msg {
     padding: 110px;
 }
 
-.about-brand .card p {
+.about-brand .card .brand-content {
     font-size: 20px;
     letter-spacing: 1.5px;
+    color: white;
+    line-height: 1.8;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
 }
 
 .c_margin {
@@ -1632,7 +1657,8 @@ span.text-danger.errors_msg {
 }
 
 .img-box {
-    margin-bottom: 110px;
+    margin-bottom: 190px;
+    position: relative;
 }
 
 .car-ions {
@@ -1667,6 +1693,10 @@ span.text-danger.errors_msg {
     padding: 0 65px;
     letter-spacing: 1.4px;
     line-height: 1.8;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
 }
 
 .search-brand ul {
@@ -1720,7 +1750,7 @@ span.text-danger.errors_msg {
 }
 
 .product-box {
-    font-size: 24px;
+    font-size: 18px;
     color: var(--h-color);
     margin-bottom: 40px;
     position: relative;
@@ -1814,7 +1844,7 @@ span.text-danger.errors_msg {
 
 .brand-directory-page .about-brand .carousel-inner,
 .event-page .about-brand .carousel-inner {
-    padding-bottom: 190px;
+    padding-bottom: 390px;
 }
 
 .street-banner .card>img {
@@ -1850,8 +1880,22 @@ span.text-danger.errors_msg {
     flex-wrap: wrap;
 }
 
+.expoler-modal .modal-content {
+    border: none;
+    background-size: cover;
+    border-radius: 0;
+    background-position: center;
+}
+
+.expoler-modal .modal-content {
+    border: none;
+    background-size: cover;
+    border-radius: 0;
+    background-position: center;
+}
+
 .expoler-modal .modal-body ul li {
-    width: calc(100% /5);
+    width: calc(100% / 6);
     margin: 15px;
 }
 
@@ -1930,6 +1974,12 @@ span.text-danger.errors_msg {
 }
 
 @media only screen and (max-width: 600px) {
+    .exploer-btn-modal {
+        font-size: 16px;
+    }
+    .exploer-btn-modal img {
+        width: 42px;
+    }
     .barnd-page .similar.barnd {
         padding-top: 50px;
     }
@@ -2515,6 +2565,10 @@ span.text-danger.errors_msg {
     .slider-counter {
         font-size: 20px;
     }
+    .looking-out figure {
+        width: 100%;
+        height: auto;
+    }
 }
 
 
@@ -2554,8 +2608,7 @@ span.text-danger.errors_msg {
     -moz-animation-fill-mode: both;
 }
 
-.live-in-word .owl-item figure:after,
-.expreance-gallary .owl-item .item:after {
+.live-in-word .owl-item figure:after {
     content: '';
     display: block;
     width: 100%;
@@ -2576,12 +2629,7 @@ span.text-danger.errors_msg {
     animation: galleryPhotoOverlay 0.6s;
 }
 
-.expreance-gallary .owl-item.active .item:after {
-    transition-delay: 0.5s !important;
-}
-
-.live-in-word .owl-item.active figure:after,
-.expreance-gallary .owl-item.active .item:after {
+.live-in-word .owl-item.active figure:after {
     -webkit-transform: translateX(100%);
     -moz-transform: translateX(100%);
     -ms-transform: translateX(100%);
@@ -2626,4 +2674,85 @@ span.text-danger.errors_msg {
         -o-transform: translateX(100%);
         transform: translateX(100%);
     }
+}
+
+.select2-container--default .select2-selection--single {
+    border: 1px solid #083D68 !important;
+    border-radius: 0 !important;
+    height: 50px !important;
+}
+
+.select2-selection__rendered {
+    line-height: 50px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 15px !important;
+    right: 15px !important;
+}
+
+span.select2-selection.select2-selection--single {
+    background: transparent !important;
+}
+
+.select2-container--default .select2-selection--single:focus {
+    outline: 0;
+}
+
+.select2-selection__rendered {
+    color: #083D68 !important;
+    font-size: 16px;
+}
+
+span.select2-search.select2-search--dropdown {
+    display: none !important;
+}
+
+.select2-results__options {
+    background: #FAF7F2 !important;
+    max-height: 250px !important;
+}
+
+.select2-results__options li {
+    font-size: 18px !important;
+    color: #000000 !important;
+    padding: 10px 9px !important;
+    letter-spacing: 1px;
+}
+
+.select2-results__options li+li {
+    border-top: 1px solid black;
+}
+
+.select2-results__option--highlighted {
+    background: transparent !important;
+}
+
+.contactus-page .select2-selection__rendered {
+    color: white !important;
+    border-color: white !important;
+    font-size: 14px;
+}
+
+.contactus-page .select2-container--default .select2-selection--single {
+    border-color: white !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.contactus-page .select2-container--default .select2-selection--single .select2-selection__arrow {
+    border-color: #fff transparent transparent transparent;
+}
+
+.contactus-page .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: #fff transparent transparent transparent;
+}
+
+.contactus-page .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-color: transparent transparent #fff transparent;
+}
+
+.addrs img {
+    margin-right: 5px;
 }

@@ -110,7 +110,7 @@
                             <div class="col-md-4 ">
                             </div>
                             <div class="col-md-8 ">
-                                <p><?php echo $about_brand['about_brand']; ?></p>
+                                <div class="brand-content"><?php echo $about_brand['about_brand']; ?></div>
                             </div>
                         </div>
                     </div>
