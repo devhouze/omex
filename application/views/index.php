@@ -585,7 +585,7 @@
                                         <?php } ?>
                                         <?php if ($video['media_type'] == 3) { ?>
                                             <div class="item">
-                                                <iframe src="https://www.youtube.com/embed/<?php $data = explode('=',$video['media_name']); echo $data[1];?>" width="100%" height="350" frameborder="0"></iframe>
+                                                <iframe src="https://www.youtube.com/embed/<?php $data = explode('=',$video['media_name']); echo $data[1];?>" width="100%" height="350" frameborder="0" allowfullscreen></iframe>
                                             </div>
                                         <?php } ?>
                                 <?php }
