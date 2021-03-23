@@ -4,7 +4,7 @@
             <div class="modal-body">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Eat</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="set-src d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
                 <ul id="eat">
 
                 </ul>
@@ -21,7 +21,7 @@
             <div class="modal-body">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Style</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="set-src d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
                 <ul id="style">
 
                 </ul>
@@ -38,7 +38,7 @@
             <div class="modal-body">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Play</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="set-src d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
                 <ul id="play">
 
                 </ul>
@@ -194,4 +194,11 @@ $(function() {
     $('#construction_images').carousel($this.data('slide'));
   });
 });
+</script>
+
+<script type="text/javascript">
+    $('.exploer-btn').click(function(){
+        var src=$('.get-src').attr('src');
+        $('.set-src').attr("src",src);
+    });
 </script>

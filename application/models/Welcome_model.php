@@ -147,8 +147,7 @@ class Welcome_model extends CI_Model
         ->where('status',0)
         ->where('show_on_home','Yes')
         ->where('brand_type',$type)
-        ->order_by('brand_id','desc')
-        ->order_by('order_home','asc')
+        ->order_by('rand()')
         ->limit(6)
         ->get('tbl_brand');
         if($query->num_rows() > 0){

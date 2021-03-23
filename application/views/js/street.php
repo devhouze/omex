@@ -70,9 +70,9 @@ $(document).on('click','.exploer-btn',function(){
         $.each(data,function(i,v){
         value += '<li><a href="'+url+'brand/'+v.brand_slug+'"></a><img src="'+url+'assets/images/public/brand/'+v.brand_logo+'" alt="'+v.logo_message+'"></li>';
       });
-        $('#'+type+'modal').modal('show'); 
+         $('#'+type+'Modal').modal('show');
       }else{
-        $('#'+type+'modal').modal('hide');
+        $('#'+type+'Modal').modal('hide');
         value += '<h4>No Data</h4>';
         window.location.href = "brand-directory/"+type;
       }

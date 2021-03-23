@@ -2,7 +2,7 @@
       <div id="sidebar" class="sidebar sidebar-without-footer">
         <!-- Aplication Brand -->
         <div class="app-brand">
-          <img src="<?php echo base_url(); ?>assets/images/public/header/logo.svg" alt="Map" >
+          <img src="<?php echo base_url(); ?>assets/images/public/header/admin_logo.png" alt="Map" >
           </a>
         </div>
         <!-- begin sidebar scrollbar -->

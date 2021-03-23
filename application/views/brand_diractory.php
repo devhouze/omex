@@ -235,7 +235,7 @@
                                         <a href="<?php echo base_url('brand/' . $brands['brand_slug']); ?>"></a>
                                         <figure><img src="<?php echo base_url('assets/images/public/brand/' . $brands['brand_logo']); ?>" alt="<?php echo $brands['logo_message']; ?>" class=""></figure>
                                         <div class="name"><?php echo $brands['brand_name']; ?></div>
-                                        <div class="addrs"><img src="<?php echo base_url(); ?>assets/images/public/brand/map.svg" alt="" class=""><?php echo $brands['brand_location'] . ',' . $brands['brand_street']; ?></div>
+                                        <div class="addrs"><img src="<?php echo base_url(); ?>assets/images/public/brand/map.svg" alt="" class=""><?php echo $brands['brand_location'] . ', ' . $brands['brand_street']; ?></div>
 
                                     </div>
                                 </div>
