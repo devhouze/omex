@@ -199,6 +199,7 @@
             $.ajax({
                 type:'post',
                 url:'<?php echo base_url('search-brand')?>',
+                
                 data:{street:street, sort:sort,filter:filter,limit:limit,letter:letter,category:category},
                 dataType:'json',
                 success:function(data){
