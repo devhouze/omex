@@ -94,14 +94,10 @@
     $(document).ready(function(){
         const base_url = $('body').data('url');
         $('#street').change(function(){
-            $('.letter').removeClass('active');
-            $('.category').removeClass('active');
             get_brands();
         });
 
         $('#sort').change(function(){
-            $('.letter').removeClass('active');
-            $('.category').removeClass('active');
             get_brands();
         });
 
@@ -111,12 +107,14 @@
             var sort = $('#sort').val();
             var filter = $('#filter').val();
             var limit = $('#limit').val();
+            var letter=$('.letter.active').data('letter');
+            var category = $('.category.active').data('category');
             console.log(limit);
             $('#brand').empty();
             $.ajax({
                 type:'post',
                 url:'<?php echo base_url('search-brand')?>',
-                data:{street:street, sort:sort,filter:filter,limit:limit},
+                data:{street:street, sort:sort,filter:filter,limit:limit,letter:letter,category:category},
                 dataType:'json',
                 success:function(data){
                     if(data.brand != ''){
@@ -145,18 +143,20 @@
         });
 
         $('.letter').click(function(){
+             $(this).toggleClass("active");   
+            $('.letter').not(this).removeClass('active');
             var street = $('#street').val();
             var sort = $('#sort').val();
             var filter = $('#filter').val();
-            var letter = $(this).data('letter');
             var limit = $('#limit').val();
-            $('.letter').removeClass('active');
-            $(this).addClass("active");   
+            var letter=$('.letter.active').data('letter');
+            var category = $('.category.active').data('category');
+           
             $('#brand').empty();
             $.ajax({
                 type:'post',
                 url:'<?php echo base_url('search-brand')?>',
-                data:{street:street, sort:sort,filter:filter,limit:limit,letter:letter},
+                data:{street:street, sort:sort,filter:filter,limit:limit,letter:letter,category:category},
                 dataType:'json',
                 success:function(data){
                     if(data.brand != ''){
@@ -186,18 +186,20 @@
         });
 
         $('.category').click(function(){
+              $(this).toggleClass("active");
+            $('.category').not(this).removeClass('active');
             var street = $('#street').val();
             var sort = $('#sort').val();
             var filter = $('#filter').val();
-            var category = $(this).data('category');
-            $('.category').removeClass('active');
-            $(this).addClass("active");
+           var category = $('.category.active').data('category');
+            var letter=$('.letter.active').data('letter');
+          
             var limit = $('#limit').val();
             $('#brand').empty();
             $.ajax({
                 type:'post',
                 url:'<?php echo base_url('search-brand')?>',
-                data:{street:street, sort:sort,filter:filter,limit:limit,category:category},
+                data:{street:street, sort:sort,filter:filter,limit:limit,letter:letter,category:categoryr},
                 dataType:'json',
                 success:function(data){
                     if(data.brand != ''){
@@ -227,8 +229,6 @@
         });
 
         $('#filter').change(function(){
-             $('.letter').removeClass('active');
-            $('.category').removeClass('active');
             get_brands();
         });
 
@@ -237,11 +237,13 @@
             var sort = $('#sort').val();
             var filter = $('#filter').val();
             var limit = $('#limit').val();
+            var letter=$('.letter.active').data('letter');
+            var category = $('.category.active').data('category')
             $('#brand').empty();
             $.ajax({
                 type:'post',
                 url:'<?php echo base_url('search-brand')?>',
-                data:{street:street, sort:sort,filter:filter,limit:limit},
+                data:{street:street, sort:sort,filter:filter,limit:limit,letter:letter,category:category},
                 dataType:'json',
                 success:function(data){
                     if(data.brand != ''){
