@@ -1742,10 +1742,14 @@ span.text-danger.errors_msg {
     width: 250px;
     height: 200px;
     display: flex;
-    margin: 0 auto;
+    margin: 0px auto 10px auto;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+}
+
+.product-box .name {
+    margin-bottom: 5px;
 }
 
 .product-box figure img {

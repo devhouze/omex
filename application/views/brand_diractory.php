@@ -91,7 +91,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-10 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 mt-60 mt-sm0 pt-60 pt-sm0">Brand Directory</h5>
+                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 pt-sm0">Brand Directory</h5>
                 </div>
 
             </div>
