@@ -257,7 +257,7 @@
                     <div class="v-line d-table mx-auto my-4"></div>
                 </div>
             </div>
-            <div class="row mt-4  justify-content-center">
+            <div class="row mt-4 justify-content-center">
                 <div class="col-md-9">
                     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
                     <div class="elfsight-app-52b76f2d-9b89-4516-a5a9-f98581951782"></div>
