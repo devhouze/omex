@@ -154,10 +154,11 @@
 
                             <ul>
                                 <?php $i = 1;
+                                $row=count($main_category);
                                 if (!empty($main_category)) {
                                     foreach ($main_category as $value) { ?>
                                         <li><a href="javascript:void(0)" class="category" data-category="<?php echo $value['name'] ?>"><?php echo $value['name'] ?></a></li>
-                                        <?php if ($i % 4 == 0) { ?>
+                                        <?php if ($i % 4 == 0 && $i<$row) { ?>
                             </ul>
                         </div>
                         <div class="col-md-4">
@@ -173,7 +174,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center mt-4">
+            <div class="row justify-content-center mt-4" id="filter-box">
                 <div class="col-md-10">
                     <div class="row">
                         <div class="col-md-4">
