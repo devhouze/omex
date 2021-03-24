@@ -826,6 +826,15 @@ span.text-danger.errors_msg {
     font-weight: 500;
 }
 
+.product-search-alert {
+    font-size: 29px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 22px;
+    color: var(--h-color);
+    font-family: var(--pr-font) !important;
+}
+
 .more-expoler .item figure a {
     position: absolute;
     left: 0;
@@ -1117,7 +1126,7 @@ span.text-danger.errors_msg {
 }
 
 .experience .carousel-indicators li.active img {
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 .street-icon-abs {
@@ -2028,6 +2037,58 @@ ul.share-links li:nth-child(2) {
     margin-right: 19px;
 }
 
+.London_Street .bg-color {
+    background-color: var(--london) !important;
+}
+
+.Paris_Street .bg-color {
+    background-color: var(--parish) !important;
+}
+
+.Hong_Kong_Street .bg-color {
+    background: var(--hong) !important;
+}
+
+.Amsterdam_Street .bg-color {
+    background: var(--amstr) !important;
+}
+
+.Portugal_Street .bg-color {
+    background: var(--portu) !important;
+}
+
+.San_Francisco_Street .bg-color {
+    background: var(--san) !important;
+}
+
+.Athens_Street .bg-color {
+    background-color: var(--ath) !important;
+}
+
+.social-box h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.social-box a {
+    color: var(--h-color);
+    font-size: 16px;
+    margin-top: 20px;
+    letter-spacing: 0.1em;
+    position: relative;
+}
+
+.social-box a:before {
+    position: absolute;
+    content: " ";
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--h-color);
+    bottom: -2px;
+}
+
 
 /* end what new page css */
 
@@ -2038,6 +2099,69 @@ ul.share-links li:nth-child(2) {
 }
 
 @media only screen and (max-width: 600px) {
+    .social-box {
+        padding: 60px 0;
+        margin-bottom: 15px;
+    }
+    .social-box h1 {
+        font-size: 40px
+    }
+    .top-brands .owl-item.active .item {
+        width: unset;
+        height: unset;
+    }
+    .Athens_Street .brand-banner {
+        background-color: var(--ath) !important;
+    }
+    .San_Francisco_Street .brand-banner {
+        background: var(--san) !important;
+    }
+    .Portugal_Street .brand-banner {
+        background: var(--portu) !important;
+    }
+    .Amsterdam_Street .brand-banner {
+        background: var(--amstr) !important;
+    }
+    .Hong_Kong_Street .brand-banner {
+        background: var(--hong) !important;
+    }
+    .Paris_Street .brand-banner {
+        background-color: var(--parish) !important;
+    }
+    .London_Street .brand-banner {
+        background-color: var(--london) !important;
+    }
+    #carouselExampleIndicatorsmob {
+        height: 75vh;
+    }
+    #carouselExampleIndicatorsmob .carousel-inner {
+        height: 100%;
+    }
+    #carouselExampleIndicatorsmob .carousel-item {
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left top;
+    }
+    .product-search-alert {
+        font-size: 24px;
+    }
+    .select2-container {
+        width: 100% !important;
+    }
+    .brand-directory ul li {
+        width: 30px;
+        text-align: center;
+    }
+    .search-brand ul {
+        margin: 40px auto 12px;
+    }
+    .search-brand .row .col-md-4:nth-child(3) ul {
+        margin-top: 10px;
+    }
+    .brand-directory ul li+li {
+        margin-left: 0;
+    }
     .exploer-btn-modal {
         font-size: 16px;
     }
@@ -2085,8 +2209,8 @@ ul.share-links li:nth-child(2) {
     .street-icon-abs {
         position: absolute;
         right: 15px;
-        top: 120px;
-        width: 100px;
+        top: 180px;
+        width: 90px;
     }
     .abs-block {
         width: 150px;
