@@ -80,7 +80,7 @@
                                 <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1s"></div>
                             </div>
                         </div>
-                        <div class="row justify-content-center align-items-center wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="0.15s">
+                        <div class="row justify-content-center align-items-center " data-wow-duration="1s" data-wow-delay="0.15s">
                             <div class="col-md-10 mt-20">
                                 <div class="owl-carousel owl-theme top-brand">
                                     <?php foreach ($brand_logo as $logo) { 
@@ -606,18 +606,22 @@
         </div>
     </div>
 
-    <div class="instagram py-30 gray-bg">
+    <div class="instagram py-60  gray-bg">
         <div class="container">
-            <div class="row">
-                <div class="col-md-8">
+            <div class="row d-flex flex-fill">
+                <div class="col-md-8 order-md-1 order-2 ps-0 d-flex flex-fill">
 
                     <!-- <img src="<?php echo base_url() ?>/assets/images/public/home/insta.svg" class="w-100"> -->
                     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
                     <div class="elfsight-app-cb04b2ca-91d4-4ff5-9460-e948763cbf75"></div>
 
                 </div>
-                <div class="col-md-4">
-                follow us
+                <div class="col-md-4 order-md-2 order-1 d-flex flex-fill">
+                <div class="card d-flex flex-fill flex-column align-items-center justify-content-center social-box" style="background-color:#FAF7F2;">
+                <h1 class="pr-font h-color">@WORLD STREET</h1>
+                <a href="https://www.instagram.com/omaxeworldstreet/">FOLLOW US</a>
+
+                </div>
                 </div>
 
             </div>

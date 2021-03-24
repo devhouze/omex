@@ -1,6 +1,6 @@
 <div class="brand-directory-page barnd-page">
     <?php if (!empty($brand_banner)) { ?>
-        <div class="main-slider d-flex flex-fill">
+        <div class="main-slider d-flex flex-fill gray-bg">
             <div class="container-fluid d-flex flex-fill">
                 <div class="row d-md-flex d-none flex-fill">
                     <div class="col-md-12 d-flex flex-fill px-0">
@@ -287,7 +287,7 @@
                                                             <div class="col-md-4 ">
                                                             </div>
                                                             <div class="col-md-8 ">
-                                                                <div class="content-box"><?php echo $offers['about_offer']; ?> </div>
+                                                                <div class="brand-content"><?php echo $offers['about_offer']; ?> </div>
                                                             </div>
                                                         </div>
                                                     </div>
