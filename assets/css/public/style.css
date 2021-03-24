@@ -1773,7 +1773,7 @@ span.text-danger.errors_msg {
 }
 
 .about-event p {
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 500;
     letter-spacing: 1.4px;
     text-align: center;
@@ -1966,6 +1966,32 @@ span.text-danger.errors_msg {
 
 
 /* end brand directory page */
+
+
+/* what new page  */
+
+.what-banner {
+    height: 553px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+ul.share-links {
+    margin: 10px auto 30px;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+ul.share-links li:nth-child(2) {
+    margin-left: 20px;
+    margin-right: 19px;
+}
+
+
+/* end what new page css */
 
 @media only screen and (min-width: 1600px) {
     .experience .carousel-item {
