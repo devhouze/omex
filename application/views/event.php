@@ -165,7 +165,7 @@
                     <div class="v-line d-table mx-auto my-4"></div>
                 </div>
             </div>
-            <div class="row mt-4 d-lg-flex d-none justify-content-center">
+            <div class="row mt-4 justify-content-center">
                 <div class="col-md-9">
                     <!-- <div class="owl-carousel slider wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
                         <div class="item">
