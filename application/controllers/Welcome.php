@@ -20,7 +20,7 @@ class Welcome extends CI_Controller {
 		$data['construction_gallery'] = $this->wm->get_gallery(3);
 		$data['gallery_video'] = $this->wm->gallery_video();
 		// Get Instagram feeds
-		// echo "<pre>"; print_r($data); die;
+		// echo "<pre>"; print_r($data['banner']); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -39,7 +39,9 @@ class Welcome extends CI_Controller {
 	}
 	public function athens()
 	{
-		$data['events'] = $this->wm->get_events();
+		$events = $this->wm->get_events_by_street('Athens Street');
+		$data['events'] = $this->check_event_expiry($events);
+		// echo "<pre>"; print_r($data); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -59,7 +61,8 @@ class Welcome extends CI_Controller {
 	}
 	public function portugal()
 	{
-		$data['events'] = $this->wm->get_events();
+		$events = $this->wm->get_events_by_street('Portugal Street');
+		$data['events'] = $this->check_event_expiry($events);
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -79,7 +82,8 @@ class Welcome extends CI_Controller {
 	}
 	public function hong_kong()
 	{
-		$data['events'] = $this->wm->get_events();
+		$events = $this->wm->get_events_by_street('Hong Kong Street');
+		$data['events'] = $this->check_event_expiry($events);
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -99,7 +103,9 @@ class Welcome extends CI_Controller {
 	}
 	public function amsterdam()
 	{
-		$data['events'] = $this->wm->get_events();
+		$events = $this->wm->get_events_by_street('Amsterdam Street');
+		$data['events'] = $this->check_event_expiry($events);
+		// echo "<pre>"; print_r($data); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -119,7 +125,8 @@ class Welcome extends CI_Controller {
 	}
 	public function san_francisco()
 	{
-		$data['events'] = $this->wm->get_events();
+		$events = $this->wm->get_events_by_street('San Francisco Street');
+		$data['events'] = $this->check_event_expiry($events);
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -137,9 +144,28 @@ class Welcome extends CI_Controller {
 		$this->load->view('js/common');
 		$this->load->view('footer/body_end');
 	}
+	public function whatenew()
+	{
+		
+		$this->load->view('header/header_start');
+		$this->load->view('header/header_common');
+		$this->load->view('header/owl_css');
+		$this->load->view('header/header_end');
+		$this->load->view('header/body_start');
+		$this->load->view('header/main_header');
+		$this->load->view('whatenew');
+		$this->load->view('footer/footer_signup');
+		$this->load->view('footer/main_footer');
+		$this->load->view('modal');
+		$this->load->view('footer/footer_common');
+		$this->load->view('js/common');
+		$this->load->view('footer/body_end');
+	}
+
 	public function london()
 	{
-		$data['events'] = $this->wm->get_events();
+		$events = $this->wm->get_events_by_street('London Street');
+		$data['events'] = $this->check_event_expiry($events);
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -159,7 +185,8 @@ class Welcome extends CI_Controller {
 	}
 	public function paris()
 	{
-		$data['events'] = $this->wm->get_events();
+		$events = $this->wm->get_events_by_street('Paris Street');
+		$data['events'] = $this->check_event_expiry($events);
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -214,12 +241,14 @@ class Welcome extends CI_Controller {
 	{
 		$data['events'] = $this->wm->get_events();
 		$data['about_brand'] = $this->wm->get_about_brand($id);
-		$data['key_info'] = array_merge(explode(',',$data['about_brand']['brand_category']),(!empty($data['about_brand']['brand_sub_category']))?explode(',',$data['about_brand']['brand_sub_category']):[]);
-		$data['what_new'] = $this->wm->get_what_new();
-		$data['similar_brands'] = $this->wm->get_similar_brands($data['about_brand']['brand_type'],null);
-		$data['first_similar_brands'] = $this->wm->get_similar_brands($data['about_brand']['brand_type'],6);
-		$data['second_similar_brands'] = $this->wm->get_similar_brands($data['about_brand']['brand_type'],6,6);
-		$data['third_similar_brands'] = $this->wm->get_similar_brands($data['about_brand']['brand_type'],6,12);
+
+		// $data['key_info'] = array_merge(explode(',',$data['about_brand']['brand_category']),(!empty($data['about_brand']['brand_sub_category']))?explode(',',$data['about_brand']['brand_sub_category']):[]);
+		$data['key_info'] = explode(',',$data['about_brand']['brand_sub_category']);
+		$data['what_new'] = $this->wm->get_what_new($id,$data['about_brand']['brand_street']);
+		$data['similar_brands'] = $this->wm->get_similar_brands($id,$data['about_brand']['brand_type'],null);
+		$data['first_similar_brands'] = $this->wm->get_similar_brands($id,$data['about_brand']['brand_type'],6);
+		$data['second_similar_brands'] = $this->wm->get_similar_brands($id,$data['about_brand']['brand_type'],6,6);
+		$data['third_similar_brands'] = $this->wm->get_similar_brands($id,$data['about_brand']['brand_type'],6,12);
 		// echo "<pre>"; print_r($data['first_similar_brands']);
 		// echo "<pre>"; print_r($data['second_similar_brands']);
 		// echo "<pre>"; print_r($data['third_similar_brands']); die;
@@ -241,10 +270,11 @@ class Welcome extends CI_Controller {
 	}
 	public function event()
 	{
-		$data['events'] = $this->wm->get_events();
+		$events = $this->wm->get_events();
+		$data['events'] = $this->check_event_expiry($events);
 		$data['what_new'] = $this->wm->get_what_new();
-		$data['past_event'] = $this->wm->get_past_events();
-		// echo "<pre>"; print_r($data); die;
+		$past_event= $this->wm->get_past_events();
+		$data['past_event'] = $this->filter_expired_events($past_event);
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -262,12 +292,13 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer/body_end');
 	}
 
-	public function event_details($id)
+	public function event_details($slug)
 	{
-		$data['event'] = $this->wm->get_event_detail($id);
+		$data['event'] = $this->wm->get_event_detail($slug);
 		$data['what_new'] = $this->wm->get_what_new();
-		$data['past_event'] = $this->wm->get_past_events();
-		// echo "<pre>"; print_r($data); die;
+		$past_event= $this->wm->get_past_events();
+		$data['past_event'] = $this->filter_expired_events($past_event);
+		// echo "<pre>"; print_r($data['event']); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -290,6 +321,7 @@ class Welcome extends CI_Controller {
 		$category = str_replace('%20',' ',$category);
 		$data['brand_banner'] = $this->wm->get_brand_directory_banner();
 		$data['brand_offers'] = $this->wm->get_brand_offers();
+		$data['main_category'] = $this->wm->main_category();
 		$data['count'] = $this->wm->get_all_brands($category,$limit,true);
 		$data['brand'] = $this->wm->get_all_brands($category,$limit);
 		$data['what_new'] = $this->wm->get_what_new();
@@ -299,7 +331,7 @@ class Welcome extends CI_Controller {
 		} else {
 			$data['limit'] = '';
 		}
-		// echo "<pre>"; print_r($data['brand_banner']); die;
+		// echo "<pre>"; print_r($data); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
@@ -324,9 +356,9 @@ class Welcome extends CI_Controller {
 		if($this->input->post()){
 			$this->form_validation->set_rules('name','Name','required');
 			$this->form_validation->set_rules('email','Email','required');
-			$this->form_validation->set_rules('contact','Contact','required');
+			$this->form_validation->set_rules('contact','Contact','required|regex_match[/^[0-9]{10,15}$/]');
 			$this->form_validation->set_rules('query_type','Query Type','required');
-			$this->form_validation->set_rules('message','Message','required');
+			// $this->form_validation->set_rules('message','Message','required');
 
 			if($this->form_validation->run()){
 				$data_array = array(
@@ -351,6 +383,7 @@ class Welcome extends CI_Controller {
 		}
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
+		$this->load->view('header/select2_css');
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
 		$this->load->view('header/main_header');
@@ -359,6 +392,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer/main_footer');
 		$this->load->view('footer/footer_common');
 		$this->load->view('js/owl');
+		$this->load->view('js/select2_js');
 		$this->load->view('js/common');
 		$this->load->view('footer/body_end');
 	}
@@ -367,7 +401,7 @@ class Welcome extends CI_Controller {
 	{
 		$this->form_validation->set_rules('name','Name','required');
 		$this->form_validation->set_rules('email','Email','required');
-		$this->form_validation->set_rules('contact','Mobile Number','required');
+		$this->form_validation->set_rules('contact','Mobile Number','required|regex_match[/^[0-9]{10,15}$/]');
 
 		if($this->form_validation->run()){
 			$data_array = array(
@@ -389,10 +423,47 @@ class Welcome extends CI_Controller {
 		exit;
 	}
 
+	public function register()
+	{
+		$this->form_validation->set_rules('name','Name','required');
+		$this->form_validation->set_rules('email','Email','required');
+		$this->form_validation->set_rules('message','Message','required');
+		$this->form_validation->set_rules('contact','Mobile Number','required|regex_match[/^[0-9]{10,15}$/]');
+
+		if($this->form_validation->run()){
+			$data_array = array(
+				'name'		=> $this->input->post('name'),
+				'email'		=> $this->input->post('email'),
+				'contact'	=> $this->input->post('contact'),
+				'source'	=> 'events',
+				'event_name'	=> $this->input->post('event_name'),
+				'message'	=> $this->input->post('message'),
+			);
+
+			$save = $this->wm->insert_data('tbl_leads',$data_array);
+			if($save){
+				echo json_encode(['message' => 'Data saved successfully.', 'status' => 1]);
+			} else {
+				echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
+			}
+		} else {
+			echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->form_validation->error_array(), 'status' => 0]);
+		}
+		exit;
+	}
+
 	public function get_brands()
 	{
 		$type = $this->input->post('type');
-		$data = $this->wm->get_brands($type);
+		$data = $this->wm->get_brands($type,$street='');
+		echo json_encode($data);
+	}
+
+	public function get_brands_like()
+	{
+		$type = $this->input->post('type');
+		$street = str_replace("-"," ",$this->input->post('street'));
+		$data = $this->wm->get_brands_like($type,$street);
 		echo json_encode($data);
 	}
 
@@ -400,13 +471,12 @@ class Welcome extends CI_Controller {
 	{
 		$street = ($this->input->post('street'))?$this->input->post('street'):'';
 		$sort = ($this->input->post('sort'))?$this->input->post('sort'):'';
-		$filter = ($this->input->post('filter'))?$this->input->post('sort'):'';
+		$filter = ($this->input->post('filter'))?$this->input->post('filter'):'';
 		$limit = ($this->input->post('limit'))?$this->input->post('limit'):"8";
 		$letter = ($this->input->post('letter'))?$this->input->post('letter'):"";
 		$category = ($this->input->post('category'))?$this->input->post('category'):'';
 		$count = $this->wm->filter_brand($street,$sort,$filter,$limit,$letter,$category,true);
 		$data['brand'] = $this->wm->filter_brand($street,$sort,$filter,$limit,$letter,$category);
-		// print_r($count); die;
 		if($limit != 'null' && $count > $limit){
 			$data['limit'] = $limit + 8;
 			$data['count'] = $count;
@@ -415,6 +485,40 @@ class Welcome extends CI_Controller {
 			$data['count'] = $count;
 		}
 		echo json_encode($data);
+	}
+
+	public function check_event_expiry($events)
+	{
+		$active_events = [];
+		foreach($events as $event){
+			if($event['date_available'] == 0){
+				if(!empty($event['end_date']) && $event['end_date'] != '0000-00-00'){
+					if($event['end_date'] > date('Y-m-d')){
+						$active_events[] = $event;
+					}
+				} elseif($event['start_date'] > date('Y-m-d')){
+					$active_events[] = $event;
+				}
+			}
+			else {
+				$active_events[] = $event;
+			}
+		}
+		return $active_events;
+	}
+
+	public function filter_expired_events($events)
+	{
+		// echo "<pre>";
+		$expired_events = [];
+		foreach($events as $event){
+			if($event['end_date']=== '1970-01-01' || $event['start_date'] < date('Y-m-d') || $event['end_date'] < date('Y-m-d') ){
+						$expired_events[] = $event;
+			}
+		}
+		// print_r($events);
+		// print_r($expired_events); die;
+		return $expired_events;
 	}
 	
 	

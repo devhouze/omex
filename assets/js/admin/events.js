@@ -1,5 +1,6 @@
 $(document).ready(function() {
     const url = $('body').data('url');
+    const base_url = $('body').data('base_url');
 
     $('#date_availibility').change(function() {
         var option = $('#date_availibility option:selected').val();
@@ -16,7 +17,7 @@ $(document).ready(function() {
 
     $('.delete').click(function() {
         var event_id = $(this).data('id');
-        if (confirm('Do you want to delte this event?')) {
+        if (confirm('Do you want to delete this event?')) {
             $.ajax({
                 type: 'post',
                 url: url + 'delete-event',
@@ -56,25 +57,20 @@ $(document).ready(function() {
                 var brand_name = (data.brand_name != '') ? data.brand_name : 'N/A';
                 var event_label = data.event_label;
                 var status = data.status;
+                var thumbnail_image = data.thumbnail_image;
                 var date_available = (data.date_available == 0) ? 'Yes' : 'No';
                 value = '';
                 value += '<table class="table">';
                 value += '<tr><th colspan="2" class="text-center">Event Details</th></tr>';
-                value += '<tr><th>Event Name</th><td>' + event_name + '</td></tr>';
-                value += '<tr><th>About Event</th><td>' + about_event + '</td></tr>';
+                value += '<tr><th>Event Name</th><td>' + event_name + '</td><th>About Event</th><td>' + about_event + '</td></tr>';
                 // value += '<tr><th>Date Availibilty</th><td>' + date_available + '</td></tr>';
-                value += '<tr><th>Event Start Date</th><td>' + start_date + '</td></tr>';
-                value += '<tr><th>Event End Date</th><td>' + end_date + '</td></tr>';
-                value += '<tr><th>Event Start Time</th><td>' + event_start_time + '</td></tr>';
-                value += '<tr><th>Event End Time</th><td>' + event_end_time + '</td></tr>';
+                value += '<tr><th>Event Start Date</th><td>' + start_date + '</td><th>Event End Date</th><td>' + end_date + '</td></tr>';
+                value += '<tr><th>Event Start Time</th><td>' + event_start_time + '</td><th>Event End Time</th><td>' + event_end_time + '</td></tr>';
                 // value += '<tr><th>Event Type</th><td>' + event_type + '</td></tr>';
-                value += '<tr><th>Event Street</th><td>' + event_street + '</td></tr>';
-                value += '<tr><th>Event Location</th><td>' + event_location + '</td></tr>';
-                value += '<tr><th>Event Label</th><td>' + event_label + '</td></tr>';
-                value += '<tr><th>Event Category</th><td>' + event_category + '</td></tr>';
+                value += '<tr><th>Event Street</th><td>' + event_street + '</td><th>Event Location</th><td>' + event_location + '</td></tr>';
+                value += '<tr><th>Event Label</th><td>' + event_label + '</td><th>Event Category</th><td>' + event_category + '</td></tr>';
                 // value += '<tr><th>Event Status</th><td>' + status + '</td></tr>';
-                value += '<tr><th>Show Brand</th><td>' + show_brand + '</td></tr>';
-                value += '<tr><th>Brand Name</th><td>' + brand_name + '</td></tr>';
+                value += '<tr><th>Event Banner</th><td colspan="3"><img src="' + base_url + 'assets/images/public/home/' + thumbnail_image + '" width="200px" height="200px"></td></tr>';
                 $('#details').html(value);
             }
         });
@@ -118,6 +114,9 @@ $(document).ready(function() {
         for (instance in CKEDITOR.instances) {
             CKEDITOR.instances[instance].updateElement();
         }
+        $('.btn-primary').html('<i class="fa fa-spinner fa-spin"></i>Loading');
+        $('.submit-form').prop("disabled", true);
+
         $.ajax({
             type: 'post',
             url: form.attr('action'),
@@ -131,7 +130,11 @@ $(document).ready(function() {
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
                     $.notify(data.message, "success");
-                    setTimeout(function() { window.location.replace(url + 'events'); }, 2000);
+                    setTimeout(function() {
+                        window.location.replace(url + 'events');
+                        $('.btn-primary').text('Save');
+                    }, 2000);
+
                 } else {
                     $.notify(data.message, "error");
                 }
@@ -140,6 +143,8 @@ $(document).ready(function() {
                         $('#events_management input[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                         $('#events_management select[name="' + i + '"]').after('<span class="text-danger errors_msg">' + v + '</span>');
                     });
+                    $('.btn-primary').text('Save');
+                    $('.submit-form').removeAttr('disabled');
                 }
             }
         });

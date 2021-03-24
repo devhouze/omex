@@ -22,7 +22,7 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
                                     <select name="banner_type" id="banner_type" class="form-control form-control-sm">
                                         <option selected="" disabled>Select Option</option>
                                         <option value="1" <?php if($banner_type == '1'){ echo "selected";  }?>>Home Page</option>
-                                        <option value="2" <?php if($banner_type == '2'){ echo "selected";  }?>>Event</option>
+                                      <!--   <option value="2" <?php if($banner_type == '2'){ echo "selected";  }?>>Event</option> -->
                                         <option value="3" <?php if($banner_type == '3'){ echo "selected";  }?>>Brand Directory</option>
                                         <!-- <option value="4" <?php if($banner_type == '4'){ echo "selected"; }?>>Brand Discount</option> -->
                                     <!-- <option value="5" <?php if($banner_type == '5'){ echo "selected"; }?>>Brand</option>
@@ -32,9 +32,9 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
 
 
                                 <div class="col-md-5 mb-3">
-                                    <label for="">For Web<span class="image-type">(For best view upload images in 1366px*553px)</span></label>
-                                    <input type="file"  class="form-control form-control-sm input-sm" name="banner_web" value="" onchange="checkFileDetails(1341,553,this)">
-                                       <span style="color: red;font-size: 9px;"></span>
+                                    <label for="">For Web<span class="image-type">(For best view upload images in 1366px * 553px)</span></label>
+                                    <input type="file"  class="form-control form-control-sm input-sm" name="banner_web" value="" onchange="checkFileDetails(1366,553,this)">
+                                    <span style="color: red;font-size: 9px;"></span>
 
                                 </div>
                                 <div class="col-md-1 mb-3">
@@ -63,25 +63,31 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
                               <?php } ?>
                           </div>
 
+                        
+                        
+                        <!--  <div class="col-md-6 mb-3" id="banner_link_section" style="display:none">
+                            <label for="">Banner Linking</label>
+                            <select id="banner_link" name="banner_link" class="form-control form-control-sm">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                               
+                            </select>
+                        </div> -->
                           <div class="col-md-6 mb-3">
                             <label for="">Banner Link</label>
-                            <input type="text" class="form-control form-control-sm input-sm" name="banner_link" value="<?php echo $banner_link; ?>">
-                        </div>
-
-                          <div class="col-md-6 mb-3" id="streets" style="display:none">
-                            <label for="">Link</label>
-                            <select name="link_type" class="form-control form-control-sm link_type" >
-                                <option value="1">Event</option>
-                                <option value="2">Brand</option>
-                                <option value="3">What’s New</option>
-                                <option value="4">Street</option>
-                                <option value="5">Contact Us</option>
-                                <option value="6">Any Other</option>
-                             
+                            <select name="banner_link" class="form-control form-control-sm select-box" id="banner_link">
+                            <option value="">Select One</option>
+                            <option value="1" <?php if($banner_link == '1'){echo 'selected'; }?>>Event</option>
+                            <option value="2" <?php if($banner_link == '2'){echo 'selected'; }?>>Brand</option>
+                            <option value="3" <?php if($banner_link == '3'){echo 'selected'; }?>>What's New</option>
+                            <option value="4" <?php if($banner_link == '4'){echo 'selected'; }?>>Street</option>
+                            <option value="5" <?php if($banner_link == '5'){echo 'selected'; }?>>Contact Us</option>
+                            <option value="6" <?php if($banner_link == '6'){echo 'selected'; }?>>No Linking</option>
                             </select>
+                            <!-- <input type="text" class="form-control form-control-sm input-sm" name="banner_link" value="<?php echo $banner_link; ?>"> -->
                         </div>
 
-                        <div class="col-md-6 mb-3" id="streets" style="display:none">
+                        <!-- <div class="col-md-6 mb-3" id="streets" style="display:none">
                             <label for="">Street</label>
                             <select name="streets" class="form-control form-control-sm">
                                 <option selected="" disabled>Select Street</option>
@@ -93,14 +99,13 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
                                 <option value="San Francisco Street">San Francisco Street</option>
                                 <option value="Athens Street">Athens Street</option>
                             </select>
-                        </div>
-
-                        <div class="col-md-6 mb-3" id="brands" style="display:none">
-                            <label for="">Brand</label>
-                            <select name="brand" class="form-control form-control-sm">
-                                <option disabled selected>Select Brand</option>
-                                <?php if(!empty($brands)) { foreach($brands as $brand){?>
-                                    <option value="<?=$brand['brand_id']?>"><?=$brand['brand_name']?></option>
+                        </div> -->
+                        
+                        <div class="col-md-6 mb-3" id="link_to" <?php if(!empty($banner_link) && ($banner_link != '5' || $banner_link != '6')){?>style="display:block"<?php } else {?> style="display:none"<?php } ?>>
+                            <label for="">Choose One</label>
+                            <select name="link_to" class="form-control form-control-sm link_to">
+                                <?php if(!empty($link_to)){ foreach ($link_to as $value) { ?>
+                                    <option value="<?php echo $value['slug']; ?>"><?php echo $value['name']; ?></option>
                                 <?php } }?>
                             </select>
                         </div>
@@ -125,87 +130,33 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
             if(option == 2){
                 $('#streets').css('display','block');
                 $('#brands').css('display','none');
+                $('#banner_link_section').css('display','none');
             } else if(option == 3) {
                 $('#streets').css('display','block');
                 $('#brands').css('display','block');
-            }
-        // else if(option == 4) {
-        //     $('#streets').css('display','none');
-        //     $('#brands').css('display','block');
-        // } else if(option == 5) {
-        //     $('#streets').css('display','block');
-        //     $('#brands').css('display','block');
-        // } else if(option == 6) {
-        //     $('#streets').css('display','block');
-        //     $('#brands').css('display','block');
-        // }
-        else{
+                $('#banner_link_section').css('display','block');
+            } else{
             $('#streets').css('display','none');
             $('#brands').css('display','none');
+            $('#banner_link_section').css('display','none');
         }
 
         
     });
+
+        $('#banner_link').change(function(){
+
+              var option = $('#banner_link').val();
+            if(option == 'yes'){
+                  $('#streets').css('display','block');
+                $('#brands').css('display','block');
+            }else{
+                  $('#streets').css('display','none');
+              $('#brands').css('display','none');
+            }
+
+        })
     });
 
 
-</script>
-
-<script>
-    function checkFileDetails(width,height,file) {
-        var fi = file;
-        if (fi.files.length > 0) {      // FIRST CHECK IF ANY FILE IS SELECTED.
-           
-            for (var i = 0; i <= fi.files.length - 1; i++) {
-                var fileName, fileExtension, fileSize, fileType, dateModified;
-
-                // FILE NAME AND EXTENSION.
-                fileName = fi.files.item(i).name;
-                fileExtension = fileName.replace(/^.*\./, '');
-
-                // CHECK IF ITS AN IMAGE FILE.
-                // TO GET THE IMAGE WIDTH AND HEIGHT, WE'LL USE fileReader().
-                if (fileExtension == 'png' || fileExtension == 'jpg' || fileExtension == 'jpeg') {
-                   readImageFile(fi.files.item(i),width,height, fi);             // GET IMAGE INFO USING fileReader().
-                }
-               
-            }
-
-            // GET THE IMAGE WIDTH AND HEIGHT USING fileReader() API.
-            function readImageFile(file,width,heigh, fi) {
-                var reader = new FileReader(); // CREATE AN NEW INSTANCE.
-
-                reader.onload = function (e) {
-                    var img = new Image();      
-                    img.src = e.target.result;
-
-                    img.onload = function () {
-                        var w = this.width;
-                        var h = this.height;
-
-                        if(w==width && h==height){
-                          $(fi).nextAll('span:first').text('');
-                            $('.submit-form').removeAttr('disabled');
-                        }else{
-
-                            $('.submit-form').prop("disabled", true);
-                             $(fi).nextAll('span:first').text('Image Dimension must be '+width+' x '+height);
-                        }
-
-
-                        // document.getElementById('fileInfo').innerHTML =
-                        //     document.getElementById('fileInfo').innerHTML + '<br /> ' +
-                        //         'Name: <b>' + file.name + '</b> <br />' +
-                        //         'File Extension: <b>' + fileExtension + '</b> <br />' +
-                        //         'Size: <b>' + Math.round((file.size / 1024)) + '</b> KB <br />' +
-                        //         'Width: <b>' + w + '</b> <br />' +
-                        //         'Height: <b>' + h + '</b> <br />' +
-                        //         'Type: <b>' + file.type + '</b> <br />' +
-                        //         'Last Modified: <b>' + file.lastModifiedDate + '</b> <br />';
-                    }
-                };
-                reader.readAsDataURL(file);
-            }
-        }
-    }
 </script>

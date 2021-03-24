@@ -80,7 +80,7 @@
                                     <td scope="row"><?=$sno; $sno++;?></td>
                                     <td><?=$value['file_type'];?></td>
                                     <td><?=$value['type'];?></td>
-                                    <td><?=$value['media_name'];?></td>
+                                    <td><?=(empty($value['media_name']))?$value['media_video']:$value['media_name'];?></td>
                                     <td><?=$value['sequence'];?></td>
                                     <td align="center">
                                         <label class="switch">
@@ -93,6 +93,9 @@
                                     <td>
                                         <a href="<?=admin_url('edit-gallery/'.$value['id'])?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a>
                                         <a href="javascript:void(0)" class="btn btn-danger delete" data-id="<?=$value['id'];?>"><span class="mdi mdi-delete"></span></a>
+                                        <?php if($value['media_type'] != '3'){?>
+                                        <a href="javascript:void(0)" class="btn btn-primary view_detail" data-id="<?=$value['id'];?>" data-toggle="modal" data-target="#galleryDetail"><span class="mdi mdi-eye"></span></a>
+                                        <?php } ?>
                                     </td>
                                 </tr>
                                 <?php } } else {?>
@@ -108,4 +111,24 @@
         </div>
     </div>
 
+</div>
+
+<!-- Show gallery details modal -->
+<div class="modal fade" id="galleryDetail" tabindex="-1" role="dialog" aria-labelledby="galleryDetailLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content modal-lg">
+      <div class="modal-header">
+        <h5 class="modal-title" id="galleryDetailLabel">Gallery Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="details"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>

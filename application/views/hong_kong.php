@@ -32,36 +32,36 @@
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated">Wander into the heart of Asia's world city- Hong Kong</h5>
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hong-icon.svg"  alt="" class="d-table mx-auto">
+                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hong-icon.svg"  alt="" class="get-src d-table mx-auto">
                     <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1s"></div>
                 </div>
             </div>
             <div class="row px-md-5 px-3 mt-md-0 mt-5">
                 <div class="col-md-4">
                     <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5s">Eat</h2>
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hong-icon.svg"  alt="" class="d-table mx-auto">
+                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hong-icon.svg"  alt="" class="get-src d-table mx-auto">
                     <figure class="position-relative mb-0 mt-12">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e1.jpg"  alt="" class="">
                     </figure>
-                    <a href="" class="exploer-btn" data-type="eat" data-bs-toggle="modal" data-bs-target="#eatModal">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
+                    <a href="javascript:void(0)" class="exploer-btn" data-type="eat" >EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
                 </div>
                 <div class="col-md-4">
                     <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5s">Style</h2>
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hong-icon.svg"  alt="" class="d-table mx-auto">
+                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hong-icon.svg"  alt="" class="get-src d-table mx-auto">
                     <figure class="position-relative mb-0 mt-12">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e3.jpg"  alt="" class="">
 
                     </figure>
-                    <a href="" class="exploer-btn" data-type="style" data-bs-toggle="modal" data-bs-target="#styleModal">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
+                    <a href="javascript:void(0)" class="exploer-btn" data-type="style" >EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
                 </div>
                 <div class="col-md-4">
                     <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5s">Play</h2>
-                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hong-icon.svg"  alt="" class="d-table mx-auto">
+                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hong-icon.svg"  alt="" class="get-src d-table mx-auto">
                     <figure class="position-relative mb-0 mt-12">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e2.jpg"  alt="" class="">
                     </figure>
-                    <a href="" class="exploer-btn" data-type="play" data-bs-toggle="modal" data-bs-target="#playModal">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
+                    <a href="javascript:void(0)" class="exploer-btn" data-type="play" >EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
                 </div>
             </div>
@@ -159,6 +159,7 @@
         </div>
 
     </div>
+    <?php if(!empty($events)){?>
     <div class="looking-out gray-bg py-30">
     <div class="container">
         <div class="row">
@@ -172,20 +173,23 @@
             <div class="col-md-10">
                 <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                 <?php include('common_events.php');?>
+                <?php if(count($events) > 1){?>
                         <div class="d-flex position-absolute">
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hong-left.svg" alt="" class="w-100">
-                        </a>
-                        <a class="carousel-control-next ml-40" href="#carouselExampleControls" role="button" data-bs-slide="next">
-                            <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hong-right.svg" alt="" class="w-100">
-                        </a>
-                    </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-left.svg" alt="" class="w-100">
+                            </a>
+                            <a class="carousel-control-next ml-40" href="#carouselExampleControls" role="button" data-bs-slide="next">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-right.svg" alt="" class="w-100">
+                            </a>
+                        </div>
+                        <?php } ?>
                 </div>
             </div>
         </div>
         
     </div>
 </div>
+<?php } ?>
 
     <div class="hello-area looking-out gray-bg py-30 position-relative">
         <div class="container">

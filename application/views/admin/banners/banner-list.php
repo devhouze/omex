@@ -40,7 +40,7 @@
                     <select name="banner_type" class="form-control form-control-sm">
                         <option selected disabled>Select Banner Type</option>
                         <option value="1" <?php if($banner_type == "1"){ echo "selected";}?>>Home</option>
-                        <option value="2" <?php if($banner_type == "2"){ echo "selected";}?>>Event</option>
+                        <!-- <option value="2" <?php if($banner_type == "2"){ echo "selected";}?>>Event</option> -->
                         <option value="3" <?php if($banner_type == "3"){ echo "selected";}?>>Brand Directory</option>
                     </select>
                 </div>
@@ -68,7 +68,7 @@
                                     <th scope="col">Banner Type <a href="<?php echo admin_url('banners/'.$this->pagination->current_place().'/banner_type/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('banners/'.$this->pagination->current_place().'/banner_type/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
                                     <th scope="col">Banner Web</th>
                                     <th scope="col">Banner Mobile</th>
-                                    <th scope="col">Alt Tag</th>
+                                    <th scope="col">Banner Name</th>
                                     <th scope="col">Status</th>
                                     <th scope="col">Created By</th>
                                     <th scope="col">Created On <a href="<?php echo admin_url('banners/'.$this->pagination->current_place().'/created_on/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('banners/'.$this->pagination->current_place().'/created_on/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>

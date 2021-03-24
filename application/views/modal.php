@@ -1,14 +1,14 @@
 <div class="modal fade expoler-modal" id="eatModal" tabindex="-1" aria-labelledby="eatModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-zoom modal-sm">
-        <div class="modal-content" style="background-image: url('<?php echo BASE_URL(); ?>assets/images/public/home/modal.jpg');">
+        <div class="modal-content" style="background-image: url('<?php echo BASE_URL(); ?>assets/images/public/home/eat.jpg');">
             <div class="modal-body">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Eat</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="set-src d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
                 <ul id="eat">
 
                 </ul>
-                <a href="<?php echo base_url('brand-directory/null/restaurant'); ?>" class="exploer-btn">VIEW MORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="" class="ml-4"></a>
+                <a href="<?php echo base_url('brand-directory/eat'); ?>" class="exploer-btn-modal">VIEW MORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="" class="ms-2"></a>
             </div>
 
         </div>
@@ -21,11 +21,11 @@
             <div class="modal-body">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Style</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="set-src d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
                 <ul id="style">
 
                 </ul>
-                <a href="<?php echo base_url('brand-directory/null/fashion'); ?>" class="exploer-btn">VIEW MORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="" class="ml-4"></a>
+                <a href="<?php echo base_url('brand-directory/style'); ?>" class="exploer-btn-modal">VIEW MORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="" class="ms-2"></a>
             </div>
 
         </div>
@@ -34,15 +34,15 @@
 
 <div class="modal fade expoler-modal" id="playModal" tabindex="-1" aria-labelledby="playModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-zoom modal-sm">
-        <div class="modal-content" style="background-image: url('<?php echo BASE_URL(); ?>assets/images/public/home/modal.jpg');">
+        <div class="modal-content" style="background-image: url('<?php echo BASE_URL(); ?>assets/images/public/home/play.jpg');">
             <div class="modal-body">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0">Play</h5>
-                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
+                <img src="<?php echo BASE_URL(); ?>assets/images/public/home/flower.svg" alt="" class="set-src d-table mx-auto" data-aos="zoom-in" data-aos-duration="2000">
                 <ul id="play">
 
                 </ul>
-                <a href="<?php echo base_url('brand-directory/null/fitness'); ?>" class="exploer-btn">VIEW MORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="" class="ml-4"></a>
+                <a href="<?php echo base_url('brand-directory/play'); ?>" class="exploer-btn-modal">VIEW MORE <img src="<?php echo BASE_URL(); ?>assets/images/public/home/ex-arow.svg" alt="" class="ms-2"></a>
             </div>
 
         </div>
@@ -50,7 +50,7 @@
 </div>
 
 <div class="modal fade" id="image-modal" tabindex="-1" aria-labelledby="image-modalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
 
             <div class="modal-body">
@@ -78,7 +78,7 @@
 </div>
 
 <div class="modal fade" id="interior-image-modal" tabindex="-1" aria-labelledby="interior-image-modalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
 
             <div class="modal-body">
@@ -106,7 +106,7 @@
 </div>
 
 <div class="modal fade" id="exterior-image-modal" tabindex="-1" aria-labelledby="exterior-image-modalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
 
             <div class="modal-body">
@@ -134,7 +134,7 @@
 </div>
 
 <div class="modal fade" id="construction-image-modal" tabindex="-1" aria-labelledby="construction-image-modalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
 
             <div class="modal-body">
@@ -194,4 +194,11 @@ $(function() {
     $('#construction_images').carousel($this.data('slide'));
   });
 });
+</script>
+
+<script type="text/javascript">
+    $('.exploer-btn').click(function(){
+        var src=$('.get-src').attr('src');
+        $('.set-src').attr("src",src);
+    });
 </script>

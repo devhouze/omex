@@ -9,12 +9,20 @@
 <script src="<?php echo base_url(); ?>assets/js/admin/notify.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/admin/jquery-ui.js"></script>
 <script src="<?=base_url('assets/js/admin/timepicker.js')?>"></script>
-
+<script src="<?= base_url() ?>assets/js/admin/select2.js"></script>
 <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
 <script>
   $( function() {
     $( ".datepicker" ).datepicker();
+    $('.select-box').select2({
+      placeholder: "Select from the list",
+      allowClear: true
+    });
   } );
+
+  $(document).ready(function() {
+    
+  });
 </script>
 
 <script>
@@ -66,3 +74,68 @@
 <script src="<?=base_url();?>assets/js/admin/sleek.bundle.js"></script>
 
 
+
+<script>
+    function checkFileDetails(width,height,file) {
+        var fi = file;
+        if (fi.files.length > 0) {      // FIRST CHECK IF ANY FILE IS SELECTED.
+           
+            for (var i = 0; i <= fi.files.length - 1; i++) {
+                var fileName, fileExtension, fileSize, fileType, dateModified;
+
+                // FILE NAME AND EXTENSION.
+                fileName = fi.files.item(i).name;
+                fileExtension = fileName.replace(/^.*\./, '');
+
+                // CHECK IF ITS AN IMAGE FILE.
+                // TO GET THE IMAGE WIDTH AND HEIGHT, WE'LL USE fileReader().
+                if (fileExtension == 'png' || fileExtension == 'jpg' || fileExtension == 'jpeg') {
+                   // readImageFile(fi.files.item(i),width,height, fi);             // GET IMAGE INFO USING fileReader().
+                    $(fi).nextAll('span:first').text('');
+                    $('.submit-form').removeAttr('disabled');
+
+                }else{
+                     $('.submit-form').prop("disabled", true);
+                    $(fi).nextAll('span:first').text('Image format should be (jpeg,jpg,png)');
+                }
+               
+            }
+
+            // GET THE IMAGE WIDTH AND HEIGHT USING fileReader() API.
+            function readImageFile(file,width,heigh, fi) {
+                var reader = new FileReader(); // CREATE AN NEW INSTANCE.
+
+                reader.onload = function (e) {
+                    var img = new Image();      
+                    img.src = e.target.result;
+
+                    img.onload = function () {
+                        var w = this.width;
+                        var h = this.height;
+
+                        if(w>=width && h>=height){
+                          $(fi).nextAll('span:first').text('');
+                            $('.submit-form').removeAttr('disabled');
+                        }else{
+
+                            $('.submit-form').prop("disabled", true);
+                             $(fi).nextAll('span:first').text('For Best View Upload Images In '+width+' x '+height);
+                        }
+
+
+                        // document.getElementById('fileInfo').innerHTML =
+                        //     document.getElementById('fileInfo').innerHTML + '<br /> ' +
+                        //         'Name: <b>' + file.name + '</b> <br />' +
+                        //         'File Extension: <b>' + fileExtension + '</b> <br />' +
+                        //         'Size: <b>' + Math.round((file.size / 1024)) + '</b> KB <br />' +
+                        //         'Width: <b>' + w + '</b> <br />' +
+                        //         'Height: <b>' + h + '</b> <br />' +
+                        //         'Type: <b>' + file.type + '</b> <br />' +
+                        //         'Last Modified: <b>' + file.lastModifiedDate + '</b> <br />';
+                    }
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    }
+</script>

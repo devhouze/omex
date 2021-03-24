@@ -28,7 +28,7 @@ $(document).ready(function() {
 
     $('.delete').click(function() {
         var user_id = $(this).data('id');
-        if (confirm('Do you want to delte this user?')) {
+        if (confirm('Do you want to delete this user?')) {
             $.ajax({
                 type: 'post',
                 url: url + 'delete-user',

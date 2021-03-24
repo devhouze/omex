@@ -16,10 +16,9 @@ $(document).ready(function() {
                 $('.errors_msg').empty();
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
-                    $.notify(data.message, "success");
-                    setTimeout(function() { window.location.replace(url + 'contact-us'); }, 2000);
-                } else {
-                    $.notify(data.message, "error");
+                    $('#contact').trigger('reset');
+                    $('#thanksmodal').modal('show');
+                    $('.success_msg').html('Thank You! Omaxe WS Team will get in touch with you shortly.');
                 }
                 if (data.error) {
                     $.each(data.error, function(i, v) {

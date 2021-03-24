@@ -55,7 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 
-
+$route['whatenew'] = 'Welcome/whatenew';
 $route['athens'] = 'Welcome/athens';
 $route['portugal'] = 'Welcome/portugal';
 $route['hong-kong'] = 'Welcome/hong_kong';
@@ -66,16 +66,18 @@ $route['paris'] = 'Welcome/paris';
 $route['privacy-policy'] = 'Welcome/privacy_policy';
 $route['term-conditions'] = 'Welcome/term_conditions';
 $route['contact-us'] = 'Welcome/contact_us';
-$route['brand/(:num)'] = 'Welcome/brand/$1';
+$route['brand/(:any)'] = 'Welcome/brand/$1';
 $route['event'] = 'Welcome/event';
-$route['event-details/(:num)'] = 'Welcome/event_details/$1';
+$route['event-details/(:any)'] = 'Welcome/event_details/$1';
 $route['brand-directory'] = 'Welcome/brand_directory';
 //$1=> category, $2=>limit
 $route['brand-directory/(:any)/(:any)'] = 'Welcome/brand_directory/$1/$2';
 $route['brand-directory/(:any)'] = 'Welcome/brand_directory/$1';
 $route['search-brand'] = 'Welcome/search_brand';
 $route['sign-up'] = 'Welcome/sign_up';
+$route['register-in-event'] = 'Welcome/register';
 $route['get-brands'] = "Welcome/get_brands";
+$route['get-brands-like'] = "Welcome/get_brands_like";
 
 
 $route['admin'] = 'admin/Login_Controller/sign_in';
@@ -150,6 +152,8 @@ $route['admin/banners/(:num)/(:any)/(:any)'] = "admin/Banner_Controllers/banner_
 $route['admin/delete-banner'] = 'admin/Banner_Controllers/delete_banner';
 $route['admin/change-banner-status'] = 'admin/Banner_Controllers/change_banner_status';
 $route['admin/get-banner-details'] = "admin/Banner_Controllers/get_banner_details";
+$route['admin/get-link-data'] = "admin/Banner_Controllers/get_linking_data";
+
 // Gallery routes
 $route['admin/gallery'] = 'admin/Gallery_Controller/gallery_list';
 $route['admin/gallery/(:num)'] = 'admin/Gallery_Controller/gallery_list/$1';
@@ -158,6 +162,8 @@ $route['admin/add-gallery'] = 'admin/Gallery_Controller/add_gallery';
 $route['admin/edit-gallery/(:num)'] = 'admin/Gallery_Controller/edit_gallery/$1';
 $route['admin/change-gallery-status'] = 'admin/Gallery_Controller/change_gallery_status';
 $route['admin/delete-media'] = 'admin/Gallery_Controller/delete_media';
+$route['admin/get-sequence'] = 'admin/Gallery_Controller/get_sequence';
+$route['admin/gallery-details'] = 'admin/Gallery_Controller/get_gallery_details';
 
 $route['admin/404'] = 'admin/Admin_controller/error404';
 $route['admin/blank'] = 'admin/Admin_controller/blank';

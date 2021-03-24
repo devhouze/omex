@@ -12,7 +12,13 @@ $(document).ready(function() {
                 var data = $.parseJSON(data);
                 if (data.status > 0) {
                     $.notify(data.message, "success");
+                    if(data.user_type==2){
+                    window.location.replace(url + 'leads');
+
+                    }else{
                     window.location.replace(url + 'dashboard');
+
+                    }
                 } else {
                     $.notify(data.message, "error");
                 }

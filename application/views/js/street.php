@@ -66,9 +66,16 @@ $(document).on('click','.exploer-btn',function(){
     success:function(data){
       var data = $.parseJSON(data);
       value = '';
-      $.each(data,function(i,v){
-        value += '<li><a href="'+url+'brand/'+v.brand_id+'"></a><img src="'+url+'assets/images/public/brand/'+v.brand_logo+'" alt="'+v.logo_message+'"></li>';
-      })
+      if(data.length != 0){
+        $.each(data,function(i,v){
+        value += '<li><a href="'+url+'brand/'+v.brand_slug+'"></a><img src="'+url+'assets/images/public/brand/'+v.brand_logo+'" alt="'+v.logo_message+'"></li>';
+      });
+         $('#'+type+'Modal').modal('show');
+      }else{
+        $('#'+type+'Modal').modal('hide');
+        value += '<h4>No Data</h4>';
+        window.location.href = "brand-directory/"+type;
+      }
       if(type == "eat"){
         $('#eat').empty();
         $('#eat').append(value);
