@@ -263,7 +263,7 @@ class Welcome_model extends CI_Model
 
     public function get_what_new($id='',$street='')
     {
-        $this->db->select('brand_name, about_brand, brand_logo, brand_street, banner_web, banner_comment, logo_message');
+        $this->db->select('brand_name, about_brand, brand_logo, brand_street, banner_web, banner_comment, logo_message, brand_slug');
         $this->db->where('status',0);
         $this->db->where('status',0);
         $this->db->where('brand_label','New In');
