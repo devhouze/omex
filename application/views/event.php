@@ -129,7 +129,7 @@
                                                             <div class="col-md-4 ">
                                                             </div>
                                                             <div class="col-md-8 ">
-                                                                <p><?php echo $pe['about_event']; ?></p>
+                                                                <div class="content-box"><?php echo $pe['about_event']; ?></div>
                                                             </div>
                                                         </div>
                                                     </div>

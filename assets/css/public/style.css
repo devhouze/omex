@@ -821,7 +821,7 @@ span.text-danger.errors_msg {
     margin-right: auto;
     width: 7px;
     position: absolute;
-    bottom: 30px;
+    bottom: 7px;
     left: 26px;
     font-weight: 500;
 }
@@ -1840,7 +1840,11 @@ span.text-danger.errors_msg {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 100px;
+    bottom: 290px;
+}
+
+.whats-new .card {
+    padding: 30px 0;
 }
 
 .brand-directory-page .crsouls-btn-group button,
@@ -1985,6 +1989,13 @@ span.text-danger.errors_msg {
 
 
 /* what new page  */
+
+.about-brand .content-box {
+    letter-spacing: 1.4px;
+    line-height: 1.8;
+    overflow: hidden;
+    font-size: 20px;
+}
 
 a.brand-logo-link {
     position: absolute;

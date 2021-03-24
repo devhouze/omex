@@ -287,7 +287,7 @@
                                                             <div class="col-md-4 ">
                                                             </div>
                                                             <div class="col-md-8 ">
-                                                                <p><?php echo $offers['about_offer']; ?> </p>
+                                                                <div class="content-box"><?php echo $offers['about_offer']; ?> </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -346,6 +346,7 @@
                                                 <div class="img-box position-relative">
                                                     <img src="<?php echo base_url('assets/images/public/brand/' . $new['banner_web']); ?>" alt="<?php echo $new['banner_comment']; ?>" class="d-table ml-auto">
                                                     <div class="brnad-logo">
+                                                    <a href="<?php echo base_url('brand/'.$new['brand_slug']);?>" class="brand-logo-link"></a>
                                                         <img src="<?php echo base_url('assets/images/public/brand/' . $new['brand_logo']); ?>" alt="<?php echo $new['logo_message']; ?>" class="">
                                                     </div>
                                                 </div>
