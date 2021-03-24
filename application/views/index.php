@@ -609,11 +609,15 @@
     <div class="instagram py-30 gray-bg">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-8">
+
                     <!-- <img src="<?php echo base_url() ?>/assets/images/public/home/insta.svg" class="w-100"> -->
                     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
                     <div class="elfsight-app-cb04b2ca-91d4-4ff5-9460-e948763cbf75"></div>
 
+                </div>
+                <div class="col-md-4">
+                follow us
                 </div>
 
             </div>
