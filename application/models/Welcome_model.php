@@ -355,8 +355,8 @@ class Welcome_model extends CI_Model
 
             $this->db->group_start();
 
-            $this->db->where('find_in_set("'.$filter.'", b.brand_category) <> 0');
-            $this->db->or_where('find_in_set("'.$filter.'", b.brand_sub_category) <> 0');
+            $this->db->where('b.brand_category',$filter);
+            $this->db->or_where('b.brand_sub_category',$filter);
             
             $this->db->group_end();
 
