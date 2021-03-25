@@ -176,6 +176,28 @@ $(document).ready(function() {
         });
     })
 
+    // get sequence
+    $(document).ready(function() {
+        var media_type = $('#media_type option:selected').val();
+        var filter_type = $('.filter_type option:selected').val();
+        $.ajax({
+            type: 'post',
+            url: url + 'get-sequence',
+            data: { media_type: media_type, filter_type: filter_type },
+            dataType: 'json',
+            success: function(data) {
+                if (data != '') {
+                    $.each(data, function(i, v) {
+                        $('#sequence').find('option[value="' + v.sequence + '"]').prop('disabled', true);
+                    })
+                } else {
+                    $('#sequence').find('option').prop('disabled', false);
+                }
+
+            }
+        })
+    });
+
 
 
 });

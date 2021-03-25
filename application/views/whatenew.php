@@ -51,6 +51,7 @@
 
 
                     </div>
+                    <?php if(count($gallery)>1){?>
                     <div class="d-flex position-absolute btn-controls">
                         <a class="carousel-control-prev" href="#carouselExamControlss" role="button" data-bs-slide="prev">
                             <img src="<?php echo BASE_URL(); ?>assets/images/public/what/left.svg" alt="" class="w-100">
@@ -59,6 +60,7 @@
                             <img src="<?php echo BASE_URL(); ?>assets/images/public/what/right.svg" alt="" class="w-100">
                         </a>
                     </div>
+                    <?php } ?>
                 </div>
                 <div id="carouselExamControlssmob" class="carousel slide d-md-none d-block" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -72,6 +74,7 @@
                     <?php $i++;} }?>
 
                     </div>
+                    <?php if(count($gallery)>1){?>
                     <div class="d-flex position-absolute btn-controls">
                         <a class="carousel-control-prev" href="#carouselExamControlssmob" role="button" data-bs-slide="prev">
                             <img src="<?php echo BASE_URL(); ?>assets/images/public/what/left.svg" alt="" class="w-100">
@@ -80,6 +83,7 @@
                             <img src="<?php echo BASE_URL(); ?>assets/images/public/what/right.svg" alt="" class="w-100">
                         </a>
                     </div>
+                    <?php }?>
                 </div>
             </div>
         </div>
