@@ -1606,11 +1606,11 @@ span.text-danger.errors_msg {
     margin-left: 100px;
     background: #F25832;
     color: white;
-    padding: 110px;
+    padding: 60px 110px;
 }
 
 .about-brand .card .brand-content {
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 1.5px;
     color: white;
     line-height: 1.8;
@@ -2016,7 +2016,7 @@ span.text-danger.errors_msg {
     letter-spacing: 1.4px;
     line-height: 1.8;
     overflow: hidden;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 a.brand-logo-link {
