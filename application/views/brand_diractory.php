@@ -228,7 +228,7 @@
             </div>
             <div class="row justify-content-center mt-4">
                 <div class="col-md-10">
-                    <div class="row" id="brand">
+                    <div class="row " id="brand">
                         <?php if (!empty($brand)) {
                             foreach ($brand as $brands) { ?>
                                 <div class="col-md-3 col-6">

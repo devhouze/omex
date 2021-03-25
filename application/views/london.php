@@ -81,7 +81,7 @@
             </div>
             <div class="row mt-4 d-lg-flex d-none justify-content-center">
                 <div class="col-md-9">
-                <div class="owl-carousel slider wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
+                <div class="owl-carousel slider-desk wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
                         <div class="item">
                             <div class="row">
                                 <div class="col-md-4">
@@ -132,12 +132,12 @@
                         </div>
 
                     </div>
-                    <div class="slider-counter"></div>
+                    <div class="slider-counter counter-web"></div>
                 </div>
             </div>
             <div class="row mt-4 d-lg-none d-block">
                 <div class="col-md-12">
-                    <div class="owl-carousel slider wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
+                    <div class="owl-carousel slider-mob wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
 
                         <div class="item">
                             <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs1.jpg" alt="" class="d-table mx-auto"></figure>
@@ -177,7 +177,7 @@
                         </div>
 
                     </div>
-                    <div class="slider-counter"></div>
+                    <div class="slider-counter counter-mob"></div>
                 </div>
             </div>
         </div>

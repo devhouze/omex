@@ -41,7 +41,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="whats_new_dropdown">
                             <?php if(!empty($whats_new_link)){ foreach($whats_new_link as $link){ ?>
-                            <li><a href="<?php echo base_url('whatsnew/'.$link['name_slug'])?>"><?php echo $link['name'];?></a></li>
+                            <li><a href="<?php echo base_url('whatsnew/'.$link['name_slug'])?>" class="dropdown-item"><?php echo $link['name'];?></a></li>
                             <?php } } ?>
                                 
                             </ul>

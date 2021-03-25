@@ -100,9 +100,9 @@
                         <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
                         
                         <!-- AddToAny BEGIN -->
-                        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                        <div class="a2a_kit a2a_kit_size_32 a2a_default_style d-table mx-auto">
                             <a class="a2a_button_facebook"></a>
-                            <a class="a2a_button_whatsapp"></a>
+                            <a class="a2a_button_whatsapp ms-3"></a>
                         </div>
                         <script async src="https://static.addtoany.com/menu/page.js"></script>
                         <!-- AddToAny END -->
