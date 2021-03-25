@@ -32,6 +32,7 @@ class Gallery_Model extends MY_Model
         $this->db->select('distinct(sequence) as sequence');
         $this->db->where('media_type',$media_type);
         $this->db->where('filter_type',$filter_type);
+        $this->db->where('status !=',2);
         $query = $this->db->get('tbl_gallery');
         // echo $this->db->last_query(); die;
         if($query->num_rows() > 0){
