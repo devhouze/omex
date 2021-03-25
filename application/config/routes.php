@@ -55,7 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 
-$route['whatenew'] = 'Welcome/whatenew';
+$route['whatsnew/(:any)'] = 'Welcome/whatsnew/$1';
 $route['athens'] = 'Welcome/athens';
 $route['portugal'] = 'Welcome/portugal';
 $route['hong-kong'] = 'Welcome/hong_kong';
@@ -76,6 +76,7 @@ $route['brand-directory/(:any)'] = 'Welcome/brand_directory/$1';
 $route['search-brand'] = 'Welcome/search_brand';
 $route['sign-up'] = 'Welcome/sign_up';
 $route['register-in-event'] = 'Welcome/register';
+$route['whats-new-register'] = 'Welcome/register_whats_new';
 $route['get-brands'] = "Welcome/get_brands";
 $route['get-brands-like'] = "Welcome/get_brands_like";
 
@@ -142,6 +143,26 @@ $route['admin/edit-events/(:num)'] = 'admin/Event_Controller/edit_events/$1';
 $route['admin/delete-event'] = 'admin/Event_Controller/delete_event';
 $route['admin/change-event-status'] = 'admin/Event_Controller/change_event_status';
 $route['admin/event-details'] = 'admin/Event_Controller/get_event_details';
+
+// What's new page routes
+$route['admin/add-whats-new'] = "admin/WhatsNew_Controller/add_whats_new";
+$route['admin/edit-whats-new/(:num)'] = "admin/WhatsNew_Controller/edit_whats_new/$1";
+$route['admin/whats-new'] = "admin/WhatsNew_Controller/whats_new";
+$route['admin/whats-new/(:num)'] = "admin/WhatsNew_Controller/whats_new/$1";
+$route['admin/whats-new/(:num)/(:any)/(:any)'] = "admin/WhatsNew_Controller/whats_new/$1/$2/$3";
+$route['admin/whats-new-gallery'] = "admin/WhatsNew_Controller/whats_new_gallery";
+$route['admin/change-whats-new-status'] = 'admin/WhatsNew_Controller/change_whats_new_status';
+$route['admin/delete-whats-new'] = 'admin/WhatsNew_Controller/delete_whats_new';
+$route['admin/whats-new-details'] = 'admin/WhatsNew_Controller/whats_new_details';
+
+$route['admin/whats-new-gallery-details'] = 'admin/WhatsNew_Controller/whats_new_gallery_details';
+$route['admin/whats-new-gallery'] = 'admin/WhatsNew_Controller/whats_new_gallery';
+$route['admin/whats-new-gallery/(:num)'] = 'admin/WhatsNew_Controller/whats_new_gallery/$1';
+$route['admin/whats-new-gallery/(:num)/(:any)/(:any)'] = 'admin/WhatsNew_Controller/whats_new_gallery/$1/$2/$3';
+$route['admin/add-whats-new-gallery'] = 'admin/WhatsNew_Controller/add_whats_new_gallery';
+$route['admin/edit-whats-new-gallery/(:num)'] = 'admin/WhatsNew_Controller/edit_whats_new_gallery/$1';
+$route['admin/delete-whats-new-gallery'] = 'admin/WhatsNew_Controller/delete_whats_new_gallery';
+$route['admin/change-whats-new-gallery-status'] = 'admin/WhatsNew_Controller/change_whats_new_gallery_status';
 
 // Banners routes
 $route['admin/add-banners'] = "admin/Banner_Controllers/add_banners";

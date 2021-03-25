@@ -49,10 +49,10 @@ class Banner_Model extends MY_Model
             $this->db->select('brand_slug as slug, brand_name as name');
             $this->db->where('status',0);
             $query = $this->db->get('tbl_brand');
-        } elseif($media_type == 3){
-            $this->db->select('brand_slug as slug, brand_name as name');
+        } elseif($link_type == 3){
+            $this->db->select('name_slug as slug, name as name');
             $this->db->where('status',0);
-            $query = $this->db->get('tbl_brand');
+            $query = $this->db->get('tbl_whats_new');
         }
         if($query->num_rows() > 0){
             return $query->result_array();
