@@ -95,6 +95,10 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
+<<<<<<< HEAD
+=======
+
+>>>>>>> c5e40320a79a32f723a187cf6beb0c63982d000f
                 <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Share With Friends </h5>
                 <!-- https://www.facebook.com/omaxeworldsreet/ -->
                 <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
