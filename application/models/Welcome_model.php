@@ -413,6 +413,22 @@ class Welcome_model extends CI_Model
         }
         return [];
     }
+
+    public function get_whats_new($slug)
+    {
+        $query = $this->db->select('name, about, thumb_web, thumb_mob, alt_tag, show_reg_btn')
+                          ->where('status',0)
+                          ->where('name_slug',$slug)
+                          ->get('tbl_whats_new');
+        if($query->num_rows() > 0){
+            $data['whats_new'] = $query->row_array();
+            $gallery_query = $this->db->select('image_web, image_mob, image_alt')->get_where('tbl_whats_new_gallery',['whats_new_slug' => $slug]);
+            $data['gallery'] = ($gallery_query->num_rows() > 0)?$gallery_query->result_array():[];
+            return $data;
+        }
+        return [];
+    }
+    
 }
 
 ?>

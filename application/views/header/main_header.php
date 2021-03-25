@@ -55,10 +55,13 @@
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo base_url('event'); ?>">Events</a>
                         </li>
-
+                        <?php if(!empty($whats_new_link)){ foreach($whats_new_link as $link){ ?>
+                            <li><a href="<?php echo base_url('whatsnew/'.$link['name_slug'])?>"><?php echo $link['name'];?></a></li>
+                        <?php } } ?>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo base_url('contact-us'); ?>">Contact Us</a>
                         </li>
+                        
                     </ul>
                 </div>
             </div>
