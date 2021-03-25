@@ -1,4 +1,4 @@
-<?php $url=$this->uri->rsegment_array(); print_r($url[2]);?>
+<?php $url=$this->uri->rsegment_array(); ?>
 <header class="header">
     <div class="header-top primary-bg d-md-block d-none">
         <div class="container">
