@@ -56,11 +56,20 @@
                         <li class="nav-item">
                             <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='event' || $url[2]=='event_details'?'active':''; ?>" href="<?php echo base_url('event'); ?>">Events</a>
                         </li>
-                        <?php if(!empty($whats_new_link)){ foreach($whats_new_link as $link){ ?>
-                            <li><a href="<?php echo base_url('whatsnew/'.$link['name_slug'])?>"><?php echo $link['name'];?></a></li>
-                        <?php } } ?>
+                        
                         <li class="nav-item">
                             <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='contact-us'?'active':''; ?>" href="<?php echo base_url('contact-us'); ?>">Contact Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="whats_new_dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                What's New
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="whats_new_dropdown">
+                            <?php if(!empty($whats_new_link)){ foreach($whats_new_link as $link){ ?>
+                            <li><a href="<?php echo base_url('whatsnew/'.$link['name_slug'])?>"><?php echo $link['name'];?></a></li>
+                            <?php } } ?>
+                                
+                            </ul>
                         </li>
                         
                     </ul>

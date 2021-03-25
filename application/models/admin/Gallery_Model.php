@@ -33,6 +33,7 @@ class Gallery_Model extends MY_Model
         $this->db->where('media_type',$media_type);
         $this->db->where('filter_type',$filter_type);
         $query = $this->db->get('tbl_gallery');
+        // echo $this->db->last_query(); die;
         if($query->num_rows() > 0){
             return $query->result_array();
         }
