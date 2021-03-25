@@ -31,14 +31,14 @@
                     <ul class="navbar-nav ms-auto">
                         
                         <li class="nav-item">
-                            <a class="nav-link active" href="<?php echo base_url(); ?>">Home</a>
+                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='index.php'?'active':''; ?>" href="<?php echo base_url(); ?>" >Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle <?php echo basename($_SERVER['PHP_SELF'])=='london' || basename($_SERVER['PHP_SELF'])=='paris' || basename($_SERVER['PHP_SELF'])=='athens' || basename($_SERVER['PHP_SELF'])=='portugal' || basename($_SERVER['PHP_SELF'])=='amsterdam' || basename($_SERVER['PHP_SELF'])=='san-francisco' || basename($_SERVER['PHP_SELF'])=='hong-kong'?'active':''; ?>" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Street
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="<?php echo base_url('london'); ?>">London Street</a></li>
+                                <li><a class="dropdown-item" href="<?php echo base_url('london'); ?>" >London Street</a></li>
                                 <li><a class="dropdown-item" href="<?php echo base_url('paris'); ?>">Paris Street</a></li>
                                 <li><a class="dropdown-item" href="<?php echo base_url('athens'); ?>">Athens Street</a></li>
                                 <li><a class="dropdown-item" href="<?php echo base_url('portugal'); ?>">Portugal Street</a></li>
@@ -50,16 +50,16 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('brand-directory'); ?>">Brands</a>
+                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='brand-directory'?'active':''; ?>" href="<?php echo base_url('brand-directory'); ?>">Brands</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('event'); ?>">Events</a>
+                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='event'?'active':''; ?>" href="<?php echo base_url('event'); ?>">Events</a>
                         </li>
                         <?php if(!empty($whats_new_link)){ foreach($whats_new_link as $link){ ?>
                             <li><a href="<?php echo base_url('whatsnew/'.$link['name_slug'])?>"><?php echo $link['name'];?></a></li>
                         <?php } } ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('contact-us'); ?>">Contact Us</a>
+                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='contact-us'?'active':''; ?>" href="<?php echo base_url('contact-us'); ?>">Contact Us</a>
                         </li>
                         
                     </ul>
