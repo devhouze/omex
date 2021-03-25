@@ -43,7 +43,7 @@
                     <figure class="position-relative mb-0 mt-12">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e1.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
                     </figure>
-                    <a href="" class="exploer-btn" data-type="eat">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
+                    <a href="javascript:void(0)" class="exploer-btn" data-type="eat" >EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
                 </div>
                 <div class="col-md-4">
@@ -53,7 +53,7 @@
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e3.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
 
                     </figure>
-                    <a href="" class="exploer-btn" data-type="style">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
+                    <a href="javascript:void(0)" class="exploer-btn" data-type="style" >EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
                 </div>
                 <div class="col-md-4">
@@ -62,7 +62,7 @@
                     <figure class="position-relative mb-0 mt-12">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/e2.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
                     </figure>
-                    <a href="" class="exploer-btn" data-type="play">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
+                    <a href="javascript:void(0)" class="exploer-btn" data-type="play" >EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
                 </div>
             </div>
