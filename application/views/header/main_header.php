@@ -1,3 +1,4 @@
+<?php $url=$this->uri->rsegment_array(); ?>
 <header class="header">
     <div class="header-top primary-bg d-md-block d-none">
         <div class="container">
@@ -50,10 +51,10 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='brand-directory'?'active':''; ?>" href="<?php echo base_url('brand-directory'); ?>">Brands</a>
+                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='brand-directory' || $url[2]=='brand'?'active':''; ?>" href="<?php echo base_url('brand-directory'); ?>">Brands</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='event'?'active':''; ?>" href="<?php echo base_url('event'); ?>">Events</a>
+                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='event' || $url[2]=='event_details'?'active':''; ?>" href="<?php echo base_url('event'); ?>">Events</a>
                         </li>
                         <?php if(!empty($whats_new_link)){?>
                         <li class="nav-item dropdown">
