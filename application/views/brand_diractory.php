@@ -282,7 +282,7 @@
                                             <div class="row justify-content-center">
                                                 <div class="col-md-12 position-relative">
                                                     <figure> <img src="<?php echo base_url('assets/images/public/brand/' . $offers['offer_thumbnail']); ?>" alt="<?php echo $offers['thumbnail_alt']; ?>" class=""></figure>
-                                                    <div class="card  border-0 rounded-0">
+                                                    <div class="card mt-60 border-0 rounded-0">
                                                         <div class="row">
                                                             <div class="col-md-4 ">
                                                             </div>
