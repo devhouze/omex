@@ -263,7 +263,7 @@ class Welcome_model extends CI_Model
 
     public function get_what_new($id='',$street='')
     {
-        $this->db->select('brand_name, about_brand, brand_logo, brand_street, banner_web, banner_comment, logo_message');
+        $this->db->select('brand_name, about_brand, brand_logo, brand_street, banner_web, banner_comment, logo_message, brand_slug');
         $this->db->where('status',0);
         $this->db->where('status',0);
         $this->db->where('brand_label','New In');
@@ -355,8 +355,8 @@ class Welcome_model extends CI_Model
 
             $this->db->group_start();
 
-            $this->db->where('find_in_set("'.$filter.'", b.brand_category) <> 0');
-            $this->db->or_where('find_in_set("'.$filter.'", b.brand_sub_category) <> 0');
+            $this->db->where('b.brand_category',$filter);
+            $this->db->or_where('b.brand_sub_category',$filter);
             
             $this->db->group_end();
 
