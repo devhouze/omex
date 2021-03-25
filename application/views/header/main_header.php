@@ -49,17 +49,12 @@
                                 
                             </ul>
                         </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='whatenew'?'active':''; ?>" href="<?php echo base_url('whatenew'); ?>">What’s New</a>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='brand-directory'?'active':''; ?>" href="<?php echo base_url('brand-directory'); ?>">Brands</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='event'?'active':''; ?>" href="<?php echo base_url('event'); ?>">Events</a>
                         </li>
-                        
 
                         <li class="nav-item">
                             <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='contact-us'?'active':''; ?>" href="<?php echo base_url('contact-us'); ?>">Contact Us</a>
