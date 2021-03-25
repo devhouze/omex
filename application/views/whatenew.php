@@ -103,7 +103,9 @@
                     <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo current_url(); ?>" target="_blank"><img src="<?php echo base_url(); ?>assets/images/public/what/fb.svg" alt="facebook"></a></li>
                     <li><a href="whatsapp://send?text=<?php echo current_url();?>" data-action="share/whatsapp/share" target="_blank"><img src="<?php echo base_url(); ?>assets/images/public/what/what.svg" alt="whatsapp"></a></li>
 
-                    <li></li>
+                </ul>
+                    <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script> -->
+<!-- <div class="elfsight-app-54332c01-6199-42dc-8344-00f833f7f2af"></div> -->
             </div>
         </div>
     </div>
