@@ -34,6 +34,20 @@
                         <li class="nav-item">
                             <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='index.php'?'active':''; ?>" href="<?php echo base_url(); ?>" >Home</a>
                         </li>
+                         <?php if(count($whats_new_link)>0){ ?>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle <?php echo $url[2]=='whatsnew'?'active':''; ?>" href="#" id="whats_new_dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                What's New
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="whats_new_dropdown">
+                            <?php if(!empty($whats_new_link)){ foreach($whats_new_link as $link){ ?>
+                            <li><a href="<?php echo base_url('whatsnew/'.$link['name_slug'])?>" class="dropdown-item"><?php echo $link['name'];?></a></li>
+                            <?php } } ?>
+                                
+                            </ul>
+                        </li>
+                    <?php } ?>
+                        
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle <?php echo basename($_SERVER['PHP_SELF'])=='london' || basename($_SERVER['PHP_SELF'])=='paris' || basename($_SERVER['PHP_SELF'])=='athens' || basename($_SERVER['PHP_SELF'])=='portugal' || basename($_SERVER['PHP_SELF'])=='amsterdam' || basename($_SERVER['PHP_SELF'])=='san-francisco' || basename($_SERVER['PHP_SELF'])=='hong-kong'?'active':''; ?>" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Street
@@ -60,20 +74,7 @@
                         <li class="nav-item">
                             <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='contact-us'?'active':''; ?>" href="<?php echo base_url('contact-us'); ?>">Contact Us</a>
                         </li>
-                        <?php if(count($whats_new_link)>1){ ?>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle <?php echo $url[2]=='whatsnew'?'active':''; ?>" href="#" id="whats_new_dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                What's New
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="whats_new_dropdown">
-                            <?php if(!empty($whats_new_link)){ foreach($whats_new_link as $link){ ?>
-                            <li><a href="<?php echo base_url('whatsnew/'.$link['name_slug'])?>"><?php echo $link['name'];?></a></li>
-                            <?php } } ?>
-                                
-                            </ul>
-                        </li>
-                    <?php } ?>
-                        
+                       
                     </ul>
                 </div>
             </div>

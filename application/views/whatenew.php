@@ -27,6 +27,7 @@
         <?php }?>
     </div>
 </div>
+<?php if(count($gallery)>0){ ?>
 <div class="about-galary hello-area looking-out py-60 py-sm-30 gray-bg">
     <div class="container">
         <div class="row">
@@ -43,7 +44,7 @@
                     <?php if(!empty($gallery)){ $i = 1; foreach($gallery as $img){?>
                         <div class="carousel-item <?php if($i == 1){echo "active"; }?>">
                             <figure class="position-relative mb-0">
-                                <img src="<?php echo BASE_URL('assets/images/public/home/'.$img['image_mob']); ?>" alt="<?php echo $img['image_alt']?>" class="w-100">
+                                <img src="<?php echo BASE_URL('assets/images/public/home/'.$img['image_web']); ?>" alt="<?php echo $img['image_alt']?>" class="w-100">
 
                             </figure>
                         </div>
@@ -89,22 +90,26 @@
         </div>
     </div>
 </div>
+<?php } ?>
 <div class="share-friends gray-bg pt-30 pb-60">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
-                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Share With Friends</h5>
+                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Share With Friends </h5>
                 <!-- https://www.facebook.com/omaxeworldsreet/ -->
                 <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
                 <ul class="share-links wow fadeInDown animated">
                     <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo current_url(); ?>" target="_blank"><img src="<?php echo base_url(); ?>assets/images/public/what/fb.svg" alt="facebook"></a></li>
                     <li><a href="whatsapp://send?text=<?php echo current_url();?>" data-action="share/whatsapp/share" target="_blank"><img src="<?php echo base_url(); ?>assets/images/public/what/what.svg" alt="whatsapp"></a></li>
 
-                    <li></li>
+                </ul>
+                    <!-- <script src="https://apps.elfsight.com/p/platform.js" defer></script> -->
+<!-- <div class="elfsight-app-54332c01-6199-42dc-8344-00f833f7f2af"></div> -->
             </div>
         </div>
     </div>
 </div>
+
 
 <!-- Modal to show register form -->
 <div class="modal fade" id="registernow" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
