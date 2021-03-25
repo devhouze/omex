@@ -157,7 +157,7 @@
                                 $row=count($main_category);
                                 if (!empty($main_category)) {
                                     foreach ($main_category as $value) { ?>
-                                        <li><a href="javascript:void(0)" class="category" data-category="<?php echo $value['name'] ?>"><?php echo $value['name'] ?></a></li>
+                                        <li><a href="#filter-box" class="category" data-category="<?php echo $value['name'] ?>"><?php echo $value['name'] ?></a></li>
                                         <?php if ($i % 4 == 0 && $i<$row) { ?>
                             </ul>
                         </div>
