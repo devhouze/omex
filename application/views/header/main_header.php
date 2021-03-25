@@ -60,8 +60,9 @@
                         <li class="nav-item">
                             <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='contact-us'?'active':''; ?>" href="<?php echo base_url('contact-us'); ?>">Contact Us</a>
                         </li>
+                        <?php if(count($whats_new_link)>1){ ?>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="whats_new_dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle <?php echo $url[2]=='whatsnew'?'active':''; ?>" href="#" id="whats_new_dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 What's New
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="whats_new_dropdown">
@@ -71,6 +72,7 @@
                                 
                             </ul>
                         </li>
+                    <?php } ?>
                         
                     </ul>
                 </div>
