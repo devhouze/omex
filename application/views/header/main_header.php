@@ -1,4 +1,4 @@
-<?php $url=$this->uri->rsegment_array(); ?>
+<?php $url=$this->uri->rsegment_array();  ?>
 <header class="header">
     <div class="header-top primary-bg d-md-block d-none">
         <div class="container">
@@ -32,7 +32,7 @@
                     <ul class="navbar-nav ms-auto">
                         
                         <li class="nav-item">
-                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='index.php'?'active':''; ?>" href="<?php echo base_url(); ?>" >Home</a>
+                            <a class="nav-link <?php echo  $url[2]=='index'?'active':''; ?>" href="<?php echo base_url(); ?>" >Home</a>
                         </li>
                          <?php if(count($whats_new_link)>0){ ?>
                         <li class="nav-item dropdown">
@@ -49,7 +49,7 @@
                     <?php } ?>
                         
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle <?php echo basename($_SERVER['PHP_SELF'])=='london' || basename($_SERVER['PHP_SELF'])=='paris' || basename($_SERVER['PHP_SELF'])=='athens' || basename($_SERVER['PHP_SELF'])=='portugal' || basename($_SERVER['PHP_SELF'])=='amsterdam' || basename($_SERVER['PHP_SELF'])=='san-francisco' || basename($_SERVER['PHP_SELF'])=='hong-kong'?'active':''; ?>" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle <?php echo $url[2]=='london' || $url[2]=='paris' || $url[2]=='athens' || $url[2]=='portugal' || $url[2]=='amsterdam' || $url[2]=='san_francisco' || $url[2]=='hong_kong'?'active':''; ?>" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Street
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -65,14 +65,14 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='brand-directory' || $url[2]=='brand'?'active':''; ?>" href="<?php echo base_url('brand-directory'); ?>">Brands</a>
+                            <a class="nav-link <?php echo $url[2]=='brand-directory' || $url[2]=='brand_directory ' || $url[2]=='brand'?'active':''; ?>" href="<?php echo base_url('brand-directory'); ?>">Brands</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='event' || $url[2]=='event_details'?'active':''; ?>" href="<?php echo base_url('event'); ?>">Events</a>
+                            <a class="nav-link <?php echo $url[2]=='event' || $url[2]=='event' || $url[2]=='event_details'?'active':''; ?>" href="<?php echo base_url('event'); ?>">Events</a>
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='contact-us'?'active':''; ?>" href="<?php echo base_url('contact-us'); ?>">Contact Us</a>
+                            <a class="nav-link <?php echo $url[2]=='contact-us' || $url[2]=='contact_us'?'active':''; ?>" href="<?php echo base_url('contact-us'); ?>">Contact Us</a>
                         </li>
                        
                     </ul>
