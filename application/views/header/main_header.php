@@ -65,7 +65,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo $url[2]=='brand-directory' || $url[2]=='brand_directory ' || $url[2]=='brand'?'active':''; ?>" href="<?php echo base_url('brand-directory'); ?>">Brands</a>
+                            <a class="nav-link <?php echo $url[2]=='brand-directory' || $url[2]=='brand_directory' || $url[2]=='brand'?'active':''; ?>" href="<?php echo base_url('brand-directory'); ?>">Brands</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link <?php echo $url[2]=='event' || $url[2]=='event' || $url[2]=='event_details'?'active':''; ?>" href="<?php echo base_url('event'); ?>">Events</a>
