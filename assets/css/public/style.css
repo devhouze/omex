@@ -45,6 +45,7 @@ header.header.sticky {
 
 .main-menu .navbar-nav li a {
     color: #083d68 !important;
+    text-transform: capitalize !important;
 }
 
 .main-menu .dropdown-menu li+li a {
