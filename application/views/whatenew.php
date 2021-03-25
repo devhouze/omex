@@ -43,7 +43,7 @@
                     <?php if(!empty($gallery)){ $i = 1; foreach($gallery as $img){?>
                         <div class="carousel-item <?php if($i == 1){echo "active"; }?>">
                             <figure class="position-relative mb-0">
-                                <img src="<?php echo BASE_URL('assets/images/public/home/'.$img['image_mob']); ?>" alt="<?php echo $img['image_alt']?>" class="w-100">
+                                <img src="<?php echo BASE_URL('assets/images/public/home/'.$img['image_web']); ?>" alt="<?php echo $img['image_alt']?>" class="w-100">
 
                             </figure>
                         </div>
