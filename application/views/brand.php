@@ -35,8 +35,8 @@
 
                         <div class="carousel-inner postion-relative ">
                             <?php if(is_file('assets/images/public/brand/'.$about_brand['banner_mobile'])){?>
-                            <div class="carousel-item active">
-                                <img src="<?php echo BASE_URL('assets/images/public/brand/'.$about_brand['banner_mobile']); ?>" alt="<?php echo $about_brand['banner_comment']; ?>" class="w-100">
+                            <div class="carousel-item active" style="background-image: url('<?php echo BASE_URL('assets/images/public/brand/'.$about_brand['banner_mobile']); ?>" alt="<?php echo $about_brand['banner_comment']; ?>');">
+                            
                             </div>
                             <?php } ?>
 

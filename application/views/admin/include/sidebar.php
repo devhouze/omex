@@ -72,6 +72,30 @@
               </ul>
             </li>
 
+            <li class="has-sub <?php if($url == "add-whats-new" || $url == "edit-whats-new"){ ?>active expand<?php } ?>">
+              <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#whats_new" aria-expanded="false" aria-controls="whats_new">
+                <i class="mdi mdi-pencil-box-multiple"></i>
+                <span class="nav-text">What's New</span> <b class="caret"></b>
+              </a>
+              <ul class="collapse" id="whats_new" data-parent="#sidebar-menu">
+                <div class="sub-menu">
+
+                  <li>
+                    <a class="sidenav-item-link" href="<?php echo admin_url('whats-new')?>">
+                      <span class="nav-text">What's New List</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="sidenav-item-link" href="<?php echo admin_url('whats-new-gallery')?>">
+                      <span class="nav-text">What's New Gallery</span>
+                    </a>
+                  </li>
+
+                </div>
+              </ul>
+            </li>
+
             <li class="has-sub">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#leads" aria-expanded="false" aria-controls="leads">
                 <i class="mdi mdi-pencil-box-multiple"></i>

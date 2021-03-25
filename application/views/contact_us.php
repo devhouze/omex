@@ -7,7 +7,7 @@
                     <div class="card py-60 px-60 px-20-sm py-sm-30 ">
                         <div class="row">
                             <div class="col-md-12">
-                                <h1 class="fz40 pr-font text-white d-table mx-auto text-center">Get in touch</h1>
+                                <h1 class="fz40 pr-font text-white d-table mx-auto text-center">Get in Touch</h1>
                             </div>
                         </div>
                         <form action="<?=base_url('contact-us')?>" method="post" id="contact">
@@ -43,7 +43,7 @@
 
                                         <div class="form-floating">
                                             <select class="form-select select-box" name="query_type" id="floatingSelect" aria-label="Floating label select example">
-                                                <option selected disabled>Select One</option>
+                                                
                                                 <option value="General Enquiry">General Enquiry</option>
                                                 <option value="Promotion/Events">Promotion/Events</option>
                                                 <option value="Customer feedback">Customer feedback</option>

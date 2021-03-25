@@ -19,14 +19,14 @@ class Welcome extends CI_Controller {
 		$data['exterior_gallery'] = $this->wm->get_gallery(2);
 		$data['construction_gallery'] = $this->wm->get_gallery(3);
 		$data['gallery_video'] = $this->wm->gallery_video();
-		// Get Instagram feeds
-		// echo "<pre>"; print_r($data['banner']); die;
+		$data['whats_new_link'] = $this->wm->get_data_array('tbl_whats_new',"name_slug,name",$where = "");
+		// print_r($data['whats_new_link']); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
-		$this->load->view('header/main_header');
+		$this->load->view('header/main_header',$data);
 		$this->load->view('index',$data);
 		$this->load->view('footer/footer_signup');
 		$this->load->view('footer/main_footer');
@@ -41,13 +41,14 @@ class Welcome extends CI_Controller {
 	{
 		$events = $this->wm->get_events_by_street('Athens Street');
 		$data['events'] = $this->check_event_expiry($events);
+		$data['whats_new_link'] = $this->wm->get_data_array('tbl_whats_new',"name_slug,name",$where = "");
 		// echo "<pre>"; print_r($data); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
-		$this->load->view('header/main_header');
+		$this->load->view('header/main_header',$data);
 		$this->load->view('athens',$data);
 		$this->load->view('more_expoler');
 		$this->load->view('footer/footer_signup');
@@ -63,12 +64,13 @@ class Welcome extends CI_Controller {
 	{
 		$events = $this->wm->get_events_by_street('Portugal Street');
 		$data['events'] = $this->check_event_expiry($events);
+		$data['whats_new_link'] = $this->wm->get_data_array('tbl_whats_new',"name_slug,name",$where = "");
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
-		$this->load->view('header/main_header');
+		$this->load->view('header/main_header',$data);
 		$this->load->view('portugal',$data);
 		$this->load->view('more_expoler');
 		$this->load->view('footer/footer_signup');
@@ -84,12 +86,13 @@ class Welcome extends CI_Controller {
 	{
 		$events = $this->wm->get_events_by_street('Hong Kong Street');
 		$data['events'] = $this->check_event_expiry($events);
+		$data['whats_new_link'] = $this->wm->get_data_array('tbl_whats_new',"name_slug,name",$where = "");
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
-		$this->load->view('header/main_header');
+		$this->load->view('header/main_header',$data);
 		$this->load->view('hong_kong',$data);
 		$this->load->view('more_expoler');
 		$this->load->view('footer/footer_signup');
@@ -105,13 +108,14 @@ class Welcome extends CI_Controller {
 	{
 		$events = $this->wm->get_events_by_street('Amsterdam Street');
 		$data['events'] = $this->check_event_expiry($events);
+		$data['whats_new_link'] = $this->wm->get_data_array('tbl_whats_new',"name_slug,name",$where = "");
 		// echo "<pre>"; print_r($data); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
-		$this->load->view('header/main_header');
+		$this->load->view('header/main_header',$data);
 		$this->load->view('amsterdam',$data);
 		$this->load->view('more_expoler');
 		$this->load->view('footer/footer_signup');
@@ -127,12 +131,13 @@ class Welcome extends CI_Controller {
 	{
 		$events = $this->wm->get_events_by_street('San Francisco Street');
 		$data['events'] = $this->check_event_expiry($events);
+		$data['whats_new_link'] = $this->wm->get_data_array('tbl_whats_new',"name_slug,name",$where = "");
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
-		$this->load->view('header/main_header');
+		$this->load->view('header/main_header',$data);
 		$this->load->view('san_francisco',$data);
 		$this->load->view('more_expoler');
 		$this->load->view('footer/footer_signup');
@@ -144,16 +149,18 @@ class Welcome extends CI_Controller {
 		$this->load->view('js/common');
 		$this->load->view('footer/body_end');
 	}
-	public function whatenew()
+	public function whatsnew($slug)
 	{
-		
+		$data = $this->wm->get_whats_new($slug);
+		$data['whats_new_link'] = $this->wm->get_data_array('tbl_whats_new',"name_slug,name",$where = "");
+		// echo "<pre>"; print_r($data); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
-		$this->load->view('header/main_header');
-		$this->load->view('whatenew');
+		$this->load->view('header/main_header',$data);
+		$this->load->view('whatenew',$data);
 		$this->load->view('footer/footer_signup');
 		$this->load->view('footer/main_footer');
 		$this->load->view('modal');
@@ -162,8 +169,37 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer/body_end');
 	}
 
+	public function register_whats_new()
+	{
+		$this->form_validation->set_rules('name','Name','required');
+		$this->form_validation->set_rules('email','Email','required');
+		$this->form_validation->set_rules('message','Message','required');
+		$this->form_validation->set_rules('contact','Mobile Number','required|regex_match[/^[0-9]{10,15}$/]');
+
+		if($this->form_validation->run()){
+			$data_array = array(
+				'name'		=> $this->input->post('name'),
+				'email'		=> $this->input->post('email'),
+				'contact'	=> $this->input->post('contact'),
+				'source'	=> 'whats_new/'.$this->input->post('whats_new_name'),
+				'message'	=> $this->input->post('message'),
+			);
+
+			$save = $this->wm->insert_data('tbl_leads',$data_array);
+			if($save){
+				echo json_encode(['message' => 'Data saved successfully.', 'status' => 1]);
+			} else {
+				echo json_encode(['message' => 'Something went wrong!.','status' => 0]);
+			}
+		} else {
+			echo json_encode(['message' => 'Something went wrong!.', 'error' => $this->form_validation->error_array(), 'status' => 0]);
+		}
+		exit;
+	}
+
 	public function london()
 	{
+		$data['whats_new_link'] = $this->wm->get_data_array('tbl_whats_new',"name_slug,name",$where = "");
 		$events = $this->wm->get_events_by_street('London Street');
 		$data['events'] = $this->check_event_expiry($events);
 		$this->load->view('header/header_start');
@@ -171,7 +207,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('header/owl_css');
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
-		$this->load->view('header/main_header');
+		$this->load->view('header/main_header',$data);
 		$this->load->view('london',$data);
 		$this->load->view('more_expoler');
 		$this->load->view('footer/footer_signup');
@@ -185,6 +221,7 @@ class Welcome extends CI_Controller {
 	}
 	public function paris()
 	{
+		$data['whats_new_link'] = $this->wm->get_data_array('tbl_whats_new',"name_slug,name",$where = "");
 		$events = $this->wm->get_events_by_street('Paris Street');
 		$data['events'] = $this->check_event_expiry($events);
 		$this->load->view('header/header_start');
@@ -192,7 +229,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('header/owl_css');
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
-		$this->load->view('header/main_header');
+		$this->load->view('header/main_header',$data);
 		$this->load->view('paris',$data);
 		$this->load->view('more_expoler');
 		$this->load->view('footer/footer_signup');
@@ -206,13 +243,14 @@ class Welcome extends CI_Controller {
 	}
 	public function privacy_policy()
 	{
+		$data['whats_new_link'] = $this->wm->get_data_array('tbl_whats_new',"name_slug,name",$where = "");
 		$data['events'] = $this->wm->get_events();
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
-		$this->load->view('header/main_header');
+		$this->load->view('header/main_header',$data);
 		$this->load->view('privacy_policy');
 		$this->load->view('footer/footer_signup');
 		$this->load->view('footer/main_footer');
@@ -223,13 +261,14 @@ class Welcome extends CI_Controller {
 	
 	public function term_conditions()
 	{
+		$data['whats_new_link'] = $this->wm->get_data_array('tbl_whats_new',"name_slug,name",$where = "");
 		$data['events'] = $this->wm->get_events();
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
-		$this->load->view('header/main_header');
+		$this->load->view('header/main_header',$data);
 		$this->load->view('term_conditions');
 		$this->load->view('footer/footer_signup');
 		$this->load->view('footer/main_footer');
@@ -239,6 +278,7 @@ class Welcome extends CI_Controller {
 	}
 	public function brand($id)
 	{
+		$data['whats_new_link'] = $this->wm->get_data_array('tbl_whats_new',"name_slug,name",$where = "");
 		$data['events'] = $this->wm->get_events();
 		$data['about_brand'] = $this->wm->get_about_brand($id);
 
@@ -257,7 +297,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('header/owl_css');
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
-		$this->load->view('header/main_header');
+		$this->load->view('header/main_header',$data);
 		$this->load->view('brand',$data);
 		$this->load->view('more_expoler');
 		$this->load->view('footer/footer_signup');
@@ -270,6 +310,7 @@ class Welcome extends CI_Controller {
 	}
 	public function event()
 	{
+		$data['whats_new_link'] = $this->wm->get_data_array('tbl_whats_new',"name_slug,name",$where = "");
 		$events = $this->wm->get_events();
 		$data['events'] = $this->check_event_expiry($events);
 		$data['what_new'] = $this->wm->get_what_new();
@@ -280,7 +321,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('header/owl_css');
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
-		$this->load->view('header/main_header');
+		$this->load->view('header/main_header',$data);
 		$this->load->view('event',$data);
 		$this->load->view('more_expoler');
 		$this->load->view('footer/footer_signup');
@@ -294,6 +335,7 @@ class Welcome extends CI_Controller {
 
 	public function event_details($slug)
 	{
+		$data['whats_new_link'] = $this->wm->get_data_array('tbl_whats_new',"name_slug,name",$where = "");
 		$data['event'] = $this->wm->get_event_detail($slug);
 		$data['what_new'] = $this->wm->get_what_new();
 		$past_event= $this->wm->get_past_events();
@@ -304,7 +346,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('header/owl_css');
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
-		$this->load->view('header/main_header');
+		$this->load->view('header/main_header',$data);
 		$this->load->view('event-details',$data);
 		$this->load->view('more_expoler');
 		$this->load->view('footer/footer_signup');
@@ -318,6 +360,7 @@ class Welcome extends CI_Controller {
 
 	public function brand_directory($category=null,$limit=8)
 	{
+		$data['whats_new_link'] = $this->wm->get_data_array('tbl_whats_new',"name_slug,name",$where = "");
 		$category = str_replace('%20',' ',$category);
 		$data['brand_banner'] = $this->wm->get_brand_directory_banner();
 		$data['brand_offers'] = $this->wm->get_brand_offers();
@@ -338,7 +381,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('header/select2_css');
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
-		$this->load->view('header/main_header');
+		$this->load->view('header/main_header',$data);
 		$this->load->view('brand_diractory',$data);
 		$this->load->view('more_expoler');
 		$this->load->view('footer/footer_signup');
@@ -353,6 +396,7 @@ class Welcome extends CI_Controller {
 	
 	public function contact_us()
 	{
+		$data['whats_new_link'] = $this->wm->get_data_array('tbl_whats_new',"name_slug,name",$where = "");
 		if($this->input->post()){
 			$this->form_validation->set_rules('name','Name','required');
 			$this->form_validation->set_rules('email','Email','required');
@@ -386,7 +430,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('header/select2_css');
 		$this->load->view('header/header_end');
 		$this->load->view('header/body_start');
-		$this->load->view('header/main_header');
+		$this->load->view('header/main_header',$data);
 		$this->load->view('contact_us');
 		$this->load->view('footer/footer_signup');
 		$this->load->view('footer/main_footer');
