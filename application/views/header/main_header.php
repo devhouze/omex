@@ -54,7 +54,7 @@
                             <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='brand-directory' || $url[2]=='brand'?'active':''; ?>" href="<?php echo base_url('brand-directory'); ?>">Brands</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='event' || $url[2]=='event'?'active':''; ?>" href="<?php echo base_url('event'); ?>">Events</a>
+                            <a class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='event' || $url[2]=='event_details'?'active':''; ?>" href="<?php echo base_url('event'); ?>">Events</a>
                         </li>
                         <?php if(!empty($whats_new_link)){ foreach($whats_new_link as $link){ ?>
                             <li><a href="<?php echo base_url('whatsnew/'.$link['name_slug'])?>"><?php echo $link['name'];?></a></li>
