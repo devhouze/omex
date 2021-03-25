@@ -93,11 +93,10 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
-                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Gallery</h5>
+                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Share With Friends</h5>
                 <!-- https://www.facebook.com/omaxeworldsreet/ -->
                 <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
                 <ul class="share-links wow fadeInDown animated">
-                    <li><a href="https://www.instagram.com/omaxeworldstreet/?hl=en" target="_blank"><img src="<?php echo base_url(); ?>assets/images/public/what/inst.svg" alt="instagram"></a></li>
                     <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo current_url(); ?>" target="_blank"><img src="<?php echo base_url(); ?>assets/images/public/what/fb.svg" alt="facebook"></a></li>
                     <li><a href="whatsapp://send?text=<?php echo current_url();?>" data-action="share/whatsapp/share" target="_blank"><img src="<?php echo base_url(); ?>assets/images/public/what/what.svg" alt="whatsapp"></a></li>
 

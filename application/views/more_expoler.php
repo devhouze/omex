@@ -1,6 +1,6 @@
 <div class="row mt-4 pb-60 mb-60">
                 <div class="col-md-12 position-relative">
-                    <div class="owl-carousel sliders">
+                    <div class="owl-carousel more-slider">
                         <div class="item">
                             <figure class="mb-0"><a href="<?php echo BASE_URL('london'); ?>"></a><span>LONDON ST.</span><img src="<?php echo BASE_URL(); ?>assets/images/public/street/mo1.jpg"  alt="" class="d-table mx-auto"></figure>
                         </div>
