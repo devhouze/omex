@@ -1906,7 +1906,8 @@ span.text-danger.errors_msg {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    margin: 0 120px;
 }
 
 .expoler-modal .modal-content {
@@ -1921,11 +1922,19 @@ span.text-danger.errors_msg {
     background-size: cover;
     border-radius: 0;
     background-position: center;
+}
+
+.instagram .card {
+    border-color: #e6e6e6;
 }
 
 .expoler-modal .modal-body ul li {
-    width: calc(100% / 4);
-    margin: 15px;
+    width: 212px;
+    height: 160px;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
 }
 
 .expoler-modal .modal-body button.btn-close {
@@ -2087,6 +2096,13 @@ ul.share-links li:nth-child(2) {
     height: 1px;
     background: var(--h-color);
     bottom: -2px;
+}
+
+.hello-area .carousel .carousel-inner .carousel-item {
+    height: 440px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
