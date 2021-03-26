@@ -19,7 +19,9 @@
                             <img src="<?php echo BASE_URL('assets/images/public/brand/'.$about_brand['brand_logo']); ?>" alt="<?php echo $about_brand['logo_message']; ?>" class="">
                         </div>
                         <?php } ?>
+                         <?php if(is_file('assets/images/public/brand/'.$about_brand['banner_web'])){?>
                         <div class="bg-color" style="background-color: #5A946E;"></div>
+                         <?php } ?>
                         <?php if(count($about_brand) > 1){?>
                         <div class="crasol-btn d-none">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
