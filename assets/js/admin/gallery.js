@@ -59,9 +59,10 @@ $(document).ready(function() {
         }
     }
 
-    $('.filter_type').change(function() {
+    $('.filter_type,#media_type').change(function() {
         var media_type = $('#media_type option:selected').val();
         var filter_type = $('.filter_type option:selected').val();
+        $('#sequence').find('option').prop('disabled', false);
         $.ajax({
             type: 'post',
             url: url + 'get-sequence',
@@ -180,6 +181,7 @@ $(document).ready(function() {
     $(document).ready(function() {
         var media_type = $('#media_type option:selected').val();
         var filter_type = $('.filter_type option:selected').val();
+         $('#sequence').find('option').prop('disabled', false);
         $.ajax({
             type: 'post',
             url: url + 'get-sequence',

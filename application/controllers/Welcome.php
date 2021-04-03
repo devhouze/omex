@@ -20,7 +20,8 @@ class Welcome extends CI_Controller {
 		$data['construction_gallery'] = $this->wm->get_gallery(3);
 		$data['gallery_video'] = $this->wm->gallery_video();
 		$data['whats_new_link'] = $this->wm->get_data_array('tbl_whats_new',"name_slug,name",$where = "status=0");
-		// print_r($data['whats_new_link']); die;
+		// echo "<pre>";
+		// print_r($data['gallery_video']); die;
 		$this->load->view('header/header_start');
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');

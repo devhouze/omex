@@ -11,7 +11,7 @@ class Lead_Model extends MY_Model
     public function get_leads($per_page,$page,$keyword,$column,$order,$count = false)
     {   
         (!empty($keyword['date_from']) && empty($keyword['date_to']))?$end_date = date('Y-m-d'):$end_date = $keyword['date_to'];
-        $this->db->select('id, name, email, source, event_name, query_type, contact, date_format(registered_at,"%d-%m-%Y %H:%i") as registered_at');
+   $this->db->select('id, name, email,contact, source, event_name, query_type,message,date_format(registered_at,"%d-%m-%Y %H:%i") as registered_at');
         (!$count)?$this->db->limit($per_page,$page):'';
         (!empty($keyword['name']))?$this->db->like('name',$keyword['name']):'';
         (!empty($keyword['name']))?$this->db->or_like('email',$keyword['name']):'';

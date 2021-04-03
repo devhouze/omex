@@ -249,7 +249,7 @@ class Welcome_model extends CI_Model
 
     public function gallery_video()
     {
-        $this->db->select('id, media_type, media_name, media_alt');
+        $this->db->select('id, media_type, media_name, media_video,media_alt');
         $this->db->where('status',0);
         $this->db->where('media_type !=',1);
         $this->db->order_by('sequence','desc');
@@ -264,7 +264,6 @@ class Welcome_model extends CI_Model
     public function get_what_new($id='',$street='')
     {
         $this->db->select('brand_name, about_brand, brand_logo, brand_street, banner_web, banner_comment, logo_message, brand_slug');
-        $this->db->where('status',0);
         $this->db->where('status',0);
         $this->db->where('brand_label','New In');
         if($id){

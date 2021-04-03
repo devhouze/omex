@@ -581,8 +581,8 @@
                                     foreach ($gallery_video as $video) { ?>
                                         <?php if ($video['media_type'] == 2) { ?>
                                             <div class="item">
-                                                <video width="320" height="240" controls>
-                                                    <source src="<?php echo base_url('assets/images/public/home/' . $video['media_name']); ?>" type="video/mp4">
+                                                <video width="100%" height="350" controls>
+                                                    <source src="<?php echo base_url('assets/images/public/home/' . $video['media_video']); ?>" type="video/mp4">
                                                     </video>
                                                 </div>
                                             <?php } ?>

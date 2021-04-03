@@ -138,7 +138,7 @@
             <li class="has-sub">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#gallery" aria-expanded="false" aria-controls="gallery">
                 <i class="mdi mdi-pencil-box-multiple"></i>
-                <span class="nav-text">Gallery</span> <b class="caret"></b>
+                <span class="nav-text">Home Gallery</span> <b class="caret"></b>
               </a>
               <ul class="collapse" id="gallery" data-parent="#sidebar-menu">
                 <div class="sub-menu">
@@ -270,7 +270,7 @@
             <li class="has-sub">
               <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#gallery" aria-expanded="false" aria-controls="gallery">
                 <i class="mdi mdi-pencil-box-multiple"></i>
-                <span class="nav-text">Gallery</span> <b class="caret"></b>
+                <span class="nav-text">Home Gallery</span> <b class="caret"></b>
               </a>
               <ul class="collapse" id="gallery" data-parent="#sidebar-menu">
                 <div class="sub-menu">

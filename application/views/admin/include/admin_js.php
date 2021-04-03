@@ -13,12 +13,18 @@
 <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
 <script>
   $( function() {
-    $( ".datepicker" ).datepicker();
-    $('.select-box').select2({
+   $( ".datepicker" ).datepicker({  
+    maxDate: 0,
+    changeMonth: true,
+    changeYear: true,
+    inline: true,
+});
+
+   $('.select-box').select2({
       placeholder: "Select from the list",
       allowClear: true
-    });
-  } );
+  });
+} );
 
   $(document).ready(function() {
     
@@ -31,40 +37,40 @@
 <script>
   jQuery(document).ready(function() {
     jQuery('input[name="dateRange"]').daterangepicker({
-    autoUpdateInput: false,
-    singleDatePicker: true,
-    locale: {
-      cancelLabel: 'Clear'
-    }
+        autoUpdateInput: false,
+        singleDatePicker: true,
+        locale: {
+          cancelLabel: 'Clear'
+      }
   });
     jQuery('input[name="dateRange"]').on('apply.daterangepicker', function (ev, picker) {
       jQuery(this).val(picker.startDate.format('MM/DD/YYYY'));
-    });
+  });
     jQuery('input[name="dateRange"]').on('cancel.daterangepicker', function (ev, picker) {
       jQuery(this).val('');
-    });
   });
+});
 </script>
-  
+
 <script>
- $(document).ready(function() {
-        $.notify.defaults({
-            position: 'top right',
-            style: 'bootstrap'
-        });
-        <?php if ($this->session->flashdata('success')) { ?>
-            $.notify("<?php echo $this->session->flashdata('success'); ?>", "success");
-        <?php }
-        if ($this->session->flashdata('error')) { ?>
-            $.notify("<?php echo $this->session->flashdata('error'); ?>", "error");
-        <?php }
-        if ($this->session->flashdata('warning')) { ?>
-            $.notify("<?php echo $this->session->flashdata('warning'); ?>", "warn");
-        <?php }
-        if ($this->session->flashdata('info')) { ?>
-            $.notify("<?php echo $this->session->flashdata('info'); ?>", "info");
-        <?php } ?>
+   $(document).ready(function() {
+    $.notify.defaults({
+        position: 'top right',
+        style: 'bootstrap'
     });
+    <?php if ($this->session->flashdata('success')) { ?>
+        $.notify("<?php echo $this->session->flashdata('success'); ?>", "success");
+    <?php }
+    if ($this->session->flashdata('error')) { ?>
+        $.notify("<?php echo $this->session->flashdata('error'); ?>", "error");
+    <?php }
+    if ($this->session->flashdata('warning')) { ?>
+        $.notify("<?php echo $this->session->flashdata('warning'); ?>", "warn");
+    <?php }
+    if ($this->session->flashdata('info')) { ?>
+        $.notify("<?php echo $this->session->flashdata('info'); ?>", "info");
+    <?php } ?>
+});
 </script>
 
 <script src="<?=base_url();?>assets/js/admin/toastr.min.js"></script>
@@ -79,7 +85,7 @@
     function checkFileDetails(width,height,file) {
         var fi = file;
         if (fi.files.length > 0) {      // FIRST CHECK IF ANY FILE IS SELECTED.
-           
+         
             for (var i = 0; i <= fi.files.length - 1; i++) {
                 var fileName, fileExtension, fileSize, fileType, dateModified;
 
@@ -91,15 +97,15 @@
                 // TO GET THE IMAGE WIDTH AND HEIGHT, WE'LL USE fileReader().
                 if (fileExtension == 'png' || fileExtension == 'jpg' || fileExtension == 'jpeg') {
                    // readImageFile(fi.files.item(i),width,height, fi);             // GET IMAGE INFO USING fileReader().
-                    $(fi).nextAll('span:first').text('');
-                    $('.submit-form').removeAttr('disabled');
+                   $(fi).nextAll('span:first').text('');
+                   $('.submit-form').removeAttr('disabled');
 
-                }else{
-                     $('.submit-form').prop("disabled", true);
-                    $(fi).nextAll('span:first').text('Image format should be (jpeg,jpg,png)');
-                }
+               }else{
+                   $('.submit-form').prop("disabled", true);
+                   $(fi).nextAll('span:first').text('Image format should be (jpeg,jpg,png)');
+               }
                
-            }
+           }
 
             // GET THE IMAGE WIDTH AND HEIGHT USING fileReader() API.
             function readImageFile(file,width,heigh, fi) {
@@ -115,12 +121,12 @@
 
                         if(w>=width && h>=height){
                           $(fi).nextAll('span:first').text('');
-                            $('.submit-form').removeAttr('disabled');
-                        }else{
+                          $('.submit-form').removeAttr('disabled');
+                      }else{
 
-                            $('.submit-form').prop("disabled", true);
-                             $(fi).nextAll('span:first').text('For Best View Upload Images In '+width+' x '+height);
-                        }
+                        $('.submit-form').prop("disabled", true);
+                        $(fi).nextAll('span:first').text('For Best View Upload Images In '+width+' x '+height);
+                    }
 
 
                         // document.getElementById('fileInfo').innerHTML =
