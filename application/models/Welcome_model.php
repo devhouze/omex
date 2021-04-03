@@ -214,12 +214,13 @@ class Welcome_model extends CI_Model
         $this->db->join("tbl_category AS ct","find_in_set(ct.id,b.brand_category)<> 0","left",false);
         $this->db->where('b.status',0);
         if($category){
+        $this->db->group_start();
         $this->db->like('ct.category_name',$category);
         $this->db->or_like('b.brand_type',$category);
+        $this->db->group_end();
         }
         (!$count && $limit!='null')?$this->db->limit($limit):''; 
         $query = $this->db->get('tbl_brand as b');
-        // echo $this->db->last_query(); die;
         if($count){
             return $query->num_rows();
         }
