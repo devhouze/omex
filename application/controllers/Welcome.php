@@ -536,17 +536,8 @@ class Welcome extends CI_Controller {
 	{
 		$active_events = [];
 		foreach($events as $event){
-			if($event['date_available'] == 0){
-				if(!empty($event['end_date']) && $event['end_date'] != '0000-00-00'){
-					if($event['end_date'] > date('Y-m-d')){
+			if($event['end_date'] >= date('Y-m-d')|| $event['end_date']=== '1970-01-01'){
 						$active_events[] = $event;
-					}
-				} elseif($event['start_date'] > date('Y-m-d')){
-					$active_events[] = $event;
-				}
-			}
-			else {
-				$active_events[] = $event;
 			}
 		}
 		return $active_events;
@@ -557,7 +548,7 @@ class Welcome extends CI_Controller {
 		// echo "<pre>";
 		$expired_events = [];
 		foreach($events as $event){
-			if($event['end_date']=== '1970-01-01' || $event['start_date'] < date('Y-m-d') || $event['end_date'] < date('Y-m-d') ){
+			if($event['end_date'] < date('Y-m-d') ){
 						$expired_events[] = $event;
 			}
 		}

@@ -363,7 +363,9 @@ class Brands_Controller extends MY_Controller
     public function delete_brand()
     {
         $brand_id = $this->input->post('brand_id');
-        $update = $this->bm->update_data('tbl_brand',['status' => 2],['brand_id' => $brand_id]);
+        // $update = $this->bm->update_data('tbl_brand',['status' => 2],['brand_id' => $brand_id]);
+         $this->db->where('brand_id', $brand_id);
+        $update =$this->db->delete('tbl_brand'); 
         if($update){
             echo json_encode(['message' => 'Data deleted successfully.', 'status' => 1]);
         } else {

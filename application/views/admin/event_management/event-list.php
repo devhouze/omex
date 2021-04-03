@@ -89,7 +89,7 @@ if(!empty($this->uri->segment(4))){
                                 <tr>
                                     <td scope="row"><?=$sno; $sno++;?></td>
                                     <td><?=$event['event_name'];?></td>
-                                    <td><?=($event['date_available'] != '1')?($event['start_date']."-".$event['end_date']):'N/A';?></td>
+                                    <td><?=($event['date_available'] != '1')?($event['start_date']."/".$event['end_date']):'N/A';?></td>
                                     <!-- <td><?=$event['event_type'];?></td> -->
                                     <td align="center">
                                         <label class="switch">

@@ -173,10 +173,10 @@
                             <?php $labels = explode(',', $event['event_category']);
                             if (is_array($labels)) {
                                 foreach ($labels as $cat) { ?>
-                                    <li><a href="javascript:void(0)"><?php echo $cat; ?></a></li>
+                                    <li><?php echo $cat; ?></li>
                                 <?php }
                             } else { ?>
-                                <li><a href="javascript:void(0)"><?php echo $labels; ?></a></li>
+                                <li><?php echo $labels; ?></li>
                             <?php } ?>
                         </ul>
                     </div>
