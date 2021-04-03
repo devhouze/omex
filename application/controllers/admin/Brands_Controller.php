@@ -122,6 +122,7 @@ class Brands_Controller extends MY_Controller
                     'order_home'                    => $this->input->post('order_home'),
                     'about_brand_banner_alt'        => $this->input->post('about_brand_banner_alt'),
                     'banner_comment'                => $this->input->post('banner_comment'),
+                    'meta_tags'                     => $this->input->post('meta_tags'),
                     'created_by'                    => $this->bm->admin_id()
                 );
 
@@ -264,9 +265,10 @@ class Brands_Controller extends MY_Controller
                     'order_home'                    => $this->input->post('order_home'),
                     'about_brand_banner_alt'        => $this->input->post('about_brand_banner_alt'),
                     'banner_comment'                => $this->input->post('banner_comment'),
+                    'meta_tags'                     => $this->input->post('meta_tags'),
                     'created_by'                    => $this->bm->admin_id()
                 );
-
+                
                 
                 if(!empty($_FILES['brand_logo']['name'])){
                     $logo = $getfilename =  str_replace(' ', '_', $_FILES['brand_logo']['name']);

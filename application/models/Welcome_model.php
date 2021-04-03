@@ -128,7 +128,7 @@ class Welcome_model extends CI_Model
 
     public function get_event_detail($slug)
     {
-        $query = $this->db->select('event_name, thumbnail_message, event_start_time, event_end_time, date_available, start_date, end_date, thumbnail_image, about_event, event_category, show_reg_btn, event_slug')
+        $query = $this->db->select('event_name, thumbnail_message, event_start_time, event_end_time, date_available, start_date, end_date, thumbnail_image, about_event, event_category, show_reg_btn, event_slug,meta_tags')
         ->where('status',0)
         ->where('event_slug',$slug)
         ->get('tbl_event');

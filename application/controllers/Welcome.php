@@ -293,7 +293,7 @@ class Welcome extends CI_Controller {
 		// echo "<pre>"; print_r($data['first_similar_brands']);
 		// echo "<pre>"; print_r($data['second_similar_brands']);
 		// echo "<pre>"; print_r($data['third_similar_brands']); die;
-		$this->load->view('header/header_start');
+		$this->load->view('header/header_start',$data['about_brand']);
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
 		$this->load->view('header/header_end');
@@ -342,7 +342,7 @@ class Welcome extends CI_Controller {
 		$past_event= $this->wm->get_past_events();
 		$data['past_event'] = $this->filter_expired_events($past_event);
 		// echo "<pre>"; print_r($data['event']); die;
-		$this->load->view('header/header_start');
+		$this->load->view('header/header_start',$data['event']);
 		$this->load->view('header/header_common');
 		$this->load->view('header/owl_css');
 		$this->load->view('header/header_end');

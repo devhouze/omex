@@ -27,6 +27,8 @@ $banner_web = (!empty($brands)) ? $brands->banner_web : '';
 $banner_mobile = (!empty($brands)) ? $brands->banner_mobile : '';
 $about_brand_banner_web = (!empty($brands)) ? $brands->about_brand_banner_web : '';
 $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mobile : '';
+$meta_tags = (!empty($brands)) ? $brands->meta_tags : '<meta name="description" content="Meta Description">
+<meta name="keywords" content="Meta Keywords">';
 
 
 ?>
@@ -94,7 +96,7 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                         <img src="<?php echo base_url("assets/images/public/brand/" . $banner_web); ?>" class="img-thumb" style="width:100px !important;" />
                                     <?php } ?>
                                 </div>
-                            
+
                             </div>
                             <div class="form-row">
 
@@ -137,7 +139,7 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                         <img src="<?php echo base_url("assets/images/public/brand/" . $about_brand_banner_web); ?>" class="img-thumb" style="width:100px !important;" />
                                     <?php } ?>
                                 </div>
-                            
+
                             </div>
                             <div class="form-row">
                                 <div class="col-md-6 mb-3">
@@ -167,11 +169,11 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                     <select name="show_on_home" class="form-control form-control-sm select-box">
                                         <option value="">Select Option</option>
                                         <option value="Yes" <?php if ($show_on_home == "Yes") {
-                                                                echo "selected";
-                                                            } ?>>Yes</option>
+                                            echo "selected";
+                                        } ?>>Yes</option>
                                         <option value="No" <?php if ($show_on_home == "No") {
-                                                                echo "selected";
-                                                            } ?>>No</option>
+                                            echo "selected";
+                                        } ?>>No</option>
                                     </select>
                                 </div>
                                 
@@ -203,14 +205,14 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                     <select name="brand_type" class="form-control form-control-sm select-box">
                                         <option value="">Select Brand Type</option>
                                         <option value="Play" <?php if ($brand_type == "Play") {
-                                                                    echo "selected";
-                                                                } ?>>Play</option>
+                                            echo "selected";
+                                        } ?>>Play</option>
                                         <option value="Eat" <?php if ($brand_type == "Eat") {
-                                                                echo "selected";
-                                                            } ?>>Eat</option>
+                                            echo "selected";
+                                        } ?>>Eat</option>
                                         <option value="Style" <?php if ($brand_type == "Style") {
-                                                                    echo "selected";
-                                                                } ?>>Style</option>
+                                            echo "selected";
+                                        } ?>>Style</option>
                                     </select>
                                 </div>
 
@@ -235,26 +237,26 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                     <select name="brand_street" class="form-control form-control-sm select-box">
                                         <option value="">Select Street</option>
                                         <option value="London Street" <?php if ($brand_street == "London Street") {
-                                                                            echo "selected";
-                                                                        } ?>>London Street</option>
+                                            echo "selected";
+                                        } ?>>London Street</option>
                                         <option value="Paris Street" <?php if ($brand_street == "Paris Street") {
-                                                                            echo "selected";
-                                                                        } ?>>Paris Street</option>
+                                            echo "selected";
+                                        } ?>>Paris Street</option>
                                         <option value="Hong Kong Street" <?php if ($brand_street == "Hong Kong Street") {
-                                                                                echo "selected";
-                                                                            } ?>>Hong Kong Street</option>
+                                            echo "selected";
+                                        } ?>>Hong Kong Street</option>
                                         <option value="Amsterdam Street" <?php if ($brand_street == "Amsterdam Street") {
-                                                                                echo "selected";
-                                                                            } ?>>Amsterdam Street</option>
+                                            echo "selected";
+                                        } ?>>Amsterdam Street</option>
                                         <option value="Portugal Street" <?php if ($brand_street == "Portugal Street") {
-                                                                            echo "selected";
-                                                                        } ?>>Portugal Street</option>
+                                            echo "selected";
+                                        } ?>>Portugal Street</option>
                                         <option value="San Francisco Street" <?php if ($brand_street == "San Francisco Street") {
-                                                                                    echo "selected";
-                                                                                } ?>>San Francisco Street</option>
+                                            echo "selected";
+                                        } ?>>San Francisco Street</option>
                                         <option value="Athens Street" <?php if ($brand_street == "Athens Street") {
-                                                                            echo "selected";
-                                                                        } ?>>Athens Street</option>
+                                            echo "selected";
+                                        } ?>>Athens Street</option>
                                     </select>
                                 </div>
 
@@ -263,26 +265,26 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                     <select name="brand_audience" class="form-control form-control-sm select-box">
                                         <option value="">Select Audience</option>
                                         <option value="Infants" <?php if ($brand_audience == "Infants") {
-                                                                    echo "selected";
-                                                                } ?>>Infants</option>
+                                            echo "selected";
+                                        } ?>>Infants</option>
                                         <option value="Kids" <?php if ($brand_audience == "Kids") {
-                                                                    echo "selected";
-                                                                } ?>>Kids</option>
+                                            echo "selected";
+                                        } ?>>Kids</option>
                                         <option value="Boys" <?php if ($brand_audience == "Boys") {
-                                                                    echo "selected";
-                                                                } ?>>Boys</option>
+                                            echo "selected";
+                                        } ?>>Boys</option>
                                         <option value="Girls" <?php if ($brand_audience == "Girls") {
-                                                                    echo "selected";
-                                                                } ?>>Girls</option>
+                                            echo "selected";
+                                        } ?>>Girls</option>
                                         <option value="Men" <?php if ($brand_audience == "Men") {
-                                                                echo "selected";
-                                                            } ?>>Men</option>
+                                            echo "selected";
+                                        } ?>>Men</option>
                                         <option value="Women" <?php if ($brand_audience == "Women") {
-                                                                    echo "selected";
-                                                                } ?>>Women</option>
+                                            echo "selected";
+                                        } ?>>Women</option>
                                         <option value="Elderly" <?php if ($brand_audience == "Elderly") {
-                                                                    echo "selected";
-                                                                } ?>>Elderly</option>
+                                            echo "selected";
+                                        } ?>>Elderly</option>
                                     </select>
                                 </div>
 
@@ -292,9 +294,9 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                         <?php if (!empty($category)) {
                                             foreach ($category as $cat) { ?>
                                                 <option value="<?php echo $cat['id']; ?>" data-id="<?php echo $cat['id'];?>" <?php if (in_array($cat['id'], $brand_category)) {
-                                                                                                            echo "selected";
-                                                                                                        } ?>><?php echo $cat['category_name']; ?></option>
-                                        <?php }
+                                                    echo "selected";
+                                                } ?>><?php echo $cat['category_name']; ?></option>
+                                            <?php }
                                         } ?>
                                     </select>
                                 </div>
@@ -304,9 +306,9 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                         <?php if (!empty($sub_category)) {
                                             foreach ($sub_category as $sc) { ?>
                                                 <option value="<?php echo $sc['id']; ?>" <?php if (in_array($sc['id'], $brand_sub_category)) {
-                                                                                                echo "selected";
-                                                                                            } ?>><?php echo $sc['name']; ?></option>
-                                        <?php }
+                                                    echo "selected";
+                                                } ?>><?php echo $sc['name']; ?></option>
+                                            <?php }
                                         } ?>
                                     </select>
                                 </div>
@@ -316,12 +318,17 @@ $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mob
                                     <select name="show_brand_offers" class="form-control form-control-sm select-box">
                                         <option value="">Select Offer Status</option>
                                         <option value="Yes" <?php if ($brand_offer_status == "Yes") {
-                                                                echo "selected";
-                                                            } ?>>Yes</option>
+                                            echo "selected";
+                                        } ?>>Yes</option>
                                         <option value="No" <?php if ($brand_offer_status == "No") {
-                                                                echo "selected";
-                                                            } ?>>No</option>
+                                            echo "selected";
+                                        } ?>>No</option>
                                     </select>
+                                </div>
+
+                                <div class="col-md-12 mb-3">
+                                    <label for="">Meta Tags</label>
+                                    <textarea name="meta_tags" class="form-control form-control-sm " rows="5"><?= $meta_tags; ?></textarea>
                                 </div>
 
                             </div>

@@ -91,6 +91,7 @@ class Event_Controller extends MY_Controller
                     'show_brand'            => $this->input->post('show_brand'),
                     'brands'                => $this->input->post('brand'),
                     'show_reg_btn'          => $this->input->post('show_reg_btn'),
+                    'meta_tags'                     => $this->input->post('meta_tags'),
                     'created_by'            => $this->em->admin_id()
                 );
                 
@@ -171,6 +172,7 @@ class Event_Controller extends MY_Controller
                     'show_brand'            => $this->input->post('show_brand'),
                     'brands'                => $this->input->post('brand'),
                     'show_reg_btn'          => $this->input->post('show_reg_btn'),
+                    'meta_tags'                     => $this->input->post('meta_tags'),
                     'created_by'            => $this->em->admin_id()
                 );
                 

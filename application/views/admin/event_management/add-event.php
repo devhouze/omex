@@ -18,6 +18,8 @@ $show_brand = ($events)?$events->show_brand:1;
 $show_reg_btn = ($events)?$events->show_reg_btn:1;
 $brands = ($events)?$events->brands:'';
 $thumbnail_image = ($events)?$events->thumbnail_image:'';
+$meta_tags = (!empty($events)) ? $events->meta_tags : '<meta name="description" content="Meta Description">
+<meta name="keywords" content="Meta Keywords">';
 ?>
 <script src="<?=base_url('assets/js/admin/events.js')?>"></script>
 <div class="content-wrapper">
@@ -177,6 +179,11 @@ $thumbnail_image = ($events)?$events->thumbnail_image:'';
                                         <option value="0" <?php if($show_reg_btn == 0){echo "selected"; }?>>Yes</option>
                                         <option value="1" <?php if($show_reg_btn == 1){echo "selected"; }?>>No</option>
                                     </select>
+                                </div>
+
+                                 <div class="col-md-12 mb-3">
+                                    <label for="">Meta Tags</label>
+                                    <textarea name="meta_tags" class="form-control form-control-sm " rows="5"><?= $meta_tags; ?></textarea>
                                 </div>
 
                             </div>
