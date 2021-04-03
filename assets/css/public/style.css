@@ -1817,15 +1817,15 @@ span.text-danger.errors_msg {
     justify-content: center;
     margin-top: 50px;
     padding: 0;
+    flex-wrap: wrap;
 }
 
-.about-event ul li a {
+.about-event ul li {
     color: var(--h-color);
     font-size: 21px;
-}
-
-.about-event ul li+li {
-    margin-left: 40px;
+    width: calc(100% / 3);
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 
@@ -2672,10 +2672,6 @@ ul.share-links li:nth-child(2) {
         align-items: center;
         justify-content: center;
         margin-top: 40px;
-    }
-    .about-event ul li+li {
-        margin-left: 0;
-        margin-top: 10px;
     }
     .event-page .looking-out h2 {
         text-shadow: 2px 0px 0px #5a946e;
