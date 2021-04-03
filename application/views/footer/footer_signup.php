@@ -35,6 +35,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-12">
+                                        <input type="hidden" name="source_url" value="<?php echo current_url(); ?>">
                                         <button type="submit" class="d-table mx-auto mt-60 sb-btn">SUBMIT</button>
                                     </div>
 

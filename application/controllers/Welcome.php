@@ -444,6 +444,7 @@ class Welcome extends CI_Controller {
 	
 	public function sign_up()
 	{
+
 		$this->form_validation->set_rules('name','Name','required');
 		$this->form_validation->set_rules('email','Email','required');
 		$this->form_validation->set_rules('contact','Mobile Number','required|regex_match[/^[0-9]{10,15}$/]');
@@ -454,7 +455,10 @@ class Welcome extends CI_Controller {
 				'email'		=> $this->input->post('email'),
 				'contact'	=> $this->input->post('contact'),
 				'source'	=> "Sign Up Form",
+				'source_url'	=>$this->input->post('source_url'),
 			);
+
+
 
 			$save = $this->wm->insert_data('tbl_leads',$data_array);
 			if($save){

@@ -77,6 +77,7 @@
                                     <th scope="col">Source <a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/source/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/source/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
                                     <th scope="col">Event Name <a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/event_name/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/event_name/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
                                     <th scope="col">Query Type <a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/query_type/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/query_type/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
+                                    <th scope="col">Source Page <a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/source_url/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/source_url/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
                                     <th scope="col">Sign Up Time <a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/registered_at/asc')?>"><span class="mdi mdi-arrow-up"></span></a><a href="<?php echo admin_url('leads/'.$this->pagination->current_place().'/registered_at/desc')?>"><span class="mdi mdi-arrow-down"></span></a></th>
                                     <th scope="col">Action</th>
                                 </tr>
@@ -91,6 +92,7 @@
                                     <td><?=$lead['source'];?></td>
                                     <td><?=$lead['event_name'];?></td>
                                     <td><?=$lead['query_type'];?></td>
+                                    <td><?=$lead['source_url'];?></td>
                                     <td><?=$lead['registered_at'];?></td>
                                     <td><a href="javascript:void(0)" data-toggle="modal" data-target="#message" class="btn btn-primary view_message" title="View Message" data-id="<?=$lead['id'];?>"><span class="mdi mdi-eye"></span></a></td>
                                 </tr>

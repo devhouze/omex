@@ -70,7 +70,7 @@ class Lead_controller extends MY_Controller
         // file creation 
         $file = fopen('php://output', 'w');
       
-        $header = array("S.No","Name","Email","Contact","Source","Event Name","Query Type","Message","Registered At"); 
+        $header = array("S.No","Name","Email","Contact","Source","Event Name","Query Type","Message",'Source Page',"Registered At"); 
         fputcsv($file, $header);
         foreach ($lead_data as $key=>$line){ 
           fputcsv($file,$line); 
