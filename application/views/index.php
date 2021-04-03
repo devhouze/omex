@@ -353,7 +353,7 @@
 
 
                             </figure>
-                            <a href="" class="exploer-btn" data-type="style" >EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
+                            <a href="javascript:void(0)" class="exploer-btn" data-type="style" >EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
                         </div>
                         <div class="col-md-4">
