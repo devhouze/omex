@@ -58,7 +58,9 @@ class Lead_controller extends MY_Controller
     }
 
     public function exportCSV(){ 
-        
+
+          $query=str_replace('10',' ',str_replace('10,',' ',str_replace('LIMIT',' ',str_replace('DESC',' ',$this->session->userdata('filter_lead')))));
+       
         // file name 
         $filename = 'leads_'.date('Ymd').'.csv'; 
         header("Content-Description: File Transfer"); 
@@ -66,7 +68,8 @@ class Lead_controller extends MY_Controller
         header("Content-Type: application/csv; ");
         
         // get data
-        $lead_data = $this->db->query($this->session->userdata('filter_lead'))->result_array();
+
+        $lead_data = $this->db->query($query)->result_array();
         // file creation 
         $file = fopen('php://output', 'w');
       

@@ -88,12 +88,14 @@ $media_alt = (!empty($gallery))?$gallery['media_alt']:'';
 
                                             <div class="col-md-6 mb-3">
                                                 <label for="">Media Preference</label>
+                                                <input type="hidden" name="sequence" value="<?php echo $sequence ?>">
                                                 <select name="sequence" id="sequence" class="form-control form-control-sm input-sm" >
                                                     <option disabled="" selected>Select Preference</option>
                                                     <?php for($i=1;$i<=30;$i++){?>
                                                         <option value="<?php echo $i; ?>" <?php if($i == $sequence){echo 'selected'; }?>><?php echo $i; ?></option>
                                                     <?php }?>
                                                 </select>
+
                                             </div>
                                         </div>
 

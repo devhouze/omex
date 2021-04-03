@@ -435,6 +435,7 @@ class WhatsNew_Controller extends MY_Controller
     {
         $whats_new_id = $this->input->post('id');
         $stauts = $this->input->post('status');
+         
         $update = $this->wsm->update_data('tbl_whats_new_gallery',['status' => $stauts],['id' => $whats_new_id]);
         if($update){
             echo json_encode(['message' => 'Status changed successfully.', 'status' => 1]);
@@ -446,7 +447,9 @@ class WhatsNew_Controller extends MY_Controller
     public function delete_whats_new_gallery()
     {
         $whats_new_id = $this->input->post('whats_new_id');
-        $update = $this->wsm->update_data('tbl_whats_new_gallery',['status' => 2],['id' => $whats_new_id]);
+         $this->db->where('id', $whats_new_id);
+        $update =$this->db->delete('tbl_whats_new_gallery');
+        // $update = $this->wsm->update_data('tbl_whats_new_gallery',['status' => 2],['id' => $whats_new_id]);
         if($update){
             echo json_encode(['message' => 'Data deleted successfully.', 'status' => 1]);
         } else {

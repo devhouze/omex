@@ -5,6 +5,7 @@ $whats_new_slug  = (empty($whats_new_gallery))?'':$whats_new_gallery['whats_new_
 $image_alt  = (empty($whats_new_gallery))?'':$whats_new_gallery['image_alt'];
 $image_web  = (empty($whats_new_gallery))?'':$whats_new_gallery['image_web'];
 $image_mob  = (empty($whats_new_gallery))?'':$whats_new_gallery['image_mob'];
+
 ?>
 
 <script src="<?=base_url('assets/js/admin/whats_new.js')?>"></script>
@@ -25,7 +26,7 @@ $image_mob  = (empty($whats_new_gallery))?'':$whats_new_gallery['image_mob'];
                                     <select name="whats_new" class="form-control form-control-sm select-box">
                                     <option value="">Choose one</option>
                                     <?php if(!empty($whats_new)){ foreach($whats_new as $wn){?>
-                                        <option value="<?php echo $wn['name_slug'];?>"><?php echo $wn['name'];?></option>
+                                        <option value="<?php echo $wn['name_slug'];?>" <?php echo trim($wn['name_slug'])===trim($whats_new_slug)?'selected':'' ?>><?php echo $wn['name'];?></option>
                                     <?php } }?>
                                     </select>
                                     <span class="text-danger error"></span>

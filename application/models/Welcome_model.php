@@ -422,8 +422,9 @@ class Welcome_model extends CI_Model
                           ->get('tbl_whats_new');
         if($query->num_rows() > 0){
             $data['whats_new'] = $query->row_array();
-            $gallery_query = $this->db->select('image_web, image_mob, image_alt')->get_where('tbl_whats_new_gallery',['whats_new_slug' => $slug]);
-            $data['gallery'] = ($gallery_query->num_rows() > 0)?$gallery_query->result_array():[];
+            $gallery_query = $this->db->select('image_web, image_mob, image_alt')->get_where('tbl_whats_new_gallery',['whats_new_slug' => $slug,'status'=>0]);
+                        $data['gallery'] = ($gallery_query->num_rows() > 0)?$gallery_query->result_array():[];
+                // echo $this->db->last_query(); die;
             return $data;
         }
         return [];
