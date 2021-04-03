@@ -96,7 +96,7 @@
                 // CHECK IF ITS AN IMAGE FILE.
                 // TO GET THE IMAGE WIDTH AND HEIGHT, WE'LL USE fileReader().
                 if (fileExtension == 'png' || fileExtension == 'jpg' || fileExtension == 'jpeg') {
-                   // readImageFile(fi.files.item(i),width,height, fi);             // GET IMAGE INFO USING fileReader().
+                   readImageFile(fi.files.item(i),width,height, fi);             // GET IMAGE INFO USING fileReader().
                    $(fi).nextAll('span:first').text('');
                    $('.submit-form').removeAttr('disabled');
 
