@@ -73,6 +73,7 @@ $(document).ready(function() {
                     }, 2000);
                 } else {
                     $.notify(data.message, "error");
+                    $('.submit-form').removeAttr('disabled');
                 }
                 if (data.error) {
                     $.each(data.error, function(i, v) {
