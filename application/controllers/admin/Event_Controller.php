@@ -15,7 +15,7 @@ class Event_Controller extends MY_Controller
         if ($page != 0) {
 			$page = ($page - 1) * $per_page;
         }
-
+         $_SESSION['page']=$page;
         if($this->input->post('search')){
             $search = array(
                 'event_name'    => trim($this->input->post('name')),

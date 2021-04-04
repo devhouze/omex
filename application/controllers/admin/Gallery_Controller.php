@@ -15,7 +15,7 @@ class Gallery_Controller extends MY_Controller
         if ($page != 0) {
 			$page = ($page - 1) * $per_page;
         }
-
+         $_SESSION['page']=$page;
         if($this->input->post('search')){
             $search = array(
                 'media_type'        => trim($this->input->post('media_type')),

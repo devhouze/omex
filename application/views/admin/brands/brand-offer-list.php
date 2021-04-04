@@ -72,7 +72,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if(!empty($brands_offer)) { $sno = 1; foreach($brands_offer as $value){?>
+                                <?php if(!empty($brands_offer)) { $sno = 1 + $_SESSION['page']; foreach($brands_offer as $value){?>
                                 <tr>
                                     <td scope="row"><?=$sno; $sno++;?></td>
                                     <td><?=$value['brand_name'];?></td>
@@ -85,7 +85,7 @@
                                         </label>
                                     </td>
                                     <td><?=$value['created_by'];?></td>
-                                    <td><?=$value['created_on'];?></td>
+                                     <td><?=date('d M Y',strtotime($value['created_on']));?></td>
                                     <td>
                                     <a href="<?php echo admin_url('edit-brand-offer/'.$value['offer_id']);?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a>
                                     <a href="javascript:void(0)" data-id="<?=$value['offer_id'];?>" class="btn btn-danger delete_offer"><span class="mdi mdi-delete"></span></a>

@@ -68,7 +68,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if(!empty($whats_new_gallery)) { $sno = 1; foreach($whats_new_gallery as $wng){?>
+                                <?php if(!empty($whats_new_gallery)) {  $sno = 1 + $_SESSION['page']; foreach($whats_new_gallery as $wng){?>
                                 <tr>
                                     <td scope="row"><?=$sno; $sno++;?></td>
                                     <td><?=$wng['name'];?></td>
@@ -79,7 +79,7 @@
                                         </label>
                                     </td>
                                     <td><?=$wng['created_by'];?></td>
-                                    <td><?=$wng['created_on'];?></td>
+                                   <td><?=date('d M Y',strtotime($wng['created_on']));?></td>
                                     <?php if($this->session->userdata('admin_details')['user_type'] == "0"){?>
                                     <td>
                                         <a href="<?=admin_url('edit-whats-new-gallery/'.$wng['id'])?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a>

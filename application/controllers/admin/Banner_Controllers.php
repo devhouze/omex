@@ -17,7 +17,7 @@ class Banner_Controllers extends my_controller
         } else {
             $page = 0;
         }  
-
+         $_SESSION['page']=$page;
         if($this->input->post('search')){
             $search = array(
                 'banner_type'       => trim($this->input->post('banner_type')),

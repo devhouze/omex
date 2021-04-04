@@ -76,7 +76,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if(!empty($banners)) { $sno = 1; foreach($banners as $banner){?>
+                                <?php if(!empty($banners)) {  $sno = 1 + $_SESSION['page']; foreach($banners as $banner){?>
                                 <tr>
                                     <td scope="row"><?=$sno; $sno++;?></td>
                                     <td><?=$banner['banner_type'];?></td>
@@ -95,7 +95,7 @@
                                         </label>
                                     </td>
                                     <td><?=$banner['created_by'];?></td>
-                                    <td><?=$banner['created_on'];?></td>
+                                   <td><?=date('d M Y',strtotime($banner['created_on']));?></td>
                                     <td>
                                         <a href="<?=admin_url('edit-banners/'.$banner['id'])?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a>
                                         <a href="javascript:void(0)" class="btn btn-danger delete" data-id="<?=$banner['id'];?>"><span class="mdi mdi-delete"></span></a>

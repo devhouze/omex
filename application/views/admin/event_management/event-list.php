@@ -85,20 +85,20 @@ if(!empty($this->uri->segment(4))){
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if(!empty($events)) { $sno = 1; foreach($events as $event){?>
+                                <?php if(!empty($events)) {  $sno = 1 + $_SESSION['page']; foreach($events as $event){?>
                                 <tr>
                                     <td scope="row"><?=$sno; $sno++;?></td>
                                     <td><?=$event['event_name'];?></td>
-                                    <td><?=($event['date_available'] != '1')?($event['start_date']."/".$event['end_date']):'N/A';?></td>
+                                    <td><?=($event['date_available'] != '1')?(date('d M Y',strtotime($event['start_date']))." to ".date('d M Y',strtotime($event['end_date']))):'N/A';?></td>
                                     <!-- <td><?=$event['event_type'];?></td> -->
                                     <td align="center">
                                         <label class="switch">
-                                          <input type="checkbox" <?php if($event['date_available'] == 0 && date('Y-m-d',strtotime($event['end_date'])) < date('Y-m-d')){ echo "disabled";}?> class="chkstatus" value="<?php echo $event['event_id'];?>" <?php echo ($event['status']=="0")?'checked':'' ?>>
+                                          <input type="checkbox" <?php //if($event['date_available'] == 0 && date('Y-m-d',strtotime($event['end_date'])) < date('Y-m-d')){ echo "disabled";}?> class="chkstatus" value="<?php echo $event['event_id'];?>" <?php echo ($event['status']=="0")?'checked':'' ?>>
                                           <div class="slider round"></div>
                                         </label>
                                     </td>
                                     <td><?=$event['created_by'];?></td>
-                                    <td><?=$event['created_on'];?></td>
+                                    <td><?=date('d M Y',strtotime($event['created_on']));?></td>
                                     <td>
                                         <a href="<?=admin_url('edit-events/'.$event['event_id'])?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a>
                                         <a href="javascript:void(0)" class="btn btn-danger delete" data-id="<?=$event['event_id'];?>"><span class="mdi mdi-delete"></span></a>

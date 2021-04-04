@@ -83,7 +83,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if(!empty($leads)) { $sno = 1; foreach($leads as $lead){?>
+                                <?php if(!empty($leads)) { $sno = 1 + $_SESSION['page']; foreach($leads as $lead){?>
                                 <tr>
                                     <td scope="row"><?=$sno; $sno++;?></td>
                                     <td><?=$lead['name'];?></td>
@@ -93,7 +93,7 @@
                                     <td><?=$lead['event_name'];?></td>
                                     <td><?=$lead['query_type'];?></td>
                                     <td><?=$lead['source_url'];?></td>
-                                    <td><?=$lead['registered_at'];?></td>
+                                    <td><?=date('d M Y',strtotime($lead['registered_at']));?></td>
                                     <td><a href="javascript:void(0)" data-toggle="modal" data-target="#message" class="btn btn-primary view_message" title="View Message" data-id="<?=$lead['id'];?>"><span class="mdi mdi-eye"></span></a></td>
                                 </tr>
                                 <?php } } else {?>

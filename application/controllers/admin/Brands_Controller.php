@@ -16,6 +16,8 @@ class Brands_Controller extends MY_Controller
         } else {
             $page = 0;
         }
+
+         $_SESSION['page']=$page;
         
         if($this->input->post('search')){
             $search = array(
@@ -569,6 +571,8 @@ class Brands_Controller extends MY_Controller
         } else {
             $page = 0;
         }
+
+         $_SESSION['page']=$page;
 
         if($this->input->post('search')){
             $search = array(

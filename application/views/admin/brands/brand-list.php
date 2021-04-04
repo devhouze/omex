@@ -68,7 +68,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if(!empty($brands)) { $sno = 1; foreach($brands as $brand){?>
+                                <?php if(!empty($brands)) { $sno = 1 + $_SESSION['page']; foreach($brands as $brand){?>
                                 <tr>
                                     <td scope="row"><?=$sno; $sno++;?></td>
                                     <td><?=$brand['brand_name'];?></td>
@@ -81,7 +81,7 @@
                                         </label>
                                     </td>
                                     <td><?=$brand['created_by'];?></td>
-                                    <td><?=$brand['created_on'];?></td>
+                                    <td><?=date('d M Y',strtotime($brand['created_on']));?></td>
                                     <td>
                                     <a href="<?php echo admin_url('edit-brands/'.$brand['brand_id']);?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a>
                                     <a href="javascript:void(0)" data-id="<?=$brand['brand_id'];?>" class="btn btn-danger delete"><span class="mdi mdi-delete"></span></a>

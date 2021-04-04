@@ -65,7 +65,7 @@ $media_alt = (!empty($gallery))?$gallery['media_alt']:'';
 
 
                                     <div class="col-md-6 mb-3" id="video"  <?php if($media_type == 2){?>style="display:block" <?php } else {?>style="display:none"<?php } ?>>
-                                        <label for="">Media File (MP4)</label>
+                                        <label for="">Media File (Type:MP4, Max size:1MB)</label>
                                         <input type="file" name="video" class="form-control form-control-sm input-sm" onchange="checkImageFile(748,1102,this)">
                                         <span style="color: red;font-size: 9px;"></span>
                                     </div>

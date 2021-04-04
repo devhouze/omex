@@ -241,7 +241,9 @@
                                     </div>
                                 </div>
                         <?php }
-                        } ?>
+                        }else{ ?>
+                            <div class="product-search-alert"><p>Sorry, we are not able to find any search results</p><div>
+                        <?php } ?>
 
                     </div>
                     <div class="row">

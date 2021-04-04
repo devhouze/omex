@@ -68,7 +68,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if(!empty($whats_new)) { $sno = 1; foreach($whats_new as $wn){?>
+                                <?php if(!empty($whats_new)) { $sno = 1 + $_SESSION['page']; foreach($whats_new as $wn){?>
                                 <tr>
                                     <td scope="row"><?=$sno; $sno++;?></td>
                                     <td><?=$wn['name'];?></td>
@@ -79,7 +79,7 @@
                                         </label>
                                     </td>
                                     <td><?=$wn['created_by'];?></td>
-                                    <td><?=$wn['created_on'];?></td>
+                                    <td><?=date('d M Y',strtotime($wn['created_on']));?></td>
                                     <?php if($this->session->userdata('admin_details')['user_type'] == "0"){?>
                                     <td>
                                         <a href="<?=admin_url('edit-whats-new/'.$wn['id'])?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a>

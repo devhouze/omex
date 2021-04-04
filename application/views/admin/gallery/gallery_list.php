@@ -75,7 +75,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if(!empty($gallery)) { $sno = 1; foreach($gallery as $value){?>
+                                <?php if(!empty($gallery)) {  $sno = 1 + $_SESSION['page']; foreach($gallery as $value){?>
                                 <tr>
                                     <td scope="row"><?=$sno; $sno++;?></td>
                                     <td><?=$value['file_type'];?></td>
@@ -89,7 +89,7 @@
                                         </label>
                                     </td>
                                     <td><?=$value['created_by'];?></td>
-                                    <td><?=$value['created_on'];?></td>
+                                   <td><?=date('d M Y',strtotime($value['created_on']));?></td>
                                     <td>
                                         <a href="<?=admin_url('edit-gallery/'.$value['id'])?>" class="btn btn-primary"><span class="mdi mdi-pencil"></span></a>
                                         <a href="javascript:void(0)" class="btn btn-danger delete" data-id="<?=$value['id'];?>"><span class="mdi mdi-delete"></span></a>

@@ -237,7 +237,7 @@ class Welcome_model extends CI_Model
         $this->db->where('status',0);
         $this->db->where('media_type',1);
         ($type!='all')?$this->db->where('filter_type',$type):'';
-        $this->db->order_by('sequence','desc');
+        $this->db->order_by('sequence','asc');
         $this->db->limit(10);
         $query = $this->db->get('tbl_gallery');
         // echo "<pre>";
@@ -253,7 +253,7 @@ class Welcome_model extends CI_Model
         $this->db->select('id, media_type, media_name, media_video,media_alt');
         $this->db->where('status',0);
         $this->db->where('media_type !=',1);
-        $this->db->order_by('sequence','desc');
+        $this->db->order_by('sequence','asc');
         $this->db->limit(10);
         $query = $this->db->get('tbl_gallery');
         if($query->num_rows() > 0){
@@ -321,7 +321,7 @@ class Welcome_model extends CI_Model
     public function get_past_events()
     {
         $query = $this->db->select('thumbnail_message, thumbnail_image, about_event, date_available, start_date, end_date')
-                        //   ->where('end_date <',date('Y-m-d'))
+        ->where('status',0)
         ->get('tbl_event');
         if($query->num_rows() > 0)
         {

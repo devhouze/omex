@@ -15,7 +15,7 @@ class WhatsNew_Controller extends MY_Controller
         } else {
             $page = 0;
         }  
-
+         $_SESSION['page']=$page;
         if($this->input->post('search')){
             $search = array(
                 'name'              => trim($this->input->post('name')),
@@ -241,7 +241,7 @@ class WhatsNew_Controller extends MY_Controller
         } else {
             $page = 0;
         }  
-
+         $_SESSION['page']=$page;
         if($this->input->post('search')){
             $search = array(
                 'name'              => trim($this->input->post('name')),

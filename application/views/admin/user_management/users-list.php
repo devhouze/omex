@@ -86,7 +86,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if(!empty($users)) { $sno = 1; foreach($users as $user){?>
+                                <?php if(!empty($users)) { $sno = 1 + $_SESSION['page']; foreach($users as $user){?>
                                 <tr>
                                     <td scope="row"><?=$sno; $sno++;?></td>
                                     <td><?=$user['user_type'];?></td>
