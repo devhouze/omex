@@ -11,14 +11,42 @@
 <script src="<?=base_url('assets/js/admin/timepicker.js')?>"></script>
 <script src="<?= base_url() ?>assets/js/admin/select2.js"></script>
 <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
-<script>
-  $( function() {
-   $( ".datepicker" ).datepicker({  
-    maxDate: 0,
-    changeMonth: true,
-    changeYear: true,
-    inline: true,
+
+<script type="text/javascript">
+  $(function() {
+    $( ".datepicker" ).datepicker({
+        changeMonth: true,
+        dateFormat: 'yy-mm-dd',
+        maxDate: 0,
+        changeYear: true,
+        onSelect: function(date){
+        var selectedDate = new Date(date);
+        var endDate = new Date(selectedDate);
+        //Set Minimum Date of EndDatePicker After Selected Date of StartDatePicker
+        $(".end_date").datepicker( "option", "minDate", endDate );
+        $(".end_date").datepicker( "option", "maxDate", '+2y' );
+    }
+    });
+
+    $(".end_date").datepicker({ 
+    dateFormat: 'yy-mm-dd',
+    minDate: new Date(),
+    changeMonth: true
 });
+});
+
+</script>
+
+<script>
+
+
+  $( function() {
+//    $( ".datepicker" ).datepicker({  
+//     maxDate: 0,
+//     changeMonth: true,
+//     changeYear: true,
+//     inline: true,
+// });
 
    $('.select-box').select2({
       placeholder: "Select from the list",
