@@ -1,3 +1,9 @@
+<style>
+.card-top .form-control-sm
+{
+height: 44px;
+}
+</style>
 <script src="<?=base_url('assets/js/admin/brands.js')?>"></script>
 <div class="content-wrapper">
     <div class="content">
@@ -21,20 +27,20 @@
 
         <div class="row">     
             <div class="col-lg-12">
-                <div class="card card-default">
+                <div class="card card-default card-top">
                 <div class="card-body">
                 <form action="" method="post">
                 <div class="form-row">
-                <div class="col-md-3">
+                <div class="col-4">
                     <input type="text" value="<?=$this->session->userdata('brand_offer')['brand_name'];?>" name="brand_name" placeholder="Search By Brand Name" class="form-control form-control-sm">
                 </div>
 
-                <div class="col-md-3">
+                <div class="col">
                     <input type="text" value="<?=$this->session->userdata('brand_offer')['offer_name'];?>" name="offer_name" placeholder="Search By Offer Name" class="form-control form-control-sm">
                 </div>
                 
                 <?php $status = (!empty($this->session->userdata('brand_offer')))?$this->session->userdata('brand_offer')['status']:null;?>
-                <div class="col-md-3">
+                <div class="col">
                     <select name="status" class="form-control form-control-sm">
                         <option selected disabled>Select Status</option>
                         <option value="0" <?php if($status == "0"){ echo "selected";}?>>Active</option>
@@ -42,9 +48,9 @@
                     </select>
                 </div>
 
-                <div class="col-md-3">
-                    <input type="submit" name="search" class="btn btn-primary" value="Search">
-                    <input type="submit" name="reset" class="btn btn-danger" value="Reset">
+                <div class="col d-flex justify-content-end">
+                    <input type="submit" name="search" class="btn btn-primary " value="Search">
+                    <input type="submit" name="reset" class="btn btn-danger ml-4" value="Reset">
                 </div>
                 
                 </form>

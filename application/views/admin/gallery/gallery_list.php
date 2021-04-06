@@ -1,3 +1,8 @@
+<style>
+table td:nth-child(4) {
+    width: 100px;
+    float: left;
+}</style>
 <script src="<?=base_url('assets/js/admin/gallery.js')?>"></script>
 <div class="content-wrapper">
     <div class="content">

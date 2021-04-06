@@ -2,6 +2,10 @@ header .nav-item.dropdown:hover .dropdown-menu {
     display: block;
 }
 
+.no-Banner .brand-lgoo {
+    top: 40px;
+}
+
 html {
     scroll-padding-top: 100px;
 }

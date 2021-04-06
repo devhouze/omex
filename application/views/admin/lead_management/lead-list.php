@@ -1,3 +1,15 @@
+<style>
+.list-card .form-control-sm {
+    height: 44px;
+}
+table th, .table td {
+    padding: 0.65rem;
+}
+tbody tr td:nth-child(5) {
+    width: 90px;
+}
+tbody tr td:nth-child(3) {float: left;width: 100px;}
+    </style>
 <script src="<?=base_url('assets/js/admin/lead_management.js')?>"></script>
 <div class="content-wrapper">
     <div class="content">
@@ -21,16 +33,16 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <div class="card card-default">
+                <div class="card card-default list-card">
                 <div class="card-body">
                 <form action="" method="post">
                 <div class="form-row">
-                <div class="col-md-3 mt-3">
+                <div class="col mt-3">
                     <input type="text" value="<?=$this->session->userdata('lead')['name'];?>" name="name" placeholder="Search By Name" class="form-control form-control-sm">
                 </div>
 
                 <?php $query_type = (!empty($this->session->userdata('lead')))?$this->session->userdata('lead')['query_type']:null;?>
-                <div class="col-md-3 mt-3">
+                <div class="col mt-3">
                     <select name="query_type" class="form-control form-control-sm">
                         <option selected disabled>Select Query Type</option>
                         <option value="General Enquiry" <?php if($query_type == "General Enquiry"){ echo "selected";}?>>General Enquiry</option>
@@ -43,15 +55,15 @@
                     </select>
                 </div>
 
-                <div class="col-md-3 mt-3">
+                <div class="col mt-3">
                     <input type="text" value="<?=$this->session->userdata('lead')['date_from'];?>" name="from_date" placeholder="Date from" class="form-control form-control-sm datepicker">
                 </div>
 
-                <div class="col-md-3 mt-3">
+                <div class="col mt-3">
                     <input type="text" value="<?=$this->session->userdata('lead')['date_to'];?>" name="to_date" placeholder="Date to" class="form-control form-control-sm datepicker">
                 </div>
 
-                <div class="col-md-3 mt-3">
+                <div class="col-md-2 mt-3">
                     <input type="submit" name="search" class="btn btn-primary" value="Search">
                     <input type="submit" name="reset" class="btn btn-danger" value="Reset">
                 </div>
@@ -66,7 +78,7 @@
                 <div class="card-header card-header-border-bottom">
                         <a href="<?=admin_url('export-leads')?>" class="btn btn-primary">Export CSV</a>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body px-2">
                         <table class="table table-hover ">
                             <thead>
                                 <tr>
