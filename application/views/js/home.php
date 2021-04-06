@@ -211,3 +211,13 @@ $(document).on('click','.exploer-btn',function(){
   })
 });
 </script>
+
+<script type="text/javascript">
+    $('.all,.interior,.exterior,.construction').click(function(){
+
+       var id=$(this).data('one');
+       $('.carousel-item').removeClass("active");
+       $('#'+id).addClass("active");
+
+    });
+</script>

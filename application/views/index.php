@@ -526,12 +526,12 @@
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <div class="owl-carousel slider wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
-                                <?php if (!empty($all_gallery)) {
-                                    foreach ($all_gallery as $gallery) { if(is_file('assets/images/public/home/' . $gallery['media_name'])){?>
+                                <?php  if (!empty($all_gallery)) {
+                                   $i=1; foreach ($all_gallery as $gallery) { if(is_file('assets/images/public/home/' . $gallery['media_name'])){?>
                                         <div class="item">
-                                            <img src="<?php echo base_url('assets/images/public/home/' . $gallery['media_name']); ?>" class="all">
+                                            <img src="<?php echo base_url('assets/images/public/home/' . $gallery['media_name']); ?>" data-one="<?php echo $i; ?>" class="all">
                                         </div>
-                                    <?php } }
+                                    <?php } $i++; }
                                 } ?>
                             </div>
                             <div class="slider-counter counter-all"></div>
@@ -540,11 +540,11 @@
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                             <div class="owl-carousel sliders">
                                 <?php if (!empty($interior_gallery)) {
-                                    foreach ($interior_gallery as $interior) { if(is_file('assets/images/public/home/' . $interior['media_name'])){?>
+                                   $i=1; foreach ($interior_gallery as $interior) { if(is_file('assets/images/public/home/' . $interior['media_name'])){?>
                                         <div class="item" data-bs-toggle="modal" data-bs-target="#interior-image-modal">
-                                            <img src="<?php echo base_url('assets/images/public/home/' . $interior['media_name']); ?>" class="interior">
+                                            <img src="<?php echo base_url('assets/images/public/home/' . $interior['media_name']); ?>" data-one="<?php echo $i; ?>a" class="interior">
                                         </div>
-                                    <?php } }
+                                    <?php } $i++; }
                                 } ?>
                             </div>
                             <div class="slider-counter counter_in"></div>
@@ -553,11 +553,11 @@
                         <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                             <div class="owl-carousel slider_ext">
                                 <?php if (!empty($exterior_gallery)) {
-                                    foreach ($exterior_gallery as $exterior) { if(is_file('assets/images/public/home/' . $exterior['media_name'])){?>
+                                   $i=1; foreach ($exterior_gallery as $exterior) { if(is_file('assets/images/public/home/' . $exterior['media_name'])){?>
                                         <div class="item" data-bs-toggle="modal" data-bs-target="#exterior-image-modal">
-                                            <img src="<?php echo base_url('assets/images/public/home/' . $exterior['media_name']); ?>" class="exterior">
+                                            <img src="<?php echo base_url('assets/images/public/home/' . $exterior['media_name']); ?>" data-one="<?php echo $i; ?>b" class="exterior">
                                         </div>
-                                    <?php } }
+                                    <?php } $i++; }
                                 } ?>
                             </div>
                             <div class="slider-counter counter_ext"></div>
@@ -565,12 +565,12 @@
                         <div class="tab-pane fade" id="last" role="tabpanel" aria-labelledby="last-tab">
                             <div class="owl-carousel sliders_con">
                                 <?php if (!empty($construction_gallery)) {
-                                    foreach ($construction_gallery as $construction) {  if(is_file('assets/images/public/home/' . $construction['media_name'])){?>
-                                        <div class="item">
-                                            <img src="<?php echo base_url('assets/images/public/home/' . $construction['media_name']); ?>" class="construction">
+                                    $i=1; foreach ($construction_gallery as $construction) {  if(is_file('assets/images/public/home/' . $construction['media_name'])){?>
+                                         <div class="item" data-bs-toggle="modal" data-bs-target="#construction-image-modal">
+                                            <img src="<?php echo base_url('assets/images/public/home/' . $construction['media_name']); ?>"  data-one="<?php echo $i; ?>c" class="construction">
                                         </div>
 
-                                    <?php } }
+                                    <?php } $i++; }
                                 } ?>
                             </div>
                             <div class="slider-counter counter_con"></div>
