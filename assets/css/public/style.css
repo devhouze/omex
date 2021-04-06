@@ -1,3 +1,7 @@
+header .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 html {
     scroll-padding-top: 100px;
 }
@@ -1976,6 +1980,8 @@ span.text-danger.errors_msg {
 
 .expoler-modal .modal-body ul li {
     position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .about-brand .carousel figure {
