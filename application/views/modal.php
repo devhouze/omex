@@ -57,7 +57,7 @@
                 <div id="all_images" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                     <?php if (!empty($all_gallery)) { $i=1; foreach ($all_gallery as $gallery) { ?>
-                        <div class="carousel-item <?php if($i==1){echo "active";} $i;?>">
+                        <div class="carousel-item <?php if($i==1){echo "active";} $i;?>" id="<?php echo $i; ?>">
                             <img src="<?php echo base_url('assets/images/public/home/' . $gallery['media_name']); ?>" class="d-block w-100" alt="...">
                         </div>
                         <?php $i++; } } ?>
@@ -85,7 +85,7 @@
                 <div id="interior_images" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                     <?php if (!empty($interior_gallery)) { $i=1; foreach ($interior_gallery as $interior) { ?>
-                        <div class="carousel-item <?php if($i==1){echo "active";} $i;?>">
+                        <div class="carousel-item <?php if($i==1){echo "active";} $i;?>" id="<?php echo $i; ?>a">
                             <img src="<?php echo base_url('assets/images/public/home/' . $interior['media_name']); ?>" class="d-block w-100" alt="...">
                         </div>
                         <?php $i++; } } ?>
@@ -113,7 +113,7 @@
                 <div id="exterior_images" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                     <?php if (!empty($exterior_gallery)) { $i=1; foreach ($exterior_gallery as $exterior) { ?>
-                        <div class="carousel-item <?php if($i==1){echo "active";} $i;?>">
+                        <div class="carousel-item <?php if($i==1){echo "active";} $i;?>" id="<?php echo $i; ?>b">
                             <img src="<?php echo base_url('assets/images/public/home/' . $exterior['media_name']); ?>" class="d-block w-100" alt="...">
                         </div>
                         <?php $i++; } } ?>
@@ -141,7 +141,7 @@
                 <div id="construction_images" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                     <?php if (!empty($construction_gallery)) { $i=1; foreach ($construction_gallery as $construction) { ?>
-                        <div class="carousel-item <?php if($i==1){echo "active";} $i;?>">
+                        <div class="carousel-item <?php if($i==1){echo "active";} $i;?>" id="<?php echo $i; ?>c">
                             <img src="<?php echo base_url('assets/images/public/home/' . $construction['media_name']); ?>" class="d-block w-100" alt="...">
                         </div>
                         <?php $i++; } } ?>

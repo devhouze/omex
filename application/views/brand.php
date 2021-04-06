@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 px-0">
-                    <div id="carouselExampleIndicators" class="carousel slide positon-relative d-md-block d-none" data-bs-ride="carousel">
+                    <div id="carouselExampleIndicators" class="carousel slide positon-relative d-md-block d-none <?php if(!is_file('assets/images/public/brand/'.$about_brand['banner_web'])){ echo "no-Banner"; }?>" data-bs-ride="carousel">
 
                         <div class="carousel-inner postion-relative ">
                             <?php if(is_file('assets/images/public/brand/'.$about_brand['banner_web'])){?>
@@ -33,7 +33,7 @@
                         </div>
                         <?php } ?>
                     </div>
-                    <div id="carouselExampleIndicatorsmob" class="carousel slide positon-relative d-md-none d-block" data-bs-ride="carousel">
+                    <div id="carouselExampleIndicatorsmob" class="carousel slide positon-relative d-md-none d-block <?php if(!is_file('assets/images/public/brand/'.$about_brand['banner_mobile'])){ echo "no-Banner"; }?>" data-bs-ride="carousel">
 
                         <div class="carousel-inner postion-relative ">
                             <?php if(is_file('assets/images/public/brand/'.$about_brand['banner_mobile'])){?>
