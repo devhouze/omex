@@ -1,3 +1,8 @@
+<style>
+table td:nth-child(2) {
+    width: 150px;
+    float: left;
+}</style>
 <script src="<?=base_url('assets/js/admin/events.js')?>"></script>
 <?php 
 if(!empty($this->uri->segment(4))){
