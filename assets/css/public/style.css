@@ -2,6 +2,10 @@ header .nav-item.dropdown:hover .dropdown-menu {
     display: block;
 }
 
+.navbar-brand img {
+    width: 292px !important;
+}
+
 .no-Banner .brand-lgoo {
     top: 40px;
 }
