@@ -2,7 +2,12 @@
 table td:nth-child(4) {
     width: 100px;
     float: left;
-}</style>
+}
+.card-top .form-control-sm
+{
+height: 44px;
+}
+</style>
 <script src="<?=base_url('assets/js/admin/gallery.js')?>"></script>
 <div class="content-wrapper">
     <div class="content">
@@ -26,13 +31,13 @@ table td:nth-child(4) {
 
         <div class="row">
             <div class="col-lg-12">
-                <div class="card card-default">
+                <div class="card card-default card-top">
                 <div class="card-body">
                 <form action="" method="post">
                 <div class="form-row">
 
                 <?php $media_type = (!empty($this->session->userdata('gallery')))?$this->session->userdata('gallery')['media_type']:null;?>
-                <div class="col-md-3">
+                <div class="col-md-5">
                     <select name="media_type" class="form-control form-control-sm">
                         <option selected disabled>Select File Type</option>
                         <option value="1" <?php if($media_type == "1"){ echo "selected";}?>>Image</option>
@@ -41,7 +46,7 @@ table td:nth-child(4) {
                     </select>
                 </div>
                 <?php $status = (!empty($this->session->userdata('gallery')))?$this->session->userdata('gallery')['status']:null;?>
-                <div class="col-md-3">
+                <div class="col-md-5">
                     <select name="status" class="form-control form-control-sm">
                         <option selected disabled>Select Status</option>
                         <option value="0" <?php if($status == "0"){ echo "selected";}?>>Active</option>
@@ -49,7 +54,7 @@ table td:nth-child(4) {
                     </select>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col">
                     <input type="submit" name="search" class="btn btn-primary" value="Search">
                     <input type="submit" name="reset" class="btn btn-danger" value="Reset">
                 </div>

@@ -2,7 +2,12 @@
 table td:nth-child(2) {
     width: 150px;
     float: left;
-}</style>
+}
+.card-top .form-control-sm
+{
+height: 44px;
+}
+</style>
 <script src="<?=base_url('assets/js/admin/events.js')?>"></script>
 <?php 
 if(!empty($this->uri->segment(4))){
@@ -33,7 +38,7 @@ if(!empty($this->uri->segment(4))){
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <div class="card card-default">
+                <div class="card card-default card-top">
                 <div class="card-body">
                 <form action="" method="post">
                 <div class="form-row">

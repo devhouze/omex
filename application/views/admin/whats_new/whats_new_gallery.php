@@ -1,3 +1,9 @@
+<style>
+    .card-top .form-control-sm
+{
+height: 44px;
+}
+</style>
 <script src="<?=base_url('assets/js/admin/whats_new.js')?>"></script>
 <div class="content-wrapper">
     <div class="content">
@@ -21,16 +27,16 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <div class="card card-default">
+                <div class="card card-default card-top">
                 <div class="card-body">
                 <form action="" method="post">
                 <div class="form-row">
-                <div class="col-md-3 mb-3">
+                <div class="col-md-5 mb-3">
                     <input type="text" value="<?=$this->session->userdata('whats_new')['name'];?>" name="name" placeholder="Search By Name" class="form-control form-control-sm">
                 </div>
 
                 <?php $status = (!empty($this->session->userdata('whats_new')))?$this->session->userdata('whats_new')['status']:null;?>
-                <div class="col-md-3 mb-3">
+                <div class="col-md-5 mb-3">
                     <select name="status" class="form-control form-control-sm">
                         <option selected disabled>Select Status</option>
                         <option value="0" <?php if($status == "0"){ echo "selected";}?>>Active</option>
@@ -38,7 +44,7 @@
                     </select>
                 </div>
 
-                <div class="col-md-3 mb-3">
+                <div class="col mb-3">
                     <input type="submit" name="search" class="btn btn-primary" value="Search">
                     <input type="submit" name="reset" class="btn btn-danger" value="Reset">
                 </div>
