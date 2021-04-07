@@ -110,7 +110,7 @@ class Welcome_model extends CI_Model
 
     public function get_events()
     {
-        $query = $this->db->select('event_name, thumbnail_message, event_start_time, event_end_time, date_available, start_date, end_date, thumbnail_image, about_event, event_category, show_reg_btn, event_id, event_street, event_slug')
+        $query = $this->db->select('event_name, thumbnail_message, event_start_time, event_end_time, date_available, start_date, end_date, thumbnail_image, about_event, event_category, show_reg_btn, event_id, event_street, event_slug,event_location,event_street')
         ->where('status',0)
                         //   ->group_start()
                         //   ->where('end_date >',date('Y-m-d'))
@@ -128,7 +128,7 @@ class Welcome_model extends CI_Model
 
     public function get_event_detail($slug)
     {
-        $query = $this->db->select('event_name, thumbnail_message, event_start_time, event_end_time, date_available, start_date, end_date, thumbnail_image, about_event, event_category, show_reg_btn, event_slug,meta_tags')
+         $query = $this->db->select('event_name, thumbnail_message, event_start_time, event_end_time, date_available, start_date, end_date, thumbnail_image, about_event, event_category, show_reg_btn, event_slug,meta_tags,event_location,event_street')
         ->where('status',0)
         ->where('event_slug',$slug)
         ->get('tbl_event');
@@ -397,7 +397,7 @@ class Welcome_model extends CI_Model
 
     public function get_events_by_street($street)
     {
-        $query = $this->db->select('event_name, thumbnail_message, event_start_time, event_end_time, date_available, start_date, end_date, thumbnail_image, about_event, event_category, show_reg_btn, event_id, event_street, event_slug')
+        $query = $this->db->select('event_name, thumbnail_message, event_start_time, event_end_time, date_available, start_date, end_date, thumbnail_image, about_event, event_category, show_reg_btn, event_id, event_street, event_slug,event_location,event_street')
         ->where('status',0)
         ->where('find_in_set("'.$street.'",event_street)')
                         //   ->group_start()
