@@ -11,7 +11,7 @@ table th, .table td {
     padding: 0.65rem;
 }
 tbody tr td:nth-child(5) {
-    width: 90px;
+    width: 100px;
     word-break: break-all;
 }
 tbody tr td:nth-child(3) {float: left;width: 100px;word-break: break-all;}
