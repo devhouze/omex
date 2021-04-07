@@ -1,27 +1,33 @@
 <style>
     tbody tr td:nth-child(2) {
     width: 100px;
+    word-break: break-all;
 }
 .list-card .form-control-sm {
     height: 44px;
+
 }
 table th, .table td {
     padding: 0.65rem;
 }
 tbody tr td:nth-child(5) {
     width: 90px;
+    word-break: break-all;
 }
-tbody tr td:nth-child(3) {float: left;width: 100px;}
+tbody tr td:nth-child(3) {float: left;width: 100px;word-break: break-all;}
 tbody tr td:nth-child(6) {
     width: 140px;
+    word-break: break-all;
 }
 
 tbody tr td:nth-child(7) {
     width: 130px;
+    word-break: break-all;
 }
 
 tbody tr td:nth-child(8) {
     width: 140px;
+    word-break: break-all;
 }
 
 tbody tr td:nth-child(9) {
