@@ -1,4 +1,7 @@
 <style>
+    tbody tr td:nth-child(2) {
+    width: 100px;
+}
 .list-card .form-control-sm {
     height: 44px;
 }
@@ -9,6 +12,21 @@ tbody tr td:nth-child(5) {
     width: 90px;
 }
 tbody tr td:nth-child(3) {float: left;width: 100px;}
+tbody tr td:nth-child(6) {
+    width: 140px;
+}
+
+tbody tr td:nth-child(7) {
+    width: 130px;
+}
+
+tbody tr td:nth-child(8) {
+    width: 140px;
+}
+
+tbody tr td:nth-child(9) {
+    width: 150px;
+}
     </style>
 <script src="<?=base_url('assets/js/admin/lead_management.js')?>"></script>
 <div class="content-wrapper">
