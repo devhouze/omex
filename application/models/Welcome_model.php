@@ -187,9 +187,10 @@ class Welcome_model extends CI_Model
 
     public function get_brand_offers()
     {
-        $query = $this->db->select('offer_thumbnail, thumbnail_alt, about_offer')
-        ->where('status',0)
-        ->get('tbl_brand_offer');
+        $query = $this->db->select('a.offer_thumbnail, a.thumbnail_alt, a.about_offer,b.brand_name,b.brand_slug')
+        ->join('tbl_brand as b', 'b.brand_id = a.brand_id')
+        ->where('a.status',0)
+        ->get('tbl_brand_offer as a');
         if($query->num_rows() > 0)
         {
             return $query->result_array();
