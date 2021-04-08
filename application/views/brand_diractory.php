@@ -290,7 +290,7 @@
                                                             </div>
                                                             <div class="col-md-8 ">
                                                                 <div class="brand-content"><?php echo $offers['about_offer']; ?> </div>
-                                                                <a class="brand-offer-link" href="<?php echo $offers['brand_slug']; ?>"><?php echo $offers['brand_name']; ?></a>
+                                                                <a class="brand-offer-link" href="<?php echo $offers['brand_slug']; ?>">Explore <?php echo $offers['brand_name']; ?></a>
                                                             </div>
                                                         </div>
                                                     </div>
