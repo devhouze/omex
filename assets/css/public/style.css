@@ -1,3 +1,17 @@
+a.brand-offer-link {
+    color: white;
+    border: 1px solid white;
+    padding: 10px 40px;
+    margin-top: 40px;
+    float: left;
+    font-size: 16px;
+}
+
+a.brand-offer-link:hover {
+    background: white;
+    color: #ee5835;
+}
+
 header .nav-item.dropdown:hover .dropdown-menu {
     display: block;
 }
@@ -1887,9 +1901,16 @@ span.text-danger.errors_msg {
     z-index: 9;
 }
 
-.brand-directory-page .about-brand .carousel-inner,
 .event-page .about-brand .carousel-inner {
+    padding-bottom: 100px;
+}
+
+.brand-directory-page .about-brand .carousel-inner {
     padding-bottom: 390px;
+}
+
+.event-page .crsouls-btn-group {
+    bottom: -40px !important;
 }
 
 .street-banner .card>img {
@@ -2001,6 +2022,38 @@ span.text-danger.errors_msg {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.event-past-event .carousel figure img {
+    height: unset;
+    width: unset;
+    object-fit: unset;
+}
+
+.event-past-event .carousel figure {
+    width: auto;
+    height: auto;
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 358px;
+    margin-bottom: 0;
+    transform: translate(-50px, 60px);
+}
+
+.event-past-event .carousel-item {
+    background-color: #ee5835;
+}
+
+.event-past-event .card {
+    margin-top: 0;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 40px;
+}
+
+.event-past-event .carousel-inner {
+    padding-left: 50px;
 }
 
 .street-carosul {
@@ -2134,6 +2187,23 @@ ul.share-links li:nth-child(2) {
 }
 
 @media only screen and (max-width: 600px) {
+    .event-page .about-brand .carousel-inner {
+        padding-left: 0;
+    }
+    .event-past-event .carousel figure {
+        transform: unset !important;
+    }
+    .event-past-event .carousel figure {
+        height: auto;
+        margin-top: 0;
+    }
+    a.brand-offer-link {
+        display: table;
+        float: unset;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+    }
     .social-box {
         padding: 60px 0;
         margin-bottom: 15px;

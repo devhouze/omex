@@ -99,7 +99,7 @@
         </div>
     </div>
     <?php if (!empty($past_event)) { ?>
-        <div class="about-brand gray-bg  pb-30 pt-60">
+        <div class="about-brand event-past-event gray-bg  pb-60 pt-60">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 positoin-relative">
@@ -122,15 +122,17 @@
                                                                         echo "active";
                                                                     } ?>">
                                             <div class="row justify-content-center">
-                                                <div class="col-md-12 position-relative">
+                                                <div class="col-md-6">
                                                     <figure> <img src="<?php echo base_url('assets/images/public/home/' . $pe['thumbnail_image']); ?>" alt="<?php echo $pe['thumbnail_message']; ?>" class=""></figure>
+                                                </div>
+                                                <div class="col-md-6 position-relative">
+
                                                     <div class="card mt-60 border-0 rounded-0">
                                                         <div class="row">
-                                                            <div class="col-md-4 ">
-                                                            </div>
-                                                            <div class="col-md-8 ">
+                                                            
+                                                            
                                                                 <div class="content-box"><?php echo $pe['about_event']; ?></div>
-                                                            </div>
+                                                            
                                                         </div>
                                                     </div>
 
@@ -224,7 +226,7 @@
                     <div class="slider-counter s_counder"></div>
                 </div>
             </div>
-            
+
         </div>
 
     </div>
@@ -300,7 +302,7 @@
                                                 <div class="img-box positon-relative">
                                                     <img src="<?php echo base_url('assets/images/public/brand/' . $new['banner_web']); ?>" alt="<?php echo $new['banner_comment']; ?>" class="d-table ml-auto">
                                                     <div class="brnad-logo">
-                                                        <a href="<?php echo base_url('brand/'.$new['brand_slug']);?>" class="brand-logo-link"></a>
+                                                        <a href="<?php echo base_url('brand/' . $new['brand_slug']); ?>" class="brand-logo-link"></a>
                                                         <img src="<?php echo base_url('assets/images/public/brand/' . $new['brand_logo']); ?>" alt="<?php echo $new['logo_message']; ?>" class="">
 
                                                     </div>
