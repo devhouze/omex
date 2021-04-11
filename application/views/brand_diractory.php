@@ -6,10 +6,10 @@
                     <div class="col-md-12 d-flex flex-fill px-0">
                         <div id="carouselExampleIndicatorss" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
                             <ol class="carousel-indicators">
-                                <?php $count = count($brand_banner);
+                                <?php $count = count($brand_banner); if($count>1){
                                 for ($i = 0; $i < $count; $i++) { ?>
                                     <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="<?php echo $i; ?>" <?php if ($i == 0) { ?>class="active" <?php } ?>></li>
-                                <?php } ?>
+                                <?php } } ?>
                             </ol>
 
 
