@@ -27,8 +27,9 @@ $banner_web = (!empty($brands)) ? $brands->banner_web : '';
 $banner_mobile = (!empty($brands)) ? $brands->banner_mobile : '';
 $about_brand_banner_web = (!empty($brands)) ? $brands->about_brand_banner_web : '';
 $about_brand_banner_mobile = (!empty($brands)) ? $brands->about_brand_banner_mobile : '';
-$meta_tags = (!empty($brands)) ? $brands->meta_tags : '<meta name="description" content="Meta Description">
-<meta name="keywords" content="Meta Keywords">';
+$meta_title = (!empty($brands)) ? $brands->meta_title :'';
+$meta_keyword = (!empty($brands)) ? $brands->meta_keyword :'';
+$meta_description = (!empty($brands)) ? $brands->meta_description :'';
 
 
 ?>
@@ -326,9 +327,19 @@ $meta_tags = (!empty($brands)) ? $brands->meta_tags : '<meta name="description" 
                                     </select>
                                 </div>
 
+                                <div class="col-md-6 mb-3">
+                                    <label for="">Meta Title</label>
+                                    <input type="text" class="form-control form-control-sm input-sm" name="meta_title" value="<?=$meta_title;?>">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="">Meta Keyword</label>
+                                    <input type="text" class="form-control form-control-sm input-sm" name="meta_keyword" value="<?=$meta_keyword;?>">
+                                </div>
+
                                 <div class="col-md-12 mb-3">
-                                    <label for="">Meta Tags</label>
-                                    <textarea name="meta_tags" class="form-control form-control-sm " rows="5"><?= $meta_tags; ?></textarea>
+                                    <label for="">Meta Description</label>
+                                    <textarea name="meta_description" class="form-control form-control-sm " rows="5"><?= $meta_description; ?></textarea>
                                 </div>
 
                             </div>

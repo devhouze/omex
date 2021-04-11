@@ -13,8 +13,8 @@ class Banner_Model extends MY_Model
         $this->db->select('id, banner_web, banner_mobile, tbl_banner.status, tbl_admin.name as created_by, date_format(tbl_banner.created_on,"%d-%m-%Y") as created_on, (case when banner_type = 1 then "Home" when banner_type = 2 then "Event" when banner_type = 3 then "Brand Directory" when banner_type = 4 then "Brand Discount"  when banner_type = 5 then "Brand"  when banner_type = 6 then "About Brand" end) as banner_type, comment');
         $this->db->join('tbl_admin','admin_id = tbl_banner.created_by');
         $this->db->where('tbl_banner.status !=',2);
-        (!empty($keyword['banner_type']))?$this->db->like('banner_type',$keyword['banner_type']):'';
-        (!empty($keyword['status']))?$this->db->where('tbl_banner.status',$keyword['status']):'';
+        (isset($keyword['banner_type']))?$this->db->where('banner_type',$keyword['banner_type']):'';
+        (isset($keyword['status']))?$this->db->where('tbl_banner.status',$keyword['status']):'';
         (!$count)?$this->db->limit($per_page,$page):'';
         (!empty($column) && !empty($order))?$this->db->order_by($column,$order):$this->db->order_by('id','desc');
         $query = $this->db->get('tbl_banner');

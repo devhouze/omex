@@ -18,8 +18,9 @@ $show_brand = ($events)?$events->show_brand:1;
 $show_reg_btn = ($events)?$events->show_reg_btn:1;
 $brands = ($events)?$events->brands:'';
 $thumbnail_image = ($events)?$events->thumbnail_image:'';
-$meta_tags = (!empty($events)) ? $events->meta_tags : '<meta name="description" content="Meta Description">
-<meta name="keywords" content="Meta Keywords">';
+$meta_title = (!empty($events)) ? $events->meta_title :'';
+$meta_keyword = (!empty($events)) ? $events->meta_keyword :'';
+$meta_description = (!empty($events)) ? $events->meta_description :'';
 ?>
 <script src="<?=base_url('assets/js/admin/events.js')?>"></script>
 <div class="content-wrapper">
@@ -180,10 +181,19 @@ $meta_tags = (!empty($events)) ? $events->meta_tags : '<meta name="description" 
                                         <option value="1" <?php if($show_reg_btn == 1){echo "selected"; }?>>No</option>
                                     </select>
                                 </div>
+                                 <div class="col-md-6 mb-3">
+                                    <label for="">Meta Title</label>
+                                    <input type="text" class="form-control form-control-sm input-sm" name="meta_title" value="<?=$meta_title;?>">
+                                </div>
+
+                                 <div class="col-md-6 mb-3">
+                                    <label for="">Meta Keyword</label>
+                                    <input type="text" class="form-control form-control-sm input-sm" name="meta_keyword" value="<?=$meta_keyword;?>">
+                                </div>
 
                                  <div class="col-md-12 mb-3">
-                                    <label for="">Meta Tags</label>
-                                    <textarea name="meta_tags" class="form-control form-control-sm " rows="5"><?= $meta_tags; ?></textarea>
+                                    <label for="">Meta Description</label>
+                                    <textarea name="meta_description" class="form-control form-control-sm " rows="5"><?= $meta_description; ?></textarea>
                                 </div>
 
                             </div>
