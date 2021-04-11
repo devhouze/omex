@@ -58,7 +58,7 @@
 </script>
 
 <script>
-    $('.sliders').on('initialized.owl.carousel changed.owl.carousel', function(e) {
+    $('.more-slider').on('initialized.owl.carousel changed.owl.carousel', function(e) {
         if (!e.namespace) {
             return;
         }
