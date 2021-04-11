@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div class="row mt-4 justify-content-center">
-                <div class="col-md-10 px-md-3 px-0">
+                <div class="col-xxl-10  px-md-3 px-0">
                     <div id="carouselExamControlss" class="carousel slide d-md-block d-none wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="2s" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <?php if(!empty($gallery)){ $i = 1; foreach($gallery as $img){?>
@@ -94,7 +94,7 @@
         <div class="share-friends gray-bg pt-30 pb-60">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-md-10">
+                    <div class="col-xxl-10">
                         <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Share With Friends </h5>
                         <!-- https://www.facebook.com/omaxeworldsreet/ -->
                         <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
