@@ -384,7 +384,7 @@
                             </div>
                         </div>
                         <div class="row mt-4 justify-content-center">
-                            <div class="col-md-10">
+                            <div class="col-xxl-10">
                                 <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                                     <div class="carousel-inner">
                                         <?php $i = 1;

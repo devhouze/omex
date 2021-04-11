@@ -4,7 +4,7 @@
         <div class="container">
 
             <div class="row mt-4 justify-content-center">
-                <div class="col-md-10">
+                <div class="col-xxl-10">
                     <div id="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" >
 
                         <div class="carousel-inner">
@@ -167,7 +167,7 @@
 
             <div class="row justify-content-center">
                 <?php if (!empty($event)) { ?>
-                    <div class="col-md-10">
+                    <div class="col-xxl-10">
                         <p><?php echo $event['about_event']; ?></p>
                         <div class="d-table mx-auto my-4 h-color fz26"><img src="<?php echo BASE_URL(); ?>assets/images/public/home/cmap.svg" alt=""> <?php echo ucfirst($event['event_location']).','.ucfirst($event['event_street']); ?></div>
                         <ul>
@@ -206,7 +206,7 @@
             </div>
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-md-10">
+                    <div class="col-xxl-10">
                         <div id="carouselExampleControlseven" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <?php if (!empty($past_event)) {
@@ -278,7 +278,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-md-10">
+                <div class="col-xxl-10">
                     <ul class="category d-flex justify-content-center align-items-center flex-wrap">
                         <li>
                             <a href="<?php echo base_url('brand-directory/fashion#search-box') ?>">
@@ -318,7 +318,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-md-10">
+                <div class="col-xxl-10">
                     <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <?php if (!empty($what_new)) {

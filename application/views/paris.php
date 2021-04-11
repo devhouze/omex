@@ -196,7 +196,7 @@
                     </div>
                 </div>
                 <div class="row mt-4 justify-content-center">
-                    <div class="col-md-10">
+                    <div class="col-xxl-10">
                         <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                             <?php include('common_events.php'); ?>
                             <?php if (count($events) > 1) { ?>
@@ -227,7 +227,7 @@
                 </div>
             </div>
             <div class="row mt-4 justify-content-center">
-                <div class="col-md-10 px-md-3 px-0">
+                <div class="col-xxl-10  px-md-3 px-0">
                     <div id="carouselExamControlss" class="carousel slide d-md-block d-none wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="2s" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" style="background-image: url('<?php echo base_url(); ?>assets/images/public/h1.jpg');">
@@ -304,7 +304,7 @@
                 </div>
             </div>
             <div class="row mt-4 d-flex flex-fill">
-                <div class="col-md-1"></div>
+                <div class="col-xxl-1"></div>
                 <div class="col-md-6 d-flex flex-fill pe-md-5">
                     <!-- <figure class="mb-0 w-100 d-flex flex-fill"><img src="<?php echo base_url(); ?>assets/images/public/street/map.jpg" alt="" class="w-100"></figure> -->
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14040.246250040547!2d77.3528947!3d28.3872085!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5ba6ea082ef6bf15!2sOmaxe%20World%20Street!5e0!3m2!1sen!2spl!4v1605103931187!5m2!1sen!2spl" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -317,7 +317,7 @@
                         <img src="<?php echo base_url(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto mt-30">
                     </div>
                 </div>
-                <div class="col-md-1"></div>
+                <div class="col-xxl-1"></div>
             </div>
         </div>
 
