@@ -5,9 +5,9 @@
                 <div class="col-md-12 d-flex flex-fill px-0">
                     <div id="carouselExampleIndicatorss" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
                         <ol class="carousel-indicators">
-                            <?php $count = count($banner); for($i=0; $i < $count; $i++){?>
+                            <?php $count = count($banner); if($count>1){ for($i=0; $i < $count; $i++){?>
                                 <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="<?php echo $i; ?>" <?php if($i == 0){?>class="active" <?php } ?>></li>
-                            <?php } ?>
+                            <?php } } ?>
                         </ol>
 
                         
@@ -27,6 +27,8 @@
                                                 <a href="<?php echo base_url('brand/'.$value['link_to'])?>" target="_blank" class="banner-link"></a>
                                             <?php } elseif($value['banner_link'] == 4){?>
                                                 <a href="<?php echo base_url($value['link_to'])?>" target="_blank" class="banner-link"></a>
+                                             <?php } elseif($value['banner_link'] == 5){?>
+                                                <a href="<?php echo base_url('contact-us')?>" target="_blank" class="banner-link"></a>
                                             <?php } ?>
                                         </div>
                                     <?php } }

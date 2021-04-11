@@ -91,7 +91,9 @@ class Event_Controller extends MY_Controller
                     'show_brand'            => $this->input->post('show_brand'),
                     'brands'                => $this->input->post('brand'),
                     'show_reg_btn'          => $this->input->post('show_reg_btn'),
-                    'meta_tags'                     => $this->input->post('meta_tags'),
+                    'meta_title'                     => $this->input->post('meta_title'),
+                    'meta_keyword'                     => $this->input->post('meta_keyword'),
+                    'meta_description'                     => $this->input->post('meta_description'),
                     'created_by'            => $this->em->admin_id()
                 );
                 
@@ -172,7 +174,9 @@ class Event_Controller extends MY_Controller
                     'show_brand'            => $this->input->post('show_brand'),
                     'brands'                => $this->input->post('brand'),
                     'show_reg_btn'          => $this->input->post('show_reg_btn'),
-                    'meta_tags'                     => $this->input->post('meta_tags'),
+                     'meta_title'                     => $this->input->post('meta_title'),
+                    'meta_keyword'                     => $this->input->post('meta_keyword'),
+                    'meta_description'                     => $this->input->post('meta_description'),
                     'created_by'            => $this->em->admin_id()
                 );
                 
