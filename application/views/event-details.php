@@ -169,7 +169,7 @@
                 <?php if (!empty($event)) { ?>
                     <div class="col-md-10">
                         <p><?php echo $event['about_event']; ?></p>
-                        <div class="d-table mx-auto my-4 h-color fz26"><img src="<?php echo BASE_URL(); ?>assets/images/public/home/cmap.svg" alt=""> <?php echo ucfirst($event['event_location']).','.ucfirst($event['event_street']); ?></div>
+                        <div class="d-table mx-auto my-4 h-color fz26"><img src="<?php echo BASE_URL(); ?>assets/images/public/home/cmap.svg" alt=""> <?php echo ucfirst($event['event_location']); ?></div>
                         <ul>
                             <?php $labels = explode(',', $event['event_category']);
                             if (is_array($labels)) {
