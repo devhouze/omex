@@ -192,8 +192,8 @@
             } ?>
         </div>
     </div>
-    <?php if (!empty($past_event)) { ?>
-        <div class="about-brand gray-bg  pb-30 pt-60 pt-sm-30">
+   <?php if (!empty($past_event)) { ?>
+        <div class="about-brand event-past-event gray-bg  pb-60 pt-60">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 positoin-relative">
@@ -216,22 +216,25 @@
                                                                         echo "active";
                                                                     } ?>">
                                             <div class="row justify-content-center">
-                                                <div class="col-md-12 position-relative">
+                                                <div class="col-md-6">
                                                     <figure> <img src="<?php echo base_url('assets/images/public/home/' . $pe['thumbnail_image']); ?>" alt="<?php echo $pe['thumbnail_message']; ?>" class=""></figure>
+                                                </div>
+                                                <div class="col-md-6 position-relative">
+
                                                     <div class="card mt-60 border-0 rounded-0">
                                                         <div class="row">
-                                                            <div class="col-md-4 ">
-                                                            </div>
-                                                            <div class="col-md-8 ">
-                                                                <div class="brand-content"><?php echo $pe['about_event']; ?></div>
-                                                            </div>
+                                                            
+                                                            
+                                                                <div class="content-box"><?php echo $pe['about_event']; ?></div>
+                                                            
                                                         </div>
                                                     </div>
 
                                                 </div>
                                             </div>
                                         </div>
-                                <?php }
+                                <?php $i++;
+                                    }
                                 } ?>
                             </div>
                             <?php if (count($past_event) > 1) { ?>
