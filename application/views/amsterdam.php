@@ -82,7 +82,7 @@
                 </div>
             </div>
             <div class="row mt-4 d-lg-flex d-none justify-content-center">
-                <div class="col-md-9">
+                <div class="col-xxl-9">
                     <div class="owl-carousel slider-web wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
                         <div class="item">
                             <div class="row">
