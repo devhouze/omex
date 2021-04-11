@@ -5,7 +5,7 @@
             <div class="container">
 
                 <div class="row mt-4 justify-content-center">
-                    <div class="col-md-10">
+                    <div class="col-xxl-10">
                         <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                             <?php include('common_events.php'); ?>
                             <?php if (count($events) > 1) { ?>
@@ -37,7 +37,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row justify-content-center">
-                            <div class="col-md-10">
+                            <div class="col-xxl-10">
                                 <p>Nike, Inc. is an American multinational corporation that is engaged in the design, development, manufacturing, and worldwide marketing and sales of footwear, apparel, equipment, accessories, and services. </p>
                                 <ul>
                                     <li><a href="">PHOTOGRAPHY</a></li>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="row justify-content-center">
-                            <div class="col-md-10">
+                            <div class="col-xxl-10">
                                 <p>Nike, Inc. is an American multinational corporation that is engaged in the design, development, manufacturing, and worldwide marketing and sales of footwear, apparel, equipment, accessories, and services. </p>
                                 <ul>
                                     <li><a href="">PHOTOGRAPHY</a></li>
@@ -71,7 +71,7 @@
             <div class="row justify-content-center">
                 <?php if (!empty($events)) {
                     foreach ($events as $event) { ?>
-                        <div class="col-md-10">
+                        <div class="col-xxl-10">
                             <p><?php echo $event['about_event']; ?></p>
                             <ul>
                                 <?php $labels = explode(',', $event['event_category']);
@@ -112,7 +112,7 @@
             </div>
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-md-10">
+                    <div class="col-xxl-10">
                         <div id="carouselExampleControlseven" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <?php if (!empty($past_event)) {
@@ -240,7 +240,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-md-10">
+                <div class="col-xxl-10">
                     <ul class="category d-flex justify-content-center align-items-center flex-wrap">
                         <li>
                             <a href="<?php echo base_url('brand-directory/fashion#search-box') ?>">
@@ -281,7 +281,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-md-10">
+                    <div class="col-xxl-10">
                         <div id="carouselExampleControls_whats" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <?php
