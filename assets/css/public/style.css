@@ -1804,6 +1804,10 @@ span.text-danger.errors_msg {
     bottom: 0;
 }
 
+.product-box .addrs {
+    font-size: 16px;
+}
+
 .product-box {
     font-size: 18px;
     color: var(--h-color);
