@@ -105,7 +105,7 @@ $banner_link = (!empty($banner))?$banner['banner_link']:'';
                             <label for="">Choose One</label>
                             <select name="link_to" class="form-control form-control-sm link_to">
                                 <?php if(!empty($link_to)){ foreach ($link_to as $value) { ?>
-                                    <option value="<?php echo $value['slug']; ?>"><?php echo $value['name']; ?></option>
+                                    <option value="<?php echo $value['slug']; ?>" <?php if($banner['link_to'] == $value['slug']){echo 'selected'; }?>><?php echo $value['name']; ?></option>
                                 <?php } }?>
                             </select>
                         </div>

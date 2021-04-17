@@ -413,7 +413,7 @@ class WhatsNew_Controller extends MY_Controller
             }
         }
         $data['whats_new_gallery'] = $this->wsm->get_data_row_array('tbl_whats_new_gallery','*',['id' => $id]);
-        $data['whats_new'] = $this->wsm->get_data_array('tbl_whats_new', "name_slug, name",['status' => 0]);
+        $data['whats_new'] = $this->wsm->get_data_array('tbl_whats_new', "name_slug, name");
 
         $this->load->view('admin/include/header_start');
 		$this->load->view('admin/include/header_end');
