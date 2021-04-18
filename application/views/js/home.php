@@ -17,7 +17,7 @@ $('.slider_ext').on('initialized.owl.carousel changed.owl.carousel', function(e)
             items:1
         },
         600:{
-            items:3
+            items:2
         },
         1000:{
             items:3
@@ -48,7 +48,7 @@ $('.sliders_con').on('initialized.owl.carousel changed.owl.carousel', function(e
             items:1
         },
         600:{
-            items:3
+            items:2
         },
         1000:{
             items:3
@@ -79,7 +79,7 @@ $('.sliders_video').on('initialized.owl.carousel changed.owl.carousel', function
             items:1
         },
         600:{
-            items:3
+            items:2
         },
         1000:{
             items:3
@@ -111,7 +111,7 @@ $('.slider').on('initialized.owl.carousel changed.owl.carousel', function(e) {
             items:1
         },
         600:{
-            items:3
+            items:2
         },
         1000:{
             items:3
@@ -141,7 +141,7 @@ $('.sliders').on('changed.owl.carousel', function(e) {
             items:1
         },
         600:{
-            items:3
+            items:2
         },
         1000:{
             items:3

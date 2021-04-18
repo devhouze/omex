@@ -2205,9 +2205,36 @@ ul.share-links li:nth-child(2) {
 }
 
 @media screen and (min-device-width: 600px) and (max-device-width: 992px) {
+    .footer-signup .form-control {
+        width: 100%;
+        max-width: 100%;
+    }
+    .footer-signup .col-md-4 {
+        margin-bottom: 50px;
+    }
+    .expreance-gallary .slider-counter {
+        left: 34%;
+    }
+    .experience .carousel-indicators li {
+        display: none;
+        margin-left: 0;
+    }
+    .arow-btns a.carousel-control-next {
+        right: 30px
+    }
+    .arow-btns a.carousel-control-prev {
+        left: 30px;
+    }
+    .experience .carousel-indicators li.active {
+        display: block;
+    }
+    .event-page .about-brand .carousel-inner {
+        padding-bottom: 40px;
+    }
     .about-brand .carousel figure {
         width: 100%;
         height: auto;
+        margin-top: 0;
     }
     .search-brand .select2-container {
         width: 100% !important;
@@ -2278,10 +2305,10 @@ ul.share-links li:nth-child(2) {
         width: 60px;
     }
     .top-brands .owl-theme .owl-nav .owl-prev {
-        left: -90px;
+        left: -20px;
     }
     .top-brands .owl-theme .owl-nav .owl-next {
-        right: -90px;
+        right: -20px;
     }
     .looking-out .primary-btn {
         margin: 40px auto 0px auto;
@@ -2393,6 +2420,12 @@ ul.share-links li:nth-child(2) {
     }
     .category li {
         font-size: 12px;
+    }
+    .event-page .looking-out {
+        padding-top: 0;
+    }
+    .event-page .about-event {
+        padding-top: 0;
     }
 }
 
