@@ -65,10 +65,10 @@
     </div>
     <?php } ?>
     <div class="shop-details gray-bg">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
-                <div class="col-md-8"></div>
-                <div class="col-md-4">
+                <div class="col-lg-8 col-md-6"></div>
+                <div class="col-lg-4 col-md-6">
                     <ul>
                         <li><img src="<?php echo BASE_URL(); ?>assets/images/public/home/cmap.svg" alt=""><?php echo $about_brand['brand_location'].','.$about_brand['brand_street']; ?></li>
                         <li><img src="<?php echo BASE_URL(); ?>assets/images/public/home/ccall.svg" alt=""><?php echo $about_brand['brand_contact']; ?></li>
@@ -98,7 +98,7 @@
     <?php } ?>
     <?php if(!empty($about_brand)){?>
     <div class="about-brand gray-bg  pb-30">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated">About <?php echo $about_brand['brand_name'];?></h5>
@@ -109,9 +109,9 @@
                     <figure> <img src="<?php echo BASE_URL('assets/images/public/brand/'.$about_brand['about_brand_banner_web']); ?>" alt="<?php echo $about_brand['about_brand_banner_alt']; ?>" class=""></figure>
                     <div class="card mt-60 border-0 rounded-0">
                         <div class="row">
-                            <div class="col-md-4 ">
+                            <div class="col-lg-4 ">
                             </div>
-                            <div class="col-md-8 ">
+                            <div class="col-lg-8 ">
                                 <div class="brand-content"><?php echo $about_brand['about_brand']; ?></div>
                             </div>
                         </div>
@@ -246,7 +246,7 @@
     </div>
     <?php } ?>
     <div class="expoler-category gray-bg pt-60 pb-30">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Explore other Categories</h5>
@@ -288,7 +288,7 @@
     </div>
     <?php if(!empty($what_new)){?>
     <div class="whats-new py-60 py-sm-20 gray-bg">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">What’s New in the Streets</h5>
@@ -302,13 +302,13 @@
                             <?php $i = 1; foreach($what_new as $new){?>
                             <div class="carousel-item  <?php if($i == 1){echo "active";}?>">
                                 <div class="row flex-fill">
-                                    <div class="col-md-6 pe-md-4 d-flex flex-fill">
+                                    <div class="col-lg-6 pe-md-4 d-flex flex-fill">
                                         <div class="card d-flex flex-fill flex-column align-items-center justify-content-center border-0 rounded-0 py-5" style="background-color:#5A946E;">
                                             <h2 class="fz40 fz24-sm pr-font text-white"><?php echo $new['brand_name']; ?></h2>
                                             <div class="text-white text-center fz20 fw-5 mt-40 mb-0 content-box"><?php echo $new['about_brand']; ?></div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-lg-6">
                                         <div class="img-box positon-relative position-relative">
                                             <img src="<?php echo base_url('assets/images/public/brand/'.$new['banner_web']); ?>" alt="<?php echo $new['banner_comment']; ?>" class="d-table ml-auto">
                                             <div class="brnad-logo">
@@ -338,7 +338,7 @@
     </div>
     <?php } ?>
     <div class="find-us py-60 py-sm-20 gray-bg">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Find Us</h5>
@@ -365,7 +365,7 @@
 
     </div>
     <div class="more-expoler pt-30 pb-60 gray-bg">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">There’s more to explore</h5>

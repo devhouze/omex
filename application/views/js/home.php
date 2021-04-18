@@ -161,9 +161,15 @@ $('.sliders').on('changed.owl.carousel', function(e) {
             items:1
         },
         600:{
+            items:2
+        },
+        992:{
             items:3
         },
-        1000:{
+        1080:{
+            items:3
+        },
+        1200:{
             items:5
         }
     }
