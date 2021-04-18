@@ -1,6 +1,6 @@
 <div class="london-page">
     <div class="street-banner position-relative d-md-block d-none wow fadeInDown animated">
-        <div class="container-fluid">
+        <div class="container-lg-fluid">
             <div class="row">
                 <div class="col-md-12 px-0">
                     <img src="<?php echo base_url(); ?>assets/images/public/street/london-banner.jpg" class="d-block w-100" alt="...">
@@ -14,9 +14,9 @@
         </div>
     </div>
     <div class="street-banner position-relative d-md-none d-block">
-        <div class="container-fluid">
+        <div class="container-lg-fluid">
             <div class="row">
-                <div class="col-md-12 px-0">
+                <div class="col-md-12">
                     <img src="<?php echo base_url(); ?>assets/images/public/street/london-m.jpg" class="d-block w-100" alt="...">
                     <div class="card lon-bg wow fadeInRight animated" data-wow-duration="1s" data-wow-delay="0.5S">
                         <img src="<?php echo base_url(); ?>assets/images/public/home/l-s.svg" alt="">
@@ -28,7 +28,7 @@
         </div>
     </div>
     <div class="explore-more gray-bg pt-60 pb-30">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated">Walk through the streets of a place with rich <span class="d-lg-block"> historical and architectural glory- London.</span></h5>
@@ -71,7 +71,7 @@
         <div class="street-icon-abs wow fadeInRight animated" data-wow-duration="0.5s" data-wow-delay="0.5s">
             <img src="<?php echo base_url(); ?>assets/images/public/street/london-tic.svg" alt="" class="d-table mx-auto">
         </div>
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">The majestic, exquisite, and aesthetic vibe of <span class="d-lg-block"> London awaits you.</span></h5>
@@ -185,7 +185,7 @@
     </div>
     <?php if (!empty($events)) { ?>
         <div class="looking-out gray-bg py-30">
-            <div class="container">
+            <div class="container-lg">
                 <div class="row">
                     <div class="col-md-12 positoin-relative">
                         <h5 class="fz40 fz24-sm fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Look out for what’s coming up!</h5>
@@ -217,7 +217,7 @@
     <?php } ?>
 
     <div class="hello-area looking-out gray-bg py-30 position-relative">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Hello from London!</h5>
@@ -294,7 +294,7 @@
 
     </div>
     <div class="find-us py-30 gray-bg wow fadeInDown animated">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Find Us</h5>
@@ -322,7 +322,7 @@
 
     </div>
     <div class="more-expoler pt-30 pb-60 gray-bg">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">There’s more to explore</h5>

@@ -261,7 +261,7 @@
 
     <?php if (!empty($brand_offers[0])) { ?>
         <div class="about-brand gray-bg  pb-30 pt-60">
-            <div class="container">
+            <div class="container-lg">
                 <div class="row">
                     <div class="col-md-12 positoin-relative">
                         <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated">Discounts & Offers</h5>

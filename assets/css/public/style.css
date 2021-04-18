@@ -2341,9 +2341,71 @@ ul.share-links li:nth-child(2) {
     .address p {
         margin-right: 0;
     }
+    .London_Street .bg-color {
+        height: calc(100% + 50px);
+        width: 40%;
+    }
+    .shop-details ul li {
+        padding-right: 15px;
+    }
+    .barnd-page .similar.barnd {
+        padding-top: 0;
+    }
+    .about-brand figure img {
+        width: 100%;
+    }
+    .category li img {
+        width: 110px;
+    }
+    .about-brand .carousel img {
+        width: 100% !important;
+    }
+    .about-brand .carousel figure {
+        transform: unset;
+    }
+    .event-past-event .carousel-inner {
+        padding-left: 0;
+    }
+    .street-banner .card {
+        width: 100%;
+        right: 0;
+        height: 100%;
+    }
+    .street-icon-abs {
+        width: 120px;
+        right: 20px;
+        top: 160px;
+    }
+    .abs-block {
+        bottom: -2px;
+    }
+    .live-in-word .slider-counter {
+        bottom: 35px;
+    }
+    .find-us iframe {
+        height: 500px;
+    }
+    .street-banner .card {
+        opacity: 0.9 !important;
+    }
+    .live-in-word .owl-nav button+button {
+        margin-left: 360px;
+    }
+    .category li {
+        font-size: 12px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
+    .street-banner .card {
+        opacity: 0.9 !important;
+    }
+    .about-brand .carousel figure {
+        transform: unset;
+    }
+    .event-past-event .carousel-inner {
+        padding-left: 0;
+    }
     .about-brand .carousel figure {
         width: 100%;
         height: auto;
