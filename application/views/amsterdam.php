@@ -28,7 +28,7 @@
         </div>
     </div>
     <div class="explore-more gray-bg pt-60 pb-30">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated">The home town of Anne Frank, the heart of <span class="d-lg-block"> Netherlands now at Faridabad- Amsterdam street</span></h5>
@@ -73,7 +73,7 @@
         <div class="street-icon-abs wow fadeInRight animated" data-wow-duration="0.5s" data-wow-delay="0.5s">
             <img src="<?php echo BASE_URL(); ?>assets/images/public/street/amsterdam.svg" alt="" class="d-table mx-auto">
         </div>
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">The Dutch capital streets await you and your <span class="d-lg-block"> loved ones!</span></h5>
@@ -163,7 +163,7 @@
     </div>
     <?php if(!empty($events)){?>
     <div class="looking-out gray-bg py-30">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Look out for what’s coming up!</h5>
@@ -194,7 +194,7 @@
     <?php } ?>
 
     <div class="hello-area looking-out gray-bg py-30 position-relative">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Hello from Amsterdam Street!</h5>
@@ -267,7 +267,7 @@
 
     </div>
     <div class="find-us py-30 gray-bg">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Find Us</h5>
@@ -295,7 +295,7 @@
 
     </div>
     <div class="more-expoler pt-30 pb-60 gray-bg">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">There’s more to explore</h5>

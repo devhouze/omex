@@ -1,6 +1,6 @@
 <div class="london-page">
     <div class="street-banner position-relative d-md-block d-none wow fadeInDown animated">
-        <div class="container-lg-fluid">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 px-0">
                     <img src="<?php echo base_url(); ?>assets/images/public/street/london-banner.jpg" class="d-block w-100" alt="...">
@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="street-banner position-relative d-md-none d-block">
-        <div class="container-lg-fluid">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <img src="<?php echo base_url(); ?>assets/images/public/street/london-m.jpg" class="d-block w-100" alt="...">
