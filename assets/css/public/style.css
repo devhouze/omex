@@ -1852,7 +1852,7 @@ span.text-danger.errors_msg {
 
 .about-event ul li {
     color: var(--h-color);
-    font-size: 21px;
+    font-size: 20px;
     width: calc(100% / 3);
     margin-bottom: 20px;
     text-align: center;
@@ -2181,6 +2181,11 @@ ul.share-links li:nth-child(2) {
     background-position: center;
 }
 
+.a2a_default_style a .a2a_svg {
+    width: 50px;
+    height: 50px;
+}
+
 
 /* end what new page css */
 
@@ -2205,6 +2210,55 @@ ul.share-links li:nth-child(2) {
 }
 
 @media screen and (min-device-width: 600px) and (max-device-width: 992px) {
+    .form-area .select2-container {
+        width: 100% !important;
+    }
+    .main-menu .dropdown-menu {
+        background: white;
+        box-shadow: unset;
+    }
+    .main-menu .dropdown-menu li+li a {
+        border: none !important;
+    }
+    .main-menu .dropdown-menu li a {
+        padding: 7px 30px 7px 10px !important;
+    }
+    .contact-map iframe {
+        height: 400px;
+    }
+    .contect-content ul li {
+        padding-right: 0;
+    }
+    .form-area .form-control {
+        width: 100%;
+        max-width: 100% !important;
+    }
+    .form-area form .row>* {
+        margin-bottom: 40px;
+    }
+    .contactus-page {
+        overflow: hidden;
+    }
+    .street-banner {
+        overflow: hidden;
+    }
+    .find-us .card {
+        margin-top: 40px;
+        padding: 30px;
+    }
+    .expoler-modal .modal-dialog {
+        max-width: 95%;
+    }
+    .expoler-modal .modal-body ul li {
+        width: 180px;
+        height: 160px;
+    }
+    .expoler-modal .modal-body ul {
+        margin: 0 50px;
+    }
+    .explore-more .col-md-4+.col-md-4 {
+        margin-top: 50px;
+    }
     .footer-signup .form-control {
         width: 100%;
         max-width: 100%;
@@ -2615,6 +2669,7 @@ ul.share-links li:nth-child(2) {
     .more-expoler .item figure {
         width: auto;
         height: auto;
+        margin-left: 50px;
     }
     .more-expoler .item figure span {
         font-size: 18px;
