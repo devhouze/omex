@@ -354,7 +354,7 @@
                             } ?>
                         </div>
                         <?php if (count($what_new) > 1) { ?>
-                            <div class="car-ions d-none">
+                            <div class="car-ions">
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                                     <img src="<?php echo base_url(); ?>assets/images/public/brand/left.svg" alt="" class="">
 
