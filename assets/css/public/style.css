@@ -2186,6 +2186,10 @@ ul.share-links li:nth-child(2) {
     height: 50px;
 }
 
+.brand-directory-page {
+    overflow: hidden;
+}
+
 
 /* end what new page css */
 

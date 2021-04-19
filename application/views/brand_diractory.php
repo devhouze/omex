@@ -397,7 +397,7 @@
                     <div class="card px-40 py-40 rounded-0 border-0 wow fadeInRight animated" style="background-color: #145183;">
                         <img src="<?php echo base_url(); ?>assets/images/public/brand/ws.svg" alt="">
                         <p class="fz20 text-white text-center mt-30">Wander by foot into the heart of the New Faridabad. Start discovering your own world within ours at World Street.</p>
-                        <img src="<?php echo base_url(); ?>assets/images/public/brand/wss.svg" alt="" class="d-table mx-auto mt-30">
+                        <img src="<?php echo base_url(); ?>assets/images/public/brand/wss.png" alt="" class="d-table mx-auto mt-30">
                     </div>
                 </div>
                 <div class="col-xxl-1"></div>
