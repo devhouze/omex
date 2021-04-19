@@ -164,7 +164,7 @@ class Welcome_model extends CI_Model
         ->where("brand_street LIKE '%$street%'")
         ->order_by('brand_id','desc')
         ->order_by('order_home','asc')
-        ->limit(10)
+        ->limit(6)
         ->get('tbl_brand');
         if($query->num_rows() > 0){
             return $query->result_array();
