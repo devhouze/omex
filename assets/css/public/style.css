@@ -2210,6 +2210,10 @@ ul.share-links li:nth-child(2) {
 }
 
 @media screen and (min-device-width: 600px) and (max-device-width: 992px) {
+    .social-box {
+        padding: 60px 0;
+        margin-bottom: 15px;
+    }
     .form-area .select2-container {
         width: 100% !important;
     }
