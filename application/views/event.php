@@ -2,7 +2,7 @@
 
     <?php if (!empty($events)) { ?>
         <div class="looking-out gray-bg pb-60 pt-60 pt-sm0 ">
-            <div class="container">
+            <div class="container-lg">
 
                 <div class="row mt-4 justify-content-center">
                     <div class="col-xxl-10">
@@ -26,7 +26,7 @@
         </div>
     <?php } ?>
     <div class="about-event py-60 py-sm-30 gray-bg" style="display:none">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 mt-5">About The Event</h5>
@@ -100,7 +100,7 @@
     </div>
     <?php if (!empty($past_event)) { ?>
         <div class="about-brand event-past-event gray-bg  pb-60 pt-60">
-            <div class="container">
+            <div class="container-lg">
                 <div class="row">
                     <div class="col-md-12 positoin-relative">
                         <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated">Past Events
@@ -110,7 +110,7 @@
                 </div>
 
             </div>
-            <div class="container">
+            <div class="container-lg">
                 <div class="row justify-content-center">
                     <div class="col-xxl-10">
                         <div id="carouselExampleControlseven" class="carousel slide" data-bs-ride="carousel">
@@ -160,7 +160,7 @@
         </div>
     <?php } ?>
     <div class="similar barnd live-in-word gray-bg pt-60  position-relative">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">#MomentsAtWS</h5>
@@ -231,7 +231,7 @@
 
     </div>
     <div class="expoler-category gray-bg pt-60 pb-30">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Explore Brands</h5>
@@ -273,7 +273,7 @@
     </div>
     <?php if (!empty($what_new)) { ?>
         <div class="whats-new py-60 py-sm-20 gray-bg">
-            <div class="container">
+            <div class="container-lg">
                 <div class="row">
                     <div class="col-md-12 positoin-relative">
                         <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">What’s New in the Streets</h5>
@@ -291,7 +291,7 @@
                                                                     echo "active";
                                                                 } ?>">
                                         <div class="row flex-fill">
-                                            <div class="col-md-6 pe-4 d-flex flex-fill">
+                                            <div class="col-md-6 pe-md-4 d-flex flex-fill">
                                                 <div class="card d-flex flex-fill flex-column align-items-center justify-content-center border-0 rounded-0" style="background-color: #5A946E;">
                                                     <h2 class="fz40 fz24-sm pr-font text-white"><?php echo $new['brand_name']; ?></h2>
                                                     <div class="text-white text-center fz20 fw-5 mt-40 mb-0 content-box"><?php echo $new['about_brand']; ?></p>
@@ -334,7 +334,7 @@
 
 
     <div class="more-expoler pt-30 pb-60 gray-bg">
-        <div class="container">
+        <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">There’s more to explore</h5>

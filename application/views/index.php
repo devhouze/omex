@@ -1,7 +1,7 @@
 <?php if(!empty($banner)){?>
     <div class="main-slider d-flex flex-fill">
         <div class="container-fluid d-flex flex-fill">
-            <div class="row d-md-flex d-none flex-fill">
+            <div class="row d-lg-flex d-none flex-fill">
                 <div class="col-md-12 d-flex flex-fill px-0">
                     <div id="carouselExampleIndicatorss" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
                         <ol class="carousel-indicators">
@@ -41,7 +41,7 @@
 
                     </div>
                 </div>
-                <div class="row d-md-none d-flex flex-fill">
+                <div class="row d-lg-none d-flex flex-fill">
                     <div class="col-md-12 d-flex flex-fill px-0">
                         <div id="carouselExampleIndicatorssmob" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
                             <ol class="carousel-indicators">
@@ -327,7 +327,7 @@
                 </div>
             </div>
             <div class="explore-more gray-bg py-30">
-                <div class="container">
+                <div class="container-lg">
                     <div class="row">
                         <div class="col-md-12 positoin-relative">
                             <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Explore More</h5>
@@ -416,16 +416,16 @@
                                     ?>
                                     <div class="carousel-item <?php echo $class; if ($i == 1) { echo " active"; } ?>">
                                         <div class="row">
-                                            <div class="col-md-8">
-                                                <div class="d-md-none d-block mobile-look">
+                                            <div class="col-lg-8">
+                                                <div class="d-lg-none d-block mobile-look">
                                                     <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm pr-sm0 mb-md-0 mb-4"><?php echo $event['event_name']; ?></h1>
                                                 </div>
                                                 <figure><img src="<?php echo base_url('assets/images/public/home/'.$event['thumbnail_image']); ?>" alt="<?php echo $event['thumbnail_message']?>" class=""></figure>
 
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-lg-4">
                                                 <div class="pl-12">
-                                                    <div class="d-md-block d-none">
+                                                    <div class="d-lg-block d-none">
                                                         <h1 class="h-font pr-font fz36 pr-18 text-center mt-18 h-color fz24-sm"><?php echo $event['event_name']; ?></h1>
                                                     </div>
                                                     <div class="box-calander">
@@ -496,7 +496,7 @@
 </div>
 <?php } ?>
 <div class="expreance-gallary py-30 gray-bg ">
-    <div class="container">
+    <div class="container-lg">
         <div class="row">
             <div class="col-md-12 positoin-relative">
                 <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Experience Gallery</h5>

@@ -2198,7 +2198,256 @@ ul.share-links li:nth-child(2) {
     }
 }
 
+@media only screen and (max-width: 1200px) {
+    .main-menu .navbar-nav>li+li {
+        margin-left: calc(var(--v2) * 10);
+    }
+}
+
+@media screen and (min-device-width: 600px) and (max-device-width: 992px) {
+    .footer-signup .form-control {
+        width: 100%;
+        max-width: 100%;
+    }
+    .footer-signup .col-md-4 {
+        margin-bottom: 50px;
+    }
+    .expreance-gallary .slider-counter {
+        left: 34%;
+    }
+    .experience .carousel-indicators li {
+        display: none;
+        margin-left: 0;
+    }
+    .arow-btns a.carousel-control-next {
+        right: 30px
+    }
+    .arow-btns a.carousel-control-prev {
+        left: 30px;
+    }
+    .experience .carousel-indicators li.active {
+        display: block;
+    }
+    .event-page .about-brand .carousel-inner {
+        padding-bottom: 40px;
+    }
+    .about-brand .carousel figure {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+    }
+    .search-brand .select2-container {
+        width: 100% !important;
+    }
+    .product-box figure {
+        width: 100%;
+    }
+    .main-slider .carousel-inner {
+        height: unset !important;
+    }
+    div#navbarNavDropdown ul li {
+        padding: 10px;
+    }
+    .navbar-toggler:focus {
+        box-shadow: unset !important;
+    }
+    div#navbarNavDropdown {
+        left: 0;
+        position: absolute;
+        top: 100%;
+        z-index: 9999;
+        background: white;
+        color: var(--h-color);
+        box-shadow: 0 0 1px 0 rgb(45 48 71 / 4%);
+    }
+    .main-menu .navbar-nav>li+li {
+        margin-left: 0;
+    }
+    .exploer-btn {
+        padding: 15px calc(var(--v2) * 10);
+    }
+    .exploer-btn img {
+        width: 60px;
+    }
+    .looking-out figure {
+        width: 100%;
+        height: auto;
+    }
+    .box-calander {
+        margin-left: auto;
+        margin-right: auto;
+        width: 350px;
+    }
+    .looking-out .time+img {
+        margin-left: auto;
+        margin-right: auto;
+        display: table;
+    }
+    .tab-area ul {
+        margin: 15px;
+    }
+    .tab-area ul {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        overflow-x: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .tab-area ul li {
+        width: 210px;
+        min-width: 210px;
+    }
+    .top-brands .owl-item.active .item {
+        width: 120px;
+        height: auto;
+    }
+    .top-brands .owl-theme .owl-nav [class*='owl-'] {
+        width: 60px;
+    }
+    .top-brands .owl-theme .owl-nav .owl-prev {
+        left: -20px;
+    }
+    .top-brands .owl-theme .owl-nav .owl-next {
+        right: -20px;
+    }
+    .looking-out .primary-btn {
+        margin: 40px auto 0px auto;
+        display: table !important;
+    }
+    .tab-area .owl-nav button+button {
+        margin-left: 350px;
+    }
+    .experience .carousel-indicators li+li {
+        margin-left: 30px;
+    }
+    .experience .carousel-indicators li {
+        width: 80px;
+        height: 80px;
+    }
+    .experience .carousel-indicators li label {
+        top: 35px;
+    }
+    .about-brand figure {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-bottom: 0;
+        margin-top: 30px;
+    }
+    .about-brand .card {
+        width: 100%;
+        margin: 0;
+        padding: 40px;
+    }
+    .brand-directory-page .about-brand .carousel-inner {
+        padding-bottom: 0;
+    }
+    .brand-directory-page .crsouls-btn-group,
+    .event-page .crsouls-btn-group {
+        bottom: -50px;
+    }
+    .img-box .brnad-logo {
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: -50px;
+    }
+    .car-ions .carousel-control-prev {
+        left: 0;
+    }
+    .car-ions .carousel-control-next {
+        margin-left: 50px;
+    }
+    .car-ions .carousel-control-next {
+        right: 0 !important;
+    }
+    .more-expoler .item figure span {
+        font-size: 20px;
+    }
+    .address p {
+        margin-right: 0;
+    }
+    .London_Street .bg-color {
+        height: calc(100% + 50px);
+        width: 40%;
+    }
+    .shop-details ul li {
+        padding-right: 15px;
+    }
+    .barnd-page .similar.barnd {
+        padding-top: 0;
+    }
+    .about-brand figure img {
+        width: 100%;
+    }
+    .category li img {
+        width: 110px;
+    }
+    .about-brand .carousel img {
+        width: 100% !important;
+    }
+    .about-brand .carousel figure {
+        transform: unset;
+    }
+    .event-past-event .carousel-inner {
+        padding-left: 0;
+    }
+    .street-banner .card {
+        width: 100%;
+        right: 0;
+        height: 100%;
+    }
+    .street-icon-abs {
+        width: 120px;
+        right: 20px;
+        top: 160px;
+    }
+    .abs-block {
+        bottom: -2px;
+    }
+    .live-in-word .slider-counter {
+        bottom: 35px;
+    }
+    .find-us iframe {
+        height: 500px;
+    }
+    .street-banner .card {
+        opacity: 0.9 !important;
+    }
+    .live-in-word .owl-nav button+button {
+        margin-left: 360px;
+    }
+    .category li {
+        font-size: 12px;
+    }
+    .event-page .looking-out {
+        padding-top: 0;
+    }
+    .event-page .about-event {
+        padding-top: 0;
+    }
+}
+
 @media only screen and (max-width: 600px) {
+    .street-banner .card {
+        opacity: 0.9 !important;
+    }
+    .about-brand .carousel figure {
+        transform: unset;
+    }
+    .event-past-event .carousel-inner {
+        padding-left: 0;
+    }
+    .about-brand .carousel figure {
+        width: 100%;
+        height: auto;
+    }
+    .looking-out .time+img {
+        margin-left: auto;
+        margin-right: auto;
+        display: table;
+    }
     .event-page .about-brand .carousel-inner {
         padding-left: 0;
     }
@@ -2723,6 +2972,9 @@ ul.share-links li:nth-child(2) {
         margin-bottom: 20px;
     }
     .product-box {
+        font-size: 14px;
+    }
+    .product-box .addrs {
         font-size: 12px;
     }
     .addrs {
