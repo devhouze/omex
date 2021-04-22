@@ -11,10 +11,10 @@
                             <?php if (count($events) > 1) { ?>
                                 <div class="d-flex justify-content-center event-p-carosol">
                                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                                        <img src="<?php echo base_url(); ?>assets/images/public/street/athens-left.svg" alt="" class="">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/brand/left.svg" alt="" class="">
                                     </a>
                                     <a class="carousel-control-next ml-40" href="#carouselExampleControls" role="button" data-bs-slide="next">
-                                        <img src="<?php echo base_url(); ?>assets/images/public/street/athens-right.svg" alt="" class="w-100">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/brand/right.svg" alt="" class="w-100">
                                     </a>
                                 </div>
                             <?php } ?>
