@@ -2190,6 +2190,14 @@ ul.share-links li:nth-child(2) {
     overflow: hidden;
 }
 
+.event-page .more-expoler .slider-counter {
+    color: #0E3E67;
+}
+
+.event-page .more-expoler .slider-counter span {
+    background: #0E3E67;
+}
+
 
 /* end what new page css */
 
@@ -2214,6 +2222,64 @@ ul.share-links li:nth-child(2) {
 }
 
 @media screen and (min-device-width: 600px) and (max-device-width: 992px) {
+    .looking-out figure img {
+        display: table;
+        margin: 0 auto;
+    }
+    .slider-counter {
+        left: 0;
+        right: 0;
+    }
+    .shop-details ul {
+        padding-left: 30px;
+    }
+    .shop-details {
+        padding-top: 180px;
+    }
+    #carouselExampleIndicatorsmob {
+        height: 75vh;
+    }
+    #carouselExampleIndicatorsmob .carousel-inner {
+        height: 100%;
+    }
+    #carouselExampleIndicatorsmob .carousel-item {
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left top;
+    }
+    .brand-lgoo {
+        left: 40px;
+    }
+    .no-Banner {
+        height: 25vh !important;
+        background: #faf7f2;
+    }
+    .about-brand img {
+        width: 100%;
+    }
+    .barnd-page .find-us {
+        padding-top: 0;
+    }
+    .barnd-page .whats-new {
+        padding-bottom: 20px;
+    }
+    .box-calander+img {
+        margin-left: auto;
+        margin-right: auto;
+        display: table;
+    }
+    .expreance-gallary {
+        padding-top: 80px;
+    }
+    .looking-out div#carouselExampleControls .position-absolute {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        bottom: -50px;
+        right: 0;
+        position: relative !important;
+    }
     .social-box {
         padding: 60px 0;
         margin-bottom: 15px;
@@ -2407,7 +2473,16 @@ ul.share-links li:nth-child(2) {
     }
     .brand-directory-page .crsouls-btn-group,
     .event-page .crsouls-btn-group {
-        bottom: -50px;
+        bottom: -80px;
+    }
+    .brand-directory-page .about-brand {
+        padding-bottom: 100px;
+    }
+    .brand-directory-page .find-us {
+        padding-top: 0;
+    }
+    .brand-directory-page .whats-new {
+        padding-bottom: 0;
     }
     .img-box .brnad-logo {
         left: 0;
@@ -2489,9 +2564,32 @@ ul.share-links li:nth-child(2) {
     .event-page .about-event {
         padding-top: 0;
     }
+    .search-brand ul {
+        text-align: center;
+    }
+    .event-page .looking-out img {
+        display: table;
+        margin: 0 auto;
+    }
 }
 
 @media only screen and (max-width: 600px) {
+    .event-page .looking-out img {
+        display: table;
+        margin: 0 auto;
+    }
+    .looking-out figure img {
+        display: table;
+        margin: 0 auto;
+    }
+    .brand-directory-page .whats-new {
+        padding-top: 90px;
+    }
+    .box-calander+img {
+        margin-left: auto;
+        margin-right: auto;
+        display: table;
+    }
     .street-banner .card {
         opacity: 0.9 !important;
     }
@@ -2538,7 +2636,7 @@ ul.share-links li:nth-child(2) {
         width: unset;
         height: unset;
     }
-    .Athens_Street .brand-banner {
+    /* .Athens_Street .brand-banner {
         background-color: var(--ath) !important;
     }
     .San_Francisco_Street .brand-banner {
@@ -2558,9 +2656,12 @@ ul.share-links li:nth-child(2) {
     }
     .London_Street .brand-banner {
         background-color: var(--london) !important;
-    }
+    } */
     #carouselExampleIndicatorsmob {
         height: 75vh;
+    }
+    .no-Banner {
+        background: #faf7f2;
     }
     #carouselExampleIndicatorsmob .carousel-inner {
         height: 100%;
@@ -2909,7 +3010,7 @@ ul.share-links li:nth-child(2) {
     .brand-lgoo {
         width: 160px;
         height: 180px;
-        left: 0;
+        left: 40px;
         bottom: -90px;
         padding: 10px;
     }
@@ -2921,10 +3022,10 @@ ul.share-links li:nth-child(2) {
         bottom: -50px;
         justify-content: flex-end;
     }
-    .brand-banner {
+    /* .brand-banner {
         background: #5A946E !important;
         padding-bottom: 90px;
-    }
+    } */
     .crasol-btn button {
         width: 60px;
         filter: brightness(0) invert(1);
@@ -2940,8 +3041,14 @@ ul.share-links li:nth-child(2) {
         padding-right: 0;
     }
     .shop-details {
-        padding-top: 60px;
+        padding-top: 120px;
         padding-left: 40px;
+    }
+    .about-brand img {
+        width: 100%;
+    }
+    .no-Banner {
+        height: 25vh !important;
     }
     .shop-details ul li img {
         margin-top: 0;

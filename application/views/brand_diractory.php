@@ -177,7 +177,7 @@
             <div class="row justify-content-center mt-4" id="filter-box">
                 <div class="col-xxl-10">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-4">
                             <?php $brand_street = ""; ?>
                             <select id="street" class="select">
                                 <option disabled="" selected>Select Street</option>
@@ -204,14 +204,14 @@
                                                                 } ?>>Athens Street</option>
                             </select>
                         </div>
-                        <div class="col-md-4 my-md-0 my-4">
+                        <div class="col-md-4 col-sm-4 my-sm-0 my-4">
                             <select id="sort" class="select">
                                 <option disabled="" selected>Sort By</option>
                                 <option value="A-Z">A-Z</option>
                                 <option value="Z-A">Z-A</option>
                             </select>
                         </div>
-                        <div class="col-md-4 justify-content-center mx-auto">
+                        <div class="col-md-4 col-sm-4 justify-content-center mx-auto">
                             <select id="filter" class="select">
                                 <option disabled="" selected>Filter</option>
                                 <?php if (!empty($filter)) {
@@ -231,7 +231,7 @@
                     <div class="row " id="brand">
                         <?php if (!empty($brand)) {
                             foreach ($brand as $brands) { ?>
-                                <div class="col-lg-3 col-md-4 col-6">
+                                <div class="col-lg-3 col-md-4 col-sm-4 col-6">
                                     <div class="product-box">
                                         <a href="<?php echo base_url('brand/' . $brands['brand_slug']); ?>"></a>
                                         <figure><img src="<?php echo base_url('assets/images/public/brand/' . $brands['brand_logo']); ?>" alt="<?php echo $brands['logo_message']; ?>" class=""></figure>
