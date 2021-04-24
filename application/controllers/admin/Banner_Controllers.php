@@ -84,6 +84,7 @@ class Banner_Controllers extends my_controller
             if($this->form_validation->run()){
                 $data_array = array(
                     'banner_type'       => $this->input->post('banner_type'),
+                    'banner_catgory'       => $this->input->post('banner_catgory'),
                     'comment'           => $this->input->post('banner_comment'),
                     'street'            => $this->input->post('streets'),
                     'brand'             => $this->input->post('brand'),
@@ -172,6 +173,7 @@ class Banner_Controllers extends my_controller
             if($this->form_validation->run()){
                 $data_array = array(
                     'banner_type'       => $this->input->post('banner_type'),
+                    'banner_catgory'       => $this->input->post('banner_catgory'),
                     'comment'           => $this->input->post('banner_comment'),
                     'street'            => $this->input->post('streets'),
                     'brand'             => $this->input->post('brand'),

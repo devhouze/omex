@@ -31,7 +31,7 @@ class Banner_Model extends MY_Model
 
     public function banner_details($banner_id)
     {
-        $query = $this->db->select('street, (case when banner_type = 1 then "Home Page" when banner_type = 2 then "Event Page" when banner_type = 3 then "Brand Directory Page" when banner_type = 4 then "Brand Discount" when banner_type = 5 then "Brand" when banner_type = 6 then "About Brand" end) as banner_type, tb.banner_web, tb.banner_mobile, comment, (case when tb.status = 0 then "Active" when tb.status = 1 then "Inactive" end) as status, brand_name')
+        $query = $this->db->select('street,banner_catgory, (case when banner_type = 1 then "Home Page" when banner_type = 2 then "Event Page" when banner_type = 3 then "Brand Directory Page" when banner_type = 4 then "Brand Discount" when banner_type = 5 then "Brand" when banner_type = 6 then "About Brand" end) as banner_type, tb.banner_web, tb.banner_mobile, comment, (case when tb.status = 0 then "Active" when tb.status = 1 then "Inactive" end) as status, brand_name')
                           ->join('tbl_brand as','brand_id = brand','left')
                           ->where('tb.id',$banner_id)
                           ->get('tbl_banner tb');

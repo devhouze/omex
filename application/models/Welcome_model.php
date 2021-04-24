@@ -172,15 +172,18 @@ class Welcome_model extends CI_Model
         return [];
     }
 
-    public function get_brand_directory_banner()
+    public function get_brand_directory_banner($category=NULL)
     {
-        $query = $this->db->select('banner_web, banner_mobile, comment, banner_mobile,banner_link, link_to')
-        ->where('status',0)
-        ->where('banner_type',3)
-        ->order_by('id','desc')
-        ->get('tbl_banner');
+        $this->db->select('banner_web, banner_mobile, comment, banner_mobile,banner_link, link_to');
+        $this->db->where('status',0);
+        $this->db->where('banner_type',3);
+        if($category!=NULL){
+        $this->db->where('banner_catgory',$category);
+        }
+        $this->db->order_by('id','desc');
+         $query = $this->db->get('tbl_banner');
         if($query->num_rows() > 0){
-            return $query->result_array();
+            return  $query->result_array();
         }
         return [];
     }

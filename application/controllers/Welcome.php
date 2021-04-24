@@ -365,7 +365,7 @@ class Welcome extends CI_Controller {
 	{
 		$data['whats_new_link'] = $this->wm->get_data_array('tbl_whats_new',"name_slug,name",$where = "status=0");
 		$category = str_replace('%20',' ',$category);
-		$data['brand_banner'] = $this->wm->get_brand_directory_banner();
+		$data['brand_banner'] = $this->wm->get_brand_directory_banner($category);
 		$data['brand_offers'] = $this->wm->get_brand_offers();
 		$data['main_category'] = $this->wm->main_category();
 		$data['count'] = $this->wm->get_all_brands($category,$limit,true);
