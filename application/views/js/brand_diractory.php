@@ -94,11 +94,14 @@
     $(document).ready(function(){
         const base_url = $('body').data('url');
         $('#street').change(function(){
+
+          $(this).addClass('active');
             get_brands();
         });
 
         $('#sort').change(function(){
             get_brands();
+            $(this).addClass('active');
         });
 
         
@@ -231,6 +234,7 @@
 
         $('#filter').change(function(){
             get_brands();
+            $(this).addClass('active');
         });
 
         function get_brands(){
