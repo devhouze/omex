@@ -10,10 +10,14 @@ class Brands_Model extends MY_Model
 
     public function get_brands($per_page,$page,$keyword,$column,$order,$count=false)
     {
+        if(!empty($keyword)){
+            $page=0;
+        }
+
         $this->db->select('brand_id, brand_name, tbl_brand.status, tbl_admin.name as created_by, date_format(tbl_brand.created_on,"%d-%m-%Y") as created_on, brand_location, brand_logo');
         $this->db->join('tbl_admin','admin_id = tbl_brand.created_by');
-        (!empty($keyword['brand_name']))?$this->db->like('brand_name',$keyword['brand_name']):'';
-        ($keyword['status']!='')?$this->db->where('tbl_brand.status',$keyword['status']):$this->db->where('tbl_brand.status !=',2);;
+        ($keyword['brand_name']!=NULL)?$this->db->like('brand_name',$keyword['brand_name']):'';
+        ($keyword['status']!=NULL)?$this->db->where('tbl_brand.status',$keyword['status']):$this->db->where('tbl_brand.status !=',2);;
         (!$count)?$this->db->limit($per_page,$page):'';
         (!empty($column) && !empty($order))?$this->db->order_by($column,$order):$this->db->order_by('brand_id','desc');
         $query = $this->db->get('tbl_brand');

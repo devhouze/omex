@@ -20,10 +20,13 @@ class Brands_Controller extends MY_Controller
     $_SESSION['page']=$page;
     
     if($this->input->post('search')){
-        $search = array(
-            'brand_name'    => trim($this->input->post('name')),
-            'status'        => $this->input->post('status')
-        );
+        
+        if($this->input->post('name')!=NULL){
+        $search['brand_name']=trim($this->input->post('name'));
+        }
+        if($this->input->post('status')!=NULL){
+        $search['status']=$this->input->post('status');
+        }
 
         $this->session->set_userdata('brand',$search);
     }
@@ -36,6 +39,7 @@ class Brands_Controller extends MY_Controller
     $total_count = $this->bm->get_brands($per_page,$page,$keyword,$column,$order,true);
     $data['pagination'] = $this->pagination('brands',$total_count,$per_page);
     $data['brands'] = $this->bm->get_brands($per_page,$page,$keyword,$column,$order);
+    // echo $this->db->last_query(); die;
     $end = (($data['brands'])?count($data['brands']):0) + (($page) ? $page : 0);
     $start = (count($data['brands']) > 0)?($page + 1):0;
     $data['result_count'] = "Showing " . $start . " - " . $end . " of " . $total_count . " Results";
@@ -386,6 +390,7 @@ public function change_brand_status()
     $brand_id = $this->input->post('id');
     $stauts = $this->input->post('status');
     $update = $this->bm->update_data('tbl_brand',['status' => $stauts],['brand_id' => $brand_id]);
+    $update = $this->bm->update_data('tbl_brand_offer',['status' => $stauts],['brand_id' => $brand_id]);
     if($update){
         echo json_encode(['message' => 'Status changed successfully.', 'status' => 1]);
     } else {
