@@ -234,9 +234,9 @@ class Welcome_model extends CI_Model
 
     public function get_gallery($type)
     {
-        $this->db->select('id, media_name, media_alt');
+        $this->db->select('id, media_name, media_video,media_alt,media_type');
         $this->db->where('status',0);
-        $this->db->where('media_type',1);
+        // $this->db->where('media_type',1);
         ($type!='all')?$this->db->where('filter_type',$type):'';
         $this->db->order_by('sequence','asc');
         $this->db->limit(10);

@@ -533,7 +533,25 @@
                                         <div class="item">
                                             <img src="<?php echo base_url('assets/images/public/home/' . $gallery['media_name']); ?>" data-one="<?php echo $i; ?>" class="all">
                                         </div>
-                                    <?php } $i++; }
+
+                                     
+
+                                    <?php } ?>
+
+                                            <?php if ($gallery['media_type'] == 2) { ?>
+                                    <div class="item">
+                                    <video width="100%" height="350" controls>
+                                    <source src="<?php echo base_url('assets/images/public/home/' . $gallery['media_video']); ?>" type="video/mp4">
+                                    </video>
+                                    </div>
+                                    <?php } ?>
+                                    <?php if ($gallery['media_type'] == 3) { ?>
+                                    <div class="item">
+                                    <iframe src="https://www.youtube.com/embed/<?php $data = explode('=',$gallery['media_name']); echo $data[1];?>" width="100%" height="350" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                    <?php } ?>
+
+                                    <?php  $i++; }
                                 } ?>
                             </div>
                             <div class="slider-counter counter-all"></div>

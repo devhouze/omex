@@ -15,6 +15,8 @@ class Welcome extends CI_Controller {
 		$data['brand_logo'] = $this->wm->get_brand_logo();
 		$data['events'] = $this->wm->get_events();
 		$data['all_gallery'] = $this->wm->get_gallery('all');
+		// echo "<pre>";
+		// print_r($data); die;
 		$data['interior_gallery'] = $this->wm->get_gallery(1);
 		$data['exterior_gallery'] = $this->wm->get_gallery(2);
 		$data['construction_gallery'] = $this->wm->get_gallery(3);
