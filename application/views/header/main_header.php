@@ -67,10 +67,12 @@
                         <li class="nav-item">
                             <a class="nav-link <?php echo $url[2]=='brand-directory' || $url[2]=='brand_directory' || $url[2]=='brand'?'active':''; ?>" href="<?php echo base_url('brand-directory'); ?>">Brands</a>
                         </li>
+                        <?php  $event_count =  $this->db->query("SELECT * from tbl_event WHERE status=0")->num_rows(); 
+                            if($event_count>0){  ?>
                         <li class="nav-item">
                             <a class="nav-link <?php echo $url[2]=='event' || $url[2]=='event' || $url[2]=='event_details'?'active':''; ?>" href="<?php echo base_url('event'); ?>">Events</a>
                         </li>
-                        
+                        <?php } ?>
                         <li class="nav-item">
                             <a class="nav-link <?php echo $url[2]=='contact-us' || $url[2]=='contact_us'?'active':''; ?>" href="<?php echo base_url('contact-us'); ?>">Contact Us</a>
                         </li>
