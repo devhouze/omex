@@ -11,6 +11,7 @@ class Banner_Controllers extends my_controller
 
     public function banner_list($page=0,$column=null,$order=null)
     {
+        // print_r($_POST); die;
         $per_page = "10";
         if ($page != 0) {
 			$page = ($page - 1) * $per_page;
@@ -19,19 +20,21 @@ class Banner_Controllers extends my_controller
         }  
          $_SESSION['page']=$page;
         if($this->input->post('search')){
-            $search = array(
-                'banner_type'       => trim($this->input->post('banner_type')),
-                'status'            => $this->input->post('status')
-            );
+            if(trim($this->input->post('banner_type'))){
+            $search['banner_type']=trim($this->input->post('banner_type'));
+            }
+            if($this->input->post('status')!= NULL){
+            $search['status']=$this->input->post('status');
+            }
 
             $this->session->set_userdata('banner',$search);
         }
+
 
         if($this->input->post('reset')){
             $this->session->unset_userdata('banner');
         }
         $keyword = $this->session->userdata('banner');
-
         $total_count = $this->bm->banners_list($per_page,$page,$keyword,$column,$order,true);
         $data['pagination'] = $this->pagination('banners',$total_count,$per_page);
         $data['banners'] = $this->bm->banners_list($per_page,$page,$keyword,$column,$order);

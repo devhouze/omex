@@ -14,8 +14,8 @@ class Lead_Model extends MY_Model
    $this->db->select('id, name, email,contact, source, event_name, query_type,message,source_url,date_format(registered_at,"%d-%m-%Y %H:%i") as registered_at');
         (!$count)?$this->db->limit($per_page,$page):'';
         (!empty($keyword['name']))?$this->db->like('name',$keyword['name']):'';
-        (!empty($keyword['name']))?$this->db->or_like('email',$keyword['name']):'';
-        (!empty($keyword['query_type']))?$this->db->where('query_type',$keyword['query_type']):'';
+        // (!empty($keyword['name']))?$this->db->or_like('email',$keyword['name']):'';
+        (!empty($keyword['query_type']))?$this->db->like('query_type',$keyword['query_type']):'';
         (!empty($keyword['date_from']))?$this->db->where("registered_at between '".$keyword['date_from']."' and '".$end_date."'"):'';
         (!$count)?$this->db->limit($per_page,$page):'';
         (!empty($column) && !empty($order))?$this->db->order_by($column,$order):$this->db->order_by('id','desc');
