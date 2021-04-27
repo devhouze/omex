@@ -7,6 +7,7 @@ $('.slider_ext').on('initialized.owl.carousel changed.owl.carousel', function(e)
     $('.counter_ext').html(carousel.relative(carousel.current()) + 1 + '<span></span>' + carousel.items().length);
   }).owlCarousel({
     items: 0,
+    
     navText:["<img src='<?php echo BASE_URL(); ?>assets/images/public/home/left.svg'>","<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>"],
     loop:true,
     margin:40,
@@ -20,6 +21,7 @@ $('.slider_ext').on('initialized.owl.carousel changed.owl.carousel', function(e)
             items:2
         },
         1000:{
+          slideBy:3,
             items:3
         }
     }
@@ -51,7 +53,8 @@ $('.sliders_con').on('initialized.owl.carousel changed.owl.carousel', function(e
             items:2
         },
         1000:{
-            items:3
+            items:3,
+            slideBy:3
         }
     }
 
@@ -82,6 +85,7 @@ $('.sliders_video').on('initialized.owl.carousel changed.owl.carousel', function
             items:2
         },
         1000:{
+          slideBy:3,
             items:3
         }
     }
@@ -93,7 +97,7 @@ $('.sliders_video').on('initialized.owl.carousel changed.owl.carousel', function
 
 
 <script>
-$('.slider').on('initialized.owl.carousel changed.owl.carousel', function(e) {
+$('.sliderall').on('initialized.owl.carousel changed.owl.carousel', function(e) {
     if (!e.namespace)  {
       return;
     }
@@ -101,6 +105,7 @@ $('.slider').on('initialized.owl.carousel changed.owl.carousel', function(e) {
     $('.counter-all').html(carousel.relative(carousel.current()) + 1 + '<span></span>' + carousel.items().length);
   }).owlCarousel({
     items: 0,
+    
     navText:["<img src='<?php echo BASE_URL(); ?>assets/images/public/home/left.svg'>","<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>"],
     loop:true,
     margin:40,
@@ -114,6 +119,7 @@ $('.slider').on('initialized.owl.carousel changed.owl.carousel', function(e) {
             items:2
         },
         1000:{
+          slideBy:3,
             items:3
         }
     }
@@ -124,7 +130,7 @@ $('.slider').on('initialized.owl.carousel changed.owl.carousel', function(e) {
 </script>
 <script>
 
-$('.sliders').on('changed.owl.carousel', function(e) {
+$('.sliders_in').on('changed.owl.carousel', function(e) {
     if (!e.namespace)  {
       return;
     }
@@ -132,6 +138,7 @@ $('.sliders').on('changed.owl.carousel', function(e) {
     $('.counter_in').html(carousel.relative(carousel.current()) + 1 + '<span></span>' + carousel.items().length);
   }).owlCarousel({
     items: 0,
+    
     navText:["<img src='<?php echo BASE_URL(); ?>assets/images/public/home/left.svg'>","<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>"],
     loop:true,
     margin:40,
@@ -144,6 +151,7 @@ $('.sliders').on('changed.owl.carousel', function(e) {
             items:2
         },
         1000:{
+          slideBy:3,
             items:3
         }
     }

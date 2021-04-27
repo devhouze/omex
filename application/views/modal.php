@@ -53,6 +53,7 @@
         <div class="modal-content">
 
             <div class="modal-body">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
                 <div id="all_images" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                     <?php if (!empty($all_gallery)) { $i=1; foreach ($all_gallery as $gallery) { ?>
@@ -81,6 +82,7 @@
         <div class="modal-content">
 
             <div class="modal-body">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
                 <div id="interior_images" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                     <?php if (!empty($interior_gallery)) { $i=1; foreach ($interior_gallery as $interior) { ?>
@@ -109,6 +111,7 @@
         <div class="modal-content">
 
             <div class="modal-body">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
                 <div id="exterior_images" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                     <?php if (!empty($exterior_gallery)) { $i=1; foreach ($exterior_gallery as $exterior) { ?>
@@ -137,6 +140,7 @@
         <div class="modal-content">
 
             <div class="modal-body">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
                 <div id="construction_images" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                     <?php if (!empty($construction_gallery)) { $i=1; foreach ($construction_gallery as $construction) { ?>

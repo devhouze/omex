@@ -205,7 +205,7 @@
                                     </li>
                                     <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6">
                                         <img src="<?php echo base_url(); ?>assets/images/public/home/Indicators7.svg" class="d-block w-100" alt="...">
-                                        <label class="pr-font">Hong Kong St.</label>
+                                        <label class="pr-font">HONG KONG ST.</label>
                                     </li>
                                 </ol>
 
@@ -527,7 +527,7 @@
                     </ul>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <div class="owl-carousel slider wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
+                            <div class="owl-carousel sliderall wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
                                 <?php  if (!empty($all_gallery)) {
                                    $i=1; foreach ($all_gallery as $gallery) { if(is_file('assets/images/public/home/' . $gallery['media_name'])){?>
                                         <div class="item">
@@ -558,7 +558,7 @@
 
                         </div>
                         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <div class="owl-carousel sliders">
+                            <div class="owl-carousel sliders_in">
                                 <?php if (!empty($interior_gallery)) {
                                    $i=1; foreach ($interior_gallery as $interior) { if(is_file('assets/images/public/home/' . $interior['media_name'])){?>
                                         <div class="item" data-bs-toggle="modal" data-bs-target="#interior-image-modal">

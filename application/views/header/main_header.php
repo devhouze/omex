@@ -19,7 +19,7 @@
             </div>
         </div>
     </div>
-    <div class="main-menu py-14">
+    <div class="main-menu">
         <nav class="navbar navbar-expand-lg">
             <div class="container-lg">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,6 +34,7 @@
                         <li class="nav-item">
                             <a class="nav-link <?php echo  $url[2]=='index'?'active':''; ?>" href="<?php echo base_url(); ?>" >Home</a>
                         </li>
+                        
                          <?php if(count($whats_new_link)>0){ ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle <?php echo $url[2]=='whatsnew'?'active':''; ?>" href="#" id="whats_new_dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

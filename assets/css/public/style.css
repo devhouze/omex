@@ -56,15 +56,11 @@ header.header.sticky {
 }
 
 .header-top {
-    padding: 9px 0;
-}
-
-.main-menu .dropdown-menu li+li {
-    margin-top: 10px;
+    padding: 5px 0;
 }
 
 .main-menu .dropdown-menu li a {
-    padding: 7px 30px 7px 18px !important;
+    padding: 10px 30px 10px 18px !important;
     font-size: 18px;
     color: #083d68 !important;
 }
@@ -92,17 +88,18 @@ header.header.sticky {
 }
 
 .main-menu .navbar-nav>li+li {
-    margin-left: calc(var(--v2) * 30);
+    margin-left: calc(var(--v2) * 20);
 }
 
 .main-menu .navbar-nav>li>a {
     padding: 10px 5px !important;
     color: var(--black);
     font-size: calc(var(--v2) * 8);
+    text-transform: uppercase !important;
 }
 
 .main-menu .navbar-nav li a.active {
-    color: #1c67b4 !important;
+    color: #083d68 !important;
     font-weight: 600;
 }
 
@@ -457,6 +454,10 @@ footer .menu li+li {
 .looking-out .carousel-control-prev {
     position: relative;
     width: unset !important;
+}
+
+.looking-out .carousel-control-next:hover,
+.looking-out .carousel-control-prev:hover {
     opacity: 9;
 }
 
@@ -647,8 +648,47 @@ span.text-danger.errors_msg {
 .experience .carousel-indicators {
     padding: 30px 0;
     margin-bottom: 0;
-    background: #FCF7F7;
+    background: #faf7f2;
     align-items: center;
+}
+
+#image-modal button.btn-close:hover,
+#interior-image-modal button.btn-close:hover,
+#interior_images button.btn-close:hover,
+#exterior-image-modal button.btn-close:hover,
+#construction-image-modal button.btn-close:hover {
+    opacity: 9;
+    color: white;
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    opacity: 0.5;
+}
+
+.owl-carousel .owl-nav button.owl-next:hover,
+.owl-carousel .owl-nav button.owl-prev:hover {
+    opacity: 9;
+}
+
+#image-modal button.btn-close,
+#interior-image-modal button.btn-close,
+#interior_images button.btn-close,
+#exterior-image-modal button.btn-close,
+#construction-image-modal button.btn-close {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    width: 30px;
+    height: 30px;
+    background: #15518b !important;
+    border-radius: 50%;
+    z-index: 9;
+    opacity: 9;
+    font-size: 20px;
+    line-height: 20px;
+    color: white;
+    font-weight: 600;
 }
 
 .experience .carousel-indicators li label {
@@ -743,6 +783,14 @@ span.text-danger.errors_msg {
     justify-content: center;
 }
 
+.owl-theme .owl-nav [class*='owl-'] {
+    opacity: .5;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover {
+    opacity: 9;
+}
+
 .top-brands .owl-theme .owl-nav [class*='owl-'] {
     background: transparent;
     border: none;
@@ -765,7 +813,7 @@ span.text-danger.errors_msg {
 }
 
 .main-slider .carousel-inner {
-    height: 553px;
+    height: 625px;
 }
 
 .main-slider .carousel-inner .carousel-item {
@@ -2821,7 +2869,7 @@ ul.share-links li:nth-child(2) {
         color: var(--h-color);
     }
     div#navbarNavDropdown ul li {
-        padding: 10px;
+        padding: 5px 10px;
     }
     .navbar-toggler:focus {
         box-shadow: unset !important;
