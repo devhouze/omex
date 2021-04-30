@@ -23,7 +23,7 @@
                         <div class="bg-color" style="background-color: #5A946E;"></div>
                          <?php } ?>
                         <?php if(count($about_brand) > 1){?>
-                        <div class="crasol-btn">
+                        <div class="crasol-btn d-none">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
                             </button>
@@ -364,7 +364,7 @@
         </div>
 
     </div>
-    <div class="more-expoler pt-30 pb-60 gray-bg">
+    <div class="more-expoler pt-30 pb-60 gray-bg pb-sm-30">
         <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">

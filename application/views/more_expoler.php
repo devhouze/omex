@@ -27,7 +27,7 @@
 
 
                     </div>
-                    <div class="slider-counter more-counter"></div>
+                    
                 </div>
             </div>
         </div>

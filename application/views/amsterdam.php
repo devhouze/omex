@@ -294,7 +294,7 @@
         </div>
 
     </div>
-    <div class="more-expoler pt-30 pb-60 gray-bg">
+    <div class="more-expoler pt-30 pb-60 gray-bg pb-sm-30">
         <div class="container-lg">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
