@@ -380,7 +380,7 @@
                 <div class="modal-body">
                     <form action="<?php echo base_url('register-in-event') ?>" method="post" id="register">
                         <div class="mb-4">
-                            <label for="formGroupExampleInput" class="form-label">Name *</label>
+                            <label for="formGroupExampleInput" class="form-label">Name*</label>
                             <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="Your Name">
                         </div>
                         <div class="mb-4">
@@ -393,10 +393,10 @@
                         </div>
                         <input type="hidden" name="event_name" value="<?php echo $event['event_name']; ?>">
                         <div class="mb-4">
-                            <label for="formGroupExampleInput" class="form-label">Your Message*</label>
+                            <label for="formGroupExampleInput" class="form-label">Your Message (Optional)</label>
                             <textarea class="form-control" name="message" id="formGroupExampleInput" placeholder="Your Message"></textarea>
                         </div>
-                        <div class="mt-5">
+                        <div class="mt-4">
                             <button type="submit" class="submit-bnt d-table mx-auto">REGISTER NOW</button>
                         </div>
                     </form>
