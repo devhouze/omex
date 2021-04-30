@@ -2,6 +2,16 @@
     transform: scale(1.1);
 }
 
+.select2-results__options li:hover {
+    background: #0067b4 !important;
+    color: white !important;
+}
+
+.main-menu .dropdown-menu li a:hover {
+    background: #0067b4 !important;
+    color: white !important;
+}
+
 .img-box .brnad-logo img {
     transition: 0.5s all;
 }
@@ -70,8 +80,13 @@ img {
     height: auto;
 }
 
+header {
+    background: #faf7f2;
+}
+
 header.header {
     transition: 0.5s all;
+    background: #faf7f2;
 }
 
 header.sticky .main-menu {
@@ -84,7 +99,6 @@ header.header.sticky {
     left: 0;
     right: 0;
     top: 0;
-    background: white;
     box-shadow: 0 4px 20px rgb(45 48 71 / 10%);
 }
 
@@ -114,6 +128,7 @@ header.header.sticky {
     border-radius: 0 !important;
     box-shadow: 0 4px 20px rgb(45 48 71 / 10%);
     margin: 0;
+    padding: 0;
 }
 
 .main-menu .dropdown-menu li a:hover {
@@ -523,13 +538,14 @@ a.banner-link {
     font-size: 30px;
     margin-bottom: 0;
     margin-top: 0;
-    text-shadow: 3px 0px 0px #cc1f38;
+    /* text-shadow: 3px 0px 0px #cc1f38; */
     margin-right: 10px;
 }
 
-.looking-out h2 span {
+
+/* .looking-out h2 span {
     text-shadow: 0 0 #da6170;
-}
+} */
 
 .time {
     color: var(--h-color);
@@ -1015,7 +1031,7 @@ span.text-danger.errors_msg {
 
 .portugal-page .looking-out h2 {
     color: #F5C137;
-    text-shadow: 3px 0px 0px #E0A50B;
+    /* text-shadow: 3px 0px 0px #E0A50B; */
 }
 
 .portugal-page .more-expoler .slider-counter,
@@ -1084,7 +1100,7 @@ span.text-danger.errors_msg {
 
 .athens-page .looking-out h2 {
     color: #083D68;
-    text-shadow: 3px 0px 0px #5A946E;
+    /* text-shadow: 3px 0px 0px #5A946E; */
 }
 
 .athens-page .day {
@@ -1231,11 +1247,11 @@ span.text-danger.errors_msg {
     left: 0;
     right: 0;
     width: 100%;
-    margin-top: 90px;
+    margin-top: 70px;
 }
 
 .more-expoler .owl-nav button+button {
-    margin-left: 300px;
+    margin-left: 50px;
 }
 
 .more-expoler .owl-nav button:focus {
@@ -1322,12 +1338,12 @@ span.text-danger.errors_msg {
 
 .hongkong-page .looking-out h2 {
     color: #F99076;
-    text-shadow: 3px 0 0 #F25832;
+    /* text-shadow: 3px 0 0 #F25832; */
 }
 
 .amsterdam-page .looking-out h2 {
     color: #92BCD7;
-    text-shadow: 3px 0 0 #669BBC;
+    /* text-shadow: 3px 0 0 #669BBC; */
 }
 
 .san-page .live-in-word .slider-counter,
@@ -1365,7 +1381,7 @@ span.text-danger.errors_msg {
 }
 
 .san-page .looking-out h2 {
-    text-shadow: 3px 0px 0px #92193F;
+    /* text-shadow: 3px 0px 0px #92193F; */
     color: #d94a77;
 }
 
@@ -1405,7 +1421,7 @@ span.text-danger.errors_msg {
 
 .london-page .looking-out h2 {
     color: #FC536B;
-    text-shadow: 3px 0 0 #CC1F38;
+    /* text-shadow: 3px 0 0 #CC1F38; */
 }
 
 .paris-page .live-in-word .slider-counter,
@@ -1444,7 +1460,7 @@ span.text-danger.errors_msg {
 
 .paris-page .looking-out h2 {
     color: #8B5A79;
-    text-shadow: 3px 0 0 #5B1545;
+    /* text-shadow: 3px 0 0 #5B1545; */
 }
 
 
@@ -1877,6 +1893,7 @@ span.text-danger.errors_msg {
 
 .product-box .name {
     margin-bottom: 5px;
+    font-weight: 500;
 }
 
 .product-box figure img {
@@ -1910,7 +1927,7 @@ span.text-danger.errors_msg {
 
 .event-page .looking-out h2 {
     color: #083D68;
-    text-shadow: 3px 0px 0px #5A946E;
+    /* text-shadow: 3px 0px 0px #5A946E; */
 }
 
 .event-page .day {
@@ -2673,6 +2690,9 @@ ul.share-links li:nth-child(2) {
 }
 
 @media only screen and (max-width: 600px) {
+    .more-expoler .owl-nav {
+        margin-top: 60px;
+    }
     header .nav-item.dropdown .dropdown-menu.show {
         display: block !important;
     }
@@ -2831,7 +2851,7 @@ ul.share-links li:nth-child(2) {
     .barnd-page .similar.barnd {
         padding-top: 50px;
     }
-    .paris-page .looking-out h2 {
+    /* .paris-page .looking-out h2 {
         text-shadow: 2px 0 0 #5B1545;
     }
     .london-page .looking-out h2 {
@@ -2848,7 +2868,7 @@ ul.share-links li:nth-child(2) {
     }
     .portugal-page .looking-out h2 {
         text-shadow: 2px 0px 0px #e0a50b;
-    }
+    } */
     .box-calander {
         margin-top: 30px;
     }
@@ -2917,9 +2937,9 @@ ul.share-links li:nth-child(2) {
     .more-expoler .owl-nav button+button {
         margin-left: 50px;
     }
-    .athens-page .looking-out h2 {
+    /* .athens-page .looking-out h2 {
         text-shadow: 2px 0px 0px #5a946e;
-    }
+    } */
     .experience .carousel-indicators li {
         display: none;
         margin-left: 0 !important;
@@ -2937,7 +2957,7 @@ ul.share-links li:nth-child(2) {
         justify-content: center;
     }
     .tab-area .owl-nav {
-        margin-top: 60px !important;
+        margin-top: 130px !important;
     }
     div#navbarNavDropdown {
         left: 0;
@@ -3027,12 +3047,11 @@ ul.share-links li:nth-child(2) {
         font-size: 14px;
     }
     .tab-area .slider-counter {
-        bottom: 35px;
+        bottom: 70px;
     }
     .looking-out h2 {
         font-size: 22px;
         display: table;
-        text-shadow: -2px 0px 0px #cc1f38;
         line-height: 45px;
     }
     .time {
@@ -3251,7 +3270,7 @@ ul.share-links li:nth-child(2) {
     }
     .car-ions {
         justify-content: center;
-        bottom: 10px;
+        bottom: -10px;
     }
     .img-box {
         margin-bottom: 70px;
@@ -3293,7 +3312,7 @@ ul.share-links li:nth-child(2) {
         height: auto;
     }
     .brand-directory-page .crsouls-btn-group {
-        bottom: -50px;
+        bottom: -70px;
     }
     .brand-directory-page .crsouls-btn-group button {
         margin-left: 0;
@@ -3331,9 +3350,9 @@ ul.share-links li:nth-child(2) {
         justify-content: center;
         margin-top: 40px;
     }
-    .event-page .looking-out h2 {
+    /* .event-page .looking-out h2 {
         text-shadow: 2px 0px 0px #5a946e;
-    }
+    } */
     .street-banner p+img {
         position: absolute;
         bottom: 20px;
@@ -3584,7 +3603,7 @@ span.select2-search.select2-search--dropdown {
 }
 
 .select2-results__options li+li {
-    border-top: 1px solid black;
+    border-top: 1px solid rgb(51 51 51 / 20%)
 }
 
 .select2-results__option--highlighted {
@@ -3619,6 +3638,7 @@ span.select2-search.select2-search--dropdown {
 .addrs img {
     margin-right: 5px;
     margin-top: 3px;
+    height: 16px;
 }
 
 button.carousel-control-prev,

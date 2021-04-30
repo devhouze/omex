@@ -1,6 +1,6 @@
 <div class="brand-directory-page barnd-page">
     <?php if (!empty($brand_banner)) { ?>
-        <div class="main-slider d-flex flex-fill gray-bg">
+        <div class="main-slider d-flex flex-fill gray-bg pb-60">
             <div class="container-fluid d-flex flex-fill">
                 <div class="row d-lg-flex d-none flex-fill">
                     <div class="col-md-12 d-flex flex-fill px-0">
@@ -109,7 +109,7 @@
             </div>
         </div>
     <?php } ?>
-    <div class="brand-directory gray-bg pt-60 pt-sm-30 pb-30">
+    <div class="brand-directory gray-bg pt-60 pt-sm-50 pb-30">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-10 positoin-relative">
@@ -403,7 +403,7 @@
             <?php } ?>
 
             <div class="find-us py-60 py-sm-20 gray-bg">
-                <div class="containe-lgr">
+                <div class="container-lg">
                     <div class="row">
                         <div class="col-md-12 positoin-relative">
                             <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Find Us</h5>
@@ -429,7 +429,7 @@
                 </div>
 
             </div>
-            <div class="more-expoler pt-30 pb-60 gray-bg">
+            <div class="more-expoler pt-30 pb-60 gray-bg pb-sm-30">
                 <div class="container-lg">
                     <div class="row">
                         <div class="col-md-12 positoin-relative">
