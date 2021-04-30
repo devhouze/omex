@@ -40,7 +40,7 @@
                             } ?>
 
                         </div>
-                        <?php if(count($about_brand) > 1){?>
+                        
                         <div class="home-baner-btn">
                             <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="prev">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/left.svg" alt="" class="w-100">
@@ -49,7 +49,7 @@
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
                         </a>
                         </div>
-                        <?php } ?>
+                        
                     </div>
 
 
@@ -83,7 +83,7 @@
                             } ?>
 
                         </div>
-                        <?php if(count($about_brand) > 1){?>
+                        
                         <div class="home-baner-btn">
                             <a class="carousel-control-prev" type="button" data-bs-target="carouselExampleIndicatorssmob" data-bs-slide="prev">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/left.svg" alt="" class="w-100">
@@ -92,7 +92,7 @@
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
                         </a>
                         </div>
-                        <?php } ?>
+                        
                     </div>
                 </div>
             </div>
