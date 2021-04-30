@@ -5,11 +5,13 @@
                 <div class="row d-lg-flex d-none flex-fill">
                     <div class="col-md-12 d-flex flex-fill px-0">
                         <div id="carouselExampleIndicatorss" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <?php $count = count($brand_banner); if($count>1){
-                                for ($i = 0; $i < $count; $i++) { ?>
-                                    <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="<?php echo $i; ?>" <?php if ($i == 0) { ?>class="active" <?php } ?>></li>
-                                <?php } } ?>
+                            <ol class="carousel-indicators d-none">
+                                <?php $count = count($brand_banner);
+                                if ($count > 1) {
+                                    for ($i = 0; $i < $count; $i++) { ?>
+                                        <li data-bs-target="#carouselExampleIndicatorss" data-bs-slide-to="<?php echo $i; ?>" <?php if ($i == 0) { ?>class="active" <?php } ?>></li>
+                                <?php }
+                                } ?>
                             </ol>
 
 
@@ -37,6 +39,16 @@
                                 } ?>
 
                             </div>
+                            <?php if (count($about_brand) > 1) { ?>
+                                <div class="home-baner-btn">
+                                    <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="prev">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/home/left.svg" alt="" class="w-100">
+                                    </a>
+                                    <a class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="next">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
+                                    </a>
+                                </div>
+                            <?php } ?>
 
                         </div>
 
@@ -46,7 +58,7 @@
                 <div class="row d-lg-none d-flex flex-fill">
                     <div class="col-md-12 d-flex flex-fill px-0">
                         <div id="carouselExampleIndicatorssmob" class="carousel slide d-flex flex-fill" data-bs-ride="carousel">
-                            <ol class="carousel-indicators">
+                            <ol class="carousel-indicators d-none">
                                 <?php $count = count($brand_banner);
                                 if ($count > 1) {
                                     for ($i = 0; $i < $count; $i++) { ?>
@@ -79,6 +91,16 @@
                                 } ?>
 
                             </div>
+                            <?php if (count($about_brand) > 1) { ?>
+                                <div class="home-baner-btn">
+                                    <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="prev">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/home/left.svg" alt="" class="w-100">
+                                    </a>
+                                    <a class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="next">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
+                                    </a>
+                                </div>
+                            <?php } ?>
 
                         </div>
                     </div>
@@ -154,11 +176,11 @@
 
                             <ul>
                                 <?php $i = 1;
-                                $row=count($main_category);
+                                $row = count($main_category);
                                 if (!empty($main_category)) {
                                     foreach ($main_category as $value) { ?>
                                         <li><a href="#filter-box" class="category" data-category="<?php echo $value['name'] ?>"><?php echo $value['name'] ?></a></li>
-                                        <?php if ($i % 4 == 0 && $i<$row) { ?>
+                                        <?php if ($i % 4 == 0 && $i < $row) { ?>
                             </ul>
                         </div>
                         <div class="col-md-4">
@@ -240,187 +262,189 @@
 
                                     </div>
                                 </div>
-                        <?php }
-                        }else{ ?>
-                            <div class="product-search-alert"><p>Sorry, we are not able to find any search results</p><div>
-                        <?php } ?>
+                            <?php }
+                        } else { ?>
+                            <div class="product-search-alert">
+                                <p>Sorry, we are not able to find any search results</p>
+                                <div>
+                                <?php } ?>
 
-                    </div>
-                    <div class="row">
-                        <?php if (!empty($limit)) { ?>
-                            <div class="col-md-12" id="load_btn">
-                                <input type="hidden" id="limit" value="<?php echo $limit; ?>">
-                                <a href="javascript:void(0)" class="d-table mx-auto primary-btn">LOAD MORE</a>
+                                </div>
+                                <div class="row">
+                                    <?php if (!empty($limit)) { ?>
+                                        <div class="col-md-12" id="load_btn">
+                                            <input type="hidden" id="limit" value="<?php echo $limit; ?>">
+                                            <a href="javascript:void(0)" class="d-table mx-auto primary-btn">LOAD MORE</a>
+                                        </div>
+                                    <?php } ?>
+                                </div>
                             </div>
-                        <?php } ?>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <?php if (!empty($brand_offers[0])) { ?>
-        <div class="about-brand gray-bg  pb-30 pt-60">
-            <div class="container-lg">
-                <div class="row">
-                    <div class="col-md-12 positoin-relative">
-                        <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated">Discounts & Offers</h5>
-                        <div class="v-line d-table mx-auto my-4"></div>
+            <?php if (!empty($brand_offers[0])) { ?>
+                <div class="about-brand gray-bg  pb-30 pt-60">
+                    <div class="container-lg">
+                        <div class="row">
+                            <div class="col-md-12 positoin-relative">
+                                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated">Discounts & Offers</h5>
+                                <div class="v-line d-table mx-auto my-4"></div>
+                            </div>
+                        </div>
+
                     </div>
-                </div>
-
-            </div>
-            <div class="container-lg">
-                <div class="row justify-content-center">
-                    <div class="col-xxl-10">
-                        <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <?php if (!empty($brand_offers)) {
-                                    $i = 1;
-                                    foreach ($brand_offers as $offers) { ?>
-                                        <div class="carousel-item <?php if ($i == 1) {
-                                                                        echo "active";
-                                                                    } ?>">
-                                            <div class="row justify-content-center">
-                                                <div class="col-md-12 position-relative">
-                                                    <figure> <img src="<?php echo base_url('assets/images/public/brand/' . $offers['offer_thumbnail']); ?>" alt="<?php echo $offers['thumbnail_alt']; ?>" class=""></figure>
-                                                    <div class="card mt-60 border-0 rounded-0">
-                                                        <div class="row">
-                                                            <div class="col-lg-4 ">
+                    <div class="container-lg">
+                        <div class="row justify-content-center">
+                            <div class="col-xxl-10">
+                                <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <?php if (!empty($brand_offers)) {
+                                            $i = 1;
+                                            foreach ($brand_offers as $offers) { ?>
+                                                <div class="carousel-item <?php if ($i == 1) {
+                                                                                echo "active";
+                                                                            } ?>">
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-md-12 position-relative">
+                                                            <figure> <img src="<?php echo base_url('assets/images/public/brand/' . $offers['offer_thumbnail']); ?>" alt="<?php echo $offers['thumbnail_alt']; ?>" class=""></figure>
+                                                            <div class="card mt-60 border-0 rounded-0">
+                                                                <div class="row">
+                                                                    <div class="col-lg-4 ">
+                                                                    </div>
+                                                                    <div class="col-lg-8 ">
+                                                                        <div class="brand-content"><?php echo $offers['about_offer']; ?> </div>
+                                                                        <a class="brand-offer-link" href="<?php echo $offers['brand_slug']; ?>">Explore <?php echo $offers['brand_name']; ?></a>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <div class="col-lg-8 ">
-                                                                <div class="brand-content"><?php echo $offers['about_offer']; ?> </div>
-                                                                <a class="brand-offer-link" href="<?php echo $offers['brand_slug']; ?>">Explore <?php echo $offers['brand_name']; ?></a>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        <?php $i++;
+                                            }
+                                        } ?>
+                                    </div>
+
+                                    <?php if (count($brand_offers) > 1) { ?>
+                                        <div class="crsouls-btn-group">
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                                <img src="<?php echo base_url(); ?>assets/images/public/brand/left.svg" alt="" class="">
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                                <img src="<?php echo base_url(); ?>assets/images/public/brand/right.svg" alt="" class="">
+                                            </button>
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+
+            <?php if (!empty($what_new)) { ?>
+                <div class="whats-new py-60 pb-sm-30 gray-bg ">
+                    <div class="container-lg">
+                        <div class="row">
+                            <div class="col-md-12 positoin-relative">
+                                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">What’s New in the Streets</h5>
+                                <div class="v-line d-table mx-auto my-4"></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xxl-10">
+                                <div id="carouselExampleControls_whats" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <?php $i = 1;
+                                        foreach ($what_new as $new) { ?>
+                                            <div class="carousel-item <?php if ($i == 1) {
+                                                                            echo "active";
+                                                                        } ?>">
+                                                <div class="row flex-fill">
+                                                    <div class="col-lg-6 pe-lg-4 d-flex flex-fill">
+                                                        <div class="card d-flex flex-fill flex-column align-items-center justify-content-center border-0 rounded-0" style="background-color: #5A946E;">
+                                                            <h2 class="fz40 fz24-sm pr-font text-white"><?php echo $new['brand_name']; ?></h2>
+                                                            <div class="text-white text-center fz20 fw-5 mt-40 mb-0 content-box"><?php echo $new['about_brand']; ?> </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="img-box position-relative">
+                                                            <img src="<?php echo base_url('assets/images/public/brand/' . $new['banner_web']); ?>" alt="<?php echo $new['banner_comment']; ?>" class="d-table ml-auto">
+                                                            <div class="brnad-logo">
+                                                                <a href="<?php echo base_url('brand/' . $new['brand_slug']); ?>" class="brand-logo-link"></a>
+                                                                <img src="<?php echo base_url('assets/images/public/brand/' . $new['brand_logo']); ?>" alt="<?php echo $new['logo_message']; ?>" class="">
                                                             </div>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                             </div>
-                                        </div>
-                                <?php $i++;
-                                    }
-                                } ?>
-                            </div>
-
-                            <?php if (count($brand_offers) > 1) { ?>
-                                <div class="crsouls-btn-group">
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                        <img src="<?php echo base_url(); ?>assets/images/public/brand/left.svg" alt="" class="">
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                        <img src="<?php echo base_url(); ?>assets/images/public/brand/right.svg" alt="" class="">
-                                    </button>
-                                </div>
-                            <?php } ?>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    <?php } ?>
-
-    <?php if (!empty($what_new)) { ?>
-        <div class="whats-new py-60 pb-sm-30 gray-bg ">
-            <div class="container-lg">
-                <div class="row">
-                    <div class="col-md-12 positoin-relative">
-                        <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">What’s New in the Streets</h5>
-                        <div class="v-line d-table mx-auto my-4"></div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-xxl-10">
-                        <div id="carouselExampleControls_whats" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <?php $i = 1;
-                                foreach ($what_new as $new) { ?>
-                                    <div class="carousel-item <?php if ($i == 1) {
-                                                                    echo "active";
-                                                                } ?>">
-                                        <div class="row flex-fill">
-                                            <div class="col-lg-6 pe-lg-4 d-flex flex-fill">
-                                                <div class="card d-flex flex-fill flex-column align-items-center justify-content-center border-0 rounded-0" style="background-color: #5A946E;">
-                                                    <h2 class="fz40 fz24-sm pr-font text-white"><?php echo $new['brand_name']; ?></h2>
-                                                    <div class="text-white text-center fz20 fw-5 mt-40 mb-0 content-box"><?php echo $new['about_brand']; ?> </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="img-box position-relative">
-                                                    <img src="<?php echo base_url('assets/images/public/brand/' . $new['banner_web']); ?>" alt="<?php echo $new['banner_comment']; ?>" class="d-table ml-auto">
-                                                    <div class="brnad-logo">
-                                                    <a href="<?php echo base_url('brand/'.$new['brand_slug']);?>" class="brand-logo-link"></a>
-                                                        <img src="<?php echo base_url('assets/images/public/brand/' . $new['brand_logo']); ?>" alt="<?php echo $new['logo_message']; ?>" class="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <?php $i++;
+                                        } ?>
                                     </div>
-                                <?php $i++;
-                                } ?>
-                            </div>
-                            <?php if (count($what_new) > 1) { ?>
-                                <div class="car-ions">
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls_whats" data-bs-slide="prev">
-                                        <img src="<?php echo base_url(); ?>assets/images/public/brand/left.svg" alt="" class="">
+                                    <?php if (count($what_new) > 1) { ?>
+                                        <div class="car-ions">
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls_whats" data-bs-slide="prev">
+                                                <img src="<?php echo base_url(); ?>assets/images/public/brand/left.svg" alt="" class="">
 
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls_whats" data-bs-slide="next">
-                                        <img src="<?php echo base_url(); ?>assets/images/public/brand/right.svg" alt="" class="">
-                                    </button>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls_whats" data-bs-slide="next">
+                                                <img src="<?php echo base_url(); ?>assets/images/public/brand/right.svg" alt="" class="">
+                                            </button>
+                                        </div>
+                                    <?php } ?>
                                 </div>
-                            <?php } ?>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    <?php } ?>
+            <?php } ?>
 
-    <div class="find-us py-60 py-sm-20 gray-bg">
-        <div class="containe-lgr">
-            <div class="row">
-                <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Find Us</h5>
+            <div class="find-us py-60 py-sm-20 gray-bg">
+                <div class="containe-lgr">
+                    <div class="row">
+                        <div class="col-md-12 positoin-relative">
+                            <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Find Us</h5>
 
-                    <div class="v-line d-table mx-auto my-4"></div>
-                </div>
-            </div>
-            <div class="row mt-4 d-flex flex-fill">
-                <div class="col-xxl-1"></div>
-                <div class="col-md-6 d-flex flex-fill pe-md-0">
-                    <!-- <figure class="mb-0 w-100 d-flex flex-fill"><img src="<?php echo base_url(); ?>assets/images/public/street/map.jpg" alt="" class="w-100"></figure> -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14040.246250040547!2d77.3528947!3d28.3872085!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5ba6ea082ef6bf15!2sOmaxe%20World%20Street!5e0!3m2!1sen!2spl!4v1605103931187!5m2!1sen!2spl" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                </div>
-                <div class="col-md-4 d-flex flex-fill ps-md-0">
-                    <div class="card px-40 py-40 rounded-0 border-0 wow fadeInRight animated" style="background-color: #145183;">
-                        <img src="<?php echo base_url(); ?>assets/images/public/brand/ws.svg" alt="">
-                        <p class="fz20 text-white text-center mt-30">Wander by foot into the heart of the New Faridabad. Start discovering your own world within ours at World Street.</p>
-                        <img src="<?php echo base_url(); ?>assets/images/public/brand/wss.png" alt="" class="d-table mx-auto mt-30">
+                            <div class="v-line d-table mx-auto my-4"></div>
+                        </div>
+                    </div>
+                    <div class="row mt-4 d-flex flex-fill">
+                        <div class="col-xxl-1"></div>
+                        <div class="col-md-6 d-flex flex-fill pe-md-0">
+                            <!-- <figure class="mb-0 w-100 d-flex flex-fill"><img src="<?php echo base_url(); ?>assets/images/public/street/map.jpg" alt="" class="w-100"></figure> -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14040.246250040547!2d77.3528947!3d28.3872085!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5ba6ea082ef6bf15!2sOmaxe%20World%20Street!5e0!3m2!1sen!2spl!4v1605103931187!5m2!1sen!2spl" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                        <div class="col-md-4 d-flex flex-fill ps-md-0">
+                            <div class="card px-40 py-40 rounded-0 border-0 wow fadeInRight animated" style="background-color: #145183;">
+                                <img src="<?php echo base_url(); ?>assets/images/public/brand/ws.svg" alt="">
+                                <p class="fz20 text-white text-center mt-30">Wander by foot into the heart of the New Faridabad. Start discovering your own world within ours at World Street.</p>
+                                <img src="<?php echo base_url(); ?>assets/images/public/brand/wss.png" alt="" class="d-table mx-auto mt-30">
+                            </div>
+                        </div>
+                        <div class="col-xxl-1"></div>
                     </div>
                 </div>
-                <div class="col-xxl-1"></div>
+
             </div>
-        </div>
+            <div class="more-expoler pt-30 pb-60 gray-bg">
+                <div class="container-lg">
+                    <div class="row">
+                        <div class="col-md-12 positoin-relative">
+                            <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">There’s more to explore</h5>
 
-    </div>
-    <div class="more-expoler pt-30 pb-60 gray-bg">
-        <div class="container-lg">
-            <div class="row">
-                <div class="col-md-12 positoin-relative">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">There’s more to explore</h5>
+                            <div class="v-line d-table mx-auto my-4"></div>
+                        </div>
+                    </div>
 
-                    <div class="v-line d-table mx-auto my-4"></div>
-                </div>
-            </div>
+                    <style type="text/css">
+                        a.letter.active {
+                            font-weight: bold;
+                        }
 
-            <style type="text/css">
-                a.letter.active {
-                    font-weight: bold;
-                }
-
-                a.category.active {
-                    font-weight: bold;
-                }
-            </style>
+                        a.category.active {
+                            font-weight: bold;
+                        }
+                    </style>
