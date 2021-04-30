@@ -1,3 +1,11 @@
+.img-box .brnad-logo:hover img {
+    transform: scale(1.1);
+}
+
+.img-box .brnad-logo img {
+    transition: 0.5s all;
+}
+
 a.brand-offer-link {
     color: white;
     border: 1px solid white;
@@ -5,6 +13,35 @@ a.brand-offer-link {
     margin-top: 40px;
     float: left;
     font-size: 16px;
+    text-transform: uppercase;
+}
+
+.home-baner-btn {
+    position: absolute;
+    bottom: -70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-baner-btn a {
+    width: unset;
+    height: auto;
+}
+
+.home-baner-btn a.carousel-control-prev {
+    left: unset;
+}
+
+.home-baner-btn a.carousel-control-next {
+    right: unset;
+    margin-left: 170px;
+}
+
+.home-baner-btn a.carousel-control-next,
+.home-baner-btn a.carousel-control-prev {
+    position: relative;
 }
 
 a.brand-offer-link:hover {
@@ -41,10 +78,6 @@ header.sticky .main-menu {
     padding: 5px 0;
 }
 
-.header.sticky .header-top {
-    display: none !important;
-}
-
 header.header.sticky {
     position: fixed;
     z-index: 99;
@@ -56,15 +89,11 @@ header.header.sticky {
 }
 
 .header-top {
-    padding: 9px 0;
-}
-
-.main-menu .dropdown-menu li+li {
-    margin-top: 10px;
+    padding: 5px 0;
 }
 
 .main-menu .dropdown-menu li a {
-    padding: 7px 30px 7px 18px !important;
+    padding: 10px 30px 10px 18px !important;
     font-size: 18px;
     color: #083d68 !important;
 }
@@ -92,17 +121,18 @@ header.header.sticky {
 }
 
 .main-menu .navbar-nav>li+li {
-    margin-left: calc(var(--v2) * 30);
+    margin-left: calc(var(--v2) * 20);
 }
 
 .main-menu .navbar-nav>li>a {
     padding: 10px 5px !important;
     color: var(--black);
     font-size: calc(var(--v2) * 8);
+    text-transform: uppercase !important;
 }
 
 .main-menu .navbar-nav li a.active {
-    color: #1c67b4 !important;
+    color: #083d68 !important;
     font-weight: 600;
 }
 
@@ -131,7 +161,7 @@ header.header.sticky {
 
 #registernow .modal-content {
     max-width: 550px;
-    padding: 60px;
+    padding: 30px 60px;
     background: #FAF7F2;
 }
 
@@ -139,6 +169,7 @@ header.header.sticky {
     position: absolute;
     right: 30px;
     top: 30px;
+    z-index: 1;
 }
 
 #registernow .form-control {
@@ -155,8 +186,8 @@ header.header.sticky {
 }
 
 #registernow label {
-    margin-bottom: 30px;
-    font-size: 26px;
+    margin-bottom: 20px;
+    font-size: 24px;
     color: #083D68;
     font-family: var(--pr-font) !important;
 }
@@ -457,6 +488,10 @@ footer .menu li+li {
 .looking-out .carousel-control-prev {
     position: relative;
     width: unset !important;
+}
+
+.looking-out .carousel-control-next:hover,
+.looking-out .carousel-control-prev:hover {
     opacity: 9;
 }
 
@@ -468,15 +503,19 @@ a.banner-link {
     bottom: 0;
 }
 
+.more-expoler .item figure:hover img {
+    transform: scale(0.9);
+}
+
+.more-expoler .item figure img {
+    transition: 0.5s all;
+}
+
 .explore-more figure {
     overflow: hidden;
     display: table;
     margin-left: auto;
     margin-right: auto;
-}
-
-.explore-more {
-    cursor: pointer;
 }
 
 .looking-out h2 {
@@ -647,8 +686,47 @@ span.text-danger.errors_msg {
 .experience .carousel-indicators {
     padding: 30px 0;
     margin-bottom: 0;
-    background: #FCF7F7;
+    background: #faf7f2;
     align-items: center;
+}
+
+#image-modal button.btn-close:hover,
+#interior-image-modal button.btn-close:hover,
+#interior_images button.btn-close:hover,
+#exterior-image-modal button.btn-close:hover,
+#construction-image-modal button.btn-close:hover {
+    opacity: 9;
+    color: white;
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    opacity: 0.5;
+}
+
+.owl-carousel .owl-nav button.owl-next:hover,
+.owl-carousel .owl-nav button.owl-prev:hover {
+    opacity: 9;
+}
+
+#image-modal button.btn-close,
+#interior-image-modal button.btn-close,
+#interior_images button.btn-close,
+#exterior-image-modal button.btn-close,
+#construction-image-modal button.btn-close {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    width: 30px;
+    height: 30px;
+    background: #15518b !important;
+    border-radius: 50%;
+    z-index: 9;
+    opacity: 9;
+    font-size: 20px;
+    line-height: 20px;
+    color: white;
+    font-weight: 600;
 }
 
 .experience .carousel-indicators li label {
@@ -743,6 +821,14 @@ span.text-danger.errors_msg {
     justify-content: center;
 }
 
+.owl-theme .owl-nav [class*='owl-'] {
+    opacity: .5;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover {
+    opacity: 9;
+}
+
 .top-brands .owl-theme .owl-nav [class*='owl-'] {
     background: transparent;
     border: none;
@@ -765,7 +851,7 @@ span.text-danger.errors_msg {
 }
 
 .main-slider .carousel-inner {
-    height: 553px;
+    height: 625px;
 }
 
 .main-slider .carousel-inner .carousel-item {
@@ -1570,8 +1656,8 @@ span.text-danger.errors_msg {
     left: 0;
     z-index: 1;
     width: 100%;
-    text-transform: uppercase;
-    background: #00000099;
+    text-transform: capitalize;
+    background: #083d68;
     top: 43%;
     text-align: center;
     color: white;
@@ -1744,10 +1830,11 @@ span.text-danger.errors_msg {
     padding: 0 65px;
     letter-spacing: 1.4px;
     line-height: 1.8;
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
     overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
+    max-height: 9em;
 }
 
 .search-brand ul {
@@ -1806,6 +1893,8 @@ span.text-danger.errors_msg {
 
 .product-box .addrs {
     font-size: 16px;
+    display: flex;
+    align-items: flex-start;
 }
 
 .product-box {
@@ -1813,6 +1902,10 @@ span.text-danger.errors_msg {
     color: var(--h-color);
     margin-bottom: 40px;
     position: relative;
+}
+
+.event-page .looking-out h2 {
+    text-shadow: none !important;
 }
 
 .event-page .looking-out h2 {
@@ -1884,7 +1977,7 @@ span.text-danger.errors_msg {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 290px;
+    bottom: 200px;
 }
 
 .whats-new .card {
@@ -1910,7 +2003,7 @@ span.text-danger.errors_msg {
 }
 
 .brand-directory-page .about-brand .carousel-inner {
-    padding-bottom: 390px;
+    height: 700px
 }
 
 .event-page .crsouls-btn-group {
@@ -2103,7 +2196,7 @@ a.brand-logo-link {
 }
 
 .what-banner {
-    height: 553px;
+    height: 625px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left top;
@@ -2222,6 +2315,12 @@ ul.share-links li:nth-child(2) {
 }
 
 @media screen and (min-device-width: 600px) and (max-device-width: 992px) {
+    header .nav-item.dropdown .dropdown-menu.show {
+        display: block !important;
+    }
+    header .nav-item.dropdown .dropdown-menu {
+        display: none !important;
+    }
     .looking-out figure img {
         display: table;
         margin: 0 auto;
@@ -2574,6 +2673,38 @@ ul.share-links li:nth-child(2) {
 }
 
 @media only screen and (max-width: 600px) {
+    header .nav-item.dropdown .dropdown-menu.show {
+        display: block !important;
+    }
+    header .nav-item.dropdown .dropdown-menu {
+        display: none !important;
+    }
+    .main-slider .carousel-inner {
+        height: unset;
+    }
+    .home-baner-btn a.carousel-control-next {
+        margin-left: 40px;
+    }
+    .home-baner-btn a.carousel-control-next,
+    .home-baner-btn a.carousel-control-prev {
+        width: 80px;
+    }
+    .home-baner-btn a.carousel-control-next .main-slider .carousel-inner {
+        height: unset;
+    }
+    #registernow .modal-content {
+        padding: 30px 20px;
+    }
+    #registernow label {
+        font-size: 20px;
+    }
+    #registernow .submit-bnt {
+        width: 100%;
+        padding: 16px 20px;
+    }
+    .addrs img {
+        margin-top: 2px;
+    }
     .event-page .looking-out img {
         display: table;
         margin: 0 auto;
@@ -2658,7 +2789,7 @@ ul.share-links li:nth-child(2) {
         background-color: var(--london) !important;
     } */
     #carouselExampleIndicatorsmob {
-        height: 75vh;
+        height: 65vh;
     }
     .no-Banner {
         background: #faf7f2;
@@ -2821,7 +2952,7 @@ ul.share-links li:nth-child(2) {
         color: var(--h-color);
     }
     div#navbarNavDropdown ul li {
-        padding: 10px;
+        padding: 5px 10px;
     }
     .navbar-toggler:focus {
         box-shadow: unset !important;
@@ -3040,6 +3171,9 @@ ul.share-links li:nth-child(2) {
         font-size: 14px;
         padding-right: 0;
     }
+    .shop-details ul li a {
+        color: #083D68;
+    }
     .shop-details {
         padding-top: 120px;
         padding-left: 40px;
@@ -3087,7 +3221,7 @@ ul.share-links li:nth-child(2) {
         padding: 0 !important;
     }
     .whats-new .content-box {
-        padding: 0 60px;
+        padding: 0 25px;
         margin-top: 30px;
         font-size: 18px;
     }
@@ -3102,17 +3236,22 @@ ul.share-links li:nth-child(2) {
         height: 130px;
         bottom: -50px;
     }
+    .car-ions .carousel-control-prev img,
+    .car-ions .carousel-control-next img {
+        width: 80px;
+    }
     .car-ions .carousel-control-prev {
-        left: 20px !important;
-        width: 70px;
+        width: auto;
+        left: 0
     }
     .car-ions .carousel-control-next {
-        right: 20px !important;
-        width: 70px;
+        width: auto;
+        right: 0 !important;
+        margin-left: 40px;
     }
     .car-ions {
-        justify-content: space-between;
-        bottom: 15px;
+        justify-content: center;
+        bottom: 10px;
     }
     .img-box {
         margin-bottom: 70px;
@@ -3151,7 +3290,7 @@ ul.share-links li:nth-child(2) {
         margin-top: 5px;
     }
     .brand-directory-page .about-brand .carousel-inner {
-        padding-bottom: 0;
+        height: auto;
     }
     .brand-directory-page .crsouls-btn-group {
         bottom: -50px;
@@ -3171,8 +3310,9 @@ ul.share-links li:nth-child(2) {
     .event-page .about-brand .carousel-inner {
         padding-bottom: 0;
     }
-    .event-page .crsouls-btn-group {
-        bottom: -50px
+    .event-page .crsouls-btn-group,
+    .event-p-carosol {
+        bottom: -70px !important;
     }
     .event-page .crsouls-btn-group button {
         margin-left: 0;
@@ -3438,7 +3578,7 @@ span.select2-search.select2-search--dropdown {
 
 .select2-results__options li {
     font-size: 18px !important;
-    color: #000000 !important;
+    color: #083D68 !important;
     padding: 10px 9px !important;
     letter-spacing: 1px;
 }
@@ -3478,4 +3618,15 @@ span.select2-search.select2-search--dropdown {
 
 .addrs img {
     margin-right: 5px;
+    margin-top: 3px;
+}
+
+button.carousel-control-prev,
+button.carousel-control-next {
+    opacity: 0.5;
+}
+
+button.carousel-control-prev:hover,
+button.carousel-control-next:hover {
+    opacity: 9;
 }

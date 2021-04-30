@@ -8,18 +8,18 @@
                 </div>
                 <div class="col-md-5">
                     <div class="text-white fw5">
-                        <img src="<?php echo base_url(); ?>assets/images/public/header/call.svg" alt=""> <a href="tel:+91-9015222222" class="text-white me-1">+91-9015222222</a>
+                        <a href="tel:+91-9015222222" class="text-white me-1"><img src="<?php echo base_url(); ?>assets/images/public/header/call.svg" alt="">  +91-9015222222</a>
                     </div>
                 </div>
                 <div class="col-md-2">
                     <div class="text-white fw5 ms-auto d-table">
-                        <img src="<?php echo base_url(); ?>assets/images/public/header/map.svg" alt="Map"><a href="https://www.google.com/maps/place/Omaxe+World+Street/@28.387209,77.352895,14z/data=!4m5!3m4!1s0x0:0x5ba6ea082ef6bf15!8m2!3d28.3872085!4d77.3528947?hl=en" target="_blank" class="text-white ms-2">Getting Here</a>
+                        <a href="https://www.google.com/maps/place/Omaxe+World+Street/@28.387209,77.352895,14z/data=!4m5!3m4!1s0x0:0x5ba6ea082ef6bf15!8m2!3d28.3872085!4d77.3528947?hl=en" target="_blank" class="text-white ms-2"><img src="<?php echo base_url(); ?>assets/images/public/header/map.svg" alt="Map"> Getting Here</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="main-menu py-14">
+    <div class="main-menu">
         <nav class="navbar navbar-expand-lg">
             <div class="container-lg">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,6 +34,7 @@
                         <li class="nav-item">
                             <a class="nav-link <?php echo  $url[2]=='index'?'active':''; ?>" href="<?php echo base_url(); ?>" >Home</a>
                         </li>
+                        
                          <?php if(count($whats_new_link)>0){ ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle <?php echo $url[2]=='whatsnew'?'active':''; ?>" href="#" id="whats_new_dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
