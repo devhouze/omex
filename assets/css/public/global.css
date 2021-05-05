@@ -973,6 +973,10 @@
 
 /* btn styling */
 
+.border-main {
+    border: 1px solid #03518B !important;
+}
+
 .primary-btn {
     border: 1px solid #03518B;
     letter-spacing: 0.14em;
