@@ -259,25 +259,25 @@
                     <ul class="category d-flex flex-wrap justify-content-center align-items-center">
                         <li>
                             <a href="<?php echo base_url('brand-directory/fashion#search-box')?>">
-                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/c1.svg" alt=""></figure>
+                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/c1.png" alt=""></figure>
                                 <span>FASHION</span>
                             </a>
                         </li>
                         <li>
                             <a href="<?php echo base_url('brand-directory/restaurant#search-box')?>">
-                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/c2.svg" alt=""></figure>
+                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/c2.png" alt=""></figure>
                                 <span>FOOD</span>
                             </a>
                         </li>
                         <li>
                             <a href="<?php echo base_url('brand-directory/health#search-box')?>">
-                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/c3.svg" alt=""></figure>
+                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/c3.png" alt=""></figure>
                                 <span>HEALTH & BEAUTY</span>
                             </a>
                         </li>
                         <li>
                             <a href="<?php echo base_url('brand-directory/entertainment#search-box')?>">
-                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/c4.svg" alt=""></figure>
+                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/c4.png" alt=""></figure>
                                 <span>ENTERTAINMENT</span>
                             </a>
                         </li>
