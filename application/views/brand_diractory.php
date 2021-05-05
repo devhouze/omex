@@ -368,6 +368,7 @@
                                                         <div class="card d-flex flex-fill flex-column align-items-center justify-content-center border-0 rounded-0" style="background-color: #5A946E;">
                                                             <h2 class="fz40 fz24-sm pr-font text-white"><?php echo $new['brand_name']; ?></h2>
                                                             <div class="text-white text-center fz20 fw-5 mt-40 mb-0 content-box"><?php echo $new['about_brand']; ?> </div>
+                                                            <a href="<?php echo base_url('brand/' . $new['brand_slug']); ?>" class="Brand-directory-know-more">Know More</a>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
@@ -418,10 +419,10 @@
                             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14040.246250040547!2d77.3528947!3d28.3872085!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5ba6ea082ef6bf15!2sOmaxe%20World%20Street!5e0!3m2!1sen!2spl!4v1605103931187!5m2!1sen!2spl" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         </div>
                         <div class="col-md-4 d-flex flex-fill ps-md-0">
-                            <div class="card px-40 py-40 rounded-0 border-0 wow fadeInRight animated" style="background-color: #145183;">
-                                <img src="<?php echo base_url(); ?>assets/images/public/brand/ws.svg" alt="">
-                                <p class="fz20 text-white text-center mt-30">Wander by foot into the heart of the New Faridabad. Start discovering your own world within ours at World Street.</p>
-                                <img src="<?php echo base_url(); ?>assets/images/public/brand/wss.png" alt="" class="d-table mx-auto mt-30">
+                            <div class="card px-40 py-40 rounded-0 border-main wow fadeInRight animated bg-transparent">
+                                <img src="<?php echo base_url(); ?>assets/images/public/brand/worldstreet.svg" alt="">
+                                <p class="fz20  text-center mt-30 h-color">Wander by foot into the heart of the New Faridabad. Start discovering your own world within ours at World Street.</p>
+                                <img src="<?php echo base_url(); ?>assets/images/public/brand/wstm-logo.svg" alt="" class="d-table mx-auto mt-30 ws-tm-logo">
                             </div>
                         </div>
                         <div class="col-xxl-1"></div>
