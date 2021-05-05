@@ -57,7 +57,7 @@
             </div>
         </div>
     </div>
-    <div class="footer-bottom mt-60">
+    <div class="footer-bottom mt-30">
         <div class="container">
             <div class="row">
                 <div class="col-md-11 mb-20">
