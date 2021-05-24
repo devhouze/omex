@@ -2352,6 +2352,23 @@ ul.share-links li:nth-child(2) {
     background: #0E3E67;
 }
 
+.top-brands .owl-item.active .item:hover img {
+    transform: scale(1.1);
+}
+
+.top-brands .owl-item.active .item img {
+    transition: 0.5s all;
+}
+
+.tab-area .owl-item {
+    opacity: 0;
+    transition: 0.2s all;
+}
+
+.tab-area .owl-item.active {
+    opacity: 1;
+}
+
 
 /* end what new page css */
 
@@ -2744,6 +2761,13 @@ ul.share-links li:nth-child(2) {
 }
 
 @media only screen and (max-width: 600px) {
+    .footer-bottom p {
+        text-align: center;
+        padding-right: 0;
+    }
+    .footer-bottom .fh1 {
+        text-align: center;
+    }
     div#navbarNavDropdown ul li>a {
         padding: 10px 15px !important;
     }

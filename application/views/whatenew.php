@@ -96,11 +96,13 @@
                 <div class="row justify-content-center">
                     <div class="col-xxl-10">
                         <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Share With Friends </h5>
+                        
                         <!-- https://www.facebook.com/omaxeworldsreet/ -->
                         <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
+                        <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1s"></div>
                         
                         <!-- AddToAny BEGIN -->
-                        <div class="a2a_kit a2a_kit_size_32 a2a_default_style d-table mx-auto">
+                        <div class="a2a_kit a2a_kit_size_32 a2a_default_style d-table mx-auto mt-5">
                             <a class="a2a_button_facebook"></a>
                             <a class="a2a_button_whatsapp ms-3"></a>
                         </div>

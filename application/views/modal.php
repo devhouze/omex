@@ -49,7 +49,7 @@
 </div>
 
 <div class="modal fade" id="image-modal" tabindex="-1" aria-labelledby="image-modalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
 
             <div class="modal-body">
@@ -78,7 +78,7 @@
 </div>
 
 <div class="modal fade" id="interior-image-modal" tabindex="-1" aria-labelledby="interior-image-modalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
 
             <div class="modal-body">
@@ -107,7 +107,7 @@
 </div>
 
 <div class="modal fade" id="exterior-image-modal" tabindex="-1" aria-labelledby="exterior-image-modalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
 
             <div class="modal-body">
@@ -136,7 +136,7 @@
 </div>
 
 <div class="modal fade" id="construction-image-modal" tabindex="-1" aria-labelledby="construction-image-modalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
 
             <div class="modal-body">
