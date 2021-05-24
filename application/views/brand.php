@@ -265,7 +265,7 @@
                         </li>
                         <li>
                             <a href="<?php echo base_url('brand-directory/restaurant#search-box')?>">
-                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/c2.sv" alt=""></figure>
+                                <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/brand/c2.svg" alt=""></figure>
                                 <span>FOOD</span>
                             </a>
                         </li>
