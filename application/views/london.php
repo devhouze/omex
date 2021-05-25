@@ -83,14 +83,23 @@
                 <div class="col-xxl-9">
                 <div class="owl-carousel slider-desk wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
                         <div class="item">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs1.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs4.jpg" alt="" class="d-table mx-auto"></figure>
+                            <div class="row" id="photos">
+                                <div class="col-md-4 " id="photo-gallery">
+                                    <figure>
+                                    
+                                        
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs1.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure>
+                                    
+                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs4.jpg" alt="" class="d-table mx-auto"></figure>
                                 </div>
                                 <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs2.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs5.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure>
+                                    
+                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs2.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <figure>
+                                    
+                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs5.jpg" alt="" class="d-table mx-auto"></figure>
                                 </div>
                                 <div class="col-md-4">
                                     <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs3.jpg" alt="" class="d-table mx-auto"></figure>
