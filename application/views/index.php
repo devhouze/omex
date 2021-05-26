@@ -373,7 +373,7 @@
                     <img src="<?php echo base_url(); ?>assets/images/public/home/e1.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
                     <div class="outer"></div>
                 </figure>
-                <a href="javascript:void(0)" class="exploer-btn" data-type="eat">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
+                <a href="<?php echo base_url('brand-directory/eat') ?>" class="exploer-btn" >EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
             </div>
             <div class="col-md-4">
@@ -385,7 +385,7 @@
 
 
                 </figure>
-                <a href="javascript:void(0)" class="exploer-btn" data-type="style">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
+                <a href="<?php echo base_url('brand-directory/style') ?>" class="exploer-btn" data-type="style">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
             </div>
             <div class="col-md-4">
@@ -397,7 +397,7 @@
                 </figure>
                 <!-- <a href="" class="exploer-btn" data-type="play" data-bs-toggle="modal" data-bs-target="#playModal">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a> -->
 
-                <a href="javascript:void(0)" class="exploer-btn" data-type="play">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
+                <a href="<?php echo base_url('brand-directory/play') ?>" class="exploer-btn" data-type="play">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
             </div>
         </div>
@@ -566,8 +566,8 @@
                                     $i = 1;
                                     foreach ($all_gallery as $gallery) {
                                         if (is_file('assets/images/public/home/' . $gallery['media_name'])) { ?>
-                                            <div class="item">
-                                                <img src="<?php echo base_url('assets/images/public/home/' . $gallery['media_name']); ?>" data-one="<?php echo $i; ?>" class="all">
+                                            <div class="item all" data-one="<?php echo $i; ?>" >
+                                                <img src="<?php echo base_url('assets/images/public/home/' . $gallery['media_name']); ?>" >
                                             </div>
 
 
@@ -601,8 +601,8 @@
                                     $i = 1;
                                     foreach ($interior_gallery as $interior) {
                                         if (is_file('assets/images/public/home/' . $interior['media_name'])) { ?>
-                                            <div class="item" data-bs-toggle="modal" data-bs-target="#interior-image-modal">
-                                                <img src="<?php echo base_url('assets/images/public/home/' . $interior['media_name']); ?>" data-one="<?php echo $i; ?>a" class="interior">
+                                            <div class="item interior" data-bs-toggle="modal" data-bs-target="#interior-image-modal" data-one="<?php echo $i; ?>a">
+                                                <img src="<?php echo base_url('assets/images/public/home/' . $interior['media_name']); ?>" >
                                             </div>
                                 <?php }
                                         $i++;
@@ -618,8 +618,8 @@
                                     $i = 1;
                                     foreach ($exterior_gallery as $exterior) {
                                         if (is_file('assets/images/public/home/' . $exterior['media_name'])) { ?>
-                                            <div class="item" data-bs-toggle="modal" data-bs-target="#exterior-image-modal">
-                                                <img src="<?php echo base_url('assets/images/public/home/' . $exterior['media_name']); ?>" data-one="<?php echo $i; ?>b" class="exterior">
+                                            <div class="item exterior" data-bs-toggle="modal" data-bs-target="#exterior-image-modal" data-one="<?php echo $i; ?>b" >
+                                                <img src="<?php echo base_url('assets/images/public/home/' . $exterior['media_name']); ?>" >
                                             </div>
                                 <?php }
                                         $i++;
@@ -634,8 +634,8 @@
                                     $i = 1;
                                     foreach ($construction_gallery as $construction) {
                                         if (is_file('assets/images/public/home/' . $construction['media_name'])) { ?>
-                                            <div class="item" data-bs-toggle="modal" data-bs-target="#construction-image-modal">
-                                                <img src="<?php echo base_url('assets/images/public/home/' . $construction['media_name']); ?>" data-one="<?php echo $i; ?>c" class="construction">
+                                            <div class="item construction" data-bs-toggle="modal" data-bs-target="#construction-image-modal" data-one="<?php echo $i; ?>c">
+                                                <img src="<?php echo base_url('assets/images/public/home/' . $construction['media_name']); ?>" >
                                             </div>
 
                                 <?php }
