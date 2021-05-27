@@ -1713,14 +1713,21 @@ span.text-danger.errors_msg {
     z-index: 1;
     width: 100%;
     text-transform: capitalize;
-    background: #083d68;
-    top: 43%;
+    background: #083d68d6;
+    top: 0;
     text-align: center;
     color: white;
     font-size: 18px;
     padding: 10px 10px;
     transition: 0.5s all;
     opacity: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .barnd-page .similar.barnd {
@@ -1766,6 +1773,11 @@ span.text-danger.errors_msg {
 .brand-banner .carousel-item img {
     z-index: 1;
     position: relative;
+    min-width: 80%;
+}
+
+footer ul li a:hover {
+    opacity: 0.5;
 }
 
 .about-brand figure {
@@ -2770,6 +2782,17 @@ ul.share-links li:nth-child(2) {
 }
 
 @media only screen and (max-width: 600px) {
+    .instagram.py-60.gray-bg {
+        padding-bottom: 30px;
+    }
+    #image-modal button.btn-close,
+    #interior-image-modal button.btn-close,
+    #interior_images button.btn-close,
+    #exterior-image-modal button.btn-close,
+    #construction-image-modal button.btn-close {
+        right: 0;
+        top: -26px;
+    }
     .footer-bottom p {
         text-align: center;
         padding-right: 0;
@@ -3077,10 +3100,10 @@ ul.share-links li:nth-child(2) {
     .main-fooger .row .col-md-5 ul {
         width: 50%;
         margin: 0;
-        padding-left: 50px;
+        padding-left: 15px;
     }
     .main-fooger .row .col-md-5 ul+ul {
-        padding-left: 20px;
+        padding-left: 30px;
     }
     footer ul li a {
         font-size: 12px;
