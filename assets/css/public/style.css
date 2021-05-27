@@ -2369,6 +2369,15 @@ ul.share-links li:nth-child(2) {
     opacity: 1;
 }
 
+.select2-container--default .select2-results>.select2-results__options {
+    max-height: 0 !important;
+    transition: 0.5s ease;
+}
+
+.select2-container--default .select2-results>.select2-results__options[aria-expanded="true"] {
+    max-height: 250px !important;
+}
+
 
 /* end what new page css */
 
