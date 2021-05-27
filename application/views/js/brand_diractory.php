@@ -84,10 +84,51 @@
 
     });
 </script>
+<style type="text/css">
+    .select2-results:click ul{
+       height: 200px;
+  opacity: 1;
+  transform: translateY(0);
+    }
+</style>
 <script>
     $(document).ready(function(){
         $('.select').select2();
+        
+        // $('.select2-selection').click( function(){
+        //     alert('sfsdf');
+        //     // $('.select2-results').ḥide();
+        //     $('.select2-results').show('slow');
+        // });
+
     });
+
+
+    $(document).ready(function() {
+    
+  $(".select").each(function() {
+    var $slide = $(this),
+        $select = $slide.find('.js-source-states'),
+        animationName = $slide.find('h6').text();
+    
+    $select.select2({
+      placeholder: "Select a state",
+      dropdownParent: $slide,
+      data: select2Data,
+      minimumResultsForSearch: -1,
+      dropdownPosition: 'below'
+    }).on('select2:open', function(e){
+        $slide.find('.select2-dropdown').addClass('animated ' + animationName);
+    }).on('select2:closing', function(e){
+      // if removed, for some examples, the Select2 will not highlight the selected element
+      $slide.find('.select2-dropdown').removeClass('animated ' + animationName);
+    });
+    
+  });
+  
+});
+
+
 </script>
 
 <script>
