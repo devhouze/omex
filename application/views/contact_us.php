@@ -1,4 +1,4 @@
-<script src="<?=base_url('assets/js/public/contact.js');?>"></script>
+
 <div class="contactus-page ">
     <div class="form-area py-60">
         <div class="container">

@@ -79,63 +79,91 @@
                     <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1s"></div>
                 </div>
             </div>
-            <div class="row mt-4 d-lg-flex d-none justify-content-center">
-                <div class="col-xxl-9">
-                <div class="owl-carousel slider-desk wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
+            <div class="row mt-4 d-lg-flex d-none justify-content-center" id="photos">
+                <div class="col-xxl-9" id="photo-gallery">
+                    <div class="owl-carousel slider-desk wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
                         <div class="item">
-                            <div class="row" id="photos">
-                                <div class="col-md-4 " id="photo-gallery">
-                                    <figure>
-                                    
-                                        
-                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs1.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure>
-                                    
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs4.jpg" alt="" class="d-table mx-auto"></figure>
+                            <div class="row">
+                                <div class="col-md-4 ">
+
+                                    <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs1.jpg" data-lightbox="image-1" data-title="">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs1.jpg" alt="" class="d-table mx-auto">
+                                    </a>
+
+                                    <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs4.jpg" data-lightbox="image-1" data-title="">
+
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs4.jpg" alt="" class="d-table mx-auto">
+                                    </a>
                                 </div>
                                 <div class="col-md-4">
-                                    <figure>
-                                    
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs2.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure>
-                                    
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs5.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs2.jpg" data-lightbox="image-1" data-title="">
+
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs2.jpg" alt="" class="d-table mx-auto">
+                                    </a>
+                                    <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs5.jpg" data-lightbox="image-1" data-title="">
+
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs5.jpg" alt="" class="d-table mx-auto">
+                                    </a>
                                 </div>
                                 <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs3.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs6.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs3.jpg" data-lightbox="image-1" data-title="">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs3.jpg" alt="" class="d-table mx-auto">
+                                    </a>
+                                    <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs6.jpg" data-lightbox="image-1" data-title="">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs6.jpg" alt="" class="d-table mx-auto">
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="row">
-                                <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs7.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs10.jpg" alt="" class="d-table mx-auto"></figure>
+                                <div class="col-md-4 ">
+                                    <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs7.jpg" data-lightbox="image-1" data-title="">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs7.jpg" alt="" class="d-table mx-auto">
+                                    </a>
+                                    <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs10.jpg" data-lightbox="image-1" data-title="">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs10.jpg" alt="" class="d-table mx-auto">
+                                    </a>
                                 </div>
                                 <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs8.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs11.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs8.jpg" data-lightbox="image-1" data-title="">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs8.jpg" alt="" class="d-table mx-auto">
+
+                                    </a>
+                                    <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs11.jpg" data-lightbox="image-1" data-title="">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs11.jpg" alt="" class="d-table mx-auto">
+                                    </a>
                                 </div>
                                 <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs9.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs12.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs9.jpg" data-lightbox="image-1" data-title="">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs9.jpg" alt="" class="d-table mx-auto">
+                                    </a>
+                                    <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs12.jpg" data-lightbox="image-1" data-title="">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs12.jpg" alt="" class="d-table mx-auto">
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
-                            <div class="row">
+
+                            <div class="row ">
                                 <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs13.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs16.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs13.jpg" data-lightbox="image-1" data-title="">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs13.jpg" alt="" class="d-table mx-auto"></a>
+                                    <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs16.jpg" data-lightbox="image-1" data-title="">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs16.jpg" alt="" class="d-table mx-auto"></a>
                                 </div>
                                 <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs13.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs17.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs13.jpg" data-lightbox="image-1" data-title="">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs13.jpg" alt="" class="d-table mx-auto"></a>
+                                    <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs17.jpg" data-lightbox="image-1" data-title="">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs17.jpg" alt="" class="d-table mx-auto"></a>
                                 </div>
                                 <div class="col-md-4">
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs15.jpg" alt="" class="d-table mx-auto"></figure>
-                                    <figure><img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs18.jpg" alt="" class="d-table mx-auto"></figure>
+                                    <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs15.jpg" data-lightbox="image-1" data-title="">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs15.jpg" alt="" class="d-table mx-auto"></a>
+                                    <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs18.jpg" data-lightbox="image-1" data-title="">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs18.jpg" alt="" class="d-table mx-auto"></a>
                                 </div>
                             </div>
                         </div>
@@ -144,47 +172,82 @@
                     <div class="slider-counter counter-web"></div>
                 </div>
             </div>
-            <div class="row mt-4 d-lg-none d-block">
-                <div class="col-md-12">
+            <div class="row mt-4 d-lg-none d-block" id="photos">
+                <div class="col-md-12" id="photo-gallery">
                     <div class="owl-carousel slider-mob wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
 
                         <div class="item">
-                            <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs1.jpg" alt="" class="d-table mx-auto"></figure>
-                        </div>
-                        <div class="item">
-                            <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs3.jpg" alt="" class="d-table mx-auto"></figure>
-                        </div>
-                        <div class="item">
-                            <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs4.jpg" alt="" class="d-table mx-auto"></figure>
-                        </div>
-                        <div class="item">
-                            <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs6.jpg" alt="" class="d-table mx-auto"></figure>
-                        </div>
-                        <div class="item">
-                            <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs7.jpg" alt="" class="d-table mx-auto"></figure>
-                        </div>
-                        <div class="item">
-                            <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs9.jpg" alt="" class="d-table mx-auto"></figure>
-                        </div>
-                        <div class="item">
-                            <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs10.jpg" alt="" class="d-table mx-auto"></figure>
-                        </div>
-                        <div class="item">
-                            <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs12.jpg" alt="" class="d-table mx-auto"></figure>
-                        </div>
-                        <div class="item">
-                            <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs13.jpg" alt="" class="d-table mx-auto"></figure>
-                        </div>
-                        <div class="item">
-                            <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs15.jpg" alt="" class="d-table mx-auto"></figure>
-                        </div>
-                        <div class="item">
-                            <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs16.jpg" alt="" class="d-table mx-auto"></figure>
-                        </div>
-                        <div class="item">
-                            <figure><img src="<?php echo base_url(); ?>assets/images/public/street/bs18.jpg" alt="" class="d-table mx-auto"></figure>
-                        </div>
+                            <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs1.jpg" data-lightbox="image-1" data-title="">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs1.jpg" alt="" class="d-table mx-auto">
+                            </a>
 
+                        </div>
+                        <div class="item">
+                            <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs2.jpg" data-lightbox="image-1" data-title="">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs2.jpg" alt="" class="d-table mx-auto">
+                            </a>
+
+                        </div>
+                        <div class="item">
+                            <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs3.jpg" data-lightbox="image-1" data-title="">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs3.jpg" alt="" class="d-table mx-auto">
+                            </a>
+
+                        </div>
+                        <div class="item">
+                            <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs4.jpg" data-lightbox="image-1" data-title="">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs4.jpg" alt="" class="d-table mx-auto">
+                            </a>
+
+                        </div>
+                        <div class="item">
+                            <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs5.jpg" data-lightbox="image-1" data-title="">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs5.jpg" alt="" class="d-table mx-auto">
+                            </a>
+
+                        </div>
+                        <div class="item">
+                            <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs6.jpg" data-lightbox="image-1" data-title="">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs6.jpg" alt="" class="d-table mx-auto">
+                            </a>
+
+                        </div>
+                        <div class="item">
+                            <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs7.jpg" data-lightbox="image-1" data-title="">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs7.jpg" alt="" class="d-table mx-auto">
+                            </a>
+
+                        </div>
+                        <div class="item">
+                            <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs8.jpg" data-lightbox="image-1" data-title="">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs8.jpg" alt="" class="d-table mx-auto">
+                            </a>
+
+                        </div>
+                        <div class="item">
+                            <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs9.jpg" data-lightbox="image-1" data-title="">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs9.jpg" alt="" class="d-table mx-auto">
+                            </a>
+
+                        </div>
+                        <div class="item">
+                            <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs10.jpg" data-lightbox="image-1" data-title="">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs10.jpg" alt="" class="d-table mx-auto">
+                            </a>
+
+                        </div>
+                        <div class="item">
+                            <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs11.jpg" data-lightbox="image-1" data-title="">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs11.jpg" alt="" class="d-table mx-auto">
+                            </a>
+
+                        </div>
+                        <div class="item">
+                            <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs12.jpg" data-lightbox="image-1" data-title="">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs12.jpg" alt="" class="d-table mx-auto">
+                            </a>
+
+                        </div>
                     </div>
                     <div class="slider-counter counter-mob"></div>
                 </div>

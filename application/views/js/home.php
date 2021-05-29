@@ -1,3 +1,15 @@
+<script>
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 150) {
+            //clearHeader, not clearheader - caps H
+            $(".header").addClass("sticky");
+        } else {
+            $(".header").removeClass("sticky");
+        }
+
+    });
+    </script>
 <script type="text/javascript">
     $('.all,.interior,.exterior,.construction').click(function(){
      var id=$(this).data('one');
