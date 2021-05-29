@@ -117,18 +117,25 @@ header {
 header.header {
     transition: 0.5s all;
     background: #faf7f2;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 120px;
+    z-index: 99;
 }
 
+header.header+div {
+    margin-top: 120px;
+}
+
+
+/* 
 header.sticky .main-menu {
     padding: 5px 0;
-}
+} */
 
 header.header.sticky {
-    position: fixed;
-    z-index: 99;
-    left: 0;
-    right: 0;
-    top: 0;
     box-shadow: 0 4px 20px rgb(45 48 71 / 10%);
 }
 
@@ -1112,10 +1119,11 @@ span.text-danger.errors_msg {
     margin-top: 15px;
 }
 
-.live-in-word .col-md-4 figure {
+.live-in-word .col-md-4 a {
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 40px;
+    display: inline-block;
 }
 
 .parish-page .gray-bg {
@@ -2782,6 +2790,12 @@ ul.share-links li:nth-child(2) {
 }
 
 @media only screen and (max-width: 600px) {
+    header.header {
+        height: 55px;
+    }
+    header.header+div {
+        margin-top: 55px;
+    }
     .instagram.py-60.gray-bg {
         padding-bottom: 30px;
     }
