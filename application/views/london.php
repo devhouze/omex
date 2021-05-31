@@ -154,8 +154,8 @@
                                         <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs16.jpg" alt="" class="d-table mx-auto"></a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs13.jpg" data-lightbox="image-1" data-title="">
-                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs13.jpg" alt="" class="d-table mx-auto"></a>
+                                    <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs14.jpg" data-lightbox="image-1" data-title="">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs14.jpg" alt="" class="d-table mx-auto"></a>
                                     <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs17.jpg" data-lightbox="image-1" data-title="">
                                         <img src="<?php echo BASE_URL(); ?>assets/images/public/street/bs17.jpg" alt="" class="d-table mx-auto"></a>
                                 </div>
