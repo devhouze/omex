@@ -1,5 +1,17 @@
+.expoler-category figure:hover img {
+    transform: scale(1.1);
+}
+
+.expoler-category figure img {
+    transition: 0.5s all;
+}
+
 .img-box .brnad-logo:hover img {
     transform: scale(1.1);
+}
+
+.main-menu {
+    margin-top: 5px;
 }
 
 .expoler-category figure img {
@@ -135,8 +147,13 @@ header.sticky .main-menu {
     padding: 5px 0;
 } */
 
+.home-baner-btn a.carousel-control-next,
+.home-baner-btn a.carousel-control-prev {
+    -webkit-appearance: none !important;
+}
+
 header.header.sticky {
-    box-shadow: 0 4px 20px rgb(45 48 71 / 10%);
+    box-shadow: 0 4px 10px rgb(45 48 71 / 10%);
 }
 
 .header-top {
@@ -191,6 +208,7 @@ header.header.sticky {
     color: var(--black);
     font-size: calc(var(--v2) * 8);
     text-transform: uppercase !important;
+    letter-spacing: 0.05em;
 }
 
 .main-menu .navbar-nav li a.active {
@@ -2790,6 +2808,9 @@ ul.share-links li:nth-child(2) {
 }
 
 @media only screen and (max-width: 600px) {
+    .top-brands .owl-item.active .item:hover img {
+        transform: unset !important;
+    }
     header.header {
         height: 55px;
     }
@@ -2913,10 +2934,6 @@ ul.share-links li:nth-child(2) {
     }
     .social-box h1 {
         font-size: 40px
-    }
-    .top-brands .owl-item.active .item {
-        width: unset;
-        height: unset;
     }
     /* .Athens_Street .brand-banner {
         background-color: var(--ath) !important;

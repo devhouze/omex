@@ -36,8 +36,8 @@
                 <div class="col-md-4 ps-md-5">
                     <div class="f-title fz26 text-white fw5 mb-30 mt-md-0 mt-3 mb-sm-10">Contact</div>
                     <ul class="menu list-unstyled mb-20">
-                        <li>Call: +91-9015222222</li>
-                        <li>Email: info@omaxews.com</li>
+                        <li>Call: <a href="callto:+91-9015222222"> +91-9015222222</a></li>
+                        <li>Email: <a href="mailto:info@omaxews.com"> info@omaxews.com</a></li>
                     </ul>
                     <ul class="d-flex flex-row list-unstyled mb-0">
                         <li><a href="https://www.facebook.com/omaxeworldsreet/" target="_blank"><img src="<?php echo base_url(); ?>assets/images/public/footer/fb.svg" alt="facebook" ></a></li>

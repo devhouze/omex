@@ -128,7 +128,7 @@
             </div>
             <div class="row mt-md-5 mt-3">
                 <div class="col-md-12">
-                    <a href="<?php echo base_url('brand-directory'); ?>" class="d-table mx-auto primary-btn">View All Brands</a>
+                    <a href="<?php echo base_url('brand-directory'); ?>" class="d-table mx-auto primary-btn text-uppercase">View All Brands</a>
                 </div>
             </div>
         </div>
@@ -345,7 +345,7 @@
                         </li>
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6">
                             <img src="<?php echo base_url(); ?>assets/images/public/home/Indicators7.svg" class="d-block w-100" alt="...">
-                            <label class="pr-font">Hong Kong St.</label>
+                            <label class="pr-font">HONG KONG ST.</label>
                         </li>
                     </ol>
 

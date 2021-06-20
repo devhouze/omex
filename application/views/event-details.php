@@ -393,7 +393,7 @@
                         </div>
                         <input type="hidden" name="event_name" value="<?php echo $event['event_name']; ?>">
                         <div class="mb-4">
-                            <label for="formGroupExampleInput" class="form-label">Your Message (Optional)</label>
+                            <label for="formGroupExampleInput" class="form-label">Your Message*</label>
                             <textarea class="form-control" name="message" id="formGroupExampleInput" placeholder="Your Message"></textarea>
                         </div>
                         <div class="mt-4">

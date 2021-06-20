@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mt-md-5 mt-3">
             <div class="col-md-10 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">
                 <?php echo $whats_new['about'];?>
             </div>

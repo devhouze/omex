@@ -56,7 +56,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-7">
-                                    <h3 class="pr-font fz24 fz18-sm text-white mb-30 mb-10-sm">Message</h3>
+                                    <h3 class="pr-font fz24 fz18-sm text-white mb-30 mb-10-sm">Message (Optional)</h3>
                                     <div class="form-floating">
                                         <textarea name="message" autocomplete="false" class="form-control" id="floatingInput" placeholder="Your Message"></textarea>
                                         <label for="floatingInput">Your Message</label>
