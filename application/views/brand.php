@@ -87,7 +87,7 @@
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 mt-40">Key Information</h5>
                     <ul class="d-table mx-auto mt-5">
                         <?php $cat[] = array_slice($key_info,0,5); foreach($key_info as $info){?>
-                        <li><a href="#"><?php echo $this->wm->get_sub_cat_name($info); ?></a></li>
+                        <li><a href="javascript:void(0)"><?php echo $this->wm->get_sub_cat_name($info); ?></a></li>
                         <?php } ?>
                     </ul>
                     <div class="v-line d-table mx-auto mt-4"></div>

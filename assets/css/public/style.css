@@ -1696,6 +1696,7 @@ span.text-danger.errors_msg {
 .key-information ul li a {
     font-size: 20px;
     color: var(--h-color);
+    cursor: auto;
 }
 
 
@@ -1781,6 +1782,10 @@ span.text-danger.errors_msg {
 
 .barnd-page .live-in-word figure:hover span {
     opacity: 9;
+}
+
+.brand-banner {
+    background: #faf7f2;
 }
 
 .barnd-page .slider-counter span {
