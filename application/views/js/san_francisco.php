@@ -10,6 +10,8 @@
         navText: ["<img src='<?php echo BASE_URL(); ?>assets/images/public/street/san-left.svg'>", "<img src='<?php echo BASE_URL(); ?>assets/images/public/street/san-right.svg'>"],
         loop: true,
         margin: 40,
+        autoplayTimeout: 1000,
+  smartSpeed: 1000,
         nav: true,
         dots: false,
         responsive: {
@@ -40,6 +42,8 @@
         loop: true,
         margin: 40,
         nav: true,
+        autoplayTimeout: 1000,
+  smartSpeed: 1000,
         dots: false,
         responsive: {
             0: {
@@ -68,6 +72,8 @@
         loop: true,
         margin: 40,
         nav: true,
+        autoplayTimeout: 1000,
+  smartSpeed: 1000,
         dots: false,
         responsive: {
             0: {

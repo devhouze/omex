@@ -68,6 +68,8 @@
         navText: ["<img src='<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg'>", "<img src='<?php echo BASE_URL(); ?>assets/images/public/brand/right.svg'>"],
         loop: true,
         margin: 40,
+        autoplayTimeout: 1000,
+  smartSpeed: 1000,
         nav: true,
         dots: false,
         responsive: {

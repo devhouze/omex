@@ -12,6 +12,8 @@
         margin: 40,
         nav: true,
         dots: false,
+        autoplayTimeout: 1000,
+  smartSpeed: 1000,
         responsive: {
             0: {
                 items: 1
@@ -41,6 +43,8 @@
         margin: 40,
         nav: true,
         dots: false,
+        autoplayTimeout: 1000,
+  smartSpeed: 1000,
         responsive: {
             0: {
                 items: 1
@@ -68,6 +72,8 @@
         loop: true,
         margin: 40,
         nav: true,
+        autoplayTimeout: 1000,
+  smartSpeed: 1000,
         dots: false,
         responsive: {
             0: {

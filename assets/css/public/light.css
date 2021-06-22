@@ -59,6 +59,7 @@ body.lb-disable-scrolling {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    height: 100vh;
 }
 
 .lightbox .lb-image {
@@ -238,4 +239,11 @@ body.lb-disable-scrolling {
     cursor: pointer;
     filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+    .lightbox .lb-image {
+        width: 100% !important;
+        height: auto !important;
+    }
 }

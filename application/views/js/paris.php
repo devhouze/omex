@@ -12,6 +12,8 @@
         margin: 40,
         nav: true,
         dots: false,
+        autoplayTimeout: 1000,
+  smartSpeed: 1000,
         responsive: {
             0: {
                 items: 1
@@ -39,6 +41,8 @@
         navText: ["<img src='<?php echo BASE_URL(); ?>assets/images/public/street/paris-left.svg'>", "<img src='<?php echo BASE_URL(); ?>assets/images/public/street/paris-right.svg'>"],
         loop: true,
         margin: 40,
+        autoplayTimeout: 1000,
+  smartSpeed: 1000,
         nav: true,
         dots: false,
         responsive: {
@@ -66,6 +70,8 @@
         items: 0,
         navText: ["<img src='<?php echo BASE_URL(); ?>assets/images/public/street/paris-left.svg'>", "<img src='<?php echo BASE_URL(); ?>assets/images/public/street/paris-right.svg'>"],
         loop: true,
+        autoplayTimeout: 1000,
+  smartSpeed: 1000,
         margin: 40,
         nav: true,
         dots: false,

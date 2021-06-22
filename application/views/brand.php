@@ -132,7 +132,7 @@
                     <div class="v-line d-table mx-auto my-4"></div>
                 </div>
             </div>
-            <div class="row mt-4 d-lg-flex d-none justify-content-center">
+            <div class="row mt-4 justify-content-center">
                 <div class="col-xxl-9">
                     <div class="owl-carousel slider wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
                         <?php if(!empty($first_similar_brands)){?>
@@ -229,7 +229,7 @@
                     <div class="slider-counter s_counder"></div>
                 </div>
             </div>
-            <div class="row mt-4 d-lg-none d-block">
+            <div class="row mt-4 d-lg-none d-none">
                 <div class="col-md-12">
                     <div class="owl-carousel slider-mobb">
                         <?php if(!empty($similar_brands)){foreach($similar_brands as $sm){?>

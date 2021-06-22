@@ -39,16 +39,16 @@
                                 } ?>
 
                             </div>
-                            
-                                <div class="home-baner-btn">
-                                    <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="prev">
-                                        <img src="<?php echo base_url(); ?>assets/images/public/home/left.svg" alt="" class="w-100">
-                                    </a>
-                                    <a class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="next">
-                                        <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
-                                    </a>
-                                </div>
-                           
+
+                            <div class="home-baner-btn">
+                                <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="prev">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/home/left.svg" alt="" class="w-100">
+                                </a>
+                                <a class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="next">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
+                                </a>
+                            </div>
+
 
                         </div>
 
@@ -91,16 +91,16 @@
                                 } ?>
 
                             </div>
-                          
-                                <div class="home-baner-btn">
-                                    <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="prev">
-                                        <img src="<?php echo base_url(); ?>assets/images/public/home/left.svg" alt="" class="w-100">
-                                    </a>
-                                    <a class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="next">
-                                        <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
-                                    </a>
-                                </div>
-                            
+
+                            <div class="home-baner-btn">
+                                <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="prev">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/home/left.svg" alt="" class="w-100">
+                                </a>
+                                <a class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="next">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
+                                </a>
+                            </div>
+
 
                         </div>
                     </div>
@@ -203,27 +203,29 @@
                             <?php $brand_street = ""; ?>
                             <select id="street" class="select">
                                 <option disabled="" selected>Select Street</option>
+                                <option value="Amsterdam Street" <?php if ($brand_street == "Amsterdam Street") {
+                                                                        echo "selected";
+                                                                    } ?>>Amsterdam Street</option>
+                                <option value="Athens Street" <?php if ($brand_street == "Athens Street") {
+                                                                    echo "selected";
+                                                                } ?>>Athens Street</option>
+                                <option value="Hong Kong Street" <?php if ($brand_street == "Hong Kong Street") {
+                                                                        echo "selected";
+                                                                    } ?>>Hong Kong Street</option>
                                 <option value="London Street" <?php if ($brand_street == "London Street") {
                                                                     echo "selected";
                                                                 } ?>>London Street</option>
                                 <option value="Paris Street" <?php if ($brand_street == "Paris Street") {
                                                                     echo "selected";
                                                                 } ?>>Paris Street</option>
-                                <option value="Hong Kong Street" <?php if ($brand_street == "Hong Kong Street") {
-                                                                        echo "selected";
-                                                                    } ?>>Hong Kong Street</option>
-                                <option value="Amsterdam Street" <?php if ($brand_street == "Amsterdam Street") {
-                                                                        echo "selected";
-                                                                    } ?>>Amsterdam Street</option>
+
                                 <option value="Portugal Street" <?php if ($brand_street == "Portugal Street") {
                                                                     echo "selected";
                                                                 } ?>>Portugal Street</option>
                                 <option value="San Francisco Street" <?php if ($brand_street == "San Francisco Street") {
                                                                             echo "selected";
                                                                         } ?>>San Francisco Street</option>
-                                <option value="Athens Street" <?php if ($brand_street == "Athens Street") {
-                                                                    echo "selected";
-                                                                } ?>>Athens Street</option>
+
                             </select>
                         </div>
                         <div class="col-md-4 col-sm-4 my-sm-0 my-4">
