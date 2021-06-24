@@ -7,7 +7,7 @@
         $('.counter-web').html(carousel.relative(carousel.current()) + 1 + '<span></span>' + carousel.items().length);
     }).owlCarousel({
         items: 0,
-        navText: ["<img src='<?php echo BASE_URL(); ?>assets/images/public/street/paris-left.svg'>", "<img src='<?php echo BASE_URL(); ?>assets/images/public/street/paris-right.svg'>"],
+        navText: ["<img src='<?php echo BASE_URL(); ?>assets/images/public/street/paris-right.svg'>", "<img src='<?php echo BASE_URL(); ?>assets/images/public/street/paris-right.svg'>"],
         loop: true,
         margin: 40,
         nav: true,
@@ -38,7 +38,7 @@
         $('.counter-mob').html(carousel.relative(carousel.current()) + 1 + '<span></span>' + carousel.items().length);
     }).owlCarousel({
         items: 0,
-        navText: ["<img src='<?php echo BASE_URL(); ?>assets/images/public/street/paris-left.svg'>", "<img src='<?php echo BASE_URL(); ?>assets/images/public/street/paris-right.svg'>"],
+        navText: ["<img src='<?php echo BASE_URL(); ?>assets/images/public/street/paris-right.svg'>", "<img src='<?php echo BASE_URL(); ?>assets/images/public/street/paris-right.svg'>"],
         loop: true,
         margin: 40,
         autoplayTimeout: 1000,
@@ -68,7 +68,7 @@
         $('.more-counter').html(carousel.relative(carousel.current()) + 1 + '<span></span>' + carousel.items().length);
     }).owlCarousel({
         items: 0,
-        navText: ["<img src='<?php echo BASE_URL(); ?>assets/images/public/street/paris-left.svg'>", "<img src='<?php echo BASE_URL(); ?>assets/images/public/street/paris-right.svg'>"],
+        navText: ["<img src='<?php echo BASE_URL(); ?>assets/images/public/street/paris-right.svg'>", "<img src='<?php echo BASE_URL(); ?>assets/images/public/street/paris-right.svg'>"],
         loop: true,
         autoplayTimeout: 1000,
   smartSpeed: 1000,

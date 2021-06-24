@@ -42,7 +42,7 @@
 
                             <div class="home-baner-btn">
                                 <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="prev">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/home/left.svg" alt="" class="w-100">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
                                 </a>
                                 <a class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="next">
                                     <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
@@ -94,7 +94,7 @@
 
                             <div class="home-baner-btn">
                                 <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="prev">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/home/left.svg" alt="" class="w-100">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
                                 </a>
                                 <a class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="next">
                                     <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
@@ -332,7 +332,7 @@
                                     <?php if (count($brand_offers) > 1) { ?>
                                         <div class="crsouls-btn-group">
                                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                                <img src="<?php echo base_url(); ?>assets/images/public/brand/left.svg" alt="" class="">
+                                                <img src="<?php echo base_url(); ?>assets/images/public/brand/right.svg" alt="" class="">
                                             </button>
                                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
                                                 <img src="<?php echo base_url(); ?>assets/images/public/brand/right.svg" alt="" class="">
@@ -390,7 +390,7 @@
                                     <?php if (count($what_new) > 1) { ?>
                                         <div class="car-ions">
                                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls_whats" data-bs-slide="prev">
-                                                <img src="<?php echo base_url(); ?>assets/images/public/brand/left.svg" alt="" class="">
+                                                <img src="<?php echo base_url(); ?>assets/images/public/brand/right.svg" alt="" class="">
 
                                             </button>
                                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls_whats" data-bs-slide="next">

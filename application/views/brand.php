@@ -25,7 +25,7 @@
                         <?php if(count($about_brand) > 1){?>
                         <div class="crasol-btn d-none">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/right.svg" alt="" class="">
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/right.svg" alt="" class="">
@@ -51,7 +51,7 @@
                         <?php if(count($about_brand) > 1){?>
                         <div class="crasol-btn ">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsmob" data-bs-slide="prev">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/right.svg" alt="" class="">
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsmob" data-bs-slide="next">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/right.svg" alt="" class="">
@@ -80,12 +80,12 @@
         </div>
     </div>
     <?php if(!empty($key_info[0])){?>
-    <div class="key-information gray-bg pt-60 pb-30">
+    <div class="key-information gray-bg pt-60 pb-30 pt-sm0">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 mt-40">Key Information</h5>
-                    <ul class="d-table mx-auto mt-5">
+                    <ul class="d-table mx-auto mt-md-5 mt-4">
                         <?php $cat[] = array_slice($key_info,0,5); foreach($key_info as $info){?>
                         <li><a href="javascript:void(0)"><?php echo $this->wm->get_sub_cat_name($info); ?></a></li>
                         <?php } ?>
@@ -323,7 +323,7 @@
                         <?php if(count($what_new) > 1){?>
                         <div class="car-ions">
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/left.svg" alt="" class="">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/brand/right.svg" alt="" class="">
 
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">

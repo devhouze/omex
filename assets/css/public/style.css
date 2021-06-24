@@ -2,6 +2,39 @@
     transform: scale(1.1);
 }
 
+a.lb-close {
+    position: absolute;
+    right: 50px;
+    top: 0;
+    opacity: 9 !important;
+}
+
+.amsterdam-page a.carousel-control-prev img,
+.amsterdam-page .owl-prev,
+.paris-page a.carousel-control-prev img,
+.paris-page .owl-prev,
+.athens-page a.carousel-control-prev img,
+.athens-page .owl-prev,
+.portugal-page a.carousel-control-prev img,
+.portugal-page .owl-prev,
+.san-page a.carousel-control-prev img,
+.san-page .owl-prev,
+.hongkong-page a.carousel-control-prev img,
+.hongkong-page .owl-prev,
+.barnd-page .owl-prev img,
+.barnd-page a.carousel-control-prev img,
+.event-page .owl-prev img,
+.event-page a.carousel-control-prev img,
+.expreance-gallary .owl-prev img,
+.top-brands .owl-prev img,
+.expreance-gallary a.carousel-control-prev img,
+.main-slider a.carousel-control-prev img,
+.looking-out a.carousel-control-prev img,
+.london-page .owl-prev,
+.london-page a.carousel-control-prev img {
+    transform: rotate(180deg);
+}
+
 .expoler-category figure img {
     transition: 0.5s all;
 }
@@ -1235,7 +1268,7 @@ span.text-danger.errors_msg {
 }
 
 .barnd-page .live-in-word .slider-counter {
-    bottom: 40px;
+    bottom: 80px;
 }
 
 .live-in-word .slider-counter span {
@@ -1259,7 +1292,7 @@ span.text-danger.errors_msg {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px 0 40px 0;
+    padding: 40px 0 0px 0;
 }
 
 .live-in-word .owl-nav button+button {
@@ -1774,6 +1807,7 @@ span.text-danger.errors_msg {
 
 .barnd-page .similar.barnd {
     padding-top: 400px;
+    padding-bottom: 50px;
 }
 
 .about-brand .card .brand-content p br {

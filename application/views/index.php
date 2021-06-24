@@ -43,7 +43,7 @@
                         
                         <div class="home-baner-btn">
                             <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="prev">
-                                <img src="<?php echo base_url(); ?>assets/images/public/home/left.svg" alt="" class="w-100">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
                         </a>
                             <a class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="next">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
@@ -86,7 +86,7 @@
                         
                         <div class="home-baner-btn">
                             <a class="carousel-control-prev" type="button" data-bs-target="carouselExampleIndicatorssmob" data-bs-slide="prev">
-                                <img src="<?php echo base_url(); ?>assets/images/public/home/left.svg" alt="" class="w-100">
+                                <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
                         </a>
                             <a class="carousel-control-next" type="button" data-bs-target="carouselExampleIndicatorssmob" data-bs-slide="next">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
@@ -310,7 +310,7 @@
                     </div>
                     <div class="arow-btns">
                         <a class="carousel-control-prev" href="#carouselExampleIndicatorsss" role="button" data-bs-slide="prev">
-                            <img src="<?php echo base_url(); ?>assets/images/public/home/left.svg" alt="" class="w-100">
+                            <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
                         </a>
                         <a class="carousel-control-next" href="#carouselExampleIndicatorsss" role="button" data-bs-slide="next">
                             <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
@@ -515,7 +515,7 @@
                         <?php if ($event_count > 1) { ?>
                             <div class="d-flex position-absolute">
                                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/home/left.svg" alt="" class="w-100">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
                                 </a>
                                 <a class="carousel-control-next ml-40" href="#carouselExampleControls" role="button" data-bs-slide="next">
                                     <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">

@@ -275,7 +275,7 @@
                             <?php if (count($events) > 1) { ?>
                                 <div class="d-flex position-absolute">
                                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-left.svg" alt="" class="w-100">
+                                        <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-right.svg" alt="" class="w-100">
                                     </a>
                                     <a class="carousel-control-next ml-40" href="#carouselExampleControls" role="button" data-bs-slide="next">
                                         <img src="<?php echo BASE_URL(); ?>assets/images/public/street/athens-right.svg" alt="" class="w-100">
@@ -320,7 +320,7 @@
                         </div>
                         <div class="d-flex position-absolute btn-controls">
                             <a class="carousel-control-prev" href="#carouselExamControlss" role="button" data-bs-slide="prev">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/portugal-left.svg" alt="" class="w-100">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/portugal-right.svg" alt="" class="w-100">
                             </a>
                             <a class="carousel-control-next ml-40" href="#carouselExamControlss" role="button" data-bs-slide="next">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/street/portugal-right.svg" alt="" class="w-100">
@@ -354,7 +354,7 @@
                         </div>
                         <div class="d-flex position-absolute btn-controls">
                             <a class="carousel-control-prev" href="#carouselExamControlssmob" role="button" data-bs-slide="prev">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/portugal-left.svg" alt="" class="w-100">
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/portugal-right.svg" alt="" class="w-100">
                             </a>
                             <a class="carousel-control-next ml-40" href="#carouselExamControlssmob" role="button" data-bs-slide="next">
                                 <img src="<?php echo BASE_URL(); ?>assets/images/public/street/portugal-right.svg" alt="" class="w-100">

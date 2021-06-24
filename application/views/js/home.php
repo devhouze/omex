@@ -34,7 +34,7 @@
 }).owlCarousel({
     items: 0,
     
-    navText:["<img src='<?php echo BASE_URL(); ?>assets/images/public/home/left.svg'>","<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>"],
+    navText:["<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>","<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>"],
     loop:false,
     margin:40,
     nav:true,
@@ -70,7 +70,7 @@
     // $('.counter_con').html(carousel.relative(carousel.current()) + 1 + '<span></span>' + carousel.items().length);
 }).owlCarousel({
     items: 0,
-    navText:["<img src='<?php echo BASE_URL(); ?>assets/images/public/home/left.svg'>","<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>"],
+    navText:["<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>","<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>"],
     loop:false,
     margin:40,
     nav:true,
@@ -106,7 +106,7 @@
     // $('.counter-video').html(carousel.relative(carousel.current()) + 1 + '<span></span>' + carousel.items().length);
 }).owlCarousel({
     items: 0,
-    navText:["<img src='<?php echo BASE_URL(); ?>assets/images/public/home/left.svg'>","<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>"],
+    navText:["<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>","<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>"],
     loop:true,
     margin:40,
     nav:true,
@@ -142,7 +142,7 @@
   }).owlCarousel({
     items: 0,
     
-    navText:["<img src='<?php echo BASE_URL(); ?>assets/images/public/home/left.svg'>","<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>"],
+    navText:["<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>","<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>"],
     loop:false,
     margin:40,
     nav:true,
@@ -179,7 +179,7 @@
 }).owlCarousel({
     items: 0,
     
-    navText:["<img src='<?php echo BASE_URL(); ?>assets/images/public/home/left.svg'>","<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>"],
+    navText:["<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>","<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>"],
     loop:false,
     margin:40,
     nav:true,
@@ -203,7 +203,7 @@
     loop:true,
     dots:false,
     nav:true,
-    navText:["<img src='<?php echo BASE_URL(); ?>assets/images/public/home/left.svg'>","<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>"],
+    navText:["<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>","<img src='<?php echo BASE_URL(); ?>assets/images/public/home/right.svg'>"],
     responsive:{
         0:{
             items:1
