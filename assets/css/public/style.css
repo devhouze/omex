@@ -2,6 +2,19 @@
     transform: scale(1.1);
 }
 
+ul.mob-drop {
+    list-style: none;
+    margin: 0;
+    padding-left: 15px;
+}
+
+ul.mob-drop li a {
+    color: #083d68;
+    font-size: 18px;
+    display: block;
+    padding-left: 20px !important;
+}
+
 a.lb-close {
     position: absolute;
     right: 50px;
@@ -9,29 +22,13 @@ a.lb-close {
     opacity: 9 !important;
 }
 
-.amsterdam-page a.carousel-control-prev img,
-.amsterdam-page .owl-prev,
-.paris-page a.carousel-control-prev img,
-.paris-page .owl-prev,
-.athens-page a.carousel-control-prev img,
-.athens-page .owl-prev,
-.portugal-page a.carousel-control-prev img,
-.portugal-page .owl-prev,
-.san-page a.carousel-control-prev img,
-.san-page .owl-prev,
-.hongkong-page a.carousel-control-prev img,
-.hongkong-page .owl-prev,
-.barnd-page .owl-prev img,
-.barnd-page a.carousel-control-prev img,
-.event-page .owl-prev img,
-.event-page a.carousel-control-prev img,
-.expreance-gallary .owl-prev img,
-.top-brands .owl-prev img,
-.expreance-gallary a.carousel-control-prev img,
-.main-slider a.carousel-control-prev img,
-.looking-out a.carousel-control-prev img,
-.london-page .owl-prev,
-.london-page a.carousel-control-prev img {
+.similar .owl-nav {
+    padding-top: 40px !important;
+    padding-bottom: 0 !important;
+}
+
+.carousel-control-prev img,
+.owl-prev {
     transform: rotate(180deg);
 }
 
@@ -1268,7 +1265,7 @@ span.text-danger.errors_msg {
 }
 
 .barnd-page .live-in-word .slider-counter {
-    bottom: 80px;
+    bottom: 40px;
 }
 
 .live-in-word .slider-counter span {
@@ -1288,11 +1285,25 @@ span.text-danger.errors_msg {
     position: relative;
 }
 
+div#navbarNavDropdown .accordion-button:not(.collapsed) {
+    background: no-repeat;
+}
+
+div#navbarNavDropdown h2 {
+    padding: 17px 15px !important;
+    color: #083d68 !important;
+    font-size: calc(var(--v2) * 8);
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em;
+    border: none;
+    margin-bottom: 0;
+}
+
 .live-in-word .owl-nav {
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
-    padding: 40px 0 0px 0;
+    padding: 0px 0 40px 0;
 }
 
 .live-in-word .owl-nav button+button {
@@ -1807,7 +1818,6 @@ span.text-danger.errors_msg {
 
 .barnd-page .similar.barnd {
     padding-top: 400px;
-    padding-bottom: 50px;
 }
 
 .about-brand .card .brand-content p br {
@@ -2859,9 +2869,15 @@ ul.share-links li:nth-child(2) {
     div#navbarNavDropdown ul li>a {
         padding: 10px 15px !important;
     }
+    header .navbar-nav .dropdown {
+        display: none !important;
+    }
 }
 
 @media only screen and (max-width: 600px) {
+    header .navbar-nav .dropdown {
+        display: none !important;
+    }
     .lightbox .lb-image {
         width: 100% !important;
         height: auto !important;

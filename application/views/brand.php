@@ -125,7 +125,7 @@
 
     <?php if((!empty($first_similar_brands)) || (!empty($second_similar_brands)) || (!empty($third_similar_brands))){?>
     <div class="similar barnd live-in-word gray-bg pt-30 position-relative">
-        <div class="container">
+        <div class="container-md">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Similar Brands</h5>
