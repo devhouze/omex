@@ -6,7 +6,7 @@
                     <img src="<?php echo base_url(); ?>assets/images/public/street/paris-banner.jpg" class="d-block w-100" alt="...">
                     <div class="card par-bg wow fadeInRight animated" data-wow-duration="1s" data-wow-delay="0.5S">
                         <img src="<?php echo base_url(); ?>assets/images/public/home/parish.svg" alt="">
-                        <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                        <p>Paris is not a city, it is a whole different world. Enjoy the moveable feast that Paris is with your loved ones & make a lifetime of memories, now in Faridabad.</p>
                         <img src="<?php echo base_url(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto">
                     </div>
                 </div>
@@ -20,7 +20,7 @@
                     <img src="<?php echo base_url(); ?>assets/images/public/street/paris-m.jpg" class="d-block w-100" alt="...">
                     <div class="card par-bg wow fadeInRight animated" data-wow-duration="1s" data-wow-delay="0.5S">
                         <img src="<?php echo base_url(); ?>assets/images/public/home/parish.svg" alt="">
-                        <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
+                        <p>Paris is not a city, it is a whole different world. Enjoy the moveable feast that Paris is with your loved ones & make a lifetime of memories, now in Faridabad.</p>
                         <img src="<?php echo base_url(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto">
                     </div>
                 </div>
@@ -289,7 +289,6 @@
             </div>
         </div>
     <?php } ?>
-
     <div class="hello-area looking-out gray-bg py-30 position-relative">
         <div class="container-lg">
             <div class="row">
@@ -301,66 +300,52 @@
             </div>
             <div class="row mt-4 justify-content-center">
                 <div class="col-xxl-10  px-md-3 px-0">
-                    <div id="carouselExamControlss" class="carousel slide d-md-block d-none wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="2s" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" style="background-image: url('<?php echo base_url(); ?>assets/images/public/h1.jpg');">
-
-                            </div>
-                            <div class="carousel-item " style="background-image: url('<?php echo base_url(); ?>assets/images/public/h2.jpg');">
-
-                            </div>
-                            <div class="carousel-item " style="background-image: url('<?php echo base_url(); ?>assets/images/public/h3.jpg');">
-
-                            </div>
-
-
-                            <div class="abs-block">
-                                <img src="<?php echo base_url(); ?>assets/images/public/street/paris-icons.svg" alt="">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card px-40 py-40 px-20-sm">
+                                <div class="d-table mx-auto">
+                                <img src="<?php echo base_url(); ?>assets/images/public/street/parish.svg" alt="" class="d-table mx-auto">    
+                                </div>
+                                <p class="fz20  text-center mt-30">The city of love, a heaven for foodies and fashion lovers, Paris is a dream. Live that dream while walking the streets of Paris Street in Omaxe World Street, Sec-79, Faridabad.</p>
+                                <img src="<?php echo base_url(); ?>assets/images/public/street/paris-icon.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
                             </div>
                         </div>
-                        <div class="d-flex position-absolute btn-controls">
-                            <a class="carousel-control-prev" href="#carouselExamControlss" role="button" data-bs-slide="prev">
-                                <img src="<?php echo base_url(); ?>assets/images/public/street/paris-right.svg" alt="" class="w-100">
-                            </a>
-                            <a class="carousel-control-next ml-40" href="#carouselExamControlss" role="button" data-bs-slide="next">
-                                <img src="<?php echo base_url(); ?>assets/images/public/street/paris-right.svg" alt="" class="w-100">
-                            </a>
-                        </div>
-                    </div>
-                    <div id="carouselExamControlssmob" class="carousel slide d-md-none d-block" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <figure class="position-relative mb-0">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/h1-mob.jpg" alt="" class="w-100">
+                        <div class="col-md-6">
+                            <!-- wow fadeInDown animated -->
+                            <div id="carouselExamControlss" class="carousel slide " data-wow-duration="1s" data-wow-delay="2s" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/street/s2.jpg" alt="">
+                                        
+                                    </div>
+                                    <div class="carousel-item ">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/street/s1.jpg" alt="">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/street/s3.jpg" alt="">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/street/s4.jpg" alt="">
+                                    </div>
 
-                                </figure>
-                            </div>
-                            <div class="carousel-item">
-                                <figure class="position-relative mb-0">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/h2-mob.jpg" alt="" class="w-100">
+                                    <div class="carousel-item ">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/street/s5.jpg" alt="">
+                                    </div>
 
-                                </figure>
-                            </div>
-                            <div class="carousel-item">
-                                <figure class="position-relative mb-0">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/h3-mob.jpg" alt="" class="w-100">
+                                </div>
 
-                                </figure>
                             </div>
-
-                            <div class="abs-block">
-                                <img src="<?php echo base_url(); ?>assets/images/public/street/paris-icons.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="d-flex position-absolute btn-controls">
-                            <a class="carousel-control-prev" href="#carouselExamControlssmob" role="button" data-bs-slide="prev">
-                                <img src="<?php echo base_url(); ?>assets/images/public/street/paris-right.svg" alt="" class="w-100">
-                            </a>
-                            <a class="carousel-control-next ml-40" href="#carouselExamControlssmob" role="button" data-bs-slide="next">
-                                <img src="<?php echo base_url(); ?>assets/images/public/street/paris-right.svg" alt="" class="w-100">
-                            </a>
                         </div>
                     </div>
+                    <div class="d-flex position-absolute btn-controls">
+                        <a class="carousel-control-prev" href="#carouselExamControlss" role="button" data-bs-slide="prev">
+                            <img src="<?php echo base_url(); ?>assets/images/public/street/paris-right.svg" alt="" class="w-100">
+                        </a>
+                        <a class="carousel-control-next ml-40" href="#carouselExamControlss" role="button" data-bs-slide="next">
+                            <img src="<?php echo base_url(); ?>assets/images/public/street/paris-right.svg" alt="" class="w-100">
+                        </a>
+                    </div>
+
                 </div>
             </div>
 
@@ -386,7 +371,8 @@
                     <div class="card par-bg px-40 py-40 rounded-0 border-0 wow fadeInRight animated">
                         <img src="<?php echo base_url(); ?>assets/images/public/home/parish.svg" alt="">
                         <p class="fz20 text-white text-center mt-30">Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then?
-                        </p>
+
+</p>
                         <img src="<?php echo base_url(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto mt-30">
                     </div>
                 </div>

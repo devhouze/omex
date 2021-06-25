@@ -6,7 +6,7 @@
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/street/san-francisco-banner.jpg" class="d-block w-100" alt="...">
                     <div class="card san-bg">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/s-s.svg" alt="">
-                        <p>An energizing fact about this American city. There are over three hundred coffee houses within the city boundaries of San Francisco. So why not come grab a coffee at San Francisco street, Faridabad?</p>
+                        <p>Did someone say Cheeseburger? San Francisco Street did. Grab your favourite bite and walk one of America’s most famous streets, now in Faridabad.</p>
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/s-s-f.svg" alt="" class="d-table mx-auto">
                     </div>
                 </div>
@@ -20,7 +20,7 @@
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/street/san-m.jpg" class="d-block w-100" alt="...">
                     <div class="card san-bg">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/s-s.svg" alt="">
-                        <p>An energizing fact about this American city. There are over three hundred coffee houses within the city boundaries of San Francisco. So why not come grab a coffee at San Francisco street, Faridabad?</p>
+                        <p>Did someone say Cheeseburger? San Francisco Street did. Grab your favourite bite and walk one of America’s most famous streets, now in Faridabad.</p>
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/s-s-f.svg" alt="" class="d-table mx-auto">
                     </div>
                 </div>
@@ -299,66 +299,53 @@
             </div>
             <div class="row mt-4 justify-content-center">
                 <div class="col-xxl-10  px-md-3 px-0">
-                    <div id="carouselExamControlss" class="carousel slide d-md-block d-none wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="2s" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" style="background-image: url('<?php echo base_url(); ?>assets/images/public/h1.jpg');">
-
-                            </div>
-                            <div class="carousel-item " style="background-image: url('<?php echo base_url(); ?>assets/images/public/h2.jpg');">
-
-                            </div>
-                            <div class="carousel-item " style="background-image: url('<?php echo base_url(); ?>assets/images/public/h3.jpg');">
-
-                            </div>
-
-
-                            <div class="abs-block">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/sanlo.svg" alt="">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card px-40 py-40 px-20-sm">
+                                <div class="d-table mx-auto">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/street/san.svg" alt="" class="d-table mx-auto">
+                                </div>
+                                <p class="fz20  text-center mt-30">Time to live the American dream! Walk the streets of San Francisco with a cheeseburger in one hand, giant coffee in the other. Bringing you the world now in the heart of Faridabad.
+</p>
+<img src="<?php echo BASE_URL(); ?>assets/images/public/street/san-icon.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="d-flex position-absolute btn-controls">
-                            <a class="carousel-control-prev" href="#carouselExamControlss" role="button" data-bs-slide="prev">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/san-right.svg" alt="" class="w-100">
-                            </a>
-                            <a class="carousel-control-next ml-40" href="#carouselExamControlss" role="button" data-bs-slide="next">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/san-right.svg" alt="" class="w-100">
-                            </a>
-                        </div>
-                    </div>
-                    <div id="carouselExamControlssmob" class="carousel slide d-md-none d-block" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <figure class="position-relative mb-0">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/h1-mob.jpg" alt="" class="w-100">
+                        <div class="col-md-6">
+                            <!-- wow fadeInDown animated -->
+                            <div id="carouselExamControlss" class="carousel slide " data-wow-duration="1s" data-wow-delay="2s" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                      
+                                        <img src="<?php echo base_url(); ?>assets/images/public/street/s5.jpg" alt="">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/street/s1.jpg" alt="">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/street/s2.jpg" alt="">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/street/s3.jpg" alt="">
+                                    </div>
 
-                                </figure>
-                            </div>
-                            <div class="carousel-item">
-                                <figure class="position-relative mb-0">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/h2-mob.jpg" alt="" class="w-100">
+                                    <div class="carousel-item ">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/street/s4.jpg" alt="">
+                                    </div>
 
-                                </figure>
-                            </div>
-                            <div class="carousel-item">
-                                <figure class="position-relative mb-0">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/h3-mob.jpg" alt="" class="w-100">
+                                </div>
 
-                                </figure>
                             </div>
-
-                            <div class="abs-block">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/sanlo.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="d-flex position-absolute btn-controls">
-                            <a class="carousel-control-prev" href="#carouselExamControlssmob" role="button" data-bs-slide="prev">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/san-right.svg" alt="" class="w-100">
-                            </a>
-                            <a class="carousel-control-next ml-40" href="#carouselExamControlssmob" role="button" data-bs-slide="next">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/san-right.svg" alt="" class="w-100">
-                            </a>
                         </div>
                     </div>
+                    <div class="d-flex position-absolute btn-controls">
+                        <a class="carousel-control-prev" href="#carouselExamControlss" role="button" data-bs-slide="prev">
+                            <img src="<?php echo base_url(); ?>assets/images/public/street/san-right.svg" alt="" class="w-100">
+                        </a>
+                        <a class="carousel-control-next ml-40" href="#carouselExamControlss" role="button" data-bs-slide="next">
+                            <img src="<?php echo base_url(); ?>assets/images/public/street/san-right.svg" alt="" class="w-100">
+                        </a>
+                    </div>
+
                 </div>
             </div>
 
@@ -384,6 +371,8 @@
                     <div class="card san-bg px-40 py-40 rounded-0 border-0 wow fadeInRight animated">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/s-s.svg" alt="">
                         <p class="fz20 text-white text-center mt-30">An energizing fact about this American city. There are over three hundred coffee houses within the city boundaries of San Francisco. So why not come grab a coffee at San Francisco street, Faridabad?
+
+
                         </p>
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/s-s-f.svg" alt="" class="d-table mx-auto mt-30">
                     </div>

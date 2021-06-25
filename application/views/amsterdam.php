@@ -6,7 +6,7 @@
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/street/amsterdam-banner.jpg" class="d-block w-100" alt="...">
                     <div class="card ams-bg">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/am-s.svg" alt="">
-                        <p>The small city of Amsterdam has more canals than Venice and more bridges than Paris. You can feel the taste of the exotic vibe of Amsterdam by traveling a few kilometers from home.</p>
+                        <p>The city that's vibrant & alive, bringing your Amsterdam adventure to reality. Experience the cultural & historic extravagance of Amsterdam, now in Faridabad.</p>
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/am-s-f.svg" alt="" class="d-table mx-auto">
                     </div>
                 </div>
@@ -20,7 +20,7 @@
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/street/amsterdam-m.jpg" class="d-block w-100" alt="...">
                     <div class="card ams-bg">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/am-s.svg" alt="">
-                        <p>The small city of Amsterdam has more canals than Venice and more bridges than Paris. You can feel the taste of the exotic vibe of Amsterdam by traveling a few kilometers from home.</p>
+                        <p>The city that's vibrant & alive, bringing your Amsterdam adventure to reality. Experience the cultural & historic extravagance of Amsterdam, now in Faridabad.</p>
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/am-s-f.svg" alt="" class="d-table mx-auto">
                     </div>
                 </div>
@@ -300,62 +300,52 @@
             </div>
             <div class="row mt-4 justify-content-center">
                 <div class="col-xxl-10  px-md-3 px-0">
-                    <div id="carouselExamControlss" class="carousel slide d-md-block d-none wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="2s" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <figure class="position-relative mb-0">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/h1.jpg" alt="" class="w-100">
-
-                                </figure>
-                            </div>
-                            <div class="carousel-item">
-                                <figure class="position-relative mb-0">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/h1.jpg" alt="" class="w-100">
-
-                                </figure>
-                            </div>
-
-                            <div class="abs-block">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/amst.svg" alt="">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card px-40 py-40 px-20-sm">
+                                <div class="d-table mx-auto">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/street/amsta.svg" alt="" class="d-table mx-auto">
+                                </div>
+                                <p class="fz20  text-center mt-30">Escape into the adventure of Amsterdam, explore the historic and cultural extravagance of Amsterdam without a passport. A global experience only a few kilometers away from your home.</p>
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/amsterdam-icon.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="d-flex position-absolute btn-controls">
-                            <a class="carousel-control-prev" href="#carouselExamControlss" role="button" data-bs-slide="prev">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/amsterdam-right.svg" alt="" class="w-100">
-                            </a>
-                            <a class="carousel-control-next ml-40" href="#carouselExamControlss" role="button" data-bs-slide="next">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/amsterdam-right.svg" alt="" class="w-100">
-                            </a>
-                        </div>
-                    </div>
-                    <div id="carouselExamControlssmob" class="carousel slide d-md-none d-block" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <figure class="position-relative mb-0">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/h1-mob.jpg" alt="" class="w-100">
+                        <div class="col-md-6">
+                            <!-- wow fadeInDown animated -->
+                            <div id="carouselExamControlss" class="carousel slide " data-wow-duration="1s" data-wow-delay="2s" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                      
+                                        <img src="<?php echo base_url(); ?>assets/images/public/street/s5.jpg" alt="">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/street/s1.jpg" alt="">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/street/s2.jpg" alt="">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/street/s3.jpg" alt="">
+                                    </div>
 
-                                </figure>
-                            </div>
-                            <div class="carousel-item">
-                                <figure class="position-relative mb-0">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/street/h1-mob.jpg" alt="" class="w-100">
+                                    <div class="carousel-item ">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/street/s4.jpg" alt="">
+                                    </div>
 
-                                </figure>
-                            </div>
+                                </div>
 
-                            <div class="abs-block">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/amst.svg" alt="">
                             </div>
-                        </div>
-                        <div class="d-flex position-absolute btn-controls">
-                            <a class="carousel-control-prev" href="#carouselExamControlssmob" role="button" data-bs-slide="prev">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/amsterdam-right.svg" alt="" class="w-100">
-                            </a>
-                            <a class="carousel-control-next ml-40" href="#carouselExamControlssmob" role="button" data-bs-slide="next">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/amsterdam-right.svg" alt="" class="w-100">
-                            </a>
                         </div>
                     </div>
+                    <div class="d-flex position-absolute btn-controls">
+                        <a class="carousel-control-prev" href="#carouselExamControlss" role="button" data-bs-slide="prev">
+                            <img src="<?php echo base_url(); ?>assets/images/public/street/amsterdam-right.svg" alt="" class="w-100">
+                        </a>
+                        <a class="carousel-control-next ml-40" href="#carouselExamControlss" role="button" data-bs-slide="next">
+                            <img src="<?php echo base_url(); ?>assets/images/public/street/amsterdam-right.svg" alt="" class="w-100">
+                        </a>
+                    </div>
+
                 </div>
             </div>
 
@@ -381,6 +371,8 @@
                     <div class="card ams-bg px-40 py-40 rounded-0 border-0 wow fadeInRight animated">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/am-s.svg" alt="">
                         <p class="fz20 text-white text-center mt-30">The small city of Amsterdam has more canals than Venice and more bridges than Paris. You can feel the taste of the exotic vibe of Amsterdam by traveling a few kilometers from home.
+
+
                         </p>
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/am-s-f.svg" alt="" class="d-table mx-auto mt-30">
                     </div>

@@ -6,7 +6,7 @@
                     <img src="<?php echo base_url(); ?>assets/images/public/street/london-banner.jpg" class="d-block w-100" alt="...">
                     <div class="card lon-bg wow fadeInRight animated" data-wow-duration="1s" data-wow-delay="0.5S">
                         <img src="<?php echo base_url(); ?>assets/images/public/home/l-s.svg" alt="">
-                        <p>Did you know? London, a global icon, is built on ruins! Want to have a taste of the London aura? Come and visit World Street, Faridabad. </p>
+                        <p>London is pure magic, London is gothic grandeur. Walk one of the world's most celebrated streets - The London Street, now in Faridabad.</p>
                         <img src="<?php echo base_url(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto">
                     </div>
                 </div>
@@ -20,7 +20,7 @@
                     <img src="<?php echo base_url(); ?>assets/images/public/street/london-m.jpg" class="d-block w-100" alt="...">
                     <div class="card lon-bg wow fadeInRight animated" data-wow-duration="1s" data-wow-delay="0.5S">
                         <img src="<?php echo base_url(); ?>assets/images/public/home/l-s.svg" alt="">
-                        <p>Did you know? London, a global icon, is built on ruins! Want to have a taste of the London aura? Come and visit World Street, Faridabad. </p>
+                        <p>London is pure magic, London is gothic grandeur. Walk one of the world's most celebrated streets - The London Street, now in Faridabad.</p>
                         <img src="<?php echo base_url(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto">
                     </div>
                 </div>
@@ -299,66 +299,51 @@
             </div>
             <div class="row mt-4 justify-content-center">
                 <div class="col-xxl-10  px-md-3 px-0">
-                    <div id="carouselExamControlss" class="carousel slide d-md-block d-none wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="2s" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" style="background-image: url('<?php echo base_url(); ?>assets/images/public/h1.jpg');">
-
-                            </div>
-                            <div class="carousel-item " style="background-image: url('<?php echo base_url(); ?>assets/images/public/h2.jpg');">
-
-                            </div>
-                            <div class="carousel-item " style="background-image: url('<?php echo base_url(); ?>assets/images/public/h3.jpg');">
-
-                            </div>
-
-
-                            <div class="abs-block">
-                                <img src="<?php echo base_url(); ?>assets/images/public/street/london-stik.svg" alt="">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card px-40 py-40 px-20-sm">
+                                <div class="d-table mx-auto">
+                                <img src="<?php echo base_url(); ?>assets/images/public/street/london.svg" alt="" class="d-table mx-auto">    
+                                </div>
+                                <p class="fz20  text-center mt-30">Bringing the London paradise to Faridabad. Make your pictures the talk of the town, treat yourself the exquisite delicacies and enjoy an English holiday with your loved ones.</p>
+                                <img src="<?php echo base_url(); ?>assets/images/public/street/london-icon.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
                             </div>
                         </div>
-                        <div class="d-flex position-absolute btn-controls">
-                            <a class="carousel-control-prev" href="#carouselExamControlss" role="button" data-bs-slide="prev">
-                                <img src="<?php echo base_url(); ?>assets/images/public/street/london-right.svg" alt="" class="w-100">
-                            </a>
-                            <a class="carousel-control-next ml-40" href="#carouselExamControlss" role="button" data-bs-slide="next">
-                                <img src="<?php echo base_url(); ?>assets/images/public/street/london-right.svg" alt="" class="w-100">
-                            </a>
-                        </div>
-                    </div>
-                    <div id="carouselExamControlssmob" class="carousel slide d-md-none d-block" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <figure class="position-relative mb-0">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/h1-mob.jpg" alt="" class="w-100">
+                        <div class="col-md-6">
+                            <!-- wow fadeInDown animated -->
+                            <div id="carouselExamControlss" class="carousel slide " data-wow-duration="1s" data-wow-delay="2s" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/street/s1.jpg" alt="">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/street/s2.jpg" alt="">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/street/s3.jpg" alt="">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/street/s4.jpg" alt="">
+                                    </div>
 
-                                </figure>
-                            </div>
-                            <div class="carousel-item">
-                                <figure class="position-relative mb-0">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/h2-mob.jpg" alt="" class="w-100">
+                                    <div class="carousel-item ">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/street/s5.jpg" alt="">
+                                    </div>
 
-                                </figure>
-                            </div>
-                            <div class="carousel-item">
-                                <figure class="position-relative mb-0">
-                                    <img src="<?php echo base_url(); ?>assets/images/public/h3-mob.jpg" alt="" class="w-100">
+                                </div>
 
-                                </figure>
                             </div>
-
-                            <div class="abs-block">
-                                <img src="<?php echo base_url(); ?>assets/images/public/street/london-stik.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="d-flex position-absolute btn-controls">
-                            <a class="carousel-control-prev" href="#carouselExamControlssmob" role="button" data-bs-slide="prev">
-                                <img src="<?php echo base_url(); ?>assets/images/public/street/london-right.svg" alt="" class="w-100">
-                            </a>
-                            <a class="carousel-control-next ml-40" href="#carouselExamControlssmob" role="button" data-bs-slide="next">
-                                <img src="<?php echo base_url(); ?>assets/images/public/street/london-right.svg" alt="" class="w-100">
-                            </a>
                         </div>
                     </div>
+                    <div class="d-flex position-absolute btn-controls">
+                        <a class="carousel-control-prev" href="#carouselExamControlss" role="button" data-bs-slide="prev">
+                            <img src="<?php echo base_url(); ?>assets/images/public/street/london-right.svg" alt="" class="w-100">
+                        </a>
+                        <a class="carousel-control-next ml-40" href="#carouselExamControlss" role="button" data-bs-slide="next">
+                            <img src="<?php echo base_url(); ?>assets/images/public/street/london-right.svg" alt="" class="w-100">
+                        </a>
+                    </div>
+
                 </div>
             </div>
 
@@ -383,8 +368,8 @@
                 <div class="col-md-4 d-flex flex-fill ps-md-0">
                     <div class="card lon-bg px-40 py-40 rounded-0 border-0 wow fadeInRight animated">
                         <img src="<?php echo base_url(); ?>assets/images/public/home/l-s.svg" alt="">
-                        <p class="fz20 text-white text-center mt-30">Did you know? London, a global icon, is built on ruins! Want to have a taste of the London aura? Come and visit World Street, Faridabad.
-                        </p>
+                        <p class="fz20 text-white text-center mt-30">Did you know? London, a global icon, is built on ruins! Want to have a taste of the London aura? Come and visit World Street, Faridabad. 
+</p>
                         <img src="<?php echo base_url(); ?>assets/images/public/home/l-s-f.svg" alt="" class="d-table mx-auto mt-30">
                     </div>
                 </div>

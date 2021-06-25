@@ -6,7 +6,7 @@
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hong-banner.jpg" class="d-block w-100" alt="...">
                     <div class="card hon-bg">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/h-s.svg" alt="">
-                        <p>Hong Kong has one of the highest numbers of restaurants or cafes per capita. So why not have a taste of it in New Faridabad?</p>
+                        <p>A sophisticated fusion of culture, food and more, Hong Kong is known as the Shopper’s Paradise. Enjoy the Hong Kong experience, now in Faridabad.</p>
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/h-s-f.svg" alt="" class="d-table mx-auto">
                     </div>
                 </div>
@@ -20,7 +20,7 @@
                     <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hon-m.jpg" class="d-block w-100" alt="...">
                     <div class="card hon-bg">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/h-s.svg" alt="">
-                        <p>Hong Kong has one of the highest numbers of restaurants or cafes per capita. So why not have a taste of it in New Faridabad?</p>
+                        <p>A sophisticated fusion of culture, food and more, Hong Kong is known as the Shopper’s Paradise. Enjoy the Hong Kong experience, now in Faridabad.</p>
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/h-s-f.svg" alt="" class="d-table mx-auto">
                     </div>
                 </div>
@@ -298,66 +298,53 @@
             </div>
             <div class="row mt-4 justify-content-center">
                 <div class="col-xxl-10  px-md-3 px-0">
-                    <div id="carouselExamControlss" class="carousel slide d-md-block d-none wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="2s" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" style="background-image: url('<?php echo base_url(); ?>assets/images/public/h1.jpg');">
-
-                            </div>
-                            <div class="carousel-item " style="background-image: url('<?php echo base_url(); ?>assets/images/public/h2.jpg');">
-
-                            </div>
-                            <div class="carousel-item " style="background-image: url('<?php echo base_url(); ?>assets/images/public/h3.jpg');">
-
-                            </div>
-
-
-                            <div class="abs-block">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hki.svg" alt="">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card px-40 py-40 px-20-sm">
+                                <div class="d-table mx-auto">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/street/hon.svg" alt="" class="d-table mx-auto">
+                                </div>
+                                <p class="fz20  text-center mt-30">Hong Kong is a genius blend of sophisticated food, fashion and historical interest. Explore the exquisite and majestique streets of Hong Kong at Omaxe World Street, Faridabad.
+</p>
+                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hong-icon.svg" alt="" class="d-table mx-auto">
                             </div>
                         </div>
-                        <div class="d-flex position-absolute btn-controls">
-                            <a class="carousel-control-prev" href="#carouselExamControlss" role="button" data-bs-slide="prev">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hong-right.svg" alt="" class="w-100">
-                            </a>
-                            <a class="carousel-control-next ml-40" href="#carouselExamControlss" role="button" data-bs-slide="next">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hong-right.svg" alt="" class="w-100">
-                            </a>
-                        </div>
-                    </div>
-                    <div id="carouselExamControlssmob" class="carousel slide d-md-none d-block" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <figure class="position-relative mb-0">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/h1-mob.jpg" alt="" class="w-100">
+                        <div class="col-md-6">
+                            <!-- wow fadeInDown animated -->
+                            <div id="carouselExamControlss" class="carousel slide " data-wow-duration="1s" data-wow-delay="2s" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                      
+                                        <img src="<?php echo base_url(); ?>assets/images/public/street/s5.jpg" alt="">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/street/s1.jpg" alt="">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/street/s2.jpg" alt="">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="<?php echo base_url(); ?>assets/images/public/street/s3.jpg" alt="">
+                                    </div>
 
-                                </figure>
-                            </div>
-                            <div class="carousel-item">
-                                <figure class="position-relative mb-0">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/h2-mob.jpg" alt="" class="w-100">
+                                    <div class="carousel-item ">
+                                    <img src="<?php echo base_url(); ?>assets/images/public/street/s4.jpg" alt="">
+                                    </div>
 
-                                </figure>
-                            </div>
-                            <div class="carousel-item">
-                                <figure class="position-relative mb-0">
-                                    <img src="<?php echo BASE_URL(); ?>assets/images/public/h3-mob.jpg" alt="" class="w-100">
+                                </div>
 
-                                </figure>
                             </div>
-
-                            <div class="abs-block">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hki.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="d-flex position-absolute btn-controls">
-                            <a class="carousel-control-prev" href="#carouselExamControlssmob" role="button" data-bs-slide="prev">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hong-right.svg" alt="" class="w-100">
-                            </a>
-                            <a class="carousel-control-next ml-40" href="#carouselExamControlssmob" role="button" data-bs-slide="next">
-                                <img src="<?php echo BASE_URL(); ?>assets/images/public/street/hong-right.svg" alt="" class="w-100">
-                            </a>
                         </div>
                     </div>
+                    <div class="d-flex position-absolute btn-controls">
+                        <a class="carousel-control-prev" href="#carouselExamControlss" role="button" data-bs-slide="prev">
+                            <img src="<?php echo base_url(); ?>assets/images/public/street/hong-right.svg" alt="" class="w-100">
+                        </a>
+                        <a class="carousel-control-next ml-40" href="#carouselExamControlss" role="button" data-bs-slide="next">
+                            <img src="<?php echo base_url(); ?>assets/images/public/street/hong-right.svg" alt="" class="w-100">
+                        </a>
+                    </div>
+
                 </div>
             </div>
 
@@ -383,6 +370,8 @@
                     <div class="card hon-bg px-40 py-40 rounded-0 border-0 wow fadeInRight animated">
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/h-s.svg" alt="">
                         <p class="fz22 text-white text-center mt-30">Hong Kong has one of the highest numbers of restaurants or cafes per capita. So why not have a taste of it in New Faridabad?
+
+
                         </p>
                         <img src="<?php echo BASE_URL(); ?>assets/images/public/home/h-s-f.svg" alt="" class="d-table mx-auto mt-30">
                     </div>
