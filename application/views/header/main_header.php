@@ -25,7 +25,9 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <img src="<?php echo base_url(); ?>assets/images/public/header/menu.svg" alt="Map">
                 </button>
-                <a class="navbar-brand p-0 m-0" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/images/public/header/logo.svg" alt="Omex"></a>
+                <a class="navbar-brand p-0 m-0" href="<?php echo base_url(); ?>">
+                <img src="<?php echo base_url(); ?>assets/images/public/header/logo.svg" alt="Omex">
+                </a>
                 <a class=" ms-3 d-lg-none d-block me-3" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/images/public/header/call-btn.svg" alt="Map"></a>
 
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">

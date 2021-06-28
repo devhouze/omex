@@ -301,7 +301,7 @@
             </div>
             <div class="row mt-4 justify-content-center">
                 <div class="col-xxl-10  px-md-3 px-0">
-                    <div id="carouselExamControlss" class="carousel slide d-md-block d-none wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="2s" data-bs-ride="carousel">
+                    <div id="carouselExamControlss" class="carousel slide d-md-block d-none wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" style="background-image: url('<?php echo base_url(); ?>assets/images/public/h1.jpg');">
 

@@ -143,7 +143,7 @@
                 <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="0.15s"></div>
             </div>
         </div>
-        <div class="row mt-4 d-md-block d-none wow animated fadeInUp" data-wow-duration="2s" data-wow-delay="2s">
+        <div class="row mt-4 d-md-block d-none wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
             <div class="col-md-12 px-0">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
@@ -415,7 +415,7 @@
             </div>
             <div class="row mt-4 justify-content-center">
                 <div class="col-xxl-10">
-                    <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
+                    <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <?php $i = 1;
                             $event_count = 0;
@@ -561,7 +561,7 @@
                     </ul>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <div class="owl-carousel sliderall wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
+                            <div class="owl-carousel sliderall wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1s">
                                 <?php if (!empty($all_gallery)) {
                                     $i = 1;
                                     foreach ($all_gallery as $gallery) {
