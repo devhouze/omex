@@ -2524,6 +2524,9 @@ ul.share-links li:nth-child(2) {
     .experience .carousel-item {
         height: 550px;
     }
+    .street-banner .card {
+        height: 586px;
+    }
 }
 
 @media only screen and (max-width: 1400px) {

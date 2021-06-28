@@ -143,7 +143,7 @@
                 <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="0.15s"></div>
             </div>
         </div>
-        <div class="row mt-4 d-md-block d-none wow animated fadeInUp" data-wow-duration="2s" data-wow-delay="2s">
+        <div class="row mt-4 d-md-block d-none wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
             <div class="col-md-12 px-0">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
@@ -534,7 +534,7 @@
         <div class="row">
             <div class="col-md-12 positoin-relative">
                 <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Experience Gallery</h5>
-                <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown  animated" data-wow-duration="1s" data-wow-delay="1.5s">
+                <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown  animated" data-wow-duration="1s" >
                 <div class="v-line d-table mx-auto wow animated zoomIn"></div>
             </div>
         </div>
@@ -561,7 +561,7 @@
                     </ul>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <div class="owl-carousel sliderall wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
+                            <div class="owl-carousel sliderall wow fadeInUp animated" data-wow-duration="1s">
                                 <?php if (!empty($all_gallery)) {
                                     $i = 1;
                                     foreach ($all_gallery as $gallery) {

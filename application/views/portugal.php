@@ -313,7 +313,7 @@
                         </div>
                         <div class="col-md-6">
                             <!-- wow fadeInDown animated -->
-                            <div id="carouselExamControlss" class="carousel slide " data-wow-duration="1s" data-wow-delay="2s" data-bs-ride="carousel">
+                            <div id="carouselExamControlss" class="carousel slide " data-wow-duration="1s" data-wow-delay="1s" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <img src="<?php echo base_url(); ?>assets/images/public/street/s4.jpg" alt="">
