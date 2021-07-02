@@ -59,8 +59,8 @@ $meta_description = (!empty($events)) ? $events->meta_description :'';
                                 </div>
 
                                 <div class="col-md-6 mb-3">
-                                    <label for="">Event Banner(600px * 400px), JPG | PNG</label>
-                                    <input type="file" class="form-control form-control-sm input-sm" name="thumbnail_image" value="" onchange="checkFileDetails(600,400,this)">
+                                    <label for="">Event Banner(700px * 500px), JPG | PNG</label>
+                                    <input type="file" class="form-control form-control-sm input-sm" name="thumbnail_image" value="" onchange="checkFileDetails(700,500,this)">
                                     <span style="color: red;font-size: 9px;"></span>
                                 </div>
 

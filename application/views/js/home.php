@@ -20,6 +20,7 @@
 
  });
 </script>
+
 <script>
     $('.slider_ext').on('initialized.owl.carousel changed.owl.carousel', function(e) {
         if (!e.namespace)  {
