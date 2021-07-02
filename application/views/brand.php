@@ -71,7 +71,9 @@
                 <div class="col-lg-4 col-md-6">
                     <ul>
                         <li><img src="<?php echo BASE_URL(); ?>assets/images/public/home/cmap.svg" alt=""><?php echo $about_brand['brand_location'].','.$about_brand['brand_street']; ?></li>
-                        <li><img src="<?php echo BASE_URL(); ?>assets/images/public/home/ccall.svg" alt=""><?php echo $about_brand['brand_contact']; ?></li>
+                        <?php if($about_brand['brand_contact']){ ?>
+                        <li><a href="tel:<?php echo $about_brand['brand_contact']; ?>"><img src="<?php echo BASE_URL(); ?>assets/images/public/home/ccall.svg" alt=""></a><?php echo $about_brand['brand_contact']; ?></li>
+                        <?php } ?>
 
 
                     </ul>

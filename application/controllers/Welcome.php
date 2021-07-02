@@ -186,7 +186,7 @@ class Welcome extends CI_Controller {
 	{
 		$this->form_validation->set_rules('name','Name','required');
 		$this->form_validation->set_rules('email','Email','required');
-		$this->form_validation->set_rules('message','Message','required');
+		// $this->form_validation->set_rules('message','Message','required');
 		$this->form_validation->set_rules('contact','Mobile Number','required|regex_match[/^[0-9]{10,15}$/]');
 
 		if($this->form_validation->run()){
@@ -303,6 +303,7 @@ class Welcome extends CI_Controller {
 		// $data['key_info'] = array_merge(explode(',',$data['about_brand']['brand_category']),(!empty($data['about_brand']['brand_sub_category']))?explode(',',$data['about_brand']['brand_sub_category']):[]);
 		$data['key_info'] = explode(',',$data['about_brand']['brand_sub_category']);
 		$data['what_new'] = $this->wm->get_what_new($id,$data['about_brand']['brand_street']);
+		// echo $this->db->last_query(); die;
 		$data['similar_brands'] = $this->wm->get_similar_brands($id,$data['about_brand']['brand_type'],null);
 		$data['first_similar_brands'] = $this->wm->get_similar_brands($id,$data['about_brand']['brand_type'],6);
 		$data['second_similar_brands'] = $this->wm->get_similar_brands($id,$data['about_brand']['brand_type'],6,6);

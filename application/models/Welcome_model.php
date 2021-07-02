@@ -270,12 +270,13 @@ class Welcome_model extends CI_Model
     {
         $this->db->select('brand_name, about_brand, brand_logo, brand_street, banner_web, banner_comment, logo_message, brand_slug');
         $this->db->where('status',0);
-        $this->db->where('brand_label','New In');
         if($id){
             $this->db->where('brand_slug !=',$id);
         }
         if($street){
             $this->db->where("brand_street LIKE '%$street%'");
+        }else{
+        $this->db->where('brand_label','New In');
         }
         $query = $this->db->get('tbl_brand');
         if($query->num_rows() > 0){
@@ -336,7 +337,7 @@ class Welcome_model extends CI_Model
 
     public function get_filters()
     {
-        $category = $this->db->select('id, category_name as name')->get('tbl_category')->result_array();
+        $category = $this->db->select('id, category_name as name')->order_by('category_name','asc')->get('tbl_category')->result_array();
         $subcategory = $this->db->get('tbl_sub_category')->result_array();
         $final_data = array_merge($category,$subcategory);
         return $final_data;
