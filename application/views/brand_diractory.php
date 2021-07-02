@@ -167,7 +167,7 @@
         <div class="container-lg">
             <div class="row justify-content-center">
                 <div class="col-md-1-">
-                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated">Search Brands</h5>
+                    <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated" data-wow-delay="300ms">Search Brands</h5>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -291,7 +291,7 @@
                     <div class="container-lg">
                         <div class="row">
                             <div class="col-md-12 positoin-relative">
-                                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated">Discounts & Offers</h5>
+                                <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated" data-wow-delay="300ms">Discounts & Offers</h5>
                                 <div class="v-line d-table mx-auto my-4"></div>
                             </div>
                         </div>
@@ -300,7 +300,7 @@
                     <div class="container-lg">
                         <div class="row justify-content-center">
                             <div class="col-xxl-10">
-                                <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
+                                <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated"  data-wow-delay="300ms" data-bs-ride="carousel">
                                     <div class="carousel-inner">
                                         <?php if (!empty($brand_offers)) {
                                             $i = 1;
@@ -359,7 +359,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="col-xxl-10">
-                                <div id="carouselExampleControls_whats" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
+                                <div id="carouselExampleControls_whats" class="carousel slide wow fadeInUp animated"  data-wow-delay="300ms" data-bs-ride="carousel">
                                     <div class="carousel-inner">
                                         <?php $i = 1;
                                         foreach ($what_new as $new) { ?>
@@ -410,7 +410,7 @@
                 <div class="container-lg">
                     <div class="row">
                         <div class="col-md-12 positoin-relative">
-                            <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Find Us</h5>
+                            <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated" data-wow-delay="300ms">Find Us</h5>
 
                             <div class="v-line d-table mx-auto my-4"></div>
                         </div>
@@ -422,7 +422,7 @@
                             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14040.246250040547!2d77.3528947!3d28.3872085!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5ba6ea082ef6bf15!2sOmaxe%20World%20Street!5e0!3m2!1sen!2spl!4v1605103931187!5m2!1sen!2spl" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                         </div>
                         <div class="col-md-4 d-flex flex-fill ps-md-0">
-                            <div class="card px-40 py-40 rounded-0 border-main wow fadeInRight animated bg-transparent">
+                            <div class="card px-40 py-40 rounded-0 border-main wow fadeInRight animated bg-transparent" data-wow-delay="300ms">
                                 <img src="<?php echo base_url(); ?>assets/images/public/brand/worldstreet.svg" alt="">
                                 <p class="fz20  text-center mt-30 h-color">Wander by foot into the heart of the New Faridabad. Start discovering your own world within ours at World Street.</p>
                                 <img src="<?php echo base_url(); ?>assets/images/public/brand/wstm-logo.svg" alt="" class="d-table mx-auto mt-30 ws-tm-logo">
@@ -437,7 +437,7 @@
                 <div class="container-lg">
                     <div class="row">
                         <div class="col-md-12 positoin-relative">
-                            <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">There’s more to explore</h5>
+                            <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated" data-wow-delay="300ms">There’s more to explore</h5>
 
                             <div class="v-line d-table mx-auto my-4"></div>
                         </div>

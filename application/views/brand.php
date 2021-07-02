@@ -68,13 +68,13 @@
         <div class="container-lg">
             <div class="row">
                 <div class="col-lg-8 col-md-6"></div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 ps-0">
                     <ul>
                          <?php if($about_brand['brand_location']){ ?>
                         <li><img src="<?php echo BASE_URL(); ?>assets/images/public/home/cmap.svg" alt=""><?php echo $about_brand['brand_location'].','.$about_brand['brand_street']; ?></li>
                              <?php } ?>
                         <?php if($about_brand['brand_contact']){ ?>
-                        <li><a href="tel:<?php echo $about_brand['brand_contact']; ?>"><img src="<?php echo BASE_URL(); ?>assets/images/public/home/ccall.svg" alt=""></a><?php echo $about_brand['brand_contact']; ?></li>
+                        <li><a href="tel:<?php echo $about_brand['brand_contact']; ?>"><img src="<?php echo BASE_URL(); ?>assets/images/public/home/ccall.svg" alt=""><?php echo $about_brand['brand_contact']; ?></a></li>
                         <?php } ?>
 
 
@@ -91,7 +91,7 @@
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 mt-40">Key Information</h5>
                     <ul class="d-table mx-auto mt-md-5 mt-4">
                         <?php $cat[] = array_slice($key_info,0,5); foreach($key_info as $info){?>
-                        <li><a href="javascript:void(0)"><?php echo $this->wm->get_sub_cat_name($info); ?></a></li>
+                        <li><?php echo $this->wm->get_sub_cat_name($info); ?></li>
                         <?php } ?>
                     </ul>
                     <div class="v-line d-table mx-auto mt-4"></div>
@@ -128,7 +128,7 @@
     <?php } ?>
 
     <?php if((!empty($first_similar_brands)) || (!empty($second_similar_brands)) || (!empty($third_similar_brands))){?>
-    <div class="similar barnd live-in-word gray-bg pt-30 position-relative">
+    <div class="similar barnd live-in-word  gray-bg pt-30 position-relative">
         <div class="container-md">
             <div class="row">
                 <div class="col-md-12 positoin-relative">
@@ -138,7 +138,7 @@
             </div>
             <div class="row mt-4 justify-content-center">
                 <div class="col-xxl-9">
-                    <div class="owl-carousel slider wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
+                    <div class="owl-carousel slider wow fadeInUp animated"  data-wow-delay="300ms">
                         <?php if(!empty($first_similar_brands)){?>
                         <div class="item">
                             <div class="row">
@@ -249,6 +249,7 @@
 
     </div>
     <?php } ?>
+    
     <div class="expoler-category gray-bg pt-60 pb-30">
         <div class="container-lg">
             <div class="row">
@@ -301,7 +302,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-xxl-10">
-                    <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
+                    <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated"  data-wow-delay="300ms" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <?php $i = 1; foreach($what_new as $new){?>
                             <div class="carousel-item  <?php if($i == 1){echo "active";}?>">

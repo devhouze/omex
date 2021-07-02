@@ -110,11 +110,11 @@
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Top Brands</h5>
-                    <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5S">
-                    <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1s"></div>
+                    <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown animated"  data-wow-delay="300ms">
+                    <div class="v-line d-table mx-auto wow zoomIn animated"  data-wow-delay="300ms"></div>
                 </div>
             </div>
-            <div class="row justify-content-center align-items-center " data-wow-duration="1s" data-wow-delay="0.15s">
+            <div class="row justify-content-center align-items-center "  data-wow-delay="300ms">
                 <div class="col-md-10 mt-20">
                     <div class="owl-carousel owl-theme top-brand">
                         <?php foreach ($brand_logo as $logo) {
@@ -142,11 +142,11 @@
         <div class="row">
             <div class="col-md-12 positoin-relative">
                 <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Experience Best of World Street</h5>
-                <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown  animated" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown  animated"  data-wow-delay="300ms">
                 <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="0.15s"></div>
             </div>
         </div>
-        <div class="row mt-4 d-md-block d-none wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+        <div class="row mt-4 d-md-block d-none wow animated fadeInUp" data-wow-delay="300ms">
             <div class="col-md-12 px-0">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
@@ -364,26 +364,26 @@
         <div class="row">
             <div class="col-md-12 positoin-relative">
                 <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Explore More</h5>
-                <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="get-src d-table mx-auto wow fadeInDown  animated" data-wow-duration="1s" data-wow-delay="1.5s">
-                <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1s"></div>
+                <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="get-src d-table mx-auto wow fadeInDown  animated" data-wow-delay="300mss">
+                <div class="v-line d-table mx-auto wow zoomIn animated"  data-wow-delay="300ms"></div>
             </div>
         </div>
         <div class="row px-md-5 px-3 mt-md-0 mt-5">
             <div class="col-md-4">
-                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5s">Eat</h2>
-                <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="get-src d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">
+                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated"  data-wow-delay="300ms">Eat</h2>
+                <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="get-src d-table mx-auto wow fadeInDown animated"  data-wow-delay="300ms">
                 <figure class="position-relative mb-0 mt-12">
-                    <img src="<?php echo base_url(); ?>assets/images/public/home/e1.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
+                    <img src="<?php echo base_url(); ?>assets/images/public/home/e1.jpg" alt="" class=" wow fadeInUp animated"  data-wow-delay="300ms">
                     <div class="outer"></div>
                 </figure>
                 <a href="<?php echo base_url('brand-directory/eat') ?>" class="exploer-btn" >EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a>
 
             </div>
             <div class="col-md-4">
-                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5s">Style</h2>
-                <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="get-src d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">
+                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated"  data-wow-delay="300ms">Style</h2>
+                <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="get-src d-table mx-auto wow fadeInDown animated"  data-wow-delay="300ms">
                 <figure class="position-relative mb-0 mt-12">
-                    <img src="<?php echo base_url(); ?>assets/images/public/home/e3.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
+                    <img src="<?php echo base_url(); ?>assets/images/public/home/e3.jpg" alt="" class=" wow fadeInUp animated"  data-wow-delay="300ms">
                     <div class="outer"></div>
 
 
@@ -392,10 +392,10 @@
 
             </div>
             <div class="col-md-4">
-                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="0.5s">Play</h2>
-                <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="get-src d-table mx-auto wow fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">
+                <h2 class="fz40 fz24-sm d-table mx-auto pr-font h-color mb-0 wow fadeInDown animated"  data-wow-delay="300ms">Play</h2>
+                <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="get-src d-table mx-auto wow fadeInDown animated"  data-wow-delay="300ms">
                 <figure class="position-relative mb-0 mt-12">
-                    <img src="<?php echo base_url(); ?>assets/images/public/home/e2.jpg" alt="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.2s">
+                    <img src="<?php echo base_url(); ?>assets/images/public/home/e2.jpg" alt="" class=" wow fadeInUp animated"  data-wow-delay="300ms">
                     <div class="outer"></div>
                 </figure>
                 <!-- <a href="" class="exploer-btn" data-type="play" data-bs-toggle="modal" data-bs-target="#playModal">EXPLORE <img src="<?php echo base_url(); ?>assets/images/public/home/ex-arow.svg" alt=""></a> -->
@@ -412,13 +412,13 @@
             <div class="row">
                 <div class="col-md-12 positoin-relative">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Look out for what’s coming up!</h5>
-                    <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown  animated" data-wow-duration="1s" data-wow-delay="0.5s">
-                    <div class="v-line d-table mx-auto wow animated zoomIn" data-wow-duration="1s" data-wow-delay="0.15s"> </div>
+                    <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown  animated"  data-wow-delay="300ms">
+                    <div class="v-line d-table mx-auto wow animated zoomIn"  data-wow-delay="300ms"> </div>
                 </div>
             </div>
             <div class="row mt-4 justify-content-center">
                 <div class="col-xxl-10">
-                    <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
+                    <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-delay="300mss" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <?php $i = 1;
                             $event_count = 0;
