@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Recoleta';
-    src: url('/assets/css/public/fonts/Recoleta-Black.woff') format('woff2'), url('/assets/css/public/fonts/Recoleta-Bold.woff') format('woff');
+    src: url('../public/fonts/Recoleta-Black.woff') format('woff2'), url('../public/fonts/Recoleta-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'Recoleta';
-    src: url('/assets/css/public/fonts/Recoleta-Medium.woff2') format('woff2'), url('/assets/css/public/fonts/Recoleta-Medium.woff') format('woff');
+    src: url('../public/fonts/Recoleta-Medium.woff2') format('woff2'), url('../public/fonts/Recoleta-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: 'Recoleta';
-    src: url('/assets/css/public/fonts/Recoleta-SemiBold.woff2') format('woff2'), url('/assets/css/public/fonts/Recoleta-SemiBold.woff') format('woff');
+    src: url('../public/fonts/Recoleta-SemiBold.woff2') format('woff2'), url('../public/fonts/Recoleta-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'Recoleta';
-    src: url('/omex/assets/css/public/fonts/Recoleta-Regular.woff2') format('woff2'), url('/assets/css/public/fonts/Recoleta-Regular.woff') format('woff');
+    src: url('../public/fonts/Recoleta-Regular.woff2') format('woff2'), url('../public/fonts/Recoleta-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
     font-family: 'Recoleta';
-    src: url('/assets/css/public/fonts/Recoleta-Black.woff2') format('woff2'), url('/assets/css/public/fonts/Recoleta-Black.woff') format('woff');
+    src: url('../public/fonts/Recoleta-Black.woff2') format('woff2'), url('../public/fonts/Recoleta-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
     font-family: 'Recoleta';
-    src: url('/assets/css/public/fonts/Recoleta-Light.woff2') format('woff2'), url('/assets/css/public/fonts/Recoleta-Light.woff') format('woff');
+    src: url('../public/fonts/Recoleta-Light.woff2') format('woff2'), url('../public/fonts/Recoleta-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -48,7 +48,7 @@
 
 @font-face {
     font-family: 'Recoleta';
-    src: url('/assets/css/public/fonts/Recoleta-Thin.woff2') format('woff2'), url('/assets/css/public/fonts/Recoleta-Thin.woff') format('woff');
+    src: url('../public/fonts/Recoleta-Thin.woff2') format('woff2'), url('../public/fonts/Recoleta-Thin.woff') format('woff');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -56,7 +56,7 @@
 
 @font-face {
     font-family: 'Recoleta Alt';
-    src: url('/assets/css/public/fonts/RecoletaAlt-Bold.woff2') format('woff2'), url('/assets/css/public/fonts/RecoletaAlt-Bold.woff') format('woff');
+    src: url('../public/fonts/RecoletaAlt-Bold.woff2') format('woff2'), url('../public/fonts/RecoletaAlt-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -64,7 +64,7 @@
 
 @font-face {
     font-family: 'Recoleta Alt';
-    src: url('/assets/css/public/fonts/RecoletaAlt-Light.woff2') format('woff2'), url('/assets/css/public/fonts/RecoletaAlt-Light.woff') format('woff');
+    src: url('../public/fonts/RecoletaAlt-Light.woff2') format('woff2'), url('../public/fonts/RecoletaAlt-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -72,7 +72,7 @@
 
 @font-face {
     font-family: 'Recoleta Alt';
-    src: url('/assets/css/public/fonts/RecoletaAlt-Medium.woff2') format('woff2'), url('/assets/css/public/fonts/RecoletaAlt-Medium.woff') format('woff');
+    src: url('../public/fonts/RecoletaAlt-Medium.woff2') format('woff2'), url('../public/fonts/RecoletaAlt-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -80,7 +80,7 @@
 
 @font-face {
     font-family: 'Recoleta Alt';
-    src: url('/assets/css/public/fonts/RecoletaAlt-Regular.woff2') format('woff2'), url('/assets/css/public/fonts/RecoletaAlt-Regular.woff') format('woff');
+    src: url('../public/fonts/RecoletaAlt-Regular.woff2') format('woff2'), url('../public/fonts/RecoletaAlt-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -88,7 +88,7 @@
 
 @font-face {
     font-family: 'Recoleta Alt';
-    src: url('/assets/css/public/fonts/RecoletaAlt-Black.woff2') format('woff2'), url('/assets/css/public/fonts/RecoletaAlt-Black.woff') format('woff');
+    src: url('../public/fonts/RecoletaAlt-Black.woff2') format('woff2'), url('../public/fonts/RecoletaAlt-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -96,7 +96,7 @@
 
 @font-face {
     font-family: 'Recoleta Alt';
-    src: url('/assets/css/public/fonts/RecoletaAlt-SemiBold.woff2') format('woff2'), url('/assets/css/public/fonts/RecoletaAlt-SemiBold.woff') format('woff');
+    src: url('../public/fonts/RecoletaAlt-SemiBold.woff2') format('woff2'), url('../public/fonts/RecoletaAlt-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -104,7 +104,7 @@
 
 @font-face {
     font-family: 'Recoleta Alt';
-    src: url('/assets/css/public/fonts/RecoletaAlt-Thin.woff2') format('woff2'), url('/assets/css/public/fonts/RecoletaAlt-Thin.woff') format('woff');
+    src: url('../public/fonts/RecoletaAlt-Thin.woff2') format('woff2'), url('../public/fonts/RecoletaAlt-Thin.woff') format('woff');
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -112,7 +112,7 @@
 
 @font-face {
     font-family: 'Helvetica';
-    src: url('/assets/css/public/fonts/Helvetica-Compressed.woff2') format('woff2'), url('/assets/css/public/fonts/Helvetica-Compressed.woff') format('woff');
+    src: url('../public/fonts/Helvetica-Compressed.woff2') format('woff2'), url('../public/fonts/Helvetica-Compressed.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -120,7 +120,7 @@
 
 @font-face {
     font-family: 'Helvetica';
-    src: url('/assets/css/public/fonts/Helvetica-BoldOblique.woff2') format('woff2'), url('/assets/css/public/fonts/Helvetica-BoldOblique.woff') format('woff');
+    src: url('../public/fonts/Helvetica-BoldOblique.woff2') format('woff2'), url('../public/fonts/Helvetica-BoldOblique.woff') format('woff');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -128,7 +128,7 @@
 
 @font-face {
     font-family: 'Helvetica';
-    src: url('/assets/css/public/fonts/Helvetica-Bold.woff2') format('woff2'), url('/assets/css/public/fonts/Helvetica-Bold.woff') format('woff');
+    src: url('../public/fonts/Helvetica-Bold.woff2') format('woff2'), url('../public/fonts/Helvetica-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -136,7 +136,7 @@
 
 @font-face {
     font-family: 'Helvetica';
-    src: url('/assets/css/public/fonts/HelveticaRounded-Bold.woff2') format('woff2'), url('/assets/css/public/fonts/HelveticaRounded-Bold.woff') format('woff');
+    src: url('../public/fonts/HelveticaRounded-Bold.woff2') format('woff2'), url('../public/fonts/HelveticaRounded-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -144,7 +144,7 @@
 
 @font-face {
     font-family: 'Helvetica';
-    src: url('/assets/css/public/fonts/Helvetica-Light.woff2') format('woff2'), url('/assets/css/public/fonts/Helvetica-Light.woff') format('woff');
+    src: url('../public/fonts/Helvetica-Light.woff2') format('woff2'), url('../public/fonts/Helvetica-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -152,7 +152,7 @@
 
 @font-face {
     font-family: 'Helvetica';
-    src: url('/omex/assets/css/public/fonts/Helvetica.woff2') format('woff2'), url('/assets/css/public/fonts/Helvetica.woff') format('woff');
+    src: url('/omex../public/fonts/Helvetica.woff2') format('woff2'), url('../public/fonts/Helvetica.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -160,7 +160,7 @@
 
 @font-face {
     font-family: 'Helvetica';
-    src: url('/assets/css/public/fonts/Helvetica-Oblique.woff2') format('woff2'), url('/assets/css/public/fonts/Helvetica-Oblique.woff') format('woff');
+    src: url('../public/fonts/Helvetica-Oblique.woff2') format('woff2'), url('../public/fonts/Helvetica-Oblique.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
