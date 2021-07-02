@@ -352,7 +352,7 @@ class Welcome_model extends CI_Model
         } elseif($sort == 'Z-A'){
             $this->db->order_by('b.brand_name','desc');
         } else {
-            $this->db->order_by('b.brand_name','desc');
+            // $this->db->order_by('b.brand_name','desc');
         }
         $this->db->group_by('b.brand_id');
         if($filter != '')
