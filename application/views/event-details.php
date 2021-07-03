@@ -5,7 +5,7 @@
 
             <div class="row mt-4 justify-content-center">
                 <div class="col-xxl-10">
-                    <div id="" class=" wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" >
+                    <div id="" class=" wow fadeInUp animated" data-wow-delay="300mss" >
 
                         <div class="carousel-inner">
                             <?php if (!empty($event)) { ?>
@@ -322,7 +322,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-xxl-10">
-                    <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
+                    <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-delay="300mss" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <?php if (!empty($what_new)) {
                                 $i = 1;

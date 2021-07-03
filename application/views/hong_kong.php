@@ -81,7 +81,7 @@
             </div>
             <div class="row mt-4 d-lg-flex d-none justify-content-center">
                 <div class="col-xxl-9">
-                    <div class="owl-carousel slider-web wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
+                    <div class="owl-carousel slider-web wow fadeInUp animated" data-wow-delay="300mss">
                     <div class="item">
                             <div class="row">
                                 <div class="col-md-4 ">
@@ -173,7 +173,7 @@
             </div>
             <div class="row mt-4 d-lg-none d-block">
                 <div class="col-md-12">
-                    <div class="owl-carousel slider-mob wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s">
+                    <div class="owl-carousel slider-mob wow fadeInUp animated" data-wow-delay="300mss">
 
                     <div class="item">
                             <a href="<?php echo BASE_URL(); ?>assets/images/public/street/bs1.jpg" data-lightbox="image-1" data-title="">
@@ -267,7 +267,7 @@
                 </div>
                 <div class="row mt-4 justify-content-center">
                     <div class="col-xxl-10">
-                        <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="1.5s" data-bs-ride="carousel">
+                        <div id="carouselExampleControls" class="carousel slide wow fadeInUp animated" data-wow-delay="300mss" data-bs-ride="carousel">
                             <?php include('common_events.php'); ?>
                             <?php if (count($events) > 1) { ?>
                                 <div class="d-flex position-absolute">
