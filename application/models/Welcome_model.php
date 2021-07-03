@@ -177,7 +177,7 @@ class Welcome_model extends CI_Model
         $this->db->select('banner_web, banner_mobile, comment, banner_mobile,banner_link, link_to');
         $this->db->where('status',0);
         $this->db->where('banner_type',3);
-        if($category!=NULL){
+        if($category!=NULL && ($category=='eat' || $category=='style' || $category=='play') ){
         $this->db->where('banner_catgory',$category);
         }
         $this->db->order_by('id','desc');
@@ -343,7 +343,7 @@ class Welcome_model extends CI_Model
         return $final_data;
     }
 
-    public function filter_brand($street,$sort,$filter,$limit,$letter,$category,$count = false)
+    public function filter_brand($street,$sort,$filter,$limit,$letter,$category,$url_cat,$count = false)
     {
         ($street !='null' && $street !='')?$this->db->like('b.brand_street',$street):'';
         ($letter !='null' && $letter !='')?$this->db->like('b.brand_name',$letter,'after'):'';
@@ -382,7 +382,24 @@ class Welcome_model extends CI_Model
             
             $this->db->group_end();
 
+        }elseif($url_cat !='null' && $url_cat !='')
+        {
+
+            $this->db->group_start();
+            // $url_cat=str_replace('!','',str_replace(' ','%',$url_cat));
+
+            $arr = explode(' ',trim($url_cat));
+            $url_cat=$arr[0]; // will print Test
+
+            $this->db->like('cm.name',$url_cat);
+            $this->db->or_like('b.brand_label',$url_cat);
+            
+            $this->db->group_end();
+
         }
+
+      
+
         $this->db->where('status',0);
         (!$count)?$this->db->limit($limit,0):'';
         // echo $this->db->last_query();

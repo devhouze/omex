@@ -168,6 +168,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-1-">
                     <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 px-lg-5 wow fadeInDown animated">Search Brands</h5>
+                    <input type="hidden" id="url_cat" name="url_cat" value="<?php echo $url_category ?>">
                 </div>
             </div>
             <div class="row justify-content-center">

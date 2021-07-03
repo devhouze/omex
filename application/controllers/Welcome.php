@@ -388,6 +388,7 @@ class Welcome extends CI_Controller {
 		$data['brand'] = $this->wm->get_all_brands($category,$limit);
 		$data['what_new'] = $this->wm->get_what_new();
 		$data['filter'] = $this->wm->get_filters();
+		$data['url_category'] = $category;
 		if($limit != 'null' && $data['count'] > $limit){
 			$data['limit'] = $limit + 8;
 		} else {
@@ -543,8 +544,9 @@ class Welcome extends CI_Controller {
 		$limit = ($this->input->post('limit'))?$this->input->post('limit'):"8";
 		$letter = ($this->input->post('letter'))?$this->input->post('letter'):"";
 		$category = ($this->input->post('category'))?$this->input->post('category'):'';
-		$count = $this->wm->filter_brand($street,$sort,$filter,$limit,$letter,$category,true);
-		$data['brand'] = $this->wm->filter_brand($street,$sort,$filter,$limit,$letter,$category);
+		$url_cat = ($this->input->post('url_cat'))?$this->input->post('url_cat'):'';
+		$count = $this->wm->filter_brand($street,$sort,$filter,$limit,$letter,$category,$url_cat,true);
+		$data['brand'] = $this->wm->filter_brand($street,$sort,$filter,$limit,$letter,$category,$url_cat);
 		if($limit != 'null' && $count > $limit){
 			$data['limit'] = $limit + 8;
 			$data['count'] = $count;
