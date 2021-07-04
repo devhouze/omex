@@ -1913,7 +1913,7 @@ footer ul li a:hover {
     line-height: 1.8;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 5;
+    max-height: 10em;
     -webkit-box-orient: vertical;
 }
 
@@ -2371,7 +2371,7 @@ footer ul li a:hover {
     display: block;
     text-overflow: ellipsis;
     word-wrap: break-word;
-    max-height: 9em;
+    max-height: 10em;
 }
 
 a.brand-logo-link {
