@@ -2944,7 +2944,8 @@ ul.share-links li:nth-child(2) {
 }
 
 @media only screen and (max-width: 600px) {
-    .about-brand .content-box {
+    .about-brand .content-box,
+    .about-brand .card .brand-content {
         max-height: unset;
     }
     .more-expoler .item figure:hover img {
