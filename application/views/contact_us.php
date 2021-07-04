@@ -88,14 +88,14 @@
                     <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="1s"></div>
                 </div>
             </div>
-            <div class="row mt-5 d-flex flex-fill">
-                <div class="col-md-7 d-flex flex-fill">
+            <div class="row mt-5 d-flex flex-fill ">
+                <div class="col-md-7 d-flex flex-fill pe-0">
                     <!-- <figure class="pr-5 mb-0">
                         <img src="<?php echo base_url(); ?>assets/images/public/street/cmap.jpg" alt="">
                     </figure> -->
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14040.246250040547!2d77.3528947!3d28.3872085!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5ba6ea082ef6bf15!2sOmaxe%20World%20Street!5e0!3m2!1sen!2spl!4v1605103931187!5m2!1sen!2spl" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
-                <div class="col-md-5 mt-md-0 mt-3 d-flex flex-fill justify-content-center">
+                <div class="col-md-5 mt-md-0 mt-3 d-flex flex-fill justify-content-center ps-0">
                     <div class="card py-40 px-40 px-20-sm border d-flex flex-fill">
                             <div class="contect-content">
                                 <ul>

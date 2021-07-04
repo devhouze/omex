@@ -326,6 +326,9 @@ header.header.sticky {
     font-family: var(--pr-font) !important;
     color: white;
     text-align: center;
+    color: white;
+    font-size: 30px;
+    padding: 0 30px;
 }
 
 .hello-area.looking-out figure {
@@ -1692,6 +1695,12 @@ div#navbarNavDropdown h2 {
     font-weight: 500;
 }
 
+.form-area button:focus,
+button:focus {
+    outline: 0 !important;
+    box-shadow: unset !important;
+}
+
 .form-area button:hover {
     background: white;
     color: #0e3d68;
@@ -2359,6 +2368,10 @@ footer ul li a:hover {
     line-height: 1.8;
     overflow: hidden;
     font-size: 16px;
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    max-height: 9em;
 }
 
 a.brand-logo-link {
@@ -2922,9 +2935,31 @@ ul.share-links li:nth-child(2) {
     header .navbar-nav .dropdown {
         display: none !important;
     }
+    .main-menu {
+        margin-top: 15px;
+    }
+    header.header {
+        top: -1px
+    }
 }
 
 @media only screen and (max-width: 600px) {
+    .more-expoler .item figure:hover img {
+        transform: unset !important;
+    }
+    .lb-outerContainer {
+        width: 90% !important;
+    }
+    header.header {
+        top: -1px
+    }
+    .main-menu {
+        margin-top: 15px;
+    }
+    #thanksmodal .modal-content .modal-body h1 {
+        font-size: 20px;
+        padding: 0 0px;
+    }
     .hello-area p {
         font-size: 18px;
         margin-bottom: 15px;
@@ -3634,6 +3669,9 @@ ul.share-links li:nth-child(2) {
         align-items: center;
         justify-content: center;
         margin-top: 40px;
+    }
+    .about-event ul li {
+        width: 100%;
     }
     /* .event-page .looking-out h2 {
         text-shadow: 2px 0px 0px #5a946e;

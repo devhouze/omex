@@ -1,7 +1,7 @@
 <div class="event-page">
 
     <?php if (!empty($events)) { ?>
-        <div class="looking-out gray-bg pb-60 pt-60 pt-sm0 ">
+        <div class="looking-out gray-bg pb-60 pt-20 pt-sm0 ">
             <div class="container-lg">
 
                 <div class="row mt-4 justify-content-center">
