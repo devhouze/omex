@@ -3202,10 +3202,10 @@ ul.share-links li:nth-child(2) {
         display: none;
     }
     .navbar-brand {
-        max-width: 250px;
+        max-width: 200px;
     }
     .navbar-brand img {
-        width: unset;
+        width: unset !important;
     }
     .street-icon-abs {
         position: absolute;
