@@ -2944,6 +2944,9 @@ ul.share-links li:nth-child(2) {
 }
 
 @media only screen and (max-width: 600px) {
+    .about-brand .content-box {
+        max-height: unset;
+    }
     .more-expoler .item figure:hover img {
         transform: unset !important;
     }
@@ -2954,7 +2957,7 @@ ul.share-links li:nth-child(2) {
         top: -1px
     }
     .main-menu {
-        margin-top: 15px;
+        margin-top: 18px;
     }
     #thanksmodal .modal-content .modal-body h1 {
         font-size: 20px;
