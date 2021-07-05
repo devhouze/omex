@@ -93,10 +93,10 @@
                             </div>
                                <?php if(count($brand_banner) > 1){?>
                             <div class="home-baner-btn">
-                                <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="prev">
+                            <a class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorssmob" data-bs-slide="prev">
                                     <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
                                 </a>
-                                <a class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorss" data-bs-slide="next">
+                                <a class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorssmob" data-bs-slide="next">
                                     <img src="<?php echo base_url(); ?>assets/images/public/home/right.svg" alt="" class="w-100">
                                 </a>
                             </div>
