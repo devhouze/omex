@@ -980,7 +980,7 @@ span.text-danger.errors_msg {
 }
 
 .main-slider .carousel-inner {
-    height: 625px;
+    height: 520px;
 }
 
 .main-slider .carousel-inner .carousel-item {
@@ -1849,6 +1849,7 @@ button:focus {
 .barnd-page .live-in-word figure {
     position: relative;
     cursor: pointer;
+    border: 1px solid #e6e6e6;
 }
 
 .barnd-page .live-in-word figure a {
@@ -2538,6 +2539,19 @@ ul.share-links li:nth-child(2) {
 
 .select2-container--default .select2-results>.select2-results__options[aria-expanded="true"] {
     max-height: 250px !important;
+}
+
+.experience .carousel-item {
+    position: relative;
+}
+
+.experience .carousel-item a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
 }
 
 
@@ -3787,6 +3801,8 @@ ul.share-links li:nth-child(2) {
 
 /* for animation  */
 
+
+/* 
 .carousel-item:after {
     content: '';
     display: block;
@@ -3887,7 +3903,7 @@ ul.share-links li:nth-child(2) {
         -o-transform: translateX(100%);
         transform: translateX(100%);
     }
-}
+} */
 
 .select2-container--default .select2-selection--single {
     border: 1px solid #083D68 !important;

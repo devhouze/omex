@@ -142,6 +142,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 positoin-relative">
+            
                 <h5 class="fz40 fz24-sm pr-font h-color d-table mx-auto text-center mb-0 wow fadeInDown animated">Experience Best of World Street</h5>
                 <img src="<?php echo base_url(); ?>assets/images/public/home/flower.svg" alt="" class="d-table mx-auto wow fadeInDown  animated"  data-wow-delay="300ms">
                 <div class="v-line d-table mx-auto wow zoomIn animated" data-wow-duration="1s" data-wow-delay="0.15s"></div>
@@ -153,7 +154,7 @@
 
                     <div class="carousel-inner">
                         <div class="carousel-item position-relative active" style="background-image:url(<?php echo base_url(); ?>assets/images/public/home/slider1.jpg);">
-
+                        <a href="<?php echo base_url('london'); ?>"></a>
                             <div class="card lon-bg ">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/l-s.svg" alt="">
                                 <p>Did you know? London, a global icon, is built on ruins! Want to have a taste of the London aura? Come and visit World Street, Faridabad. </p>
@@ -161,7 +162,7 @@
                             </div>
                         </div>
                         <div class="carousel-item position-relative" style="background-image:url('<?php echo base_url(); ?>assets/images/public/home/slider.jpg');">
-
+                        <a href="<?php echo base_url('paris'); ?>"></a>
                             <div class="card par-bg ">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/parish.svg" alt="">
                                 <p>Did you know? There are no STOP signs in the entire European city of Paris. What's stopping you then? </p>
@@ -169,7 +170,7 @@
                             </div>
                         </div>
                         <div class="carousel-item position-relative" style="background-image:url('<?php echo base_url(); ?>assets/images/public/home/slider3.jpg')">
-
+                        <a href="<?php echo base_url('portugal'); ?>"></a>
                             <div class="card por-bg">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/p-s.svg" alt="">
                                 <p>Portugal is famous for its unique style of music. Why not come to its streets and enjoy a musical evening?</p>
@@ -177,7 +178,7 @@
                             </div>
                         </div>
                         <div class="carousel-item position-relative" style="background-image:url('<?php echo base_url(); ?>assets/images/public/home/slider4.jpg')">
-
+                        <a href="<?php echo base_url('athens'); ?>"></a>
                             <div class="card ath-bg">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/at-s.svg" alt="">
                                 <p>Wander by foot into the heart of the Athens. Start discovering your own world within ours!</p>
@@ -185,7 +186,7 @@
                             </div>
                         </div>
                         <div class="carousel-item position-relative" style="background-image:url('<?php echo base_url(); ?>assets/images/public/home/slider5.jpg')">
-
+                        <a href="<?php echo base_url('amsterdam'); ?>"></a>
                             <div class="card ams-bg">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/am-s.svg" alt="">
                                 <p>The small city of Amsterdam has more canals than Venice and more bridges than Paris.</p>
@@ -193,7 +194,7 @@
                             </div>
                         </div>
                         <div class="carousel-item position-relative" style="background-image:url('<?php echo base_url(); ?>assets/images/public/home/slider6.jpg')">
-
+                        <a href="<?php echo base_url('san-francisco'); ?>"></a>
                             <div class="card san-bg">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/s-s.svg" alt="">
                                 <p>An energizing fact about this American city. There are over three hundred coffee houses within the city boundaries of San Francisco.</p>
@@ -201,7 +202,7 @@
                             </div>
                         </div>
                         <div class="carousel-item position-relative" style="background-image:url('<?php echo base_url(); ?>assets/images/public/home/slider7.jpg')">
-
+                        <a href="<?php echo base_url('hong-kong'); ?>"></a>
                             <div class="card hon-bg">
                                 <img src="<?php echo base_url(); ?>assets/images/public/home/h-s.svg" alt="">
                                 <p>Hong Kong has one of the highest numbers of restaurants or cafes per capita. So why not have a taste of it in New Faridabad?</p>
