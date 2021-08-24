@@ -13,7 +13,8 @@ class Welcome extends CI_Controller {
 	{
 		$data['banner'] = $this->wm->get_home_banner();
 		$data['brand_logo'] = $this->wm->get_brand_logo();
-		$data['events'] = $this->wm->get_events();
+		$events = $this->wm->get_events();
+		$data['events'] = $this->check_event_expiry($events);
 		$data['all_gallery'] = $this->wm->get_gallery('all');
 		// echo "<pre>";
 		// print_r($data); die;
