@@ -1,3 +1,7 @@
+.select2-container {
+    width: 100% !important;
+}
+
 .form-control:focus {
     outline: 0 !important;
     box-shadow: unset !important;
