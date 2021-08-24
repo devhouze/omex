@@ -231,14 +231,14 @@
 
                             </select>
                         </div>
-                        <div class="col-md-4 col-sm-4 my-sm-0 my-4">
+                        <div class="col-md-3 col-sm-4 my-sm-0 my-4">
                             <select id="sort" class="select">
                                 <option disabled="" selected>Sort By</option>
                                 <option value="A-Z">A-Z</option>
                                 <option value="Z-A">Z-A</option>
                             </select>
                         </div>
-                        <div class="col-md-4 col-sm-4 justify-content-center mx-auto">
+                        <div class="col-md-3 col-sm-4 justify-content-center mx-auto">
                             <select id="filter" class="select">
                                 <option disabled="" selected>Filter</option>
                                 <?php if (!empty($filter)) {
@@ -247,6 +247,9 @@
                                 <?php }
                                 } ?>
                             </select>
+                        </div>
+                        <div class="col-md-2 col-sm-4 my-sm-0 my-4">
+                                <button>Clear All</button>
                         </div>
                     </div>
 
