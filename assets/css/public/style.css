@@ -9,6 +9,13 @@
     padding: 11px 10px;
     width: 100%;
     border: none;
+    border: 1px solid #03518B;
+}
+
+.clr-btn:hover {
+    border: 1px solid #03518B;
+    background: transparent;
+    color: #03518B;
 }
 
 .form-control:focus {
