@@ -249,7 +249,7 @@
                             </select>
                         </div>
                         <div class="col-md-2 col-sm-4 my-sm-0 my-4">
-                                <button onClick="history.go(0);">Clear All</button>
+                                <button onClick="history.go(0);" class="clr-btn d-table mx-auto">Clear All</button>
                         </div>
                     </div>
 
