@@ -3,19 +3,21 @@
 }
 
 .clr-btn {
-    background: #03518B;
     color: white;
     font-size: 18px;
     padding: 11px 10px;
     width: 100%;
     border: none;
     border: 1px solid #03518B;
+    background-color: transparent;
+    color: #03518B;
 }
 
 .clr-btn:hover {
+    background: #03518B !important;
     border: 1px solid #03518B;
     background: transparent;
-    color: #03518B;
+    color: white;
 }
 
 .form-control:focus {

@@ -4,7 +4,7 @@
         <div class="container-lg">
             <div class="row align-items-center">
                 <div class="col-md-5">
-                    <div class="text-white fw5 d-flex"><img src="<?php echo base_url(); ?>assets/images/public/header/clock.svg" alt="Time" class="me-1"> Mall Timing (Retail) : 11 am - 9 pm Restaurants: 11 am - 11 pm</div>
+                    <div class="text-white fw5 d-flex"><img src="<?php echo base_url(); ?>assets/images/public/header/clock.svg" alt="Time" class="me-1">Timings (Retail) : 11 am - 9 pm Restaurants: 11 am - 11 pm</div>
                 </div>
                 <div class="col-md-5">
                     <div class="text-white fw5">
