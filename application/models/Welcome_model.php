@@ -212,14 +212,17 @@ class Welcome_model extends CI_Model
         return [];
     }
 
-    public function get_all_brands($category='',$limit,$count = false)
+    public function get_all_brands($category='',$limit,$street,$count = false)
     {
         $this->db->select('DISTINCT(b.brand_id),b.brand_name, b.brand_logo, b.logo_message, b.brand_location, b.brand_id,b.brand_slug,b.brand_street');
-        $this->db->join("tbl_category AS ct","find_in_set(ct.id,b.brand_category)<> 0","left",false);
+        $this->db->join("tbl_category AS ct","find_in_set(ct.id,b.brand_category)<> 0","inner",false);
         $this->db->where('b.status',0);
+        if($street){
+        $this->db->where("b.brand_street LIKE '%$street%'");
+        }
         if($category){
         $this->db->group_start();
-        $this->db->like('ct.category_name',$category);
+        // $this->db->like('ct.category_name',$category);
         $this->db->or_like('b.brand_type',$category);
         $this->db->group_end();
         }
@@ -393,6 +396,7 @@ class Welcome_model extends CI_Model
 
             $this->db->like('cm.name',$url_cat);
             $this->db->or_like('b.brand_label',$url_cat);
+            $this->db->or_like('b.brand_type',$url_cat);
             
             $this->db->group_end();
 

@@ -34,7 +34,7 @@ $(document).on('click','.exploer-btn',function(){
       }else{
         $('#'+type+'Modal').modal('hide');
         value += '<h4>No Data</h4>';
-        window.location.href = "brand-directory/"+type;
+        window.location.href = "brand-directory/"+type+"/"+street;
       }
 
       if(type == "eat"){

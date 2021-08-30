@@ -304,7 +304,6 @@ class Welcome extends CI_Controller {
 		// $data['key_info'] = array_merge(explode(',',$data['about_brand']['brand_category']),(!empty($data['about_brand']['brand_sub_category']))?explode(',',$data['about_brand']['brand_sub_category']):[]);
 		$data['key_info'] = explode(',',$data['about_brand']['brand_sub_category']);
 		$data['what_new'] = $this->wm->get_what_new($id,$data['about_brand']['brand_street']);
-		// echo $this->db->last_query(); die;
 		$data['similar_brands'] = $this->wm->get_similar_brands($id,$data['about_brand']['brand_type'],null);
 		$data['first_similar_brands'] = $this->wm->get_similar_brands($id,$data['about_brand']['brand_type'],6);
 		$data['second_similar_brands'] = $this->wm->get_similar_brands($id,$data['about_brand']['brand_type'],6,6);
@@ -378,15 +377,17 @@ class Welcome extends CI_Controller {
 		$this->load->view('footer/body_end');
 	}
 
-	public function brand_directory($category=null,$limit=8)
+	public function brand_directory($category=null,$street=null)
 	{
+
+		$limit=8;
 		$data['whats_new_link'] = $this->wm->get_data_array('tbl_whats_new',"name_slug,name",$where = "status=0");
 		$category = str_replace('%20',' ',$category);
 		$data['brand_banner'] = $this->wm->get_brand_directory_banner($category);
 		$data['brand_offers'] = $this->wm->get_brand_offers();
 		$data['main_category'] = $this->wm->main_category();
-		$data['count'] = $this->wm->get_all_brands($category,$limit,true);
-		$data['brand'] = $this->wm->get_all_brands($category,$limit);
+		$data['count'] = $this->wm->get_all_brands($category,$limit,$street,true);
+		$data['brand'] = $this->wm->get_all_brands($category,$limit,$street);
 		$data['what_new'] = $this->wm->get_what_new();
 		$data['filter'] = $this->wm->get_filters();
 		$data['url_category'] = $category;

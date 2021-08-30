@@ -203,29 +203,29 @@
                 <div class="col-xxl-10">
                     <div class="row">
                         <div class="col-md-3 col-sm-4">
-                            <?php $brand_street = ""; ?>
+                            <?php $brand_street = $this->uri->segment(3); //die; ?>
                             <select id="street" class="select">
                                 <option disabled="" selected>Select Street</option>
-                                <option value="Amsterdam Street" <?php if ($brand_street == "Amsterdam Street") {
+                                <option value="Amsterdam Street" <?php if ($brand_street == "amsterdam") {
                                                                         echo "selected";
                                                                     } ?>>Amsterdam Street</option>
-                                <option value="Athens Street" <?php if ($brand_street == "Athens Street") {
+                                <option value="Athens Street" <?php if ($brand_street == "athens") {
                                                                     echo "selected";
                                                                 } ?>>Athens Street</option>
-                                <option value="Hong Kong Street" <?php if ($brand_street == "Hong Kong Street") {
+                                <option value="Hong Kong Street" <?php if ($brand_street == "hong-kong") {
                                                                         echo "selected";
                                                                     } ?>>Hong Kong Street</option>
-                                <option value="London Street" <?php if ($brand_street == "London Street") {
+                                <option value="London Street" <?php if ($brand_street == "london") {
                                                                     echo "selected";
                                                                 } ?>>London Street</option>
-                                <option value="Paris Street" <?php if ($brand_street == "Paris Street") {
+                                <option value="Paris Street" <?php if ($brand_street == "paris") {
                                                                     echo "selected";
                                                                 } ?>>Paris Street</option>
 
-                                <option value="Portugal Street" <?php if ($brand_street == "Portugal Street") {
+                                <option value="Portugal Street" <?php if ($brand_street == "portugal") {
                                                                     echo "selected";
                                                                 } ?>>Portugal Street</option>
-                                <option value="San Francisco Street" <?php if ($brand_street == "San Francisco Street") {
+                                <option value="San Francisco Street" <?php if ($brand_street == "san-francisco") {
                                                                             echo "selected";
                                                                         } ?>>San Francisco Street</option>
 
@@ -249,7 +249,8 @@
                             </select>
                         </div>
                         <div class="col-md-3 col-sm-4 my-sm-0 my-4">
-                                <button onClick="history.go(0);" class="clr-btn d-table mx-auto">Clear All Filters</button>
+                                <!-- <button onClick="history.go(0);" class="clr-btn d-table mx-auto">Clear All Filters</button> -->
+                                <button onclick="location.href='<?php echo base_url('brand-directory') ?>'"  class="clr-btn d-table mx-auto">Clear All Filters</button>
                         </div>
                     </div>
 
