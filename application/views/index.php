@@ -694,10 +694,10 @@
             </div>
             <div class="col-md-4 order-md-2 order-1 d-flex flex-fill">
                 <div class="card d-flex flex-fill flex-column align-items-center justify-content-center social-box" style="background-color:#FAF7F2;">
-                    <h1 class="pr-font h-color">@WORLD STREET</h1>
+                    <h1 class="pr-font h-color">@OmaxeWorld Street</h1>
                     <a href="https://www.instagram.com/omaxeworldstreet/">FOLLOW US</a>
 
-                </div>
+                </div> 
             </div>
 
         </div>

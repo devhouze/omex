@@ -2,6 +2,24 @@
     width: 100% !important;
 }
 
+.clr-btn {
+    color: white;
+    font-size: 18px;
+    padding: 11px 10px;
+    width: 100%;
+    border: none;
+    border: 1px solid #03518B;
+    background-color: transparent;
+    color: #03518B;
+}
+
+.clr-btn:hover {
+    background: #03518B !important;
+    border: 1px solid #03518B;
+    background: transparent;
+    color: white;
+}
+
 .form-control:focus {
     outline: 0 !important;
     box-shadow: unset !important;
@@ -2451,15 +2469,26 @@ ul.share-links li:nth-child(2) {
     position: relative;
 }
 
+.social-box a:hover {
+    color: var(--h-color);
+}
+
 .social-box a:before {
     position: absolute;
     content: " ";
     left: 0;
     right: 0;
-    width: 100%;
+    width: 0;
     height: 1px;
     background: var(--h-color);
     bottom: -2px;
+    opacity: 0;
+    transition: 0.5s all;
+}
+
+.social-box a:hover:before {
+    opacity: 9;
+    width: 100%;
 }
 
 .hongkong-page .hello-area p {

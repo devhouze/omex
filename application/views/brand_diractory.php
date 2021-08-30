@@ -202,7 +202,7 @@
             <div class="row justify-content-center mt-4" id="filter-box">
                 <div class="col-xxl-10">
                     <div class="row">
-                        <div class="col-md-4 col-sm-4">
+                        <div class="col-md-3 col-sm-4">
                             <?php $brand_street = ""; ?>
                             <select id="street" class="select">
                                 <option disabled="" selected>Select Street</option>
@@ -248,8 +248,8 @@
                                 } ?>
                             </select>
                         </div>
-                        <div class="col-md-2 col-sm-4 my-sm-0 my-4">
-                                <button onClick="history.go(0);">Clear All</button>
+                        <div class="col-md-3 col-sm-4 my-sm-0 my-4">
+                                <button onClick="history.go(0);" class="clr-btn d-table mx-auto">Clear All Filters</button>
                         </div>
                     </div>
 
