@@ -34,7 +34,6 @@ $(document).on('click','.exploer-btn',function(){
       }else{
         $('#'+type+'Modal').modal('hide');
         value += '<h4>No Data</h4>';
-        alert(value);
         window.location.href = "brand-directory/"+type+"/"+street;
       }
 
