@@ -100,7 +100,7 @@
                             <div class="contect-content">
                                 <ul>
                                     <li><a href="tel:+91-9015222222"><img src="<?php echo base_url(); ?>assets/images/public/home/ccall.svg" alt=""> +91-9015222222</a></li>
-                                    <li><a href="mailto:hello@worldstreet.com"><img src="<?php echo base_url(); ?>assets/images/public/home/cmail.svg" alt=""> hello@worldstreet.com</a></li>
+                                    <li><a href="mailto:info@omaxews.com"><img src="<?php echo base_url(); ?>assets/images/public/home/cmail.svg" alt=""> info@omaxews.com</a></li>
                                     <li><img src="<?php echo base_url(); ?>assets/images/public/home/cmap.svg" alt="">Omaxe Marketing & Sales Office (World Street, Sector 79, Faridabad, Haryana</li>
                                     
                                 </ul>
