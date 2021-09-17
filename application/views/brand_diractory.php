@@ -163,7 +163,7 @@
         </div>
     </div>
 
-    <div class="search-brand gray-bg">
+    <div class="search-brand gray-bg" id="clear">
         <div class="container-lg">
             <div class="row justify-content-center">
                 <div class="col-md-1-">
@@ -200,9 +200,9 @@
                 </div>
             </div>
             <div class="row justify-content-center mt-4" id="filter-box">
-                <div class="col-xxl-10">
+                <div class="col-xxl-10" >
                     <div class="row">
-                        <div class="col-md-3 col-sm-4">
+                        <div class="col-md-3 col-sm-4" >
                             <?php $brand_street = $this->uri->segment(3); //die; ?>
                             <select id="street" class="select">
                                 <option disabled="" selected>Select Street</option>
@@ -250,7 +250,7 @@
                         </div>
                         <div class="col-md-3 col-sm-4 my-sm-0 my-4">
                                 <!-- <button onClick="history.go(0);" class="clr-btn d-table mx-auto">Clear All Filters</button> -->
-                                <button onclick="location.href='<?php echo base_url('brand-directory') ?>'"  class="clr-btn d-table mx-auto">Clear All Filters</button>
+                                <button onclick="location.href='<?php echo base_url('brand-directory') ?>#clear'"  class="clr-btn d-table mx-auto">Clear All Filters</button>
                         </div>
                     </div>
 
