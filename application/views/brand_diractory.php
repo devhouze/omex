@@ -250,7 +250,7 @@
                         </div>
                         <div class="col-md-3 col-sm-4 my-sm-0 my-4">
                                 <!-- <button onClick="history.go(0);" class="clr-btn d-table mx-auto">Clear All Filters</button> -->
-                                <button onclick="location.href='<?php echo base_url('brand-directory') ?>#clear'"  class="clr-btn d-table mx-auto">Clear All Filters</button>
+                                <button onclick="location.href='<?php echo base_url('clear-filter') ?>'"  class="clr-btn d-table mx-auto">Clear All Filters</button>
                         </div>
                     </div>
 

@@ -583,6 +583,10 @@ class Welcome extends CI_Controller {
 		// print_r($expired_events); die;
 		return $expired_events;
 	}
+
+	public function clear_filter(){
+		redirect('brand-directory#clear', 'refresh');
+	}
 	
 	
 }

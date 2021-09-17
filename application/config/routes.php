@@ -53,7 +53,8 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-
+//Clear filter
+$route['clear-filter'] = 'Welcome/clear_filter';
 
 $route['whatsnew/(:any)'] = 'Welcome/whatsnew/$1';
 $route['athens'] = 'Welcome/athens';
