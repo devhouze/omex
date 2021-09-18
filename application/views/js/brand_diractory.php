@@ -214,7 +214,7 @@
                             value += "<a href='"+base_url+"brand/"+v.brand_slug+"'></a>";
                             value += "<figure><img src='"+base_url+"/assets/images/public/brand/"+v.brand_logo+"' alt='"+v.logo_message+"'></figure>";
                             value += '<div class="name">'+v.brand_name+'</div>';
-                            value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+','+v.brand_street+'</div>';
+                            value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+', '+v.brand_street+'</div>';
                             value += '</div>';
                             value += '</div>';
                             $('#brand').append(value);
@@ -259,7 +259,7 @@
                             value += "<a href='"+base_url+"brand/"+v.brand_slug+"'></a>";
                             value += "<figure><img src='"+base_url+"/assets/images/public/brand/"+v.brand_logo+"' alt='"+v.logo_message+"'></figure>";
                             value += '<div class="name">'+v.brand_name+'</div>';
-                            value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+','+v.brand_street+'</div>';
+                            value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+', '+v.brand_street+'</div>';
                             value += '</div>';
                             value += '</div>';
                             $('#brand').append(value);
@@ -305,7 +305,7 @@
                             value += "<a href='"+base_url+"brand/"+v.brand_slug+"'></a>";
                             value += "<figure><img src='"+base_url+"/assets/images/public/brand/"+v.brand_logo+"' alt='"+v.logo_message+"'></figure>";
                             value += '<div class="name">'+v.brand_name+'</div>';
-                            value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+','+v.brand_street+'</div>';
+                            value += '<div class="addrs"><img src="'+base_url+'assets/images/public/brand/map.svg" alt="" class="">'+v.brand_location+', '+v.brand_street+'</div>';
                             value += '</div>';
                             value += '</div>';
                             $('#brand').append(value);
