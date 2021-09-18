@@ -216,17 +216,13 @@ class Welcome_model extends CI_Model
     {
         $this->db->select('DISTINCT(b.brand_id),b.brand_name, b.brand_logo, b.logo_message, b.brand_location, b.brand_id,b.brand_slug,b.brand_street');
         $this->db->join("tbl_category AS ct","find_in_set(ct.id,b.brand_category)<> 0","inner",false);
-        //Add category
-         $this->db->join("tbl_sub_category AS st","find_in_set(st.id,b.brand_sub_category)<> 0","left",false);
-        $this->db->join("tbl_maincatgory AS cm","find_in_set(cm.id,ct.main_cat_id)<> 0","left",false);
-
-
         $this->db->where('b.status',0);
         if($street){
         $this->db->where("b.brand_street LIKE '%$street%'");
         }
         if($category){
         $this->db->group_start();
+        // $this->db->like('ct.category_name',$category);
         $this->db->or_like('b.brand_type',$category);
         $this->db->or_like('ct.category_name',$category);
         $this->db->group_end();
